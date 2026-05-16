@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+*.pyo
+books/rp_conversion/story_state.yaml
+
