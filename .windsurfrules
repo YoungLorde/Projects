@@ -71,6 +71,20 @@
 #   User says: "Extract style from..." (with sample text)
 #   Action: orch.extract_style(sample_text=selected_text)
 #
+# STAT & CURRENCY TRACKING:
+#   User says: "Track stats" or "Track stats for Chapter N" (with prose)
+#   Action: orch.track_stats(prose=selected_text, chapter_num=N)
+#   Reviews extracted stat/currency/progression changes from the chapter.
+#   Returns local regex extraction + AI prompt for deeper analysis.
+#
+#   User says: "Apply stat changes" (after track_stats)
+#   Action: orch.apply_stat_changes(changes=extracted, chapter_num=N)
+#   Validates math and applies changes to story state.
+#
+#   NOTE: finalize_chapter() now auto-extracts stat/currency changes
+#   and applies them to story state if math validates. You can also
+#   use track_stats() standalone to preview changes before applying.
+#
 # STATE MANAGEMENT:
 #   User says: "Show state" or "Current state"
 #   Action: orch.get_current_state()
@@ -122,7 +136,9 @@
 #    a. The chapter is automatically saved by finalize_chapter
 #    b. Generate summary: orch.summarize_chapter(N)
 #    c. Save summary: orch.save_chapter_summary(N, summary_text)
-#    d. Update story state if level/tier/RP changed
+#    d. Stats/currency/progression are auto-tracked by finalize_chapter
+#    e. Review stat_tracking validation in finalize results
+#    f. Use track_stats() for manual review if needed
 
 # ── Writing Rules (Always Enforced) ──────────────────────────
 #

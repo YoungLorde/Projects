@@ -23,6 +23,7 @@ from agents.scene_beat_generator import SceneBeatGenerator
 from agents.style_editor import StyleEditor
 from agents.style_extractor import StyleExtractor
 from agents.summarizer import Summarizer
+from agents.stat_currency_tracker import StatCurrencyTracker
 from agents.word_count_enforcer import WordCountEnforcer
 from config import CHAPTER_GUIDE, MIN_WORD_COUNT
 from memory_manager import MemoryManager
@@ -75,6 +76,7 @@ class Orchestrator:
             "outline_generator": OutlineGenerator(),
             "word_count_enforcer": WordCountEnforcer(),
             "parameter_enforcer": ParameterEnforcer(),
+            "stat_currency_tracker": StatCurrencyTracker(),
         }
 
         # Pipeline engine
@@ -261,12 +263,35 @@ class Orchestrator:
             and not refusal_detected
         )
 
+        # Stat & currency tracking
+        sct_agent = self.agents["stat_currency_tracker"]
+        if not isinstance(sct_agent, StatCurrencyTracker):
+            raise TypeError("stat_currency_tracker agent has wrong type")
+        extracted = sct_agent.extract_changes(prose)
+        state = self.memory.get_state()
+        validation = sct_agent.validate_math(extracted, state)
+        result["validations"]["stat_tracking"] = {
+            "extracted_changes": extracted,
+            "math_valid": validation["valid"],
+            "issues": validation["issues"],
+            "warnings": validation["warnings"],
+        }
+
         if all_pass:
             # Save the chapter
             filepath = self.memory.save_chapter(chapter_num, prose)
             result["saved"] = True
             result["filepath"] = str(filepath)
             result["status"] = "complete"
+
+            # Auto-apply extracted stat/currency changes to state
+            if validation["valid"] and extracted["raw_extractions"]:
+                state_update = sct_agent.build_state_update(
+                    extracted, state
+                )
+                if state_update:
+                    self.memory.update_state(state_update)
+                result["state_updates_applied"] = state_update
 
             # Update story state
             state = self.memory.get_state()
@@ -566,6 +591,107 @@ class Orchestrator:
             "temperature": agent.temperature,
             "max_tokens": agent.max_tokens,
             "status": "ready",
+        }
+
+    # ── Stat & Currency Tracking ────────────────────────────
+
+    def track_stats(
+        self, prose: str, chapter_num: int = 0
+    ) -> dict:
+        """
+        Analyze prose for stat, currency, and progression changes.
+
+        Two modes:
+          - Local extraction (fast): regex-based parsing
+          - AI analysis: deeper implicit change detection
+
+        Args:
+            prose: The chapter prose to analyze.
+            chapter_num: Chapter number for context.
+
+        Returns:
+            Dict with extracted changes, validation, and AI prompt.
+        """
+        sct_agent = self.agents["stat_currency_tracker"]
+        if not isinstance(sct_agent, StatCurrencyTracker):
+            raise TypeError("stat_currency_tracker agent has wrong type")
+
+        # Local extraction
+        extracted = sct_agent.extract_changes(prose)
+        state = self.memory.get_state()
+        validation = sct_agent.validate_math(extracted, state)
+        state_update = sct_agent.build_state_update(extracted, state)
+
+        # Build AI prompt for deeper analysis
+        prompt = sct_agent.build_prompt(
+            "",
+            prose=prose,
+            chapter_num=chapter_num,
+            current_state=state,
+        )
+
+        return {
+            "command": "track_stats",
+            "chapter_num": chapter_num,
+            "local_extraction": extracted,
+            "math_validation": validation,
+            "proposed_state_update": state_update,
+            "agent_name": sct_agent.name,
+            "system_prompt": sct_agent.system_prompt,
+            "user_prompt": prompt,
+            "temperature": sct_agent.temperature,
+            "max_tokens": sct_agent.max_tokens,
+            "status": "ready",
+            "instructions": (
+                "Local extraction found "
+                f"{len(extracted['raw_extractions'])} changes. "
+                "Run the AI prompt for deeper analysis if needed. "
+                "Use 'Apply Stat Changes' to apply the proposed update."
+            ),
+        }
+
+    def apply_stat_changes(
+        self, changes: dict, chapter_num: int = 0
+    ) -> dict:
+        """
+        Apply extracted stat/currency changes to the story state.
+
+        Args:
+            changes: Dict from track_stats()["local_extraction"] or
+                     parsed AI output.
+            chapter_num: Chapter number (for logging).
+
+        Returns:
+            Dict with the applied updates and new state.
+        """
+        sct_agent = self.agents["stat_currency_tracker"]
+        if not isinstance(sct_agent, StatCurrencyTracker):
+            raise TypeError("stat_currency_tracker agent has wrong type")
+
+        state = self.memory.get_state()
+        validation = sct_agent.validate_math(changes, state)
+
+        if not validation["valid"]:
+            return {
+                "command": "apply_stat_changes",
+                "applied": False,
+                "issues": validation["issues"],
+                "warnings": validation["warnings"],
+                "status": "validation_failed",
+            }
+
+        state_update = sct_agent.build_state_update(changes, state)
+        if state_update:
+            self.memory.update_state(state_update)
+
+        return {
+            "command": "apply_stat_changes",
+            "chapter_num": chapter_num,
+            "applied": True,
+            "updates": state_update,
+            "warnings": validation["warnings"],
+            "new_state": self.memory.get_state(),
+            "status": "complete",
         }
 
     # ── State Commands ───────────────────────────────────────

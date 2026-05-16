@@ -156,6 +156,12 @@ AGENT_CONFIGS = {
         "temperature": 0.10,
         "max_tokens": 1000,
     },
+    "stat_currency_tracker": {
+        "name": "Stat & Currency Tracker",
+        "role": "Stat, Currency & Progression Tracker",
+        "temperature": 0.15,
+        "max_tokens": 2000,
+    },
 }
 
 # ── Pipeline Configurations ──────────────────────────────────
@@ -197,11 +203,12 @@ PIPELINE_CONFIGS = {
         "name": "Full Quality Pipeline",
         "description": (
             "Maximum quality. Summarize, write, lore check, "
-            "continuity check, revise."
+            "continuity check, revise, track stats."
         ),
         "steps": [
             "summarizer", "prose_writer", "lore_judge",
             "continuity_checker", "prose_writer",
+            "stat_currency_tracker",
         ],
     },
     "quality_with_lore_check": {

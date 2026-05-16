@@ -56,7 +56,7 @@ PIPELINES: dict = {
         "name": "Full Quality Pipeline",
         "description": (
             "Maximum quality. Summarize, write, lore check, "
-            "continuity check, revise."
+            "continuity check, revise, track stats."
         ),
         "steps": [
             "summarizer",
@@ -64,8 +64,9 @@ PIPELINES: dict = {
             "lore_judge",
             "continuity_checker",
             "prose_writer",
+            "stat_currency_tracker",
         ],
-        "tags": ["maximum", "quality", "lore", "continuity"],
+        "tags": ["maximum", "quality", "lore", "continuity", "stats"],
     },
     "quality_with_lore_check": {
         "name": "Quality Prose with Lore Check",
@@ -108,7 +109,7 @@ PIPELINES: dict = {
         "description": (
             "Maximum quality with style and dialogue polish. "
             "Outline, write, check lore, check continuity, "
-            "polish style, improve dialogue."
+            "polish style, improve dialogue, track stats."
         ),
         "steps": [
             "summarizer",
@@ -119,8 +120,9 @@ PIPELINES: dict = {
             "prose_writer",
             "style_editor",
             "dialogue_specialist",
+            "stat_currency_tracker",
         ],
-        "tags": ["maximum", "editorial", "complete"],
+        "tags": ["maximum", "editorial", "complete", "stats"],
     },
 }
 

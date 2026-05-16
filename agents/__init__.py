@@ -19,6 +19,7 @@ from agents.scene_beat_generator import SceneBeatGenerator
 from agents.style_editor import StyleEditor
 from agents.style_extractor import StyleExtractor
 from agents.summarizer import Summarizer
+from agents.stat_currency_tracker import StatCurrencyTracker
 from agents.word_count_enforcer import WordCountEnforcer
 
 __all__ = [
@@ -36,4 +37,5 @@ __all__ = [
     "OutlineGenerator",
     "WordCountEnforcer",
     "ParameterEnforcer",
+    "StatCurrencyTracker",
 ]
