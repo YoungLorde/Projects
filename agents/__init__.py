@@ -8,6 +8,7 @@ configurable Pipelines.
 
 from agents.base_agent import BaseAgent
 from agents.continuity_checker import ContinuityChecker
+from agents.database_manager import DatabaseManager
 from agents.dialogue_specialist import DialogueSpecialist
 from agents.lore_judge import LoreJudge
 from agents.outline_generator import OutlineGenerator
@@ -38,4 +39,5 @@ __all__ = [
     "WordCountEnforcer",
     "ParameterEnforcer",
     "StatCurrencyTracker",
+    "DatabaseManager",
 ]

@@ -1,0 +1,334 @@
+---
+category: utility_abilities
+description: >
+  Non-combat abilities granted by the Game System. These abilities handle
+  crafting, sensing, movement, communication, and survival. Essential for
+  exploration, base building, and daily life in the System universe.
+
+crafting_abilities:
+  - id: UA-001
+    name: "System Analyze"
+    type: analysis_active
+    tier_requirement: 0
+    stat_requirement: "INT 2+"
+    cost: "5 RP"
+    cooldown: "3 seconds"
+    description: >
+      Scan an item, material, or creature to receive System data. Returns
+      name, tier, basic properties, and condition. Higher INT reveals more
+      detail — composition, weaknesses, hidden properties. A blue scanning
+      light passes over the target.
+    scaling: "Detail level scales with INT. At INT 5: full composition. At INT 10: hidden properties."
+    lore_notes: "The most used ability in the System. Knowledge is survival."
+
+  - id: UA-002
+    name: "System Craft"
+    type: crafting_active
+    tier_requirement: 1
+    stat_requirement: "INT 3+"
+    cost: "Varies by item (10-10,000 RP)"
+    cooldown: "None"
+    description: >
+      Use the System's crafting interface to combine materials into items.
+      Requires a crafting station or suitable workspace. The System guides
+      the process — showing optimal combinations, timing, and technique.
+      Success rate depends on INT, materials quality, and recipe knowledge.
+    scaling: "Success rate scales with INT. Recipe complexity access scales with tier."
+    lore_notes: "Crafting is how Travellers create equipment without relying on loot drops."
+
+  - id: UA-003
+    name: "Repair"
+    type: crafting_active
+    tier_requirement: 1
+    stat_requirement: "INT 3+"
+    cost: "20-500 RP (based on damage)"
+    cooldown: "None"
+    description: >
+      Restore damaged equipment, vehicle components, or structures.
+      System energy guides the repair process, highlighting damage
+      points and suggesting fix methods. Cannot repair beyond the
+      item's original quality. Cannot restore destroyed items.
+    scaling: "Repair quality scales with INT. At INT 8: can repair Tier 5 items. At INT 12: Tier 8."
+    lore_notes: "More cost-effective than replacement for mid-tier items."
+
+  - id: UA-004
+    name: "Disassemble"
+    type: crafting_active
+    tier_requirement: 2
+    stat_requirement: "INT 5+"
+    cost: "10 RP"
+    cooldown: "None"
+    description: >
+      Break down items, equipment, or materials into base components.
+      Higher INT yields more and better components from disassembly.
+      The System shows optimal disassembly points. Essential for
+      recycling and material gathering.
+    scaling: "Component yield scales with INT. At INT 8: 80% yield. At INT 12: 95% yield."
+    lore_notes: "Nothing is waste if you can disassemble it properly."
+
+  - id: UA-005
+    name: "Blueprint Creation"
+    type: crafting_passive
+    tier_requirement: 3
+    stat_requirement: "INT 8+"
+    cost: "100 RP per blueprint"
+    cooldown: "None"
+    description: >
+      After successfully crafting an item, create a reusable blueprint
+      that can be shared with other crafters. Blueprints reduce crafting
+      difficulty and increase success rate. The System stores blueprints
+      in the user's interface.
+    scaling: "Blueprint quality scales with INT. At INT 12: blueprints grant +30% success rate."
+    lore_notes: "Blueprints are tradeable and valuable. A Forge Master's blueprint collection is worth millions."
+
+survival_abilities:
+  - id: UA-006
+    name: "System Map"
+    type: navigation_active
+    tier_requirement: 0
+    stat_requirement: "INT 1+"
+    cost: "2 RP/minute (maintained)"
+    cooldown: "None"
+    description: >
+      Project a mental map of explored areas. Shows terrain, landmarks,
+      and previously visited locations. Does NOT show unexplored areas
+      or moving entities. Range limited to current planet/station.
+      Map data persists between sessions.
+    scaling: "Detail and range scale with INT. At INT 5: shows resource nodes. At INT 10: shows dungeon entrances."
+    lore_notes: "Basic navigation. Without it, you're lost in a universe of unknowns."
+
+  - id: UA-007
+    name: "Environmental Resistance"
+    type: survival_passive
+    tier_requirement: 1
+    stat_requirement: "END 3+"
+    cost: "None (passive)"
+    cooldown: "N/A"
+    description: >
+      The System enhances the body's resistance to environmental hazards.
+      Reduces damage from extreme heat, cold, radiation, and toxic
+      atmosphere. Does NOT replace EVA suit in vacuum — only reduces
+      environmental damage on planets with hostile conditions.
+    scaling: "Resistance scales with END. At END 5: 30% reduction. At END 10: 60%. At END 15: 80%."
+    lore_notes: "Keeps you alive on hostile worlds. Does NOT work in vacuum — you still need an EVA suit."
+
+  - id: UA-008
+    name: "Harvest"
+    type: gathering_active
+    tier_requirement: 0
+    stat_requirement: "PER 2+"
+    cost: "5 Stamina"
+    cooldown: "None"
+    description: >
+      Efficiently gather materials from defeated creatures, plants,
+      minerals, and environmental sources. System highlights harvestable
+      materials and guides extraction for maximum yield. Higher PER
+      reveals rare materials others would miss.
+    scaling: "Yield and rare material detection scale with PER."
+    lore_notes: "The ability that turns every dead monster into profit."
+
+  - id: UA-009
+    name: "Danger Sense"
+    type: survival_passive
+    tier_requirement: 2
+    stat_requirement: "PER 5+, INT 3+"
+    cost: "None (passive)"
+    cooldown: "N/A"
+    description: >
+      Subconscious System warning of environmental dangers. Detects
+      natural hazards (unstable terrain, toxic zones, predators),
+      traps (dungeon and man-made), and ambushes. Warning manifests
+      as a prickling sensation on the skin and a subtle directional
+      pull away from danger.
+    scaling: "Detection range and sensitivity scale with PER. At PER 10: detects hidden traps."
+    lore_notes: "The ability that turns a death sentence into a close call."
+
+  - id: UA-010
+    name: "System Inventory"
+    type: storage_active
+    tier_requirement: 1
+    stat_requirement: "SYS 2+"
+    cost: "None"
+    cooldown: "None"
+    description: >
+      Access a personal System-generated storage space. Items placed
+      in the inventory are stored in a dimensional pocket accessible
+      only to the user. Weight and volume are suspended while stored.
+      Base capacity: 10 cubic meters. Does not preserve living
+      organisms (they die in storage).
+    scaling: "Capacity scales with SYS. At SYS 5: 50m³. At SYS 10: 200m³. At SYS 15: 1,000m³."
+    lore_notes: "Everyone's favorite ability. Carrying capacity is no longer a problem."
+
+  - id: UA-011
+    name: "Night Vision"
+    type: perception_passive
+    tier_requirement: 1
+    stat_requirement: "PER 3+"
+    cost: "1 RP/minute (passive drain)"
+    cooldown: "N/A"
+    description: >
+      System-enhanced vision in low-light conditions. The world appears
+      in muted but clear tones. Does not work in absolute darkness
+      (requires at least minimal light source). User's eyes glow
+      faintly green when active.
+    scaling: "Clarity and light sensitivity scale with PER."
+    lore_notes: "Essential for dungeon diving and night operations."
+
+  - id: UA-012
+    name: "Language Comprehension"
+    type: communication_passive
+    tier_requirement: 0
+    stat_requirement: "INT 2+"
+    cost: "None (passive)"
+    cooldown: "N/A"
+    description: >
+      The System provides real-time translation of all known languages.
+      Spoken language is heard in the user's native tongue. Written
+      text appears translated in the user's vision. Does not translate
+      pre-System ancient languages or encrypted communications.
+      Slight delay (0.5 seconds) for complex or rare languages.
+    scaling: "Translation accuracy and language range scale with INT."
+    lore_notes: >
+      The reason multi-species civilization functions. Without Language
+      Comprehension, the universe would be a tower of Babel.
+
+  - id: UA-013
+    name: "System Communication"
+    type: communication_active
+    tier_requirement: 1
+    stat_requirement: "SYS 2+"
+    cost: "1 RP/message"
+    cooldown: "None"
+    range: "Planetary (same world only)"
+    description: >
+      Send text-based messages through the System to any known contact
+      on the same world. Messages are delivered instantly. Cannot send
+      images or voice — text only. Cross-planetary communication
+      requires relay stations or higher-tier abilities.
+    scaling: "Message length and contact list size scale with SYS."
+    lore_notes: "Texting through the System. Simple but essential."
+
+  - id: UA-014
+    name: "Fast Travel"
+    type: movement_active
+    tier_requirement: 3
+    stat_requirement: "SYS 5+"
+    cost: "500 RP"
+    cooldown: "3,600 seconds (1 hour)"
+    description: >
+      Teleport to a previously visited and System-registered waypoint
+      on the same world. The user dissolves into System particles and
+      reassembles at the waypoint. Takes 10 seconds of channeling
+      (can be interrupted). Maximum 3 waypoints registered at base level.
+    scaling: "Waypoint slots scale with SYS. At SYS 8: 5 waypoints. At SYS 12: 10."
+    lore_notes: "Cuts travel time dramatically but the RP cost keeps it from being spammed."
+
+  - id: UA-015
+    name: "Identify Weakness"
+    type: analysis_active
+    tier_requirement: 3
+    stat_requirement: "INT 7+, PER 5+"
+    cost: "50 RP"
+    cooldown: "30 seconds"
+    description: >
+      Deep analysis of a target revealing: exact stat values (if target
+      tier is within 3 of user), active abilities, status effects,
+      equipment quality, and most importantly — specific weaknesses
+      and resistances. Information displayed as a detailed readout.
+    scaling: "Tier gap tolerance scales with INT. At INT 12: can scan targets 5 tiers above."
+    lore_notes: "Know your enemy. This ability has saved more lives than any combat skill."
+
+cultivation_techniques:
+  - id: UA-016
+    name: "Meditation"
+    type: recovery_active
+    tier_requirement: 0
+    stat_requirement: "WIS 1+"
+    cost: "None"
+    cooldown: "None"
+    description: >
+      Enter a meditative state to accelerate natural HP and Stamina
+      recovery by 300%. The user must be stationary and undisturbed.
+      System energy flows through the body, repairing minor damage
+      and restoring energy. Higher WIS allows partial awareness of
+      surroundings while meditating.
+    scaling: "Recovery multiplier scales with WIS. At WIS 5: 500%. At WIS 10: 800%."
+    lore_notes: "The first step toward System Assimilation for those who pursue that path."
+
+  - id: UA-017
+    name: "System Attunement"
+    type: cultivation_passive
+    tier_requirement: 2
+    stat_requirement: "SYS 3+, WIS 3+"
+    cost: "None (passive)"
+    cooldown: "N/A"
+    description: >
+      Increased sensitivity to System energy flows. The user can sense
+      nearby System nodes, dungeon entrances, Vehicle Core resonance,
+      and areas of high System density. Manifests as a warm humming
+      sensation in the chest when near System-rich areas.
+    scaling: "Sensitivity and range scale with SYS. At SYS 8: can sense cores through walls."
+    lore_notes: >
+      System Attunement is the passive form of what Mohamed achieves
+      through System Assimilation. Most Travellers develop mild
+      attunement over time. True Attunement — the kind that borders
+      on communion with the System — is exceedingly rare.
+
+  - id: UA-018
+    name: "RP Circulation"
+    type: cultivation_active
+    tier_requirement: 3
+    stat_requirement: "SYS 5+, WIS 5+"
+    cost: "None (generates RP)"
+    cooldown: "None"
+    description: >
+      Circulate System energy through the body to passively generate
+      RP over time. Must be in a meditative or restful state. Base
+      generation: 10 RP/hour. The process also deepens System
+      integration and can trigger minor stat improvements over
+      extended practice (weeks/months).
+    scaling: "RP generation scales with SYS and WIS. At SYS 10, WIS 10: 100 RP/hour."
+    lore_notes: >
+      The cultivation technique that most closely mirrors eastern
+      cultivation novel mechanics. Patient Travellers who practice
+      RP Circulation daily see slow but steady improvement in their
+      System connection. This is NOT the same as Mohamed's RP
+      Conversion — RP Circulation generates RP from ambient System
+      energy. RP Conversion transforms physical matter into RP.
+
+  - id: UA-019
+    name: "Skill Fusion"
+    type: meta_active
+    tier_requirement: 5
+    stat_requirement: "INT 10+, SYS 8+"
+    cost: "1,000 RP (permanent)"
+    cooldown: "N/A (permanent effect)"
+    description: >
+      Permanently combine two compatible abilities into a new, more
+      powerful hybrid ability. The fused ability gains properties of
+      both parent abilities but costs more to use. Can only be performed
+      once per ability — no chain fusions. Failed fusion destroys both
+      parent abilities permanently.
+    scaling: "Fusion success rate scales with INT. At INT 15: 90% success."
+    lore_notes: >
+      Skill Fusion is terrifying and exhilarating. The potential for
+      incredibly powerful hybrid abilities is matched by the permanent
+      loss risk. A fused Power Strike + Phase Step creates a teleporting
+      heavy attack. A fused Iron Skin + Berserker Rage creates an
+      unstoppable juggernaut form. The possibilities are endless and
+      the risk is absolute.
+
+  - id: UA-020
+    name: "Territory Claim"
+    type: building_active
+    tier_requirement: 3
+    stat_requirement: "SYS 5+"
+    cost: "5,000 RP (initial) + 100 RP/day (maintenance)"
+    cooldown: "N/A"
+    description: >
+      Claim a territory up to 1km² as System-recognized personal or
+      faction territory. Claimed territory provides: System map of the
+      area, intruder alerts, resource regeneration bonuses, and building
+      permission. Must be maintained with daily RP cost or claim lapses.
+    scaling: "Territory size scales with SYS. At SYS 10: 5km². At SYS 15: 25km²."
+    lore_notes: "The foundation of base building. Without a claim, anything you build is unprotected."

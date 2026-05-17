@@ -1,0 +1,473 @@
+---
+category: soul_vehicle_starters
+description: >
+  Detailed database of starter Soul Vehicles available to new Travellers
+  upon Core Synchronization. Each species has three domain choices.
+  The choice is permanent — the vehicle's fundamental domain cannot be changed.
+  This file covers human starters in full detail and alien starters in summary.
+
+# ============================================
+# SYSTEM SOUL VEHICLE SELECTION INTERFACE
+# ============================================
+selection_interface:
+  trigger: "Immediately after Core Synchronization completes"
+  display_format: >
+    The System displays a full-screen holographic interface showing three
+    rotating 3D models of the available Soul Vehicles. Each model can be
+    examined from any angle. Below each model, the System displays:
+    vehicle name, domain type, base stats, advantages, disadvantages,
+    and a brief description. The interface remains until the Traveller
+    makes a selection. There is no time limit. The choice cannot be
+    undone once confirmed — the System asks for confirmation twice.
+  notification_format: |
+    +================================================+
+               SYSTEM NOTIFICATION
+    +================================================+
+      CORE SYNCHRONIZATION COMPLETE
+      SOUL VEHICLE SELECTION AVAILABLE
+
+      SELECT YOUR DOMAIN:
+      [1] LAND VEHICLE
+      [2] NAVY VEHICLE
+      [3] AIR VEHICLE
+
+      WARNING: THIS CHOICE IS PERMANENT
+    +================================================+
+
+# ============================================
+# HUMAN STARTER SOUL VEHICLES
+# ============================================
+human_starters:
+  land:
+    - id: SV-H-L01
+      name: "Pathrunner"
+      domain: land
+      subtype: sedan
+      description: >
+        A System-generated four-door sedan. Sleek, utilitarian, and built for
+        endurance. The body is composed of System-enhanced steel alloy — stronger
+        and lighter than anything pre-System automotive engineering produced.
+        The engine runs on ambient System energy, requiring no fuel. Four-wheel
+        drive with adaptive suspension that handles any terrain from highway to
+        rocky trail. Seats four comfortably. The trunk has a dimensional pocket
+        at Tier 1+ that expands into interior living space.
+      base_stats:
+        hull_hp: 500
+        armor: 30
+        speed: "120 km/h (road), 60 km/h (off-road)"
+        cargo_capacity: "200 kg (trunk) + pocket dimension at Tier 1+"
+        fuel: "System energy (infinite, no RP cost for basic operation)"
+        seats: 4
+      advantages:
+        - "Highest base armor of all starter types"
+        - "Best cargo capacity for hauling loot and supplies"
+        - "Easiest to maintain — simple mechanical structure"
+        - "Most upgrade slots at Tier 0 (3 slots vs 2 for others)"
+        - "Can navigate most terrain without specialized upgrades"
+        - "Lowest RP cost for upgrades across all tiers"
+      disadvantages:
+        - "Cannot cross water bodies without upgrades (Tier 3+ amphibious mod)"
+        - "Cannot fly without upgrades (Tier 3+ atmospheric flight module)"
+        - "Slower than air vehicles for long-distance travel"
+        - "Vulnerable to aerial attacks until anti-air upgrades installed"
+      starter_loadout:
+        - "System-enhanced headlights (night vision range: 200m)"
+        - "Basic System HUD (speed, hull HP, minimap)"
+        - "Emergency repair kit (1 use, restores 20% hull HP)"
+        - "System Communication antenna (planetary range)"
+      lore_notes: >
+        The Pathrunner is the most popular choice among human Travellers.
+        Approximately 55% of humans choose land vehicles. The practicality,
+        durability, and upgrade efficiency make it the safest choice for
+        newcomers. Mohamed Vance chooses a land vehicle — specifically a
+        variation that starts as a mini van, reflecting his practical nature.
+
+    - id: SV-H-L02
+      name: "Hauler"
+      domain: land
+      subtype: truck
+      description: >
+        A System-generated pickup truck. Larger than the Pathrunner with a
+        reinforced bed and towing capability. Built for utility — hauling
+        materials, towing equipment, and surviving rough conditions.
+        The cab seats three. The bed can carry oversized cargo or be
+        converted into a mobile workshop at higher tiers.
+      base_stats:
+        hull_hp: 650
+        armor: 35
+        speed: "100 km/h (road), 50 km/h (off-road)"
+        cargo_capacity: "500 kg (bed) + pocket dimension at Tier 1+"
+        fuel: "System energy (infinite)"
+        seats: 3
+      advantages:
+        - "Highest hull HP of any starter vehicle"
+        - "Massive cargo capacity — ideal for salvagers and traders"
+        - "Towing capability (can tow up to 2x vehicle weight)"
+        - "Bed converts to workshop/lab space at higher tiers"
+      disadvantages:
+        - "Slowest starter vehicle"
+        - "Large profile — hard to hide or stealth"
+        - "Higher RP cost for mobility upgrades"
+      lore_notes: >
+        The Hauler is the choice of practical-minded Travellers — traders,
+        salvagers, and builders who prioritize utility over speed or glamour.
+
+    - id: SV-H-L03
+      name: "Rover"
+      domain: land
+      subtype: suv
+      description: >
+        A System-generated SUV built for versatility. Balanced between the
+        Pathrunner's speed and the Hauler's durability. All-terrain capable
+        with higher ground clearance. Seats five. The rear cargo area
+        converts to pocket dimension access at Tier 1+.
+      base_stats:
+        hull_hp: 550
+        armor: 32
+        speed: "110 km/h (road), 70 km/h (off-road)"
+        cargo_capacity: "300 kg + pocket dimension at Tier 1+"
+        fuel: "System energy (infinite)"
+        seats: 5
+      advantages:
+        - "Best off-road performance of land starters"
+        - "Most passenger seats (5)"
+        - "Balanced between speed, armor, and cargo"
+        - "Higher ground clearance for rough terrain"
+      disadvantages:
+        - "Master of none — doesn't excel in any single area"
+        - "Higher RP consumption for off-road System assists"
+      lore_notes: >
+        The Rover is chosen by group-oriented Travellers who plan to
+        carry companions. Its balance makes it forgiving for newcomers
+        who aren't sure what playstyle they'll develop.
+
+  navy:
+    - id: SV-H-N01
+      name: "Skimmer"
+      domain: navy
+      subtype: speedboat
+      description: >
+        A System-generated speedboat designed for fast water travel. Compact,
+        agile, and capable of reaching high speeds on open water. The hull
+        is System-enhanced fiberglass composite — light but tough. Open-top
+        design with a small enclosed cabin. At higher tiers, the hull can
+        be sealed for submersion capability.
+      base_stats:
+        hull_hp: 400
+        armor: 20
+        speed: "150 km/h (calm water), 80 km/h (rough seas)"
+        cargo_capacity: "100 kg (deck storage) + pocket dimension at Tier 1+"
+        fuel: "System energy (infinite)"
+        seats: 3
+      advantages:
+        - "Fastest starter vehicle on water"
+        - "Highly maneuverable — can navigate narrow waterways"
+        - "Access to water-based dungeons and resources from day one"
+        - "Can outrun most Tier 0-1 water creatures"
+        - "Submersion capability unlocks earlier than other navy types (Tier 2)"
+      disadvantages:
+        - "Lowest hull HP of all starters"
+        - "Useless on land without upgrades (Tier 3+ amphibious mode)"
+        - "Small cargo capacity"
+        - "Vulnerable in rough seas at Tier 0"
+        - "Limited to water — most settlements are land-based"
+      starter_loadout:
+        - "Sonar array (detects underwater entities within 500m)"
+        - "Basic System HUD (speed, hull HP, depth, water conditions)"
+        - "Emergency flotation (prevents sinking if hull breached)"
+        - "Anchor system (secures vehicle in place)"
+      lore_notes: >
+        Only about 15% of human Travellers choose navy vehicles. Water
+        access is powerful but limiting — you need water to use your vehicle.
+        Navy Travellers tend to operate in coastal regions, river systems,
+        and island chains. They have exclusive access to underwater dungeons
+        that land and air Travellers cannot reach without expensive equipment.
+
+    - id: SV-H-N02
+      name: "Mariner"
+      domain: navy
+      subtype: patrol_craft
+      description: >
+        A System-generated mid-size patrol boat. Larger and sturdier than
+        the Skimmer, with an enclosed cabin, sleeping berth, and basic
+        galley. Designed for extended water operations — fishing, patrol,
+        and exploration. Can handle rough seas better than the Skimmer.
+      base_stats:
+        hull_hp: 500
+        armor: 28
+        speed: "100 km/h (calm water), 60 km/h (rough seas)"
+        cargo_capacity: "300 kg + pocket dimension at Tier 1+"
+        fuel: "System energy (infinite)"
+        seats: 4
+      advantages:
+        - "Enclosed cabin — protection from weather and sea creatures"
+        - "Built-in sleeping berth and basic galley"
+        - "Better rough sea handling"
+        - "Higher armor and hull HP than Skimmer"
+      disadvantages:
+        - "Slower than Skimmer"
+        - "Larger profile — harder to navigate narrow waterways"
+        - "Same land limitation as all navy starters"
+      lore_notes: >
+        The Mariner is the practical choice for navy Travellers — those
+        who plan to live on the water long-term rather than sprint across it.
+
+    - id: SV-H-N03
+      name: "Drifter"
+      domain: navy
+      subtype: sailboat
+      description: >
+        A System-generated sailing vessel with both System-enhanced sails
+        and auxiliary System-energy propulsion. The most fuel-efficient
+        navy starter — sails reduce System energy consumption by 50% in
+        favorable winds. Larger deck space for cargo and activities.
+        The most comfortable navy starter for long voyages.
+      base_stats:
+        hull_hp: 450
+        armor: 25
+        speed: "80 km/h (engine), 60 km/h (sail), 120 km/h (full sail + engine)"
+        cargo_capacity: "400 kg + pocket dimension at Tier 1+"
+        fuel: "System energy (50% reduced with sails)"
+        seats: 5
+      advantages:
+        - "Most fuel-efficient navy starter"
+        - "Largest cargo capacity of navy starters"
+        - "Most seats (5)"
+        - "Largest deck space for activities and modifications"
+        - "Silent running under sail (stealth bonus)"
+      disadvantages:
+        - "Slowest navy starter under engine only"
+        - "Sail-dependent for best speed (wind conditions matter)"
+        - "Largest profile — easy to spot"
+      lore_notes: >
+        The Drifter appeals to explorers and traders who want to cover
+        vast ocean distances without burning RP. The silent running
+        capability under sail makes it surprisingly effective for stealth.
+
+  air:
+    - id: SV-H-A01
+      name: "Hawk"
+      domain: air
+      subtype: light_helicopter
+      description: >
+        A System-generated light helicopter. Vertical takeoff and landing,
+        hovering capability, and moderate speed. The most versatile air
+        starter — can land almost anywhere. Enclosed cockpit with one
+        passenger seat. System-enhanced rotors are nearly silent compared
+        to pre-System helicopters.
+      base_stats:
+        hull_hp: 350
+        armor: 15
+        speed: "200 km/h (cruise), 280 km/h (max)"
+        altitude: "5,000m maximum"
+        cargo_capacity: "80 kg + pocket dimension at Tier 1+"
+        fuel: "System energy (15 RP/hour flight)"
+        seats: 2
+      advantages:
+        - "Vertical takeoff and landing — can land anywhere"
+        - "Hovering capability — can stop in mid-air"
+        - "Best scouting and reconnaissance vehicle"
+        - "Bypass all ground-level threats"
+        - "Superior speed for long-distance travel"
+        - "Near-silent operation (System-enhanced rotors)"
+      disadvantages:
+        - "Lowest hull HP and armor of all starters"
+        - "Smallest cargo capacity"
+        - "RP consumption while flying (15 RP/hour)"
+        - "Cannot operate underwater without extensive upgrades"
+        - "Vulnerable to anti-air attacks"
+        - "Limited passenger capacity"
+      starter_loadout:
+        - "Altitude sensor and wind gauge"
+        - "Basic System HUD (speed, altitude, hull HP, wind conditions)"
+        - "Emergency parachute (one-time use, deploys if hull reaches 0 in air)"
+        - "Landing gear (retractable)"
+      lore_notes: >
+        About 30% of human Travellers choose air vehicles. The freedom
+        of flight is intoxicating, but the low durability and RP cost
+        make it the highest-risk choice. Air Travellers tend to be scouts,
+        couriers, and thrill-seekers. They dominate aerial dungeon access
+        — floating islands, sky fortresses, and cloud-layer environments.
+
+    - id: SV-H-A02
+      name: "Sparrow"
+      domain: air
+      subtype: prop_plane
+      description: >
+        A System-generated single-engine propeller plane. Fixed-wing design
+        prioritizes speed and fuel efficiency over maneuverability. Requires
+        a runway or flat surface for takeoff (50m minimum). Enclosed cockpit
+        with two passenger seats. Excellent for long-distance travel.
+      base_stats:
+        hull_hp: 380
+        armor: 18
+        speed: "300 km/h (cruise), 400 km/h (max)"
+        altitude: "8,000m maximum"
+        cargo_capacity: "120 kg + pocket dimension at Tier 1+"
+        fuel: "System energy (10 RP/hour flight)"
+        seats: 3
+      advantages:
+        - "Fastest starter vehicle overall"
+        - "Best fuel efficiency of air starters (10 RP/hour)"
+        - "Higher altitude ceiling — can fly above most threats"
+        - "More cargo capacity than Hawk"
+        - "More passenger seats than Hawk"
+      disadvantages:
+        - "Requires runway for takeoff and landing (50m flat surface)"
+        - "Cannot hover — must maintain forward speed"
+        - "Less maneuverable than Hawk"
+        - "Landing site limitations restrict where you can stop"
+      lore_notes: >
+        The Sparrow is for Travellers who want to cover distance fast.
+        The runway requirement is a significant limitation early on, but
+        at Tier 2+ VTOL upgrades eliminate it. The fuel efficiency makes
+        it the most economical air option for long-range operations.
+
+    - id: SV-H-A03
+      name: "Glider"
+      domain: air
+      subtype: powered_glider
+      description: >
+        A System-generated powered glider. Combines unpowered gliding with
+        System-energy boost capability. Can soar on thermals and air
+        currents with zero RP cost, engaging the engine only for climbing
+        and maneuvering. The lightest and most graceful air starter.
+        Open cockpit with windshield. Seats one (pilot only).
+      base_stats:
+        hull_hp: 300
+        armor: 10
+        speed: "150 km/h (powered), 100 km/h (gliding)"
+        altitude: "10,000m maximum (thermal-dependent)"
+        cargo_capacity: "50 kg + pocket dimension at Tier 1+"
+        fuel: "System energy (5 RP/hour powered, 0 RP/hour gliding)"
+        seats: 1
+      advantages:
+        - "Zero RP cost when gliding (thermal soaring)"
+        - "Highest altitude ceiling of all starters"
+        - "Most fuel efficient overall"
+        - "Smallest profile — hardest air vehicle to detect"
+        - "Can launch from any height (cliff, building, mountain)"
+      disadvantages:
+        - "Solo vehicle only — no passengers"
+        - "Lowest hull HP and armor of ALL starters"
+        - "Smallest cargo capacity"
+        - "Thermal-dependent for best performance"
+        - "Open cockpit — no weather protection at Tier 0"
+        - "Slowest air starter under power"
+      lore_notes: >
+        The Glider is the lonewolf's choice. Solo scouts, spies, and
+        daredevils choose the Glider for its stealth and efficiency.
+        The zero-cost gliding makes it possible to stay airborne
+        indefinitely without spending RP — a massive strategic advantage.
+
+# ============================================
+# ALIEN STARTER SOUL VEHICLES (SUMMARY)
+# ============================================
+alien_starters:
+  kael_thari:
+    domain_options:
+      ground: "Data Cruiser — hover vehicle bristling with sensors and analysis equipment. Scans everything within 2km. Slow but incredibly information-dense."
+      aerial: "Analysis Pod — spherical drone-like aircraft. 360-degree sensor coverage. Can deploy smaller analysis drones. Very fragile."
+      aquatic: "Research Vessel — submarine-style vehicle designed for deep-water research. Pressure-resistant. Built-in laboratory space."
+    species_bonus: "All Kael'thari starters have +50% scanner range and built-in System Analyze at no RP cost."
+
+  dravik:
+    domain_options:
+      ground: "War Chariot — armored ground vehicle with built-in ram. Highest hull HP of any species' starter (800). Seats 2. Weapon mount standard."
+      aerial: "Assault Skiff — aggressive aerial craft with dive-bomb capability. +30% damage when attacking from above."
+      naval: "Raid Barge — armored boat with boarding ramps. Designed for ship-to-ship combat. Can ram enemy vessels."
+    species_bonus: "All Dravik starters have +25% base armor and a built-in weapon mount (empty — weapon must be acquired)."
+
+  nexari:
+    domain_options:
+      ground: "Phase Drifter — ground vehicle that partially phases through obstacles. Can pass through thin walls. Takes 20% less damage (probability dodge)."
+      aerial: "Probability Glider — aircraft that automatically adjusts to avoid turbulence and projectiles. -30% chance to be hit by ranged attacks."
+      naval: "Flux Boat — watercraft that shifts between surface and sub-surface. Can become partially intangible to avoid impacts."
+    species_bonus: "All Nexari starters have a passive 10% dodge chance against all attacks (probability shift)."
+
+  formicari:
+    domain_options:
+      ground: "Hive Carrier — large ground transport. Seats 12. Can deploy 6 drone workers for gathering, scouting, or combat. Slowest starter of any species."
+      aerial: "Swarm Flyer — aerial vehicle that can split into 4 smaller drones for 60 seconds. Each drone operates independently. Recombines automatically."
+      naval: "Colony Barge — massive barge designed for colony transport. Seats 20. Built-in food production for crew."
+    species_bonus: "All Formicari starters have +100% passenger capacity and built-in drone deployment (2 utility drones)."
+
+  varak_shi:
+    domain_options:
+      ground: "Sand Crawler — low-profile ground vehicle that can burrow into sand/soil. Undetectable when buried. Heat-resistant."
+      aerial: "Desert Hawk — high-altitude glider optimized for hot, dry conditions. Thermal soaring bonus: +50% lift in desert environments."
+      hover: "Dune Skimmer — hovercraft that glides over sand, water, and rough terrain. Fastest starter on flat terrain (180 km/h)."
+    species_bonus: "All Varak'shi starters have heat immunity and sand burrowing capability (ground vehicles can fully submerge in sand)."
+
+  luminari:
+    domain_options:
+      ground: "Light Racer — energy-construct ground vehicle. Can briefly convert to light (1 second burst at light speed, 100 RP, 5 min cooldown). Fragile."
+      aerial: "Photon Wing — winged energy construct. Partially transparent. Can become fully incorporeal for 3 seconds (dodge). Glows constantly."
+      naval: "Wave Rider — surfs on light refraction across water surface. Fastest water vehicle of any species' starter (200 km/h)."
+    species_bonus: "All Luminari starters can become briefly incorporeal (1-3 seconds, species ability, not vehicle ability) and glow, providing light in dark areas."
+
+  automari:
+    domain_options:
+      ground: "Mech Frame — bipedal walking vehicle. Hands for manipulation. Can use oversized weapons. Slowest but most versatile ground starter."
+      aerial: "Drone Swarm — not a single vehicle but a coordinated swarm of 20 drones that carry the Automari. Can reshape formation at will."
+      naval: "Submersible — purpose-built submarine. Deepest dive capability of any starter (2km). Built-in sonar and pressure resistance."
+    species_bonus: "All Automari starters have direct neural interface (thought control) and built-in repair drones (2% hull/hour self-repair vs standard 1%)."
+
+  void_wraith:
+    domain_options:
+      ground: "Shadow Runner — ground vehicle that exists partially in void space. Always semi-transparent. 25% harder to detect. Passes through thin obstacles."
+      aerial: "Phantom Wing — aerial vehicle cloaked in void energy. Naturally invisible at night. Silent flight. Fragile but nearly undetectable."
+      naval: "Depth Lurker — submarine that phases into void space underwater. Can pass through solid underwater obstacles. Terrifying to encounter."
+    species_bonus: "All Void Wraith starters have natural stealth (-40% detection) and can briefly phase into void space (5 seconds, 60 second cooldown)."
+
+# ============================================
+# SOUL VEHICLE PROGRESSION
+# ============================================
+progression:
+  tier_0_to_1: >
+    At Tier 0, the Soul Vehicle is essentially a basic vehicle with System
+    enhancement — tougher, self-fueling, and repairable, but fundamentally
+    recognizable as a car/boat/plane. At Tier 1, the vehicle gains its
+    first pocket dimension (10m³), allowing interior expansion beyond
+    physical dimensions. This is the first major milestone — the vehicle
+    stops being just transport and becomes a mobile home.
+
+  tier_1_to_3: >
+    The vehicle grows in size and capability. By Tier 3, it's a fully
+    self-contained living space with kitchen, bathroom, bedroom, and
+    workshop. Cross-domain upgrades become available — a land vehicle
+    can gain amphibious or flight capability (at premium cost). The
+    vehicle starts to look less like its starter form and more like
+    something unique to the Traveller.
+
+  tier_3_to_5: >
+    Major transformation. The vehicle is now a mobile base — weapons
+    systems, shields, advanced sensors, and significant pocket dimension
+    space. Space capability becomes available (with EVA suit integration).
+    EXP farms and pocket dungeons can be installed. The vehicle is
+    recognizably a war machine / mobile fortress.
+
+  tier_5_to_10: >
+    The vehicle becomes a small nation. Internal dungeons, research
+    facilities, multiple living quarters for crew. Can sustain dozens
+    of people. Cross-dimensional travel becomes possible. The vehicle's
+    original domain is still its strongest, but it can operate in all
+    domains with appropriate upgrades.
+
+  tier_10_plus: >
+    The vehicle transcends conventional description. City-scale internal
+    spaces, dimensional manipulation, reality-affecting weapons. The
+    vehicle is effectively an extension of the Traveller's will —
+    responsive, powerful, and unique. No two Tier 10+ vehicles look
+    or function alike — they've evolved too far from their starter
+    templates.
+
+  mohameds_vehicle: >
+    Mohamed chooses a LAND vehicle — specifically manifesting as a mini
+    van at Tier 0. This reflects his practical, unassuming nature. As
+    his dual system allows him to absorb cores of any tier and convert
+    materials to RP at unprecedented rates, his vehicle will progress
+    faster than any vehicle in the universe's history. The mini van
+    that becomes a world-ship is one of the novel's great dramatic
+    arcs — from the humblest beginning to the most powerful vehicle
+    in existence.

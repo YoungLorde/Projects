@@ -1,0 +1,163 @@
+# Energy-Based & Exotic Races Database
+
+races:
+
+  - id: race_e001
+    name: "Luminari"
+    classification: energy
+    homeworld: "The Radiance (stellar nursery)"
+    universe_origin: "Light Cluster"
+    avg_height_cm: 180
+    avg_lifespan_years: 5000
+    skin_tones: ["pure light", "plasma white", "solar gold"]
+    distinguishing_features: "Bodies composed of condensed light energy, can shift between solid and energy states, leave afterimages"
+    base_stats: { STR: 4, AGI: 14, END: 3, INT: 10, PER: 12, LCK: 5, SYS: 7 }
+    racial_ability: "Light Form — become pure energy for 30 seconds (immune to physical damage, move at light speed in short bursts)"
+    culture: "Contemplative beings who experience time differently. A Luminari conversation may span weeks."
+    weakness: "Dark matter disrupts their coherence. Sustained darkness causes dissolution."
+    known_for: "Energy research, faster-than-light communication, stellar engineering"
+    traveller_percentage: 5
+
+  - id: race_e002
+    name: "Void Wraiths"
+    classification: energy
+    homeworld: "The Absence"
+    universe_origin: "Null Space"
+    avg_height_cm: 200
+    avg_lifespan_years: "Unknown (possibly immortal)"
+    skin_tones: ["absence black", "entropy gray", "void purple"]
+    distinguishing_features: "Bodies made of anti-energy. Absorb light and heat. Appear as humanoid holes in reality."
+    base_stats: { STR: 8, AGI: 9, END: 6, INT: 11, PER: 7, LCK: 1, SYS: 10 }
+    racial_ability: "Entropy Touch — drain energy from any source on contact (stats, batteries, life force)"
+    culture: "Unknown. They rarely communicate. When they do, it's through absence — removing things to create meaning."
+    weakness: "Overwhelming positive energy forces them to retreat. Creation-based abilities counter them."
+    known_for: "Energy draining, void manipulation, existential horror, System anomalies"
+    traveller_percentage: 15
+
+  - id: race_e003
+    name: "Plasmar"
+    classification: energy
+    homeworld: "Corona (star surface)"
+    universe_origin: "Solar Forge"
+    avg_height_cm: 195
+    avg_lifespan_years: 1000
+    skin_tones: ["plasma orange", "flare red", "core blue"]
+    distinguishing_features: "Bodies of contained plasma with magnetic field exoskeletons. Temperature ranges from 2000-10000°C."
+    base_stats: { STR: 9, AGI: 7, END: 8, INT: 7, PER: 5, LCK: 3, SYS: 5 }
+    racial_ability: "Solar Flare — release stored energy in a 20m radius burst (devastating but drains 50% reserves)"
+    culture: "Burn bright philosophy. They believe existence should be intense, not long. Their art is performed in stellar atmospheres."
+    weakness: "Must maintain internal energy. Prolonged cold exposure causes permanent energy loss."
+    known_for: "Energy weapons, stellar mining, plasma engineering, thermal combat"
+    traveller_percentage: 20
+
+  - id: race_e004
+    name: "Galvani"
+    classification: energy
+    homeworld: "Storm Eternal (gas giant)"
+    universe_origin: "Lightning Belt"
+    avg_height_cm: 175
+    avg_lifespan_years: 300
+    skin_tones: ["electric blue", "lightning white", "storm purple"]
+    distinguishing_features: "Bodies generate constant electrical field. Hair stands upright with static. Sparks arc between fingers."
+    base_stats: { STR: 6, AGI: 11, END: 5, INT: 8, PER: 8, LCK: 5, SYS: 6 }
+    racial_ability: "Chain Lightning — electrical discharge arcing between up to 5 targets within 30m"
+    culture: "Speed-culture. Everything is fast — decisions, travel, relationships. Patience is considered a character flaw."
+    weakness: "Grounding neutralizes abilities. Rubber and insulating materials are their kryptonite."
+    known_for: "Speed technology, electrical engineering, communications, energy weapons"
+    traveller_percentage: 45
+
+  - id: race_e005
+    name: "Graviton"
+    classification: energy
+    homeworld: "Singularity Station (black hole orbit)"
+    universe_origin: "Event Horizon"
+    avg_height_cm: 160
+    avg_lifespan_years: 800
+    skin_tones: ["gravity well dark", "spacetime silver", "mass blue"]
+    distinguishing_features: "Distort spacetime around themselves. Objects curve toward them. Light bends near their skin."
+    base_stats: { STR: 13, AGI: 4, END: 10, INT: 9, PER: 6, LCK: 2, SYS: 7 }
+    racial_ability: "Gravity Well — create a localized gravity field (pull enemies, crush objects, deflect projectiles)"
+    culture: "Everything orbits something. Their society is built on attraction and hierarchy. Isolation is exile."
+    weakness: "Anti-gravity technology nullifies their abilities. Without gravity manipulation, physically average."
+    known_for: "Gravity manipulation, astrophysics, black hole research, siege weapons"
+    traveller_percentage: 10
+
+  - id: race_e006
+    name: "Sonari"
+    classification: energy
+    homeworld: "The Resonance"
+    universe_origin: "Harmonic Sector"
+    avg_height_cm: 170
+    avg_lifespan_years: 400
+    skin_tones: ["vibration silver", "resonance gold", "frequency blue"]
+    distinguishing_features: "Bodies vibrate at specific frequencies. Can alter their vibration to phase through matter or solidify beyond steel."
+    base_stats: { STR: 6, AGI: 8, END: 6, INT: 8, PER: 10, LCK: 5, SYS: 6 }
+    racial_ability: "Frequency Shift — change molecular vibration to phase through solid matter (5 second bursts)"
+    culture: "Music IS language, science, art, and religion. Their cities resonate with constant harmonics."
+    weakness: "Counter-frequency attacks cause extreme pain and can shatter their molecular cohesion."
+    known_for: "Sonic weapons, vibration engineering, music, molecular manipulation"
+    traveller_percentage: 25
+
+  - id: race_e007
+    name: "Magnetar"
+    classification: energy
+    homeworld: "Polaris Forge"
+    universe_origin: "Magnetic Expanse"
+    avg_height_cm: 190
+    avg_lifespan_years: 600
+    skin_tones: ["magnetic iron", "pole blue", "field silver"]
+    distinguishing_features: "Generate powerful magnetic fields. Metal objects orbit them. Can walk on any metallic surface."
+    base_stats: { STR: 10, AGI: 6, END: 8, INT: 7, PER: 6, LCK: 3, SYS: 5 }
+    racial_ability: "Magnetic Domain — control all ferrous metal within 20m (weapons, armor, vehicles, debris)"
+    culture: "Attractive and repulsive forces govern their social bonds. Magnetic compatibility determines friendship."
+    weakness: "Non-metallic environments render their primary abilities useless."
+    known_for: "Metal manipulation, vehicle modification, magnetic weapons, salvage operations"
+    traveller_percentage: 35
+
+  - id: race_e008
+    name: "Quantari"
+    classification: energy
+    homeworld: "Superposition (exists in multiple states)"
+    universe_origin: "Quantum Foam"
+    avg_height_cm: "Variable (150-200)"
+    avg_lifespan_years: "Undefined (non-linear time perception)"
+    skin_tones: ["probability haze", "quantum blur", "uncertainty cloud"]
+    distinguishing_features: "Exist in quantum superposition — appear slightly blurred. Can be in two places simultaneously for brief moments."
+    base_stats: { STR: 5, AGI: 7, END: 5, INT: 13, PER: 7, LCK: 10, SYS: 9 }
+    racial_ability: "Quantum Split — create a quantum duplicate for 10 seconds (both are real, both can act)"
+    culture: "Uncertainty is sacred. Making definitive statements is taboo. All Quantari answers are probabilistic."
+    weakness: "Observation collapses their quantum state. Being watched by too many entities forces them into a single state."
+    known_for: "Quantum computing, probability manipulation, dimensional research, paradox engineering"
+    traveller_percentage: 5
+
+  - id: race_e009
+    name: "Thermavore"
+    classification: energy
+    homeworld: "Kelvin Zero"
+    universe_origin: "Entropy's Edge"
+    avg_height_cm: 185
+    avg_lifespan_years: 700
+    skin_tones: ["heat-void black", "thermal shift", "entropy white"]
+    distinguishing_features: "Absorb thermal energy from surroundings, creating frost zones. Bodies are perpetually cold."
+    base_stats: { STR: 7, AGI: 6, END: 9, INT: 8, PER: 6, LCK: 4, SYS: 5 }
+    racial_ability: "Heat Death — drain all thermal energy in a 10m radius, freezing everything to near absolute zero"
+    culture: "Conservation philosophy. Waste nothing. Their technology is the most energy-efficient in known space."
+    weakness: "In already-cold environments, they have nothing to absorb. Overheating from energy absorption is possible."
+    known_for: "Cryogenics, energy conservation technology, heat manipulation, thermal engineering"
+    traveller_percentage: 20
+
+  - id: race_e010
+    name: "Psychari"
+    classification: energy
+    homeworld: "Mindscape (psychic pocket dimension)"
+    universe_origin: "Thought Sector"
+    avg_height_cm: 170
+    avg_lifespan_years: 500
+    skin_tones: ["thought blue", "telepathy silver", "mind gold"]
+    distinguishing_features: "Oversized cranium with visible psychic energy corona. Can project thoughts as visible images."
+    base_stats: { STR: 2, AGI: 5, END: 3, INT: 15, PER: 9, LCK: 4, SYS: 8 }
+    racial_ability: "Psychic Blast — project concentrated mental energy as a damaging force (targets INT stat for damage)"
+    culture: "Telepathic commune. Privacy is a foreign concept. Thoughts are shared automatically. Lying is impossible."
+    weakness: "Physically the weakest known race. Mental overload from crowds can cause psychic seizures."
+    known_for: "Telepathy, psychic research, mental warfare, lie detection, diplomacy"
+    traveller_percentage: 15

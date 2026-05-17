@@ -1,0 +1,355 @@
+---
+category: combat_abilities
+description: >
+  Combat-focused abilities available through the Game System. These abilities
+  are granted by the System based on class, level, stats, and achievement.
+  They consume RP, stamina, or mana depending on the ability type.
+  Organized by combat type and tier requirement.
+
+# TIER 0-1 ABILITIES (Early game, accessible to new Travellers)
+tier_0_1:
+  - id: CA-001
+    name: "Power Strike"
+    type: melee_active
+    tier_requirement: 0
+    stat_requirement: "STR 2+"
+    cost: "10 Stamina"
+    cooldown: "5 seconds"
+    description: >
+      Channel System energy into a single devastating melee attack. The
+      strike lands with 200% base damage. The user's weapon or fist glows
+      with a faint System-blue light at the moment of impact. Higher STR
+      increases damage multiplier.
+    scaling: "Damage scales with STR. At STR 5: 300%. At STR 10: 500%."
+    lore_notes: "The bread-and-butter combat ability. Every melee fighter learns this first."
+
+  - id: CA-002
+    name: "Quick Dash"
+    type: movement_active
+    tier_requirement: 0
+    stat_requirement: "AGI 2+"
+    cost: "15 Stamina"
+    cooldown: "8 seconds"
+    description: >
+      Burst of System-enhanced speed covering 5 meters in an instant.
+      The user appears to blur between positions. Can be used to dodge
+      attacks, close distance, or escape. Leaves a faint afterimage at
+      the starting position.
+    scaling: "Distance scales with AGI. At AGI 5: 10m. At AGI 10: 20m."
+    lore_notes: "Critical for survival — the ability to dodge what you can't tank."
+
+  - id: CA-003
+    name: "Guard Stance"
+    type: defensive_active
+    tier_requirement: 0
+    stat_requirement: "END 2+"
+    cost: "5 Stamina/second (maintained)"
+    cooldown: "None (toggle)"
+    description: >
+      Adopt a defensive posture enhanced by the System. Reduces incoming
+      physical damage by 30% but reduces movement speed by 50%.
+      System energy visibly reinforces the user's body as a faint
+      shimmer around their skin.
+    scaling: "Damage reduction scales with END. At END 5: 40%. At END 10: 55%."
+    lore_notes: "The difference between surviving a hit and dying to one."
+
+  - id: CA-004
+    name: "Aimed Shot"
+    type: ranged_active
+    tier_requirement: 0
+    stat_requirement: "PER 2+"
+    cost: "10 Stamina"
+    cooldown: "3 seconds"
+    description: >
+      System-assisted aiming for ranged attacks. The user's vision
+      sharpens, a targeting reticle appears in their perception, and
+      the next ranged attack gains +50% accuracy and +25% damage.
+      Works with any projectile weapon.
+    scaling: "Accuracy bonus scales with PER. At PER 5: +70%. At PER 10: +90%."
+    lore_notes: "Essential for any ranged combatant. Makes mediocre marksmen lethal."
+
+  - id: CA-005
+    name: "Threat Assessment"
+    type: perception_passive
+    tier_requirement: 0
+    stat_requirement: "INT 2+"
+    cost: "None (passive)"
+    cooldown: "N/A"
+    description: >
+      The System provides a danger indicator for nearby entities. A
+      subtle color-coded aura appears around detected threats: green
+      (safe), yellow (caution), orange (dangerous), red (deadly).
+      Does not provide specific stats, only relative danger.
+    scaling: "Detection range scales with INT. Base: 10m. At INT 5: 25m. At INT 10: 50m."
+    lore_notes: "Keeps you alive long enough to learn everything else."
+
+  - id: CA-006
+    name: "System Strike"
+    type: melee_active
+    tier_requirement: 1
+    stat_requirement: "STR 3+, SYS 2+"
+    cost: "25 Stamina + 50 RP"
+    cooldown: "30 seconds"
+    description: >
+      Infuse a melee attack with raw System energy. The strike bypasses
+      physical armor and deals direct System damage. The weapon or fist
+      crackles with blue-white energy. Targets feel their System
+      interface flicker on impact.
+    scaling: "Damage scales with SYS. At SYS 3: 400% base. At SYS 5: 600%."
+    lore_notes: "The first ability that uses RP as fuel. Teaches Travellers that RP is more than currency."
+
+  - id: CA-007
+    name: "Vital Strike"
+    type: melee_active
+    tier_requirement: 1
+    stat_requirement: "PER 3+, STR 2+"
+    cost: "20 Stamina"
+    cooldown: "15 seconds"
+    description: >
+      The System highlights vulnerable points on the target. The next
+      melee attack automatically targets the weakest point, dealing
+      critical damage (300% base) and applying a Bleed status effect
+      (1% max HP/second for 10 seconds).
+    scaling: "Critical multiplier scales with PER. At PER 5: 400%. At PER 10: 600%."
+    lore_notes: "The assassin's favorite. One well-placed Vital Strike ends most Tier 1 fights."
+
+# TIER 2-3 ABILITIES (Mid-early game)
+tier_2_3:
+  - id: CA-008
+    name: "Shockwave"
+    type: area_active
+    tier_requirement: 2
+    stat_requirement: "STR 5+"
+    cost: "40 Stamina"
+    cooldown: "20 seconds"
+    description: >
+      Slam the ground with System-enhanced force. A shockwave radiates
+      outward in a 10m radius, dealing moderate damage and staggering
+      all targets within range. The ground cracks in a spiderweb pattern
+      from the impact point. Airborne targets are unaffected.
+    scaling: "Radius scales with STR. At STR 8: 15m. At STR 12: 25m."
+    lore_notes: "Crowd control essential. When surrounded, Shockwave buys time."
+
+  - id: CA-009
+    name: "Phase Step"
+    type: movement_active
+    tier_requirement: 2
+    stat_requirement: "AGI 5+, SYS 2+"
+    cost: "30 Stamina + 25 RP"
+    cooldown: "15 seconds"
+    description: >
+      Momentarily phase through the System's spatial registry, teleporting
+      up to 15m in any direction including through thin walls. The user
+      dissolves into System particles and reassembles at the destination.
+      Cannot phase through System-reinforced barriers.
+    scaling: "Distance scales with AGI. At AGI 8: 25m. At AGI 12: 40m."
+    lore_notes: "True teleportation. Limited range but invaluable for repositioning mid-combat."
+
+  - id: CA-010
+    name: "Iron Skin"
+    type: defensive_active
+    tier_requirement: 2
+    stat_requirement: "END 5+"
+    cost: "50 RP"
+    cooldown: "60 seconds"
+    duration: "30 seconds"
+    description: >
+      System energy hardens the user's skin to metallic density. Physical
+      damage reduced by 60%. Skin takes on a metallic sheen. Movement
+      speed reduced by 20% during activation. Does not stack with
+      Guard Stance.
+    scaling: "Damage reduction scales with END. At END 8: 70%. At END 12: 80%."
+    lore_notes: "The tank's dream. Thirty seconds of near-invulnerability to physical attacks."
+
+  - id: CA-011
+    name: "Multi-Shot"
+    type: ranged_active
+    tier_requirement: 2
+    stat_requirement: "PER 5+, AGI 3+"
+    cost: "30 Stamina"
+    cooldown: "10 seconds"
+    description: >
+      Fire 3 System-guided projectiles simultaneously at up to 3 different
+      targets. Each projectile deals 80% base damage but benefits from
+      System-assisted tracking. Requires a ranged weapon.
+    scaling: "Projectile count scales with PER. At PER 8: 5 shots. At PER 12: 8 shots."
+    lore_notes: "Turns a single marksman into a squad. Essential for clearing groups."
+
+  - id: CA-012
+    name: "Battle Sense"
+    type: perception_passive
+    tier_requirement: 3
+    stat_requirement: "PER 6+, INT 4+"
+    cost: "None (passive)"
+    cooldown: "N/A"
+    description: >
+      The System feeds combat data directly into the user's subconscious.
+      Grants awareness of attacks 0.5 seconds before they land. The user
+      perceives incoming threats as brief flashes of red in their peripheral
+      vision. Does not guarantee dodge — only awareness.
+    scaling: "Warning time scales with PER. At PER 10: 1 second. At PER 15: 2 seconds."
+    lore_notes: "The combat sense that separates veterans from corpses."
+
+  - id: CA-013
+    name: "Berserker Rage"
+    type: buff_active
+    tier_requirement: 3
+    stat_requirement: "STR 6+, END 5+"
+    cost: "100 RP"
+    cooldown: "300 seconds (5 minutes)"
+    duration: "60 seconds"
+    description: >
+      Flood the body with System-enhanced adrenaline. STR and AGI increase
+      by 50% for 60 seconds. Pain reception reduced by 80%. After duration
+      ends, user suffers 30-second exhaustion (all stats -25%).
+      Eyes glow red during activation. Cannot use complex abilities while active.
+    scaling: "Stat boost scales with END. At END 8: 60%. At END 12: 75%."
+    lore_notes: "The last resort. Incredible power for 60 seconds, vulnerability for 30 after."
+
+# TIER 4-5 ABILITIES (Mid game)
+tier_4_5:
+  - id: CA-014
+    name: "Blade Storm"
+    type: melee_area_active
+    tier_requirement: 4
+    stat_requirement: "STR 10+, AGI 8+"
+    cost: "80 Stamina + 100 RP"
+    cooldown: "45 seconds"
+    description: >
+      Execute a series of 12 rapid strikes in a 5m radius, each guided by
+      the System to find the optimal target. The user becomes a blur of
+      motion, weapon leaving trails of System energy. Deals 150% base
+      damage per strike to all targets in range.
+    scaling: "Strike count scales with AGI. At AGI 12: 18 strikes. At AGI 15: 24 strikes."
+    lore_notes: "The crowd-clearing ultimate. A Tier 4 fighter using Blade Storm can solo a Tier 2 dungeon room."
+
+  - id: CA-015
+    name: "Gravity Well"
+    type: control_active
+    tier_requirement: 4
+    stat_requirement: "INT 10+, SYS 5+"
+    cost: "200 RP"
+    cooldown: "120 seconds"
+    duration: "10 seconds"
+    description: >
+      Create a localized gravity anomaly at a target point within 30m.
+      All entities within 8m of the point are pulled toward its center
+      and their movement speed reduced by 70%. Objects float or crush
+      depending on the user's intent. System energy visibly warps
+      space around the anomaly.
+    scaling: "Radius scales with INT. At INT 15: 12m. At INT 20: 20m."
+    lore_notes: "Control the battlefield. Pin enemies in place while allies destroy them."
+
+  - id: CA-016
+    name: "System Overload"
+    type: special_active
+    tier_requirement: 5
+    stat_requirement: "SYS 8+, INT 8+"
+    cost: "500 RP"
+    cooldown: "600 seconds (10 minutes)"
+    description: >
+      Temporarily overload the System's energy output through the user's
+      body. All stats increase by 100% for 15 seconds. The user radiates
+      System energy visibly — blue-white lightning arcs from their body.
+      After duration, all stats reduced to 50% for 60 seconds. Risk of
+      System Rejection if SYS stat too low.
+    scaling: "Duration scales with SYS. At SYS 12: 20s. At SYS 15: 30s."
+    lore_notes: "The nuclear option. Used only when death is the alternative."
+
+  - id: CA-017
+    name: "Phantom Clone"
+    type: illusion_active
+    tier_requirement: 5
+    stat_requirement: "AGI 10+, INT 8+"
+    cost: "150 RP"
+    cooldown: "90 seconds"
+    duration: "30 seconds"
+    description: >
+      Create 1-3 System-generated duplicates of yourself. Clones mimic
+      your movements with slight delay, appear solid to visual inspection,
+      and can deal 10% of your damage. Clones disperse on taking any
+      damage. Enemies must use PER check to identify the real target.
+    scaling: "Clone count scales with INT. At INT 12: 3 clones. At INT 15: 5 clones."
+    lore_notes: "Deception in combat. The enemy who can't find the real you can't kill you."
+
+# TIER 6+ ABILITIES (Late game, extremely powerful)
+tier_6_plus:
+  - id: CA-018
+    name: "Reality Slash"
+    type: melee_ultimate
+    tier_requirement: 6
+    stat_requirement: "STR 15+, SYS 10+"
+    cost: "1,000 RP"
+    cooldown: "1,800 seconds (30 minutes)"
+    description: >
+      Channel System energy into a blade of pure spatial distortion.
+      The slash cuts through physical matter, energy shields, and
+      partially through dimensional barriers. Range: 50m line.
+      Deals catastrophic damage to everything in its path. The cut
+      remains visible in space for several seconds as reality heals.
+    scaling: "Range scales with STR. At STR 20: 100m. At STR 30: 200m."
+    lore_notes: "A Tier 6 ability that can threaten Tier 8 entities. The universe notices when this is used."
+
+  - id: CA-019
+    name: "Absolute Defense"
+    type: defensive_ultimate
+    tier_requirement: 7
+    stat_requirement: "END 18+, SYS 12+"
+    cost: "2,000 RP"
+    cooldown: "3,600 seconds (1 hour)"
+    duration: "10 seconds"
+    description: >
+      The System creates a perfect defensive sphere around the user,
+      blocking ALL incoming damage regardless of source, type, or power.
+      Nothing enters the sphere. The user cannot attack while it's active.
+      The sphere appears as a translucent dome of shifting System code.
+    scaling: "Duration scales with END. At END 25: 15s. At END 30: 20s."
+    lore_notes: "True invulnerability. Ten seconds to breathe, heal, and plan your next move."
+
+  - id: CA-020
+    name: "Domain Projection"
+    type: area_ultimate
+    tier_requirement: 8
+    stat_requirement: "INT 20+, SYS 15+"
+    cost: "5,000 RP"
+    cooldown: "7,200 seconds (2 hours)"
+    duration: "60 seconds"
+    description: >
+      Project the user's System authority over a 100m radius, creating
+      a personal domain. Within the domain, the user gains: +50% to all
+      stats, awareness of all entities, control over environmental
+      elements (gravity, temperature, light), and the ability to
+      suppress enemy abilities by 30%. The domain appears as a subtle
+      shift in lighting and atmosphere.
+    scaling: "Radius scales with INT. At INT 25: 200m. At INT 30: 500m."
+    lore_notes: >
+      Domain Projection is the hallmark of a top-tier combatant. Within
+      their domain, they are functionally a minor god. Only other domain
+      users can contest it. Mohamed's dual system may eventually allow
+      him to project a domain that the Game System doesn't recognize —
+      invisible to other Travellers' System perception.
+
+  - id: CA-021
+    name: "System Severance"
+    type: special_ultimate
+    tier_requirement: 9
+    stat_requirement: "SYS 20+, INT 15+"
+    cost: "10,000 RP"
+    cooldown: "86,400 seconds (24 hours)"
+    description: >
+      Temporarily sever a target's connection to the Game System for
+      30 seconds. The target loses access to all System abilities,
+      stat enhancements, and System-generated equipment bonuses.
+      They are reduced to their base biological stats. This ability
+      is considered one of the most terrifying in existence — being
+      cut off from the System, even briefly, is described as feeling
+      like death.
+    scaling: "Duration scales with SYS. At SYS 25: 60s. At SYS 30: 120s."
+    lore_notes: >
+      System Severance is feared above almost all other abilities.
+      A Tier 15 Traveller reduced to base biological stats is just
+      a person — and in a universe of monsters, being just a person
+      means death. The psychological trauma of Severance often exceeds
+      the physical danger. Mohamed, with his dual system, might be
+      partially resistant — his secondary system could maintain some
+      function even if the primary is severed.

@@ -1,0 +1,169 @@
+# Monsters Database — Tier 6-10 (Rare & Dangerous Creatures)
+# These creatures pose serious threats to experienced Travellers.
+# Group tactics or vehicle-mounted weapons often required.
+
+creatures:
+
+  # ── Tier 6: Zone Bosses ────────────────────────────────────
+
+  - id: mon_030
+    name: "Necro Titan"
+    tier: 6
+    type: "Undead"
+    habitat: ["mass graves", "necropolis zones", "cursed battlefields"]
+    description: "30-meter undead colossus assembled from thousands of corpses. Commands lesser undead."
+    base_stats: { STR: 24, AGI: 3, END: 28, INT: 8, PER: 10, LCK: 2 }
+    abilities: ["Raise Dead (summon 20 lesser undead per minute)", "Death Aura (stat drain in 50m)", "Soul Harvest (heal from kills)", "Corpse Armor (regenerating armor from nearby dead)"]
+    rp_reward: 1200
+    loot_table: ["Necro Core (legendary)", "Death Crystal (epic)", "Titan Bone (epic)", "Soul Fragment (legendary)"]
+    danger_notes: "Clear ALL corpses before engaging. Fire team required. Purification abilities essential."
+    weak_to: ["Fire", "Holy/Purification", "Disintegration"]
+    resistant_to: ["Physical", "Poison", "Cold", "Psychic"]
+
+  - id: mon_031
+    name: "Crystal Wyrm"
+    tier: 6
+    type: "Dragon"
+    habitat: ["crystal caves", "mineral-rich mountains", "gem mines"]
+    description: "Serpentine dragon with crystalline scales that refract and amplify energy attacks. Can fire concentrated crystal beams."
+    base_stats: { STR: 20, AGI: 10, END: 22, INT: 12, PER: 14, LCK: 5 }
+    abilities: ["Crystal Beam (focused energy blast)", "Prismatic Shield (reflect energy attacks)", "Crystal Growth (create crystal barriers)", "Resonance Shatter (sonic AoE)"]
+    rp_reward: 1400
+    loot_table: ["Wyrm Crystal Scale (legendary)", "Prism Core (epic)", "Crystal Fang (epic)", "Resonance Gem (legendary)"]
+    danger_notes: "Physical attacks only — energy attacks get reflected. Sonic frequency attacks can shatter crystal armor."
+    weak_to: ["Physical (blunt)", "Sonic resonance"]
+    resistant_to: ["Energy", "Fire", "Ice", "Light"]
+
+  - id: mon_032
+    name: "Gravity Kraken"
+    tier: 6
+    type: "Aberration"
+    habitat: ["deep space", "gravity wells", "black hole periphery"]
+    description: "Space-born entity with tentacles that manipulate gravity. Can crush ships by increasing local gravity 100x."
+    base_stats: { STR: 22, AGI: 8, END: 20, INT: 10, PER: 12, LCK: 3 }
+    abilities: ["Gravity Crush (100x gravity in targeted area)", "Tentacle Swarm (8 independent attacks)", "Void Pull (drag targets toward center)", "Mass Shift (become lighter or heavier at will)"]
+    rp_reward: 1500
+    loot_table: ["Gravity Gland (legendary)", "Kraken Tentacle (epic)", "Void Pearl (legendary)", "Mass Crystal (epic)"]
+    danger_notes: "Anti-gravity equipment essential. Attack tentacles individually — each is a weak point."
+    weak_to: ["Anti-gravity fields", "Electricity", "Dimensional anchors"]
+    resistant_to: ["Physical", "Gravity", "Pressure"]
+
+  # ── Tier 7: Regional Threats ───────────────────────────────
+
+  - id: mon_033
+    name: "Plague Mother"
+    tier: 7
+    type: "Aberration"
+    habitat: ["swamps", "plague zones", "biological hazard areas"]
+    description: "Massive bio-horror that continuously births smaller plague creatures. Source of regional epidemics."
+    base_stats: { STR: 16, AGI: 4, END: 30, INT: 12, PER: 8, LCK: 2 }
+    abilities: ["Spawn Brood (birth 5 plague-lings per minute)", "Plague Cloud (200m radius disease)", "Mutation Pulse (evolve all nearby creatures)", "Regeneration (rapid healing from biological matter)"]
+    rp_reward: 2500
+    loot_table: ["Plague Core (legendary)", "Mother's Tissue (epic)", "Mutation Catalyst (legendary)", "Bio-Forge Gland (legendary)"]
+    danger_notes: "Hazmat gear required. Kill spawns quickly before they evolve. Cauterize the wound to prevent regeneration."
+    weak_to: ["Fire", "Radiation", "Anti-biological agents"]
+    resistant_to: ["Poison", "Disease", "Physical", "Cold"]
+
+  - id: mon_034
+    name: "Iron Leviathan"
+    tier: 7
+    type: "Construct"
+    habitat: ["oceans", "deep water", "ancient shipyards"]
+    description: "Ancient war machine — a submarine the size of a city that achieved semi-sentience through System energy."
+    base_stats: { STR: 30, AGI: 5, END: 35, INT: 14, PER: 16, LCK: 1 }
+    abilities: ["Torpedo Salvo (multi-target explosive)", "Depth Charge (massive AoE)", "Sonar Pulse (reveal all hidden targets in 5km)", "Hull Regeneration (self-repair)", "Deploy Drones (launch 10 combat drones)"]
+    rp_reward: 3000
+    loot_table: ["Leviathan Plating (legendary)", "AI Core Fragment (legendary)", "Ancient Torpedo (epic)", "Navigation Crystal (legendary)"]
+    danger_notes: "Cannot be fought without a vehicle of Tier 5+. Target the AI core in the command bridge. Drones must be dealt with first."
+    weak_to: ["EMP", "Internal sabotage", "Hacking"]
+    resistant_to: ["Physical", "Pressure", "Torpedo", "Fire"]
+
+  - id: mon_035
+    name: "Dimensional Hydra"
+    tier: 7
+    type: "Dragon"
+    habitat: ["dimensional rifts", "unstable zones", "ancient dragon nests"]
+    description: "Multi-headed dragon where each head exists in a different dimension. Cutting a head causes it to regenerate in another dimension."
+    base_stats: { STR: 26, AGI: 9, END: 28, INT: 11, PER: 15, LCK: 4 }
+    abilities: ["Multi-Dimensional Breath (each head breathes different element from different dimension)", "Regeneration (severed heads regrow in 60s)", "Dimensional Scatter (heads retreat to different dimensions when threatened)", "Convergence Attack (all heads attack from different dimensions simultaneously)"]
+    rp_reward: 3200
+    loot_table: ["Hydra Head Core (legendary per head)", "Dimensional Scale (legendary)", "Multi-Breath Gland (legendary)", "Regeneration Crystal (legendary)"]
+    danger_notes: "Must kill all heads simultaneously or they regenerate. Requires dimensional anchoring on all heads at once. Team of 5+ recommended."
+    weak_to: ["Simultaneous damage to all heads", "Dimensional anchoring", "Cauterization"]
+    resistant_to: ["Single-element attacks", "Physical"]
+
+  # ── Tier 8: Continental Threats ─────────────────────────────
+
+  - id: mon_036
+    name: "World Serpent"
+    tier: 8
+    type: "Beast"
+    habitat: ["planet-encircling orbits", "deep ocean trenches", "planetary mantles"]
+    description: "Serpent so large it wraps around planets. Its movements cause earthquakes and tsunamis. May be as old as the System itself."
+    base_stats: { STR: 40, AGI: 6, END: 45, INT: 12, PER: 18, LCK: 5 }
+    abilities: ["Tectonic Shift (cause earthquakes by moving)", "Tsunami Wake (100m waves)", "Constrict Planet (slowly crush a world)", "Ancient Scales (immune to Tier 5 and below weapons)", "Devour (consume city-sized areas)"]
+    rp_reward: 8000
+    loot_table: ["World Scale (mythic)", "Serpent Core (mythic)", "Tectonic Crystal (legendary)", "Ancient Blood Vial (legendary)"]
+    danger_notes: "Cannot be killed by conventional means. Requires fleet-level vehicle engagement. Historically, they are relocated, not killed."
+    weak_to: ["Internal damage", "System-level attacks", "Ancient weapons"]
+    resistant_to: ["Everything conventional"]
+
+  - id: mon_037
+    name: "Entropy Walker"
+    tier: 8
+    type: "Aberration"
+    habitat: ["dying stars", "heat death zones", "end-state universes"]
+    description: "Entity that accelerates entropy. Everything it touches ages, decays, and dies. Leaves a trail of absolute death."
+    base_stats: { STR: 15, AGI: 12, END: 20, INT: 18, PER: 14, LCK: 1 }
+    abilities: ["Entropy Field (everything within 100m ages rapidly)", "Time Drain (steal years of life from targets)", "Decay Touch (disintegrate on contact)", "Heat Death (lower temperature of entire zone toward absolute zero over hours)"]
+    rp_reward: 7500
+    loot_table: ["Entropy Core (mythic)", "Time Crystal (legendary)", "Decay Essence (legendary)", "Temporal Stabilizer Fragment (mythic)"]
+    danger_notes: "Do not engage in melee. Temporal shielding required. Time-manipulation abilities may work against it."
+    weak_to: ["Time reversal", "Creation energy", "Youth/vitality-based abilities"]
+    resistant_to: ["Entropy", "Cold", "Physical", "Energy drain"]
+
+  # ── Tier 9: Planetary Threats ──────────────────────────────
+
+  - id: mon_038
+    name: "System Anomaly"
+    tier: 9
+    type: "Anomaly"
+    habitat: ["System error zones", "corrupted sectors", "glitch fields"]
+    description: "A glitch in the System given physical form. Defies normal physics. Stats fluctuate randomly. Can rewrite local System rules."
+    base_stats: { STR: "Variable", AGI: "Variable", END: "Variable", INT: "Variable", PER: "Variable", LCK: "Variable" }
+    abilities: ["Rule Rewrite (change System rules in local area)", "Stat Scramble (randomize target's stats)", "Error Manifest (create hostile glitch constructs)", "System Crash (temporarily disable System in 1km radius)", "Corruption Spread (infect other creatures with glitch data)"]
+    rp_reward: 15000
+    loot_table: ["Anomaly Core (mythic)", "System Fragment (mythic)", "Glitch Crystal (legendary)", "Error Code (legendary)"]
+    danger_notes: "Unpredictable. No reliable strategy. System-enhanced weapons may malfunction near it. Anti-corruption tech recommended."
+    weak_to: ["System restoration tools", "Anti-corruption protocols", "Pure System energy"]
+    resistant_to: ["Varies — changes constantly"]
+
+  - id: mon_039
+    name: "Void Leviathan"
+    tier: 9
+    type: "Void"
+    habitat: ["deep void between universes", "dimensional dead zones"]
+    description: "Entity from the space between universes. Size of a small moon. Consumes dimensional energy."
+    base_stats: { STR: 35, AGI: 7, END: 50, INT: 15, PER: 20, LCK: 3 }
+    abilities: ["Void Consumption (eat dimensional barriers)", "Null Breath (erase matter from existence)", "Gravity Distortion (create micro black holes)", "Dimensional Collapse (merge two dimensions destructively)", "Regeneration (absorb void energy to heal)"]
+    rp_reward: 20000
+    loot_table: ["Void Core (mythic)", "Null Crystal (mythic)", "Leviathan Scale (mythic)", "Dimensional Anchor Fragment (mythic)"]
+    danger_notes: "Fleet engagement required. Minimum Tier 8 vehicles. Dimensional anchoring on massive scale. Historical encounters have destroyed entire star systems."
+    weak_to: ["Dimensional anchoring", "Creation energy", "System-level intervention"]
+    resistant_to: ["Physical", "Elemental", "Psychic", "Void"]
+
+  # ── Tier 10: Universe-Level Threats ────────────────────────
+
+  - id: mon_040
+    name: "The Awakened Devourer"
+    tier: 10
+    type: "Ancient"
+    habitat: ["Dead Zones", "Consumption Scars"]
+    description: "An awakened member of the ancient Devourer race. Planet-sized biological entity that consumes everything — matter, energy, dimensional fabric, even System data."
+    base_stats: { STR: 60, AGI: 5, END: 80, INT: 20, PER: 25, LCK: 1 }
+    abilities: ["Total Consumption (eat planets)", "System Immunity (cannot be tracked or affected by System)", "Gravity Engine (generate planetary-scale gravity)", "Spawn Hunger Engines (create self-replicating consumption drones)", "Reality Digest (consume dimensional fabric)"]
+    rp_reward: 100000
+    loot_table: ["Devourer Core (mythic — theoretically)", "Hunger Engine Fragment (mythic)", "Anti-System Crystal (mythic)"]
+    danger_notes: "Extinction-level event. No known solo or group strategy exists. Historical records suggest only the Wardens have successfully re-sealed one. Evacuation is the recommended response."
+    weak_to: ["Unknown — possibly ancient Warden technology"]
+    resistant_to: ["Everything known"]

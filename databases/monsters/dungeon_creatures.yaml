@@ -1,0 +1,101 @@
+# Dungeon Creatures Database
+# These creatures are found exclusively inside System-generated dungeons.
+# Dungeons have their own tier ratings — creatures inside match the dungeon tier.
+
+creatures:
+
+  - id: dun_001
+    name: "Dungeon Mimic"
+    tier: "Matches dungeon tier"
+    type: "Aberration"
+    habitat: ["all dungeon types"]
+    description: "Shapeshifter that disguises itself as treasure chests, doors, weapons, or furniture. Attacks when interacted with."
+    base_stats_scaling: "Stats scale to dungeon tier × 3"
+    abilities: ["Perfect Disguise (undetectable without INT > dungeon tier × 2)", "Adhesive Surface (grapple on touch)", "Bite (3x damage surprise attack)", "Loot Mimicry (appears as high-value item)"]
+    rp_reward_scaling: "Dungeon tier × 15"
+    loot_table: ["Mimic Tooth (scales with tier)", "Adhesive Gland (uncommon)", "True Form Crystal (rare)", "Mimic Core (legendary — only from Tier 7+ mimics)"]
+    danger_notes: "Always probe chests/items before touching. High INT reveals shimmer around disguise."
+
+  - id: dun_002
+    name: "Trap Golem"
+    tier: "Matches dungeon tier"
+    type: "Construct"
+    habitat: ["dungeon corridors", "trap rooms"]
+    description: "Stone guardian that activates dungeon traps and herds intruders into them. Immune to its own dungeon's traps."
+    base_stats_scaling: "Stats scale to dungeon tier × 4 (high END)"
+    abilities: ["Trap Activation (trigger any dungeon trap remotely)", "Stone Skin (high physical resistance)", "Corridor Control (block retreat paths)", "Self-Repair (heal near dungeon walls)"]
+    rp_reward_scaling: "Dungeon tier × 20"
+    loot_table: ["Trap Mechanism (uncommon)", "Golem Core (rare)", "Dungeon Stone (uncommon)", "Trap Schematic (rare)"]
+    danger_notes: "Disable traps before engaging. It cannot attack directly — it only uses traps and positioning."
+
+  - id: dun_003
+    name: "Floor Boss"
+    tier: "Dungeon tier + 1"
+    type: "Varies by dungeon theme"
+    habitat: ["boss rooms (end of each dungeon floor)"]
+    description: "System-designated guardian of each dungeon floor. Always one tier above the dungeon level. Drops floor-specific loot."
+    base_stats_scaling: "Dungeon tier × 5 across all stats, with specialization based on theme"
+    abilities: ["Boss Aura (stat debuff to challengers in boss room)", "Phase 2 (transform at 50% HP with new abilities)", "Floor Collapse (destroy the arena to create hazards)", "Loot Drop (guaranteed rare+ drop)"]
+    rp_reward_scaling: "Dungeon tier × 50"
+    loot_table: ["Floor Key (always — opens next floor)", "Boss Core (rare)", "Floor Trophy (epic)", "Skill Crystal (legendary — 5% drop)"]
+    danger_notes: "Study the boss room before engaging. Look for environmental advantages. Phase 2 always changes the fight."
+
+  - id: dun_004
+    name: "Dungeon Core Guardian"
+    tier: "Dungeon tier + 3"
+    type: "Construct/Elemental hybrid"
+    habitat: ["dungeon core rooms (deepest level)"]
+    description: "Final guardian protecting the dungeon's core. Defeating it allows access to the dungeon core — a massive RP and upgrade source."
+    base_stats_scaling: "Dungeon tier × 8 across all stats"
+    abilities: ["Dungeon Command (control all remaining creatures and traps)", "Core Shield (absorb damage from dungeon walls)", "Element Shift (change elemental affinity mid-fight)", "Final Stand (become 2x stronger at 25% HP)", "Dungeon Collapse (if guardian is losing, begin collapsing the dungeon)"]
+    rp_reward_scaling: "Dungeon tier × 200"
+    loot_table: ["Dungeon Core Fragment (legendary)", "Guardian Heart (epic)", "Core Access Key (always)", "Vehicle Upgrade Token (legendary — 10% drop)"]
+    danger_notes: "Bring escape route backup — Dungeon Collapse is triggered at 25% HP. Must kill fast or be buried."
+
+  - id: dun_005
+    name: "Shadow Clone"
+    tier: "Matches challenger's tier"
+    type: "Aberration"
+    habitat: ["mirror dungeons", "shadow dungeons"]
+    description: "Perfect copy of the Traveller fighting it. Has identical stats, abilities, and equipment — plus dungeon-enhanced versions."
+    base_stats_scaling: "Copies challenger's stats exactly, then adds +10% per dungeon tier"
+    abilities: ["Perfect Copy (replicate all of target's abilities)", "Enhanced Version (copied abilities deal 10% more damage)", "Shadow Step (teleport through shadows in the room)", "Predict (anticipate attacks based on copied fighting style)"]
+    rp_reward_scaling: "Own level × 30"
+    loot_table: ["Shadow Crystal (rare)", "Mirror Fragment (uncommon)", "Self-Knowledge Scroll (epic — reveals hidden stat potential)"]
+    danger_notes: "Cannot out-fight yourself with the same tactics. Must use environmental advantages or abilities you haven't used before."
+
+  - id: dun_006
+    name: "Puzzle Construct"
+    tier: "Matches dungeon tier"
+    type: "Construct"
+    habitat: ["puzzle rooms", "mechanical dungeons"]
+    description: "Cannot be killed by combat. Must be defeated by solving its puzzle challenge. Attacks continuously while puzzle is being solved."
+    base_stats_scaling: "Dungeon tier × 3 (moderate but persistent)"
+    abilities: ["Puzzle Lock (immune to all damage until puzzle solved)", "Harassment Attack (continuous low damage to solver)", "Timer Start (if puzzle not solved in 10 minutes, room fills with hazard)", "Clue Drop (occasionally drops hints at the cost of taking damage)"]
+    rp_reward_scaling: "Dungeon tier × 25"
+    loot_table: ["Puzzle Core (rare)", "Logic Crystal (uncommon)", "Mechanism Blueprint (rare)", "INT Boost Fragment (epic — 5% drop)"]
+    danger_notes: "One person solves, others defend. The puzzle is always solvable — look for environmental clues."
+
+  - id: dun_007
+    name: "Loot Gremlin"
+    tier: 1
+    type: "Beast"
+    habitat: ["all dungeons"]
+    description: "Tiny, fast creature that steals loot and equipment. Not dangerous in combat but losing gear is devastating."
+    base_stats: { STR: 1, AGI: 15, END: 2, INT: 5, PER: 8, LCK: 12 }
+    abilities: ["Steal (take random item from inventory)", "Escape Artist (90% dodge rate)", "Hoard (take stolen items to hidden stash)", "Summon Friends (call 3-5 more gremlins)"]
+    rp_reward: 5
+    loot_table: ["Stolen goods (random from its stash)", "Gremlin Pouch (uncommon — increases LCK by 1)", "Treasure Map Fragment (rare)"]
+    danger_notes: "Secure your valuables before entering dungeon. Chase immediately if robbed — stash is always nearby."
+
+  - id: dun_008
+    name: "Respawn Sentinel"
+    tier: "Matches dungeon tier"
+    type: "Construct"
+    habitat: ["respawn rooms", "checkpoint areas"]
+    description: "Guards dungeon respawn points. If not cleared, dead Travellers respawn right next to a hostile enemy."
+    base_stats_scaling: "Dungeon tier × 4"
+    abilities: ["Checkpoint Guard (camp respawn point)", "Anti-Heal Field (prevent recovery at respawn)", "Reinforcement Call (summon 2 additional sentinels after 5 minutes)", "Respawn Denial (if sentinel controls point, respawn moves to dungeon entrance)"]
+    rp_reward_scaling: "Dungeon tier × 18"
+    loot_table: ["Sentinel Core (uncommon)", "Checkpoint Crystal (rare)", "Respawn Token (epic — allow respawn at any cleared checkpoint)"]
+    danger_notes: "Always clear respawn points first. Never push deeper without securing your respawn."

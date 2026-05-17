@@ -85,6 +85,48 @@
 #   and applies them to story state if math validates. You can also
 #   use track_stats() standalone to preview changes before applying.
 #
+# AUTO-PILOT MODE:
+#   User says: "Auto Write N-M" or "Write Chapters N through M"
+#   Action: orch.auto_write(start=N, end=M, pipeline="full_quality")
+#   Queues multiple chapters for sequential writing. Each chapter's
+#   output feeds into the next via rolling context window.
+#   After each chapter, generate + save summary before proceeding.
+#
+# DATABASE QUERIES:
+#   User says: "Query database" or "Search database for X"
+#   Action: orch.query_database(query="X", category="races")
+#   Available categories: races, monsters, factions, powers, vehicles,
+#   items, worlds, technology, ancient_races
+#
+#   User says: "Database stats"
+#   Action: orch.get_database_stats()
+#
+# RELATIONSHIP TRACKING:
+#   User says: "Add relationship" or "Set relationship A and B"
+#   Action: orch.add_relationship(char_a, char_b, rel_type, trust)
+#
+#   User says: "Record interaction A and B"
+#   Action: orch.record_interaction(char_a, char_b, chapter, description, trust_change)
+#
+#   User says: "Show relationships" or "Show relationships for X"
+#   Action: orch.show_relationships(character="X")
+#
+# CONFLICT TRACKING:
+#   User says: "Add conflict" or "New conflict: X"
+#   Action: orch.add_conflict(name, conflict_type, chapter, participants, stakes)
+#   Types: personal, faction, survival, mystery, political, economic, existential, internal
+#
+#   User says: "Update conflict X" or "Escalate conflict X"
+#   Action: orch.update_conflict(conflict_id, new_state, chapter, event)
+#   States: introduced, developing, escalating, climax, resolving, resolved, dormant
+#
+#   User says: "Resolve conflict X"
+#   Action: orch.resolve_conflict(conflict_id, chapter, resolution)
+#
+#   User says: "Check conflicts" or "Show conflicts"
+#   Action: orch.check_conflicts(current_chapter)
+#   Returns active, stale (20+ chapters inactive), dormant conflicts.
+#
 # STATE MANAGEMENT:
 #   User says: "Show state" or "Current state"
 #   Action: orch.get_current_state()
@@ -139,6 +181,8 @@
 #    d. Stats/currency/progression are auto-tracked by finalize_chapter
 #    e. Review stat_tracking validation in finalize results
 #    f. Use track_stats() for manual review if needed
+#    g. Record any character interactions via orch.record_interaction()
+#    h. Update conflict states via orch.update_conflict() if needed
 
 # ── Writing Rules (Always Enforced) ──────────────────────────
 #
@@ -170,9 +214,21 @@
 #   memory_bank/conflicts/    — Active conflict tracker
 #   memory_bank/locations/    — Earth zones and universe types
 #
+# The orchestrator also auto-loads from:
+#   databases/races/           — All species/races with abilities
+#   databases/monsters/        — Creatures, bosses, dungeon mobs
+#   databases/factions/        — Human, alien, traveller guilds
+#   databases/powers/          — Combat, utility, racial abilities
+#   databases/vehicles/        — Soul vehicle starters, upgrades, cores
+#   databases/items/           — Weapons, armor, consumables, materials
+#   databases/worlds/          — Known worlds, hidden worlds, dungeons
+#   databases/technology/      — Tech, infrastructure, EVA suits
+#   databases/ancient_races/   — Precursor civilizations
+#
 # After writing each chapter:
 #   - Update character states in memory_bank/characters/
-#   - Update conflict tracker if conflicts changed
+#   - Update conflict tracker via orch.update_conflict()
+#   - Record interactions via orch.record_interaction()
 #   - Update vehicle state if upgrades occurred
 #   - Update location data if new areas explored
 
@@ -194,4 +250,6 @@
 #   pipelines/                      — Pipeline definitions and engine
 #   orchestrator.py                 — Main driver
 #   memory_manager.py               — Memory bank interface
+#   relationship_tracker.py         — Character relationship matrix
+#   conflict_tracker.py             — Plot conflict state machine
 #   config.py                       — Global configuration

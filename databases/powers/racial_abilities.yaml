@@ -1,0 +1,244 @@
+---
+category: racial_abilities
+description: >
+  Innate abilities tied to specific species/races. These abilities are
+  granted by birth, not by the System, though the System recognizes and
+  enhances them. Each race has unique biological or metaphysical traits
+  that provide combat, survival, or utility advantages.
+
+humanoid_racial:
+  - id: RA-001
+    name: "Human Adaptability"
+    race: "Human"
+    type: passive
+    description: >
+      Humans have no innate racial ability — their advantage IS their
+      lack of specialization. Humans gain +10% bonus XP from all sources
+      and learn new skills 20% faster than any other species. The System
+      recognizes human neural plasticity as a unique trait. This makes
+      humans the fastest-leveling species in the universe, which is why
+      alien civilizations are nervous about Earth's System activation —
+      in 800 years, the Kael'thari reached Tier 8 average. Humans could
+      theoretically reach it in 200.
+    scaling: "XP bonus increases to +15% at level 50, +20% at level 100"
+    lore_notes: >
+      Human Adaptability is why alien factions are watching Earth closely.
+      A species that levels 5x faster than average is either an opportunity
+      or an existential threat. Mohamed's dual system on top of Human
+      Adaptability makes him a statistical impossibility.
+
+  - id: RA-002
+    name: "Kael'thari Neural Network"
+    race: "Kael'thari"
+    type: passive_active
+    description: >
+      The Kael'thari possess a biological neural network that allows
+      direct brain-to-brain communication within 100m. This enables
+      instant data sharing, collaborative problem solving, and group
+      consciousness for complex tasks. In combat, a Kael'thari squad
+      operates with perfect coordination — no verbal commands needed.
+      Active use allows one Kael'thari to share sensory data with others.
+    scaling: "Range increases with INT. At INT 15: 500m. At INT 20: 2km."
+    lore_notes: >
+      The Neural Network is why the Kael'thari Technocracy functions
+      so efficiently. Their government decisions are made by literal
+      consensus — thousands of minds linked simultaneously. It also
+      makes them vulnerable — if a hostile entity breaches the network,
+      it can affect all connected minds.
+
+  - id: RA-003
+    name: "Dravik Blood Fury"
+    race: "Dravik"
+    type: active
+    cost: "None (triggered by injury)"
+    description: >
+      When a Dravik drops below 30% HP, Blood Fury activates automatically.
+      STR and AGI increase by 75%, pain is completely suppressed, and
+      healing rate triples. The Dravik's eyes turn solid red, their
+      muscles visibly swell, and they emit a low-frequency growl that
+      induces fear in lower-tier creatures. Duration: until combat ends
+      or HP reaches 0. No exhaustion penalty afterward — the Dravik
+      physiology is built for this.
+    scaling: "Stat boost increases with END. At END 15: +100%."
+    lore_notes: >
+      Blood Fury is why you never corner a Dravik. The closer they
+      are to death, the more dangerous they become. Battle strategy
+      against Dravik: kill them fast or don't engage. Half-measures
+      just make them stronger.
+
+  - id: RA-004
+    name: "Nexari Probability Sense"
+    race: "Nexari"
+    type: passive_active
+    description: >
+      Nexari perceive probability as a visible overlay on reality. They
+      see potential outcomes as branching paths — the most likely outcomes
+      appear solid, unlikely ones appear translucent. Actively, they can
+      "nudge" probability within a 5m radius, making unlikely outcomes
+      more probable. This isn't luck manipulation — it's quantum-level
+      probability adjustment.
+    scaling: "Nudge strength and range scale with INT and LCK."
+    lore_notes: >
+      Nexari Probability Sense makes them appear lucky, but it's a
+      deliberate skill. A trained Nexari can make a coin land on its
+      edge, make a bullet miss by millimeters, or ensure a critical
+      hit at the perfect moment. It's also why Nexari are banned from
+      most gambling establishments.
+
+  - id: RA-005
+    name: "Varak'shi Sand Walk"
+    race: "Varak'shi"
+    type: active
+    cost: "10 Stamina"
+    description: >
+      The Varak'shi can merge with sand, soil, and loose earth, moving
+      through it as if swimming through water. Maximum depth: 10m.
+      Speed: 50% of normal movement. They can sense vibrations through
+      the ground within 100m while submerged. Emerging from the ground
+      mid-combat provides a surprise attack bonus (+50% damage on first
+      strike).
+    scaling: "Depth, speed, and sensing range scale with AGI and PER."
+    lore_notes: >
+      Sand Walk is why desert warfare against the Varak'shi is suicide.
+      They attack from below, retreat into the earth, and sense every
+      footstep for 100 meters. Their fortress-cities are built on rock
+      foundations specifically to prevent enemy Sand Walkers from
+      bypassing walls.
+
+insectoid_racial:
+  - id: RA-006
+    name: "Formicari Hive Link"
+    race: "Formicari"
+    type: passive
+    description: >
+      All Formicari within a colony share a telepathic connection with
+      their Queen. This link provides: real-time tactical coordination,
+      emotional synchronization, shared sensory data, and collective
+      memory access. The Hive Link cannot be jammed by conventional
+      means — it operates on a frequency the System itself uses.
+      Individual Formicari separated from the Hive Link experience
+      severe disorientation and depression.
+    scaling: "Range is theoretically unlimited (System-mediated)"
+    lore_notes: >
+      The Hive Link makes Formicari armies terrifyingly efficient.
+      A million soldiers moving as one mind with zero communication
+      lag. The weakness is the Queen — if she's killed or cut off,
+      the entire colony suffers immediate psychological collapse.
+
+  - id: RA-007
+    name: "Chitin Adaptation"
+    race: "Various insectoid species"
+    type: passive
+    description: >
+      Insectoid species possess natural chitin armor that provides
+      physical damage reduction without equipment. Base reduction:
+      15% physical damage. The chitin can be shed and regrown,
+      with each regrowth slightly stronger than the last. System
+      enhancement makes chitin rival Tier 2-3 conventional armor.
+    scaling: "Chitin strength increases with END and level."
+    lore_notes: "A biological advantage that saves insectoids enormous RP on armor costs."
+
+reptilian_racial:
+  - id: RA-008
+    name: "Thermal Vision"
+    race: "Various reptilian species"
+    type: passive
+    description: >
+      Reptilian species perceive heat signatures as a secondary visual
+      layer. Living creatures appear as bright outlines against cooler
+      backgrounds. This provides effective night vision, tracking
+      capability (heat trails persist for 10-30 minutes), and the
+      ability to detect hidden enemies behind thin cover.
+    scaling: "Sensitivity and heat trail detection improve with PER."
+    lore_notes: "Sneaking past a reptilian requires complete thermal suppression."
+
+  - id: RA-009
+    name: "Regeneration"
+    race: "Saurix, select reptilian species"
+    type: passive
+    description: >
+      Enhanced healing factor that allows regeneration of lost limbs
+      and organs over time. Minor wounds (cuts, bruises) heal in
+      minutes. Major wounds (broken bones) heal in hours. Lost limbs
+      regenerate in days to weeks depending on severity. Cannot
+      regenerate if HP reaches 0 (death). System enhancement
+      accelerates regeneration significantly.
+    scaling: "Regeneration speed scales with VIT and END."
+    lore_notes: >
+      Saurix regeneration is feared by other species. You can wound
+      a Saurix, but unless you kill them outright, they'll be back
+      at full strength within days. This makes wars of attrition
+      against Saurix nearly impossible.
+
+energy_racial:
+  - id: RA-010
+    name: "Energy Form Shift"
+    race: "Luminari"
+    type: active
+    cost: "50 RP/minute"
+    description: >
+      Luminari can shift between solid physical form and pure energy
+      form. In energy form: immune to physical damage, can move at
+      light speed for short bursts, can pass through solid matter,
+      but cannot interact with physical objects or use physical
+      abilities. Shifting takes 3 seconds and produces a brilliant
+      flash of light.
+    scaling: "Duration in energy form and shift speed scale with SYS."
+    lore_notes: >
+      Energy Form Shift makes Luminari nearly impossible to kill by
+      conventional means. The counter: System-dampening fields that
+      prevent the shift, or attacks that target System energy directly.
+
+  - id: RA-011
+    name: "Void Phase"
+    race: "Void Wraith"
+    type: passive_active
+    description: >
+      Void Wraiths naturally exist partially in void space. Passively,
+      this makes them partially transparent and reduces incoming damage
+      by 25% (attacks partially pass through). Actively, they can fully
+      enter void space for up to 10 seconds — becoming completely
+      invisible and intangible but unable to interact with the physical
+      world.
+    scaling: "Phase duration and damage reduction scale with SYS."
+    lore_notes: >
+      Void Wraiths are terrifying opponents because you can never
+      fully hit them. Every attack deals reduced damage. And if they
+      choose to phase out completely, you can't touch them at all.
+
+silicon_void_racial:
+  - id: RA-012
+    name: "Crystal Resonance"
+    race: "Crystal Shapers"
+    type: active
+    cost: "30 RP"
+    description: >
+      Crystal Shapers can manipulate crystalline structures through
+      resonance — growing, shaping, and shattering crystals within
+      15m. This allows them to create crystalline barriers, weapons,
+      and structures from raw minerals. They can also resonate with
+      Vehicle Cores (which are crystalline), sensing their tier and
+      condition without physical contact.
+    scaling: "Range, complexity, and core sensing distance scale with INT."
+    lore_notes: >
+      Crystal Resonance makes Crystal Shapers incredibly valuable as
+      Core Technicians. They can diagnose core problems that no scanner
+      can detect. The Forge Masters recruit Crystal Shapers aggressively.
+
+  - id: RA-013
+    name: "Mechanical Integration"
+    race: "Automari"
+    type: passive
+    description: >
+      Automari can interface directly with any mechanical or electronic
+      system through physical contact. They can read data, control
+      machinery, and diagnose malfunctions without tools. This extends
+      to System-enhanced technology. They cannot control living beings
+      or Vehicle Cores (which resist external control), but everything
+      else with a circuit is accessible.
+    scaling: "Integration speed and complexity scale with INT and SYS."
+    lore_notes: >
+      Automari mechanics are the best in the universe. They don't
+      need diagnostic tools — they ARE the diagnostic tool. A single
+      Automari engineer can maintain a fleet that would require 50
+      organic technicians.

@@ -1,0 +1,386 @@
+---
+category: vehicle_core_mechanics
+description: >
+  Comprehensive documentation of Vehicle Core mechanics, tier system,
+  bonding, stealing, and the economics of cores in the RP Conversion universe.
+
+# ============================================
+# VEHICLE CORE FUNDAMENTALS
+# ============================================
+fundamentals:
+  what_is_a_vehicle_core: >
+    A Vehicle Core is a System-generated crystalline object that bonds to a
+    Traveller's soul. It is the nexus between the Traveller and their Soul
+    Vehicle — the vehicle summoned and bound to them through the System.
+    Without a core, a person cannot summon a Soul Vehicle, cannot access
+    vehicle upgrades, pocket dimensions, or the full range of Traveller
+    capabilities. The Core IS the Traveller's identity — losing it means
+    losing everything.
+
+  core_appearance: >
+    Vehicle Cores appear as crystalline polyhedrons that glow with internal
+    System energy. The color and intensity of the glow indicates tier: Tier 0
+    cores emit a faint white light. Higher tiers glow brighter and shift through
+    the spectrum (blue, green, gold, red, purple, and beyond). Tier 10+ cores
+    are painfully bright to look at directly. When a Traveller summons their
+    Soul Vehicle, the core pulses in resonance, and the vehicle materializes
+    around or near the Traveller in a flash of System energy.
+
+  core_bonding: >
+    When a Traveller first receives their Vehicle Core, it bonds to their
+    soul through a process called Core Synchronization. The Traveller holds
+    the core, the System initiates a bonding sequence, and the core attunes
+    to the Traveller's soul signature. This process takes 1-24 hours depending
+    on core tier. Once bonded, the core responds only to its bonded Traveller.
+    Breaking a bond requires either the Traveller's death, specialized
+    techniques (like Dravik combat bonding), or core destruction. After bonding,
+    the core merges into the Traveller's body — it is carried within them,
+    not physically held. It can be forcibly extracted, but the process is
+    violent and traumatic.
+
+  soul_vehicle_summoning: >
+    After Core Synchronization completes, the System presents the new Traveller
+    with a choice interface — a System notification that displays three starter
+    Soul Vehicle options. For HUMANITY, the three choices are:
+
+    1. LAND VEHICLE — A basic ground-bound vehicle (sedan, truck, van, SUV).
+       Advantages: highest base armor, best cargo capacity, easiest to
+       maintain and upgrade. Disadvantages: limited to ground travel until
+       flight upgrades are researched/purchased.
+
+    2. NAVY VEHICLE — A basic watercraft (speedboat, small yacht, patrol craft).
+       Advantages: access to water-based resources and dungeons from the start,
+       amphibious potential at higher tiers. Disadvantages: useless on land
+       without upgrades, vulnerable in open water at low tiers.
+
+    3. AIR VEHICLE — A basic aircraft (light helicopter, small prop plane, glider).
+       Advantages: flight from day one, unmatched mobility and scouting,
+       bypass ground-level threats. Disadvantages: lowest base armor, smallest
+       cargo capacity, highest fuel/RP consumption.
+
+    The choice is PERMANENT. A Traveller's Soul Vehicle type defines their
+    playstyle, strengths, and limitations for their entire journey. The vehicle
+    can be upgraded, modified, and expanded, but its fundamental domain (land,
+    navy, air) cannot be changed. At higher tiers (Tier 3+), cross-domain
+    capability can be added through upgrades (e.g., a land vehicle gaining
+    flight), but the base vehicle retains its domain bonuses.
+
+    The summoning itself is instantaneous once chosen — the System generates
+    the vehicle from raw System energy. The vehicle materializes in a burst
+    of blue-white light, fully formed and bonded to the core. From that moment,
+    the Traveller can summon and dismiss their Soul Vehicle at will. Summoning
+    costs no RP. Dismissing stores the vehicle in a dimensional pocket linked
+    to the core. The vehicle retains all damage, upgrades, and contents when
+    dismissed and resummoned.
+
+  alien_soul_vehicle_variants: >
+    Different species have different Soul Vehicle options based on their
+    biology, homeworld, and evolutionary history:
+
+    KAEL'THARI: Data Cruiser (hover), Analysis Pod (aerial), Research Vessel (aquatic)
+    — All three variants emphasize sensors and research capability.
+
+    DRAVIK: War Chariot (ground), Assault Skiff (aerial), Raid Barge (naval)
+    — All three are combat-oriented with heavy armor and weapon mounts.
+
+    NEXARI: Phase Drifter (ground), Probability Glider (aerial), Flux Boat (naval)
+    — Vehicles that shift probability around them, partially phasing through threats.
+
+    VARAK'SHI: Sand Crawler (ground), Desert Hawk (aerial), Dune Skimmer (hover)
+    — Adapted for desert environments with heat resistance and sand navigation.
+
+    FORMICARI: Hive Carrier (ground), Swarm Flyer (aerial), Colony Barge (naval)
+    — Larger vehicles designed to transport drones and colony members.
+
+    LUMINARI: Light Racer (ground), Photon Wing (aerial), Wave Rider (naval)
+    — Energy-based vehicles that can partially convert to light for speed bursts.
+
+    AUTOMARI: Mech Frame (ground/bipedal), Drone Swarm (aerial), Submersible (naval)
+    — Mechanical vehicles they can directly interface with via Mechanical Integration.
+
+    VOID WRAITH: Shadow Runner (ground), Phantom Wing (aerial), Depth Lurker (naval)
+    — Vehicles that partially exist in void space, naturally stealthed.
+
+    Note: Some ancient or exotic races may have unique fourth or fifth options
+    (e.g., burrowing vehicles, space-native vessels, dimensional crawlers).
+    These are rare and often indicate a species with unusual evolutionary history.
+
+  soul_vehicle_properties: >
+    A Soul Vehicle is fundamentally different from a conventional vehicle:
+
+    1. SOUL BOUND: Only the bonded Traveller can operate it. Others can ride
+       as passengers but cannot drive, activate weapons, or access systems.
+    2. SUMMONABLE: Can be summoned and dismissed at will. No RP cost to summon.
+       Summoning takes 3 seconds. Dismissing takes 1 second.
+    3. SELF-REPAIRING: Soul Vehicles slowly repair damage over time using
+       ambient System energy. Base repair: 1% hull/hour. Accelerated by
+       RP investment or repair abilities.
+    4. UPGRADEABLE: All upgrades (external and internal) are permanent and
+       persist through summon/dismiss cycles.
+    5. GROWABLE: As the Vehicle Core tiers up, the Soul Vehicle grows in
+       size, capability, and pocket dimension capacity.
+    6. DESTRUCTIBLE: If a Soul Vehicle is completely destroyed (0 HP), it
+       cannot be resummoned for 24 hours while the core regenerates it.
+       The Traveller loses access to all vehicle functions during this period.
+       Repeated destruction within a short period extends the regeneration
+       time. Contents stored in the pocket dimension are preserved.
+    7. CORE LINKED: The vehicle's condition reflects the core's condition.
+       Core damage = vehicle performance degradation. Core destruction =
+       permanent loss of the Soul Vehicle.
+
+  children_and_cores: >
+    Children born within the Game System are NOT born with bonded Vehicle Cores.
+    A core must be separately acquired and bonded. Until they have a core, they
+    cannot summon a Soul Vehicle and are effectively non-Travellers — vulnerable,
+    dependent, and unable to access the System's full capabilities.
+    The three methods of core acquisition:
+    1. HUNTED: Kill a creature that drops a Vehicle Core (extremely rare drops,
+       found only in high-tier dungeons or from specific boss creatures)
+    2. PURCHASED: Buy on the open market — even the LOWEST tier (Tier 0) costs
+       HUNDREDS OF MILLIONS of RP. This creates a massive economic barrier.
+    3. INHERITED: A dying Traveller can attempt to pass their core to a child.
+       Success rate: ~60%. Failed inheritance destroys the core.
+    Once a child bonds a core, they go through the same Soul Vehicle selection
+    process as any new Traveller — three domain choices based on their species.
+    The moment a child summons their first Soul Vehicle is a profound rite of
+    passage, marking their transition from dependent to Traveller.
+
+  core_extraction_and_loss: >
+    When a Vehicle Core is forcibly extracted from a Traveller, the Soul Vehicle
+    immediately dematerializes. All contents in the pocket dimension are lost
+    unless they were stored in the Traveller's personal System Inventory.
+    The extraction process is agonizing — the core is ripped from the
+    Traveller's soul bond. Survivors describe it as having part of their
+    identity torn away. The psychological trauma often triggers Phantom
+    Travelling — the compulsive need to keep moving that defines Wanderer
+    behavior. The extracted core enters a "Stolen" state (see stolen_cores).
+
+# ============================================
+# TIER SYSTEM
+# ============================================
+tier_system:
+  overview: >
+    Vehicle Cores range from Tier 0 to Tier 999+. There is no known upper
+    limit — the System continues to generate higher tiers. Each tier represents
+    a magnitude increase in power, capability, and System integration.
+    Within each tier, there are 4 sub-levels (I, II, III, IV) representing
+    progression within the tier.
+
+  sub_levels:
+    - sub_level: "I (Initiate)"
+      description: "Just entered this tier. Core is stabilizing at the new power level."
+      bonus: "Base tier capabilities unlocked."
+    - sub_level: "II (Established)"
+      description: "Core has stabilized. Full tier capabilities accessible."
+      bonus: "+10% to all core-granted bonuses."
+    - sub_level: "III (Mastered)"
+      description: "Core operates at peak efficiency for this tier."
+      bonus: "+25% to all core-granted bonuses."
+    - sub_level: "IV (Transcendent)"
+      description: "Core is pushing the boundaries of this tier. Ready for tier advancement."
+      bonus: "+50% to all core-granted bonuses. Tier advancement quest unlocked."
+
+  tier_advancement: >
+    To advance to the next tier, a Traveller must: (1) reach Sub-Level IV,
+    (2) complete a tier advancement quest generated by the System, and
+    (3) survive the Core Evolution process — a painful 1-48 hour process
+    where the core restructures itself. Failure rate increases with tier.
+    Tier 0→1: 95% success. Tier 5→6: 70% success. Tier 10→11: 40% success.
+    Failed evolution can result in: tier regression, core damage, or rarely,
+    core destruction.
+
+  tier_reference:
+    - tier: 0
+      name: "Starter"
+      vehicle_examples: "Mini van, sedan, small truck"
+      pocket_dimension_size: "None"
+      upgrade_slots: 3
+      stat_bonus: "+0 to all stats"
+      rp_value: "100-500 million RP"
+      description: >
+        The absolute bottom tier. Provides basic System integration — the
+        vehicle responds to System commands, has basic durability enhancement,
+        and displays System HUD. No dimensional expansion. Limited upgrade
+        capacity. Most children's first core is Tier 0 — if their family
+        can afford the hundreds of millions of RP.
+    - tier: 1
+      name: "Basic"
+      vehicle_examples: "Enhanced car, armored van, light combat vehicle"
+      pocket_dimension_size: "10m³ (small room)"
+      upgrade_slots: 5
+      stat_bonus: "+1 to STR and END while in vehicle"
+      rp_value: "1-5 billion RP"
+      description: >
+        First meaningful tier. Vehicle gains minor pocket dimension — enough
+        for a tiny storage room or sleeping space. Basic armor enhancement.
+        System-assisted driving. This is where most Earth Travellers start
+        after System activation.
+    - tier: 2
+      name: "Improved"
+      vehicle_examples: "Armored transport, light mech, combat buggy"
+      pocket_dimension_size: "50m³ (small apartment)"
+      upgrade_slots: 8
+      stat_bonus: "+2 to STR, END, AGI while in vehicle"
+      rp_value: "10-50 billion RP"
+      description: >
+        Vehicle becomes a viable living space. Pocket dimension can hold
+        a small kitchen, bed, and storage. Vehicle armor can withstand
+        small arms fire. Basic weapons systems available.
+    - tier: 3
+      name: "Advanced"
+      vehicle_examples: "Heavy mech, fortified truck, light ship"
+      pocket_dimension_size: "200m³ (large apartment)"
+      upgrade_slots: 12
+      stat_bonus: "+3 to all stats while in vehicle"
+      rp_value: "100-500 billion RP"
+      description: >
+        Serious capability jump. Pocket dimension is a comfortable living
+        space — kitchen, bathroom, bedroom, small workshop. Vehicle can
+        survive hostile environments (toxic atmosphere, extreme temperatures).
+        Weapons systems can threaten Tier 2 creatures.
+    - tier: 4
+      name: "Superior"
+      vehicle_examples: "Battle tank, small warship, aerial vehicle"
+      pocket_dimension_size: "1,000m³ (small house)"
+      upgrade_slots: 16
+      stat_bonus: "+5 to all stats while in vehicle"
+      rp_value: "1-10 trillion RP"
+      description: >
+        Vehicle is now a mobile fortress. Full living quarters, workshop,
+        medical bay. Can operate in space for limited periods (requires
+        EVA suit for exit). Weapons can threaten Tier 3-4 creatures.
+    - tier: 5
+      name: "Elite"
+      vehicle_examples: "Heavy warship, mobile base, assault mech"
+      pocket_dimension_size: "5,000m³ (large house)"
+      upgrade_slots: 20
+      stat_bonus: "+8 to all stats while in vehicle"
+      rp_value: "50-500 trillion RP"
+      description: >
+        Elite-class vehicle. Multiple rooms, laboratory, dungeon entrance
+        potential. Full space capability. Vehicle can sustain a small crew.
+        Weapons threaten Tier 5-6 creatures. EXP farm potential unlocks.
+    - tier: 8
+      name: "Legendary"
+      vehicle_examples: "Capital ship, flying fortress, dimensional cruiser"
+      pocket_dimension_size: "100,000m³ (mansion compound)"
+      upgrade_slots: 35
+      stat_bonus: "+15 to all stats while in vehicle"
+      rp_value: "Quintillions of RP"
+      description: >
+        Legendary-class. Internal city possible. Multiple dungeons, farms,
+        research facilities. Vehicle is effectively a small nation on
+        wheels/wings/thrust. Can carry hundreds of people.
+    - tier: 10
+      name: "Mythic"
+      vehicle_examples: "World-ship, dimensional fortress, reality cruiser"
+      pocket_dimension_size: "1,000,000m³+ (small city)"
+      upgrade_slots: 50+
+      stat_bonus: "+25 to all stats while in vehicle"
+      rp_value: "Incalculable"
+      description: >
+        Mythic-class. Vehicle is a city. Internal ecosystems, dungeons,
+        entire communities live within. Can traverse between dimensions.
+        Weapons threaten Tier 10+ entities. Fewer than 1,000 known to
+        exist in the mapped universe.
+    - tier: 15
+      name: "Transcendent"
+      vehicle_examples: "Continental fortress, star cruiser"
+      pocket_dimension_size: "Billions of m³ (continent-scale)"
+      upgrade_slots: 100+
+      stat_bonus: "+50 to all stats while in vehicle"
+      rp_value: "Beyond calculation"
+      description: >
+        Transcendent-class. Vehicle exists partially outside normal space.
+        Can create permanent dimensional rifts. Internal worlds with their
+        own weather systems. Fewer than 50 known to exist.
+    - tier: 20
+      name: "Cosmic"
+      vehicle_examples: "Unknown — rumored planetary-scale constructs"
+      pocket_dimension_size: "Planetary scale"
+      upgrade_slots: "Unlimited"
+      stat_bonus: "+100+ to all stats"
+      rp_value: "N/A"
+      description: >
+        Theoretical tier. No confirmed sightings by reliable sources.
+        Ancient race ruins suggest vehicles of this tier once existed.
+        If the Architects or First Travellers achieved this tier, it
+        would explain their god-like capabilities.
+
+# ============================================
+# STOLEN CORE MECHANICS
+# ============================================
+stolen_cores:
+  overview: >
+    When a Vehicle Core is forcibly removed from a vehicle (by raiders,
+    combat, or core stripping), it enters a "Stolen" state. Stolen cores
+    behave differently from naturally acquired cores.
+
+  stolen_core_bonding: >
+    Stolen cores resist bonding with new owners. The bonding process for
+    a stolen core takes 3-10x longer than a fresh core and has a higher
+    failure rate. Some species (notably the Dravik) have techniques for
+    force-bonding stolen cores.
+
+  tier_interaction:
+    same_tier: >
+      If the stolen core is the SAME TIER as the thief's current core,
+      the thief can absorb it for 3-5 FREE UPGRADES within that tier.
+      This is the optimal outcome for raiders — same-tier cores provide
+      immediate, cost-free power boosts.
+    lower_tier: >
+      If the stolen core is LOWER TIER than the thief's current core,
+      the core is converted into RP. The RP value depends on the tier
+      difference — a Tier 3 core stolen by a Tier 8 Traveller converts
+      to base RP value (roughly the market price of the core).
+    higher_tier: >
+      If the stolen core is HIGHER TIER than the thief's current core,
+      the thief CANNOT absorb it. The System prevents bonding with cores
+      more than 2 tiers above the user's current level. The core can be
+      sold, stored, or given to someone of appropriate tier.
+
+  mohamed_exception: >
+    Mohamed's dual system (RP Conversion overlay) allows him to bypass
+    the tier restriction on stolen cores. His secondary system can
+    interface with cores of ANY tier, converting excess energy into
+    RP rather than attempting direct absorption. This means Mohamed
+    can benefit from cores that would be unusable for anyone else —
+    either absorbing compatible energy or converting the rest to RP.
+    This ability, if discovered, would make him the most valuable
+    (and most hunted) person in the universe.
+
+# ============================================
+# CORE ECONOMICS
+# ============================================
+economics:
+  market_prices:
+    tier_0: "100-500 million RP"
+    tier_1: "1-5 billion RP"
+    tier_2: "10-50 billion RP"
+    tier_3: "100-500 billion RP"
+    tier_4: "1-10 trillion RP"
+    tier_5: "50-500 trillion RP"
+    tier_6_plus: "Rarely sold — usually obtained through combat, quests, or inheritance"
+    notes: >
+      Prices fluctuate based on supply and demand. The Kael'thari's ability
+      to manufacture Tier 0-2 cores artificially has stabilized low-tier
+      prices but created dependency. Black market prices are 50-200% of
+      official rates. Crimson Harvest's core stripping operations flood
+      the black market with stolen cores at discounted rates.
+
+  core_fund_challenge: >
+    The Wanderer's Union Core Fund collects small donations from members
+    to purchase Vehicle Cores for Wanderer children. At current prices,
+    even the cheapest Tier 0 core (100 million RP) would require 100,000
+    Wanderers donating 1,000 RP each. Most Wanderers earn 50-200 RP per
+    day. The Fund can afford approximately one Tier 0 core every 2-3 years.
+    This economic reality is one of the most tragic aspects of the universe.
+
+  artificial_cores: >
+    Only the Kael'thari Technocracy has successfully manufactured Vehicle
+    Cores artificially. Their artificial cores are limited to Tier 0-2,
+    are slightly inferior to natural cores (90% efficiency), and are
+    prohibitively expensive to produce. They sell them at market rates,
+    maintaining a profit margin that funds their research. Rumor suggests
+    they're pursuing Tier 3+ artificial production but the complexity
+    scales exponentially.

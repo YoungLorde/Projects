@@ -1,0 +1,360 @@
+---
+category: human_factions
+description: >
+  Human factions that formed after the Game System activated. Earth's old governments
+  collapsed within weeks. New power structures emerged around those who adapted fastest
+  to the System. These factions range from democratic coalitions to brutal warlord states.
+entries:
+  - id: HF-001
+    name: "The Accord"
+    type: democratic_coalition
+    headquarters: "New Geneva (formerly Geneva, Switzerland)"
+    territory: "Central Europe, parts of North Africa"
+    leader: "Chancellor Elise Duvall (elected, 2-year terms)"
+    membership: ~120,000 Travellers, ~400,000 civilians
+    founding: "Month 3 post-System"
+    ideology: >
+      Collective governance, resource sharing, fair System access.
+      Believes the Game System should serve humanity, not rule it.
+      Maintains pre-System democratic ideals adapted for the new reality.
+    military_strength: "Moderate — relies on trained militia and defensive Vehicle formations"
+    economy: >
+      Centralized RP taxation (15% of dungeon earnings), public Vehicle Core fund for children,
+      subsidized EVA suit program. Operates three major dungeons and a trade port.
+    relations:
+      allies: ["The Scholar's Compact", "Meridian Free Trade"]
+      enemies: ["The Iron Doctrine", "Crimson Harvest"]
+      neutral: ["Obsidian Gate", "The Wanderer's Union"]
+    notable_features:
+      - "Public Vehicle Core lottery — citizens can win a lottery for subsidized cores"
+      - "Universal basic RP income for all citizens (500 RP/month)"
+      - "Largest EVA suit manufacturing facility on Earth"
+    weakness: "Slow decision-making due to democratic process; military weaker than authoritarian factions"
+    lore_notes: >
+      The Accord represents the best and worst of old-world democracy applied to the System.
+      Their ideals are noble — providing Vehicle Cores for children, fair RP distribution —
+      but their bureaucracy makes them vulnerable to faster-moving factions. Chancellor Duvall
+      is a former diplomat who lost her own Vehicle Core in the Month 1 chaos and earned it
+      back through dungeon clearing, giving her credibility with both Travellers and Wanderers.
+
+  - id: HF-002
+    name: "The Iron Doctrine"
+    type: military_dictatorship
+    headquarters: "Fortress Moscow (expanded Kremlin complex)"
+    territory: "Russia, Central Asia, parts of Eastern Europe"
+    leader: "Marshal Viktor Kozlov (self-appointed, rules by strength)"
+    membership: ~85,000 Travellers (conscripted), ~600,000 civilians (subjects)
+    founding: "Week 2 post-System"
+    ideology: >
+      Strength is the only law. The Game System rewards power, and humanity must
+      embrace that truth. Weak Travellers serve the strong. Civilians exist to
+      support military operations. Vehicle Cores belong to the state.
+    military_strength: "Extremely high — largest standing Vehicle army on Earth"
+    economy: >
+      All RP belongs to the state. Citizens receive allocation based on contribution.
+      Massive dungeon farming operations using conscripted Wanderers as expendable scouts.
+      Vehicle Core stockpile — confiscates cores from defeated enemies and failed soldiers.
+    relations:
+      allies: ["The Mandate of Heaven"]
+      enemies: ["The Accord", "The Wanderer's Union", "Meridian Free Trade"]
+      neutral: ["Obsidian Gate"]
+    notable_features:
+      - "Vehicle Core confiscation — all cores belong to the state, assigned by merit"
+      - "Wanderer labor camps — Wanderers are conscripted into service or expelled"
+      - "First faction to develop military-grade EVA suits on Earth"
+    weakness: "Internal dissent, desertion rate, stretched supply lines across vast territory"
+    lore_notes: >
+      Marshal Kozlov was a Russian special forces commander who was among the first to
+      understand the System's implications. Within 48 hours of activation, he had seized
+      control of three Vehicle Cores and built a power base. His doctrine is simple:
+      the universe is brutal, and only the strong survive. He's not wrong — but his
+      methods create enemies faster than his army can suppress them. Deserters flee to
+      The Accord or join Wanderer camps. His Vehicle Core stockpile is the largest on
+      Earth, but many are low-tier and deteriorating without proper bonding.
+
+  - id: HF-003
+    name: "The Scholar's Compact"
+    type: academic_consortium
+    headquarters: "The Archive (converted MIT campus, Boston)"
+    territory: "New England, scattered research outposts worldwide"
+    leader: "Director Amara Okafor (council-elected)"
+    membership: ~30,000 Travellers, ~150,000 civilians
+    founding: "Month 2 post-System"
+    ideology: >
+      Knowledge is the highest form of power. The Game System is the most complex
+      phenomenon humanity has ever encountered, and understanding it is the key
+      to survival and prosperity. Research, education, and information sharing
+      are sacred duties.
+    military_strength: "Low conventional, high technological — rely on System-enhanced defenses and allied protection"
+    economy: >
+      Knowledge economy — trade research, System analysis, crafting blueprints,
+      and training services for RP. Largest database of dungeon maps, creature
+      weaknesses, and System mechanics on Earth. Charge premium prices for
+      critical information.
+    relations:
+      allies: ["The Accord", "Meridian Free Trade"]
+      enemies: ["Crimson Harvest", "The Hollowed"]
+      neutral: ["The Iron Doctrine", "Obsidian Gate"]
+    notable_features:
+      - "System Research Lab — most advanced understanding of System mechanics on Earth"
+      - "Training Academy — teaches optimal stat allocation, skill usage, and vehicle operation"
+      - "The Archive Database — encyclopedic knowledge of creatures, dungeons, and worlds"
+    weakness: "Militarily weak, dependent on allies for protection, internally divided between factions wanting to share vs. hoard knowledge"
+    lore_notes: >
+      The Scholar's Compact formed when surviving academics realized the System
+      operated on discoverable rules. Professor Okafor's breakthrough — proving
+      that System notifications followed predictable patterns — established the
+      Compact's reputation. They've since mapped more dungeon layouts, catalogued
+      more creature variants, and decoded more System mechanics than any other
+      faction. Their weakness is that knowledge without military power makes them
+      a target. Multiple factions have attempted to raid The Archive.
+
+  - id: HF-004
+    name: "Meridian Free Trade"
+    type: trade_federation
+    headquarters: "Port Meridian (rebuilt Singapore)"
+    territory: "Southeast Asia, Pacific Islands, major trade routes"
+    leader: "Trade Admiral Chen Wei-Lin (elected by merchant council)"
+    membership: ~50,000 Travellers, ~300,000 civilians
+    founding: "Month 4 post-System"
+    ideology: >
+      Commerce connects civilizations. The Game System creates scarcity, and trade
+      resolves scarcity. Neutral in all conflicts, open to all customers. Profit
+      is the universal language.
+    military_strength: "Moderate — powerful naval/vehicle fleet for trade route protection, not offensive operations"
+    economy: >
+      Largest trade network on Earth. Controls major shipping lanes and acts as
+      neutral marketplace. Takes 5% commission on all trades. Manufactures and
+      sells EVA suits, vehicle upgrades, weapons, and consumables. Currency exchange
+      services (RP to goods, goods to RP).
+    relations:
+      allies: ["The Accord", "The Scholar's Compact"]
+      enemies: ["Crimson Harvest"]
+      neutral: ["The Iron Doctrine", "Obsidian Gate", "The Mandate of Heaven"]
+    notable_features:
+      - "The Grand Bazaar — largest open marketplace on post-System Earth"
+      - "Trade immunity treaties — most factions agree not to attack Meridian convoys"
+      - "Vehicle Core auction house — monthly auctions for salvaged and captured cores"
+    weakness: "No ideological cohesion beyond profit; will trade with anyone including enemies of allies; vulnerable if trade routes are cut"
+    lore_notes: >
+      Chen Wei-Lin was a logistics executive who saw the System as the ultimate
+      supply chain problem. By Month 4, she had organized the surviving port
+      infrastructure of Singapore into a trade hub that every faction needed.
+      Her neutrality policy is her greatest strength and weakness — she'll sell
+      EVA suits to The Iron Doctrine and The Accord in the same week. Her
+      Vehicle Core auctions are legendary events that draw Travellers from
+      across the planet, and the prices set at her auctions become the
+      global standard.
+
+  - id: HF-005
+    name: "Crimson Harvest"
+    type: raider_confederation
+    headquarters: "Mobile — fleet of 200+ armed vehicles"
+    territory: "No fixed territory — operates across former Middle East, North Africa, Mediterranean"
+    leader: "The Harvester (real name unknown, never appears in person)"
+    membership: ~15,000 Travellers (raiders), ~5,000 support staff
+    founding: "Month 1 post-System"
+    ideology: >
+      Take what you need. The System rewards the bold and punishes the weak.
+      Vehicle Cores, RP, supplies — everything is there for the taking.
+      No territory to defend means no weakness to exploit.
+    military_strength: "Very high per-capita — every member is a combat-hardened raider"
+    economy: >
+      Raid economy — attacks settlements, convoys, and dungeons. Steals Vehicle Cores
+      as primary currency. Sells stolen goods through black market contacts.
+      No internal economy — everything is divided by raid participation.
+    relations:
+      allies: ["Black market contacts (informal)"]
+      enemies: ["The Accord", "Meridian Free Trade", "The Wanderer's Union"]
+      neutral: ["The Iron Doctrine (uneasy non-aggression)"]
+    notable_features:
+      - "Vehicle Core stripping — experts at extracting cores from vehicles without destroying them"
+      - "Mobile base — entire faction is a moving fleet, nearly impossible to pin down"
+      - "The Harvest — monthly coordinated mass raid on a chosen target"
+    weakness: "No infrastructure, no allies, internal power struggles, eventually alienates everyone"
+    lore_notes: >
+      Crimson Harvest emerged from the chaos of Month 1 when organized military
+      responses hadn't yet formed. The Harvester united dozens of small raider
+      groups under one banner with a simple promise: together, they could take
+      anything. Their Vehicle Core stripping technique — forcibly unbonding a
+      core from a vehicle without destroying it — is a closely guarded secret
+      that makes them the most feared faction for Travellers. Creating a
+      Wanderer is their business model.
+
+  - id: HF-006
+    name: "The Mandate of Heaven"
+    type: theocratic_state
+    headquarters: "Celestial Fortress (built atop Mount Tai, China)"
+    territory: "Eastern China, parts of Korea and Japan"
+    leader: "The Celestial Sovereign (claims System-granted divine right)"
+    membership: ~90,000 Travellers, ~500,000 civilians
+    founding: "Month 2 post-System"
+    ideology: >
+      The Game System is a divine mandate. Those who level highest are
+      chosen by heaven. The strongest Travellers are spiritual leaders.
+      Cultivation of personal power is a religious duty. The System's
+      appearance was prophesied and humanity's ascension has begun.
+    military_strength: "Very high — combines religious fervor with strict martial hierarchy"
+    economy: >
+      Tithe system — 20% of all RP earned goes to the temple. Massive dungeon
+      operations run as religious pilgrimages. Vehicle Cores distributed by
+      temple hierarchy based on perceived spiritual worth.
+    relations:
+      allies: ["The Iron Doctrine (mutual non-aggression)"]
+      enemies: ["The Scholar's Compact (views System research as heresy)"]
+      neutral: ["The Accord", "Meridian Free Trade"]
+    notable_features:
+      - "Cultivation temples — training facilities disguised as religious spaces"
+      - "The Ascension Trials — brutal combat tournament to determine spiritual rank"
+      - "System Assimilation research (unknowingly similar to Mohamed's ability)"
+    weakness: "Religious rigidity, persecution of dissenters, blind spots in understanding System mechanics"
+    lore_notes: >
+      The Celestial Sovereign was a mid-level Buddhist monk who experienced an
+      unusual System interaction during activation — his System notification
+      included imagery and language from Buddhist and Daoist tradition, which
+      he interpreted as divine communication. Whether the System actually
+      communicated with him or he simply projected meaning onto random data
+      is unknown. His followers believe absolutely. His Ascension Trials
+      produce genuinely powerful Travellers, but at a horrific human cost.
+
+  - id: HF-007
+    name: "The Wanderer's Union"
+    type: labor_union_and_mutual_aid
+    headquarters: "The Crossroads (largest Wanderer settlement, former Dubai)"
+    territory: "No territory — chapters in every major settlement"
+    leader: "Union Chief Fatima al-Rashid (elected by chapter representatives)"
+    membership: ~200,000 Wanderers, ~50,000 sympathetic Travellers
+    founding: "Month 6 post-System"
+    ideology: >
+      Wanderers are people, not disposable labor. Fair wages, safe working
+      conditions, and the right to earn enough RP to buy Vehicle Cores for
+      their children. The System doesn't determine your worth — your character does.
+    military_strength: "Low organized military, but massive numbers and presence in every settlement"
+    economy: >
+      Union dues (2% of earnings), job placement services, Wanderer skills
+      training, legal advocacy for Wanderer rights. Operates small-scale
+      dungeon runs and farming cooperatives.
+    relations:
+      allies: ["The Accord"]
+      enemies: ["The Iron Doctrine", "Crimson Harvest"]
+      neutral: ["Meridian Free Trade", "The Scholar's Compact"]
+    notable_features:
+      - "The Register — database of every known Wanderer, their skills, and their location"
+      - "The Core Fund — collective savings pool to purchase Vehicle Cores for Wanderer children"
+      - "The Whisper Network — fastest information network on Earth, run by travelling Wanderers"
+    weakness: "No military power, dependent on the goodwill of Traveller factions, internal tension between activists and pragmatists"
+    lore_notes: >
+      Fatima al-Rashid was one of the first Wanderers — her Vehicle Core was
+      stolen in Week 1 by what would become Crimson Harvest. Instead of
+      despair, she organized. The Wanderer's Union is the largest faction
+      by membership but the weakest by military power. Their Core Fund —
+      collecting small RP donations from thousands of Wanderers to buy
+      cores for children — is both inspiring and heartbreaking, because
+      at current prices, they can only afford one Tier 0 core every 2-3 years.
+
+  - id: HF-008
+    name: "Obsidian Gate"
+    type: secret_society
+    headquarters: "Unknown — believed to be underground, possibly a pocket dimension"
+    territory: "Cells in every major settlement, no visible territory"
+    leader: "The Gatekeeper (identity completely unknown)"
+    membership: "~5,000-10,000 (estimated, true numbers unknown)"
+    founding: "Month 1 post-System (possibly earlier — some claim pre-System)"
+    ideology: >
+      The Game System is a tool, and those who understand its deepest
+      mechanics control reality itself. Obsidian Gate exists to discover
+      and exploit System vulnerabilities, hidden commands, and undocumented
+      features. Knowledge of the System's true nature is power beyond any stat.
+    military_strength: "Unknown — believed to have access to System exploits that give disproportionate power"
+    economy: >
+      Sells System exploits, hidden dungeon locations, and undocumented features
+      to the highest bidder. Also blackmails factions with information. Internal
+      funding sources unknown.
+    relations:
+      allies: ["None formally"]
+      enemies: ["None formally (everyone informally)"]
+      neutral: ["All factions (officially)"]
+    notable_features:
+      - "System exploits — rumored to have found bugs and hidden features in the Game System"
+      - "The Black Codex — supposed comprehensive guide to undocumented System mechanics"
+      - "Sleeper agents in every major faction"
+    weakness: "Extreme secrecy limits their ability to act openly; paranoia prevents internal trust; possible that the System is aware of them"
+    lore_notes: >
+      Nobody knows the truth about Obsidian Gate. Some believe they're a
+      pre-System organization that knew about the System before activation.
+      Others believe they formed in Week 1 from hackers and data scientists
+      who immediately began probing the System for vulnerabilities. Their
+      rumored Black Codex — a document containing System exploits — is
+      the most sought-after prize in the information underground.
+      Mohamed's dual system would make him either their greatest asset
+      or their most dangerous target.
+
+  - id: HF-009
+    name: "The Reclamation Corps"
+    type: military_humanitarian
+    headquarters: "Fort Haven (rebuilt Fort Bragg, North Carolina)"
+    territory: "Eastern United States, Caribbean"
+    leader: "General Diane Mercer (former US Army)"
+    membership: ~60,000 Travellers, ~350,000 civilians
+    founding: "Month 1 post-System"
+    ideology: >
+      Humanity's infrastructure must be reclaimed, secured, and restored.
+      The old world had value — hospitals, farms, factories, roads — and
+      abandoning it all to chase System power is foolish. Rebuild first,
+      expand later.
+    military_strength: "High — disciplined military with pre-System training enhanced by System levels"
+    economy: >
+      Tax-based economy, resource reclamation operations, restored factory
+      production. Produces vehicles, weapons, and consumables at scale.
+      Operates the largest pre-System infrastructure restoration program.
+    relations:
+      allies: ["The Accord", "The Scholar's Compact"]
+      enemies: ["Crimson Harvest"]
+      neutral: ["Meridian Free Trade", "The Iron Doctrine"]
+    notable_features:
+      - "Infrastructure restoration — has restored power grids, water systems, and communication networks"
+      - "Vehicle manufacturing — produces new vehicles using restored factories + System enhancement"
+      - "The Reclamation Protocol — systematic method for clearing and securing abandoned cities"
+    weakness: "Focused on rebuilding old-world infrastructure that may become obsolete as System technology advances"
+    lore_notes: >
+      General Mercer kept her unit together through the chaos and immediately
+      began securing critical infrastructure. Her practical approach — restore
+      the hospital before clearing the dungeon — saved thousands of lives in
+      the early months. The Reclamation Corps represents the pragmatic middle
+      ground between old-world nostalgia and System-first thinking.
+
+  - id: HF-010
+    name: "The Hollowed"
+    type: cult
+    headquarters: "The Hollow (abandoned subway network beneath Tokyo)"
+    territory: "Underground networks in major cities worldwide"
+    leader: "The Voice (claims to channel the System directly)"
+    membership: ~8,000 dedicated cultists, unknown number of sympathizers
+    founding: "Month 3 post-System"
+    ideology: >
+      The Game System is a living entity, and humanity's purpose is to be
+      consumed by it. System Assimilation is the path to transcendence.
+      The body is a vessel — empty yourself and let the System fill you.
+      Stat maximization at any cost. Identity is an illusion.
+    military_strength: "Moderate — fanatics willing to sacrifice themselves, augmented by extreme stat investment"
+    economy: >
+      Donations from members (all worldly possessions surrendered upon joining).
+      Black market operations. Theft. Dungeon runs treated as religious rituals.
+    relations:
+      allies: ["None"]
+      enemies: ["The Scholar's Compact", "The Accord", "The Mandate of Heaven"]
+      neutral: ["Others avoid them"]
+    notable_features:
+      - "Self-modification rituals — members push System integration to dangerous extremes"
+      - "Stat sacrifice — willingly reduce one stat to boost another beyond normal limits"
+      - "The Voice's Prophecies — predictions about System events that are sometimes accurate"
+    weakness: "Insanity rate, member burnout, extreme methods alienate potential allies"
+    lore_notes: >
+      The Hollowed are terrifying because they're partially right. System
+      Assimilation IS a real phenomenon — Mohamed proves it. But the Hollowed's
+      methods are crude and destructive, like trying to merge with the System
+      by force rather than Mohamed's gradual, guided approach. Most Hollowed
+      members suffer System Rejection — a condition where the System begins
+      treating them as hostile code. The Voice may be genuinely System-touched,
+      or deeply insane, or both. Mohamed would find the Hollowed deeply
+      unsettling — they worship what he's secretly becoming.

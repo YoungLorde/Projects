@@ -1,0 +1,206 @@
+---
+category: eva_suits
+description: >
+  Extra-Vehicular Activity (EVA) suits for surviving in space, hostile
+  atmospheres, and extreme environments. EVA suits are NOT provided by
+  the System — they must be RESEARCHED, PRODUCED, or PURCHASED. This is
+  a critical survival requirement that creates massive economic pressure
+  on Travellers who need to operate in space.
+
+acquisition_methods:
+  research_and_produce:
+    description: >
+      The slowest but cheapest long-term method. Requires a Research
+      Terminal (minimum) or Advanced Laboratory, materials, and significant
+      INT investment. Research time: 2-6 months for Tier 1 suit. Each
+      higher tier requires progressively more research time. Once a
+      blueprint is developed, production becomes repeatable.
+    requirements:
+      - "Research Terminal or better"
+      - "INT 5+ for Tier 1, INT 8+ for Tier 2, INT 12+ for Tier 3+"
+      - "Raw materials (System-enhanced polymers, sealant compounds, life support components)"
+      - "Time investment (months of research)"
+    advantage: "Self-sufficiency. Once you have the blueprint, you can produce unlimited suits."
+    disadvantage: "Massive time investment. Earth is 800+ years behind alien EVA technology."
+
+  purchase:
+    description: >
+      Buy from alien traders, the Iron Caravan, or faction suppliers.
+      Fast but extremely expensive. Alien EVA suits are far superior
+      to anything Earth can currently produce. Price varies by tier,
+      condition, and seller reputation.
+    typical_prices:
+      tier_1: "500,000 - 2,000,000 RP"
+      tier_2: "5,000,000 - 20,000,000 RP"
+      tier_3: "50,000,000 - 200,000,000 RP"
+      tier_4: "500,000,000+ RP"
+    advantage: "Immediate access to high-quality suits."
+    disadvantage: "Extremely expensive. Creates dependency on alien suppliers."
+
+  salvage:
+    description: >
+      Recover EVA suits from defeated enemies, abandoned vessels, or
+      salvage sites. The Graveyard of Titans is a prime salvage location.
+      Salvaged suits may be damaged, degraded, or incompatible with
+      human physiology (alien suits need modification).
+    advantage: "Cheapest method if successful."
+    disadvantage: "Unpredictable availability, may need extensive repair/modification."
+
+suit_tiers:
+  - id: EVA-001
+    name: "Emergency Vacuum Suit"
+    tier: 0
+    protection: "Vacuum survival only"
+    duration: "30 minutes oxygen"
+    mobility: "Severely restricted (-50% movement)"
+    cost: "50,000 RP (self-produced) / 500,000 RP (purchased)"
+    description: >
+      The bare minimum for space survival. A sealed suit with a small
+      oxygen tank and basic pressure maintenance. No radiation shielding,
+      no thermal regulation beyond basic insulation, no System integration.
+      Essentially a plastic bag with an air supply. Used for emergency
+      transfers between vehicles or brief exterior repairs.
+    features:
+      - "Pressure seal (maintains 1 atm)"
+      - "30-minute oxygen supply"
+      - "Basic communication (radio)"
+      - "Magnetic boots (optional attachment)"
+    limitations:
+      - "No radiation protection"
+      - "No thermal regulation (lethal in direct sunlight or deep shadow)"
+      - "No System integration"
+      - "Extremely fragile (one puncture = death)"
+
+  - id: EVA-002
+    name: "Standard EVA Suit"
+    tier: 1
+    protection: "Vacuum + radiation + thermal"
+    duration: "6 hours oxygen (recycling)"
+    mobility: "Moderately restricted (-25% movement)"
+    cost: "200,000 RP (self-produced) / 2,000,000 RP (purchased)"
+    description: >
+      A proper EVA suit with life support, radiation shielding, and
+      thermal regulation. System-enhanced materials provide durability
+      and self-sealing capability for minor punctures. Integrated HUD
+      displays suit status, oxygen levels, and environmental data.
+      The standard for space operations.
+    features:
+      - "6-hour oxygen recycling system"
+      - "Radiation shielding (blocks 95% of solar radiation)"
+      - "Thermal regulation (-200°C to +150°C survival range)"
+      - "Self-sealing layer (auto-repairs punctures up to 5mm)"
+      - "System-integrated HUD"
+      - "Magnetic boots"
+      - "Maneuvering thrusters (basic)"
+    limitations:
+      - "Limited combat capability (armor value: 20 physical)"
+      - "Cannot withstand Tier 3+ creature attacks"
+      - "6-hour operation limit"
+
+  - id: EVA-003
+    name: "Combat EVA Suit"
+    tier: 2
+    protection: "Vacuum + radiation + thermal + combat"
+    duration: "12 hours oxygen (advanced recycling)"
+    mobility: "Slightly restricted (-10% movement)"
+    cost: "1,000,000 RP (self-produced) / 10,000,000 RP (purchased)"
+    description: >
+      Military-grade EVA suit designed for combat operations in space.
+      Powered exoskeleton provides STR bonus and compensates for suit
+      weight. Integrated weapons hardpoints, enhanced armor plating,
+      and tactical HUD with threat detection. The suit most Travellers
+      aspire to own.
+    features:
+      - "12-hour oxygen with advanced recycling"
+      - "Full radiation and thermal protection"
+      - "Powered exoskeleton (+2 STR, +1 AGI)"
+      - "Armor plating (80 physical, 40 energy defense)"
+      - "Weapons hardpoints (2 slots for mounted weapons)"
+      - "Tactical HUD (threat detection, IFF, targeting assist)"
+      - "Advanced maneuvering thrusters (6-axis movement)"
+      - "Emergency beacon"
+      - "Self-sealing layer (auto-repairs up to 10mm)"
+    limitations:
+      - "Expensive to maintain (1,000 RP/month)"
+      - "Requires periodic servicing"
+
+  - id: EVA-004
+    name: "Advanced Explorer EVA"
+    tier: 3
+    protection: "All environmental + moderate combat"
+    duration: "48 hours oxygen (full recycling + generation)"
+    mobility: "No restriction (powered compensation)"
+    cost: "10,000,000 RP (self-produced) / 100,000,000 RP (purchased)"
+    description: >
+      Top-tier exploration EVA designed for extended operations in
+      unknown space. Self-contained life support can generate oxygen
+      from ambient particles (even in vacuum, via System energy
+      conversion). Full environmental adaptability — the suit adjusts
+      to any atmosphere, gravity, or radiation level automatically.
+    features:
+      - "48-hour primary oxygen + indefinite System-generated backup"
+      - "Universal environmental adaptation"
+      - "Full powered exoskeleton (+4 STR, +3 AGI, +2 END)"
+      - "Heavy armor (150 physical, 100 energy, 50 System defense)"
+      - "Integrated scanner array (equivalent to vehicle Enhanced Scanner)"
+      - "Dimensional storage pocket (5m³ for tools and supplies)"
+      - "Medical auto-injector (3 doses of healing compound)"
+      - "Stealth mode (reduces detection by 60%)"
+    limitations:
+      - "Extremely expensive"
+      - "Complex maintenance (requires Tier 3+ workshop)"
+      - "Power cell replacement every 100 hours"
+
+  - id: EVA-005
+    name: "Kael'thari Enviro-Suit Mark VII"
+    tier: 4
+    protection: "Total environmental + heavy combat"
+    duration: "Indefinite (self-sustaining)"
+    mobility: "Enhanced (+10% movement bonus)"
+    cost: "Not sold to non-Kael'thari (black market: 500,000,000+ RP)"
+    description: >
+      The pinnacle of EVA technology currently in production. The
+      Kael'thari Enviro-Suit is a marvel of engineering — a second
+      skin that provides total environmental protection indefinitely.
+      Self-sustaining life support, self-repairing armor, integrated
+      weapons, and full System integration. Kael'thari don't sell
+      these — they must be stolen, salvaged, or obtained through
+      exceptional diplomatic channels.
+    features:
+      - "Indefinite self-sustaining life support"
+      - "Total environmental immunity"
+      - "Self-repairing nano-armor (200 physical, 150 energy, 100 System)"
+      - "Full powered exo-frame (+6 STR, +5 AGI, +4 END)"
+      - "Integrated particle weapon (equivalent to Tier 4 rifle)"
+      - "Neural interface (thought-controlled)"
+      - "Dimensional storage (20m³)"
+      - "Medical suite (auto-diagnosis, auto-treatment, 10 healing doses)"
+      - "Active camouflage"
+      - "Atmospheric flight capability"
+    limitations:
+      - "Not available for purchase (officially)"
+      - "Requires Kael'thari neural interface for full functionality (non-Kael'thari operate at 70%)"
+      - "Self-repair requires rare Kael'thari nano-materials"
+
+earth_eva_development:
+  current_status: >
+    Earth's EVA technology is approximately equivalent to Tier 0-1.
+    The Accord's New Geneva facility has produced ~200 Emergency Vacuum
+    Suits and ~30 Standard EVA Suits. The Scholar's Compact is
+    researching Tier 2 designs but estimates 2-3 years to blueprint
+    completion. Most Earth Travellers who need EVA suits must purchase
+    them from alien traders at enormous cost.
+
+  development_timeline:
+    year_1: "Emergency Vacuum Suits (Tier 0) — basic survival only"
+    year_2_3: "Standard EVA Suits (Tier 1) — reliable space operations"
+    year_5_8: "Combat EVA Suits (Tier 2) — military space capability (estimated)"
+    year_15_plus: "Advanced Explorer EVA (Tier 3) — full exploration capability (estimated)"
+    year_50_plus: "Tier 4+ equivalent (highly speculative)"
+
+  key_challenges:
+    - "Materials: System-enhanced polymers and composites are scarce on Earth"
+    - "Knowledge: Earth lacks 800+ years of alien EVA R&D"
+    - "Manufacturing: No dedicated EVA production facility exists yet"
+    - "Testing: Space testing requires existing EVA suits (chicken-and-egg problem)"
+    - "Cost: Each prototype costs millions of RP in materials alone"

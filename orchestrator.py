@@ -12,6 +12,7 @@ Designed to be invoked from Windsurf chat via .windsurfrules integration.
 from typing import Optional
 
 from agents.continuity_checker import ContinuityChecker
+from agents.database_manager import DatabaseManager
 from agents.dialogue_specialist import DialogueSpecialist
 from agents.lore_judge import LoreJudge
 from agents.outline_generator import OutlineGenerator
@@ -26,9 +27,11 @@ from agents.summarizer import Summarizer
 from agents.stat_currency_tracker import StatCurrencyTracker
 from agents.word_count_enforcer import WordCountEnforcer
 from config import CHAPTER_GUIDE, MIN_WORD_COUNT
+from conflict_tracker import ConflictTracker
 from memory_manager import MemoryManager
 from pipelines.pipeline_definitions import PIPELINES, get_pipeline, list_pipelines
 from pipelines.pipeline_engine import PipelineEngine
+from relationship_tracker import RelationshipTracker
 
 
 class Orchestrator:
@@ -43,13 +46,20 @@ class Orchestrator:
         result = orchestrator.summarize_chapter(chapter_num=3)
         result = orchestrator.check_lore(prose="...")
         result = orchestrator.check_continuity(prose="...")
+        result = orchestrator.auto_write(start=1, end=10)
+        result = orchestrator.query_database(query="Dravik", category="races")
 
     Commands (mapped to Windsurf chat triggers):
         "Write Chapter N"       → orchestrator.write_chapter(N)
+        "Auto Write N-M"        → orchestrator.auto_write(N, M)
         "Outline Chapters N-M"  → orchestrator.generate_outline(N, M)
         "Summarize Chapter N"   → orchestrator.summarize_chapter(N)
         "Check Lore"            → orchestrator.check_lore(prose)
         "Check Continuity"      → orchestrator.check_continuity(prose)
+        "Check Conflicts"       → orchestrator.check_conflicts()
+        "Add Conflict"          → orchestrator.add_conflict(name, ...)
+        "Show Relationships"    → orchestrator.show_relationships(character)
+        "Query Database"        → orchestrator.query_database(query, category)
         "Extract Style"         → orchestrator.extract_style(sample)
         "List Pipelines"        → orchestrator.list_available_pipelines()
         "Show State"            → orchestrator.get_current_state()
@@ -77,10 +87,20 @@ class Orchestrator:
             "word_count_enforcer": WordCountEnforcer(),
             "parameter_enforcer": ParameterEnforcer(),
             "stat_currency_tracker": StatCurrencyTracker(),
+            "database_manager": DatabaseManager(),
         }
 
         # Pipeline engine
         self.pipeline_engine = PipelineEngine()
+
+        # Relationship & Conflict trackers
+        self.relationships = RelationshipTracker()
+        self.conflicts = ConflictTracker()
+
+        # Load databases
+        db_agent = self.agents["database_manager"]
+        if isinstance(db_agent, DatabaseManager):
+            db_agent.load_databases()
 
     # ── Core Writing Commands ────────────────────────────────
 
@@ -124,6 +144,32 @@ class Orchestrator:
 
         # Build writing context from memory bank
         context = self.memory.build_writing_context(chapter_num)
+
+        # Inject rolling context (last 3 chapter summaries)
+        rolling = self._build_rolling_context(chapter_num)
+        if rolling:
+            context = rolling + "\n\n" + context
+
+        # Inject relationship context for characters in this chapter
+        rel_context = self.relationships.build_relationship_context()
+        if rel_context:
+            context += "\n\n" + rel_context
+
+        # Inject conflict context
+        conflict_context = self.conflicts.build_conflict_context(chapter_num)
+        if conflict_context:
+            context += "\n\n" + conflict_context
+
+        # Inject database context
+        db_agent = self.agents["database_manager"]
+        if isinstance(db_agent, DatabaseManager):
+            db_context = db_agent.build_context_for_chapter(
+                chapter_num=chapter_num,
+                location=self.memory.get_state().get("location", ""),
+                factions_needed=True,
+            )
+            if db_context:
+                context += "\n\n" + db_context
 
         # Get chapter guide data if available
         chapter_guide = self._get_chapter_guide_data(chapter_num)
@@ -725,7 +771,288 @@ class Orchestrator:
             "current_state": self.memory.get_state(),
         }
 
+    # ── Auto-Pilot Mode ────────────────────────────────────
+
+    def auto_write(
+        self,
+        start: int = 1,
+        end: int = 10,
+        pipeline: str = "full_quality",
+    ) -> dict:
+        """
+        Generate execution plans for multiple chapters in sequence.
+
+        Auto-pilot mode queues chapters for sequential writing. Each
+        chapter's output becomes context for the next. The rolling
+        context window ensures continuity.
+
+        Args:
+            start: First chapter number.
+            end: Last chapter number.
+            pipeline: Pipeline to use for all chapters.
+
+        Returns:
+            Dict with queued chapter plans and instructions.
+        """
+        chapter_plans = []
+        for ch in range(start, end + 1):
+            plan = self.write_chapter(chapter_num=ch, pipeline=pipeline)
+            chapter_plans.append({
+                "chapter_num": ch,
+                "arc": plan.get("arc", ""),
+                "pipeline": plan.get("pipeline", ""),
+                "step_count": len(plan.get("steps", [])),
+                "status": "queued",
+            })
+
+        return {
+            "command": "auto_write",
+            "range": f"{start}-{end}",
+            "total_chapters": end - start + 1,
+            "pipeline": pipeline,
+            "chapters": chapter_plans,
+            "status": "execution_plan_ready",
+            "instructions": (
+                f"Execute chapters {start} through {end} sequentially. "
+                f"For each chapter:\n"
+                f"1. Run 'Write Chapter N' to get the execution plan\n"
+                f"2. Execute each pipeline step in order\n"
+                f"3. Run 'Finalize Chapter N' with the prose\n"
+                f"4. The system auto-injects the last 3 chapter summaries "
+                f"into the next chapter's context (rolling window)\n"
+                f"5. Conflicts and relationships are tracked automatically\n"
+                f"6. Stats and currency are extracted and validated\n"
+                f"After each chapter, generate a summary and save it "
+                f"before proceeding to the next chapter."
+            ),
+        }
+
+    # ── Database Query Commands ──────────────────────────────
+
+    def query_database(
+        self,
+        query: str = "",
+        category: str = "",
+        tier: Optional[int] = None,
+        race: str = "",
+        entry_type: str = "",
+    ) -> dict:
+        """
+        Query the structured YAML databases.
+
+        Args:
+            query: Search term (name-based search).
+            category: Database category filter (races, monsters, etc.).
+            tier: Tier filter.
+            race: Race/species filter.
+            entry_type: Entry type filter.
+
+        Returns:
+            Dict with search results.
+        """
+        db_agent = self.agents["database_manager"]
+        if not isinstance(db_agent, DatabaseManager):
+            return {"error": "DatabaseManager not available"}
+
+        results: list = []
+        if query:
+            results = db_agent.query_by_name(query, category)
+        elif tier is not None:
+            results = db_agent.query_by_tier(tier, category)
+        elif race:
+            results = db_agent.query_by_race(race)
+        elif entry_type:
+            results = db_agent.query_by_type(entry_type, category)
+        elif category:
+            cat_data = db_agent.get_full_category(category)
+            return {
+                "command": "query_database",
+                "category": category,
+                "files": list(cat_data.keys()),
+                "file_count": len(cat_data),
+                "status": "complete",
+            }
+        else:
+            return {
+                "command": "query_database",
+                "summary": db_agent.get_stats_summary(),
+                "status": "complete",
+            }
+
+        return {
+            "command": "query_database",
+            "query": query or f"tier={tier}" or f"race={race}" or f"type={entry_type}",
+            "results_count": len(results),
+            "results": results[:20],
+            "status": "complete",
+        }
+
+    def get_database_stats(self) -> dict:
+        """Get summary of all loaded databases."""
+        db_agent = self.agents["database_manager"]
+        if not isinstance(db_agent, DatabaseManager):
+            return {"error": "DatabaseManager not available"}
+        return db_agent.get_stats_summary()
+
+    # ── Relationship Commands ────────────────────────────────
+
+    def add_relationship(
+        self,
+        char_a: str,
+        char_b: str,
+        rel_type: str = "neutral",
+        trust: int = 0,
+        notes: str = "",
+    ) -> dict:
+        """Add or update a relationship between two characters."""
+        entry = self.relationships.set_relationship(
+            char_a, char_b, rel_type, trust, notes=notes,
+        )
+        return {
+            "command": "add_relationship",
+            "relationship": entry,
+            "status": "complete",
+        }
+
+    def record_interaction(
+        self,
+        char_a: str,
+        char_b: str,
+        chapter: int,
+        description: str,
+        trust_change: int = 0,
+    ) -> dict:
+        """Record an interaction that affects a relationship."""
+        entry = self.relationships.add_interaction(
+            char_a, char_b, chapter, description, trust_change,
+        )
+        return {
+            "command": "record_interaction",
+            "relationship": entry,
+            "status": "complete",
+        }
+
+    def show_relationships(self, character: str = "") -> dict:
+        """Show relationships for a character or all relationships."""
+        if character:
+            rels = self.relationships.get_all_relationships_for(character)
+        else:
+            rels = list(self.relationships.get_all_relationships().values())
+        return {
+            "command": "show_relationships",
+            "character": character or "all",
+            "relationships": rels,
+            "stats": self.relationships.get_stats(),
+            "status": "complete",
+        }
+
+    # ── Conflict Commands ────────────────────────────────────
+
+    def add_conflict(
+        self,
+        name: str,
+        conflict_type: str = "personal",
+        chapter: int = 0,
+        participants: Optional[list] = None,
+        stakes: str = "",
+        description: str = "",
+    ) -> dict:
+        """Register a new plot conflict."""
+        entry = self.conflicts.add_conflict(
+            name, conflict_type, chapter,
+            participants, stakes, description,
+        )
+        return {
+            "command": "add_conflict",
+            "conflict": entry,
+            "status": "complete",
+        }
+
+    def update_conflict(
+        self,
+        conflict_id: str,
+        new_state: str,
+        chapter: int,
+        event: str = "",
+    ) -> dict:
+        """Transition a conflict to a new state."""
+        entry = self.conflicts.transition(
+            conflict_id, new_state, chapter, event,
+        )
+        return {
+            "command": "update_conflict",
+            "conflict": entry,
+            "status": "complete",
+        }
+
+    def resolve_conflict(
+        self,
+        conflict_id: str,
+        chapter: int,
+        resolution: str,
+    ) -> dict:
+        """Resolve a conflict."""
+        entry = self.conflicts.resolve(conflict_id, chapter, resolution)
+        return {
+            "command": "resolve_conflict",
+            "conflict": entry,
+            "status": "complete",
+        }
+
+    def check_conflicts(self, current_chapter: int = 0) -> dict:
+        """Get active conflicts and flag stale ones."""
+        if current_chapter == 0:
+            state = self.memory.get_state()
+            current_chapter = state.get("current_chapter", 0)
+
+        return {
+            "command": "check_conflicts",
+            "active": self.conflicts.get_active_conflicts(),
+            "stale": self.conflicts.get_stale_conflicts(current_chapter),
+            "dormant": self.conflicts.get_dormant_conflicts(),
+            "resolved_count": len(self.conflicts.get_resolved_conflicts()),
+            "stats": self.conflicts.get_stats(),
+            "status": "complete",
+        }
+
     # ── Internal Helpers ─────────────────────────────────────
+
+    def _build_rolling_context(self, chapter_num: int, window: int = 3) -> str:
+        """
+        Build rolling context from the last N chapter summaries.
+
+        This ensures chapter-to-chapter continuity by injecting recent
+        summaries into the writing context automatically.
+
+        Args:
+            chapter_num: Current chapter being written.
+            window: Number of previous chapters to include (default 3).
+
+        Returns:
+            Formatted string with recent chapter summaries.
+        """
+        if chapter_num <= 1:
+            return ""
+
+        sections = ["## ROLLING CONTEXT (Last 3 Chapters)"]
+        found_any = False
+
+        start = max(1, chapter_num - window)
+        for i in range(start, chapter_num):
+            summary = self.memory.get_chapter_summary(i)
+            if summary:
+                sections.append(f"### Chapter {i} Summary\n{summary}")
+                found_any = True
+            else:
+                content = self.memory.read_chapter(i)
+                if content:
+                    sections.append(
+                        f"### Chapter {i} (no summary — first 500 chars)\n"
+                        f"{content[:500]}..."
+                    )
+                    found_any = True
+
+        return "\n\n".join(sections) if found_any else ""
 
     def _get_arc_for_chapter(self, chapter_num: int) -> str:
         """Determine which arc a chapter belongs to."""
