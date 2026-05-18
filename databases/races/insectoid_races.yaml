@@ -1,163 +1,376 @@
-# Insectoid Races Database
-
 races:
-
-  - id: race_i001
-    name: "Chitraki"
-    classification: insectoid
-    homeworld: "The Hive Nexus"
-    universe_origin: "Swarm Expanse"
-    avg_height_cm: 170
-    avg_lifespan_years: 50
-    skin_tones: ["chitin black", "amber", "iridescent green"]
-    distinguishing_features: "Exoskeletal armor, compound eyes, mandibles, four arms, vestigial wings (non-functional for most)"
-    base_stats: { STR: 7, AGI: 9, END: 8, INT: 6, PER: 10, LCK: 2, SYS: 3 }
-    racial_ability: "Hive Signal — communicate silently with any Chitraki within 1km via pheromone burst"
-    culture: "Eusocial hive structure. Queens direct, soldiers fight, workers build. Individuality is emerging in Traveller-class Chitraki, causing cultural upheaval."
-    weakness: "Isolated individuals suffer 'Severance Sickness' — stat debuffs when away from hive-mates too long."
-    known_for: "Swarm tactics, tunnel engineering, rapid construction, overwhelming numbers"
-    traveller_percentage: 65
-
-  - id: race_i002
-    name: "Mantid"
-    classification: insectoid
-    homeworld: "Blade Garden"
-    universe_origin: "Predator's Edge"
-    avg_height_cm: 210
-    avg_lifespan_years: 120
-    skin_tones: ["leaf green chitin", "bark brown", "death's head black"]
-    distinguishing_features: "Scythe-like forelimbs, triangular head with 360° vision, capable of remaining motionless for days"
-    base_stats: { STR: 9, AGI: 11, END: 6, INT: 7, PER: 11, LCK: 3, SYS: 2 }
-    racial_ability: "Killing Strike — single devastating attack after motionless ambush (3x damage, requires 30s stillness)"
-    culture: "Solo predators. Mating is dangerous (traditional cannibalism now ritualized into sparring). Honor through clean kills."
-    weakness: "Poor team coordination. Instinctively compete with allies for kills."
-    known_for: "Assassination, martial arts, blade-craft, patience hunting"
-    traveller_percentage: 50
-
-  - id: race_i003
-    name: "Formicari"
-    classification: insectoid
-    homeworld: "Colony Prime (underground megacity)"
-    universe_origin: "Subterranean Cluster"
-    avg_height_cm: 155
-    avg_lifespan_years: 80
-    skin_tones: ["earth red chitin", "tunnel brown", "deep black"]
-    distinguishing_features: "Incredible strength-to-size ratio (lift 50x body weight), mandible pincers, chemical communication glands"
-    base_stats: { STR: 12, AGI: 6, END: 11, INT: 5, PER: 7, LCK: 3, SYS: 3 }
-    racial_ability: "Colony Strength — when 3+ Formicari work together, each gains +3 STR and +3 END"
-    culture: "Collectivist builders. Individual achievement is meaningless — only colony achievements matter. Their underground cities span continents."
-    weakness: "Individual Formicari are mentally limited. Need colony proximity for complex thought."
-    known_for: "Engineering, mining, logistics, construction, colony warfare"
-    traveller_percentage: 40
-
-  - id: race_i004
-    name: "Arachnari"
-    classification: insectoid
-    homeworld: "Webworld"
-    universe_origin: "Silk Nebula"
-    avg_height_cm: 180
-    avg_lifespan_years: 200
-    skin_tones: ["silk white", "web silver", "shadow black"]
-    distinguishing_features: "Eight limbs (walk on four, manipulate with four), spinnerets on wrists, vibration-sensing body hair"
-    base_stats: { STR: 6, AGI: 10, END: 5, INT: 9, PER: 11, LCK: 4, SYS: 4 }
-    racial_ability: "Web Construct — create ultra-strong silk structures (nets, bridges, armor, traps) at will"
-    culture: "Weavers. Their society is built on interconnections — literally and metaphorically. Betrayal is physically painful."
-    weakness: "Fire destroys silk constructs rapidly. Isolated Arachnari become paranoid."
-    known_for: "Trap engineering, network building, textile manufacturing, information webs"
-    traveller_percentage: 35
-
-  - id: race_i005
-    name: "Scarabite"
-    classification: insectoid
-    homeworld: "Aurumhive"
-    universe_origin: "Golden Wastes"
-    avg_height_cm: 160
-    avg_lifespan_years: 300
-    skin_tones: ["golden chitin", "lapis blue chitin", "ruby red chitin"]
-    distinguishing_features: "Jewel-like iridescent exoskeleton, can curl into armored ball, flight-capable wing cases"
-    base_stats: { STR: 8, AGI: 7, END: 10, INT: 6, PER: 6, LCK: 6, SYS: 4 }
-    racial_ability: "Scarab Shield — curl into armored sphere, reducing all damage by 90% for 20 seconds"
-    culture: "Treasure-builders. Their exoskeletons are literally made of rare minerals. They consume metals and gems to grow."
-    weakness: "Exoskeleton growth requires rare minerals. Mineral deficiency causes shell-crack disease."
-    known_for: "Mineral refining, defensive engineering, treasure crafting, shell-art"
-    traveller_percentage: 30
-
-  - id: race_i006
-    name: "Mothkin"
-    classification: insectoid
-    homeworld: "Lumos"
-    universe_origin: "Beacon Cluster"
-    avg_height_cm: 175
-    avg_lifespan_years: 60
-    skin_tones: ["moon white fur", "starlight silver", "dusk brown"]
-    distinguishing_features: "Large compound eyes sensitive to all light spectra, massive feathered antennae, functional wings (can fly), fur-covered body"
-    base_stats: { STR: 3, AGI: 8, END: 4, INT: 10, PER: 13, LCK: 5, SYS: 6 }
-    racial_ability: "Light Reading — can detect and interpret any energy emission, radiation, or signal within 500m"
-    culture: "Light-seekers. Drawn to knowledge, energy, and illumination. Their libraries are wavelength-indexed."
-    weakness: "Extremely drawn to bright energy sources — can be lured/trapped by powerful lights."
-    known_for: "Sensor technology, energy research, communication, signal intelligence"
-    traveller_percentage: 25
-
-  - id: race_i007
-    name: "Locusar"
-    classification: insectoid
-    homeworld: "Consumed (destroyed)"
-    universe_origin: "Blight Path"
-    avg_height_cm: 185
-    avg_lifespan_years: 40
-    skin_tones: ["plague green", "famine brown", "swarm black"]
-    distinguishing_features: "Rapid reproduction, consumption mandibles, swarm flight, adaptive metabolism"
-    base_stats: { STR: 5, AGI: 8, END: 7, INT: 4, PER: 7, LCK: 3, SYS: 2 }
-    racial_ability: "Consume — eat any organic or mineral matter and convert it to RP at 10% efficiency"
-    culture: "Survival-driven nomads. Their homeworld was consumed by their own expansion. Now they wander, seeking resources."
-    weakness: "Individual Locusar are weak. Without swarm numbers they are easy prey."
-    known_for: "Resource extraction, planet-stripping, rapid colonization, adaptability"
-    traveller_percentage: 70
-
-  - id: race_i008
-    name: "Beetleguard"
-    classification: insectoid
-    homeworld: "Carapace Keep"
-    universe_origin: "Iron Shell Sector"
-    avg_height_cm: 195
-    avg_lifespan_years: 250
-    skin_tones: ["iron chitin", "steel blue", "bronze brown"]
-    distinguishing_features: "Heaviest exoskeleton of any insectoid race, can lock joints to become immovable, horn-like protrusions"
-    base_stats: { STR: 10, AGI: 3, END: 14, INT: 5, PER: 5, LCK: 3, SYS: 3 }
-    racial_ability: "Fortress Stance — lock all joints, becoming immovable and gaining 95% damage reduction (unable to act)"
-    culture: "Guardian culture. Every Beetleguard is assigned something to protect — a person, place, or idea — for life."
-    weakness: "Extremely slow. Can be flipped onto their backs, leaving vulnerable underbelly exposed."
-    known_for: "Bodyguard services, fortress defense, patience, loyalty"
-    traveller_percentage: 20
-
-  - id: race_i009
-    name: "Waspari"
-    classification: insectoid
-    homeworld: "Sting Spire"
-    universe_origin: "Aerial Dominion"
-    avg_height_cm: 175
-    avg_lifespan_years: 100
-    skin_tones: ["warning yellow", "danger black", "venom orange"]
-    distinguishing_features: "Functional wings (high-speed flight), retractable stinger with paralytic venom, narrow waist, aggressive coloring"
-    base_stats: { STR: 7, AGI: 12, END: 5, INT: 6, PER: 8, LCK: 3, SYS: 3 }
-    racial_ability: "Death Dive — aerial charge attack dealing 4x damage on impact (requires altitude)"
-    culture: "Military aristocracy. Every citizen is a soldier. Their nests are aerial fortresses."
-    weakness: "Fragile when grounded. Wings are vulnerable and slow to heal."
-    known_for: "Aerial warfare, rapid assault, hit-and-run tactics, nest fortification"
-    traveller_percentage: 55
-
-  - id: race_i010
-    name: "Silkwyrm"
-    classification: insectoid
-    homeworld: "Cocoon"
-    universe_origin: "Metamorphosis Reach"
-    avg_height_cm: 160
-    avg_lifespan_years: 500
-    skin_tones: ["larval white", "chrysalis gold", "moth-wing iridescent"]
-    distinguishing_features: "Undergo metamorphosis every 100 years, gaining new abilities each cycle. Current form varies."
-    base_stats: { STR: 5, AGI: 6, END: 7, INT: 8, PER: 7, LCK: 8, SYS: 6 }
-    racial_ability: "Metamorphosis — every 100 years, enter cocoon and emerge with redistributed stats and a new racial ability"
-    culture: "Transformation worshippers. Change is sacred. Staying the same is death."
-    weakness: "Cocoon phase lasts 30 days and they are completely vulnerable during it."
-    known_for: "Adaptation, biological research, transformation science, philosophical wisdom"
-    traveller_percentage: 20
+- id: race_i001
+  name: Chitraki
+  classification: insectoid
+  homeworld: The Hive Nexus
+  universe_origin: Swarm Expanse
+  avg_height_cm: 170
+  avg_lifespan_years: 50
+  skin_tones:
+  - chitin black
+  - amber
+  - iridescent green
+  distinguishing_features: Exoskeletal armor, compound eyes, mandibles, four arms, vestigial wings (non-functional for most)
+  base_stats:
+    STR: 7
+    AGI: 9
+    END: 8
+    INT: 6
+    PER: 10
+    LCK: 2
+    SYS: 3
+  racial_ability: Hive Signal — communicate silently with any Chitraki within 1km via pheromone burst
+  culture: Eusocial hive structure. Queens direct, soldiers fight, workers build. Individuality is emerging in Traveller-class
+    Chitraki, causing cultural upheaval.
+  weakness: Isolated individuals suffer 'Severance Sickness' — stat debuffs when away from hive-mates too long.
+  known_for: Swarm tactics, tunnel engineering, rapid construction, overwhelming numbers
+  traveller_percentage: 65
+- id: race_i002
+  name: Mantid
+  classification: insectoid
+  homeworld: Blade Garden
+  universe_origin: Predator's Edge
+  avg_height_cm: 210
+  avg_lifespan_years: 120
+  skin_tones:
+  - leaf green chitin
+  - bark brown
+  - death's head black
+  distinguishing_features: Scythe-like forelimbs, triangular head with 360° vision, capable of remaining motionless for days
+  base_stats:
+    STR: 9
+    AGI: 11
+    END: 6
+    INT: 7
+    PER: 11
+    LCK: 3
+    SYS: 2
+  racial_ability: Killing Strike — single devastating attack after motionless ambush (3x damage, requires 30s stillness)
+  culture: Solo predators. Mating is dangerous (traditional cannibalism now ritualized into sparring). Honor through clean
+    kills.
+  weakness: Poor team coordination. Instinctively compete with allies for kills.
+  known_for: Assassination, martial arts, blade-craft, patience hunting
+  traveller_percentage: 50
+- id: race_i003
+  name: Formicari
+  classification: insectoid
+  homeworld: Colony Prime (underground megacity)
+  universe_origin: Subterranean Cluster
+  avg_height_cm: 155
+  avg_lifespan_years: 80
+  skin_tones:
+  - earth red chitin
+  - tunnel brown
+  - deep black
+  distinguishing_features: Incredible strength-to-size ratio (lift 50x body weight), mandible pincers, chemical communication
+    glands
+  base_stats:
+    STR: 12
+    AGI: 6
+    END: 11
+    INT: 5
+    PER: 7
+    LCK: 3
+    SYS: 3
+  racial_ability: Colony Strength — when 3+ Formicari work together, each gains +3 STR and +3 END
+  culture: Collectivist builders. Individual achievement is meaningless — only colony achievements matter. Their underground
+    cities span continents.
+  weakness: Individual Formicari are mentally limited. Need colony proximity for complex thought.
+  known_for: Engineering, mining, logistics, construction, colony warfare
+  traveller_percentage: 40
+- id: race_i004
+  name: Arachnari
+  classification: insectoid
+  homeworld: Webworld
+  universe_origin: Silk Nebula
+  avg_height_cm: 180
+  avg_lifespan_years: 200
+  skin_tones:
+  - silk white
+  - web silver
+  - shadow black
+  distinguishing_features: Eight limbs (walk on four, manipulate with four), spinnerets on wrists, vibration-sensing body
+    hair
+  base_stats:
+    STR: 6
+    AGI: 10
+    END: 5
+    INT: 9
+    PER: 11
+    LCK: 4
+    SYS: 4
+  racial_ability: Web Construct — create ultra-strong silk structures (nets, bridges, armor, traps) at will
+  culture: Weavers. Their society is built on interconnections — literally and metaphorically. Betrayal is physically painful.
+  weakness: Fire destroys silk constructs rapidly. Isolated Arachnari become paranoid.
+  known_for: Trap engineering, network building, textile manufacturing, information webs
+  traveller_percentage: 35
+- id: race_i005
+  name: Scarabite
+  classification: insectoid
+  homeworld: Aurumhive
+  universe_origin: Golden Wastes
+  avg_height_cm: 160
+  avg_lifespan_years: 300
+  skin_tones:
+  - golden chitin
+  - lapis blue chitin
+  - ruby red chitin
+  distinguishing_features: Jewel-like iridescent exoskeleton, can curl into armored ball, flight-capable wing cases
+  base_stats:
+    STR: 8
+    AGI: 7
+    END: 10
+    INT: 6
+    PER: 6
+    LCK: 6
+    SYS: 4
+  racial_ability: Scarab Shield — curl into armored sphere, reducing all damage by 90% for 20 seconds
+  culture: Treasure-builders. Their exoskeletons are literally made of rare minerals. They consume metals and gems to grow.
+  weakness: Exoskeleton growth requires rare minerals. Mineral deficiency causes shell-crack disease.
+  known_for: Mineral refining, defensive engineering, treasure crafting, shell-art
+  traveller_percentage: 30
+- id: race_i006
+  name: Mothkin
+  classification: insectoid
+  homeworld: Lumos
+  universe_origin: Beacon Cluster
+  avg_height_cm: 175
+  avg_lifespan_years: 60
+  skin_tones:
+  - moon white fur
+  - starlight silver
+  - dusk brown
+  distinguishing_features: Large compound eyes sensitive to all light spectra, massive feathered antennae, functional wings
+    (can fly), fur-covered body
+  base_stats:
+    STR: 3
+    AGI: 8
+    END: 4
+    INT: 10
+    PER: 13
+    LCK: 5
+    SYS: 6
+  racial_ability: Light Reading — can detect and interpret any energy emission, radiation, or signal within 500m
+  culture: Light-seekers. Drawn to knowledge, energy, and illumination. Their libraries are wavelength-indexed.
+  weakness: Extremely drawn to bright energy sources — can be lured/trapped by powerful lights.
+  known_for: Sensor technology, energy research, communication, signal intelligence
+  traveller_percentage: 25
+- id: race_i007
+  name: Locusar
+  classification: insectoid
+  homeworld: Consumed (destroyed)
+  universe_origin: Blight Path
+  avg_height_cm: 185
+  avg_lifespan_years: 40
+  skin_tones:
+  - plague green
+  - famine brown
+  - swarm black
+  distinguishing_features: Rapid reproduction, consumption mandibles, swarm flight, adaptive metabolism
+  base_stats:
+    STR: 5
+    AGI: 8
+    END: 7
+    INT: 4
+    PER: 7
+    LCK: 3
+    SYS: 2
+  racial_ability: Consume — eat any organic or mineral matter and convert it to RP at 10% efficiency
+  culture: Survival-driven nomads. Their homeworld was consumed by their own expansion. Now they wander, seeking resources.
+  weakness: Individual Locusar are weak. Without swarm numbers they are easy prey.
+  known_for: Resource extraction, planet-stripping, rapid colonization, adaptability
+  traveller_percentage: 70
+- id: race_i008
+  name: Beetleguard
+  classification: insectoid
+  homeworld: Carapace Keep
+  universe_origin: Iron Shell Sector
+  avg_height_cm: 195
+  avg_lifespan_years: 250
+  skin_tones:
+  - iron chitin
+  - steel blue
+  - bronze brown
+  distinguishing_features: Heaviest exoskeleton of any insectoid race, can lock joints to become immovable, horn-like protrusions
+  base_stats:
+    STR: 10
+    AGI: 3
+    END: 14
+    INT: 5
+    PER: 5
+    LCK: 3
+    SYS: 3
+  racial_ability: Fortress Stance — lock all joints, becoming immovable and gaining 95% damage reduction (unable to act)
+  culture: Guardian culture. Every Beetleguard is assigned something to protect — a person, place, or idea — for life.
+  weakness: Extremely slow. Can be flipped onto their backs, leaving vulnerable underbelly exposed.
+  known_for: Bodyguard services, fortress defense, patience, loyalty
+  traveller_percentage: 20
+- id: race_i009
+  name: Waspari
+  classification: insectoid
+  homeworld: Sting Spire
+  universe_origin: Aerial Dominion
+  avg_height_cm: 175
+  avg_lifespan_years: 100
+  skin_tones:
+  - warning yellow
+  - danger black
+  - venom orange
+  distinguishing_features: Functional wings (high-speed flight), retractable stinger with paralytic venom, narrow waist, aggressive
+    coloring
+  base_stats:
+    STR: 7
+    AGI: 12
+    END: 5
+    INT: 6
+    PER: 8
+    LCK: 3
+    SYS: 3
+  racial_ability: Death Dive — aerial charge attack dealing 4x damage on impact (requires altitude)
+  culture: Military aristocracy. Every citizen is a soldier. Their nests are aerial fortresses.
+  weakness: Fragile when grounded. Wings are vulnerable and slow to heal.
+  known_for: Aerial warfare, rapid assault, hit-and-run tactics, nest fortification
+  traveller_percentage: 55
+- id: race_i010
+  name: Silkwyrm
+  classification: insectoid
+  homeworld: Cocoon
+  universe_origin: Metamorphosis Reach
+  avg_height_cm: 160
+  avg_lifespan_years: 500
+  skin_tones:
+  - larval white
+  - chrysalis gold
+  - moth-wing iridescent
+  distinguishing_features: Undergo metamorphosis every 100 years, gaining new abilities each cycle. Current form varies.
+  base_stats:
+    STR: 5
+    AGI: 6
+    END: 7
+    INT: 8
+    PER: 7
+    LCK: 8
+    SYS: 6
+  racial_ability: Metamorphosis — every 100 years, enter cocoon and emerge with redistributed stats and a new racial ability
+  culture: Transformation worshippers. Change is sacred. Staying the same is death.
+  weakness: Cocoon phase lasts 30 days and they are completely vulnerable during it.
+  known_for: Adaptation, biological research, transformation science, philosophical wisdom
+  traveller_percentage: 20
+- id: race_i011
+  name: Scorphari
+  category: Insectoid
+  homeworld: Venomaris
+  description: Scorpion-like race with massive tail stingers. Expert ambush predators. Their venom can dissolve metal.
+  stats:
+    STR: 7
+    AGI: 5
+    END: 8
+    INT: 3
+    PER: 6
+    LCK: 2
+    SYS: 3
+  abilities:
+  - Metal-dissolving venom
+  - Burrow underground at speed
+  - Heat vision
+  vehicle_domain: Land (burrowing siege vehicles)
+  culture: Territorial. Mark territory with venom. Respect raw power above all else.
+  weaknesses:
+  - Cold temperatures
+  - Aquatic environments
+  - Limited intelligence for complex tactics
+- id: race_i012
+  name: Cicadari
+  category: Insectoid
+  homeworld: Echosphere
+  description: Cicada-like race that communicates through powerful sonic emissions. Can shatter stone with their voices.
+  stats:
+    STR: 3
+    AGI: 6
+    END: 4
+    INT: 7
+    PER: 9
+    LCK: 3
+    SYS: 5
+  abilities:
+  - Sonic scream (shatter materials)
+  - Echolocation (perfect spatial awareness)
+  - Harmonic communication (uncrackable)
+  vehicle_domain: Air (resonance-powered flyers)
+  culture: Musical society. Status determined by vocal range and power. Their cities 'sing' constantly.
+  weaknesses:
+  - Silence fields negate all abilities
+  - Fragile bodies
+  - Disoriented by counter-frequencies
+- id: race_i013
+  name: Aphidari
+  category: Insectoid
+  homeworld: The Living Gardens
+  description: Aphid-like race that feeds on plant energy. Extremely numerous, individually weak but devastating in swarms.
+  stats:
+    STR: 1
+    AGI: 3
+    END: 2
+    INT: 4
+    PER: 5
+    LCK: 4
+    SYS: 4
+  abilities:
+  - Swarm tactics (multiply effective stats by numbers)
+  - Plant manipulation
+  - Rapid reproduction
+  vehicle_domain: Land (organic living vehicles grown from plants)
+  culture: Collective consciousness. Individual Aphidari are barely sentient. Groups of 100+ develop intelligence.
+  weaknesses:
+  - Individually helpless
+  - Fire
+  - Toxins
+  - Require plant energy to survive
+- id: race_i014
+  name: Dragonfly Kin
+  category: Insectoid
+  homeworld: Shimmerhold
+  description: Dragonfly-like race with 360-degree vision, incredible aerial agility, and iridescent wings that refract energy
+    attacks.
+  stats:
+    STR: 3
+    AGI: 10
+    END: 4
+    INT: 5
+    PER: 10
+    LCK: 5
+    SYS: 4
+  abilities:
+  - 360-degree vision
+  - Energy refraction wings
+  - Hypersonic flight
+  - Multidirectional hovering
+  vehicle_domain: Air (agility-focused interceptors)
+  culture: Speed is sacred. Their architecture is designed to be navigated at full flight speed. Walking is considered shameful.
+  weaknesses:
+  - Fragile bodies
+  - Cannot operate in enclosed spaces
+  - Panic in enclosed areas
+- id: race_i015
+  name: Pillari
+  category: Insectoid
+  homeworld: Cocoonheim
+  description: Caterpillar-like race that undergoes metamorphosis. Each transformation unlocks new form and abilities.
+  stats:
+    STR: 4
+    AGI: 2
+    END: 9
+    INT: 6
+    PER: 4
+    LCK: 6
+    SYS: 7
+  abilities:
+  - Metamorphosis (3 stages, each with new body and abilities)
+  - Silk production
+  - Regeneration between forms
+  vehicle_domain: Variable (changes with metamorphosis stage)
+  culture: Patient, philosophical. Believe all things transform. Their religion centers on the concept of becoming.
+  weaknesses:
+  - Vulnerable during metamorphosis (24 hours)
+  - Slow in larval stage
+  - Cannot choose final form

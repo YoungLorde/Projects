@@ -1,288 +1,380 @@
----
 category: traveller_guilds
-description: >
-  Professional organizations, guilds, and associations formed by Travellers
-  across the universe. These groups organize around specific activities,
-  trades, or philosophies rather than territory or species.
+description: 'Professional organizations, guilds, and associations formed by Travellers across the universe. These groups
+  organize around specific activities, trades, or philosophies rather than territory or species.
+
+  '
 entries:
-  - id: TG-001
-    name: "The Pathfinders"
-    type: exploration_guild
-    scope: multi_species_multi_world
-    headquarters: "Waypoint Station (orbital, neutral space)"
-    membership: ~25,000 active Pathfinders across 30+ worlds
-    founding: "~400 years ago"
-    purpose: >
-      Explore the unknown 60%+ of the universe. Map uncharted worlds,
-      discover new species, locate hidden dungeons, and document anomalies.
-      The Pathfinders are the bleeding edge of civilization.
-    requirements:
-      - "Vehicle Tier 5+ minimum"
-      - "EVA suit certification"
-      - "Survival skills assessment"
-      - "Solo dungeon clear (Tier 3+ dungeon)"
-    benefits:
-      - "Access to Pathfinder maps (most comprehensive in the universe)"
-      - "Priority purchase on exploration-grade EVA suits"
-      - "Emergency beacon network — other Pathfinders will respond"
-      - "Discovery bonuses — RP rewards for verified new discoveries"
-    ranks:
-      - rank: "Scout"
-        description: "Entry level. Handles mapped routes and known territories."
-      - rank: "Ranger"
-        description: "Mid level. Ventures into partially mapped regions."
-      - rank: "Vanguard"
-        description: "Senior. First contact with unknown territories."
-      - rank: "Trailblazer"
-        description: "Elite. Enters completely unknown space. High mortality rate."
-      - rank: "Cartographer"
-        description: "Legendary. Has mapped an entire star system solo."
-    lore_notes: >
-      The Pathfinders are romanticized by other Travellers but have the
-      highest mortality rate of any guild. The unknown universe is unknown
-      for a reason — the things out there killed everyone who found them
-      before the Pathfinders existed. Their maps are the most valuable
-      documents in civilization. A Pathfinder's death is marked by
-      adding their last known coordinates to the guild's memorial map.
+- id: TG-001
+  name: The Pathfinders
+  type: exploration_guild
+  scope: multi_species_multi_world
+  headquarters: Waypoint Station (orbital, neutral space)
+  membership: ~25,000 active Pathfinders across 30+ worlds
+  founding: ~400 years ago
+  purpose: 'Explore the unknown 60%+ of the universe. Map uncharted worlds, discover new species, locate hidden dungeons,
+    and document anomalies. The Pathfinders are the bleeding edge of civilization.
 
-  - id: TG-002
-    name: "The Dungeon Breakers"
-    type: dungeon_clearing_guild
-    scope: multi_species_multi_world
-    headquarters: "The Breach (built into a permanently cleared Tier 8 dungeon)"
-    membership: ~80,000 active members across 50+ worlds
-    founding: "~600 years ago"
-    purpose: >
-      Clear dungeons systematically, map their layouts, catalogue their
-      creatures, and sell the information. Also run dungeon escort services
-      for Travellers who can't solo clear.
-    requirements:
-      - "Solo clear of a Tier 2+ dungeon (or equivalent group clear)"
-      - "Combat assessment"
-      - "Knowledge test on dungeon mechanics"
-    benefits:
-      - "Access to dungeon maps and creature databases"
-      - "Group matchmaking for difficult dungeons"
-      - "Loot distribution arbitration"
-      - "Insurance — guild pays compensation for verified dungeon deaths"
-    ranks:
-      - rank: "Delver"
-        description: "Entry level. Clears Tier 1-3 dungeons."
-      - rank: "Breacher"
-        description: "Mid level. Clears Tier 4-6 dungeons."
-      - rank: "Conqueror"
-        description: "Senior. Clears Tier 7-9 dungeons."
-      - rank: "Overlord"
-        description: "Elite. Has cleared a Tier 10+ dungeon."
-      - rank: "Legend"
-        description: "Has solo-cleared a Tier 8+ dungeon. Fewer than 100 alive."
-    lore_notes: >
-      The Dungeon Breakers are the most commercially successful guild in
-      the universe. Everyone needs dungeons cleared, and the Breakers
-      have turned it into a well-oiled machine. Their dungeon maps alone
-      generate billions of RP annually. Their internal culture is
-      surprisingly collegial — dungeon clearing teaches cooperation
-      across species lines.
+    '
+  requirements:
+  - Vehicle Tier 5+ minimum
+  - EVA suit certification
+  - Survival skills assessment
+  - Solo dungeon clear (Tier 3+ dungeon)
+  benefits:
+  - Access to Pathfinder maps (most comprehensive in the universe)
+  - Priority purchase on exploration-grade EVA suits
+  - Emergency beacon network — other Pathfinders will respond
+  - Discovery bonuses — RP rewards for verified new discoveries
+  ranks:
+  - rank: Scout
+    description: Entry level. Handles mapped routes and known territories.
+  - rank: Ranger
+    description: Mid level. Ventures into partially mapped regions.
+  - rank: Vanguard
+    description: Senior. First contact with unknown territories.
+  - rank: Trailblazer
+    description: Elite. Enters completely unknown space. High mortality rate.
+  - rank: Cartographer
+    description: Legendary. Has mapped an entire star system solo.
+  lore_notes: 'The Pathfinders are romanticized by other Travellers but have the highest mortality rate of any guild. The
+    unknown universe is unknown for a reason — the things out there killed everyone who found them before the Pathfinders
+    existed. Their maps are the most valuable documents in civilization. A Pathfinder''s death is marked by adding their last
+    known coordinates to the guild''s memorial map.
 
-  - id: TG-003
-    name: "The Iron Caravan"
-    type: trade_and_escort_guild
-    scope: multi_species_multi_world
-    headquarters: "Caravan Central (mobile — a fleet of 500+ vehicles)"
-    membership: ~40,000 active members
-    founding: "~300 years ago"
-    purpose: >
-      Protect trade routes, escort merchant convoys, and maintain safe
-      passage between worlds. The Iron Caravan guarantees delivery —
-      their reputation is their product.
-    requirements:
-      - "Vehicle Tier 3+ minimum"
-      - "Combat certification"
-      - "No criminal record with any major faction"
-    benefits:
-      - "Access to protected trade routes"
-      - "Escort contracts (well-paid)"
-      - "Vehicle repair at Caravan depots (discounted)"
-      - "Trade information network"
-    ranks:
-      - rank: "Runner"
-        description: "Solo courier runs between safe territories."
-      - rank: "Guard"
-        description: "Convoy escort duty, standard routes."
-      - rank: "Captain"
-        description: "Leads convoy escorts, handles route planning."
-      - rank: "Marshal"
-        description: "Commands large fleet movements, negotiates passage rights."
-      - rank: "Grand Marshal"
-        description: "Strategic command, sets guild policy."
-    lore_notes: >
-      The Iron Caravan makes interstellar trade possible. Without them,
-      every merchant convoy would be prey for raiders. Their guarantee
-      is simple: your goods arrive or you get triple their value in RP.
-      This guarantee is backed by a ruthless pursuit policy — anyone
-      who attacks an Iron Caravan convoy is hunted relentlessly.
+    '
+- id: TG-002
+  name: The Dungeon Breakers
+  type: dungeon_clearing_guild
+  scope: multi_species_multi_world
+  headquarters: The Breach (built into a permanently cleared Tier 8 dungeon)
+  membership: ~80,000 active members across 50+ worlds
+  founding: ~600 years ago
+  purpose: 'Clear dungeons systematically, map their layouts, catalogue their creatures, and sell the information. Also run
+    dungeon escort services for Travellers who can''t solo clear.
 
-  - id: TG-004
-    name: "The Forge Masters"
-    type: crafting_and_engineering_guild
-    scope: multi_species_multi_world
-    headquarters: "The Grand Forge (asteroid converted to workshop)"
-    membership: ~15,000 active members
-    founding: "~500 years ago"
-    purpose: >
-      Vehicle engineering, weapon crafting, armor manufacturing, and
-      System-enhanced item creation. The Forge Masters are the universe's
-      premier craftsmen. If it can be built, they can build it better.
-    requirements:
-      - "Crafting skill assessment (INT 8+ recommended)"
-      - "Portfolio of previous work"
-      - "Apprenticeship period (2 years minimum)"
-    benefits:
-      - "Access to rare material suppliers"
-      - "Crafting blueprint library (thousands of designs)"
-      - "System-enhanced crafting stations at guild workshops"
-      - "Brand recognition — Forge Master seal increases item value 30-50%"
-    specializations:
-      - "Vehicle Engineer — vehicle modification and upgrade specialist"
-      - "Weaponsmith — weapon creation and enhancement"
-      - "Armorwright — armor and defensive system specialist"
-      - "System Smith — crafting with System-enhanced materials (rare, dangerous)"
-      - "Core Technician — Vehicle Core maintenance and optimization (not creation)"
-    lore_notes: >
-      A Forge Master seal on an item means quality. Their apprenticeship
-      program is grueling — 2+ years of intensive training — but produces
-      craftsmen who can build items that rival System-generated loot.
-      Their most closely guarded secrets are Core Technician techniques
-      — methods for optimizing Vehicle Core performance that can add
-      effective tiers of power to a core. They do NOT create cores —
-      only the Kael'thari have managed that.
+    '
+  requirements:
+  - Solo clear of a Tier 2+ dungeon (or equivalent group clear)
+  - Combat assessment
+  - Knowledge test on dungeon mechanics
+  benefits:
+  - Access to dungeon maps and creature databases
+  - Group matchmaking for difficult dungeons
+  - Loot distribution arbitration
+  - Insurance — guild pays compensation for verified dungeon deaths
+  ranks:
+  - rank: Delver
+    description: Entry level. Clears Tier 1-3 dungeons.
+  - rank: Breacher
+    description: Mid level. Clears Tier 4-6 dungeons.
+  - rank: Conqueror
+    description: Senior. Clears Tier 7-9 dungeons.
+  - rank: Overlord
+    description: Elite. Has cleared a Tier 10+ dungeon.
+  - rank: Legend
+    description: Has solo-cleared a Tier 8+ dungeon. Fewer than 100 alive.
+  lore_notes: 'The Dungeon Breakers are the most commercially successful guild in the universe. Everyone needs dungeons cleared,
+    and the Breakers have turned it into a well-oiled machine. Their dungeon maps alone generate billions of RP annually.
+    Their internal culture is surprisingly collegial — dungeon clearing teaches cooperation across species lines.
 
-  - id: TG-005
-    name: "The Grey Medics"
-    type: medical_guild
-    scope: multi_species_multi_world
-    headquarters: "Sanctuary Station (neutral orbital medical facility)"
-    membership: ~20,000 active members
-    founding: "~350 years ago"
-    purpose: >
-      Provide medical services to all — Travellers, Wanderers, civilians,
-      any species. The Grey Medics observe strict neutrality and will
-      treat anyone regardless of faction allegiance. Attacking a Grey
-      Medic facility is the one universal taboo.
-    requirements:
-      - "Medical knowledge assessment"
-      - "INT 5+ minimum"
-      - "Oath of Neutrality (treat all, refuse none, take no side)"
-    benefits:
-      - "Protected status — attacking Grey Medics is universally condemned"
-      - "Access to advanced medical technology and healing compounds"
-      - "Free treatment at any Grey Medic facility"
-      - "Steady income — medical services always in demand"
-    services:
-      - "Trauma healing (System-enhanced)"
-      - "Stat damage repair (restoring stats lost to injury or curse)"
-      - "Status effect removal"
-      - "Vehicle Core bond therapy (treating bond deterioration)"
-      - "Wanderer psychological support (Phantom Travelling treatment)"
-    lore_notes: >
-      The Grey Medics are the closest thing the universe has to a
-      universally respected institution. Their neutrality is absolute —
-      they've treated soldiers from both sides of a battle in the same
-      facility. This neutrality is their greatest protection; even the
-      Crimson Harvest generally avoids attacking Grey Medic facilities,
-      knowing they might need treatment themselves. Their Wanderer
-      psychological support programs — treating Phantom Travelling —
-      are groundbreaking but underfunded.
+    '
+- id: TG-003
+  name: The Iron Caravan
+  type: trade_and_escort_guild
+  scope: multi_species_multi_world
+  headquarters: Caravan Central (mobile — a fleet of 500+ vehicles)
+  membership: ~40,000 active members
+  founding: ~300 years ago
+  purpose: 'Protect trade routes, escort merchant convoys, and maintain safe passage between worlds. The Iron Caravan guarantees
+    delivery — their reputation is their product.
 
-  - id: TG-006
-    name: "The Whisper Brokers"
-    type: intelligence_guild
-    scope: multi_species_covert
-    headquarters: "Unknown (operates through dead drops and encrypted channels)"
-    membership: "~5,000 (estimated)"
-    founding: "Unknown"
-    purpose: >
-      Information is the most valuable commodity. The Whisper Brokers
-      buy, sell, verify, and weaponize information. They know who's
-      planning what, where the next dungeon break will occur, and which
-      faction leader is about to make a move.
-    requirements:
-      - "Invitation only"
-      - "Proven information gathering capability"
-      - "Background verification (ironically thorough)"
-    benefits:
-      - "Access to the Whisper Network (real-time intelligence feed)"
-      - "Dead drop infrastructure across hundreds of worlds"
-      - "Identity protection services"
-      - "Bounty information (who's looking for what/whom)"
-    lore_notes: >
-      Nobody joins the Whisper Brokers — the Whisper Brokers find you.
-      They recruit from every faction, every species, every walk of life.
-      Their information network is the fastest and most accurate in the
-      universe. The price of their services varies — sometimes RP,
-      sometimes a favor, sometimes information in return. Mohamed's
-      dual system would be the most valuable secret they've ever
-      encountered. If they discover it, the question is whether they'd
-      sell that information or consider it too dangerous to release.
+    '
+  requirements:
+  - Vehicle Tier 3+ minimum
+  - Combat certification
+  - No criminal record with any major faction
+  benefits:
+  - Access to protected trade routes
+  - Escort contracts (well-paid)
+  - Vehicle repair at Caravan depots (discounted)
+  - Trade information network
+  ranks:
+  - rank: Runner
+    description: Solo courier runs between safe territories.
+  - rank: Guard
+    description: Convoy escort duty, standard routes.
+  - rank: Captain
+    description: Leads convoy escorts, handles route planning.
+  - rank: Marshal
+    description: Commands large fleet movements, negotiates passage rights.
+  - rank: Grand Marshal
+    description: Strategic command, sets guild policy.
+  lore_notes: 'The Iron Caravan makes interstellar trade possible. Without them, every merchant convoy would be prey for raiders.
+    Their guarantee is simple: your goods arrive or you get triple their value in RP. This guarantee is backed by a ruthless
+    pursuit policy — anyone who attacks an Iron Caravan convoy is hunted relentlessly.
 
-  - id: TG-007
-    name: "The Bone Collectors"
-    type: salvage_and_reclamation_guild
-    scope: multi_species
-    headquarters: "The Boneyard (massive salvage depot in asteroid field)"
-    membership: ~35,000 active members
-    founding: "~250 years ago"
-    purpose: >
-      Salvage destroyed vehicles, recover materials from battlefields,
-      reclaim abandoned infrastructure, and strip-mine depleted dungeons.
-      Where others see wreckage, Bone Collectors see profit.
-    requirements:
-      - "Vehicle with cargo capacity"
-      - "Basic mechanical knowledge"
-      - "Willingness to work in dangerous environments"
-    benefits:
-      - "Salvage rights coordination (prevents turf wars)"
-      - "Material appraisal services"
-      - "Bulk buyer connections"
-      - "Hazard pay for dangerous salvage zones"
-    lore_notes: >
-      The Bone Collectors are the universe's recyclers. After every battle,
-      every dungeon collapse, every abandoned settlement, the Bone Collectors
-      move in. They recover Vehicle Core fragments (useless individually but
-      valuable in bulk), rare materials, functional components, and sometimes
-      intact items of incredible value. The guild has a dark reputation —
-      some members don't wait for battles to end before they start collecting.
+    '
+- id: TG-004
+  name: The Forge Masters
+  type: crafting_and_engineering_guild
+  scope: multi_species_multi_world
+  headquarters: The Grand Forge (asteroid converted to workshop)
+  membership: ~15,000 active members
+  founding: ~500 years ago
+  purpose: 'Vehicle engineering, weapon crafting, armor manufacturing, and System-enhanced item creation. The Forge Masters
+    are the universe''s premier craftsmen. If it can be built, they can build it better.
 
-  - id: TG-008
-    name: "The Arena League"
-    type: combat_sport_organization
-    scope: multi_species_multi_world
-    headquarters: "The Colosseum (purpose-built arena station)"
-    membership: ~10,000 registered fighters, ~500,000 spectators/supporters
-    founding: "~150 years ago"
-    purpose: >
-      Organize sanctioned combat between Travellers. Provide entertainment,
-      settle disputes through combat, and offer a path to fame and fortune
-      through fighting. Matches range from friendly sparring to death matches.
-    requirements:
-      - "Combat assessment"
-      - "Medical clearance"
-      - "Waiver of liability (for lethal matches)"
-    match_types:
-      - type: "Exhibition"
-        description: "Non-lethal, point-based, for entertainment and training"
-      - type: "Honor Duel"
-        description: "First blood or submission, settles personal disputes"
-      - type: "Championship"
-        description: "Tournament format, seasonal rankings, major prizes"
-      - type: "Death Match"
-        description: "To the death, winner takes loser's Vehicle Core, extremely rare"
-      - type: "Vehicle Combat"
-        description: "Vehicle vs vehicle in arena environment"
-    lore_notes: >
-      The Arena League serves multiple purposes — entertainment, dispute
-      resolution, training, and fame. Champions become celebrities across
-      worlds. The League strictly regulates matches to prevent exploitation,
-      but underground fighting rings operate outside their control. Vehicle
-      combat matches — where Travellers fight in their vehicles — draw the
-      largest audiences and the highest betting volumes.
+    '
+  requirements:
+  - Crafting skill assessment (INT 8+ recommended)
+  - Portfolio of previous work
+  - Apprenticeship period (2 years minimum)
+  benefits:
+  - Access to rare material suppliers
+  - Crafting blueprint library (thousands of designs)
+  - System-enhanced crafting stations at guild workshops
+  - Brand recognition — Forge Master seal increases item value 30-50%
+  specializations:
+  - Vehicle Engineer — vehicle modification and upgrade specialist
+  - Weaponsmith — weapon creation and enhancement
+  - Armorwright — armor and defensive system specialist
+  - System Smith — crafting with System-enhanced materials (rare, dangerous)
+  - Core Technician — Vehicle Core maintenance and optimization (not creation)
+  lore_notes: 'A Forge Master seal on an item means quality. Their apprenticeship program is grueling — 2+ years of intensive
+    training — but produces craftsmen who can build items that rival System-generated loot. Their most closely guarded secrets
+    are Core Technician techniques — methods for optimizing Vehicle Core performance that can add effective tiers of power
+    to a core. They do NOT create cores — only the Kael''thari have managed that.
+
+    '
+- id: TG-005
+  name: The Grey Medics
+  type: medical_guild
+  scope: multi_species_multi_world
+  headquarters: Sanctuary Station (neutral orbital medical facility)
+  membership: ~20,000 active members
+  founding: ~350 years ago
+  purpose: 'Provide medical services to all — Travellers, Wanderers, civilians, any species. The Grey Medics observe strict
+    neutrality and will treat anyone regardless of faction allegiance. Attacking a Grey Medic facility is the one universal
+    taboo.
+
+    '
+  requirements:
+  - Medical knowledge assessment
+  - INT 5+ minimum
+  - Oath of Neutrality (treat all, refuse none, take no side)
+  benefits:
+  - Protected status — attacking Grey Medics is universally condemned
+  - Access to advanced medical technology and healing compounds
+  - Free treatment at any Grey Medic facility
+  - Steady income — medical services always in demand
+  services:
+  - Trauma healing (System-enhanced)
+  - Stat damage repair (restoring stats lost to injury or curse)
+  - Status effect removal
+  - Vehicle Core bond therapy (treating bond deterioration)
+  - Wanderer psychological support (Phantom Travelling treatment)
+  lore_notes: 'The Grey Medics are the closest thing the universe has to a universally respected institution. Their neutrality
+    is absolute — they''ve treated soldiers from both sides of a battle in the same facility. This neutrality is their greatest
+    protection; even the Crimson Harvest generally avoids attacking Grey Medic facilities, knowing they might need treatment
+    themselves. Their Wanderer psychological support programs — treating Phantom Travelling — are groundbreaking but underfunded.
+
+    '
+- id: TG-006
+  name: The Whisper Brokers
+  type: intelligence_guild
+  scope: multi_species_covert
+  headquarters: Unknown (operates through dead drops and encrypted channels)
+  membership: ~5,000 (estimated)
+  founding: Unknown
+  purpose: 'Information is the most valuable commodity. The Whisper Brokers buy, sell, verify, and weaponize information.
+    They know who''s planning what, where the next dungeon break will occur, and which faction leader is about to make a move.
+
+    '
+  requirements:
+  - Invitation only
+  - Proven information gathering capability
+  - Background verification (ironically thorough)
+  benefits:
+  - Access to the Whisper Network (real-time intelligence feed)
+  - Dead drop infrastructure across hundreds of worlds
+  - Identity protection services
+  - Bounty information (who's looking for what/whom)
+  lore_notes: 'Nobody joins the Whisper Brokers — the Whisper Brokers find you. They recruit from every faction, every species,
+    every walk of life. Their information network is the fastest and most accurate in the universe. The price of their services
+    varies — sometimes RP, sometimes a favor, sometimes information in return. Mohamed''s dual system would be the most valuable
+    secret they''ve ever encountered. If they discover it, the question is whether they''d sell that information or consider
+    it too dangerous to release.
+
+    '
+- id: TG-007
+  name: The Bone Collectors
+  type: salvage_and_reclamation_guild
+  scope: multi_species
+  headquarters: The Boneyard (massive salvage depot in asteroid field)
+  membership: ~35,000 active members
+  founding: ~250 years ago
+  purpose: 'Salvage destroyed vehicles, recover materials from battlefields, reclaim abandoned infrastructure, and strip-mine
+    depleted dungeons. Where others see wreckage, Bone Collectors see profit.
+
+    '
+  requirements:
+  - Vehicle with cargo capacity
+  - Basic mechanical knowledge
+  - Willingness to work in dangerous environments
+  benefits:
+  - Salvage rights coordination (prevents turf wars)
+  - Material appraisal services
+  - Bulk buyer connections
+  - Hazard pay for dangerous salvage zones
+  lore_notes: 'The Bone Collectors are the universe''s recyclers. After every battle, every dungeon collapse, every abandoned
+    settlement, the Bone Collectors move in. They recover Vehicle Core fragments (useless individually but valuable in bulk),
+    rare materials, functional components, and sometimes intact items of incredible value. The guild has a dark reputation
+    — some members don''t wait for battles to end before they start collecting.
+
+    '
+- id: TG-008
+  name: The Arena League
+  type: combat_sport_organization
+  scope: multi_species_multi_world
+  headquarters: The Colosseum (purpose-built arena station)
+  membership: ~10,000 registered fighters, ~500,000 spectators/supporters
+  founding: ~150 years ago
+  purpose: 'Organize sanctioned combat between Travellers. Provide entertainment, settle disputes through combat, and offer
+    a path to fame and fortune through fighting. Matches range from friendly sparring to death matches.
+
+    '
+  requirements:
+  - Combat assessment
+  - Medical clearance
+  - Waiver of liability (for lethal matches)
+  match_types:
+  - type: Exhibition
+    description: Non-lethal, point-based, for entertainment and training
+  - type: Honor Duel
+    description: First blood or submission, settles personal disputes
+  - type: Championship
+    description: Tournament format, seasonal rankings, major prizes
+  - type: Death Match
+    description: To the death, winner takes loser's Vehicle Core, extremely rare
+  - type: Vehicle Combat
+    description: Vehicle vs vehicle in arena environment
+  lore_notes: 'The Arena League serves multiple purposes — entertainment, dispute resolution, training, and fame. Champions
+    become celebrities across worlds. The League strictly regulates matches to prevent exploitation, but underground fighting
+    rings operate outside their control. Vehicle combat matches — where Travellers fight in their vehicles — draw the largest
+    audiences and the highest betting volumes.
+
+    '
+- id: tg_009
+  name: The Phantom Riders
+  type: Racing Guild
+  specialization: Speed and racing
+  size: Medium (8,000)
+  description: Traveller guild obsessed with vehicle speed. Run underground racing circuits across multiple worlds.
+  entry_requirement: Win a sanctioned race against a current member
+  lore_notes: Champion Blur completed a cross-galaxy race in record time.
+- id: tg_010
+  name: The Core Guardians
+  type: Protective Guild
+  specialization: Vehicle Core protection and recovery
+  size: Large (25,000)
+  description: Guild dedicated to protecting Vehicle Cores and recovering stolen ones. Part security, part bounty hunters.
+  entry_requirement: Return a stolen Core or save a Traveller from Core theft
+  lore_notes: Maintain registry of all known stolen Cores.
+- id: tg_011
+  name: The Deep Divers
+  type: Exploration Guild
+  specialization: Dungeon exploration
+  size: Medium (12,000)
+  description: Specialist dungeon-clearing guild. Best at navigating System-generated dungeons, traps, and bosses.
+  entry_requirement: Solo clear a Tier 3 dungeon
+  lore_notes: Discovered some dungeons are Ancient Race structures repurposed by the System.
+- id: tg_012
+  name: Wanderers Rest
+  type: Support Guild
+  specialization: Wanderer rehabilitation
+  size: Small (3,000 staff, serves 50,000+)
+  description: Charitable organization run by Travellers for Wanderers. Provides shelter, food, medical care, employment.
+  entry_requirement: Donate 10% monthly RP or volunteer 20hrs/month
+  lore_notes: Founded by first Voluntary Wanderer — gave up Core intentionally.
+- id: tg_013
+  name: The Dungeon Crawlers Union
+  type: Exploration Guild
+  description: Guild specializing in dungeon exploration and mapping. Professional dungeon delvers.
+  specialty: Dungeon exploration, boss strategies, loot optimization
+  requirements: Tier 2+ Traveller, survived 10+ dungeon runs
+  benefits:
+  - Dungeon maps and intel
+  - Boss strategy guides
+  - Loot sharing agreements
+  - Rescue insurance
+  notable_members:
+  - Zero-Two (deepest Infinite Descent explorer alive)
+  - Loot King Raj (legendary treasure finder)
+- id: tg_014
+  name: The Crafters Consortium
+  type: Production Guild
+  description: Guild of crafters, smiths, alchemists, and engineers. Control most high-quality equipment production.
+  specialty: Crafting, engineering, equipment modification
+  requirements: Crafting level 5+, demonstrated skill
+  benefits:
+  - Material sourcing network
+  - Blueprint library access
+  - Workshop access
+  - Bulk order contracts
+  notable_members:
+  - Iron Mother (Tier 6 crafter, can forge Void Steel)
+  - The Tinker (builds impossible machines)
+- id: tg_015
+  name: The Medics Without Borders
+  type: Support Guild
+  description: Healers, medics, and support Travellers who provide emergency aid to anyone regardless of faction.
+  specialty: Healing, emergency response, medical research
+  requirements: Healing ability or medical training, neutrality oath
+  benefits:
+  - Universal safe passage (most factions honor it)
+  - Medical supply access
+  - Training from best healers
+  notable_members:
+  - Doctor Without Limits (Tier 5 healer, can regrow limbs)
+  - The Pharmacist (potion master)
+- id: tg_016
+  name: The Information Exchange
+  type: Intelligence Guild
+  description: Guild that trades in information. Knowledge brokers, scouts, and spies organized under one banner.
+  specialty: Intelligence gathering, scouting, information trading
+  requirements: Prove value of unique information, pay membership fee
+  benefits:
+  - Access to intelligence network
+  - Real-time threat alerts
+  - Target dossiers
+  - Bounty board access
+  notable_members:
+  - The Broker (knows everything, sells everything)
+  - Ghost (has never been seen, but intel is always perfect)
+- id: tg_017
+  name: The Arena League
+  type: Combat Guild
+  description: Organized PvP combat league. Matches, tournaments, and ranked fighting with RP prizes.
+  specialty: PvP combat, tournament organization, combat training
+  requirements: Tier 1+ Traveller, registration fee
+  benefits:
+  - RP prize pools
+  - Ranking system
+  - Combat training from champions
+  - Sponsorship opportunities
+  notable_members:
+  - Champion Blade (3-time grand champion)
+  - The Undefeated (200-0 record)
+- id: tg_018
+  name: The Salvage Corps
+  type: Recovery Guild
+  description: Specialize in recovering destroyed vehicles, salvaging tech, and reclaiming abandoned settlements.
+  specialty: Vehicle salvage, tech recovery, settlement reclamation
+  requirements: Vehicle with cargo capacity, engineering skills
+  benefits:
+  - Salvage rights in claimed territories
+  - Repair facilities
+  - Buyer network for recovered goods
+  notable_members:
+  - Junkyard Queen (runs largest salvage yard on Earth)
+  - The Reclaimer (has recovered 200+ vehicles)

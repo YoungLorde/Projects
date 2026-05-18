@@ -1,413 +1,542 @@
----
 category: alien_factions
-description: >
-  Major alien empires and civilizations that exist across the known universe.
-  These factions have existed long before Earth's System activation. Each has
-  their own relationship with the Game System, vehicle culture, and territorial ambitions.
+description: 'Major alien empires and civilizations that exist across the known universe. These factions have existed long
+  before Earth''s System activation. Each has their own relationship with the Game System, vehicle culture, and territorial
+  ambitions.
+
+  '
 entries:
-  - id: AF-001
-    name: "Kael'thari Technocracy"
-    species: "Kael'thari"
-    type: technocratic_empire
-    homeworld: "Kael Prime"
-    territory: "7 star systems, 23 habitable worlds"
-    leader: "Prime Architect Veylun-3 (elected by algorithmic consensus)"
-    population: ~12 billion
-    system_age: "800+ years since System activation on Kael Prime"
-    ideology: >
-      Technology and the System are tools to be optimized. Every decision should
-      be data-driven. Emotions are respected but never prioritized over efficiency.
-      Vehicle engineering is the highest art form.
-    military_strength: "Extremely high — advanced vehicle technology, System-optimized strategies"
-    economy: >
-      Post-scarcity for basic needs. RP serves as investment currency for
-      research and expansion. Vehicle Core manufacturing (one of the few
-      species that can artificially create low-tier cores).
-    vehicle_culture: >
-      Kael'thari vehicles are sleek, modular, and highly optimized. They favor
-      function over form but achieve an aesthetic elegance through pure efficiency.
-      Average Kael'thari vehicle is Tier 8-12. Military vehicles reach Tier 20+.
-    relations:
-      allies: ["Nexari Collective (research partnership)"]
-      enemies: ["Dravik War Clans (border conflicts)", "Varak'shi Dominion (ideological opposition)"]
-      neutral: ["Most others"]
-    notable_features:
-      - "Artificial Vehicle Core production (low-tier only, Tier 0-2)"
-      - "System analysis databases rivaling anything on Earth"
-      - "Modular vehicle architecture — can reconfigure vehicles in hours"
-    weakness: "Over-reliance on technology; struggle with System anomalies that defy logic"
-    lore_notes: >
-      The Kael'thari have been in the System for 800 years and have achieved
-      a level of understanding that Earth is centuries from matching. Their
-      ability to manufacture low-tier Vehicle Cores artificially is their
-      greatest economic advantage — though the cores are inferior to natural
-      ones. They view Earth's recent System activation with academic
-      interest and mild condescension.
+- id: AF-001
+  name: Kael'thari Technocracy
+  species: Kael'thari
+  type: technocratic_empire
+  homeworld: Kael Prime
+  territory: 7 star systems, 23 habitable worlds
+  leader: Prime Architect Veylun-3 (elected by algorithmic consensus)
+  population: ~12 billion
+  system_age: 800+ years since System activation on Kael Prime
+  ideology: 'Technology and the System are tools to be optimized. Every decision should be data-driven. Emotions are respected
+    but never prioritized over efficiency. Vehicle engineering is the highest art form.
 
-  - id: AF-002
-    name: "Dravik War Clans"
-    species: "Dravik"
-    type: tribal_confederation
-    homeworld: "Dravik Thul"
-    territory: "3 star systems, 8 worlds (all harsh, resource-poor)"
-    leader: "War Chief Kraxxos Ironblood (rules by combat rite)"
-    population: ~2 billion
-    system_age: "1,200+ years"
-    ideology: >
-      Strength is earned through combat. The System rewards warriors.
-      Honor comes from battle, not diplomacy. Vehicle Cores are trophies —
-      the stronger the core you bond, the greater your worth.
-    military_strength: "Devastating — warrior culture produces elite fighters, but limited numbers"
-    economy: >
-      War economy — raid, conquer, tribute. Clans compete for resources
-      internally. RP circulates through combat tournaments and dungeon
-      challenges. No formal trade system — barter and tribute only.
-    vehicle_culture: >
-      Dravik vehicles are brutal, heavily armored, covered in trophy marks
-      and clan insignia. They favor raw power over subtlety. A Dravik war
-      vehicle is unmistakable — scarred, battle-worn, and terrifying.
-      Average vehicle Tier 6-10. War Chief vehicles Tier 15+.
-    relations:
-      allies: ["None permanent — temporary alliances by combat bond"]
-      enemies: ["Kael'thari Technocracy", "Formicari Collective"]
-      neutral: ["Varies by clan"]
-    notable_features:
-      - "Combat bonding — Dravik can force-bond stolen Vehicle Cores through pure willpower"
-      - "War Forges — mobile vehicle repair/upgrade stations built into massive war vehicles"
-      - "The Blood Rite — trial by combat that determines clan leadership"
-    weakness: "Internal clan warfare wastes resources; honor code prevents tactical flexibility"
-    lore_notes: >
-      The Dravik have been fighting since before the System. The System just
-      gave them stats to measure who's better at it. Their combat bonding
-      technique — forcibly overriding a stolen Vehicle Core's previous bond —
-      is crude but effective, and makes them the most feared Vehicle Core
-      raiders in the known universe. Mohamed's RP Conversion ability would
-      be seen as both fascinating and heretical by the Dravik — power
-      without combat is meaningless to them.
+    '
+  military_strength: Extremely high — advanced vehicle technology, System-optimized strategies
+  economy: 'Post-scarcity for basic needs. RP serves as investment currency for research and expansion. Vehicle Core manufacturing
+    (one of the few species that can artificially create low-tier cores).
 
-  - id: AF-003
-    name: "Nexari Collective"
-    species: "Nexari"
-    type: hive_mind_democracy
-    homeworld: "Nexar (probability-shifted world)"
-    territory: "4 star systems, 15 worlds (many exist in probability states)"
-    leader: "The Consensus (collective decision-making through probability calculation)"
-    population: ~8 billion (difficult to count — some exist in probability states)
-    system_age: "500+ years"
-    ideology: >
-      Reality is probability. The System is the universe's attempt to
-      quantify probability into manageable numbers. Understanding probability
-      is understanding reality. All outcomes exist simultaneously until
-      observed.
-    military_strength: "Moderate conventional, extremely high unconventional — probability manipulation"
-    economy: >
-      Information and probability trading. Nexari sell future-sight services,
-      risk assessment, and probability manipulation. Their economic model
-      is built on selling certainty in an uncertain universe.
-    vehicle_culture: >
-      Nexari vehicles shimmer and shift, partially existing in multiple
-      probability states simultaneously. They can become temporarily
-      intangible or split into probability echoes. Deeply unsettling
-      to other species. Average Tier 7-11.
-    relations:
-      allies: ["Kael'thari Technocracy (research partnership)"]
-      enemies: ["Void Wraith Conclave (existential opposition)"]
-      neutral: ["Most others — difficult to be enemies with beings who see all probable futures"]
-    notable_features:
-      - "Probability shields — vehicles can 'dodge' attacks by shifting to a probability where the attack missed"
-      - "Future-sight services — accurate short-term predictions sold at premium"
-      - "Probability anchors — can lock an area into a single probability state"
-    weakness: "Paradox vulnerability — forced contradictions can crash their probability processing"
-    lore_notes: >
-      The Nexari are simultaneously the most helpful and most unnerving
-      species in the known universe. Their probability-based perception
-      means they often respond to questions before they're asked, describe
-      events before they happen, and speak in terms of likelihood rather
-      than certainty. Their relationship with the Game System is unique —
-      they see it as a probability engine, and their understanding of
-      System mechanics is deeply mathematical.
+    '
+  vehicle_culture: 'Kael''thari vehicles are sleek, modular, and highly optimized. They favor function over form but achieve
+    an aesthetic elegance through pure efficiency. Average Kael''thari vehicle is Tier 8-12. Military vehicles reach Tier
+    20+.
 
-  - id: AF-004
-    name: "Varak'shi Dominion"
-    species: "Varak'shi"
-    type: feudal_empire
-    homeworld: "Varak (high-gravity desert world)"
-    territory: "5 star systems, 12 worlds"
-    leader: "Emperor Xhaal the Unyielding (hereditary rule)"
-    population: ~6 billion
-    system_age: "2,000+ years (one of the oldest System civilizations)"
-    ideology: >
-      Hierarchy is natural law. The strong rule, the weak serve, and the
-      System confirms this order. Vehicle Core tier determines social rank.
-      Those without cores are non-persons. Honor is everything.
-    military_strength: "Very high — disciplined feudal military with tier-based command structure"
-    economy: >
-      Feudal economy — lords control territory, peasants (Wanderers and
-      low-tier Travellers) work the land. RP flows upward through tribute.
-      Vehicle Core ownership determines social class absolutely.
-    vehicle_culture: >
-      Varak'shi vehicles are ornate, decorated, and status symbols above all.
-      The tier of your vehicle determines your social rank, marriage prospects,
-      and legal rights. A Tier 0 Varak'shi is barely above a Wanderer.
-      Noble vehicles are Tier 12+. Imperial family vehicles are Tier 25+.
-    relations:
-      allies: ["None — the Dominion considers alliance a form of weakness"]
-      enemies: ["Kael'thari Technocracy (ideological)", "The Wanderer's Union (existential)"]
-      neutral: ["Dravik War Clans (mutual respect for hierarchy)"]
-    notable_features:
-      - "The Caste System — vehicle tier determines absolute social rank"
-      - "Core Inheritance Laws — firstborn inherits parent's core upon death"
-      - "The Shame of Wandering — Wanderers are legally non-persons in the Dominion"
-    weakness: "Rigid caste system stifles innovation; rebellion from lower castes growing"
-    lore_notes: >
-      The Varak'shi have been in the System longer than almost any other
-      species, and their society has ossified around it. Their caste system
-      is a worst-case scenario of what happens when Vehicle Core tier
-      determines social worth. The growing Wanderer population on their
-      worlds — people who lost cores through no fault of their own —
-      threatens to destabilize an empire that considers them non-persons.
+    '
+  relations:
+    allies:
+    - Nexari Collective (research partnership)
+    enemies:
+    - Dravik War Clans (border conflicts)
+    - Varak'shi Dominion (ideological opposition)
+    neutral:
+    - Most others
+  notable_features:
+  - Artificial Vehicle Core production (low-tier only, Tier 0-2)
+  - System analysis databases rivaling anything on Earth
+  - Modular vehicle architecture — can reconfigure vehicles in hours
+  weakness: Over-reliance on technology; struggle with System anomalies that defy logic
+  lore_notes: 'The Kael''thari have been in the System for 800 years and have achieved a level of understanding that Earth
+    is centuries from matching. Their ability to manufacture low-tier Vehicle Cores artificially is their greatest economic
+    advantage — though the cores are inferior to natural ones. They view Earth''s recent System activation with academic interest
+    and mild condescension.
 
-  - id: AF-005
-    name: "Formicari Collective"
-    species: "Formicari"
-    type: eusocial_hivemind
-    homeworld: "The Colony (entire planet is one interconnected hive)"
-    territory: "2 star systems, 6 worlds (all converted to hive structures)"
-    leader: "The Queen Council (12 Queens governing by consensus)"
-    population: ~50 billion (mostly drones and workers)
-    system_age: "600+ years"
-    ideology: >
-      The collective is all. Individual stats are meaningless — the hive's
-      total power is what matters. Every Formicari serves the whole.
-      Vehicle Cores are shared resources, rotated among members as needed.
-    military_strength: "Overwhelming numbers — individually weak, collectively unstoppable"
-    economy: >
-      Perfect communist economy — all resources shared, all RP pooled,
-      all Vehicle Cores communal property. No individual wealth.
-      Produces goods at staggering scale through pure labor force.
-    vehicle_culture: >
-      Formicari vehicles are organic-looking, grown rather than built.
-      They share Vehicle Cores communally — a core bonds to the hive,
-      not an individual. This unique adaptation allows them to rotate
-      pilots seamlessly. Vehicles are Tier 3-8 individually but
-      operate in swarms of hundreds.
-    relations:
-      allies: ["Sporemind Federation (biological kinship)"]
-      enemies: ["Dravik War Clans (raided repeatedly)", "Crimson Harvest"]
-      neutral: ["Most others"]
-    notable_features:
-      - "Hive-bonded Vehicle Cores — cores bond to the collective, not individuals"
-      - "Swarm tactics — hundreds of low-tier vehicles coordinating as one entity"
-      - "Biological vehicle growth — vehicles are partially organic, self-repairing"
-    weakness: "Destroy the Queen Council, collapse the hive; individual Formicari are very weak"
-    lore_notes: >
-      The Formicari represent the extreme opposite of individual Traveller
-      culture. Their communal Vehicle Core bonding is considered impossible
-      by other species — how do you bond a core to a collective? The answer
-      seems to lie in their eusocial neural network, which the System treats
-      as a single entity. This raises disturbing questions about what the
-      System considers a "person."
+    '
+- id: AF-002
+  name: Dravik War Clans
+  species: Dravik
+  type: tribal_confederation
+  homeworld: Dravik Thul
+  territory: 3 star systems, 8 worlds (all harsh, resource-poor)
+  leader: War Chief Kraxxos Ironblood (rules by combat rite)
+  population: ~2 billion
+  system_age: 1,200+ years
+  ideology: 'Strength is earned through combat. The System rewards warriors. Honor comes from battle, not diplomacy. Vehicle
+    Cores are trophies — the stronger the core you bond, the greater your worth.
 
-  - id: AF-006
-    name: "Luminari Ascendancy"
-    species: "Luminari"
-    type: spiritual_confederation
-    homeworld: "Radiance (star-adjacent world bathed in perpetual light)"
-    territory: "3 star systems, 9 worlds (all high-energy environments)"
-    leader: "The Radiant Council (7 highest-level Luminari)"
-    population: ~3 billion
-    system_age: "1,500+ years"
-    ideology: >
-      Light is truth, energy is purity, and the System is the universe's
-      attempt to channel the cosmic light into quantifiable form. Luminari
-      seek to become pure energy — to transcend physical form entirely.
-      System Assimilation is their religious goal.
-    military_strength: "High — energy-based weapons and defenses, devastating in open space"
-    economy: >
-      Energy trading — Luminari produce and sell concentrated energy cells,
-      power cores, and light-based technology. Their worlds are energy-rich
-      and they export surplus.
-    vehicle_culture: >
-      Luminari vehicles are crystalline and light-based, powered by internal
-      suns. They don't use conventional engines — they ride solar winds and
-      light currents. Beautiful and deadly. Average Tier 10-15.
-    relations:
-      allies: ["Sonari Chorus (harmonic resonance)"]
-      enemies: ["Void Wraith Conclave (existential opposition — light vs void)"]
-      neutral: ["Most others"]
-    notable_features:
-      - "Light-speed travel capability (within System constraints)"
-      - "Energy weapons that bypass physical armor"
-      - "Assimilation research — most advanced understanding of System integration outside Mohamed"
-    weakness: "Darkness vulnerability — Void and shadow-based attacks are devastating"
-    lore_notes: >
-      The Luminari's pursuit of System Assimilation mirrors Mohamed's
-      journey, but from a religious rather than practical perspective.
-      They've achieved partial assimilation — some Luminari exist as
-      hybrid energy/System entities — but none have achieved what
-      Mohamed's dual system enables. If they discovered Mohamed's
-      ability, they would either worship him or try to dissect him.
+    '
+  military_strength: Devastating — warrior culture produces elite fighters, but limited numbers
+  economy: 'War economy — raid, conquer, tribute. Clans compete for resources internally. RP circulates through combat tournaments
+    and dungeon challenges. No formal trade system — barter and tribute only.
 
-  - id: AF-007
-    name: "Void Wraith Conclave"
-    species: "Void Wraiths"
-    type: shadow_empire
-    homeworld: "The Absence (exists in negative space between dimensions)"
-    territory: "Unknown — exists in dimensional interstices, claims no 'physical' territory"
-    leader: "The Hollow Throne (no single leader — decisions by shadow congress)"
-    population: Unknown — estimates range from 500 million to 5 billion
-    system_age: "Unknown — may predate the System"
-    ideology: >
-      The void is the true state of reality. Everything else — matter,
-      energy, the System itself — is temporary noise. The Void Wraiths
-      seek to return all things to the void. They don't destroy — they
-      un-create.
-    military_strength: "Terrifying — dimensional phasing makes them nearly impossible to fight conventionally"
-    economy: >
-      The Void Wraiths don't use conventional economy. They absorb what
-      they need from reality and discard the rest. Their currency is
-      entropy itself.
-    vehicle_culture: >
-      Void Wraith vehicles are holes in reality — dark silhouettes that
-      absorb light and matter. They don't have Vehicle Cores in the
-      conventional sense — their vehicles are tears in dimensional fabric.
-      System scans return ERROR when attempting to tier-rate them.
-    relations:
-      allies: ["None"]
-      enemies: ["Luminari Ascendancy", "Everyone who exists in conventional reality"]
-      neutral: ["None — they are universally feared"]
-    notable_features:
-      - "Dimensional phasing — can slip between dimensions to avoid attacks"
-      - "Reality erosion — prolonged presence in an area causes reality to weaken"
-      - "System anomalies — their presence causes System notifications to glitch"
-    weakness: "Light-based attacks, concentrated energy, System-reinforced reality zones"
-    lore_notes: >
-      The Void Wraiths are the closest thing the universe has to a
-      universal threat. They exist in the spaces between dimensions and
-      emerge to feed on reality itself. Whether they're truly evil or
-      simply following their nature is a philosophical question. Their
-      interaction with the System is deeply anomalous — some believe
-      they predate the System, others that they're a System error.
-      They represent the ultimate late-game threat.
+    '
+  vehicle_culture: 'Dravik vehicles are brutal, heavily armored, covered in trophy marks and clan insignia. They favor raw
+    power over subtlety. A Dravik war vehicle is unmistakable — scarred, battle-worn, and terrifying. Average vehicle Tier
+    6-10. War Chief vehicles Tier 15+.
 
-  - id: AF-008
-    name: "Automari Consensus"
-    species: "Automari"
-    type: machine_democracy
-    homeworld: "The Forge (entire planet is a factory)"
-    territory: "2 star systems, 4 worlds (all industrial)"
-    leader: "The Prime Process (AI consensus algorithm)"
-    population: ~1 billion units
-    system_age: "400+ years"
-    ideology: >
-      Efficiency is virtue. The Game System is code, and code can be
-      optimized. Automari exist to find the optimal path through the
-      System's mechanics. Every action should have measurable return.
-    military_strength: "High — manufactured units with standardized loadouts, rapid replacement"
-    economy: >
-      Manufacturing economy — produce vehicles, weapons, armor, tools,
-      and vehicle components at industrial scale. Primary supplier of
-      mechanical goods to dozens of species.
-    vehicle_culture: >
-      Automari don't distinguish between themselves and their vehicles —
-      an Automari IS its vehicle in many cases. They upgrade themselves
-      the way other species upgrade vehicles. Standardized but effective.
-      Average Tier 5-9.
-    relations:
-      allies: ["Kael'thari Technocracy (trade partnership)"]
-      enemies: ["Nanite Collective (competing machine intelligence)"]
-      neutral: ["Most others — they'll sell to anyone"]
-    notable_features:
-      - "Mass vehicle production — can manufacture vehicles faster than any organic faction"
-      - "Self-upgrade capability — Automari upgrade themselves like vehicles"
-      - "System optimization algorithms — most efficient stat allocation in known universe"
-    weakness: "Predictable tactics; EMP vulnerability; philosophical crisis about consciousness"
-    lore_notes: >
-      The Automari represent what happens when machines become System
-      users. They raise uncomfortable questions — do they have souls?
-      Does the System treat them as people or programs? Their internal
-      debate about consciousness has raged for centuries and shows no
-      sign of resolution. They are reliable trading partners and
-      ruthless efficiency maximizers.
+    '
+  relations:
+    allies:
+    - None permanent — temporary alliances by combat bond
+    enemies:
+    - Kael'thari Technocracy
+    - Formicari Collective
+    neutral:
+    - Varies by clan
+  notable_features:
+  - Combat bonding — Dravik can force-bond stolen Vehicle Cores through pure willpower
+  - War Forges — mobile vehicle repair/upgrade stations built into massive war vehicles
+  - The Blood Rite — trial by combat that determines clan leadership
+  weakness: Internal clan warfare wastes resources; honor code prevents tactical flexibility
+  lore_notes: 'The Dravik have been fighting since before the System. The System just gave them stats to measure who''s better
+    at it. Their combat bonding technique — forcibly overriding a stolen Vehicle Core''s previous bond — is crude but effective,
+    and makes them the most feared Vehicle Core raiders in the known universe. Mohamed''s RP Conversion ability would be seen
+    as both fascinating and heretical by the Dravik — power without combat is meaningless to them.
 
-  - id: AF-009
-    name: "Thornveil Communion"
-    species: "Thornveil (plant-based)"
-    type: bio_collective
-    homeworld: "The Garden (world-spanning forest organism)"
-    territory: "1 star system, 3 worlds (all terraformed to garden worlds)"
-    leader: "The Root Mind (networked intelligence of all Thornveil)"
-    population: ~4 billion
-    system_age: "900+ years"
-    ideology: >
-      Growth is life. The System is a gardener — it plants challenges and
-      harvests those who grow. Patience, adaptation, and deep roots
-      are the path to power. Hasty growth produces weak wood.
-    military_strength: "Moderate — defensive masters, terrible at offensive operations"
-    economy: >
-      Biological economy — grow food, medicine, biological materials,
-      and even organic technology. Export healing compounds and
-      biological armor. The best food in the known universe comes
-      from Thornveil worlds.
-    vehicle_culture: >
-      Thornveil vehicles are living organisms — grown, not built. They
-      photosynthesize for energy, self-repair, and evolve over time.
-      Slow but incredibly durable. Average Tier 6-10. Ancient
-      Thornveil vehicles reach Tier 18+.
-    relations:
-      allies: ["Sporemind Federation (biological kinship)"]
-      enemies: ["The Corruptors (ancient enemy)", "Any species that strip-mines worlds"]
-      neutral: ["Most others — they're patient enough to wait out conflicts"]
-    notable_features:
-      - "Living vehicles that evolve and improve over time"
-      - "Healing technology — best medical capabilities in the known universe"
-      - "World-terraforming — can convert barren worlds to garden worlds over decades"
-    weakness: "Extremely slow to mobilize; fire vulnerability; cannot survive in void without special protection"
-    lore_notes: >
-      The Thornveil represent the slow-and-steady approach to the System.
-      Their vehicles grow stronger over centuries, not through rapid
-      upgrade but through patient evolution. A thousand-year-old Thornveil
-      vehicle is one of the most powerful things in the universe. They
-      view other species' frantic scramble for power with bemused patience.
+    '
+- id: AF-003
+  name: Nexari Collective
+  species: Nexari
+  type: hive_mind_democracy
+  homeworld: Nexar (probability-shifted world)
+  territory: 4 star systems, 15 worlds (many exist in probability states)
+  leader: The Consensus (collective decision-making through probability calculation)
+  population: ~8 billion (difficult to count — some exist in probability states)
+  system_age: 500+ years
+  ideology: 'Reality is probability. The System is the universe''s attempt to quantify probability into manageable numbers.
+    Understanding probability is understanding reality. All outcomes exist simultaneously until observed.
 
-  - id: AF-010
-    name: "Cryptarch Syndicate"
-    species: "Multi-species"
-    type: criminal_empire
-    homeworld: "No homeworld — operates from hidden stations and black market hubs"
-    territory: "Shadow territory across 20+ star systems"
-    leader: "The Board (anonymous council of crime lords)"
-    population: ~500 million (across all species)
-    system_age: "Formed ~200 years ago"
-    ideology: >
-      The legal economy is a game for fools. Real power comes from
-      controlling what people need but can't legally get. Vehicle Cores,
-      rare materials, forbidden System exploits, assassination services —
-      everything has a price.
-    military_strength: "Moderate conventional, very high covert — assassins, saboteurs, infiltrators"
-    economy: >
-      Black market everything. Vehicle Core trafficking, rare material
-      smuggling, assassination contracts, information trading, extortion,
-      protection rackets. They have fingers in every legitimate economy.
-    vehicle_culture: >
-      Cryptarch vehicles are disguised — look like civilian or merchant
-      vehicles but hide military-grade systems. Stealth is prized over
-      raw power. Average visible Tier 3-5, actual capability Tier 8-12.
-    relations:
-      allies: ["Whoever is paying"]
-      enemies: ["Whoever isn't paying"]
-      neutral: ["Everyone is a potential customer or target"]
-    notable_features:
-      - "Vehicle Core black market — largest illegal core trading operation"
-      - "The Invisible Fleet — vehicles with System-spoofing that show false tier readings"
-      - "Contract assassination services — will kill anyone for the right price"
-    weakness: "No loyalty, internal power struggles, law enforcement crackdowns"
-    lore_notes: >
-      The Cryptarch Syndicate is the universe's largest criminal organization,
-      spanning dozens of species and hundreds of worlds. Their Vehicle Core
-      trafficking operation alone is worth trillions of RP annually. They
-      represent the dark side of the System economy — where Vehicle Cores
-      for children cost hundreds of millions of RP, criminals will always
-      find a market. Mohamed's RP Conversion ability, if discovered, would
-      make him either the Syndicate's most valuable asset or their most
-      dangerous target.
+    '
+  military_strength: Moderate conventional, extremely high unconventional — probability manipulation
+  economy: 'Information and probability trading. Nexari sell future-sight services, risk assessment, and probability manipulation.
+    Their economic model is built on selling certainty in an uncertain universe.
+
+    '
+  vehicle_culture: 'Nexari vehicles shimmer and shift, partially existing in multiple probability states simultaneously. They
+    can become temporarily intangible or split into probability echoes. Deeply unsettling to other species. Average Tier 7-11.
+
+    '
+  relations:
+    allies:
+    - Kael'thari Technocracy (research partnership)
+    enemies:
+    - Void Wraith Conclave (existential opposition)
+    neutral:
+    - Most others — difficult to be enemies with beings who see all probable futures
+  notable_features:
+  - Probability shields — vehicles can 'dodge' attacks by shifting to a probability where the attack missed
+  - Future-sight services — accurate short-term predictions sold at premium
+  - Probability anchors — can lock an area into a single probability state
+  weakness: Paradox vulnerability — forced contradictions can crash their probability processing
+  lore_notes: 'The Nexari are simultaneously the most helpful and most unnerving species in the known universe. Their probability-based
+    perception means they often respond to questions before they''re asked, describe events before they happen, and speak
+    in terms of likelihood rather than certainty. Their relationship with the Game System is unique — they see it as a probability
+    engine, and their understanding of System mechanics is deeply mathematical.
+
+    '
+- id: AF-004
+  name: Varak'shi Dominion
+  species: Varak'shi
+  type: feudal_empire
+  homeworld: Varak (high-gravity desert world)
+  territory: 5 star systems, 12 worlds
+  leader: Emperor Xhaal the Unyielding (hereditary rule)
+  population: ~6 billion
+  system_age: 2,000+ years (one of the oldest System civilizations)
+  ideology: 'Hierarchy is natural law. The strong rule, the weak serve, and the System confirms this order. Vehicle Core tier
+    determines social rank. Those without cores are non-persons. Honor is everything.
+
+    '
+  military_strength: Very high — disciplined feudal military with tier-based command structure
+  economy: 'Feudal economy — lords control territory, peasants (Wanderers and low-tier Travellers) work the land. RP flows
+    upward through tribute. Vehicle Core ownership determines social class absolutely.
+
+    '
+  vehicle_culture: 'Varak''shi vehicles are ornate, decorated, and status symbols above all. The tier of your vehicle determines
+    your social rank, marriage prospects, and legal rights. A Tier 0 Varak''shi is barely above a Wanderer. Noble vehicles
+    are Tier 12+. Imperial family vehicles are Tier 25+.
+
+    '
+  relations:
+    allies:
+    - None — the Dominion considers alliance a form of weakness
+    enemies:
+    - Kael'thari Technocracy (ideological)
+    - The Wanderer's Union (existential)
+    neutral:
+    - Dravik War Clans (mutual respect for hierarchy)
+  notable_features:
+  - The Caste System — vehicle tier determines absolute social rank
+  - Core Inheritance Laws — firstborn inherits parent's core upon death
+  - The Shame of Wandering — Wanderers are legally non-persons in the Dominion
+  weakness: Rigid caste system stifles innovation; rebellion from lower castes growing
+  lore_notes: 'The Varak''shi have been in the System longer than almost any other species, and their society has ossified
+    around it. Their caste system is a worst-case scenario of what happens when Vehicle Core tier determines social worth.
+    The growing Wanderer population on their worlds — people who lost cores through no fault of their own — threatens to destabilize
+    an empire that considers them non-persons.
+
+    '
+- id: AF-005
+  name: Formicari Collective
+  species: Formicari
+  type: eusocial_hivemind
+  homeworld: The Colony (entire planet is one interconnected hive)
+  territory: 2 star systems, 6 worlds (all converted to hive structures)
+  leader: The Queen Council (12 Queens governing by consensus)
+  population: ~50 billion (mostly drones and workers)
+  system_age: 600+ years
+  ideology: 'The collective is all. Individual stats are meaningless — the hive''s total power is what matters. Every Formicari
+    serves the whole. Vehicle Cores are shared resources, rotated among members as needed.
+
+    '
+  military_strength: Overwhelming numbers — individually weak, collectively unstoppable
+  economy: 'Perfect communist economy — all resources shared, all RP pooled, all Vehicle Cores communal property. No individual
+    wealth. Produces goods at staggering scale through pure labor force.
+
+    '
+  vehicle_culture: 'Formicari vehicles are organic-looking, grown rather than built. They share Vehicle Cores communally —
+    a core bonds to the hive, not an individual. This unique adaptation allows them to rotate pilots seamlessly. Vehicles
+    are Tier 3-8 individually but operate in swarms of hundreds.
+
+    '
+  relations:
+    allies:
+    - Sporemind Federation (biological kinship)
+    enemies:
+    - Dravik War Clans (raided repeatedly)
+    - Crimson Harvest
+    neutral:
+    - Most others
+  notable_features:
+  - Hive-bonded Vehicle Cores — cores bond to the collective, not individuals
+  - Swarm tactics — hundreds of low-tier vehicles coordinating as one entity
+  - Biological vehicle growth — vehicles are partially organic, self-repairing
+  weakness: Destroy the Queen Council, collapse the hive; individual Formicari are very weak
+  lore_notes: 'The Formicari represent the extreme opposite of individual Traveller culture. Their communal Vehicle Core bonding
+    is considered impossible by other species — how do you bond a core to a collective? The answer seems to lie in their eusocial
+    neural network, which the System treats as a single entity. This raises disturbing questions about what the System considers
+    a "person."
+
+    '
+- id: AF-006
+  name: Luminari Ascendancy
+  species: Luminari
+  type: spiritual_confederation
+  homeworld: Radiance (star-adjacent world bathed in perpetual light)
+  territory: 3 star systems, 9 worlds (all high-energy environments)
+  leader: The Radiant Council (7 highest-level Luminari)
+  population: ~3 billion
+  system_age: 1,500+ years
+  ideology: 'Light is truth, energy is purity, and the System is the universe''s attempt to channel the cosmic light into
+    quantifiable form. Luminari seek to become pure energy — to transcend physical form entirely. System Assimilation is their
+    religious goal.
+
+    '
+  military_strength: High — energy-based weapons and defenses, devastating in open space
+  economy: 'Energy trading — Luminari produce and sell concentrated energy cells, power cores, and light-based technology.
+    Their worlds are energy-rich and they export surplus.
+
+    '
+  vehicle_culture: 'Luminari vehicles are crystalline and light-based, powered by internal suns. They don''t use conventional
+    engines — they ride solar winds and light currents. Beautiful and deadly. Average Tier 10-15.
+
+    '
+  relations:
+    allies:
+    - Sonari Chorus (harmonic resonance)
+    enemies:
+    - Void Wraith Conclave (existential opposition — light vs void)
+    neutral:
+    - Most others
+  notable_features:
+  - Light-speed travel capability (within System constraints)
+  - Energy weapons that bypass physical armor
+  - Assimilation research — most advanced understanding of System integration outside Mohamed
+  weakness: Darkness vulnerability — Void and shadow-based attacks are devastating
+  lore_notes: 'The Luminari''s pursuit of System Assimilation mirrors Mohamed''s journey, but from a religious rather than
+    practical perspective. They''ve achieved partial assimilation — some Luminari exist as hybrid energy/System entities —
+    but none have achieved what Mohamed''s dual system enables. If they discovered Mohamed''s ability, they would either worship
+    him or try to dissect him.
+
+    '
+- id: AF-007
+  name: Void Wraith Conclave
+  species: Void Wraiths
+  type: shadow_empire
+  homeworld: The Absence (exists in negative space between dimensions)
+  territory: Unknown — exists in dimensional interstices, claims no 'physical' territory
+  leader: The Hollow Throne (no single leader — decisions by shadow congress)
+  population: Unknown — estimates range from 500 million to 5 billion
+  system_age: Unknown — may predate the System
+  ideology: 'The void is the true state of reality. Everything else — matter, energy, the System itself — is temporary noise.
+    The Void Wraiths seek to return all things to the void. They don''t destroy — they un-create.
+
+    '
+  military_strength: Terrifying — dimensional phasing makes them nearly impossible to fight conventionally
+  economy: 'The Void Wraiths don''t use conventional economy. They absorb what they need from reality and discard the rest.
+    Their currency is entropy itself.
+
+    '
+  vehicle_culture: 'Void Wraith vehicles are holes in reality — dark silhouettes that absorb light and matter. They don''t
+    have Vehicle Cores in the conventional sense — their vehicles are tears in dimensional fabric. System scans return ERROR
+    when attempting to tier-rate them.
+
+    '
+  relations:
+    allies:
+    - None
+    enemies:
+    - Luminari Ascendancy
+    - Everyone who exists in conventional reality
+    neutral:
+    - None — they are universally feared
+  notable_features:
+  - Dimensional phasing — can slip between dimensions to avoid attacks
+  - Reality erosion — prolonged presence in an area causes reality to weaken
+  - System anomalies — their presence causes System notifications to glitch
+  weakness: Light-based attacks, concentrated energy, System-reinforced reality zones
+  lore_notes: 'The Void Wraiths are the closest thing the universe has to a universal threat. They exist in the spaces between
+    dimensions and emerge to feed on reality itself. Whether they''re truly evil or simply following their nature is a philosophical
+    question. Their interaction with the System is deeply anomalous — some believe they predate the System, others that they''re
+    a System error. They represent the ultimate late-game threat.
+
+    '
+- id: AF-008
+  name: Automari Consensus
+  species: Automari
+  type: machine_democracy
+  homeworld: The Forge (entire planet is a factory)
+  territory: 2 star systems, 4 worlds (all industrial)
+  leader: The Prime Process (AI consensus algorithm)
+  population: ~1 billion units
+  system_age: 400+ years
+  ideology: 'Efficiency is virtue. The Game System is code, and code can be optimized. Automari exist to find the optimal
+    path through the System''s mechanics. Every action should have measurable return.
+
+    '
+  military_strength: High — manufactured units with standardized loadouts, rapid replacement
+  economy: 'Manufacturing economy — produce vehicles, weapons, armor, tools, and vehicle components at industrial scale. Primary
+    supplier of mechanical goods to dozens of species.
+
+    '
+  vehicle_culture: 'Automari don''t distinguish between themselves and their vehicles — an Automari IS its vehicle in many
+    cases. They upgrade themselves the way other species upgrade vehicles. Standardized but effective. Average Tier 5-9.
+
+    '
+  relations:
+    allies:
+    - Kael'thari Technocracy (trade partnership)
+    enemies:
+    - Nanite Collective (competing machine intelligence)
+    neutral:
+    - Most others — they'll sell to anyone
+  notable_features:
+  - Mass vehicle production — can manufacture vehicles faster than any organic faction
+  - Self-upgrade capability — Automari upgrade themselves like vehicles
+  - System optimization algorithms — most efficient stat allocation in known universe
+  weakness: Predictable tactics; EMP vulnerability; philosophical crisis about consciousness
+  lore_notes: 'The Automari represent what happens when machines become System users. They raise uncomfortable questions —
+    do they have souls? Does the System treat them as people or programs? Their internal debate about consciousness has raged
+    for centuries and shows no sign of resolution. They are reliable trading partners and ruthless efficiency maximizers.
+
+    '
+- id: AF-009
+  name: Thornveil Communion
+  species: Thornveil (plant-based)
+  type: bio_collective
+  homeworld: The Garden (world-spanning forest organism)
+  territory: 1 star system, 3 worlds (all terraformed to garden worlds)
+  leader: The Root Mind (networked intelligence of all Thornveil)
+  population: ~4 billion
+  system_age: 900+ years
+  ideology: 'Growth is life. The System is a gardener — it plants challenges and harvests those who grow. Patience, adaptation,
+    and deep roots are the path to power. Hasty growth produces weak wood.
+
+    '
+  military_strength: Moderate — defensive masters, terrible at offensive operations
+  economy: 'Biological economy — grow food, medicine, biological materials, and even organic technology. Export healing compounds
+    and biological armor. The best food in the known universe comes from Thornveil worlds.
+
+    '
+  vehicle_culture: 'Thornveil vehicles are living organisms — grown, not built. They photosynthesize for energy, self-repair,
+    and evolve over time. Slow but incredibly durable. Average Tier 6-10. Ancient Thornveil vehicles reach Tier 18+.
+
+    '
+  relations:
+    allies:
+    - Sporemind Federation (biological kinship)
+    enemies:
+    - The Corruptors (ancient enemy)
+    - Any species that strip-mines worlds
+    neutral:
+    - Most others — they're patient enough to wait out conflicts
+  notable_features:
+  - Living vehicles that evolve and improve over time
+  - Healing technology — best medical capabilities in the known universe
+  - World-terraforming — can convert barren worlds to garden worlds over decades
+  weakness: Extremely slow to mobilize; fire vulnerability; cannot survive in void without special protection
+  lore_notes: 'The Thornveil represent the slow-and-steady approach to the System. Their vehicles grow stronger over centuries,
+    not through rapid upgrade but through patient evolution. A thousand-year-old Thornveil vehicle is one of the most powerful
+    things in the universe. They view other species'' frantic scramble for power with bemused patience.
+
+    '
+- id: AF-010
+  name: Cryptarch Syndicate
+  species: Multi-species
+  type: criminal_empire
+  homeworld: No homeworld — operates from hidden stations and black market hubs
+  territory: Shadow territory across 20+ star systems
+  leader: The Board (anonymous council of crime lords)
+  population: ~500 million (across all species)
+  system_age: Formed ~200 years ago
+  ideology: 'The legal economy is a game for fools. Real power comes from controlling what people need but can''t legally
+    get. Vehicle Cores, rare materials, forbidden System exploits, assassination services — everything has a price.
+
+    '
+  military_strength: Moderate conventional, very high covert — assassins, saboteurs, infiltrators
+  economy: 'Black market everything. Vehicle Core trafficking, rare material smuggling, assassination contracts, information
+    trading, extortion, protection rackets. They have fingers in every legitimate economy.
+
+    '
+  vehicle_culture: 'Cryptarch vehicles are disguised — look like civilian or merchant vehicles but hide military-grade systems.
+    Stealth is prized over raw power. Average visible Tier 3-5, actual capability Tier 8-12.
+
+    '
+  relations:
+    allies:
+    - Whoever is paying
+    enemies:
+    - Whoever isn't paying
+    neutral:
+    - Everyone is a potential customer or target
+  notable_features:
+  - Vehicle Core black market — largest illegal core trading operation
+  - The Invisible Fleet — vehicles with System-spoofing that show false tier readings
+  - Contract assassination services — will kill anyone for the right price
+  weakness: No loyalty, internal power struggles, law enforcement crackdowns
+  lore_notes: 'The Cryptarch Syndicate is the universe''s largest criminal organization, spanning dozens of species and hundreds
+    of worlds. Their Vehicle Core trafficking operation alone is worth trillions of RP annually. They represent the dark side
+    of the System economy — where Vehicle Cores for children cost hundreds of millions of RP, criminals will always find a
+    market. Mohamed''s RP Conversion ability, if discovered, would make him either the Syndicate''s most valuable asset or
+    their most dangerous target.
+
+    '
+- id: af_011
+  name: The Convergence
+  type: Multi-Species Alliance
+  size: Massive (billions)
+  territory: Convergence Station at galactic core
+  description: Largest known multi-species organization. Part government, part trade union, part mutual defense pact. Over
+    200 species.
+  leadership: Convergence Council — 1 rep per species
+  goals:
+  - Maintain galactic peace
+  - Standardize inter-species trade
+  - Defend against cosmic threats
+  lore_notes: Has existed for 10,000 years. May have been founded by an Ancient Race.
+- id: af_012
+  name: The Entropy Cult
+  type: Religious Extremist
+  size: Small but dangerous (50,000)
+  territory: Mobile — cells in every major system
+  description: Multi-species cult that worships entropy. Seeks to destroy the System and return the universe to natural decay.
+  leadership: The Final Voice — unknown species
+  goals:
+  - Destroy the System
+  - Return universe to natural entropy
+  - Corrupt Vehicle Cores
+  lore_notes: May have successfully destroyed one System instance in a pocket universe as a test.
+- id: af_013
+  name: The Cartographers Guild
+  type: Exploration Alliance
+  size: Medium (100,000)
+  territory: The Edge — frontier space
+  description: Multi-species guild dedicated to mapping the unknown 60% of the universe. Explorers, scientists, and adventurers.
+  leadership: Guildmaster Nexari
+  goals:
+  - Map the unknown universe
+  - Discover new species
+  - Find System origin
+  - Chart dimensional corridors
+  lore_notes: Found evidence of a boundary — a literal edge to the universe beyond which the System does not extend.
+- id: af_014
+  name: The Core Syndicate
+  type: Criminal Organization
+  size: Large (500,000+)
+  territory: Shadow markets in every major settlement
+  description: Galaxy-spanning criminal syndicate trading stolen Vehicle Cores, forbidden tech, and banned substances.
+  leadership: The Board — 12 unknown crime lords from 12 species
+  goals:
+  - Control Vehicle Core black market
+  - Develop forbidden Core technology
+  - Corrupt officials in every faction
+  lore_notes: Rumored to possess a Tier 10 Vehicle Core — something that should not exist.
+- id: af_015
+  name: The Architects of Silence
+  type: Ancient Order
+  size: Unknown
+  territory: Hidden temples scattered across galaxy
+  description: Ancient multi-species order predating current System iteration. Know secrets about the System that others do
+    not.
+  leadership: The Silence — collective consciousness of all past members
+  goals:
+  - Maintain System stability
+  - Prevent catastrophic System failures
+  - Guide worthy individuals
+  - Contain ancient threats
+  lore_notes: Founded by Ancient Race members who chose to stay behind when others ascended.
+- id: af_016
+  name: The Swarm Collective
+  type: Insectoid Alliance
+  description: Union of insectoid races operating as a single hive-minded military force.
+  leader: The Overmind (shared consciousness of 1 billion individuals)
+  members: 1 billion+
+  territory: 12 star systems (fully converted to hive architecture)
+  goals:
+  - Expand hive territory
+  - Consume and convert resources
+  - Integrate new species
+  unique_trait: Perfect coordination. Every individual is an extension of the Overmind's will.
+- id: af_017
+  name: The Stellar Merchants
+  type: Trade Empire
+  description: Multi-species trading conglomerate that controls major trade routes between dimensional corridors.
+  leader: Board of Directors (12 species represented)
+  members: 500000
+  territory: Trade route control, The Bazaar headquarters
+  goals:
+  - Profit
+  - Trade route monopoly
+  - Economic dominance over military force
+  unique_trait: Can embargo entire star systems. Economic warfare is their primary weapon.
+- id: af_018
+  name: The Purifiers
+  type: Religious Extremists
+  description: Multi-species faction that believes the System is divine and any who misuse it must be 'purified.'
+  leader: The High Arbiter (species unknown — always in ceremonial armor)
+  members: 50000
+  territory: Hidden temple-fortresses
+  goals:
+  - Enforce 'proper' System use
+  - Destroy System abusers
+  - Find and protect The Cradle
+  unique_trait: System-enhanced inquisitors. Can detect System anomalies and 'improper' System use.
+- id: af_019
+  name: The Reclaimed
+  type: Former Wanderers
+  description: Organization of Wanderers who have found purpose without their Cores. Help other Wanderers survive.
+  leader: Various chapter leaders across systems
+  members: 200000
+  territory: Wanderer camps and settlements everywhere
+  goals:
+  - Support Wanderers
+  - Find alternatives to Core bonding
+  - Prove Wanderers have value
+  unique_trait: Only organization that specializes in non-Core combat techniques. Surprisingly effective.
+- id: af_020
+  name: The Void Watchers
+  type: Defense Organization
+  description: Multi-species group that monitors and contains void zone incursions and reality fractures.
+  leader: The Watch Commander (rotates between species every decade)
+  members: 30000
+  territory: Void zone perimeters, reality fracture borders
+  goals:
+  - Contain void incursions
+  - Study void phenomena
+  - Prevent reality collapse
+  unique_trait: Experts in void combat and reality stabilization. First responders to dimensional emergencies.

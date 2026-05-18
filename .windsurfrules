@@ -127,6 +127,42 @@
 #   Action: orch.check_conflicts(current_chapter)
 #   Returns active, stale (20+ chapters inactive), dormant conflicts.
 #
+# VEHICLE CORE FEEDING:
+#   User says: "Feed core" or "Feed Vehicle Core [resource]"
+#   Action: orch.feed_vehicle_core(resource_name, resource_tier, quantity, chapter_num)
+#   Feeds a resource to the Vehicle Core for limitless upgrade progression.
+#
+#   User says: "Feeding status" or "Core feeding status"
+#   Action: orch.get_feeding_status()
+#   Shows current feeding tier, next tier requirements, and summary.
+#
+# TIME DILATION:
+#   User says: "Activate time dilation" or "Time dilation tier N"
+#   Action: orch.activate_time_dilation(tier, duration_hours, activity, chapter_num)
+#   Activates time dilation in the pocket dimension.
+#
+#   User says: "Dilation status" or "Time dilation status"
+#   Action: orch.get_dilation_status()
+#   Shows current dilation tier, max available, and session history.
+#
+# SLICE-OF-LIFE SCENES:
+#   User says: "Generate slice of life" or "Write a downtime scene"
+#   Action: orch.generate_slice_of_life(scene_type, chapter_num, recent_events, mood, pacing_need)
+#   Generates a structured slice-of-life scene plan from templates.
+#
+#   User says: "List scene templates" or "Show scene types"
+#   Action: orch.list_scene_templates()
+#
+#   User says: "Suggest scene" or "Suggest a scene for [pacing_need]"
+#   Action: orch.suggest_scene(pacing_need)
+#   Pacing categories: after_action, between_arcs, character_development,
+#   power_progression, worldbuilding, filler_breather
+#
+# TECHNOLOGY & INFRASTRUCTURE:
+#   User says: "Tech context" or "Show tech for [category]"
+#   Action: orch.get_tech_context(tech_category, chapter_num)
+#   Categories: vr, networking, energy, battery, production, marketing, software
+#
 # STATE MANAGEMENT:
 #   User says: "Show state" or "Current state"
 #   Action: orch.get_current_state()

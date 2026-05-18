@@ -1,343 +1,656 @@
----
 category: weapons_and_armor
-description: >
-  Equipment database for weapons and armor available in the RP Conversion universe.
-  Items are tiered (matching the overall tier system), can be crafted, looted,
-  or purchased, and provide stat bonuses and special effects when equipped.
+description: 'Equipment database for weapons and armor available in the RP Conversion universe. Items are tiered (matching
+  the overall tier system), can be crafted, looted, or purchased, and provide stat bonuses and special effects when equipped.
 
+  '
 weapons:
   melee:
-    - id: WP-001
-      name: "Scrap Blade"
-      tier: 0
-      type: one_handed_sword
-      damage: "10-15 physical"
-      stat_requirement: "STR 1+"
-      weight: "2 kg"
-      durability: 100
-      cost: "50 RP"
-      description: >
-        A crude blade fashioned from salvaged metal. The edge is uneven
-        and the balance is poor, but in the early days of the System,
-        any weapon is better than fists. Common among new Travellers
-        and Wanderers. Can be crafted from scrap metal at any workbench.
-      special_effect: "None"
-      lore_notes: "The first weapon most Earth Travellers hold. Ugly but effective against Tier 0 threats."
-
-    - id: WP-002
-      name: "System-Forged Longsword"
-      tier: 2
-      type: one_handed_sword
-      damage: "45-60 physical + 10 System"
-      stat_requirement: "STR 4+"
-      weight: "3 kg"
-      durability: 500
-      cost: "5,000 RP"
-      description: >
-        A properly forged blade enhanced by the System during creation.
-        The edge never dulls and the balance is perfect. A faint blue
-        glow along the blade indicates System enhancement. Standard
-        issue for mid-level Travellers.
-      special_effect: "Self-sharpening (never loses edge), +5% critical hit chance"
-      lore_notes: "The workhorse weapon of competent Travellers."
-
-    - id: WP-003
-      name: "Plasma Edge"
-      tier: 4
-      type: one_handed_sword
-      damage: "120-160 physical + 50 energy"
-      stat_requirement: "STR 8+, SYS 3+"
-      weight: "2.5 kg"
-      durability: 1000
-      cost: "100,000 RP"
-      description: >
-        A blade that channels System energy into a superheated plasma
-        edge extending beyond the physical blade. The plasma extends
-        the cutting range by 15cm and cuts through most conventional
-        armor. Requires SYS stat to maintain the plasma field.
-      special_effect: "Armor penetration (ignores 30% physical defense), cauterizes wounds (reduces bleeding)"
-      lore_notes: "The weapon that makes conventional armor obsolete."
-
-    - id: WP-004
-      name: "Gravity Hammer"
-      tier: 5
-      type: two_handed_blunt
-      damage: "200-300 physical + 100 gravity"
-      stat_requirement: "STR 12+"
-      weight: "15 kg (feels like 5 due to gravity manipulation)"
-      durability: 2000
-      cost: "500,000 RP"
-      description: >
-        A massive hammer that manipulates local gravity on impact.
-        Each strike creates a gravity well at the point of contact,
-        crushing the target with 3x normal gravity for 2 seconds.
-        The hammer itself is gravity-lightened for the wielder.
-      special_effect: "Gravity Crush (3x gravity at impact point, 2s), Stagger (guaranteed knockback)"
-
-    - id: WP-005
-      name: "Void Blade"
-      tier: 7
-      type: one_handed_sword
-      damage: "500-700 physical + 300 void"
-      stat_requirement: "STR 15+, SYS 10+"
-      weight: "1 kg (partially exists in void space)"
-      durability: 5000
-      cost: "10,000,000 RP"
-      description: >
-        A blade that partially exists in void space. Its edge intersects
-        with reality, cutting through matter at a dimensional level.
-        The blade appears as a sliver of absolute darkness that absorbs
-        light. Wounds inflicted by the Void Blade resist healing —
-        the cut exists in multiple dimensions simultaneously.
-      special_effect: "Dimensional Cut (wounds resist healing, -50% healing effectiveness), Reality Pierce (ignores 60% all defenses)"
-
-  ranged:
-    - id: WP-006
-      name: "Salvaged Firearm"
-      tier: 0
-      type: pistol
-      damage: "8-12 physical"
-      stat_requirement: "PER 1+"
-      weight: "1 kg"
-      durability: 80
-      cost: "30 RP"
-      ammo: "Conventional rounds (scavengeable)"
-      description: >
-        A pre-System firearm, still functional but ineffective against
-        anything above Tier 1. Common in the early days when people
-        hadn't yet realized conventional weapons become obsolete fast.
-      special_effect: "None"
-
-    - id: WP-007
-      name: "System Railgun"
-      tier: 3
-      type: rifle
-      damage: "80-120 physical"
-      stat_requirement: "PER 6+, STR 4+"
-      weight: "5 kg"
-      durability: 800
-      cost: "50,000 RP"
-      ammo: "RP-generated slugs (5 RP per shot)"
-      description: >
-        Electromagnetic accelerator enhanced by the System. Fires
-        metal slugs at hypersonic speeds. The shot creates a visible
-        vapor trail and a sharp crack. Effective at extreme range
-        (2km accurate). Requires RP to generate ammunition.
-      special_effect: "Armor Piercing (ignores 40% physical defense), Long Range (+50% accuracy beyond 500m)"
-
-    - id: WP-008
-      name: "Particle Beam Rifle"
-      tier: 5
-      type: energy_rifle
-      damage: "150-200 energy"
-      stat_requirement: "PER 10+, INT 6+"
-      weight: "4 kg"
-      durability: 1500
-      cost: "300,000 RP"
-      ammo: "System energy (20 RP per shot)"
-      description: >
-        Fires a concentrated beam of System-accelerated particles.
-        The beam is visible as a brilliant blue line that burns through
-        the air. Ignores physical armor entirely — only energy shields
-        and System defenses can block it. Overheat risk after 10
-        consecutive shots.
-      special_effect: "Shield Bypasses physical armor entirely, Energy Overload (+30% damage to shields)"
-
-armor:
-  - id: AR-001
-    name: "Scrap Armor"
+  - id: WP-001
+    name: Scrap Blade
     tier: 0
-    type: light
-    defense: "5 physical"
-    stat_requirement: "END 1+"
-    weight: "8 kg"
-    durability: 80
-    cost: "40 RP"
-    description: >
-      Cobbled together from sheet metal, leather, and whatever was
-      available. Provides minimal protection against physical attacks.
-      Uncomfortable, noisy, and ugly — but it might stop a knife.
-    special_effect: "None"
-    coverage: "Torso, shoulders"
+    type: one_handed_sword
+    damage: 10-15 physical
+    stat_requirement: STR 1+
+    weight: 2 kg
+    durability: 100
+    cost: 50 RP
+    description: 'A crude blade fashioned from salvaged metal. The edge is uneven and the balance is poor, but in the early
+      days of the System, any weapon is better than fists. Common among new Travellers and Wanderers. Can be crafted from
+      scrap metal at any workbench.
 
-  - id: AR-002
-    name: "System-Enhanced Leather"
-    tier: 1
-    type: light
-    defense: "15 physical, 5 energy"
-    stat_requirement: "AGI 2+"
-    weight: "5 kg"
-    durability: 200
-    cost: "1,000 RP"
-    description: >
-      Leather armor treated with System energy during crafting. The
-      leather becomes supple yet tough, absorbing impacts that would
-      tear normal leather. Light enough for full mobility. The surface
-      has a subtle sheen from System treatment.
-    special_effect: "+5% movement speed (lighter than conventional armor)"
-    coverage: "Full body, light"
+      '
+    special_effect: None
+    lore_notes: The first weapon most Earth Travellers hold. Ugly but effective against Tier 0 threats.
+  - id: WP-002
+    name: System-Forged Longsword
+    tier: 2
+    type: one_handed_sword
+    damage: 45-60 physical + 10 System
+    stat_requirement: STR 4+
+    weight: 3 kg
+    durability: 500
+    cost: 5,000 RP
+    description: 'A properly forged blade enhanced by the System during creation. The edge never dulls and the balance is
+      perfect. A faint blue glow along the blade indicates System enhancement. Standard issue for mid-level Travellers.
 
-  - id: AR-003
-    name: "Tactical Combat Suit"
-    tier: 3
-    type: medium
-    defense: "50 physical, 25 energy"
-    stat_requirement: "END 5+"
-    weight: "12 kg"
-    durability: 800
-    cost: "30,000 RP"
-    description: >
-      Military-grade combat suit with System-enhanced plating at vital
-      points. Flexible composite material allows full range of motion.
-      Integrated communication system, environmental sealing (limited
-      — 30 minutes in hostile atmosphere), and modular attachment points
-      for additional gear.
-    special_effect: "+10% damage reduction, 30-minute hostile environment seal"
-    coverage: "Full body, medium"
-
-  - id: AR-004
-    name: "Exo-Plate Armor"
-    tier: 5
-    type: heavy
-    defense: "150 physical, 75 energy, 30 System"
-    stat_requirement: "END 10+, STR 8+"
-    weight: "25 kg"
-    durability: 2000
-    cost: "200,000 RP"
-    description: >
-      Heavy powered armor with System-enhanced servos. The exoskeleton
-      augments the wearer's STR by +3 and END by +2. Full environmental
-      seal (6 hours in vacuum — functions as basic EVA suit). Integrated
-      shield generator provides a personal energy barrier (200 HP).
-    special_effect: "+3 STR, +2 END, 6-hour vacuum seal, personal shield (200 HP)"
-    coverage: "Full body, powered"
-
-  - id: AR-005
-    name: "Dimensional Weave Armor"
-    tier: 7
-    type: medium
-    defense: "300 physical, 200 energy, 100 System"
-    stat_requirement: "SYS 10+, END 12+"
-    weight: "8 kg (dimensionally lightened)"
-    durability: 5000
-    cost: "8,000,000 RP"
-    description: >
-      Armor woven from threads that exist partially in dimensional folds.
-      Attacks pass partially through the folded portions, reducing all
-      damage by a flat percentage. Despite its heavy protection, it's
-      lighter than leather due to dimensional weight displacement.
-      Self-repairs by pulling material from dimensional reserves.
-    special_effect: "30% all-damage reduction (flat), self-repair (5% durability/hour), dimensional storage pockets"
-    coverage: "Full body, dimensional"
-
-consumables:
-  - id: CS-001
-    name: "Basic Healing Compound"
-    tier: 0
-    cost: "10 RP"
-    description: >
-      Simple healing solution generated by the System or crafted from
-      medicinal herbs. Restores 50 HP over 30 seconds. Tastes bitter.
-      Can be applied topically to wounds or ingested.
-    effect: "+50 HP over 30 seconds"
-
-  - id: CS-002
-    name: "Stamina Restoration Pill"
-    tier: 1
-    cost: "25 RP"
-    description: >
-      Compressed System-enhanced nutrients that rapidly restore stamina.
-      Restores 100 Stamina instantly. Mild nausea if more than 3 taken
-      within 1 hour. Commonly carried by fighters.
-    effect: "+100 Stamina instantly"
-
-  - id: CS-003
-    name: "Stat Boost Elixir"
-    tier: 3
-    cost: "5,000 RP"
-    variants: ["STR", "AGI", "END", "INT", "PER", "SYS"]
-    description: >
-      Temporarily boosts one stat by +5 for 1 hour. The elixir glows
-      the color associated with the stat. Only one Stat Boost can be
-      active at a time. Crafted from rare System-enhanced materials
-      or purchased from alchemists.
-    effect: "+5 to one stat for 1 hour"
-
-  - id: CS-004
-    name: "System Reset Pill"
-    tier: 5
-    cost: "100,000 RP"
-    description: >
-      Removes all negative status effects and restores HP, Stamina,
-      and RP to 50% of maximum. Extremely valuable in combat or
-      after exposure to dangerous environments. One of the most
-      sought-after consumables in the universe.
-    effect: "Remove all debuffs, restore 50% HP/Stamina/RP"
-
-  - id: CS-005
-    name: "Permanent Stat Crystal"
-    tier: 6
-    cost: "1,000,000+ RP"
-    variants: ["STR", "AGI", "END", "INT", "PER", "LCK", "SYS", "VIT", "WIS"]
-    description: >
-      A crystallized fragment of pure System energy attuned to a specific
-      stat. When consumed, permanently increases that stat by +1. Cannot
-      be crafted — only found as rare dungeon drops or from Tier 6+
-      boss kills. Each person can only absorb 5 Permanent Stat Crystals
-      in their lifetime (System limitation).
-    effect: "+1 permanent stat increase (lifetime limit: 5 crystals)"
-
-materials:
-  - id: MT-001
-    name: "System-Enhanced Iron"
-    tier: 1
-    cost: "50 RP/kg"
-    description: >
-      Iron ore that has been infused with System energy during smelting.
-      Stronger, lighter, and more durable than conventional iron. The
-      base material for most Tier 1-2 weapons and armor. Has a faint
-      blue tinge from System energy.
-    properties: "2x strength of normal iron, 30% lighter, accepts System enchantment"
-
-  - id: MT-002
-    name: "Void Crystal"
-    tier: 5
-    cost: "50,000 RP/unit"
-    description: >
-      Crystallized void energy harvested from dimensional rifts or
-      Void Wraith remains. Used in crafting dimensional weapons, armor,
-      and vehicle components. Absorbs light when observed. Handling
-      requires System-enhanced gloves — bare contact causes cold damage.
-    properties: "Dimensional crafting component, cold damage on contact, absorbs energy"
-
-  - id: MT-003
-    name: "Living Metal"
+      '
+    special_effect: Self-sharpening (never loses edge), +5% critical hit chance
+    lore_notes: The workhorse weapon of competent Travellers.
+  - id: WP-003
+    name: Plasma Edge
     tier: 4
-    cost: "25,000 RP/kg"
-    description: >
-      A metallic substance that responds to System energy like biological
-      tissue. It can be shaped, healed, and grown. Used in self-repairing
-      armor and adaptive vehicles. Originates from Automari worlds.
-    properties: "Self-repairing, shape-responsive, System-reactive, grows when fed RP"
+    type: one_handed_sword
+    damage: 120-160 physical + 50 energy
+    stat_requirement: STR 8+, SYS 3+
+    weight: 2.5 kg
+    durability: 1000
+    cost: 100,000 RP
+    description: 'A blade that channels System energy into a superheated plasma edge extending beyond the physical blade.
+      The plasma extends the cutting range by 15cm and cuts through most conventional armor. Requires SYS stat to maintain
+      the plasma field.
 
-  - id: MT-004
-    name: "Quantum Fiber"
-    tier: 6
-    cost: "200,000 RP/meter"
-    description: >
-      Thread-like material that exists in quantum superposition. Used
-      in Dimensional Weave armor and probability-based equipment. The
-      fiber appears to shimmer between states of existence. Only the
-      Nexari reliably produce it.
-    properties: "Probability-shifting, dimensional weaving, near-indestructible when woven"
+      '
+    special_effect: Armor penetration (ignores 30% physical defense), cauterizes wounds (reduces bleeding)
+    lore_notes: The weapon that makes conventional armor obsolete.
+  - id: WP-004
+    name: Gravity Hammer
+    tier: 5
+    type: two_handed_blunt
+    damage: 200-300 physical + 100 gravity
+    stat_requirement: STR 12+
+    weight: 15 kg (feels like 5 due to gravity manipulation)
+    durability: 2000
+    cost: 500,000 RP
+    description: 'A massive hammer that manipulates local gravity on impact. Each strike creates a gravity well at the point
+      of contact, crushing the target with 3x normal gravity for 2 seconds. The hammer itself is gravity-lightened for the
+      wielder.
 
-  - id: MT-005
-    name: "Core Fragment"
-    tier: "Varies"
-    cost: "1,000-100,000 RP/fragment"
-    description: >
-      Shards of broken or destroyed Vehicle Cores. Individually useless
-      for core bonding, but valuable as crafting materials. Core Fragments
-      retain residual System energy and can be used to enhance weapons,
-      armor, and vehicle components. Also used in System research.
-    properties: "System energy residue, crafting enhancement, research material"
+      '
+    special_effect: Gravity Crush (3x gravity at impact point, 2s), Stagger (guaranteed knockback)
+  - id: WP-005
+    name: Void Blade
+    tier: 7
+    type: one_handed_sword
+    damage: 500-700 physical + 300 void
+    stat_requirement: STR 15+, SYS 10+
+    weight: 1 kg (partially exists in void space)
+    durability: 5000
+    cost: 10,000,000 RP
+    description: 'A blade that partially exists in void space. Its edge intersects with reality, cutting through matter at
+      a dimensional level. The blade appears as a sliver of absolute darkness that absorbs light. Wounds inflicted by the
+      Void Blade resist healing — the cut exists in multiple dimensions simultaneously.
+
+      '
+    special_effect: Dimensional Cut (wounds resist healing, -50% healing effectiveness), Reality Pierce (ignores 60% all defenses)
+  ranged:
+  - id: WP-006
+    name: Salvaged Firearm
+    tier: 0
+    type: pistol
+    damage: 8-12 physical
+    stat_requirement: PER 1+
+    weight: 1 kg
+    durability: 80
+    cost: 30 RP
+    ammo: Conventional rounds (scavengeable)
+    description: 'A pre-System firearm, still functional but ineffective against anything above Tier 1. Common in the early
+      days when people hadn''t yet realized conventional weapons become obsolete fast.
+
+      '
+    special_effect: None
+  - id: WP-007
+    name: System Railgun
+    tier: 3
+    type: rifle
+    damage: 80-120 physical
+    stat_requirement: PER 6+, STR 4+
+    weight: 5 kg
+    durability: 800
+    cost: 50,000 RP
+    ammo: RP-generated slugs (5 RP per shot)
+    description: 'Electromagnetic accelerator enhanced by the System. Fires metal slugs at hypersonic speeds. The shot creates
+      a visible vapor trail and a sharp crack. Effective at extreme range (2km accurate). Requires RP to generate ammunition.
+
+      '
+    special_effect: Armor Piercing (ignores 40% physical defense), Long Range (+50% accuracy beyond 500m)
+  - id: WP-008
+    name: Particle Beam Rifle
+    tier: 5
+    type: energy_rifle
+    damage: 150-200 energy
+    stat_requirement: PER 10+, INT 6+
+    weight: 4 kg
+    durability: 1500
+    cost: 300,000 RP
+    ammo: System energy (20 RP per shot)
+    description: 'Fires a concentrated beam of System-accelerated particles. The beam is visible as a brilliant blue line
+      that burns through the air. Ignores physical armor entirely — only energy shields and System defenses can block it.
+      Overheat risk after 10 consecutive shots.
+
+      '
+    special_effect: Shield Bypasses physical armor entirely, Energy Overload (+30% damage to shields)
+armor:
+- id: AR-001
+  name: Scrap Armor
+  tier: 0
+  type: light
+  defense: 5 physical
+  stat_requirement: END 1+
+  weight: 8 kg
+  durability: 80
+  cost: 40 RP
+  description: 'Cobbled together from sheet metal, leather, and whatever was available. Provides minimal protection against
+    physical attacks. Uncomfortable, noisy, and ugly — but it might stop a knife.
+
+    '
+  special_effect: None
+  coverage: Torso, shoulders
+- id: AR-002
+  name: System-Enhanced Leather
+  tier: 1
+  type: light
+  defense: 15 physical, 5 energy
+  stat_requirement: AGI 2+
+  weight: 5 kg
+  durability: 200
+  cost: 1,000 RP
+  description: 'Leather armor treated with System energy during crafting. The leather becomes supple yet tough, absorbing
+    impacts that would tear normal leather. Light enough for full mobility. The surface has a subtle sheen from System treatment.
+
+    '
+  special_effect: +5% movement speed (lighter than conventional armor)
+  coverage: Full body, light
+- id: AR-003
+  name: Tactical Combat Suit
+  tier: 3
+  type: medium
+  defense: 50 physical, 25 energy
+  stat_requirement: END 5+
+  weight: 12 kg
+  durability: 800
+  cost: 30,000 RP
+  description: 'Military-grade combat suit with System-enhanced plating at vital points. Flexible composite material allows
+    full range of motion. Integrated communication system, environmental sealing (limited — 30 minutes in hostile atmosphere),
+    and modular attachment points for additional gear.
+
+    '
+  special_effect: +10% damage reduction, 30-minute hostile environment seal
+  coverage: Full body, medium
+- id: AR-004
+  name: Exo-Plate Armor
+  tier: 5
+  type: heavy
+  defense: 150 physical, 75 energy, 30 System
+  stat_requirement: END 10+, STR 8+
+  weight: 25 kg
+  durability: 2000
+  cost: 200,000 RP
+  description: 'Heavy powered armor with System-enhanced servos. The exoskeleton augments the wearer''s STR by +3 and END
+    by +2. Full environmental seal (6 hours in vacuum — functions as basic EVA suit). Integrated shield generator provides
+    a personal energy barrier (200 HP).
+
+    '
+  special_effect: +3 STR, +2 END, 6-hour vacuum seal, personal shield (200 HP)
+  coverage: Full body, powered
+- id: AR-005
+  name: Dimensional Weave Armor
+  tier: 7
+  type: medium
+  defense: 300 physical, 200 energy, 100 System
+  stat_requirement: SYS 10+, END 12+
+  weight: 8 kg (dimensionally lightened)
+  durability: 5000
+  cost: 8,000,000 RP
+  description: 'Armor woven from threads that exist partially in dimensional folds. Attacks pass partially through the folded
+    portions, reducing all damage by a flat percentage. Despite its heavy protection, it''s lighter than leather due to dimensional
+    weight displacement. Self-repairs by pulling material from dimensional reserves.
+
+    '
+  special_effect: 30% all-damage reduction (flat), self-repair (5% durability/hour), dimensional storage pockets
+  coverage: Full body, dimensional
+- id: arm_006
+  name: Phase Weave Suit
+  tier: 4
+  type: Light Armor
+  defense: 40
+  weight: Light
+  description: Armor woven from Nexari phase-silk. Can briefly phase out of reality to avoid attacks.
+  rp_cost_to_craft: 2500
+  requirements:
+    AGI: 10
+  special: Phase Dodge — 20% chance to completely negate any attack
+  lore: Nexari trade secret. The weaving process involves threading silk between dimensions.
+- id: arm_007
+  name: Dravik War Plate
+  tier: 3
+  type: Heavy Armor
+  defense: 70
+  weight: Heavy
+  description: Thick metal plate armor forged in Dravik forge-temples. Nearly impenetrable but very heavy.
+  rp_cost_to_craft: 1500
+  requirements:
+    STR: 12
+    END: 10
+  special: Unbreakable — cannot be destroyed by attacks below Tier 4
+  lore: Each suit is forged over 30 days of continuous hammering and prayer.
+- id: arm_008
+  name: Sylvani Living Bark
+  tier: 3
+  type: Medium Armor
+  defense: 50
+  weight: Medium
+  description: Armor grown from living wood that repairs itself. Slowly regenerates damage over time.
+  rp_cost_to_craft: 1200
+  requirements:
+    END: 8
+  special: Self-Repair — regenerates 2% durability per minute
+  lore: Grown by Sylvani bioengineers from seed-stock that takes 5 years to mature.
+- id: arm_009
+  name: EVA Combat Suit
+  tier: 4
+  type: Sealed Armor
+  defense: 55
+  weight: Medium
+  description: Sealed environment suit with combat capabilities. Protects from vacuum, radiation, and hostile atmospheres.
+  rp_cost_to_craft: 3500
+  requirements:
+    INT: 8
+    END: 8
+  special: Sealed Environment — survive in vacuum, underwater, toxic atmospheres for 48 hours
+  lore: Based on pre-System military EVA designs, upgraded with System-enhanced materials.
+- id: arm_010
+  name: Core Resonance Shield
+  tier: 5
+  type: Shield
+  defense: 90
+  weight: Heavy
+  description: Shield infused with Vehicle Core energy. Creates a force barrier that extends 1m beyond physical shield.
+  rp_cost_to_craft: 6000
+  requirements:
+    STR: 14
+    SYS: 8
+  special: Force Extension — barrier blocks energy attacks as well as physical
+  lore: Crafted by Core Guardians. The Core infusion process bonds the shield to the user's soul.
+consumables:
+- id: CS-001
+  name: Basic Healing Compound
+  tier: 0
+  cost: 10 RP
+  description: 'Simple healing solution generated by the System or crafted from medicinal herbs. Restores 50 HP over 30 seconds.
+    Tastes bitter. Can be applied topically to wounds or ingested.
+
+    '
+  effect: +50 HP over 30 seconds
+- id: CS-002
+  name: Stamina Restoration Pill
+  tier: 1
+  cost: 25 RP
+  description: 'Compressed System-enhanced nutrients that rapidly restore stamina. Restores 100 Stamina instantly. Mild nausea
+    if more than 3 taken within 1 hour. Commonly carried by fighters.
+
+    '
+  effect: +100 Stamina instantly
+- id: CS-003
+  name: Stat Boost Elixir
+  tier: 3
+  cost: 5,000 RP
+  variants:
+  - STR
+  - AGI
+  - END
+  - INT
+  - PER
+  - SYS
+  description: 'Temporarily boosts one stat by +5 for 1 hour. The elixir glows the color associated with the stat. Only one
+    Stat Boost can be active at a time. Crafted from rare System-enhanced materials or purchased from alchemists.
+
+    '
+  effect: +5 to one stat for 1 hour
+- id: CS-004
+  name: System Reset Pill
+  tier: 5
+  cost: 100,000 RP
+  description: 'Removes all negative status effects and restores HP, Stamina, and RP to 50% of maximum. Extremely valuable
+    in combat or after exposure to dangerous environments. One of the most sought-after consumables in the universe.
+
+    '
+  effect: Remove all debuffs, restore 50% HP/Stamina/RP
+- id: CS-005
+  name: Permanent Stat Crystal
+  tier: 6
+  cost: 1,000,000+ RP
+  variants:
+  - STR
+  - AGI
+  - END
+  - INT
+  - PER
+  - LCK
+  - SYS
+  - VIT
+  - WIS
+  description: 'A crystallized fragment of pure System energy attuned to a specific stat. When consumed, permanently increases
+    that stat by +1. Cannot be crafted — only found as rare dungeon drops or from Tier 6+ boss kills. Each person can only
+    absorb 5 Permanent Stat Crystals in their lifetime (System limitation).
+
+    '
+  effect: '+1 permanent stat increase (lifetime limit: 5 crystals)'
+- id: con_006
+  name: RP Injection Vial
+  tier: 2
+  description: Emergency RP restoration. Instantly restores 500 RP. Causes mild nausea.
+  effect: +500 RP instantly
+  side_effects: -2 AGI for 5 minutes (nausea)
+  rp_value: 200
+  crafting_ingredients:
+  - RP Crystal Fragment x3
+  - Purified Water
+  - Stabilizing Agent
+- id: con_007
+  name: Stat Boost Stim — STR
+  tier: 2
+  description: Chemical stimulant that temporarily boosts STR by 5 for 30 minutes.
+  effect: +5 STR for 30 minutes
+  side_effects: -3 STR for 1 hour after (crash)
+  rp_value: 150
+  crafting_ingredients:
+  - Ironjaw Boar Heart
+  - Mineral Extract
+  - System Catalyst
+- id: con_008
+  name: Healing Salve
+  tier: 1
+  description: Thick paste that accelerates healing when applied to wounds. Heals moderate injuries in minutes.
+  effect: Heal 30% HP over 5 minutes
+  side_effects: Stinging sensation
+  rp_value: 50
+  crafting_ingredients:
+  - Regeneration Mycelium
+  - Herbal Extract
+  - Clean Bandage
+- id: con_009
+  name: Anti-Toxin Universal
+  tier: 3
+  description: Broad-spectrum antidote effective against 90% of known toxins and venoms.
+  effect: Cure most poisons, +50% poison resistance for 1 hour
+  side_effects: Bitter taste, mild dizziness
+  rp_value: 300
+  crafting_ingredients:
+  - Venomari Antivenom Gland
+  - Purification Crystal
+  - Universal Solvent
+- id: con_010
+  name: Time Dilation Pill
+  tier: 5
+  description: Perception accelerator. Slows perceived time by 10x for 60 seconds. React 10x faster.
+  effect: 10x perception speed for 60 seconds
+  side_effects: Severe headache and exhaustion after (1 hour debuff)
+  rp_value: 2000
+  crafting_ingredients:
+  - Chrono Beast Temporal Shard
+  - Zerathi Probability Crystal
+  - Neural Stabilizer
+- id: con_011
+  name: Stealth Smoke Bomb
+  tier: 1
+  description: Creates a 10m smoke cloud that blocks vision and sensor detection for 30 seconds.
+  effect: 10m smoke cloud, blocks vision and sensors
+  rp_value: 30
+  crafting_ingredients:
+  - Smoke Powder
+  - Sensor Jamming Crystal
+  - Glass Casing
+- id: con_012
+  name: Emergency Shield Crystal
+  tier: 3
+  description: Crush to activate a personal shield absorbing 5000 damage. Lasts 30 seconds or until depleted.
+  effect: 5000 HP shield for 30 seconds
+  rp_value: 500
+  crafting_ingredients:
+  - Shield Crystal Fragment x5
+  - Energy Conduit
+  - Binding Agent
+- id: con_013
+  name: Berserker Serum
+  tier: 3
+  description: Inject for +10 STR, +10 AGI for 2 minutes. Afterward, collapse for 5 minutes (unconscious).
+  effect: +10 STR, +10 AGI for 2 minutes
+  side_effects: Unconscious for 5 minutes after
+  rp_value: 400
+  crafting_ingredients:
+  - Adrenaline Extract
+  - System Catalyst
+  - Neural Accelerator
+- id: con_014
+  name: Core Stabilizer
+  tier: 4
+  description: Emergency Vehicle Core stabilization. Prevents Core damage and soul-vehicle disconnection.
+  effect: Core immunity to damage for 10 minutes
+  rp_value: 2000
+  crafting_ingredients:
+  - Core Crystal Fragment
+  - Soul-Binding Agent
+  - Stabilization Matrix
+- id: con_015
+  name: Dimensional Anchor Grenade
+  tier: 4
+  description: Throw to create a 20m anti-teleportation zone. Nothing can teleport or phase shift within.
+  effect: 20m anti-teleportation zone for 5 minutes
+  rp_value: 1500
+  crafting_ingredients:
+  - Dimensional Anchor Fragment
+  - Gravity Crystal
+  - Detonator
+materials:
+- id: MT-001
+  name: System-Enhanced Iron
+  tier: 1
+  cost: 50 RP/kg
+  description: 'Iron ore that has been infused with System energy during smelting. Stronger, lighter, and more durable than
+    conventional iron. The base material for most Tier 1-2 weapons and armor. Has a faint blue tinge from System energy.
+
+    '
+  properties: 2x strength of normal iron, 30% lighter, accepts System enchantment
+- id: MT-002
+  name: Void Crystal
+  tier: 5
+  cost: 50,000 RP/unit
+  description: 'Crystallized void energy harvested from dimensional rifts or Void Wraith remains. Used in crafting dimensional
+    weapons, armor, and vehicle components. Absorbs light when observed. Handling requires System-enhanced gloves — bare contact
+    causes cold damage.
+
+    '
+  properties: Dimensional crafting component, cold damage on contact, absorbs energy
+- id: MT-003
+  name: Living Metal
+  tier: 4
+  cost: 25,000 RP/kg
+  description: 'A metallic substance that responds to System energy like biological tissue. It can be shaped, healed, and
+    grown. Used in self-repairing armor and adaptive vehicles. Originates from Automari worlds.
+
+    '
+  properties: Self-repairing, shape-responsive, System-reactive, grows when fed RP
+- id: MT-004
+  name: Quantum Fiber
+  tier: 6
+  cost: 200,000 RP/meter
+  description: 'Thread-like material that exists in quantum superposition. Used in Dimensional Weave armor and probability-based
+    equipment. The fiber appears to shimmer between states of existence. Only the Nexari reliably produce it.
+
+    '
+  properties: Probability-shifting, dimensional weaving, near-indestructible when woven
+- id: MT-005
+  name: Core Fragment
+  tier: Varies
+  cost: 1,000-100,000 RP/fragment
+  description: 'Shards of broken or destroyed Vehicle Cores. Individually useless for core bonding, but valuable as crafting
+    materials. Core Fragments retain residual System energy and can be used to enhance weapons, armor, and vehicle components.
+    Also used in System research.
+
+    '
+  properties: System energy residue, crafting enhancement, research material
+- id: mat_006
+  name: Void Steel
+  tier: 5
+  rarity: Epic
+  description: Metal forged in dimensional void. Partially exists outside normal space. Impossibly sharp and light.
+  uses:
+  - Tier 5+ weapons
+  - Dimensional tools
+  - Phase equipment
+  source: Void zone mining, Void Wraith remains
+  value_rp: 5000
+- id: mat_007
+  name: Living Crystal
+  tier: 4
+  rarity: Rare
+  description: Crystal that grows and repairs itself. Used in self-maintaining equipment and structures.
+  uses:
+  - Self-repairing armor
+  - Growing structures
+  - Communication arrays
+  source: Crystal Wyrm drops, Crystal cavern mining
+  value_rp: 2000
+- id: mat_008
+  name: Neutron Alloy
+  tier: 7
+  rarity: Legendary
+  description: Metal with neutron-star density in normal-sized form. Near-indestructible but incredibly heavy.
+  uses:
+  - Tier 7+ armor
+  - Vehicle hull plating
+  - Siege equipment
+  source: Neutroni trade, neutron star mining expeditions
+  value_rp: 50000
+- id: mat_009
+  name: System Thread
+  tier: 6
+  rarity: Epic
+  description: Visible strands of System energy crystallized into physical form. Can be woven into equipment.
+  uses:
+  - System-enhanced equipment
+  - Ability amplifiers
+  - Core repair
+  source: System anomaly zones, Titan Golem drops
+  value_rp: 15000
+- id: mat_010
+  name: Temporal Amber
+  tier: 5
+  rarity: Epic
+  description: Crystallized time. Objects encased in it are preserved perfectly. Can be used to slow or speed time locally.
+  uses:
+  - Time manipulation tools
+  - Preservation chambers
+  - Temporal weapons
+  source: Chrono Beast drops, temporal anomaly zones
+  value_rp: 8000
+- id: mat_011
+  name: Mycelium Network Core
+  tier: 3
+  rarity: Uncommon
+  description: Central node from a System-enhanced fungal network. Contains biological computing capacity.
+  uses:
+  - Bio-computers
+  - Communication networks
+  - Healing equipment
+  source: Spore Shambler elite drops, deep forest harvesting
+  value_rp: 500
+- id: mat_012
+  name: Soul Silver
+  tier: 4
+  rarity: Rare
+  description: Silver infused with soul energy. Resonates with Vehicle Cores. Essential for Core-linked equipment.
+  uses:
+  - Core-linked weapons
+  - Soul-binding items
+  - Core repair
+  source: Refined from Wanderer tears (crystallized soul energy)
+  value_rp: 3000
+- id: mat_013
+  name: Dreamweave Fiber
+  tier: 3
+  rarity: Uncommon
+  description: Thread harvested from Dreamwalker silk. Strongest known fiber per weight. Self-repairing.
+  uses:
+  - Lightweight armor
+  - Vehicle hull lining
+  - Repair patches
+  source: Dreamwalker trade, Somnia harvesting
+  value_rp: 800
+- id: mat_014
+  name: Gravity Stone
+  tier: 5
+  rarity: Epic
+  description: Stone with altered gravitational constant. Weighs 10,000x normal in some orientations, weightless in others.
+  uses:
+  - Gravity weapons
+  - Anti-gravity systems
+  - Gravity training equipment
+  source: Gravity Tortoise shells, deep mine gravity anomalies
+  value_rp: 6000
+- id: mat_015
+  name: Phoenix Ash
+  tier: 4
+  rarity: Rare
+  description: Ash from an Ashborn resurrection. Contains residual life energy. Key ingredient in resurrection items.
+  uses:
+  - Resurrection items
+  - Extreme healing compounds
+  - Fire-resistant coatings
+  source: Ashborn trade (voluntary shedding), Ashborn battlefields
+  value_rp: 4000
+- id: mat_016
+  name: Quantum Silk
+  tier: 6
+  rarity: Epic
+  description: Thread that exists in quantum superposition. Garments made from it are in all states simultaneously.
+  uses:
+  - Phase-shift armor
+  - Probability manipulation items
+  - Quantum computing components
+  source: Quantum Spider drops, Zerathi craft
+  value_rp: 12000
+- id: mat_017
+  name: Dark Matter Ingot
+  tier: 8
+  rarity: Legendary
+  description: Solidified dark matter. Interacts with gravity in impossible ways. Ultra-rare.
+  uses:
+  - Tier 8+ equipment
+  - Reality anchors
+  - Dimensional tools
+  source: Deep void mining, Gravitoni trade (extremely expensive)
+  value_rp: 100000
+- id: mat_018
+  name: Bio-Steel
+  tier: 3
+  rarity: Uncommon
+  description: Living metal that heals like biological tissue. Grows stronger under stress.
+  uses:
+  - Self-healing armor
+  - Adaptive weapons
+  - Vehicle hull plating
+  source: Sylvani bioengineering, living dungeon drops
+  value_rp: 1000
+- id: mat_019
+  name: Null Crystal
+  tier: 5
+  rarity: Epic
+  description: Crystal that absorbs and nullifies energy. Used in anti-ability equipment.
+  uses:
+  - Energy dampening fields
+  - Anti-ability weapons
+  - Prison construction
+  source: Nullborn trade, void zone formations
+  value_rp: 7000
+- id: mat_020
+  name: Star Core Fragment
+  tier: 9
+  rarity: Mythic
+  description: Fragment of a star's core. Burns with stellar fury. Can power anything for centuries.
+  uses:
+  - Tier 9 equipment
+  - Unlimited power source
+  - Star-forged weapons
+  source: Solar Leviathan drops, stellar mining (suicidal difficulty)
+  value_rp: 500000

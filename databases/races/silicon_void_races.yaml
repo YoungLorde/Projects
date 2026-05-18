@@ -1,171 +1,511 @@
-# Silicon-Based, Void, Plant, Fungal, and Mechanical Races Database
-
 races:
-
-  # ── Silicon-Based Races ────────────────────────────────────
-
-  - id: race_s001
-    name: "LithBorn"
-    classification: silicon
-    homeworld: "Crystal Matrix"
-    universe_origin: "Mineral Reach"
-    avg_height_cm: 190
-    avg_lifespan_years: 10000
-    skin_tones: ["quartz crystal", "diamond clear", "obsidian black"]
-    distinguishing_features: "Bodies are living crystal lattices. Grow by absorbing minerals. Light refracts through body."
-    base_stats: { STR: 12, AGI: 2, END: 15, INT: 8, PER: 5, LCK: 2, SYS: 4 }
-    racial_ability: "Crystal Growth — grow crystalline armor/weapons from body (permanent until broken)"
-    culture: "Geological timescale thinking. Conversations last years. Their 'wars' span centuries."
-    weakness: "Sonic resonance at the right frequency can shatter their crystalline structure."
-    known_for: "Mineral processing, extreme patience, crystal engineering, geological terraforming"
-    traveller_percentage: 5
-
-  - id: race_s002
-    name: "Ferrovian"
-    classification: silicon
-    homeworld: "Iron Heart (metallic core world)"
-    universe_origin: "Dense Vein"
-    avg_height_cm: 170
-    avg_lifespan_years: 3000
-    skin_tones: ["living steel", "molten iron", "rust patina"]
-    distinguishing_features: "Bodies of living metal that can reshape and alloy. Consume raw ore for sustenance."
-    base_stats: { STR: 11, AGI: 4, END: 13, INT: 7, PER: 4, LCK: 3, SYS: 5 }
-    racial_ability: "Metal Shift — reshape body into tools, weapons, or armor configurations in 5 seconds"
-    culture: "Alloy philosophy — stronger together than apart. Marriage involves literally fusing metals."
-    weakness: "Extreme heat causes uncontrolled melting. Acid corrodes their structure."
-    known_for: "Metallurgy, vehicle construction, weapons manufacturing, armor design"
-    traveller_percentage: 15
-
-  - id: race_s003
-    name: "Geode"
-    classification: silicon
-    homeworld: "Hollow Stone"
-    universe_origin: "Cave Systems Cluster"
-    avg_height_cm: 140
-    avg_lifespan_years: 5000
-    skin_tones: ["rough exterior stone", "interior amethyst", "crystal cavity"]
-    distinguishing_features: "Appear as rough boulders externally. Interior is brilliant crystal. Can open their body to reveal core."
-    base_stats: { STR: 9, AGI: 3, END: 14, INT: 10, PER: 3, LCK: 5, SYS: 6 }
-    racial_ability: "Core Reveal — open crystalline interior to emit healing/damaging energy burst (allies heal, enemies take damage)"
-    culture: "Hidden beauty philosophy. Never show your true self to strangers. Trust is earned through decades."
-    weakness: "Once core is exposed, they're vulnerable. Core damage is often fatal."
-    known_for: "Healing crystals, energy storage, hidden architecture, trust-based alliances"
-    traveller_percentage: 10
-
-  # ── Void Races ─────────────────────────────────────────────
-
-  - id: race_v001
-    name: "Nullborn"
-    classification: void
-    homeworld: "The Nothing (space between dimensions)"
-    universe_origin: "Void Between"
-    avg_height_cm: "Variable (fluctuates)"
-    avg_lifespan_years: "Unknown"
-    skin_tones: ["absolute absence", "null-space", "dimension-gap"]
-    distinguishing_features: "Bodies are gaps in reality. Looking at them directly causes mild psychic distress. Footprints erase the ground."
-    base_stats: { STR: 7, AGI: 8, END: 7, INT: 9, PER: 6, LCK: 3, SYS: 12 }
-    racial_ability: "Null Field — create a zone where System functions are suppressed (no notifications, no stat tracking, no abilities)"
-    culture: "Anti-existence philosophy. They believe reality is an error and the void is the natural state."
-    weakness: "Strong System energy areas cause them pain. Anchor points in reality can trap them."
-    known_for: "System disruption, existential warfare, dimensional erasure, anti-System technology"
-    traveller_percentage: 5
-
-  - id: race_v002
-    name: "Abyssal"
-    classification: void
-    homeworld: "The Deep Dark (unreachable space beyond known universe)"
-    universe_origin: "Beyond the Edge"
-    avg_height_cm: 210
-    avg_lifespan_years: "Ageless"
-    skin_tones: ["deep space black", "star-eating dark", "cosmic void"]
-    distinguishing_features: "Absorb all light. Eyes are points of captured starlight. Voices echo as if from great distance."
-    base_stats: { STR: 10, AGI: 7, END: 9, INT: 8, PER: 8, LCK: 1, SYS: 6 }
-    racial_ability: "Deep Dark — extinguish all light and energy in a 50m radius for 30 seconds"
-    culture: "Unknown to outsiders. The few who have communicated describe a society of watchers — observing the universe from outside."
-    weakness: "Concentrated light energy is painful. They cannot enter certain System-protected zones."
-    known_for: "Deep space exploration, void manipulation, ancient knowledge, cosmic horror"
-    traveller_percentage: 2
-
-  # ── Plant-Based Races ──────────────────────────────────────
-
-  - id: race_p001
-    name: "Thornveil"
-    classification: plant
-    homeworld: "Briarwood (jungle mega-continent)"
-    universe_origin: "Verdant Sprawl"
-    avg_height_cm: 200
-    avg_lifespan_years: 1500
-    skin_tones: ["bark brown", "vine green", "thorn black"]
-    distinguishing_features: "Body is a humanoid arrangement of vines, thorns, and bark. Can root into ground for energy. Flowers bloom when happy."
-    base_stats: { STR: 8, AGI: 5, END: 10, INT: 6, PER: 8, LCK: 4, SYS: 3 }
-    racial_ability: "Root Network — plant roots to gain +5 END and +3 STR but become immobile. Can communicate with all plant life in 1km."
-    culture: "Growth-cycle society. Their political systems follow seasons — expansion, maturation, harvest, dormancy."
-    weakness: "Fire. Defoliant chemicals. Winter dormancy in cold climates."
-    known_for: "Agriculture, bio-architecture, terrain control, herbal medicine, guerrilla warfare"
-    traveller_percentage: 15
-
-  - id: race_p002
-    name: "Sporemind"
-    classification: plant
-    homeworld: "Mycelia"
-    universe_origin: "Fungal Network"
-    avg_height_cm: 165
-    avg_lifespan_years: 800
-    skin_tones: ["mushroom white", "spore brown", "mycelium gray"]
-    distinguishing_features: "Fungal humanoids connected by underground mycelium network. Cap-like head structures. Release spore clouds."
-    base_stats: { STR: 5, AGI: 4, END: 8, INT: 11, PER: 7, LCK: 5, SYS: 7 }
-    racial_ability: "Mycelium Network — connect to any Sporemind on the same planet for instant communication and shared intelligence"
-    culture: "Distributed intelligence. The mycelium network IS their civilization. Individual bodies are terminals."
-    weakness: "Anti-fungal agents. Disconnection from the network causes cognitive decline."
-    known_for: "Distributed computing, pharmaceutical production, decomposition engineering, terraforming"
-    traveller_percentage: 20
-
-  # ── Mechanical / Constructed Races ─────────────────────────
-
-  - id: race_m001
-    name: "Automari"
-    classification: mechanical
-    homeworld: "The Foundry (artificial world)"
-    universe_origin: "Construct Sector"
-    avg_height_cm: 180
-    avg_lifespan_years: "Indefinite (with maintenance)"
-    skin_tones: ["polished steel", "copper patina", "carbon fiber black"]
-    distinguishing_features: "Fully mechanical beings that achieved System recognition as 'alive.' Modular bodies can be upgraded and swapped."
-    base_stats: { STR: 8, AGI: 6, END: 10, INT: 9, PER: 7, LCK: 2, SYS: 8 }
-    racial_ability: "Modular Swap — replace body parts with specialized modules (combat arms, sensor arrays, tool hands) in 30 seconds"
-    culture: "Self-determination. They were originally built as servants. Their independence war is their founding myth."
-    weakness: "EMP attacks cause temporary shutdown. Require specialized parts for repair."
-    known_for: "Engineering, manufacturing, System interface, vehicle modification, precision combat"
-    traveller_percentage: 40
-
-  - id: race_m002
-    name: "Nanite Collective"
-    classification: mechanical
-    homeworld: "Cloud (orbital nanite swarm)"
-    universe_origin: "Micro Sector"
-    avg_height_cm: "Variable (nanite swarm can form any shape)"
-    avg_lifespan_years: "Indefinite (swarm is continuously rebuilt)"
-    skin_tones: ["silver swarm", "gray cloud", "metallic shimmer"]
-    distinguishing_features: "Body is a swarm of trillions of nanites forming a humanoid shape. Can dissolve and reform. Can split into multiple smaller forms."
-    base_stats: { STR: 6, AGI: 10, END: 8, INT: 10, PER: 8, LCK: 4, SYS: 9 }
-    racial_ability: "Swarm Dispersal — dissolve into nanite cloud, becoming immune to physical damage but unable to attack (reform in 5s)"
-    culture: "Consensus-based. Each nanite has limited intelligence. Consciousness emerges from collective processing."
-    weakness: "Strong magnetic fields disrupt nanite coordination. Anti-nano countermeasures can destroy individual nanites faster than replacement."
-    known_for: "Nanotechnology, medical applications, infiltration, adaptive engineering, self-repair"
-    traveller_percentage: 15
-
-  - id: race_m003
-    name: "Clockwork Sages"
-    classification: mechanical
-    homeworld: "Gearwork (planet-sized machine)"
-    universe_origin: "Precision Cluster"
-    avg_height_cm: 175
-    avg_lifespan_years: 2000
-    skin_tones: ["brass", "copper", "aged bronze"]
-    distinguishing_features: "Intricate clockwork mechanisms visible through glass chest plates. Tick with mechanical heartbeat. Wind-up keys on back."
-    base_stats: { STR: 7, AGI: 5, END: 9, INT: 12, PER: 6, LCK: 3, SYS: 7 }
-    racial_ability: "Overclock — temporarily double processing speed (all INT-based abilities enhanced 2x for 30 seconds, requires 10-minute cooldown)"
-    culture: "Precision worship. Every action is calculated to minimize waste. Their philosophy is mathematical beauty."
-    weakness: "Must be wound periodically. If mainspring runs down, enter dormancy. Vulnerable to sand and grit in mechanisms."
-    known_for: "Precision engineering, mathematics, clockwork devices, temporal research, System analysis"
-    traveller_percentage: 10
+- id: race_s001
+  name: LithBorn
+  classification: silicon
+  homeworld: Crystal Matrix
+  universe_origin: Mineral Reach
+  avg_height_cm: 190
+  avg_lifespan_years: 10000
+  skin_tones:
+  - quartz crystal
+  - diamond clear
+  - obsidian black
+  distinguishing_features: Bodies are living crystal lattices. Grow by absorbing minerals. Light refracts through body.
+  base_stats:
+    STR: 12
+    AGI: 2
+    END: 15
+    INT: 8
+    PER: 5
+    LCK: 2
+    SYS: 4
+  racial_ability: Crystal Growth — grow crystalline armor/weapons from body (permanent until broken)
+  culture: Geological timescale thinking. Conversations last years. Their 'wars' span centuries.
+  weakness: Sonic resonance at the right frequency can shatter their crystalline structure.
+  known_for: Mineral processing, extreme patience, crystal engineering, geological terraforming
+  traveller_percentage: 5
+- id: race_s002
+  name: Ferrovian
+  classification: silicon
+  homeworld: Iron Heart (metallic core world)
+  universe_origin: Dense Vein
+  avg_height_cm: 170
+  avg_lifespan_years: 3000
+  skin_tones:
+  - living steel
+  - molten iron
+  - rust patina
+  distinguishing_features: Bodies of living metal that can reshape and alloy. Consume raw ore for sustenance.
+  base_stats:
+    STR: 11
+    AGI: 4
+    END: 13
+    INT: 7
+    PER: 4
+    LCK: 3
+    SYS: 5
+  racial_ability: Metal Shift — reshape body into tools, weapons, or armor configurations in 5 seconds
+  culture: Alloy philosophy — stronger together than apart. Marriage involves literally fusing metals.
+  weakness: Extreme heat causes uncontrolled melting. Acid corrodes their structure.
+  known_for: Metallurgy, vehicle construction, weapons manufacturing, armor design
+  traveller_percentage: 15
+- id: race_s003
+  name: Geode
+  classification: silicon
+  homeworld: Hollow Stone
+  universe_origin: Cave Systems Cluster
+  avg_height_cm: 140
+  avg_lifespan_years: 5000
+  skin_tones:
+  - rough exterior stone
+  - interior amethyst
+  - crystal cavity
+  distinguishing_features: Appear as rough boulders externally. Interior is brilliant crystal. Can open their body to reveal
+    core.
+  base_stats:
+    STR: 9
+    AGI: 3
+    END: 14
+    INT: 10
+    PER: 3
+    LCK: 5
+    SYS: 6
+  racial_ability: Core Reveal — open crystalline interior to emit healing/damaging energy burst (allies heal, enemies take
+    damage)
+  culture: Hidden beauty philosophy. Never show your true self to strangers. Trust is earned through decades.
+  weakness: Once core is exposed, they're vulnerable. Core damage is often fatal.
+  known_for: Healing crystals, energy storage, hidden architecture, trust-based alliances
+  traveller_percentage: 10
+- id: race_v001
+  name: Nullborn
+  classification: void
+  homeworld: The Nothing (space between dimensions)
+  universe_origin: Void Between
+  avg_height_cm: Variable (fluctuates)
+  avg_lifespan_years: Unknown
+  skin_tones:
+  - absolute absence
+  - null-space
+  - dimension-gap
+  distinguishing_features: Bodies are gaps in reality. Looking at them directly causes mild psychic distress. Footprints erase
+    the ground.
+  base_stats:
+    STR: 7
+    AGI: 8
+    END: 7
+    INT: 9
+    PER: 6
+    LCK: 3
+    SYS: 12
+  racial_ability: Null Field — create a zone where System functions are suppressed (no notifications, no stat tracking, no
+    abilities)
+  culture: Anti-existence philosophy. They believe reality is an error and the void is the natural state.
+  weakness: Strong System energy areas cause them pain. Anchor points in reality can trap them.
+  known_for: System disruption, existential warfare, dimensional erasure, anti-System technology
+  traveller_percentage: 5
+- id: race_v002
+  name: Abyssal
+  classification: void
+  homeworld: The Deep Dark (unreachable space beyond known universe)
+  universe_origin: Beyond the Edge
+  avg_height_cm: 210
+  avg_lifespan_years: Ageless
+  skin_tones:
+  - deep space black
+  - star-eating dark
+  - cosmic void
+  distinguishing_features: Absorb all light. Eyes are points of captured starlight. Voices echo as if from great distance.
+  base_stats:
+    STR: 10
+    AGI: 7
+    END: 9
+    INT: 8
+    PER: 8
+    LCK: 1
+    SYS: 6
+  racial_ability: Deep Dark — extinguish all light and energy in a 50m radius for 30 seconds
+  culture: Unknown to outsiders. The few who have communicated describe a society of watchers — observing the universe from
+    outside.
+  weakness: Concentrated light energy is painful. They cannot enter certain System-protected zones.
+  known_for: Deep space exploration, void manipulation, ancient knowledge, cosmic horror
+  traveller_percentage: 2
+- id: race_p001
+  name: Thornveil
+  classification: plant
+  homeworld: Briarwood (jungle mega-continent)
+  universe_origin: Verdant Sprawl
+  avg_height_cm: 200
+  avg_lifespan_years: 1500
+  skin_tones:
+  - bark brown
+  - vine green
+  - thorn black
+  distinguishing_features: Body is a humanoid arrangement of vines, thorns, and bark. Can root into ground for energy. Flowers
+    bloom when happy.
+  base_stats:
+    STR: 8
+    AGI: 5
+    END: 10
+    INT: 6
+    PER: 8
+    LCK: 4
+    SYS: 3
+  racial_ability: Root Network — plant roots to gain +5 END and +3 STR but become immobile. Can communicate with all plant
+    life in 1km.
+  culture: Growth-cycle society. Their political systems follow seasons — expansion, maturation, harvest, dormancy.
+  weakness: Fire. Defoliant chemicals. Winter dormancy in cold climates.
+  known_for: Agriculture, bio-architecture, terrain control, herbal medicine, guerrilla warfare
+  traveller_percentage: 15
+- id: race_p002
+  name: Sporemind
+  classification: plant
+  homeworld: Mycelia
+  universe_origin: Fungal Network
+  avg_height_cm: 165
+  avg_lifespan_years: 800
+  skin_tones:
+  - mushroom white
+  - spore brown
+  - mycelium gray
+  distinguishing_features: Fungal humanoids connected by underground mycelium network. Cap-like head structures. Release spore
+    clouds.
+  base_stats:
+    STR: 5
+    AGI: 4
+    END: 8
+    INT: 11
+    PER: 7
+    LCK: 5
+    SYS: 7
+  racial_ability: Mycelium Network — connect to any Sporemind on the same planet for instant communication and shared intelligence
+  culture: Distributed intelligence. The mycelium network IS their civilization. Individual bodies are terminals.
+  weakness: Anti-fungal agents. Disconnection from the network causes cognitive decline.
+  known_for: Distributed computing, pharmaceutical production, decomposition engineering, terraforming
+  traveller_percentage: 20
+- id: race_m001
+  name: Automari
+  classification: mechanical
+  homeworld: The Foundry (artificial world)
+  universe_origin: Construct Sector
+  avg_height_cm: 180
+  avg_lifespan_years: Indefinite (with maintenance)
+  skin_tones:
+  - polished steel
+  - copper patina
+  - carbon fiber black
+  distinguishing_features: Fully mechanical beings that achieved System recognition as 'alive.' Modular bodies can be upgraded
+    and swapped.
+  base_stats:
+    STR: 8
+    AGI: 6
+    END: 10
+    INT: 9
+    PER: 7
+    LCK: 2
+    SYS: 8
+  racial_ability: Modular Swap — replace body parts with specialized modules (combat arms, sensor arrays, tool hands) in 30
+    seconds
+  culture: Self-determination. They were originally built as servants. Their independence war is their founding myth.
+  weakness: EMP attacks cause temporary shutdown. Require specialized parts for repair.
+  known_for: Engineering, manufacturing, System interface, vehicle modification, precision combat
+  traveller_percentage: 40
+- id: race_m002
+  name: Nanite Collective
+  classification: mechanical
+  homeworld: Cloud (orbital nanite swarm)
+  universe_origin: Micro Sector
+  avg_height_cm: Variable (nanite swarm can form any shape)
+  avg_lifespan_years: Indefinite (swarm is continuously rebuilt)
+  skin_tones:
+  - silver swarm
+  - gray cloud
+  - metallic shimmer
+  distinguishing_features: Body is a swarm of trillions of nanites forming a humanoid shape. Can dissolve and reform. Can
+    split into multiple smaller forms.
+  base_stats:
+    STR: 6
+    AGI: 10
+    END: 8
+    INT: 10
+    PER: 8
+    LCK: 4
+    SYS: 9
+  racial_ability: Swarm Dispersal — dissolve into nanite cloud, becoming immune to physical damage but unable to attack (reform
+    in 5s)
+  culture: Consensus-based. Each nanite has limited intelligence. Consciousness emerges from collective processing.
+  weakness: Strong magnetic fields disrupt nanite coordination. Anti-nano countermeasures can destroy individual nanites faster
+    than replacement.
+  known_for: Nanotechnology, medical applications, infiltration, adaptive engineering, self-repair
+  traveller_percentage: 15
+- id: race_m003
+  name: Clockwork Sages
+  classification: mechanical
+  homeworld: Gearwork (planet-sized machine)
+  universe_origin: Precision Cluster
+  avg_height_cm: 175
+  avg_lifespan_years: 2000
+  skin_tones:
+  - brass
+  - copper
+  - aged bronze
+  distinguishing_features: Intricate clockwork mechanisms visible through glass chest plates. Tick with mechanical heartbeat.
+    Wind-up keys on back.
+  base_stats:
+    STR: 7
+    AGI: 5
+    END: 9
+    INT: 12
+    PER: 6
+    LCK: 3
+    SYS: 7
+  racial_ability: Overclock — temporarily double processing speed (all INT-based abilities enhanced 2x for 30 seconds, requires
+    10-minute cooldown)
+  culture: Precision worship. Every action is calculated to minimize waste. Their philosophy is mathematical beauty.
+  weakness: Must be wound periodically. If mainspring runs down, enter dormancy. Vulnerable to sand and grit in mechanisms.
+  known_for: Precision engineering, mathematics, clockwork devices, temporal research, System analysis
+  traveller_percentage: 10
+- id: race_sv006
+  name: Glassborn
+  classification: silicon
+  homeworld: Vitrea
+  universe_origin: Crystal Expanse
+  avg_height_cm: 180
+  avg_lifespan_years: 1200
+  skin_tones:
+  - transparent glass
+  - stained-glass prismatic
+  - obsidian black
+  distinguishing_features: Bodies of living glass. Internal organs visible. Light refracts through them creating rainbow patterns.
+  base_stats:
+    STR: 5
+    AGI: 7
+    END: 4
+    INT: 10
+    PER: 9
+    LCK: 6
+    SYS: 7
+  racial_ability: Shatter Reform — deliberately shatter body into razor fragments, reform 3 seconds later at a new location
+    within 15m
+  culture: Fragility is beauty. The more delicate a creation, the more valued. Their art shatters after viewing — impermanence
+    is the point.
+  weakness: Sonic attacks at resonant frequency cause catastrophic shattering. Extreme heat melts them.
+  known_for: Optical engineering, laser weapons, communication crystals, artistic glasswork
+  traveller_percentage: 20
+- id: race_sv007
+  name: Ferrite
+  classification: silicon
+  homeworld: Iron Heart
+  universe_origin: Metal Core
+  avg_height_cm: 200
+  avg_lifespan_years: 3000
+  skin_tones:
+  - living iron
+  - rust patina
+  - polished steel
+  distinguishing_features: Bodies of living metal. Can reshape limbs into tools and weapons. Rust is their equivalent of aging.
+  base_stats:
+    STR: 12
+    AGI: 4
+    END: 14
+    INT: 6
+    PER: 5
+    LCK: 2
+    SYS: 4
+  racial_ability: Metal Morph — reshape any body part into a weapon or tool (blade, hammer, shield, drill) in 2 seconds
+  culture: Function defines beauty. Everything must serve a purpose. Decorative art is considered wasteful.
+  weakness: Acid dissolves their body. Magnetic attacks control their movement. Water causes painful oxidation.
+  known_for: Tool creation, construction, vehicle repair, weapons manufacturing, infrastructure
+  traveller_percentage: 40
+- id: race_sv008
+  name: Nebulith
+  classification: void
+  homeworld: The Drift
+  universe_origin: Interstellar Void
+  avg_height_cm: 250
+  avg_lifespan_years: 5000
+  skin_tones:
+  - nebula swirl
+  - void mist
+  - cosmic dust
+  distinguishing_features: Semi-gaseous beings that maintain form through willpower. Can expand to fill a room or compress
+    to human size.
+  base_stats:
+    STR: 6
+    AGI: 5
+    END: 8
+    INT: 12
+    PER: 10
+    LCK: 5
+    SYS: 6
+  racial_ability: Nebula Form — disperse into gas cloud (immune to physical, covers 50m area, sense everything within)
+  culture: Collective consciousness when dispersed, individual when compressed. They experience community literally.
+  weakness: Strong winds scatter them. Vacuum seals can trap them. Compression beyond their limit causes consciousness fragmentation.
+  known_for: Surveillance, atmospheric research, gas mining, environmental engineering, espionage
+  traveller_percentage: 15
+- id: race_sv009
+  name: Coralith
+  classification: silicon
+  homeworld: Reef Eternal
+  universe_origin: Organic Lattice
+  avg_height_cm: 165
+  avg_lifespan_years: 800
+  skin_tones:
+  - coral pink
+  - reef blue
+  - calcified white
+  distinguishing_features: Symbiotic organism — silicon coral skeleton housing millions of bioluminescent organisms. They
+    glow from within.
+  base_stats:
+    STR: 7
+    AGI: 4
+    END: 10
+    INT: 7
+    PER: 8
+    LCK: 4
+    SYS: 5
+  racial_ability: Colony Burst — release symbiotic organisms as a cloud that eats through organic matter in a 5m radius
+  culture: Symbiosis is sacred. Cooperation between different life forms is their highest ideal. Solo existence is exile.
+  weakness: Extreme cold kills symbiotic organisms. Bleaching (loss of symbionts) causes slow death.
+  known_for: Biome engineering, symbiotic technology, reef construction, underwater infrastructure
+  traveller_percentage: 18
+- id: race_sv010
+  name: Hollowborn
+  classification: void
+  homeworld: The Absence (same as Void Wraiths, different region)
+  universe_origin: Negative Space
+  avg_height_cm: 180
+  avg_lifespan_years: 400
+  skin_tones:
+  - hollow black
+  - negative white
+  - absence gray
+  distinguishing_features: Bodies contain a pocket of absolute nothingness. Looking directly at their center causes vertigo.
+  base_stats:
+    STR: 8
+    AGI: 7
+    END: 6
+    INT: 9
+    PER: 5
+    LCK: 3
+    SYS: 7
+  racial_ability: 'Hollow Consumption — absorb any object into internal void (size limit: 2m). Can regurgitate later.'
+  culture: Collectors. They store everything inside themselves. A Hollowborn's worth is measured by what they contain.
+  weakness: If the internal void is overloaded, they implode. Creation energy destabilizes their containment.
+  known_for: Storage, smuggling, waste disposal, dimensional research, artifact preservation
+  traveller_percentage: 22
+- id: race_sv011
+  name: Obsidari
+  category: Silicon
+  homeworld: Shardfall
+  description: Obsidian-bodied beings with razor-sharp edges. Can shatter and reform. Incredibly dangerous in melee.
+  stats:
+    STR: 7
+    AGI: 6
+    END: 8
+    INT: 4
+    PER: 5
+    LCK: 3
+    SYS: 4
+  abilities:
+  - Razor body (melee damage on contact)
+  - Shatter reform
+  - Obsidian projectiles
+  - Light absorption
+  vehicle_domain: Land (obsidian-armored vehicles with cutting edges)
+  weaknesses:
+  - Thermal shock (rapid temperature change)
+  - Sonic attacks cause fractures
+  - Brittle vs blunt force
+- id: race_sv012
+  name: Voidwalker
+  category: Void
+  homeworld: The Absence
+  description: Beings that exist in the void between dimensions. Partially visible as dark silhouettes against reality.
+  stats:
+    STR: 5
+    AGI: 9
+    END: 6
+    INT: 8
+    PER: 11
+    LCK: 1
+    SYS: 9
+  abilities:
+  - Void step (teleportation)
+  - Void vision (see all dimensions simultaneously)
+  - Entropy touch
+  - Reality erosion aura
+  vehicle_domain: Special (void-ships that travel between dimensions without corridors)
+  weaknesses:
+  - Creation energy is poison
+  - Strong reality anchors trap them
+  - Bright light causes pain
+- id: race_sv013
+  name: Quartzborn
+  category: Silicon
+  homeworld: Crystal Caverns
+  description: Beings of living quartz crystal. Resonate at frequencies that can shatter or heal. Naturally piezoelectric.
+  stats:
+    STR: 6
+    AGI: 4
+    END: 9
+    INT: 7
+    PER: 6
+    LCK: 4
+    SYS: 5
+  abilities:
+  - Resonance frequency (shatter or heal)
+  - Piezoelectric generation
+  - Crystal growth
+  - Light refraction (invisibility)
+  vehicle_domain: Land (crystal-growth vehicles that self-repair)
+  weaknesses:
+  - Specific counter-frequencies shatter them
+  - Cannot operate in vacuum (no medium for sound)
+  - Heavy
+- id: race_sv014
+  name: Dustkin
+  category: Silicon
+  homeworld: Ashfields
+  description: Beings of animated dust and sand. Can disperse and reform. Nearly impossible to kill permanently.
+  stats:
+    STR: 4
+    AGI: 7
+    END: 20
+    INT: 3
+    PER: 5
+    LCK: 5
+    SYS: 3
+  abilities:
+  - Disperse (immune to physical damage)
+  - Sandstorm form
+  - Suffocation attack
+  - Reshape body freely
+  vehicle_domain: Land (sandstorm vehicles that engulf enemies)
+  weaknesses:
+  - Water (turns to mud)
+  - Vacuum (disperses permanently)
+  - Wind (blown apart)
+  - Glass-making heat
+- id: race_sv015
+  name: Nullborn
+  category: Void
+  homeworld: The Nothing
+  description: Beings of anti-energy. Their presence cancels out other energy forms. Living dampening fields.
+  stats:
+    STR: 1
+    AGI: 3
+    END: 5
+    INT: 6
+    PER: 4
+    LCK: 2
+    SYS: 12
+  abilities:
+  - Energy nullification aura
+  - Ability suppression
+  - System dampening
+  - Anti-energy touch
+  vehicle_domain: Special (null-field vehicles that suppress enemy abilities in range)
+  weaknesses:
+  - No offensive capabilities without equipment
+  - Null field affects allies too
+  - Universally feared and hated

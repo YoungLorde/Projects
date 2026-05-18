@@ -1,163 +1,367 @@
-# Reptilian & Scaled Races Database
-
 races:
-
-  - id: race_r001
-    name: "Saurath"
-    classification: reptilian
-    homeworld: "Sauraxis"
-    universe_origin: "Primordial Belt"
-    avg_height_cm: 220
-    avg_lifespan_years: 500
-    skin_tones: ["emerald scale", "obsidian scale", "gold scale"]
-    distinguishing_features: "Full body scales, heat-sensing pit organs, venomous bite, prehensile tail"
-    base_stats: { STR: 10, AGI: 7, END: 9, INT: 6, PER: 8, LCK: 3, SYS: 2 }
-    racial_ability: "Predator Focus — lock onto a single target, gaining +5 PER and +3 AGI against them for 60s"
-    culture: "Apex predator society. Hunting defines social hierarchy. The greatest hunters become Primal Lords."
-    weakness: "Cold-blooded — extreme cold causes torpor. Rely on external heat sources."
-    known_for: "Hunting, ambush tactics, biological warfare, territorial expansion"
-    traveller_percentage: 55
-
-  - id: race_r002
-    name: "Draconith"
-    classification: reptilian
-    homeworld: "Pyraxis"
-    universe_origin: "Dragon Spine Nebula"
-    avg_height_cm: 250
-    avg_lifespan_years: 2000
-    skin_tones: ["crimson scale", "sapphire scale", "platinum scale"]
-    distinguishing_features: "Vestigial wing bones on back, fire-producing glands in throat, horned skull crest, slitted golden eyes"
-    base_stats: { STR: 12, AGI: 5, END: 11, INT: 8, PER: 6, LCK: 4, SYS: 4 }
-    racial_ability: "Dragon's Breath — exhale superheated plasma in a 15m cone (30s cooldown)"
-    culture: "Hoard-culture. Accumulate power, wealth, and territory. Elder Draconith rule from treasure-vaults."
-    weakness: "Arrogant and territorial. Internal conflicts prevent unified action."
-    known_for: "Siege warfare, treasure accumulation, fire engineering, intimidation"
-    traveller_percentage: 40
-
-  - id: race_r003
-    name: "Tessari"
-    classification: reptilian
-    homeworld: "Tessara Archipelago (water world)"
-    universe_origin: "Coral Expanse"
-    avg_height_cm: 175
-    avg_lifespan_years: 400
-    skin_tones: ["coral pink scale", "reef blue scale", "sand yellow scale"]
-    distinguishing_features: "Amphibious, chromatophore skin that changes color/pattern, fin crests, dual breathing systems"
-    base_stats: { STR: 6, AGI: 9, END: 7, INT: 7, PER: 8, LCK: 5, SYS: 4 }
-    racial_ability: "Chromatic Camouflage — become virtually invisible by matching surroundings perfectly"
-    culture: "Reef-builders. Create living coral cities. Value subtlety over force."
-    weakness: "Dehydrate quickly in arid environments. Scales crack without moisture."
-    known_for: "Espionage, underwater construction, camouflage technology, aquaculture"
-    traveller_percentage: 30
-
-  - id: race_r004
-    name: "Basilisk Kin"
-    classification: reptilian
-    homeworld: "Petros"
-    universe_origin: "Stone Wastes"
-    avg_height_cm: 200
-    avg_lifespan_years: 800
-    skin_tones: ["stone gray scale", "petrified brown", "mineral black"]
-    distinguishing_features: "Eyes emit a petrification field, stone-like armored hide, slow but devastating"
-    base_stats: { STR: 11, AGI: 3, END: 13, INT: 5, PER: 7, LCK: 2, SYS: 3 }
-    racial_ability: "Petrifying Gaze — target within 10m must resist or be slowed by 80% for 15 seconds"
-    culture: "Statue-garden society. Petrified enemies are displayed as art. Silence is respected."
-    weakness: "Reflective surfaces can redirect their own gaze. Extremely slow."
-    known_for: "Defensive warfare, fortification, stone-craft, intimidation"
-    traveller_percentage: 20
-
-  - id: race_r005
-    name: "Vipermaw"
-    classification: reptilian
-    homeworld: "Venomhollow"
-    universe_origin: "Toxic Drift"
-    avg_height_cm: 180
-    avg_lifespan_years: 200
-    skin_tones: ["venom green scale", "toxic purple", "warning yellow"]
-    distinguishing_features: "Expandable jaw, multiple venom sacs producing different toxins, forked tongue sensor array"
-    base_stats: { STR: 6, AGI: 10, END: 6, INT: 7, PER: 9, LCK: 4, SYS: 3 }
-    racial_ability: "Adaptive Venom — produce 7 different venoms (paralytic, necrotic, hallucinogenic, corrosive, soporific, neural, cardiac)"
-    culture: "Pharmacological society. Every citizen is a chemist. Poisons and medicines are the same art."
-    weakness: "Own immune system is fragile to non-biological toxins (synthetic chemicals)"
-    known_for: "Pharmaceutical industry, assassination, medicine, chemical warfare"
-    traveller_percentage: 45
-
-  - id: race_r006
-    name: "Krokodai"
-    classification: reptilian
-    homeworld: "Marshworld Delta"
-    universe_origin: "Swamp Nebula"
-    avg_height_cm: 240
-    avg_lifespan_years: 600
-    skin_tones: ["swamp green", "mud brown", "riverbed black"]
-    distinguishing_features: "Massive jaw strength (strongest bite force of any known race), armored back ridges, patient predators"
-    base_stats: { STR: 14, AGI: 3, END: 12, INT: 4, PER: 6, LCK: 3, SYS: 2 }
-    racial_ability: "Death Roll — grapple attack that disorients and deals massive damage over 5 seconds"
-    culture: "Patient ambush predators elevated to philosophy. Their meditation practices last decades."
-    weakness: "Predictable attack patterns. Vulnerable when jaw is held shut."
-    known_for: "Ambush warfare, patience, swamp terraforming, jaw engineering"
-    traveller_percentage: 35
-
-  - id: race_r007
-    name: "Chamaelon"
-    classification: reptilian
-    homeworld: "Shifting Sands"
-    universe_origin: "Mirage Fields"
-    avg_height_cm: 165
-    avg_lifespan_years: 300
-    skin_tones: ["any — full chromatic shift capability"]
-    distinguishing_features: "Independent eye movement (360° vision), projectile tongue (5m range), full body color/texture shift"
-    base_stats: { STR: 4, AGI: 8, END: 5, INT: 8, PER: 12, LCK: 5, SYS: 3 }
-    racial_ability: "Perfect Mimicry — can perfectly replicate the appearance of any humanoid race for up to 4 hours"
-    culture: "Identity is fluid. The Chamaelon see fixed identity as a prison. They change names, roles, and appearances constantly."
-    weakness: "Emotional extremes break camouflage. Thermal imaging defeats mimicry."
-    known_for: "Espionage, identity theft, infiltration, acting, diplomacy"
-    traveller_percentage: 45
-
-  - id: race_r008
-    name: "Thornsback"
-    classification: reptilian
-    homeworld: "Briar Prime"
-    universe_origin: "Thorn Cluster"
-    avg_height_cm: 190
-    avg_lifespan_years: 350
-    skin_tones: ["thorn brown", "bark green", "spine gray"]
-    distinguishing_features: "Retractable bone spines covering back and forearms, can launch spines as projectiles"
-    base_stats: { STR: 8, AGI: 6, END: 9, INT: 5, PER: 7, LCK: 4, SYS: 3 }
-    racial_ability: "Spine Volley — launch a barrage of 12 bone spines in a 120° arc (regrow in 1 hour)"
-    culture: "Defensive warriors. Their architecture is covered in spines. Personal space is sacred."
-    weakness: "Spine regrowth requires calcium-rich diet. Malnutrition leaves them defenseless."
-    known_for: "Defensive fortification, ranged combat, bone engineering, perimeter security"
-    traveller_percentage: 40
-
-  - id: race_r009
-    name: "Geckling"
-    classification: reptilian
-    homeworld: "Adhesion (vertical cliff world)"
-    universe_origin: "Vertical Expanse"
-    avg_height_cm: 140
-    avg_lifespan_years: 150
-    skin_tones: ["gecko green", "wall brown", "ceiling gray"]
-    distinguishing_features: "Adhesive pads on all digits and toes, wall/ceiling traversal, detachable tail for distraction"
-    base_stats: { STR: 4, AGI: 13, END: 5, INT: 6, PER: 8, LCK: 7, SYS: 3 }
-    racial_ability: "Wall Runner — traverse any surface at full speed regardless of orientation"
-    culture: "Vertical society. Status is measured by height of dwelling. Ground-level is for outcasts."
-    weakness: "Adhesive pads fail on frictionless surfaces. Small stature limits carrying capacity."
-    known_for: "Reconnaissance, urban warfare, climbing, theft, vertical construction"
-    traveller_percentage: 55
-
-  - id: race_r010
-    name: "Wyrmsage"
-    classification: reptilian
-    homeworld: "Oracle Caverns"
-    universe_origin: "Deep Thought Sector"
-    avg_height_cm: 160
-    avg_lifespan_years: 3000
-    skin_tones: ["ancient gold", "wisdom silver", "prophecy white"]
-    distinguishing_features: "Serpentine lower body (no legs), multiple sets of arms (2-6), enormous cranium housing enhanced brain"
-    base_stats: { STR: 3, AGI: 4, END: 5, INT: 14, PER: 9, LCK: 6, SYS: 8 }
-    racial_ability: "Deep Sight — analyze any object, creature, or System element to reveal hidden properties"
-    culture: "Scholar-seers. Their libraries contain knowledge from before recorded history. They trade wisdom, never weapons."
-    weakness: "No legs — rely on serpentine locomotion or assistive vehicles. Physically helpless in combat."
-    known_for: "Prophecy, System analysis, knowledge archiving, deep research, counsel"
-    traveller_percentage: 10
+- id: race_r001
+  name: Saurath
+  classification: reptilian
+  homeworld: Sauraxis
+  universe_origin: Primordial Belt
+  avg_height_cm: 220
+  avg_lifespan_years: 500
+  skin_tones:
+  - emerald scale
+  - obsidian scale
+  - gold scale
+  distinguishing_features: Full body scales, heat-sensing pit organs, venomous bite, prehensile tail
+  base_stats:
+    STR: 10
+    AGI: 7
+    END: 9
+    INT: 6
+    PER: 8
+    LCK: 3
+    SYS: 2
+  racial_ability: Predator Focus — lock onto a single target, gaining +5 PER and +3 AGI against them for 60s
+  culture: Apex predator society. Hunting defines social hierarchy. The greatest hunters become Primal Lords.
+  weakness: Cold-blooded — extreme cold causes torpor. Rely on external heat sources.
+  known_for: Hunting, ambush tactics, biological warfare, territorial expansion
+  traveller_percentage: 55
+- id: race_r002
+  name: Draconith
+  classification: reptilian
+  homeworld: Pyraxis
+  universe_origin: Dragon Spine Nebula
+  avg_height_cm: 250
+  avg_lifespan_years: 2000
+  skin_tones:
+  - crimson scale
+  - sapphire scale
+  - platinum scale
+  distinguishing_features: Vestigial wing bones on back, fire-producing glands in throat, horned skull crest, slitted golden
+    eyes
+  base_stats:
+    STR: 12
+    AGI: 5
+    END: 11
+    INT: 8
+    PER: 6
+    LCK: 4
+    SYS: 4
+  racial_ability: Dragon's Breath — exhale superheated plasma in a 15m cone (30s cooldown)
+  culture: Hoard-culture. Accumulate power, wealth, and territory. Elder Draconith rule from treasure-vaults.
+  weakness: Arrogant and territorial. Internal conflicts prevent unified action.
+  known_for: Siege warfare, treasure accumulation, fire engineering, intimidation
+  traveller_percentage: 40
+- id: race_r003
+  name: Tessari
+  classification: reptilian
+  homeworld: Tessara Archipelago (water world)
+  universe_origin: Coral Expanse
+  avg_height_cm: 175
+  avg_lifespan_years: 400
+  skin_tones:
+  - coral pink scale
+  - reef blue scale
+  - sand yellow scale
+  distinguishing_features: Amphibious, chromatophore skin that changes color/pattern, fin crests, dual breathing systems
+  base_stats:
+    STR: 6
+    AGI: 9
+    END: 7
+    INT: 7
+    PER: 8
+    LCK: 5
+    SYS: 4
+  racial_ability: Chromatic Camouflage — become virtually invisible by matching surroundings perfectly
+  culture: Reef-builders. Create living coral cities. Value subtlety over force.
+  weakness: Dehydrate quickly in arid environments. Scales crack without moisture.
+  known_for: Espionage, underwater construction, camouflage technology, aquaculture
+  traveller_percentage: 30
+- id: race_r004
+  name: Basilisk Kin
+  classification: reptilian
+  homeworld: Petros
+  universe_origin: Stone Wastes
+  avg_height_cm: 200
+  avg_lifespan_years: 800
+  skin_tones:
+  - stone gray scale
+  - petrified brown
+  - mineral black
+  distinguishing_features: Eyes emit a petrification field, stone-like armored hide, slow but devastating
+  base_stats:
+    STR: 11
+    AGI: 3
+    END: 13
+    INT: 5
+    PER: 7
+    LCK: 2
+    SYS: 3
+  racial_ability: Petrifying Gaze — target within 10m must resist or be slowed by 80% for 15 seconds
+  culture: Statue-garden society. Petrified enemies are displayed as art. Silence is respected.
+  weakness: Reflective surfaces can redirect their own gaze. Extremely slow.
+  known_for: Defensive warfare, fortification, stone-craft, intimidation
+  traveller_percentage: 20
+- id: race_r005
+  name: Vipermaw
+  classification: reptilian
+  homeworld: Venomhollow
+  universe_origin: Toxic Drift
+  avg_height_cm: 180
+  avg_lifespan_years: 200
+  skin_tones:
+  - venom green scale
+  - toxic purple
+  - warning yellow
+  distinguishing_features: Expandable jaw, multiple venom sacs producing different toxins, forked tongue sensor array
+  base_stats:
+    STR: 6
+    AGI: 10
+    END: 6
+    INT: 7
+    PER: 9
+    LCK: 4
+    SYS: 3
+  racial_ability: Adaptive Venom — produce 7 different venoms (paralytic, necrotic, hallucinogenic, corrosive, soporific,
+    neural, cardiac)
+  culture: Pharmacological society. Every citizen is a chemist. Poisons and medicines are the same art.
+  weakness: Own immune system is fragile to non-biological toxins (synthetic chemicals)
+  known_for: Pharmaceutical industry, assassination, medicine, chemical warfare
+  traveller_percentage: 45
+- id: race_r006
+  name: Krokodai
+  classification: reptilian
+  homeworld: Marshworld Delta
+  universe_origin: Swamp Nebula
+  avg_height_cm: 240
+  avg_lifespan_years: 600
+  skin_tones:
+  - swamp green
+  - mud brown
+  - riverbed black
+  distinguishing_features: Massive jaw strength (strongest bite force of any known race), armored back ridges, patient predators
+  base_stats:
+    STR: 14
+    AGI: 3
+    END: 12
+    INT: 4
+    PER: 6
+    LCK: 3
+    SYS: 2
+  racial_ability: Death Roll — grapple attack that disorients and deals massive damage over 5 seconds
+  culture: Patient ambush predators elevated to philosophy. Their meditation practices last decades.
+  weakness: Predictable attack patterns. Vulnerable when jaw is held shut.
+  known_for: Ambush warfare, patience, swamp terraforming, jaw engineering
+  traveller_percentage: 35
+- id: race_r007
+  name: Chamaelon
+  classification: reptilian
+  homeworld: Shifting Sands
+  universe_origin: Mirage Fields
+  avg_height_cm: 165
+  avg_lifespan_years: 300
+  skin_tones:
+  - any — full chromatic shift capability
+  distinguishing_features: Independent eye movement (360° vision), projectile tongue (5m range), full body color/texture shift
+  base_stats:
+    STR: 4
+    AGI: 8
+    END: 5
+    INT: 8
+    PER: 12
+    LCK: 5
+    SYS: 3
+  racial_ability: Perfect Mimicry — can perfectly replicate the appearance of any humanoid race for up to 4 hours
+  culture: Identity is fluid. The Chamaelon see fixed identity as a prison. They change names, roles, and appearances constantly.
+  weakness: Emotional extremes break camouflage. Thermal imaging defeats mimicry.
+  known_for: Espionage, identity theft, infiltration, acting, diplomacy
+  traveller_percentage: 45
+- id: race_r008
+  name: Thornsback
+  classification: reptilian
+  homeworld: Briar Prime
+  universe_origin: Thorn Cluster
+  avg_height_cm: 190
+  avg_lifespan_years: 350
+  skin_tones:
+  - thorn brown
+  - bark green
+  - spine gray
+  distinguishing_features: Retractable bone spines covering back and forearms, can launch spines as projectiles
+  base_stats:
+    STR: 8
+    AGI: 6
+    END: 9
+    INT: 5
+    PER: 7
+    LCK: 4
+    SYS: 3
+  racial_ability: Spine Volley — launch a barrage of 12 bone spines in a 120° arc (regrow in 1 hour)
+  culture: Defensive warriors. Their architecture is covered in spines. Personal space is sacred.
+  weakness: Spine regrowth requires calcium-rich diet. Malnutrition leaves them defenseless.
+  known_for: Defensive fortification, ranged combat, bone engineering, perimeter security
+  traveller_percentage: 40
+- id: race_r009
+  name: Geckling
+  classification: reptilian
+  homeworld: Adhesion (vertical cliff world)
+  universe_origin: Vertical Expanse
+  avg_height_cm: 140
+  avg_lifespan_years: 150
+  skin_tones:
+  - gecko green
+  - wall brown
+  - ceiling gray
+  distinguishing_features: Adhesive pads on all digits and toes, wall/ceiling traversal, detachable tail for distraction
+  base_stats:
+    STR: 4
+    AGI: 13
+    END: 5
+    INT: 6
+    PER: 8
+    LCK: 7
+    SYS: 3
+  racial_ability: Wall Runner — traverse any surface at full speed regardless of orientation
+  culture: Vertical society. Status is measured by height of dwelling. Ground-level is for outcasts.
+  weakness: Adhesive pads fail on frictionless surfaces. Small stature limits carrying capacity.
+  known_for: Reconnaissance, urban warfare, climbing, theft, vertical construction
+  traveller_percentage: 55
+- id: race_r010
+  name: Wyrmsage
+  classification: reptilian
+  homeworld: Oracle Caverns
+  universe_origin: Deep Thought Sector
+  avg_height_cm: 160
+  avg_lifespan_years: 3000
+  skin_tones:
+  - ancient gold
+  - wisdom silver
+  - prophecy white
+  distinguishing_features: Serpentine lower body (no legs), multiple sets of arms (2-6), enormous cranium housing enhanced
+    brain
+  base_stats:
+    STR: 3
+    AGI: 4
+    END: 5
+    INT: 14
+    PER: 9
+    LCK: 6
+    SYS: 8
+  racial_ability: Deep Sight — analyze any object, creature, or System element to reveal hidden properties
+  culture: Scholar-seers. Their libraries contain knowledge from before recorded history. They trade wisdom, never weapons.
+  weakness: No legs — rely on serpentine locomotion or assistive vehicles. Physically helpless in combat.
+  known_for: Prophecy, System analysis, knowledge archiving, deep research, counsel
+  traveller_percentage: 10
+- id: race_r011
+  name: Komondri
+  category: Reptilian
+  homeworld: Dreadmarsh
+  description: Komodo dragon-like apex predators. Patient hunters with bacteria-laden bites that cause system infections.
+  stats:
+    STR: 8
+    AGI: 3
+    END: 9
+    INT: 4
+    PER: 7
+    LCK: 2
+    SYS: 3
+  abilities:
+  - Bacterial bite (progressive damage over hours)
+  - Thermal tracking
+  - Ambush patience (can wait motionless for days)
+  vehicle_domain: Land (heavy assault crawlers)
+  culture: Predator worship. The patient hunter is their ideal. They never rush, never panic, never retreat.
+  weaknesses:
+  - Extremely slow
+  - Cold-blooded (cold environments debilitate)
+  - Limited social skills
+- id: race_r012
+  name: Geckari
+  category: Reptilian
+  homeworld: Verticalis
+  description: Gecko-like race that can adhere to any surface. Masters of stealth and infiltration.
+  stats:
+    STR: 3
+    AGI: 9
+    END: 4
+    INT: 6
+    PER: 8
+    LCK: 5
+    SYS: 4
+  abilities:
+  - Surface adhesion (walk on any surface)
+  - Optical camouflage
+  - Tail detachment (decoy)
+  vehicle_domain: Land (climbing vehicles that scale any terrain)
+  culture: Spy networks are their primary export. Every Geckari settlement is an intelligence hub.
+  weaknesses:
+  - Fragile
+  - Cannot operate in extreme cold
+  - Adhesion fails on frictionless surfaces
+- id: race_r013
+  name: Turthari
+  category: Reptilian
+  homeworld: Shellhaven
+  description: Turtle-like race with near-impenetrable natural armor. Extremely long-lived (thousands of years).
+  stats:
+    STR: 6
+    AGI: 1
+    END: 12
+    INT: 8
+    PER: 4
+    LCK: 3
+    SYS: 6
+  abilities:
+  - Natural armor (Tier 3 equivalent)
+  - Shell retreat (90% damage reduction)
+  - Longevity (3000+ year lifespan)
+  vehicle_domain: Navy (mobile fortress ships)
+  culture: Wisdom through age. Their elders are living libraries. They never forget anything they've experienced.
+  weaknesses:
+  - Incredibly slow
+  - Vulnerable when flipped
+  - Take decades to make decisions
+- id: race_r014
+  name: Iguanari
+  category: Reptilian
+  homeworld: Solrest
+  description: Iguana-like race that absorbs solar energy. Can go weeks without food if they have sunlight.
+  stats:
+    STR: 5
+    AGI: 5
+    END: 7
+    INT: 5
+    PER: 6
+    LCK: 4
+    SYS: 4
+  abilities:
+  - Solar absorption (heal and energize in sunlight)
+  - Tail whip (powerful melee)
+  - Color change (mood-based camouflage)
+  vehicle_domain: Land (solar-powered cruisers)
+  culture: Sun worshippers. Their cities are designed to maximize sun exposure. Underground is taboo.
+  weaknesses:
+  - Powerless in darkness
+  - Cold-blooded
+  - Depressed in overcast conditions
+- id: race_r015
+  name: Pterodari
+  category: Reptilian
+  homeworld: Skyreach
+  description: Pterodactyl-like race with massive wingspans. Rulers of the upper atmosphere on their homeworld.
+  stats:
+    STR: 6
+    AGI: 8
+    END: 5
+    INT: 5
+    PER: 9
+    LCK: 3
+    SYS: 3
+  abilities:
+  - True flight (no vehicle needed in atmosphere)
+  - Sonic dive (supersonic attack dive)
+  - Wind manipulation
+  vehicle_domain: Air (high-altitude bombers)
+  culture: Aerial hierarchies. Higher altitude = higher status. Their leaders live in floating cities.
+  weaknesses:
+  - Claustrophobic
+  - Wings vulnerable to damage
+  - Cannot fight effectively on ground

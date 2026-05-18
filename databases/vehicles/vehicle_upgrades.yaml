@@ -1,561 +1,1239 @@
----
 category: vehicle_upgrades
-description: >
-  Comprehensive database of vehicle upgrades — both external (combat, mobility,
-  defense) and internal (living spaces, facilities, production). Vehicles in the
-  RP Conversion universe are mobile homes, bases, and fortresses. Internal upgrades
-  are what transform a vehicle from transportation into a self-sustaining world.
+description: 'Comprehensive database of vehicle upgrades — both external (combat, mobility, defense) and internal (living
+  spaces, facilities, production). Vehicles in the RP Conversion universe are mobile homes, bases, and fortresses. Internal
+  upgrades are what transform a vehicle from transportation into a self-sustaining world.
 
-# ============================================
-# EXTERNAL UPGRADES
-# ============================================
+  '
 external_upgrades:
   armor:
-    - id: VU-E001
-      name: "Basic Hull Reinforcement"
-      tier_requirement: 0
-      cost: "5,000 RP"
-      upgrade_slots: 1
-      description: >
-        Reinforce the vehicle's exterior with System-enhanced plating.
-        Increases hull durability by 25%. The plating bonds with the
-        existing structure, adding minimal weight while significantly
-        improving impact resistance. Visible as a subtle metallic sheen.
-      scaling: "Each additional level adds 15% durability."
+  - id: VU-E001
+    name: Basic Hull Reinforcement
+    tier_requirement: 0
+    cost: 5,000 RP
+    upgrade_slots: 1
+    description: 'Reinforce the vehicle''s exterior with System-enhanced plating. Increases hull durability by 25%. The plating
+      bonds with the existing structure, adding minimal weight while significantly improving impact resistance. Visible as
+      a subtle metallic sheen.
 
-    - id: VU-E002
-      name: "Reactive Armor"
-      tier_requirement: 2
-      cost: "50,000 RP"
-      upgrade_slots: 2
-      description: >
-        Armor that responds to impacts by distributing force across the
-        entire hull. On hit, the armor briefly flashes with System energy
-        as it redirects kinetic energy. Reduces physical damage by 40%.
-        Self-repairs minor damage over 24 hours.
-      scaling: "Higher tiers increase damage reduction and self-repair speed."
+      '
+    scaling: Each additional level adds 15% durability.
+  - id: VU-E002
+    name: Reactive Armor
+    tier_requirement: 2
+    cost: 50,000 RP
+    upgrade_slots: 2
+    description: 'Armor that responds to impacts by distributing force across the entire hull. On hit, the armor briefly flashes
+      with System energy as it redirects kinetic energy. Reduces physical damage by 40%. Self-repairs minor damage over 24
+      hours.
 
-    - id: VU-E003
-      name: "Energy Shield Generator"
-      tier_requirement: 4
-      cost: "500,000 RP"
-      upgrade_slots: 3
-      description: >
-        Projects a System-energy shield around the vehicle. The shield
-        absorbs incoming damage up to its capacity, then must recharge.
-        Shield capacity: 500% of base hull HP. Recharge: 10% per minute
-        when not under fire. Visible as a faint translucent bubble.
-      scaling: "Capacity and recharge rate scale with tier."
+      '
+    scaling: Higher tiers increase damage reduction and self-repair speed.
+  - id: VU-E003
+    name: Energy Shield Generator
+    tier_requirement: 4
+    cost: 500,000 RP
+    upgrade_slots: 3
+    description: 'Projects a System-energy shield around the vehicle. The shield absorbs incoming damage up to its capacity,
+      then must recharge. Shield capacity: 500% of base hull HP. Recharge: 10% per minute when not under fire. Visible as
+      a faint translucent bubble.
 
-    - id: VU-E004
-      name: "Dimensional Plating"
-      tier_requirement: 7
-      cost: "10,000,000 RP"
-      upgrade_slots: 4
-      description: >
-        Armor that partially exists in a dimensional fold. Physical
-        attacks pass through the folded portions, reducing damage by
-        70%. Energy attacks are redirected into the dimensional fold.
-        The vehicle's surface shimmers like heat haze.
-      scaling: "Dimensional fold coverage increases with tier."
+      '
+    scaling: Capacity and recharge rate scale with tier.
+  - id: VU-E004
+    name: Dimensional Plating
+    tier_requirement: 7
+    cost: 10,000,000 RP
+    upgrade_slots: 4
+    description: 'Armor that partially exists in a dimensional fold. Physical attacks pass through the folded portions, reducing
+      damage by 70%. Energy attacks are redirected into the dimensional fold. The vehicle''s surface shimmers like heat haze.
 
+      '
+    scaling: Dimensional fold coverage increases with tier.
   weapons:
-    - id: VU-E005
-      name: "Mounted Turret"
-      tier_requirement: 1
-      cost: "15,000 RP"
-      upgrade_slots: 1
-      description: >
-        A System-enhanced weapon turret mounted on the vehicle exterior.
-        Can be configured for kinetic rounds, energy bolts, or explosive
-        shells. Manual or auto-targeting. Effective against Tier 0-2
-        creatures. Requires ammunition (RP-generated, 1 RP per 10 rounds).
-      scaling: "Damage and accuracy increase with tier. Higher tiers unlock new ammo types."
+  - id: VU-E005
+    name: Mounted Turret
+    tier_requirement: 1
+    cost: 15,000 RP
+    upgrade_slots: 1
+    description: 'A System-enhanced weapon turret mounted on the vehicle exterior. Can be configured for kinetic rounds, energy
+      bolts, or explosive shells. Manual or auto-targeting. Effective against Tier 0-2 creatures. Requires ammunition (RP-generated,
+      1 RP per 10 rounds).
 
-    - id: VU-E006
-      name: "Plasma Cannon"
-      tier_requirement: 3
-      cost: "200,000 RP"
-      upgrade_slots: 2
-      description: >
-        Vehicle-mounted plasma weapon. Fires superheated System-energy
-        plasma bolts. Effective against armored targets and energy shields.
-        Slow fire rate (1 shot/5 seconds) but devastating impact. Visible
-        as a bright blue-white bolt that leaves heat distortion trails.
-      scaling: "Damage and fire rate improve with tier."
+      '
+    scaling: Damage and accuracy increase with tier. Higher tiers unlock new ammo types.
+  - id: VU-E006
+    name: Plasma Cannon
+    tier_requirement: 3
+    cost: 200,000 RP
+    upgrade_slots: 2
+    description: 'Vehicle-mounted plasma weapon. Fires superheated System-energy plasma bolts. Effective against armored targets
+      and energy shields. Slow fire rate (1 shot/5 seconds) but devastating impact. Visible as a bright blue-white bolt that
+      leaves heat distortion trails.
 
-    - id: VU-E007
-      name: "Missile Array"
-      tier_requirement: 3
-      cost: "150,000 RP"
-      upgrade_slots: 2
-      description: >
-        Pod of 6 System-guided missiles. Lock-on targeting, moderate
-        damage, excellent range. Missiles track targets using System
-        targeting data. Reload: 1 minute per missile (RP-generated,
-        100 RP per missile). Effective against fast or distant targets.
-      scaling: "Pod size, damage, and tracking improve with tier."
+      '
+    scaling: Damage and fire rate improve with tier.
+  - id: VU-E007
+    name: Missile Array
+    tier_requirement: 3
+    cost: 150,000 RP
+    upgrade_slots: 2
+    description: 'Pod of 6 System-guided missiles. Lock-on targeting, moderate damage, excellent range. Missiles track targets
+      using System targeting data. Reload: 1 minute per missile (RP-generated, 100 RP per missile). Effective against fast
+      or distant targets.
 
-    - id: VU-E008
-      name: "Gravity Lance"
-      tier_requirement: 6
-      cost: "5,000,000 RP"
-      upgrade_slots: 3
-      description: >
-        Fires a concentrated beam of gravitational force. Crushes
-        targets under intense gravity or tears them apart with tidal
-        forces. Extreme energy cost (1,000 RP per shot) but can
-        disable vehicles and kill creatures several tiers above the user.
-      scaling: "Power and range increase with tier."
+      '
+    scaling: Pod size, damage, and tracking improve with tier.
+  - id: VU-E008
+    name: Gravity Lance
+    tier_requirement: 6
+    cost: 5,000,000 RP
+    upgrade_slots: 3
+    description: 'Fires a concentrated beam of gravitational force. Crushes targets under intense gravity or tears them apart
+      with tidal forces. Extreme energy cost (1,000 RP per shot) but can disable vehicles and kill creatures several tiers
+      above the user.
 
+      '
+    scaling: Power and range increase with tier.
   mobility:
-    - id: VU-E009
-      name: "Terrain Adaptation System"
-      tier_requirement: 1
-      cost: "20,000 RP"
-      upgrade_slots: 1
-      description: >
-        Vehicle automatically adapts to terrain — wheels retract for
-        water, tracks deploy for soft ground, hover mode for rough
-        terrain. System analyzes terrain in real-time and configures
-        the optimal locomotion method. Speed penalty: 10% during
-        transitions.
-      scaling: "Transition speed and terrain types expand with tier."
+  - id: VU-E009
+    name: Terrain Adaptation System
+    tier_requirement: 1
+    cost: 20,000 RP
+    upgrade_slots: 1
+    description: 'Vehicle automatically adapts to terrain — wheels retract for water, tracks deploy for soft ground, hover
+      mode for rough terrain. System analyzes terrain in real-time and configures the optimal locomotion method. Speed penalty:
+      10% during transitions.
 
-    - id: VU-E010
-      name: "Atmospheric Flight Module"
-      tier_requirement: 3
-      cost: "300,000 RP"
-      upgrade_slots: 2
-      description: >
-        Grants atmospheric flight capability. Vehicle lifts off using
-        System-enhanced thrust (not conventional engines). Maximum
-        altitude: 10km. Speed: 500 km/h. Fuel cost: 10 RP/minute
-        of flight. Cannot operate in vacuum — requires atmosphere.
-      scaling: "Altitude, speed, and fuel efficiency improve with tier."
+      '
+    scaling: Transition speed and terrain types expand with tier.
+  - id: VU-E010
+    name: Atmospheric Flight Module
+    tier_requirement: 3
+    cost: 300,000 RP
+    upgrade_slots: 2
+    description: 'Grants atmospheric flight capability. Vehicle lifts off using System-enhanced thrust (not conventional engines).
+      Maximum altitude: 10km. Speed: 500 km/h. Fuel cost: 10 RP/minute of flight. Cannot operate in vacuum — requires atmosphere.
 
-    - id: VU-E011
-      name: "Space Propulsion Drive"
-      tier_requirement: 5
-      cost: "2,000,000 RP"
-      upgrade_slots: 3
-      description: >
-        Full space travel capability. System-enhanced propulsion for
-        vacuum operation. Includes basic life support integration.
-        Speed: variable, up to 0.1c (10% light speed). Does NOT
-        include FTL — separate upgrade required. Vehicle must be
-        sealed for vacuum (automatic at Tier 5+).
-      scaling: "Speed and fuel efficiency improve with tier."
+      '
+    scaling: Altitude, speed, and fuel efficiency improve with tier.
+  - id: VU-E011
+    name: Space Propulsion Drive
+    tier_requirement: 5
+    cost: 2,000,000 RP
+    upgrade_slots: 3
+    description: 'Full space travel capability. System-enhanced propulsion for vacuum operation. Includes basic life support
+      integration. Speed: variable, up to 0.1c (10% light speed). Does NOT include FTL — separate upgrade required. Vehicle
+      must be sealed for vacuum (automatic at Tier 5+).
 
-    - id: VU-E012
-      name: "Dimensional Jump Drive"
-      tier_requirement: 8
-      cost: "50,000,000 RP"
-      upgrade_slots: 4
-      description: >
-        FTL travel through dimensional shortcuts. The vehicle enters
-        a dimensional fold, traverses a compressed path, and exits
-        at the destination. Range: up to 10 light-years per jump.
-        Cooldown: 1 hour between jumps. RP cost: 100,000 per jump.
-      scaling: "Range and cooldown improve with tier."
+      '
+    scaling: Speed and fuel efficiency improve with tier.
+  - id: VU-E012
+    name: Dimensional Jump Drive
+    tier_requirement: 8
+    cost: 50,000,000 RP
+    upgrade_slots: 4
+    description: 'FTL travel through dimensional shortcuts. The vehicle enters a dimensional fold, traverses a compressed
+      path, and exits at the destination. Range: up to 10 light-years per jump. Cooldown: 1 hour between jumps. RP cost: 100,000
+      per jump.
 
+      '
+    scaling: Range and cooldown improve with tier.
   sensors:
-    - id: VU-E013
-      name: "Enhanced Scanner Array"
-      tier_requirement: 1
-      cost: "10,000 RP"
-      upgrade_slots: 1
-      description: >
-        System-enhanced sensors that detect entities, resources, and
-        hazards within 1km radius. Displays on vehicle HUD as a
-        minimap with color-coded indicators. Can identify creature
-        tier, resource type, and dungeon entrances.
-      scaling: "Range and detail scale with tier."
+  - id: VU-E013
+    name: Enhanced Scanner Array
+    tier_requirement: 1
+    cost: 10,000 RP
+    upgrade_slots: 1
+    description: 'System-enhanced sensors that detect entities, resources, and hazards within 1km radius. Displays on vehicle
+      HUD as a minimap with color-coded indicators. Can identify creature tier, resource type, and dungeon entrances.
 
-    - id: VU-E014
-      name: "Stealth Field Generator"
-      tier_requirement: 4
-      cost: "800,000 RP"
-      upgrade_slots: 2
-      description: >
-        Bends light and System detection around the vehicle, rendering
-        it nearly invisible. Visual stealth: 90% transparent. System
-        stealth: vehicle appears as environmental noise on scans.
-        Drops when weapons fire or shields activate. RP cost: 50/minute.
-      scaling: "Stealth effectiveness and coverage improve with tier."
+      '
+    scaling: Range and detail scale with tier.
+  - id: VU-E014
+    name: Stealth Field Generator
+    tier_requirement: 4
+    cost: 800,000 RP
+    upgrade_slots: 2
+    description: 'Bends light and System detection around the vehicle, rendering it nearly invisible. Visual stealth: 90%
+      transparent. System stealth: vehicle appears as environmental noise on scans. Drops when weapons fire or shields activate.
+      RP cost: 50/minute.
 
-# ============================================
-# INTERNAL UPGRADES
-# ============================================
+      '
+    scaling: Stealth effectiveness and coverage improve with tier.
 internal_upgrades:
   living_spaces:
-    - id: VU-I001
-      name: "Basic Sleeping Quarter"
-      tier_requirement: 1
-      cost: "5,000 RP"
-      upgrade_slots: 1
-      pocket_dimension_required: true
-      description: >
-        A small bedroom within the vehicle's pocket dimension. Single
-        bed, small storage, basic lighting. Provides the Sleep Recovery
-        bonus (+50% HP/Stamina regen while sleeping). Temperature
-        controlled. Not spacious but functional.
-      size: "15m³"
+  - id: VU-I001
+    name: Basic Sleeping Quarter
+    tier_requirement: 1
+    cost: 5,000 RP
+    upgrade_slots: 1
+    pocket_dimension_required: true
+    description: 'A small bedroom within the vehicle''s pocket dimension. Single bed, small storage, basic lighting. Provides
+      the Sleep Recovery bonus (+50% HP/Stamina regen while sleeping). Temperature controlled. Not spacious but functional.
 
-    - id: VU-I002
-      name: "Master Bedroom Suite"
-      tier_requirement: 3
-      cost: "50,000 RP"
-      upgrade_slots: 2
-      pocket_dimension_required: true
-      description: >
-        Full bedroom with king-size bed, wardrobe, desk, reading area,
-        and private bathroom access. System-enhanced mattress provides
-        optimal sleep quality. Sleep Recovery bonus: +100% HP/Stamina
-        regen. Ambient lighting adjustable. Soundproofed.
-      size: "40m³"
+      '
+    size: 15m³
+  - id: VU-I002
+    name: Master Bedroom Suite
+    tier_requirement: 3
+    cost: 50,000 RP
+    upgrade_slots: 2
+    pocket_dimension_required: true
+    description: 'Full bedroom with king-size bed, wardrobe, desk, reading area, and private bathroom access. System-enhanced
+      mattress provides optimal sleep quality. Sleep Recovery bonus: +100% HP/Stamina regen. Ambient lighting adjustable.
+      Soundproofed.
 
-    - id: VU-I003
-      name: "Crew Quarters"
-      tier_requirement: 4
-      cost: "100,000 RP"
-      upgrade_slots: 2
-      pocket_dimension_required: true
-      description: >
-        Barracks-style quarters for up to 8 crew members. Individual
-        bunks with privacy curtains, shared storage, common area.
-        Each bunk has Sleep Recovery bonus (+50%). Essential for
-        vehicles that carry passengers or crew.
-      size: "80m³"
+      '
+    size: 40m³
+  - id: VU-I003
+    name: Crew Quarters
+    tier_requirement: 4
+    cost: 100,000 RP
+    upgrade_slots: 2
+    pocket_dimension_required: true
+    description: 'Barracks-style quarters for up to 8 crew members. Individual bunks with privacy curtains, shared storage,
+      common area. Each bunk has Sleep Recovery bonus (+50%). Essential for vehicles that carry passengers or crew.
 
+      '
+    size: 80m³
   kitchen_dining:
-    - id: VU-I004
-      name: "Basic Kitchen"
-      tier_requirement: 1
-      cost: "8,000 RP"
-      upgrade_slots: 1
-      pocket_dimension_required: true
-      description: >
-        Small cooking area within the pocket dimension. Stove, sink,
-        small refrigerator, basic counter space. System-enhanced cooking
-        provides +20% food buff effectiveness. Can prepare simple meals.
-        Water recycling system included.
-      size: "10m³"
-      food_buff: "+20% buff effectiveness from cooked meals"
+  - id: VU-I004
+    name: Basic Kitchen
+    tier_requirement: 1
+    cost: 8,000 RP
+    upgrade_slots: 1
+    pocket_dimension_required: true
+    description: 'Small cooking area within the pocket dimension. Stove, sink, small refrigerator, basic counter space. System-enhanced
+      cooking provides +20% food buff effectiveness. Can prepare simple meals. Water recycling system included.
 
-    - id: VU-I005
-      name: "Advanced Kitchen & Dining"
-      tier_requirement: 3
-      cost: "80,000 RP"
-      upgrade_slots: 2
-      pocket_dimension_required: true
-      description: >
-        Full kitchen with System-enhanced appliances, large refrigerator,
-        pantry storage, dining table for 6. System recipes database
-        provides cooking guidance. Food buffs are 50% more effective.
-        Water purification system converts any liquid to potable water.
-      size: "35m³"
-      food_buff: "+50% buff effectiveness, access to System recipe database"
+      '
+    size: 10m³
+    food_buff: +20% buff effectiveness from cooked meals
+  - id: VU-I005
+    name: Advanced Kitchen & Dining
+    tier_requirement: 3
+    cost: 80,000 RP
+    upgrade_slots: 2
+    pocket_dimension_required: true
+    description: 'Full kitchen with System-enhanced appliances, large refrigerator, pantry storage, dining table for 6. System
+      recipes database provides cooking guidance. Food buffs are 50% more effective. Water purification system converts any
+      liquid to potable water.
 
-    - id: VU-I006
-      name: "Gourmet Kitchen & Banquet Hall"
-      tier_requirement: 5
-      cost: "500,000 RP"
-      upgrade_slots: 3
-      pocket_dimension_required: true
-      description: >
-        Professional-grade kitchen with System-enhanced equipment that
-        can prepare food from any known species' cuisine. Walk-in
-        cold storage, spice library, automated prep assistants.
-        Dining hall seats 20. Food buffs are 100% more effective and
-        last twice as long. Can process System-enhanced ingredients.
-      size: "100m³"
-      food_buff: "+100% buff effectiveness, 2x duration, alien cuisine capability"
+      '
+    size: 35m³
+    food_buff: +50% buff effectiveness, access to System recipe database
+  - id: VU-I006
+    name: Gourmet Kitchen & Banquet Hall
+    tier_requirement: 5
+    cost: 500,000 RP
+    upgrade_slots: 3
+    pocket_dimension_required: true
+    description: 'Professional-grade kitchen with System-enhanced equipment that can prepare food from any known species''
+      cuisine. Walk-in cold storage, spice library, automated prep assistants. Dining hall seats 20. Food buffs are 100% more
+      effective and last twice as long. Can process System-enhanced ingredients.
 
+      '
+    size: 100m³
+    food_buff: +100% buff effectiveness, 2x duration, alien cuisine capability
   bathroom_facilities:
-    - id: VU-I007
-      name: "Basic Bathroom"
-      tier_requirement: 1
-      cost: "5,000 RP"
-      upgrade_slots: 1
-      pocket_dimension_required: true
-      description: >
-        Toilet, sink, small shower. Water recycling system operates
-        at 90% efficiency. Basic hygiene products generated by System
-        (1 RP/day for supplies). Drain connects to waste processing.
-      size: "8m³"
+  - id: VU-I007
+    name: Basic Bathroom
+    tier_requirement: 1
+    cost: 5,000 RP
+    upgrade_slots: 1
+    pocket_dimension_required: true
+    description: 'Toilet, sink, small shower. Water recycling system operates at 90% efficiency. Basic hygiene products generated
+      by System (1 RP/day for supplies). Drain connects to waste processing.
 
-    - id: VU-I008
-      name: "Full Bathroom Suite"
-      tier_requirement: 3
-      cost: "40,000 RP"
-      upgrade_slots: 1
-      pocket_dimension_required: true
-      description: >
-        Full bathroom with shower, bathtub, dual sinks, heated floors.
-        Water recycling at 98% efficiency. System-enhanced water
-        provides minor healing (+5% HP regen while bathing). Hot
-        water is unlimited via System energy conversion.
-      size: "20m³"
-      bonus: "+5% HP regen while bathing, Cleanliness buff (+5% all stats for 2 hours)"
+      '
+    size: 8m³
+  - id: VU-I008
+    name: Full Bathroom Suite
+    tier_requirement: 3
+    cost: 40,000 RP
+    upgrade_slots: 1
+    pocket_dimension_required: true
+    description: 'Full bathroom with shower, bathtub, dual sinks, heated floors. Water recycling at 98% efficiency. System-enhanced
+      water provides minor healing (+5% HP regen while bathing). Hot water is unlimited via System energy conversion.
 
+      '
+    size: 20m³
+    bonus: +5% HP regen while bathing, Cleanliness buff (+5% all stats for 2 hours)
   workshop_crafting:
-    - id: VU-I009
-      name: "Basic Workshop"
-      tier_requirement: 2
-      cost: "30,000 RP"
-      upgrade_slots: 2
-      pocket_dimension_required: true
-      description: >
-        Small crafting space with basic tools, workbench, and material
-        storage. Supports Tier 0-2 crafting recipes. System-guided
-        crafting interface displayed on workshop walls. Includes
-        basic repair capability for vehicle components.
-      size: "25m³"
-      crafting_bonus: "+10% crafting success rate, Tier 0-2 recipes"
+  - id: VU-I009
+    name: Basic Workshop
+    tier_requirement: 2
+    cost: 30,000 RP
+    upgrade_slots: 2
+    pocket_dimension_required: true
+    description: 'Small crafting space with basic tools, workbench, and material storage. Supports Tier 0-2 crafting recipes.
+      System-guided crafting interface displayed on workshop walls. Includes basic repair capability for vehicle components.
 
-    - id: VU-I010
-      name: "Advanced Workshop"
-      tier_requirement: 4
-      cost: "300,000 RP"
-      upgrade_slots: 3
-      pocket_dimension_required: true
-      description: >
-        Full workshop with specialized stations: weaponsmithing,
-        armorcraft, electronics, material processing. System-enhanced
-        tools increase precision. Supports Tier 0-5 crafting recipes.
-        Includes vehicle component fabrication capability.
-      size: "60m³"
-      crafting_bonus: "+25% crafting success rate, Tier 0-5 recipes"
+      '
+    size: 25m³
+    crafting_bonus: +10% crafting success rate, Tier 0-2 recipes
+  - id: VU-I010
+    name: Advanced Workshop
+    tier_requirement: 4
+    cost: 300,000 RP
+    upgrade_slots: 3
+    pocket_dimension_required: true
+    description: 'Full workshop with specialized stations: weaponsmithing, armorcraft, electronics, material processing. System-enhanced
+      tools increase precision. Supports Tier 0-5 crafting recipes. Includes vehicle component fabrication capability.
 
+      '
+    size: 60m³
+    crafting_bonus: +25% crafting success rate, Tier 0-5 recipes
   medical:
-    - id: VU-I011
-      name: "First Aid Station"
-      tier_requirement: 1
-      cost: "15,000 RP"
-      upgrade_slots: 1
-      pocket_dimension_required: true
-      description: >
-        Basic medical station with System-enhanced first aid supplies.
-        Auto-generated bandages, antiseptic, and basic healing compounds
-        (5 RP per treatment). Can stabilize critically injured patients.
-        Cannot perform surgery or treat complex conditions.
-      size: "10m³"
+  - id: VU-I011
+    name: First Aid Station
+    tier_requirement: 1
+    cost: 15,000 RP
+    upgrade_slots: 1
+    pocket_dimension_required: true
+    description: 'Basic medical station with System-enhanced first aid supplies. Auto-generated bandages, antiseptic, and
+      basic healing compounds (5 RP per treatment). Can stabilize critically injured patients. Cannot perform surgery or treat
+      complex conditions.
 
-    - id: VU-I012
-      name: "Medical Bay"
-      tier_requirement: 4
-      cost: "400,000 RP"
-      upgrade_slots: 3
-      pocket_dimension_required: true
-      description: >
-        Full medical facility with System-guided surgical capability,
-        diagnostic scanner, healing pods (accelerate HP recovery by
-        500%), status effect treatment, and pharmaceutical synthesis.
-        Can treat any injury or condition within 2 tiers of the vehicle.
-      size: "50m³"
+      '
+    size: 10m³
+  - id: VU-I012
+    name: Medical Bay
+    tier_requirement: 4
+    cost: 400,000 RP
+    upgrade_slots: 3
+    pocket_dimension_required: true
+    description: 'Full medical facility with System-guided surgical capability, diagnostic scanner, healing pods (accelerate
+      HP recovery by 500%), status effect treatment, and pharmaceutical synthesis. Can treat any injury or condition within
+      2 tiers of the vehicle.
 
+      '
+    size: 50m³
   exp_farms:
-    - id: VU-I013
-      name: "Basic EXP Farm"
-      tier_requirement: 3
-      cost: "200,000 RP"
-      upgrade_slots: 3
-      pocket_dimension_required: true
-      description: >
-        A System-generated enclosed environment within the pocket
-        dimension that spawns low-tier creatures for combat training.
-        Creatures scale to the user's level minus 2 (never threatening,
-        always providing minimal XP). Auto-respawn every 5 minutes.
-        Maximum 5 creatures at once. Safe — creatures cannot leave
-        the farm area. Provides 50-100 RP/hour passive.
-      size: "100m³"
-      output: "50-100 RP/hour, scaling XP for training"
-      creature_tier: "User level minus 2 (minimum Tier 0)"
+  - id: VU-I013
+    name: Basic EXP Farm
+    tier_requirement: 3
+    cost: 200,000 RP
+    upgrade_slots: 3
+    pocket_dimension_required: true
+    description: 'A System-generated enclosed environment within the pocket dimension that spawns low-tier creatures for combat
+      training. Creatures scale to the user''s level minus 2 (never threatening, always providing minimal XP). Auto-respawn
+      every 5 minutes. Maximum 5 creatures at once. Safe — creatures cannot leave the farm area. Provides 50-100 RP/hour passive.
 
-    - id: VU-I014
-      name: "Advanced EXP Farm"
-      tier_requirement: 5
-      cost: "2,000,000 RP"
-      upgrade_slots: 4
-      pocket_dimension_required: true
-      description: >
-        Larger combat training environment with adjustable difficulty.
-        Can spawn creatures from Tier 0 to vehicle tier minus 1.
-        Multiple biomes configurable. Boss creatures spawn every hour.
-        Maximum 20 creatures simultaneously. Loot drops are reduced
-        (25% of wild drop rate) but consistent.
-      size: "500m³"
-      output: "200-1,000 RP/hour, full XP scaling, 25% loot drops"
+      '
+    size: 100m³
+    output: 50-100 RP/hour, scaling XP for training
+    creature_tier: User level minus 2 (minimum Tier 0)
+  - id: VU-I014
+    name: Advanced EXP Farm
+    tier_requirement: 5
+    cost: 2,000,000 RP
+    upgrade_slots: 4
+    pocket_dimension_required: true
+    description: 'Larger combat training environment with adjustable difficulty. Can spawn creatures from Tier 0 to vehicle
+      tier minus 1. Multiple biomes configurable. Boss creatures spawn every hour. Maximum 20 creatures simultaneously. Loot
+      drops are reduced (25% of wild drop rate) but consistent.
 
+      '
+    size: 500m³
+    output: 200-1,000 RP/hour, full XP scaling, 25% loot drops
   dungeons:
-    - id: VU-I015
-      name: "Pocket Dungeon"
-      tier_requirement: 5
-      cost: "5,000,000 RP"
-      upgrade_slots: 5
-      pocket_dimension_required: true
-      description: >
-        A System-generated mini-dungeon within the vehicle's pocket
-        dimension. 3 floors, randomized layout, System-spawned creatures
-        and bosses. Dungeon tier equals vehicle tier minus 2. Resets
-        every 24 hours. Loot drops at 50% of wild dungeon rate but
-        guaranteed boss loot. Entrance sealed — creatures cannot escape.
-      size: "2,000m³"
-      output: "Full dungeon rewards at 50%, 24hr reset cycle"
-      dungeon_tier: "Vehicle tier minus 2"
+  - id: VU-I015
+    name: Pocket Dungeon
+    tier_requirement: 5
+    cost: 5,000,000 RP
+    upgrade_slots: 5
+    pocket_dimension_required: true
+    description: 'A System-generated mini-dungeon within the vehicle''s pocket dimension. 3 floors, randomized layout, System-spawned
+      creatures and bosses. Dungeon tier equals vehicle tier minus 2. Resets every 24 hours. Loot drops at 50% of wild dungeon
+      rate but guaranteed boss loot. Entrance sealed — creatures cannot escape.
 
-    - id: VU-I016
-      name: "Grand Dungeon Complex"
-      tier_requirement: 8
-      cost: "100,000,000 RP"
-      upgrade_slots: 8
-      pocket_dimension_required: true
-      description: >
-        Full dungeon complex with 10 floors, multiple paths, hidden
-        rooms, trap systems, and scaling bosses. Dungeon tier equals
-        vehicle tier minus 1. Resets every 12 hours. Full loot drop
-        rates. Can be configured for different biomes and creature
-        types. Multiple people can run simultaneously.
-      size: "20,000m³"
-      output: "Full dungeon rewards, 12hr reset, configurable"
+      '
+    size: 2,000m³
+    output: Full dungeon rewards at 50%, 24hr reset cycle
+    dungeon_tier: Vehicle tier minus 2
+  - id: VU-I016
+    name: Grand Dungeon Complex
+    tier_requirement: 8
+    cost: 100,000,000 RP
+    upgrade_slots: 8
+    pocket_dimension_required: true
+    description: 'Full dungeon complex with 10 floors, multiple paths, hidden rooms, trap systems, and scaling bosses. Dungeon
+      tier equals vehicle tier minus 1. Resets every 12 hours. Full loot drop rates. Can be configured for different biomes
+      and creature types. Multiple people can run simultaneously.
 
+      '
+    size: 20,000m³
+    output: Full dungeon rewards, 12hr reset, configurable
   logistics_infrastructure:
-    - id: VU-I017
-      name: "Cargo Hold"
-      tier_requirement: 1
-      cost: "10,000 RP"
-      upgrade_slots: 1
-      pocket_dimension_required: true
-      description: >
-        Dedicated storage space for trade goods, materials, and supplies.
-        System-organized inventory with categorization and search.
-        Climate-controlled sections for perishables. Weight and volume
-        tracked automatically. Can be expanded incrementally.
-      size: "50m³ (expandable)"
+  - id: VU-I017
+    name: Cargo Hold
+    tier_requirement: 1
+    cost: 10,000 RP
+    upgrade_slots: 1
+    pocket_dimension_required: true
+    description: 'Dedicated storage space for trade goods, materials, and supplies. System-organized inventory with categorization
+      and search. Climate-controlled sections for perishables. Weight and volume tracked automatically. Can be expanded incrementally.
 
-    - id: VU-I018
-      name: "Water Purification & Recycling Plant"
-      tier_requirement: 2
-      cost: "25,000 RP"
-      upgrade_slots: 1
-      pocket_dimension_required: true
-      description: >
-        Self-contained water system. Purifies any liquid source to
-        potable water. Recycling rate: 95%. Can support up to 20
-        people indefinitely if supplied with any water source.
-        System-enhanced filters remove all contaminants including
-        System-anomaly radiation.
-      size: "15m³"
+      '
+    size: 50m³ (expandable)
+  - id: VU-I018
+    name: Water Purification & Recycling Plant
+    tier_requirement: 2
+    cost: 25,000 RP
+    upgrade_slots: 1
+    pocket_dimension_required: true
+    description: 'Self-contained water system. Purifies any liquid source to potable water. Recycling rate: 95%. Can support
+      up to 20 people indefinitely if supplied with any water source. System-enhanced filters remove all contaminants including
+      System-anomaly radiation.
 
-    - id: VU-I019
-      name: "Power Generator"
-      tier_requirement: 2
-      cost: "30,000 RP"
-      upgrade_slots: 1
-      pocket_dimension_required: true
-      description: >
-        System-enhanced power generation for all internal upgrades.
-        Converts RP into electrical power. Base output: 100kW.
-        Sufficient for all Tier 2-3 internal systems. Higher tier
-        generators required for advanced facilities. RP cost: 10/hour.
-      size: "10m³"
+      '
+    size: 15m³
+  - id: VU-I019
+    name: Power Generator
+    tier_requirement: 2
+    cost: 30,000 RP
+    upgrade_slots: 1
+    pocket_dimension_required: true
+    description: 'System-enhanced power generation for all internal upgrades. Converts RP into electrical power. Base output:
+      100kW. Sufficient for all Tier 2-3 internal systems. Higher tier generators required for advanced facilities. RP cost:
+      10/hour.
 
-    - id: VU-I020
-      name: "Air Recycling System"
-      tier_requirement: 3
-      cost: "50,000 RP"
-      upgrade_slots: 1
-      pocket_dimension_required: true
-      description: >
-        Maintains breathable atmosphere within the vehicle and pocket
-        dimension. Essential for space travel and hostile environments.
-        Recycles CO2, removes toxins, maintains humidity and temperature.
-        Supports up to 50 occupants. Integrates with EVA suit ports.
-      size: "12m³"
+      '
+    size: 10m³
+  - id: VU-I020
+    name: Air Recycling System
+    tier_requirement: 3
+    cost: 50,000 RP
+    upgrade_slots: 1
+    pocket_dimension_required: true
+    description: 'Maintains breathable atmosphere within the vehicle and pocket dimension. Essential for space travel and
+      hostile environments. Recycles CO2, removes toxins, maintains humidity and temperature. Supports up to 50 occupants.
+      Integrates with EVA suit ports.
 
-    - id: VU-I021
-      name: "Greenhouse & Hydroponic Farm"
-      tier_requirement: 3
-      cost: "100,000 RP"
-      upgrade_slots: 2
-      pocket_dimension_required: true
-      description: >
-        Internal food production facility. System-enhanced growing
-        accelerates crop cycles by 500%. Can grow Earth crops and
-        System-enhanced variants. Feeds up to 10 people indefinitely.
-        Also produces medicinal herbs and crafting plants.
-      size: "40m³"
-      output: "Food for 10 people, medicinal herbs, crafting materials"
+      '
+    size: 12m³
+  - id: VU-I021
+    name: Greenhouse & Hydroponic Farm
+    tier_requirement: 3
+    cost: 100,000 RP
+    upgrade_slots: 2
+    pocket_dimension_required: true
+    description: 'Internal food production facility. System-enhanced growing accelerates crop cycles by 500%. Can grow Earth
+      crops and System-enhanced variants. Feeds up to 10 people indefinitely. Also produces medicinal herbs and crafting plants.
 
+      '
+    size: 40m³
+    output: Food for 10 people, medicinal herbs, crafting materials
   research:
-    - id: VU-I022
-      name: "Research Terminal"
-      tier_requirement: 2
-      cost: "40,000 RP"
-      upgrade_slots: 2
-      pocket_dimension_required: true
-      description: >
-        System-linked research station. Access the System's knowledge
-        database (limited to discovered information). Research new
-        crafting recipes, analyze unknown materials, and decode System
-        mechanics. Research speed depends on INT stat.
-      size: "15m³"
-      research_bonus: "+15% research speed"
+  - id: VU-I022
+    name: Research Terminal
+    tier_requirement: 2
+    cost: 40,000 RP
+    upgrade_slots: 2
+    pocket_dimension_required: true
+    description: 'System-linked research station. Access the System''s knowledge database (limited to discovered information).
+      Research new crafting recipes, analyze unknown materials, and decode System mechanics. Research speed depends on INT
+      stat.
 
-    - id: VU-I023
-      name: "Advanced Laboratory"
-      tier_requirement: 5
-      cost: "1,500,000 RP"
-      upgrade_slots: 4
-      pocket_dimension_required: true
-      description: >
-        Full laboratory with System-enhanced analysis equipment,
-        material testing facilities, prototype fabrication, and
-        theoretical modeling. Can research EVA suit technology,
-        weapon designs, vehicle upgrades, and System mechanics.
-        Supports 3 simultaneous research projects.
-      size: "80m³"
-      research_bonus: "+40% research speed, 3 simultaneous projects"
+      '
+    size: 15m³
+    research_bonus: +15% research speed
+  - id: VU-I023
+    name: Advanced Laboratory
+    tier_requirement: 5
+    cost: 1,500,000 RP
+    upgrade_slots: 4
+    pocket_dimension_required: true
+    description: 'Full laboratory with System-enhanced analysis equipment, material testing facilities, prototype fabrication,
+      and theoretical modeling. Can research EVA suit technology, weapon designs, vehicle upgrades, and System mechanics.
+      Supports 3 simultaneous research projects.
 
-    - id: VU-I024
-      name: "Quantum Research Complex"
-      tier_requirement: 8
-      cost: "75,000,000 RP"
-      upgrade_slots: 6
-      pocket_dimension_required: true
-      description: >
-        Cutting-edge research facility capable of studying fundamental
-        System mechanics, dimensional physics, and reality manipulation.
-        Can develop technologies 2 tiers above the vehicle's current
-        tier. Supports 10 simultaneous projects. Includes AI research
-        assistant (System-generated, not sentient).
-      size: "200m³"
-      research_bonus: "+75% research speed, 10 simultaneous projects, 2-tier-ahead capability"
+      '
+    size: 80m³
+    research_bonus: +40% research speed, 3 simultaneous projects
+  - id: VU-I024
+    name: Quantum Research Complex
+    tier_requirement: 8
+    cost: 75,000,000 RP
+    upgrade_slots: 6
+    pocket_dimension_required: true
+    description: 'Cutting-edge research facility capable of studying fundamental System mechanics, dimensional physics, and
+      reality manipulation. Can develop technologies 2 tiers above the vehicle''s current tier. Supports 10 simultaneous projects.
+      Includes AI research assistant (System-generated, not sentient).
 
+      '
+    size: 200m³
+    research_bonus: +75% research speed, 10 simultaneous projects, 2-tier-ahead capability
   communication:
-    - id: VU-I025
-      name: "Long-Range Communication Array"
-      tier_requirement: 3
-      cost: "75,000 RP"
-      upgrade_slots: 1
-      pocket_dimension_required: false
-      description: >
-        Extends System Communication range from planetary to system-wide.
-        Can send and receive messages across an entire star system.
-        Includes voice and basic data transmission. Encrypted by default.
-        RP cost: 10 per message.
-      size: "External mount"
+  - id: VU-I025
+    name: Long-Range Communication Array
+    tier_requirement: 3
+    cost: 75,000 RP
+    upgrade_slots: 1
+    pocket_dimension_required: false
+    description: 'Extends System Communication range from planetary to system-wide. Can send and receive messages across an
+      entire star system. Includes voice and basic data transmission. Encrypted by default. RP cost: 10 per message.
 
-    - id: VU-I026
-      name: "Dimensional Relay Beacon"
-      tier_requirement: 6
-      cost: "3,000,000 RP"
-      upgrade_slots: 2
-      pocket_dimension_required: false
-      description: >
-        Instantaneous communication across any distance by routing
-        through dimensional shortcuts. Can reach any other Dimensional
-        Relay within the known universe. Video and voice capable.
-        RP cost: 100 per minute of connection.
-      size: "External mount"
+      '
+    size: External mount
+  - id: VU-I026
+    name: Dimensional Relay Beacon
+    tier_requirement: 6
+    cost: 3,000,000 RP
+    upgrade_slots: 2
+    pocket_dimension_required: false
+    description: 'Instantaneous communication across any distance by routing through dimensional shortcuts. Can reach any
+      other Dimensional Relay within the known universe. Video and voice capable. RP cost: 100 per minute of connection.
+
+      '
+    size: External mount
+internal_upgrades_list:
+- id: vu_i001
+  name: Vehicle Kitchen Module
+  tier: 1
+  category: Living
+  description: Fully functional kitchen with System-enhanced cooking equipment. Meals provide 2-hour stat buffs.
+  rp_cost: 5000
+  effects:
+  - Cook stat-buff meals
+  - +5% HP regen while in vehicle
+  - Food preservation
+  space_requirement: 10 sqm
+  power_drain: Low
+- id: vu_i002
+  name: Vehicle Bathroom Module
+  tier: 1
+  category: Living
+  description: Water recycling bathroom with System-purified water. Hot showers restore morale.
+  rp_cost: 3000
+  effects:
+  - Water recycling (infinite clean water)
+  - Hygiene maintenance
+  - +2% all stats while rested
+  space_requirement: 5 sqm
+  power_drain: Low
+- id: vu_i003
+  name: Vehicle Bedroom Suite
+  tier: 2
+  category: Living
+  description: Sleeping quarters with System-optimized rest cycles. 4 hours of sleep equals 8 hours of normal rest.
+  rp_cost: 8000
+  effects:
+  - Optimized sleep (4h = 8h)
+  - Dream-state cultivation possible
+  - +10% EXP gain after rest
+  space_requirement: 15 sqm
+  power_drain: Low
+- id: vu_i004
+  name: EXP Farm Chamber
+  tier: 4
+  category: Training
+  description: Internal dungeon simulator that generates System-approved EXP encounters. Safe grinding.
+  rp_cost: 100000
+  effects:
+  - Generate EXP encounters (Tier = Vehicle Tier - 2)
+  - Safe training environment
+  - Adjustable difficulty
+  space_requirement: 50 sqm
+  power_drain: High
+- id: vu_i005
+  name: Mini Dungeon Generator
+  tier: 5
+  category: Training
+  description: Creates pocket dungeons inside the vehicle. Real rewards, real danger, but contained environment.
+  rp_cost: 500000
+  effects:
+  - Generate dungeons up to Vehicle Tier
+  - Real loot drops
+  - Adjustable parameters
+  space_requirement: 100 sqm
+  power_drain: Very High
+- id: vu_i006
+  name: Research Laboratory
+  tier: 3
+  category: Production
+  description: System-enhanced research facility. Analyze items, develop blueprints, study enemy weaknesses.
+  rp_cost: 50000
+  effects:
+  - Item analysis
+  - Blueprint development
+  - Enemy weakness research
+  - Material identification
+  space_requirement: 30 sqm
+  power_drain: Medium
+- id: vu_i007
+  name: Crafting Workshop
+  tier: 3
+  category: Production
+  description: Full-featured workshop for crafting weapons, armor, and equipment inside the vehicle.
+  rp_cost: 40000
+  effects:
+  - Craft items up to Vehicle Tier
+  - Repair equipment
+  - Modify existing items
+  space_requirement: 25 sqm
+  power_drain: Medium
+- id: vu_i008
+  name: Medical Bay
+  tier: 2
+  category: Support
+  description: Automated medical facility. Heals injuries, cures conditions, performs surgery.
+  rp_cost: 20000
+  effects:
+  - Heal HP at 10x natural rate
+  - Cure most conditions
+  - Emergency surgery capability
+  space_requirement: 20 sqm
+  power_drain: Medium
+- id: vu_i009
+  name: Communication Array
+  tier: 2
+  category: Logistics
+  description: Long-range communication system. Contact other Travellers within same planetary system.
+  rp_cost: 15000
+  effects:
+  - Planetary-range comms
+  - Encrypted channels
+  - Emergency broadcast
+  space_requirement: 5 sqm
+  power_drain: Low
+- id: vu_i010
+  name: Cargo Hold Expansion
+  tier: 1
+  category: Logistics
+  description: System-compressed storage space. Holds 10x more than physical space suggests.
+  rp_cost: 10000
+  effects:
+  - 10x storage capacity
+  - Weight reduction (stored items weigh 10%)
+  - Auto-sort inventory
+  space_requirement: Varies
+  power_drain: None
+- id: vu_i011
+  name: VR Training Suite
+  tier: 3
+  category: Training
+  description: Virtual reality chamber for combat training. Simulates any environment or opponent.
+  rp_cost: 75000
+  effects:
+  - Simulate combat scenarios
+  - Practice abilities safely
+  - EXP gain (50% of real combat)
+  space_requirement: 20 sqm
+  power_drain: High
+- id: vu_i012
+  name: Stealth Field Generator
+  tier: 4
+  category: Defense
+  description: Renders entire vehicle invisible to sensors and sight. Power-intensive but near-perfect concealment.
+  rp_cost: 200000
+  effects:
+  - Visual invisibility
+  - Sensor invisibility
+  - Thermal masking
+  space_requirement: 10 sqm
+  power_drain: Very High
+- id: vu_i013
+  name: Shield Generator
+  tier: 3
+  category: Defense
+  description: Energy shield that absorbs damage before hull takes hits. Regenerates when not taking fire.
+  rp_cost: 80000
+  effects:
+  - Energy shield (absorbs damage = Vehicle Tier x 1000 HP)
+  - Regenerates at 5%/minute when not hit
+  space_requirement: 15 sqm
+  power_drain: High
+- id: vu_i014
+  name: Weapon Mount System
+  tier: 2
+  category: Offense
+  description: Mount weapons on vehicle exterior. Turrets, missiles, energy weapons.
+  rp_cost: 25000
+  effects:
+  - Mount vehicle weapons
+  - Auto-targeting system
+  - Linked fire control
+  space_requirement: External
+  power_drain: Varies by weapon
+- id: vu_i015
+  name: Navigation AI
+  tier: 2
+  category: Logistics
+  description: AI-powered navigation system. Plots optimal routes, avoids threats, manages fuel.
+  rp_cost: 30000
+  effects:
+  - Optimal route calculation
+  - Threat avoidance
+  - Fuel efficiency +20%
+  - Auto-pilot capability
+  space_requirement: 2 sqm
+  power_drain: Low
+- id: vu_i016
+  name: Dimensional Anchor
+  tier: 5
+  category: Special
+  description: Prevents forced dimensional displacement. Vehicle cannot be teleported against will.
+  rp_cost: 300000
+  effects:
+  - Anti-teleport field
+  - Dimensional stability
+  - Void zone resistance
+  space_requirement: 5 sqm
+  power_drain: Medium
+- id: vu_i017
+  name: Core Amplifier
+  tier: 4
+  category: Core Enhancement
+  description: Amplifies Vehicle Core output. All Core-based abilities enhanced by 25%.
+  rp_cost: 150000
+  effects:
+  - +25% Core ability power
+  - +15% Core energy regeneration
+  - Extended summoning range
+  space_requirement: 10 sqm
+  power_drain: High
+- id: vu_i018
+  name: Passenger Quarters
+  tier: 2
+  category: Living
+  description: Additional sleeping and living space for passengers or crew. Accommodates 4-8 people.
+  rp_cost: 12000
+  effects:
+  - House 4-8 passengers
+  - Basic amenities
+  - Privacy partitions
+  space_requirement: 30 sqm
+  power_drain: Low
+- id: vu_i019
+  name: Garden Module
+  tier: 2
+  category: Production
+  description: Hydroponic garden using System-enhanced growth. Produces food and medicinal herbs.
+  rp_cost: 15000
+  effects:
+  - Grow food (self-sufficient)
+  - Medicinal herb production
+  - Oxygen generation
+  space_requirement: 15 sqm
+  power_drain: Low
+- id: vu_i020
+  name: Recycling System
+  tier: 1
+  category: Logistics
+  description: Breaks down junk items into base materials. Nothing is wasted.
+  rp_cost: 8000
+  effects:
+  - Convert junk to materials (60% efficiency)
+  - Waste processing
+  - Material identification
+  space_requirement: 10 sqm
+  power_drain: Low
+- id: vu_i021
+  name: Meditation Chamber
+  tier: 3
+  category: Internal - Cultivation
+  description: Sound-isolated room with System-enhanced energy circulation. +25% cultivation speed inside.
+  rp_cost: 18000
+  benefits:
+  - +25% cultivation speed
+  - Perfect silence
+  - Energy focus enhancement
+  requirements:
+    vehicle_tier: 3
+- id: vu_i022
+  name: Trophy Room
+  tier: 2
+  category: Internal - Storage
+  description: Display and preserve trophies from defeated enemies. Each trophy provides a small passive buff.
+  rp_cost: 5000
+  benefits:
+  - Trophy display (passive buffs)
+  - Memory preservation
+  - Morale boost
+  requirements:
+    vehicle_tier: 2
+- id: vu_i023
+  name: War Room
+  tier: 4
+  category: Internal - Command
+  description: Tactical command center with holographic battlefield display. Coordinate group operations.
+  rp_cost: 80000
+  benefits:
+  - Holographic tactical display
+  - Group coordination (+15% team efficiency)
+  - Real-time battlefield data
+  requirements:
+    vehicle_tier: 4
+- id: vu_i024
+  name: Greenhouse Bay
+  tier: 2
+  category: Internal - Production
+  description: Indoor greenhouse for growing herbs, food, and alchemical ingredients. Self-sustaining.
+  rp_cost: 8000
+  benefits:
+  - Food production
+  - Herb growing
+  - Alchemical ingredients
+  - Air recycling
+  requirements:
+    vehicle_tier: 2
+- id: vu_i025
+  name: Pet Kennel
+  tier: 2
+  category: Internal - Utility
+  description: Housing for tamed creatures. System-enhanced comfort accelerates bonding and recovery.
+  rp_cost: 6000
+  benefits:
+  - Creature housing
+  - +20% bonding speed
+  - Creature healing while stored
+  requirements:
+    vehicle_tier: 2
+- id: vu_i026
+  name: Gravity Training Room
+  tier: 4
+  category: Internal - Training
+  description: Room with adjustable gravity from 0.1G to 10G. Train under extreme conditions.
+  rp_cost: 120000
+  benefits:
+  - Adjustable gravity training
+  - +30% STR/END gains
+  - Zero-G combat practice
+  requirements:
+    vehicle_tier: 4
+- id: vu_i027
+  name: Prisoner Hold
+  tier: 3
+  category: Internal - Security
+  description: Secure holding cells for prisoners. System-dampening field prevents ability use.
+  rp_cost: 25000
+  benefits:
+  - Secure imprisonment
+  - System dampening field
+  - Automated feeding
+  - Interrogation room
+  requirements:
+    vehicle_tier: 3
+- id: vu_i028
+  name: Spa and Recovery Suite
+  tier: 3
+  category: Internal - Recovery
+  description: Luxury recovery facility with hot springs, massage systems, and System-enhanced relaxation.
+  rp_cost: 30000
+  benefits:
+  - +50% recovery speed
+  - Stress reduction
+  - Mental clarity boost
+  - Status effect cleansing
+  requirements:
+    vehicle_tier: 3
+- id: vu_i029
+  name: Entertainment Center
+  tier: 2
+  category: Internal - Morale
+  description: Games, media, and entertainment systems. Morale boost for vehicle occupants.
+  rp_cost: 4000
+  benefits:
+  - Morale boost (+10% all stats when rested)
+  - VR gaming
+  - Music system
+  - Movie theater
+  requirements:
+    vehicle_tier: 2
+- id: vu_i030
+  name: Dimensional Pocket Storage
+  tier: 5
+  category: Internal - Storage
+  description: Fold space to create storage 100x larger than physical space. Essential for long expeditions.
+  rp_cost: 250000
+  benefits:
+  - 100x storage capacity
+  - Dimensional stabilization
+  - Item preservation
+  requirements:
+    vehicle_tier: 5
+- id: vu_i031
+  name: Auto-Pilot Navigation AI
+  tier: 3
+  category: Internal - Navigation
+  description: AI-driven autopilot handles all navigation. Can drive/fly/sail while owner rests.
+  rp_cost: 35000
+  benefits:
+  - Autonomous navigation
+  - Obstacle avoidance
+  - Route optimization
+  - Rest while traveling
+  requirements:
+    vehicle_tier: 3
+- id: vu_i032
+  name: Music Studio
+  tier: 2
+  category: Internal - Lifestyle
+  description: Soundproofed recording and practice studio. System-enhanced acoustics.
+  rp_cost: 7000
+  benefits:
+  - Music creation
+  - Sound isolation
+  - Acoustic enhancement
+  requirements:
+    vehicle_tier: 2
+- id: vu_i033
+  name: Library Archive
+  tier: 3
+  category: Internal - Knowledge
+  description: Digital and physical library with System-enhanced speed reading capabilities.
+  rp_cost: 20000
+  benefits:
+  - Knowledge storage
+  - +30% reading speed
+  - Search and recall system
+  - Lore database
+  requirements:
+    vehicle_tier: 3
+- id: vu_i034
+  name: Cloning Bay
+  tier: 7
+  category: Internal - Advanced
+  description: Clone biological materials. Can create replacement organs or clone creatures (not Travellers).
+  rp_cost: 2000000
+  benefits:
+  - Organ cloning
+  - Creature cloning
+  - Biological research
+  - Emergency spare body
+  requirements:
+    vehicle_tier: 7
+- id: vu_i035
+  name: Core Amplifier Room
+  tier: 5
+  category: Internal - Core
+  description: Resonance chamber that amplifies Vehicle Core output. All vehicle systems +20% efficiency.
+  rp_cost: 300000
+  benefits:
+  - +20% all vehicle system efficiency
+  - Core resonance boost
+  - Faster summoning
+  requirements:
+    vehicle_tier: 5
+- id: vu_i036
+  name: Sauna/Bath House
+  tier: 1
+  category: Internal - Lifestyle
+  description: Traditional bath house with steam room. Simple comfort upgrade.
+  rp_cost: 2000
+  benefits:
+  - Relaxation
+  - Hygiene
+  - Minor recovery boost
+  requirements:
+    vehicle_tier: 1
+- id: vu_i037
+  name: Nursery
+  tier: 2
+  category: Internal - Lifestyle
+  description: Safe room for children born within the vehicle. System-monitored development.
+  rp_cost: 5000
+  benefits:
+  - Child safety
+  - Development monitoring
+  - Education systems
+  requirements:
+    vehicle_tier: 2
+- id: vu_i038
+  name: Trading Post Terminal
+  tier: 2
+  category: Internal - Trade
+  description: Remote access to nearby trading hubs. Buy and sell without leaving vehicle.
+  rp_cost: 10000
+  benefits:
+  - Remote trading
+  - Price comparison
+  - Auction access
+  - Delivery coordination
+  requirements:
+    vehicle_tier: 2
+- id: vu_i039
+  name: Escape Pod Bay
+  tier: 3
+  category: Internal - Safety
+  description: Emergency escape pods for vehicle abandonment. Each pod has 72h life support.
+  rp_cost: 15000
+  benefits:
+  - Emergency evacuation
+  - 72h life support per pod
+  - Homing beacon
+  - 4 pods standard
+  requirements:
+    vehicle_tier: 3
+- id: vu_i040
+  name: Shrine/Prayer Room
+  tier: 1
+  category: Internal - Spiritual
+  description: Quiet space for prayer, meditation, or reflection. Calming aura reduces stress.
+  rp_cost: 1500
+  benefits:
+  - Mental clarity
+  - Stress reduction
+  - Spiritual connection
+  requirements:
+    vehicle_tier: 1
+external_upgrades_list:
+- id: vu_e001
+  name: Reinforced Hull Plating
+  tier: 2
+  category: Defense
+  description: Extra armor plating bolted to vehicle exterior. Simple but effective.
+  rp_cost: 20000
+  effects:
+  - +30% hull HP
+  - +20% physical damage resistance
+  - -10% speed
+  compatible_domains:
+  - Land
+  - Navy
+  - Air
+- id: vu_e002
+  name: Thruster Enhancement
+  tier: 2
+  category: Mobility
+  description: Improved propulsion systems. Faster acceleration, higher top speed.
+  rp_cost: 25000
+  effects:
+  - +25% speed
+  - +30% acceleration
+  - +15% fuel consumption
+  compatible_domains:
+  - Land
+  - Air
+- id: vu_e003
+  name: Aquatic Conversion Kit
+  tier: 3
+  category: Mobility
+  description: Allows land vehicles to operate underwater. Sealed hull, water jets, depth rating.
+  rp_cost: 60000
+  effects:
+  - Underwater operation
+  - Depth rating to 500m
+  - Water jet propulsion
+  compatible_domains:
+  - Land
+- id: vu_e004
+  name: Flight Module
+  tier: 4
+  category: Mobility
+  description: Anti-gravity flight system. Allows land or navy vehicles to fly.
+  rp_cost: 200000
+  effects:
+  - Atmospheric flight
+  - Hover capability
+  - Vertical takeoff/landing
+  compatible_domains:
+  - Land
+  - Navy
+- id: vu_e005
+  name: Space Seal
+  tier: 4
+  category: Environment
+  description: Hermetically seals vehicle for space operation. Life support, radiation shielding, thermal control.
+  rp_cost: 150000
+  effects:
+  - Vacuum operation
+  - Radiation shielding
+  - Thermal regulation
+  - 48-hour life support
+  compatible_domains:
+  - Land
+  - Navy
+  - Air
+- id: vu_e006
+  name: Ramming Prow
+  tier: 2
+  category: Offense
+  description: Reinforced front end designed for ramming attacks. Massive damage on impact.
+  rp_cost: 15000
+  effects:
+  - Ramming damage = speed x weight
+  - +50% collision resistance
+  - Intimidation bonus
+  compatible_domains:
+  - Land
+  - Navy
+- id: vu_e007
+  name: Sensor Array
+  tier: 2
+  category: Detection
+  description: Enhanced detection systems. See threats before they see you.
+  rp_cost: 30000
+  effects:
+  - 50km detection range
+  - Identify tier and type
+  - Track up to 100 targets
+  compatible_domains:
+  - Land
+  - Navy
+  - Air
+- id: vu_e008
+  name: Warp Drive (Basic)
+  tier: 6
+  category: Mobility
+  description: Faster-than-light travel system. Required for interstellar travel.
+  rp_cost: 1000000
+  effects:
+  - FTL travel (10 light-years/hour)
+  - Dimensional corridor entry
+  - Emergency jump
+  compatible_domains:
+  - Land
+  - Navy
+  - Air
+- id: vu_e009
+  name: Harvesting Arms
+  tier: 2
+  category: Utility
+  description: Mechanical arms for resource gathering. Mine, harvest, and collect materials automatically.
+  rp_cost: 20000
+  effects:
+  - Auto-harvest resources
+  - Mining capability
+  - +30% gathering speed
+  compatible_domains:
+  - Land
+  - Navy
+- id: vu_e010
+  name: Deployable Turret System
+  tier: 3
+  category: Offense
+  description: Drop autonomous turrets that guard an area. Each turret operates for 24 hours.
+  rp_cost: 50000
+  effects:
+  - Deploy up to 4 turrets
+  - Auto-target hostiles
+  - 24-hour operation per turret
+  compatible_domains:
+  - Land
+  - Navy
+  - Air
+- id: vu_e011
+  name: Deployable Bridge
+  tier: 2
+  category: External - Utility
+  description: Extendable bridge system for crossing gaps up to 30m.
+  rp_cost: 8000
+  benefits:
+  - Gap crossing (30m)
+  - Load bearing
+  - Quick deployment (10s)
+  requirements:
+    vehicle_tier: 2
+- id: vu_e012
+  name: Camouflage Net
+  tier: 1
+  category: External - Stealth
+  description: System-enhanced camouflage netting. -80% detection chance.
+  rp_cost: 3000
+  benefits:
+  - -80% visual detection
+  - Thermal masking
+  - Radar absorption
+  requirements:
+    vehicle_tier: 1
+- id: vu_e013
+  name: Mining Drill
+  tier: 3
+  category: External - Production
+  description: Heavy-duty mining drill. Extract minerals and ores from terrain.
+  rp_cost: 25000
+  benefits:
+  - Mineral extraction
+  - Tunnel boring
+  - Core sample analysis
+  requirements:
+    vehicle_tier: 3
+- id: vu_e014
+  name: Grappling Harpoon
+  tier: 2
+  category: External - Utility
+  description: Launch harpoon with 200m cable. Pull objects, anchor vehicle, or capture targets.
+  rp_cost: 5000
+  benefits:
+  - 200m range
+  - Pull/anchor capability
+  - Target capture
+  requirements:
+    vehicle_tier: 2
+- id: vu_e015
+  name: Solar Panel Array
+  tier: 1
+  category: External - Energy
+  description: Deployable solar panels for passive energy generation.
+  rp_cost: 4000
+  benefits:
+  - Passive energy generation
+  - -15% RP consumption
+  - Emergency charging
+  requirements:
+    vehicle_tier: 1
+- id: vu_e016
+  name: Smoke Screen Generator
+  tier: 2
+  category: External - Defense
+  description: Deploy thick smoke screen covering 100m radius.
+  rp_cost: 6000
+  benefits:
+  - 100m smoke coverage
+  - Vision blocking
+  - Targeting disruption
+  - 30s duration
+  requirements:
+    vehicle_tier: 2
+- id: vu_e017
+  name: Battering Ram
+  tier: 2
+  category: External - Offense
+  description: Reinforced ram for breaking through barriers and enemy vehicle armor.
+  rp_cost: 7000
+  benefits:
+  - Barrier breaking
+  - Ram damage +200%
+  - Reinforced front
+  requirements:
+    vehicle_tier: 2
+- id: vu_e018
+  name: Drone Launcher
+  tier: 3
+  category: External - Recon
+  description: Launch reconnaissance drones for scouting. 5km range, live video feed.
+  rp_cost: 20000
+  benefits:
+  - 5km scout range
+  - Live video feed
+  - Night vision
+  - 3 drones included
+  requirements:
+    vehicle_tier: 3
+- id: vu_e019
+  name: Anchor System
+  tier: 1
+  category: External - Utility
+  description: Heavy anchor for stabilization in storms, high gravity, or during combat.
+  rp_cost: 2000
+  benefits:
+  - Storm stabilization
+  - Combat anchoring
+  - High-G resistance
+  requirements:
+    vehicle_tier: 1
+- id: vu_e020
+  name: Trophy Mount
+  tier: 1
+  category: External - Display
+  description: Exterior mount for conquered enemy trophies. Intimidation effect.
+  rp_cost: 1000
+  benefits:
+  - Intimidation aura
+  - Reputation display
+  - Fear effect on weak enemies
+  requirements:
+    vehicle_tier: 1

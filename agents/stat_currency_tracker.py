@@ -26,7 +26,8 @@ _STAT_GAIN = re.compile(
 )
 _RP_EARNED = re.compile(
     r"(?:(?:earned|gained|received|acquired)\s+(\d[\d,]*)\s*RP"
-    r"|RP\s*(?:earned|gained|received)\s*[:\-]?\s*(\d[\d,]*)\s*RP?)",
+    r"|RP\s*(?:earned|gained|received|acquired)\s*[:\-]?\s*(\d[\d,]*)"
+    r"|(\d[\d,]*)\s*RP\s*(?:earned|gained|received|acquired))",
     re.IGNORECASE,
 )
 _RP_SPENT = re.compile(
@@ -247,7 +248,7 @@ class StatCurrencyTracker(BaseAgent):
 
         # Extract RP earned
         for match in _RP_EARNED.finditer(prose):
-            raw = match.group(1) or match.group(2)
+            raw = match.group(1) or match.group(2) or match.group(3)
             amount = int(raw.replace(",", ""))
             changes["rp_earned"] += amount
             changes["raw_extractions"].append(

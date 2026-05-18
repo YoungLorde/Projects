@@ -20,7 +20,11 @@ from agents.scene_beat_generator import SceneBeatGenerator
 from agents.style_editor import StyleEditor
 from agents.style_extractor import StyleExtractor
 from agents.summarizer import Summarizer
+from agents.slice_of_life_scenes import SliceOfLifeSceneGenerator
 from agents.stat_currency_tracker import StatCurrencyTracker
+from agents.technology_infrastructure import TechnologyInfrastructureManager
+from agents.time_dilation import TimeDilationSystem
+from agents.vehicle_core_feeding import VehicleCoreFeeding
 from agents.word_count_enforcer import WordCountEnforcer
 
 __all__ = [
@@ -40,4 +44,8 @@ __all__ = [
     "ParameterEnforcer",
     "StatCurrencyTracker",
     "DatabaseManager",
+    "VehicleCoreFeeding",
+    "TimeDilationSystem",
+    "SliceOfLifeSceneGenerator",
+    "TechnologyInfrastructureManager",
 ]

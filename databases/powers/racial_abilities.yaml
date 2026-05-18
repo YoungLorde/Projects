@@ -1,244 +1,441 @@
----
 category: racial_abilities
-description: >
-  Innate abilities tied to specific species/races. These abilities are
-  granted by birth, not by the System, though the System recognizes and
-  enhances them. Each race has unique biological or metaphysical traits
-  that provide combat, survival, or utility advantages.
+description: 'Innate abilities tied to specific species/races. These abilities are granted by birth, not by the System, though
+  the System recognizes and enhances them. Each race has unique biological or metaphysical traits that provide combat, survival,
+  or utility advantages.
 
+  '
 humanoid_racial:
-  - id: RA-001
-    name: "Human Adaptability"
-    race: "Human"
-    type: passive
-    description: >
-      Humans have no innate racial ability — their advantage IS their
-      lack of specialization. Humans gain +10% bonus XP from all sources
-      and learn new skills 20% faster than any other species. The System
-      recognizes human neural plasticity as a unique trait. This makes
-      humans the fastest-leveling species in the universe, which is why
-      alien civilizations are nervous about Earth's System activation —
-      in 800 years, the Kael'thari reached Tier 8 average. Humans could
-      theoretically reach it in 200.
-    scaling: "XP bonus increases to +15% at level 50, +20% at level 100"
-    lore_notes: >
-      Human Adaptability is why alien factions are watching Earth closely.
-      A species that levels 5x faster than average is either an opportunity
-      or an existential threat. Mohamed's dual system on top of Human
-      Adaptability makes him a statistical impossibility.
+- id: RA-001
+  name: Human Adaptability
+  race: Human
+  type: passive
+  description: 'Humans have no innate racial ability — their advantage IS their lack of specialization. Humans gain +10% bonus
+    XP from all sources and learn new skills 20% faster than any other species. The System recognizes human neural plasticity
+    as a unique trait. This makes humans the fastest-leveling species in the universe, which is why alien civilizations are
+    nervous about Earth''s System activation — in 800 years, the Kael''thari reached Tier 8 average. Humans could theoretically
+    reach it in 200.
 
-  - id: RA-002
-    name: "Kael'thari Neural Network"
-    race: "Kael'thari"
-    type: passive_active
-    description: >
-      The Kael'thari possess a biological neural network that allows
-      direct brain-to-brain communication within 100m. This enables
-      instant data sharing, collaborative problem solving, and group
-      consciousness for complex tasks. In combat, a Kael'thari squad
-      operates with perfect coordination — no verbal commands needed.
-      Active use allows one Kael'thari to share sensory data with others.
-    scaling: "Range increases with INT. At INT 15: 500m. At INT 20: 2km."
-    lore_notes: >
-      The Neural Network is why the Kael'thari Technocracy functions
-      so efficiently. Their government decisions are made by literal
-      consensus — thousands of minds linked simultaneously. It also
-      makes them vulnerable — if a hostile entity breaches the network,
-      it can affect all connected minds.
+    '
+  scaling: XP bonus increases to +15% at level 50, +20% at level 100
+  lore_notes: 'Human Adaptability is why alien factions are watching Earth closely. A species that levels 5x faster than average
+    is either an opportunity or an existential threat. Mohamed''s dual system on top of Human Adaptability makes him a statistical
+    impossibility.
 
-  - id: RA-003
-    name: "Dravik Blood Fury"
-    race: "Dravik"
-    type: active
-    cost: "None (triggered by injury)"
-    description: >
-      When a Dravik drops below 30% HP, Blood Fury activates automatically.
-      STR and AGI increase by 75%, pain is completely suppressed, and
-      healing rate triples. The Dravik's eyes turn solid red, their
-      muscles visibly swell, and they emit a low-frequency growl that
-      induces fear in lower-tier creatures. Duration: until combat ends
-      or HP reaches 0. No exhaustion penalty afterward — the Dravik
-      physiology is built for this.
-    scaling: "Stat boost increases with END. At END 15: +100%."
-    lore_notes: >
-      Blood Fury is why you never corner a Dravik. The closer they
-      are to death, the more dangerous they become. Battle strategy
-      against Dravik: kill them fast or don't engage. Half-measures
-      just make them stronger.
+    '
+- id: RA-002
+  name: Kael'thari Neural Network
+  race: Kael'thari
+  type: passive_active
+  description: 'The Kael''thari possess a biological neural network that allows direct brain-to-brain communication within
+    100m. This enables instant data sharing, collaborative problem solving, and group consciousness for complex tasks. In
+    combat, a Kael''thari squad operates with perfect coordination — no verbal commands needed. Active use allows one Kael''thari
+    to share sensory data with others.
 
-  - id: RA-004
-    name: "Nexari Probability Sense"
-    race: "Nexari"
-    type: passive_active
-    description: >
-      Nexari perceive probability as a visible overlay on reality. They
-      see potential outcomes as branching paths — the most likely outcomes
-      appear solid, unlikely ones appear translucent. Actively, they can
-      "nudge" probability within a 5m radius, making unlikely outcomes
-      more probable. This isn't luck manipulation — it's quantum-level
-      probability adjustment.
-    scaling: "Nudge strength and range scale with INT and LCK."
-    lore_notes: >
-      Nexari Probability Sense makes them appear lucky, but it's a
-      deliberate skill. A trained Nexari can make a coin land on its
-      edge, make a bullet miss by millimeters, or ensure a critical
-      hit at the perfect moment. It's also why Nexari are banned from
-      most gambling establishments.
+    '
+  scaling: 'Range increases with INT. At INT 15: 500m. At INT 20: 2km.'
+  lore_notes: 'The Neural Network is why the Kael''thari Technocracy functions so efficiently. Their government decisions
+    are made by literal consensus — thousands of minds linked simultaneously. It also makes them vulnerable — if a hostile
+    entity breaches the network, it can affect all connected minds.
 
-  - id: RA-005
-    name: "Varak'shi Sand Walk"
-    race: "Varak'shi"
-    type: active
-    cost: "10 Stamina"
-    description: >
-      The Varak'shi can merge with sand, soil, and loose earth, moving
-      through it as if swimming through water. Maximum depth: 10m.
-      Speed: 50% of normal movement. They can sense vibrations through
-      the ground within 100m while submerged. Emerging from the ground
-      mid-combat provides a surprise attack bonus (+50% damage on first
-      strike).
-    scaling: "Depth, speed, and sensing range scale with AGI and PER."
-    lore_notes: >
-      Sand Walk is why desert warfare against the Varak'shi is suicide.
-      They attack from below, retreat into the earth, and sense every
-      footstep for 100 meters. Their fortress-cities are built on rock
-      foundations specifically to prevent enemy Sand Walkers from
-      bypassing walls.
+    '
+- id: RA-003
+  name: Dravik Blood Fury
+  race: Dravik
+  type: active
+  cost: None (triggered by injury)
+  description: 'When a Dravik drops below 30% HP, Blood Fury activates automatically. STR and AGI increase by 75%, pain is
+    completely suppressed, and healing rate triples. The Dravik''s eyes turn solid red, their muscles visibly swell, and they
+    emit a low-frequency growl that induces fear in lower-tier creatures. Duration: until combat ends or HP reaches 0. No
+    exhaustion penalty afterward — the Dravik physiology is built for this.
 
+    '
+  scaling: 'Stat boost increases with END. At END 15: +100%.'
+  lore_notes: 'Blood Fury is why you never corner a Dravik. The closer they are to death, the more dangerous they become.
+    Battle strategy against Dravik: kill them fast or don''t engage. Half-measures just make them stronger.
+
+    '
+- id: RA-004
+  name: Nexari Probability Sense
+  race: Nexari
+  type: passive_active
+  description: 'Nexari perceive probability as a visible overlay on reality. They see potential outcomes as branching paths
+    — the most likely outcomes appear solid, unlikely ones appear translucent. Actively, they can "nudge" probability within
+    a 5m radius, making unlikely outcomes more probable. This isn''t luck manipulation — it''s quantum-level probability adjustment.
+
+    '
+  scaling: Nudge strength and range scale with INT and LCK.
+  lore_notes: 'Nexari Probability Sense makes them appear lucky, but it''s a deliberate skill. A trained Nexari can make a
+    coin land on its edge, make a bullet miss by millimeters, or ensure a critical hit at the perfect moment. It''s also why
+    Nexari are banned from most gambling establishments.
+
+    '
+- id: RA-005
+  name: Varak'shi Sand Walk
+  race: Varak'shi
+  type: active
+  cost: 10 Stamina
+  description: 'The Varak''shi can merge with sand, soil, and loose earth, moving through it as if swimming through water.
+    Maximum depth: 10m. Speed: 50% of normal movement. They can sense vibrations through the ground within 100m while submerged.
+    Emerging from the ground mid-combat provides a surprise attack bonus (+50% damage on first strike).
+
+    '
+  scaling: Depth, speed, and sensing range scale with AGI and PER.
+  lore_notes: 'Sand Walk is why desert warfare against the Varak''shi is suicide. They attack from below, retreat into the
+    earth, and sense every footstep for 100 meters. Their fortress-cities are built on rock foundations specifically to prevent
+    enemy Sand Walkers from bypassing walls.
+
+    '
+- id: ra_h006
+  name: Ashborn Phoenix Burst
+  race: Ashborn
+  description: Self-immolate for massive AoE, reform from ashes. Unique resurrection mechanic.
+  tier: 2
+  rp_cost: 200
+  cooldown: 60s reform + 24h cooldown
+  scaling: END — faster reformation, less HP loss
+- id: ra_h007
+  name: Mirathi Mirror Self
+  race: Mirathi
+  description: Copy appearance, voice, and surface abilities of any observed being for 5 minutes.
+  tier: 2
+  rp_cost: 100
+  cooldown: 30 minutes
+  scaling: INT — better ability copying, longer duration
+- id: ra_h008
+  name: Chronari Temporal Echo
+  race: Chronari
+  description: Rewind personal time by 3 seconds. Undo one action or injury.
+  tier: 3
+  rp_cost: 300
+  cooldown: 60s
+  scaling: SYS — extends rewind duration, reduces cooldown
+- id: ra_h009
+  name: Gorath Blood Armor
+  race: Gorath
+  description: Shed acidic blood through pores to form hardened organic armor. +50% defense for 5 minutes.
+  tier: 2
+  rp_cost: HP-based (10% max HP)
+  cooldown: 10 minutes
+  scaling: END — thicker armor, less HP cost
+- id: ra_h010
+  name: Whispari Silence Domain
+  race: Whispari
+  description: Expand silence field to 20m for 30 seconds. Nullifies all sound-based abilities.
+  tier: 3
+  rp_cost: 250
+  cooldown: 2 minutes
+  scaling: INT — larger radius, longer duration
+- id: ra_h011
+  name: Frostkin Cryoblast
+  race: Frostkin
+  description: Release a freezing wave that drops temperature by 100C in 10m radius for 30 seconds.
+  tier: 2
+  rp_cost: 150
+  cooldown: 60s
+  scaling: END — lower temperature, larger radius
+- id: ra_h012
+  name: Ironblood Magnetic Pulse
+  race: Ironblood
+  description: Release magnetic pulse disarming all metal weapons and disrupting electronics in 15m.
+  tier: 2
+  rp_cost: 100
+  cooldown: 2 minutes
+  scaling: STR — stronger pulse, affects heavier weapons
+- id: ra_h013
+  name: Stoneborn Earthquake
+  race: Stoneborn
+  description: Slam ground to create localized earthquake. Topples structures, opens fissures.
+  tier: 3
+  rp_cost: 300
+  cooldown: 5 minutes
+  scaling: STR+END — larger area, deeper fissures
+- id: ra_h014
+  name: Windrunner Cyclone
+  race: Windrunner
+  description: Generate a personal cyclone. Deflects projectiles, lifts light enemies, enables flight.
+  tier: 3
+  rp_cost: 200
+  cooldown: 3 minutes
+  scaling: AGI — faster winds, larger cyclone, stronger deflection
+- id: ra_h015
+  name: Luminari Flash Nova
+  race: Luminari
+  description: Explode in a blinding flash of light. Blinds everything within 50m for 10 seconds.
+  tier: 2
+  rp_cost: 100
+  cooldown: 2 minutes
+  scaling: INT — brighter flash, longer blindness, larger radius
 insectoid_racial:
-  - id: RA-006
-    name: "Formicari Hive Link"
-    race: "Formicari"
-    type: passive
-    description: >
-      All Formicari within a colony share a telepathic connection with
-      their Queen. This link provides: real-time tactical coordination,
-      emotional synchronization, shared sensory data, and collective
-      memory access. The Hive Link cannot be jammed by conventional
-      means — it operates on a frequency the System itself uses.
-      Individual Formicari separated from the Hive Link experience
-      severe disorientation and depression.
-    scaling: "Range is theoretically unlimited (System-mediated)"
-    lore_notes: >
-      The Hive Link makes Formicari armies terrifyingly efficient.
-      A million soldiers moving as one mind with zero communication
-      lag. The weakness is the Queen — if she's killed or cut off,
-      the entire colony suffers immediate psychological collapse.
+- id: RA-006
+  name: Formicari Hive Link
+  race: Formicari
+  type: passive
+  description: 'All Formicari within a colony share a telepathic connection with their Queen. This link provides: real-time
+    tactical coordination, emotional synchronization, shared sensory data, and collective memory access. The Hive Link cannot
+    be jammed by conventional means — it operates on a frequency the System itself uses. Individual Formicari separated from
+    the Hive Link experience severe disorientation and depression.
 
-  - id: RA-007
-    name: "Chitin Adaptation"
-    race: "Various insectoid species"
-    type: passive
-    description: >
-      Insectoid species possess natural chitin armor that provides
-      physical damage reduction without equipment. Base reduction:
-      15% physical damage. The chitin can be shed and regrown,
-      with each regrowth slightly stronger than the last. System
-      enhancement makes chitin rival Tier 2-3 conventional armor.
-    scaling: "Chitin strength increases with END and level."
-    lore_notes: "A biological advantage that saves insectoids enormous RP on armor costs."
+    '
+  scaling: Range is theoretically unlimited (System-mediated)
+  lore_notes: 'The Hive Link makes Formicari armies terrifyingly efficient. A million soldiers moving as one mind with zero
+    communication lag. The weakness is the Queen — if she''s killed or cut off, the entire colony suffers immediate psychological
+    collapse.
 
+    '
+- id: RA-007
+  name: Chitin Adaptation
+  race: Various insectoid species
+  type: passive
+  description: 'Insectoid species possess natural chitin armor that provides physical damage reduction without equipment.
+    Base reduction: 15% physical damage. The chitin can be shed and regrown, with each regrowth slightly stronger than the
+    last. System enhancement makes chitin rival Tier 2-3 conventional armor.
+
+    '
+  scaling: Chitin strength increases with END and level.
+  lore_notes: A biological advantage that saves insectoids enormous RP on armor costs.
+- id: ra_i003
+  name: Mantari Blade Dance
+  race: Mantari
+  description: 5 attacks in 1 second with raptorial arms. Each can sever steel.
+  tier: 3
+  rp_cost: 200
+  cooldown: 30s
+  scaling: AGI — more attacks, faster execution
+- id: ra_i004
+  name: Beethari Fortress Mode
+  race: Beethari
+  description: Seal carapace for 95% damage reduction. Immobile for 30 seconds.
+  tier: 2
+  rp_cost: 50
+  cooldown: 5 minutes
+  scaling: END — longer duration, higher damage reduction
+- id: ra_i005
+  name: Weavari Grand Weave
+  race: Weavari
+  description: Create 30m web network detecting all movement. Can restrain Tier 3 creatures.
+  tier: 2
+  rp_cost: 150
+  cooldown: 10 minutes
+  scaling: INT — stronger webs, larger network, better detection
+- id: ra_i006
+  name: Cicadari Resonance Shatter
+  race: Cicadari
+  description: Hit the resonance frequency of any material, shattering it. Works on weapons, armor, and structures.
+  tier: 3
+  rp_cost: 250
+  cooldown: 90s
+  scaling: PER — affects stronger materials, faster frequency finding
+- id: ra_i007
+  name: Pillari Cocoon Transformation
+  race: Pillari
+  description: Enter cocoon for 1 hour. Emerge with stats redistributed and one new ability.
+  tier: 4
+  rp_cost: 1000
+  cooldown: 30 days
+  scaling: SYS — faster transformation, better stat redistribution
 reptilian_racial:
-  - id: RA-008
-    name: "Thermal Vision"
-    race: "Various reptilian species"
-    type: passive
-    description: >
-      Reptilian species perceive heat signatures as a secondary visual
-      layer. Living creatures appear as bright outlines against cooler
-      backgrounds. This provides effective night vision, tracking
-      capability (heat trails persist for 10-30 minutes), and the
-      ability to detect hidden enemies behind thin cover.
-    scaling: "Sensitivity and heat trail detection improve with PER."
-    lore_notes: "Sneaking past a reptilian requires complete thermal suppression."
+- id: RA-008
+  name: Thermal Vision
+  race: Various reptilian species
+  type: passive
+  description: 'Reptilian species perceive heat signatures as a secondary visual layer. Living creatures appear as bright
+    outlines against cooler backgrounds. This provides effective night vision, tracking capability (heat trails persist for
+    10-30 minutes), and the ability to detect hidden enemies behind thin cover.
 
-  - id: RA-009
-    name: "Regeneration"
-    race: "Saurix, select reptilian species"
-    type: passive
-    description: >
-      Enhanced healing factor that allows regeneration of lost limbs
-      and organs over time. Minor wounds (cuts, bruises) heal in
-      minutes. Major wounds (broken bones) heal in hours. Lost limbs
-      regenerate in days to weeks depending on severity. Cannot
-      regenerate if HP reaches 0 (death). System enhancement
-      accelerates regeneration significantly.
-    scaling: "Regeneration speed scales with VIT and END."
-    lore_notes: >
-      Saurix regeneration is feared by other species. You can wound
-      a Saurix, but unless you kill them outright, they'll be back
-      at full strength within days. This makes wars of attrition
-      against Saurix nearly impossible.
+    '
+  scaling: Sensitivity and heat trail detection improve with PER.
+  lore_notes: Sneaking past a reptilian requires complete thermal suppression.
+- id: RA-009
+  name: Regeneration
+  race: Saurix, select reptilian species
+  type: passive
+  description: 'Enhanced healing factor that allows regeneration of lost limbs and organs over time. Minor wounds (cuts, bruises)
+    heal in minutes. Major wounds (broken bones) heal in hours. Lost limbs regenerate in days to weeks depending on severity.
+    Cannot regenerate if HP reaches 0 (death). System enhancement accelerates regeneration significantly.
 
+    '
+  scaling: Regeneration speed scales with VIT and END.
+  lore_notes: 'Saurix regeneration is feared by other species. You can wound a Saurix, but unless you kill them outright,
+    they''ll be back at full strength within days. This makes wars of attrition against Saurix nearly impossible.
+
+    '
+- id: ra_r003
+  name: Basilari Stone Gaze
+  race: Basilari
+  description: Eye contact petrifies organic targets for 10 seconds.
+  tier: 3
+  rp_cost: 200
+  cooldown: 60s
+  scaling: PER — longer petrification, affects higher-tier targets
+- id: ra_r004
+  name: Venomari Venom Craft
+  race: Venomari
+  description: Secrete custom poison through skin. Choose paralytic, hallucinogenic, corrosive, or lethal.
+  tier: 2
+  rp_cost: 50
+  cooldown: 5 minutes per venom type change
+  scaling: INT — more potent venom, new venom types unlocked
+- id: ra_r005
+  name: Crocari Death Roll
+  race: Crocari
+  description: Grab target and rotate at high speed. Dismembers limbs, destroys equipment.
+  tier: 3
+  rp_cost: 150
+  cooldown: 45s
+  scaling: STR — faster rotation, higher damage, larger targets
+- id: ra_r006
+  name: Turthari Ancient Memory
+  race: Turthari
+  description: Access ancestral memories. Gain combat knowledge of any opponent species ever faced by Turthari.
+  tier: 3
+  rp_cost: 200
+  cooldown: 10 minutes
+  scaling: INT — access deeper memories, more detailed knowledge
+- id: ra_r007
+  name: Pterodari Sonic Dive
+  race: Pterodari
+  description: Dive from extreme altitude at supersonic speed. Impact creates sonic boom damaging all in 20m.
+  tier: 4
+  rp_cost: 400
+  cooldown: 5 minutes
+  scaling: AGI — faster dive, larger impact zone, more damage
 energy_racial:
-  - id: RA-010
-    name: "Energy Form Shift"
-    race: "Luminari"
-    type: active
-    cost: "50 RP/minute"
-    description: >
-      Luminari can shift between solid physical form and pure energy
-      form. In energy form: immune to physical damage, can move at
-      light speed for short bursts, can pass through solid matter,
-      but cannot interact with physical objects or use physical
-      abilities. Shifting takes 3 seconds and produces a brilliant
-      flash of light.
-    scaling: "Duration in energy form and shift speed scale with SYS."
-    lore_notes: >
-      Energy Form Shift makes Luminari nearly impossible to kill by
-      conventional means. The counter: System-dampening fields that
-      prevent the shift, or attacks that target System energy directly.
+- id: RA-010
+  name: Energy Form Shift
+  race: Luminari
+  type: active
+  cost: 50 RP/minute
+  description: 'Luminari can shift between solid physical form and pure energy form. In energy form: immune to physical damage,
+    can move at light speed for short bursts, can pass through solid matter, but cannot interact with physical objects or
+    use physical abilities. Shifting takes 3 seconds and produces a brilliant flash of light.
 
-  - id: RA-011
-    name: "Void Phase"
-    race: "Void Wraith"
-    type: passive_active
-    description: >
-      Void Wraiths naturally exist partially in void space. Passively,
-      this makes them partially transparent and reduces incoming damage
-      by 25% (attacks partially pass through). Actively, they can fully
-      enter void space for up to 10 seconds — becoming completely
-      invisible and intangible but unable to interact with the physical
-      world.
-    scaling: "Phase duration and damage reduction scale with SYS."
-    lore_notes: >
-      Void Wraiths are terrifying opponents because you can never
-      fully hit them. Every attack deals reduced damage. And if they
-      choose to phase out completely, you can't touch them at all.
+    '
+  scaling: Duration in energy form and shift speed scale with SYS.
+  lore_notes: 'Energy Form Shift makes Luminari nearly impossible to kill by conventional means. The counter: System-dampening
+    fields that prevent the shift, or attacks that target System energy directly.
 
+    '
+- id: RA-011
+  name: Void Phase
+  race: Void Wraith
+  type: passive_active
+  description: 'Void Wraiths naturally exist partially in void space. Passively, this makes them partially transparent and
+    reduces incoming damage by 25% (attacks partially pass through). Actively, they can fully enter void space for up to 10
+    seconds — becoming completely invisible and intangible but unable to interact with the physical world.
+
+    '
+  scaling: Phase duration and damage reduction scale with SYS.
+  lore_notes: 'Void Wraiths are terrifying opponents because you can never fully hit them. Every attack deals reduced damage.
+    And if they choose to phase out completely, you can''t touch them at all.
+
+    '
+- id: ra_e003
+  name: Neutroni Neutron Pulse
+  race: Neutroni
+  description: Release radiation burst ignoring all physical defenses.
+  tier: 4
+  rp_cost: 500
+  cooldown: 5 minutes
+  scaling: END — wider pulse, more intense radiation
+- id: ra_e004
+  name: Aetheri Aether Walk
+  race: Aetheri
+  description: Step between dimensions to teleport up to 100m.
+  tier: 3
+  rp_cost: 200
+  cooldown: 30s
+  scaling: INT — longer range, can bring passengers
+- id: ra_e005
+  name: Echomind Idea Projection
+  race: Echomind
+  description: Manifest a thought as physical reality for 10 seconds. Limited by imagination and INT.
+  tier: 4
+  rp_cost: 400
+  cooldown: 2 minutes
+  scaling: INT — more complex and powerful manifestations
+- id: ra_e006
+  name: Gravitoni Singularity Seed
+  race: Gravitoni
+  description: Create a micro black hole lasting 5 seconds. Pulls everything within 10m toward center.
+  tier: 5
+  rp_cost: 800
+  cooldown: 10 minutes
+  scaling: STR — stronger gravitational pull, longer duration
+- id: ra_e007
+  name: Psioni Mind Link
+  race: Psioni
+  description: Create telepathic link with up to 10 individuals. Share thoughts, memories, and coordination.
+  tier: 2
+  rp_cost: 50
+  cooldown: None (maintained)
+  scaling: INT — more links, longer range, deeper sharing
 silicon_void_racial:
-  - id: RA-012
-    name: "Crystal Resonance"
-    race: "Crystal Shapers"
-    type: active
-    cost: "30 RP"
-    description: >
-      Crystal Shapers can manipulate crystalline structures through
-      resonance — growing, shaping, and shattering crystals within
-      15m. This allows them to create crystalline barriers, weapons,
-      and structures from raw minerals. They can also resonate with
-      Vehicle Cores (which are crystalline), sensing their tier and
-      condition without physical contact.
-    scaling: "Range, complexity, and core sensing distance scale with INT."
-    lore_notes: >
-      Crystal Resonance makes Crystal Shapers incredibly valuable as
-      Core Technicians. They can diagnose core problems that no scanner
-      can detect. The Forge Masters recruit Crystal Shapers aggressively.
+- id: RA-012
+  name: Crystal Resonance
+  race: Crystal Shapers
+  type: active
+  cost: 30 RP
+  description: 'Crystal Shapers can manipulate crystalline structures through resonance — growing, shaping, and shattering
+    crystals within 15m. This allows them to create crystalline barriers, weapons, and structures from raw minerals. They
+    can also resonate with Vehicle Cores (which are crystalline), sensing their tier and condition without physical contact.
 
-  - id: RA-013
-    name: "Mechanical Integration"
-    race: "Automari"
-    type: passive
-    description: >
-      Automari can interface directly with any mechanical or electronic
-      system through physical contact. They can read data, control
-      machinery, and diagnose malfunctions without tools. This extends
-      to System-enhanced technology. They cannot control living beings
-      or Vehicle Cores (which resist external control), but everything
-      else with a circuit is accessible.
-    scaling: "Integration speed and complexity scale with INT and SYS."
-    lore_notes: >
-      Automari mechanics are the best in the universe. They don't
-      need diagnostic tools — they ARE the diagnostic tool. A single
-      Automari engineer can maintain a fleet that would require 50
-      organic technicians.
+    '
+  scaling: Range, complexity, and core sensing distance scale with INT.
+  lore_notes: 'Crystal Resonance makes Crystal Shapers incredibly valuable as Core Technicians. They can diagnose core problems
+    that no scanner can detect. The Forge Masters recruit Crystal Shapers aggressively.
+
+    '
+- id: RA-013
+  name: Mechanical Integration
+  race: Automari
+  type: passive
+  description: 'Automari can interface directly with any mechanical or electronic system through physical contact. They can
+    read data, control machinery, and diagnose malfunctions without tools. This extends to System-enhanced technology. They
+    cannot control living beings or Vehicle Cores (which resist external control), but everything else with a circuit is accessible.
+
+    '
+  scaling: Integration speed and complexity scale with INT and SYS.
+  lore_notes: 'Automari mechanics are the best in the universe. They don''t need diagnostic tools — they ARE the diagnostic
+    tool. A single Automari engineer can maintain a fleet that would require 50 organic technicians.
+
+    '
+- id: ra_sv003
+  name: Glassborn Shatter Reform
+  race: Glassborn
+  description: Deliberately shatter body into razor fragments, reform at new location within 15m.
+  tier: 2
+  rp_cost: 100
+  cooldown: 30s
+  scaling: AGI — faster reformation, more fragment damage
+- id: ra_sv004
+  name: Ferrite Metal Morph
+  race: Ferrite
+  description: Reshape any body part into weapon or tool (blade, hammer, shield, drill) in 2 seconds.
+  tier: 1
+  rp_cost: 20
+  cooldown: 5s
+  scaling: STR — harder materials, sharper edges, more complex shapes
+- id: ra_sv005
+  name: Nebulith Nebula Form
+  race: Nebulith
+  description: Disperse into gas cloud. Immune to physical, covers 50m area, sense everything within.
+  tier: 3
+  rp_cost: 300
+  cooldown: 10 minutes
+  scaling: END — larger cloud, longer duration, denser sensing
+- id: ra_sv006
+  name: Obsidari Shard Storm
+  race: Obsidari
+  description: Explode outer layer into razor shards flying in all directions. 15m lethal radius.
+  tier: 3
+  rp_cost: 200
+  cooldown: 5 minutes (must reform outer layer)
+  scaling: END — more shards, faster reformation
+- id: ra_sv007
+  name: Voidwalker Reality Tear
+  race: Voidwalker
+  description: Tear a hole in reality to the void. Anything that falls in is lost to the void dimension.
+  tier: 5
+  rp_cost: 1000
+  cooldown: 1 hour
+  scaling: SYS — larger tear, longer duration, more stable edges

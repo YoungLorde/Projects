@@ -1,337 +1,1622 @@
-# Monsters Database — Tier 1-5 (Common Creatures)
-# These are the most frequently encountered creatures in the RP Conversion universe.
-# Tier 1 = weakest, Tier 5 = challenging for mid-level Travellers.
-
 creatures:
-
-  # ── Tier 1: Starter Zone Creatures ─────────────────────────
-
-  - id: mon_001
-    name: "Wasteland Rat"
-    tier: 1
-    type: "Beast"
-    habitat: ["wastelands", "ruins", "sewers"]
-    description: "Mutated rodent the size of a large dog. Travels in packs of 3-8. Cowardly alone, aggressive in numbers."
-    base_stats: { STR: 2, AGI: 5, END: 2, INT: 1, PER: 4, LCK: 2 }
-    abilities: ["Gnaw (continuous damage)", "Pack Frenzy (+1 STR per nearby packmate)"]
-    rp_reward: 5
-    loot_table: ["Rat Hide (common)", "Rat Fang (common)", "Infected Claw (uncommon)"]
-    danger_notes: "Pack Frenzy makes large groups dangerous. Separate and pick off individuals."
-    weak_to: ["Fire", "Sonic"]
-    resistant_to: ["Poison"]
-
-  - id: mon_002
-    name: "Rubble Crawler"
-    tier: 1
-    type: "Insectoid"
-    habitat: ["collapsed buildings", "rubble fields", "quarries"]
-    description: "Six-legged arthropod with stone-mimicking chitin. Lies dormant in rubble until prey steps on it."
-    base_stats: { STR: 4, AGI: 2, END: 5, INT: 1, PER: 6, LCK: 1 }
-    abilities: ["Ambush Strike (2x damage from hidden)", "Stone Shell (50% physical damage reduction)"]
-    rp_reward: 8
-    loot_table: ["Stone Chitin Fragment (common)", "Crawler Mandible (common)", "Mimicry Gland (rare)"]
-    danger_notes: "Nearly invisible in rubble. Use PER-based scanning before entering rubble zones."
-    weak_to: ["Blunt force", "Vibration"]
-    resistant_to: ["Piercing", "Cold"]
-
-  - id: mon_003
-    name: "Dust Worm"
-    tier: 1
-    type: "Beast"
-    habitat: ["deserts", "dry plains", "sand dunes"]
-    description: "1-meter segmented worm that burrows through loose soil. Detects prey through vibrations."
-    base_stats: { STR: 3, AGI: 3, END: 4, INT: 1, PER: 7, LCK: 1 }
-    abilities: ["Burrow (untargetable while underground)", "Eruption Strike (surprise attack from below)"]
-    rp_reward: 6
-    loot_table: ["Worm Segment (common)", "Burrowing Gland (uncommon)", "Tremor Sensor Organ (rare)"]
-    danger_notes: "Stand on solid rock to avoid tremor detection. They won't surface onto hard ground."
-    weak_to: ["Electricity", "Fire"]
-    resistant_to: ["Earth-based attacks"]
-
-  - id: mon_004
-    name: "Scrap Golem"
-    tier: 1
-    type: "Construct"
-    habitat: ["junkyards", "abandoned factories", "vehicle graveyards"]
-    description: "Animated pile of scrap metal held together by residual System energy. Slow but hits hard."
-    base_stats: { STR: 6, AGI: 1, END: 7, INT: 1, PER: 2, LCK: 1 }
-    abilities: ["Heavy Slam (high damage, slow)", "Scrap Armor (regenerates armor from nearby metal)"]
-    rp_reward: 10
-    loot_table: ["Scrap Metal (common)", "System Energy Fragment (uncommon)", "Core Shard (rare)"]
-    danger_notes: "Lure away from metal-rich areas to prevent Scrap Armor regeneration."
-    weak_to: ["Acid", "Magnetic attacks"]
-    resistant_to: ["Physical", "Cold"]
-
-  - id: mon_005
-    name: "Flicker Moth"
-    tier: 1
-    type: "Insectoid"
-    habitat: ["forests", "caves", "ruins at night"]
-    description: "Large bioluminescent moth that mesmerizes prey with light patterns. Drains energy on contact."
-    base_stats: { STR: 1, AGI: 7, END: 2, INT: 2, PER: 5, LCK: 3 }
-    abilities: ["Mesmerize (INT save or stunned 3s)", "Energy Drain (steals RP on contact)"]
-    rp_reward: 7
-    loot_table: ["Luminous Wing Dust (common)", "Flicker Gland (uncommon)", "Mesmer Pattern (rare)"]
-    danger_notes: "Close eyes or use filtered visor to avoid Mesmerize. Quick kills before they drain RP."
-    weak_to: ["Fire", "Darkness"]
-    resistant_to: ["Light-based attacks"]
-
-  - id: mon_006
-    name: "Feral Hound"
-    tier: 1
-    type: "Beast"
-    habitat: ["everywhere — most common creature in post-System Earth"]
-    description: "System-mutated canine. Larger, smarter, and more aggressive than pre-System dogs. Packs of 5-15."
-    base_stats: { STR: 4, AGI: 6, END: 4, INT: 2, PER: 6, LCK: 2 }
-    abilities: ["Pack Tactics (+2 AGI in groups)", "Hamstring Bite (reduces target AGI by 3 for 30s)"]
-    rp_reward: 6
-    loot_table: ["Feral Hide (common)", "Sharp Fang (common)", "Alpha Mane (rare — alpha only)"]
-    danger_notes: "Kill the Alpha first — pack scatters without leadership."
-    weak_to: ["Fire", "Loud noises"]
-    resistant_to: ["Cold"]
-
-  - id: mon_007
-    name: "Corpse Vine"
-    tier: 1
-    type: "Plant"
-    habitat: ["swamps", "ruins", "abandoned areas"]
-    description: "Carnivorous plant that disguises itself as dead vegetation. Constricts prey with thorned tendrils."
-    base_stats: { STR: 5, AGI: 1, END: 6, INT: 1, PER: 4, LCK: 1 }
-    abilities: ["Constrict (grapple + continuous damage)", "Thorn Injection (poison DoT)"]
-    rp_reward: 8
-    loot_table: ["Vine Fiber (common)", "Thorn Sac (uncommon)", "Digestive Enzyme (rare)"]
-    danger_notes: "Immobile — if you spot it, simply go around. Check dead vegetation before approaching."
-    weak_to: ["Fire", "Defoliant"]
-    resistant_to: ["Physical (piercing)", "Water"]
-
-  # ── Tier 2: Early Challenge Creatures ──────────────────────
-
-  - id: mon_008
-    name: "Ironjaw Boar"
-    tier: 2
-    type: "Beast"
-    habitat: ["forests", "grasslands", "foothills"]
-    description: "Boar with System-enhanced jaw muscles and metallic tusks. Charges with devastating force."
-    base_stats: { STR: 9, AGI: 5, END: 8, INT: 2, PER: 5, LCK: 2 }
-    abilities: ["Charge (double damage on first hit after 10m run)", "Iron Tusks (ignores 30% armor)"]
-    rp_reward: 20
-    loot_table: ["Iron Tusk (uncommon)", "Reinforced Hide (uncommon)", "Boar Heart (rare)"]
-    danger_notes: "Sidestep the charge — they can't turn quickly. Attack from the sides."
-    weak_to: ["Pit traps", "Electricity"]
-    resistant_to: ["Blunt force", "Cold"]
-
-  - id: mon_009
-    name: "Shade Stalker"
-    tier: 2
-    type: "Aberration"
-    habitat: ["shadows", "dark buildings", "underground"]
-    description: "Semi-corporeal predator that exists partially in shadow dimension. Attacks from darkness."
-    base_stats: { STR: 6, AGI: 9, END: 4, INT: 4, PER: 8, LCK: 4 }
-    abilities: ["Shadow Strike (attack from any shadow within 20m)", "Incorporeal (50% miss chance in dim light)"]
-    rp_reward: 25
-    loot_table: ["Shadow Essence (uncommon)", "Shade Fang (uncommon)", "Dark Core (rare)"]
-    danger_notes: "Illuminate the area to remove Incorporeal. They're fragile in full light."
-    weak_to: ["Light", "Fire", "Holy"]
-    resistant_to: ["Physical (in darkness)", "Cold"]
-
-  - id: mon_010
-    name: "Rock Titan Beetle"
-    tier: 2
-    type: "Insectoid"
-    habitat: ["mountains", "caves", "quarries"]
-    description: "Massive beetle (2m long) with stone-like carapace. Territorial but non-aggressive unless provoked."
-    base_stats: { STR: 8, AGI: 2, END: 12, INT: 1, PER: 3, LCK: 2 }
-    abilities: ["Carapace Shield (80% damage reduction from above)", "Ground Slam (AoE stun)"]
-    rp_reward: 22
-    loot_table: ["Rock Carapace Plate (uncommon)", "Titan Beetle Horn (uncommon)", "Geological Crystal (rare)"]
-    danger_notes: "Attack the underside. Flip it with explosives or gravity manipulation."
-    weak_to: ["Sonic attacks", "Acid"]
-    resistant_to: ["Physical", "Cold", "Fire"]
-
-  - id: mon_011
-    name: "Venomweb Spinner"
-    tier: 2
-    type: "Insectoid"
-    habitat: ["forests", "caves", "abandoned structures"]
-    description: "Spider the size of a car. Creates sticky, venomous webs across paths and doorways."
-    base_stats: { STR: 5, AGI: 8, END: 5, INT: 3, PER: 9, LCK: 3 }
-    abilities: ["Web Trap (immobilize + poison)", "Wall Crawl", "Venom Bite (paralysis)"]
-    rp_reward: 24
-    loot_table: ["Venom Silk (uncommon)", "Spider Fang (uncommon)", "Paralytic Gland (rare)", "Web Sac (rare)"]
-    danger_notes: "Watch for web tripwires. Burn webs before engaging. Don't let it get above you."
-    weak_to: ["Fire", "Defoliant"]
-    resistant_to: ["Poison"]
-
-  - id: mon_012
-    name: "Storm Hawk"
-    tier: 2
-    type: "Beast"
-    habitat: ["mountains", "open plains", "coastal cliffs"]
-    description: "Raptor with 4m wingspan. Talons conduct electricity. Hunts by diving from extreme altitude."
-    base_stats: { STR: 6, AGI: 11, END: 5, INT: 3, PER: 12, LCK: 3 }
-    abilities: ["Thunder Dive (3x damage aerial attack + electric damage)", "Storm Call (minor weather manipulation)"]
-    rp_reward: 28
-    loot_table: ["Storm Feather (uncommon)", "Conductive Talon (uncommon)", "Storm Gland (rare)"]
-    danger_notes: "Fight in enclosed spaces to negate aerial advantage. Ground it with nets or magnetic attacks."
-    weak_to: ["Grounding", "Nets/restraints"]
-    resistant_to: ["Electricity", "Wind"]
-
-  # ── Tier 3: Mid-Level Threats ──────────────────────────────
-
-  - id: mon_013
-    name: "Tunnel Wurm"
-    tier: 3
-    type: "Beast"
-    habitat: ["underground", "cave systems", "tunnel networks"]
-    description: "10-meter armored worm with acidic secretions. Creates tunnel networks. Ambush predator."
-    base_stats: { STR: 12, AGI: 4, END: 14, INT: 2, PER: 8, LCK: 2 }
-    abilities: ["Acid Spray (cone AoE, armor-degrading)", "Tunnel Collapse (cave-in trap)", "Devour (swallow medium targets)"]
-    rp_reward: 60
-    loot_table: ["Wurm Scale (uncommon)", "Acid Gland (rare)", "Wurm Heart (rare)", "Tunnel Map Fragment (rare)"]
-    danger_notes: "Avoid tunnels with acid-etched walls. Attack the softer segments between armor plates."
-    weak_to: ["Cold", "Sonic resonance"]
-    resistant_to: ["Acid", "Physical"]
-
-  - id: mon_014
-    name: "Mirage Hunter"
-    tier: 3
-    type: "Aberration"
-    habitat: ["deserts", "heat-distorted zones", "dimensional rifts"]
-    description: "Predator that creates illusory copies of itself. The real one attacks while victims target mirages."
-    base_stats: { STR: 8, AGI: 10, END: 6, INT: 7, PER: 9, LCK: 5 }
-    abilities: ["Mirror Image (create 3 identical illusions)", "Refraction Strike (attack from unexpected angle)", "Heat Shimmer (passive concealment)"]
-    rp_reward: 55
-    loot_table: ["Mirage Crystal (rare)", "Refraction Lens (rare)", "Illusory Hide (uncommon)"]
-    danger_notes: "Use thermal or tremor sensing — illusions have no heat or weight. Area attacks hit all copies."
-    weak_to: ["Area-of-effect attacks", "Tremorsense", "Cold (disrupts heat shimmer)"]
-    resistant_to: ["Single-target attacks", "Visual-based abilities"]
-
-  - id: mon_015
-    name: "Forge Spider"
-    tier: 3
-    type: "Construct"
-    habitat: ["abandoned forges", "industrial ruins", "volcanic areas"]
-    description: "Mechanical spider built by unknown creators. Produces molten metal internally. Webs are razor-sharp wire."
-    base_stats: { STR: 10, AGI: 7, END: 9, INT: 5, PER: 7, LCK: 2 }
-    abilities: ["Wire Web (razor damage on contact)", "Molten Spit (fire + armor melt)", "Self-Repair (regenerate 5% HP/minute near metal)"]
-    rp_reward: 65
-    loot_table: ["Forge Wire (rare)", "Molten Core Fragment (rare)", "Mechanical Fang (uncommon)", "Heat-Proof Plate (rare)"]
-    danger_notes: "Disable Self-Repair by fighting away from metal sources. Wire webs are invisible in low light — use enhanced vision."
-    weak_to: ["EMP", "Water (thermal shock)", "Acid"]
-    resistant_to: ["Fire", "Physical", "Poison"]
-
-  - id: mon_016
-    name: "Carrion Lord"
-    tier: 3
-    type: "Undead"
-    habitat: ["battlefields", "mass graves", "necropolis zones"]
-    description: "Massive animated corpse amalgamation — dozens of bodies fused into one towering horror. Absorbs more corpses to grow."
-    base_stats: { STR: 14, AGI: 3, END: 16, INT: 3, PER: 5, LCK: 1 }
-    abilities: ["Corpse Absorption (heal by consuming dead bodies)", "Plague Aura (disease DoT in 10m)", "Limb Launch (throw body parts as projectiles)"]
-    rp_reward: 70
-    loot_table: ["Necrotic Core (rare)", "Plague Crystal (rare)", "Undead Sinew (uncommon)"]
-    danger_notes: "Burn all corpses in the area before engaging to prevent Corpse Absorption. Stay out of Plague Aura range."
-    weak_to: ["Fire", "Holy", "Purification"]
-    resistant_to: ["Physical", "Poison", "Cold"]
-
-  # ── Tier 4: Serious Threats ────────────────────────────────
-
-  - id: mon_017
-    name: "Void Stalker"
-    tier: 4
-    type: "Aberration"
-    habitat: ["dimensional rifts", "void zones", "deep space"]
-    description: "Predator from between dimensions. Partially exists outside normal space. Can reach through walls."
-    base_stats: { STR: 11, AGI: 12, END: 8, INT: 8, PER: 10, LCK: 3 }
-    abilities: ["Phase Attack (strike through solid objects)", "Dimensional Anchor (prevent target teleportation)", "Void Scream (psychic AoE damage)"]
-    rp_reward: 150
-    loot_table: ["Void Crystal (rare)", "Phase Claw (rare)", "Dimensional Fragment (epic)", "Void Essence (epic)"]
-    danger_notes: "Cannot be blocked by conventional means. Dimensional anchoring fields force them fully into reality."
-    weak_to: ["Dimensional anchors", "System-enhanced weapons", "Light energy"]
-    resistant_to: ["Physical (partial phase)", "Elemental"]
-
-  - id: mon_018
-    name: "Siege Beetle"
-    tier: 4
-    type: "Insectoid"
-    habitat: ["fortified areas", "walls", "defensive structures"]
-    description: "Building-sized beetle evolved to breach fortifications. Ram-horn can shatter concrete. Used by some factions as siege weapons."
-    base_stats: { STR: 18, AGI: 2, END: 20, INT: 2, PER: 4, LCK: 1 }
-    abilities: ["Siege Ram (devastating structure damage)", "Tremor Walk (knockdown in 30m)", "Hardened Shell (immune to small arms)"]
-    rp_reward: 180
-    loot_table: ["Siege Horn Fragment (rare)", "Ultra-Dense Chitin (rare)", "Beetle Core Crystal (epic)"]
-    danger_notes: "Target the leg joints — they can't turn if legs are damaged. Heavy weapons only."
-    weak_to: ["Joint targeting", "Sonic resonance", "Acid"]
-    resistant_to: ["Physical (small arms)", "Fire", "Cold"]
-
-  - id: mon_019
-    name: "Psychic Leech"
-    tier: 4
-    type: "Aberration"
-    habitat: ["psychic hotspots", "ancient ruins", "places of mass death"]
-    description: "Invisible predator that feeds on mental energy. Victims experience memory loss and stat drain."
-    base_stats: { STR: 3, AGI: 8, END: 6, INT: 14, PER: 12, LCK: 5 }
-    abilities: ["Mental Drain (steal INT temporarily)", "Memory Erase (target forgets last 10 minutes)", "Psychic Invisibility (undetectable without INT > 10)"]
-    rp_reward: 160
-    loot_table: ["Psychic Crystal (rare)", "Memory Fragment (epic)", "Neural Leech Organ (epic)"]
-    danger_notes: "Only detectable with high INT or anti-psychic equipment. Work in pairs — one watches for behavioral changes in the other."
-    weak_to: ["Anti-psychic fields", "Electromagnetic pulse", "High INT attacks"]
-    resistant_to: ["Physical (invisible)", "Elemental"]
-
-  # ── Tier 5: Elite Threats ──────────────────────────────────
-
-  - id: mon_020
-    name: "Elder Wurm"
-    tier: 5
-    type: "Beast"
-    habitat: ["deep underground", "planet cores", "ancient tunnels"]
-    description: "100-meter ancient worm. Has lived for millennia. Territorial over vast underground domains."
-    base_stats: { STR: 22, AGI: 3, END: 25, INT: 5, PER: 10, LCK: 3 }
-    abilities: ["Earthquake (surface-level AoE)", "Acid Lake (flood tunnel with acid)", "Swallow Whole (consume vehicles)", "Tunnel Network (pre-built escape routes)"]
-    rp_reward: 500
-    loot_table: ["Elder Scale (epic)", "Primordial Acid (epic)", "Wurm Core (legendary)", "Ancient Mineral Deposit (epic)"]
-    danger_notes: "Do NOT fight underground — it controls the terrain. Lure to surface. Vehicle-tier weapons recommended."
-    weak_to: ["Surface combat", "Cold (slows)", "Sonic resonance"]
-    resistant_to: ["Acid", "Physical", "Fire", "Earth"]
-
-  - id: mon_021
-    name: "Storm Colossus"
-    tier: 5
-    type: "Elemental"
-    habitat: ["open ocean", "storm systems", "atmospheric layers"]
-    description: "Living storm system. 50-meter humanoid form made of lightning, rain, and wind. Generates its own weather."
-    base_stats: { STR: 18, AGI: 15, END: 16, INT: 8, PER: 14, LCK: 5 }
-    abilities: ["Lightning Barrage (multi-target electric)", "Hurricane Force (knockback everything in 100m)", "Rain of Ruin (acid rain AoE)", "Storm Regeneration (heals in rain)"]
-    rp_reward: 600
-    loot_table: ["Storm Core (legendary)", "Lightning Crystal (epic)", "Tempest Essence (epic)", "Weather Seed (legendary)"]
-    danger_notes: "Fight in enclosed spaces or underground to limit weather abilities. Grounding equipment essential."
-    weak_to: ["Earth anchoring", "Vacuum (no air = no storm)", "Grounding"]
-    resistant_to: ["Electricity", "Water", "Wind", "Cold"]
-
-  - id: mon_022
-    name: "Rift Behemoth"
-    tier: 5
-    type: "Aberration"
-    habitat: ["dimensional rifts", "unstable zones", "between worlds"]
-    description: "Creature that straddles multiple dimensions simultaneously. Attacks in one dimension affect all connected ones."
-    base_stats: { STR: 20, AGI: 8, END: 18, INT: 10, PER: 12, LCK: 4 }
-    abilities: ["Multi-Dimensional Strike (hits targets in parallel dimensions)", "Rift Tear (open unstable portals)", "Reality Anchor (immune to dimensional effects)", "Phase Shift (teleport between dimensions)"]
-    rp_reward: 700
-    loot_table: ["Rift Crystal (legendary)", "Dimensional Anchor Stone (epic)", "Behemoth Core (legendary)", "Reality Fragment (legendary)"]
-    danger_notes: "Requires dimensional anchoring to fight. Otherwise it simply shifts to another dimension when damaged."
-    weak_to: ["Dimensional anchors", "System-level attacks", "Void energy"]
-    resistant_to: ["Physical", "Elemental", "Psychic"]
-
-  - id: mon_023
-    name: "Apex Predator"
-    tier: 5
-    type: "Beast"
-    habitat: ["apex territories (any biome)"]
-    description: "System-designated top predator of any given zone. Adapts to counter whatever kills it. Each death makes it stronger."
-    base_stats: { STR: 16, AGI: 14, END: 15, INT: 8, PER: 13, LCK: 6 }
-    abilities: ["Adaptive Evolution (gain resistance to last damage type that killed it)", "Apex Authority (lesser creatures flee)", "Perfect Senses (cannot be ambushed)", "Kill Counter (stats increase per kill)"]
-    rp_reward: 550
-    loot_table: ["Apex Fang (epic)", "Adaptive Tissue (epic)", "Evolution Crystal (legendary)", "Apex Core (legendary)"]
-    danger_notes: "Check System records for this specific Apex's death history — don't use whatever killed it last time. Vary attack types."
-    weak_to: ["Varies (adapted against last cause of death)"]
-    resistant_to: ["Varies (resistant to last cause of death)"]
+- id: mon_001
+  name: Wasteland Rat
+  tier: 1
+  type: Beast
+  habitat:
+  - wastelands
+  - ruins
+  - sewers
+  description: Mutated rodent the size of a large dog. Travels in packs of 3-8. Cowardly alone, aggressive in numbers.
+  base_stats:
+    STR: 2
+    AGI: 5
+    END: 2
+    INT: 1
+    PER: 4
+    LCK: 2
+  abilities:
+  - Gnaw (continuous damage)
+  - Pack Frenzy (+1 STR per nearby packmate)
+  rp_reward: 5
+  loot_table:
+  - Rat Hide (common)
+  - Rat Fang (common)
+  - Infected Claw (uncommon)
+  danger_notes: Pack Frenzy makes large groups dangerous. Separate and pick off individuals.
+  weak_to:
+  - Fire
+  - Sonic
+  resistant_to:
+  - Poison
+- id: mon_002
+  name: Rubble Crawler
+  tier: 1
+  type: Insectoid
+  habitat:
+  - collapsed buildings
+  - rubble fields
+  - quarries
+  description: Six-legged arthropod with stone-mimicking chitin. Lies dormant in rubble until prey steps on it.
+  base_stats:
+    STR: 4
+    AGI: 2
+    END: 5
+    INT: 1
+    PER: 6
+    LCK: 1
+  abilities:
+  - Ambush Strike (2x damage from hidden)
+  - Stone Shell (50% physical damage reduction)
+  rp_reward: 8
+  loot_table:
+  - Stone Chitin Fragment (common)
+  - Crawler Mandible (common)
+  - Mimicry Gland (rare)
+  danger_notes: Nearly invisible in rubble. Use PER-based scanning before entering rubble zones.
+  weak_to:
+  - Blunt force
+  - Vibration
+  resistant_to:
+  - Piercing
+  - Cold
+- id: mon_003
+  name: Dust Worm
+  tier: 1
+  type: Beast
+  habitat:
+  - deserts
+  - dry plains
+  - sand dunes
+  description: 1-meter segmented worm that burrows through loose soil. Detects prey through vibrations.
+  base_stats:
+    STR: 3
+    AGI: 3
+    END: 4
+    INT: 1
+    PER: 7
+    LCK: 1
+  abilities:
+  - Burrow (untargetable while underground)
+  - Eruption Strike (surprise attack from below)
+  rp_reward: 6
+  loot_table:
+  - Worm Segment (common)
+  - Burrowing Gland (uncommon)
+  - Tremor Sensor Organ (rare)
+  danger_notes: Stand on solid rock to avoid tremor detection. They won't surface onto hard ground.
+  weak_to:
+  - Electricity
+  - Fire
+  resistant_to:
+  - Earth-based attacks
+- id: mon_004
+  name: Scrap Golem
+  tier: 1
+  type: Construct
+  habitat:
+  - junkyards
+  - abandoned factories
+  - vehicle graveyards
+  description: Animated pile of scrap metal held together by residual System energy. Slow but hits hard.
+  base_stats:
+    STR: 6
+    AGI: 1
+    END: 7
+    INT: 1
+    PER: 2
+    LCK: 1
+  abilities:
+  - Heavy Slam (high damage, slow)
+  - Scrap Armor (regenerates armor from nearby metal)
+  rp_reward: 10
+  loot_table:
+  - Scrap Metal (common)
+  - System Energy Fragment (uncommon)
+  - Core Shard (rare)
+  danger_notes: Lure away from metal-rich areas to prevent Scrap Armor regeneration.
+  weak_to:
+  - Acid
+  - Magnetic attacks
+  resistant_to:
+  - Physical
+  - Cold
+- id: mon_005
+  name: Flicker Moth
+  tier: 1
+  type: Insectoid
+  habitat:
+  - forests
+  - caves
+  - ruins at night
+  description: Large bioluminescent moth that mesmerizes prey with light patterns. Drains energy on contact.
+  base_stats:
+    STR: 1
+    AGI: 7
+    END: 2
+    INT: 2
+    PER: 5
+    LCK: 3
+  abilities:
+  - Mesmerize (INT save or stunned 3s)
+  - Energy Drain (steals RP on contact)
+  rp_reward: 7
+  loot_table:
+  - Luminous Wing Dust (common)
+  - Flicker Gland (uncommon)
+  - Mesmer Pattern (rare)
+  danger_notes: Close eyes or use filtered visor to avoid Mesmerize. Quick kills before they drain RP.
+  weak_to:
+  - Fire
+  - Darkness
+  resistant_to:
+  - Light-based attacks
+- id: mon_006
+  name: Feral Hound
+  tier: 1
+  type: Beast
+  habitat:
+  - everywhere — most common creature in post-System Earth
+  description: System-mutated canine. Larger, smarter, and more aggressive than pre-System dogs. Packs of 5-15.
+  base_stats:
+    STR: 4
+    AGI: 6
+    END: 4
+    INT: 2
+    PER: 6
+    LCK: 2
+  abilities:
+  - Pack Tactics (+2 AGI in groups)
+  - Hamstring Bite (reduces target AGI by 3 for 30s)
+  rp_reward: 6
+  loot_table:
+  - Feral Hide (common)
+  - Sharp Fang (common)
+  - Alpha Mane (rare — alpha only)
+  danger_notes: Kill the Alpha first — pack scatters without leadership.
+  weak_to:
+  - Fire
+  - Loud noises
+  resistant_to:
+  - Cold
+- id: mon_007
+  name: Corpse Vine
+  tier: 1
+  type: Plant
+  habitat:
+  - swamps
+  - ruins
+  - abandoned areas
+  description: Carnivorous plant that disguises itself as dead vegetation. Constricts prey with thorned tendrils.
+  base_stats:
+    STR: 5
+    AGI: 1
+    END: 6
+    INT: 1
+    PER: 4
+    LCK: 1
+  abilities:
+  - Constrict (grapple + continuous damage)
+  - Thorn Injection (poison DoT)
+  rp_reward: 8
+  loot_table:
+  - Vine Fiber (common)
+  - Thorn Sac (uncommon)
+  - Digestive Enzyme (rare)
+  danger_notes: Immobile — if you spot it, simply go around. Check dead vegetation before approaching.
+  weak_to:
+  - Fire
+  - Defoliant
+  resistant_to:
+  - Physical (piercing)
+  - Water
+- id: mon_008
+  name: Ironjaw Boar
+  tier: 2
+  type: Beast
+  habitat:
+  - forests
+  - grasslands
+  - foothills
+  description: Boar with System-enhanced jaw muscles and metallic tusks. Charges with devastating force.
+  base_stats:
+    STR: 9
+    AGI: 5
+    END: 8
+    INT: 2
+    PER: 5
+    LCK: 2
+  abilities:
+  - Charge (double damage on first hit after 10m run)
+  - Iron Tusks (ignores 30% armor)
+  rp_reward: 20
+  loot_table:
+  - Iron Tusk (uncommon)
+  - Reinforced Hide (uncommon)
+  - Boar Heart (rare)
+  danger_notes: Sidestep the charge — they can't turn quickly. Attack from the sides.
+  weak_to:
+  - Pit traps
+  - Electricity
+  resistant_to:
+  - Blunt force
+  - Cold
+- id: mon_009
+  name: Shade Stalker
+  tier: 2
+  type: Aberration
+  habitat:
+  - shadows
+  - dark buildings
+  - underground
+  description: Semi-corporeal predator that exists partially in shadow dimension. Attacks from darkness.
+  base_stats:
+    STR: 6
+    AGI: 9
+    END: 4
+    INT: 4
+    PER: 8
+    LCK: 4
+  abilities:
+  - Shadow Strike (attack from any shadow within 20m)
+  - Incorporeal (50% miss chance in dim light)
+  rp_reward: 25
+  loot_table:
+  - Shadow Essence (uncommon)
+  - Shade Fang (uncommon)
+  - Dark Core (rare)
+  danger_notes: Illuminate the area to remove Incorporeal. They're fragile in full light.
+  weak_to:
+  - Light
+  - Fire
+  - Holy
+  resistant_to:
+  - Physical (in darkness)
+  - Cold
+- id: mon_010
+  name: Rock Titan Beetle
+  tier: 2
+  type: Insectoid
+  habitat:
+  - mountains
+  - caves
+  - quarries
+  description: Massive beetle (2m long) with stone-like carapace. Territorial but non-aggressive unless provoked.
+  base_stats:
+    STR: 8
+    AGI: 2
+    END: 12
+    INT: 1
+    PER: 3
+    LCK: 2
+  abilities:
+  - Carapace Shield (80% damage reduction from above)
+  - Ground Slam (AoE stun)
+  rp_reward: 22
+  loot_table:
+  - Rock Carapace Plate (uncommon)
+  - Titan Beetle Horn (uncommon)
+  - Geological Crystal (rare)
+  danger_notes: Attack the underside. Flip it with explosives or gravity manipulation.
+  weak_to:
+  - Sonic attacks
+  - Acid
+  resistant_to:
+  - Physical
+  - Cold
+  - Fire
+- id: mon_011
+  name: Venomweb Spinner
+  tier: 2
+  type: Insectoid
+  habitat:
+  - forests
+  - caves
+  - abandoned structures
+  description: Spider the size of a car. Creates sticky, venomous webs across paths and doorways.
+  base_stats:
+    STR: 5
+    AGI: 8
+    END: 5
+    INT: 3
+    PER: 9
+    LCK: 3
+  abilities:
+  - Web Trap (immobilize + poison)
+  - Wall Crawl
+  - Venom Bite (paralysis)
+  rp_reward: 24
+  loot_table:
+  - Venom Silk (uncommon)
+  - Spider Fang (uncommon)
+  - Paralytic Gland (rare)
+  - Web Sac (rare)
+  danger_notes: Watch for web tripwires. Burn webs before engaging. Don't let it get above you.
+  weak_to:
+  - Fire
+  - Defoliant
+  resistant_to:
+  - Poison
+- id: mon_012
+  name: Storm Hawk
+  tier: 2
+  type: Beast
+  habitat:
+  - mountains
+  - open plains
+  - coastal cliffs
+  description: Raptor with 4m wingspan. Talons conduct electricity. Hunts by diving from extreme altitude.
+  base_stats:
+    STR: 6
+    AGI: 11
+    END: 5
+    INT: 3
+    PER: 12
+    LCK: 3
+  abilities:
+  - Thunder Dive (3x damage aerial attack + electric damage)
+  - Storm Call (minor weather manipulation)
+  rp_reward: 28
+  loot_table:
+  - Storm Feather (uncommon)
+  - Conductive Talon (uncommon)
+  - Storm Gland (rare)
+  danger_notes: Fight in enclosed spaces to negate aerial advantage. Ground it with nets or magnetic attacks.
+  weak_to:
+  - Grounding
+  - Nets/restraints
+  resistant_to:
+  - Electricity
+  - Wind
+- id: mon_013
+  name: Tunnel Wurm
+  tier: 3
+  type: Beast
+  habitat:
+  - underground
+  - cave systems
+  - tunnel networks
+  description: 10-meter armored worm with acidic secretions. Creates tunnel networks. Ambush predator.
+  base_stats:
+    STR: 12
+    AGI: 4
+    END: 14
+    INT: 2
+    PER: 8
+    LCK: 2
+  abilities:
+  - Acid Spray (cone AoE, armor-degrading)
+  - Tunnel Collapse (cave-in trap)
+  - Devour (swallow medium targets)
+  rp_reward: 60
+  loot_table:
+  - Wurm Scale (uncommon)
+  - Acid Gland (rare)
+  - Wurm Heart (rare)
+  - Tunnel Map Fragment (rare)
+  danger_notes: Avoid tunnels with acid-etched walls. Attack the softer segments between armor plates.
+  weak_to:
+  - Cold
+  - Sonic resonance
+  resistant_to:
+  - Acid
+  - Physical
+- id: mon_014
+  name: Mirage Hunter
+  tier: 3
+  type: Aberration
+  habitat:
+  - deserts
+  - heat-distorted zones
+  - dimensional rifts
+  description: Predator that creates illusory copies of itself. The real one attacks while victims target mirages.
+  base_stats:
+    STR: 8
+    AGI: 10
+    END: 6
+    INT: 7
+    PER: 9
+    LCK: 5
+  abilities:
+  - Mirror Image (create 3 identical illusions)
+  - Refraction Strike (attack from unexpected angle)
+  - Heat Shimmer (passive concealment)
+  rp_reward: 55
+  loot_table:
+  - Mirage Crystal (rare)
+  - Refraction Lens (rare)
+  - Illusory Hide (uncommon)
+  danger_notes: Use thermal or tremor sensing — illusions have no heat or weight. Area attacks hit all copies.
+  weak_to:
+  - Area-of-effect attacks
+  - Tremorsense
+  - Cold (disrupts heat shimmer)
+  resistant_to:
+  - Single-target attacks
+  - Visual-based abilities
+- id: mon_015
+  name: Forge Spider
+  tier: 3
+  type: Construct
+  habitat:
+  - abandoned forges
+  - industrial ruins
+  - volcanic areas
+  description: Mechanical spider built by unknown creators. Produces molten metal internally. Webs are razor-sharp wire.
+  base_stats:
+    STR: 10
+    AGI: 7
+    END: 9
+    INT: 5
+    PER: 7
+    LCK: 2
+  abilities:
+  - Wire Web (razor damage on contact)
+  - Molten Spit (fire + armor melt)
+  - Self-Repair (regenerate 5% HP/minute near metal)
+  rp_reward: 65
+  loot_table:
+  - Forge Wire (rare)
+  - Molten Core Fragment (rare)
+  - Mechanical Fang (uncommon)
+  - Heat-Proof Plate (rare)
+  danger_notes: Disable Self-Repair by fighting away from metal sources. Wire webs are invisible in low light — use enhanced
+    vision.
+  weak_to:
+  - EMP
+  - Water (thermal shock)
+  - Acid
+  resistant_to:
+  - Fire
+  - Physical
+  - Poison
+- id: mon_016
+  name: Carrion Lord
+  tier: 3
+  type: Undead
+  habitat:
+  - battlefields
+  - mass graves
+  - necropolis zones
+  description: Massive animated corpse amalgamation — dozens of bodies fused into one towering horror. Absorbs more corpses
+    to grow.
+  base_stats:
+    STR: 14
+    AGI: 3
+    END: 16
+    INT: 3
+    PER: 5
+    LCK: 1
+  abilities:
+  - Corpse Absorption (heal by consuming dead bodies)
+  - Plague Aura (disease DoT in 10m)
+  - Limb Launch (throw body parts as projectiles)
+  rp_reward: 70
+  loot_table:
+  - Necrotic Core (rare)
+  - Plague Crystal (rare)
+  - Undead Sinew (uncommon)
+  danger_notes: Burn all corpses in the area before engaging to prevent Corpse Absorption. Stay out of Plague Aura range.
+  weak_to:
+  - Fire
+  - Holy
+  - Purification
+  resistant_to:
+  - Physical
+  - Poison
+  - Cold
+- id: mon_017
+  name: Void Stalker
+  tier: 4
+  type: Aberration
+  habitat:
+  - dimensional rifts
+  - void zones
+  - deep space
+  description: Predator from between dimensions. Partially exists outside normal space. Can reach through walls.
+  base_stats:
+    STR: 11
+    AGI: 12
+    END: 8
+    INT: 8
+    PER: 10
+    LCK: 3
+  abilities:
+  - Phase Attack (strike through solid objects)
+  - Dimensional Anchor (prevent target teleportation)
+  - Void Scream (psychic AoE damage)
+  rp_reward: 150
+  loot_table:
+  - Void Crystal (rare)
+  - Phase Claw (rare)
+  - Dimensional Fragment (epic)
+  - Void Essence (epic)
+  danger_notes: Cannot be blocked by conventional means. Dimensional anchoring fields force them fully into reality.
+  weak_to:
+  - Dimensional anchors
+  - System-enhanced weapons
+  - Light energy
+  resistant_to:
+  - Physical (partial phase)
+  - Elemental
+- id: mon_018
+  name: Siege Beetle
+  tier: 4
+  type: Insectoid
+  habitat:
+  - fortified areas
+  - walls
+  - defensive structures
+  description: Building-sized beetle evolved to breach fortifications. Ram-horn can shatter concrete. Used by some factions
+    as siege weapons.
+  base_stats:
+    STR: 18
+    AGI: 2
+    END: 20
+    INT: 2
+    PER: 4
+    LCK: 1
+  abilities:
+  - Siege Ram (devastating structure damage)
+  - Tremor Walk (knockdown in 30m)
+  - Hardened Shell (immune to small arms)
+  rp_reward: 180
+  loot_table:
+  - Siege Horn Fragment (rare)
+  - Ultra-Dense Chitin (rare)
+  - Beetle Core Crystal (epic)
+  danger_notes: Target the leg joints — they can't turn if legs are damaged. Heavy weapons only.
+  weak_to:
+  - Joint targeting
+  - Sonic resonance
+  - Acid
+  resistant_to:
+  - Physical (small arms)
+  - Fire
+  - Cold
+- id: mon_019
+  name: Psychic Leech
+  tier: 4
+  type: Aberration
+  habitat:
+  - psychic hotspots
+  - ancient ruins
+  - places of mass death
+  description: Invisible predator that feeds on mental energy. Victims experience memory loss and stat drain.
+  base_stats:
+    STR: 3
+    AGI: 8
+    END: 6
+    INT: 14
+    PER: 12
+    LCK: 5
+  abilities:
+  - Mental Drain (steal INT temporarily)
+  - Memory Erase (target forgets last 10 minutes)
+  - Psychic Invisibility (undetectable without INT > 10)
+  rp_reward: 160
+  loot_table:
+  - Psychic Crystal (rare)
+  - Memory Fragment (epic)
+  - Neural Leech Organ (epic)
+  danger_notes: Only detectable with high INT or anti-psychic equipment. Work in pairs — one watches for behavioral changes
+    in the other.
+  weak_to:
+  - Anti-psychic fields
+  - Electromagnetic pulse
+  - High INT attacks
+  resistant_to:
+  - Physical (invisible)
+  - Elemental
+- id: mon_020
+  name: Elder Wurm
+  tier: 5
+  type: Beast
+  habitat:
+  - deep underground
+  - planet cores
+  - ancient tunnels
+  description: 100-meter ancient worm. Has lived for millennia. Territorial over vast underground domains.
+  base_stats:
+    STR: 22
+    AGI: 3
+    END: 25
+    INT: 5
+    PER: 10
+    LCK: 3
+  abilities:
+  - Earthquake (surface-level AoE)
+  - Acid Lake (flood tunnel with acid)
+  - Swallow Whole (consume vehicles)
+  - Tunnel Network (pre-built escape routes)
+  rp_reward: 500
+  loot_table:
+  - Elder Scale (epic)
+  - Primordial Acid (epic)
+  - Wurm Core (legendary)
+  - Ancient Mineral Deposit (epic)
+  danger_notes: Do NOT fight underground — it controls the terrain. Lure to surface. Vehicle-tier weapons recommended.
+  weak_to:
+  - Surface combat
+  - Cold (slows)
+  - Sonic resonance
+  resistant_to:
+  - Acid
+  - Physical
+  - Fire
+  - Earth
+- id: mon_021
+  name: Storm Colossus
+  tier: 5
+  type: Elemental
+  habitat:
+  - open ocean
+  - storm systems
+  - atmospheric layers
+  description: Living storm system. 50-meter humanoid form made of lightning, rain, and wind. Generates its own weather.
+  base_stats:
+    STR: 18
+    AGI: 15
+    END: 16
+    INT: 8
+    PER: 14
+    LCK: 5
+  abilities:
+  - Lightning Barrage (multi-target electric)
+  - Hurricane Force (knockback everything in 100m)
+  - Rain of Ruin (acid rain AoE)
+  - Storm Regeneration (heals in rain)
+  rp_reward: 600
+  loot_table:
+  - Storm Core (legendary)
+  - Lightning Crystal (epic)
+  - Tempest Essence (epic)
+  - Weather Seed (legendary)
+  danger_notes: Fight in enclosed spaces or underground to limit weather abilities. Grounding equipment essential.
+  weak_to:
+  - Earth anchoring
+  - Vacuum (no air = no storm)
+  - Grounding
+  resistant_to:
+  - Electricity
+  - Water
+  - Wind
+  - Cold
+- id: mon_022
+  name: Rift Behemoth
+  tier: 5
+  type: Aberration
+  habitat:
+  - dimensional rifts
+  - unstable zones
+  - between worlds
+  description: Creature that straddles multiple dimensions simultaneously. Attacks in one dimension affect all connected ones.
+  base_stats:
+    STR: 20
+    AGI: 8
+    END: 18
+    INT: 10
+    PER: 12
+    LCK: 4
+  abilities:
+  - Multi-Dimensional Strike (hits targets in parallel dimensions)
+  - Rift Tear (open unstable portals)
+  - Reality Anchor (immune to dimensional effects)
+  - Phase Shift (teleport between dimensions)
+  rp_reward: 700
+  loot_table:
+  - Rift Crystal (legendary)
+  - Dimensional Anchor Stone (epic)
+  - Behemoth Core (legendary)
+  - Reality Fragment (legendary)
+  danger_notes: Requires dimensional anchoring to fight. Otherwise it simply shifts to another dimension when damaged.
+  weak_to:
+  - Dimensional anchors
+  - System-level attacks
+  - Void energy
+  resistant_to:
+  - Physical
+  - Elemental
+  - Psychic
+- id: mon_023
+  name: Apex Predator
+  tier: 5
+  type: Beast
+  habitat:
+  - apex territories (any biome)
+  description: System-designated top predator of any given zone. Adapts to counter whatever kills it. Each death makes it
+    stronger.
+  base_stats:
+    STR: 16
+    AGI: 14
+    END: 15
+    INT: 8
+    PER: 13
+    LCK: 6
+  abilities:
+  - Adaptive Evolution (gain resistance to last damage type that killed it)
+  - Apex Authority (lesser creatures flee)
+  - Perfect Senses (cannot be ambushed)
+  - Kill Counter (stats increase per kill)
+  rp_reward: 550
+  loot_table:
+  - Apex Fang (epic)
+  - Adaptive Tissue (epic)
+  - Evolution Crystal (legendary)
+  - Apex Core (legendary)
+  danger_notes: Check System records for this specific Apex's death history — don't use whatever killed it last time. Vary
+    attack types.
+  weak_to:
+  - Varies (adapted against last cause of death)
+  resistant_to:
+  - Varies (resistant to last cause of death)
+- id: mon_024
+  name: Rust Mimic
+  tier: 1
+  type: Construct
+  habitat:
+  - junkyards
+  - abandoned vehicles
+  - metal ruins
+  description: Appears as a normal piece of scrap metal until touched. Closes like a bear trap on prey.
+  base_stats:
+    STR: 5
+    AGI: 3
+    END: 6
+    INT: 2
+    PER: 8
+    LCK: 2
+  abilities:
+  - Snap Trap (immobilize + crush damage)
+  - Rust Camouflage (undetectable among metal)
+  rp_reward: 8
+  loot_table:
+  - Mimic Hinge (uncommon)
+  - Rust Core (rare)
+  danger_notes: Scan all metal objects before touching. They can't chase — just don't reach in blindly.
+  weak_to:
+  - Acid
+  - Electricity
+  resistant_to:
+  - Physical
+- id: mon_025
+  name: Spore Shambler
+  tier: 1
+  type: Plant
+  habitat:
+  - swamps
+  - damp caves
+  - abandoned greenhouses
+  description: Fungal humanoid that releases toxic spores. Slow but regenerates from any remaining fragment.
+  base_stats:
+    STR: 3
+    AGI: 1
+    END: 8
+    INT: 1
+    PER: 3
+    LCK: 1
+  abilities:
+  - Spore Cloud (poison AoE 5m)
+  - Fragment Regeneration (regrow from 10% mass)
+  rp_reward: 7
+  loot_table:
+  - Spore Sac (common)
+  - Fungal Core (uncommon)
+  - Regeneration Mycelium (rare)
+  danger_notes: Incinerate completely — any fragment left behind will regrow in 24 hours.
+  weak_to:
+  - Fire
+  - Defoliant
+  - Extreme cold
+  resistant_to:
+  - Physical
+  - Poison
+- id: mon_026
+  name: Glass Serpent
+  tier: 2
+  type: Beast
+  habitat:
+  - deserts
+  - crystal caves
+  - glass plains
+  description: Transparent snake made of living crystal. Nearly invisible on sand or glass surfaces. Strikes with diamond-hard
+    fangs.
+  base_stats:
+    STR: 6
+    AGI: 10
+    END: 3
+    INT: 2
+    PER: 9
+    LCK: 4
+  abilities:
+  - Invisible Strike (first attack always surprises)
+  - Shatter Bite (fragments embed in wound, continuous damage)
+  rp_reward: 22
+  loot_table:
+  - Crystal Fang (uncommon)
+  - Glass Scale (uncommon)
+  - Prismatic Venom (rare)
+  danger_notes: Watch for heat shimmer — their body refracts light slightly differently. Sound-based detection works well.
+  weak_to:
+  - Sonic attacks
+  - Blunt force
+  resistant_to:
+  - Piercing
+  - Light-based
+- id: mon_027
+  name: Gravity Leech
+  tier: 2
+  type: Aberration
+  habitat:
+  - low-gravity zones
+  - dimensional rifts
+  - space debris fields
+  description: Flat, disc-shaped creature that attaches to surfaces and creates localized gravity wells. Drains RP on contact.
+  base_stats:
+    STR: 4
+    AGI: 7
+    END: 5
+    INT: 3
+    PER: 7
+    LCK: 3
+  abilities:
+  - Gravity Lock (pin target to surface)
+  - RP Drain (steal 5 RP per second of contact)
+  rp_reward: 20
+  loot_table:
+  - Gravity Gland (uncommon)
+  - Leech Disc (uncommon)
+  - RP Crystal Fragment (rare)
+  danger_notes: Don't let them attach. Anti-gravity pulses repel them. They die instantly if gravity is reversed.
+  weak_to:
+  - Anti-gravity
+  - Fire
+  resistant_to:
+  - Physical (flat profile)
+- id: mon_028
+  name: Echo Wolf
+  tier: 2
+  type: Beast
+  habitat:
+  - canyons
+  - mountain passes
+  - echo chambers
+  description: Wolf that weaponizes sound. Its howl can shatter glass and disorient prey. Hunts in acoustic packs of 4-6.
+  base_stats:
+    STR: 7
+    AGI: 8
+    END: 6
+    INT: 4
+    PER: 9
+    LCK: 3
+  abilities:
+  - Resonance Howl (AoE stun + sonic damage)
+  - Pack Echo (howls amplify each other exponentially)
+  rp_reward: 26
+  loot_table:
+  - Echo Gland (uncommon)
+  - Resonance Fang (uncommon)
+  - Sound Crystal (rare)
+  danger_notes: Ear protection essential. Fight in open areas where sound dissipates. Kill the alpha howler first.
+  weak_to:
+  - Silence fields
+  - Sound-dampening
+  resistant_to:
+  - Sonic (immune to own howls)
+- id: mon_029
+  name: Magma Crab
+  tier: 3
+  type: Beast
+  habitat:
+  - volcanic zones
+  - lava tubes
+  - geothermal vents
+  description: Car-sized crab with a shell of cooled lava. Interior body temperature exceeds 1500°C. Pincers can cut through
+    steel.
+  base_stats:
+    STR: 12
+    AGI: 3
+    END: 14
+    INT: 2
+    PER: 5
+    LCK: 2
+  abilities:
+  - Lava Spit (ranged fire attack)
+  - Molten Shell (melee attackers take burn damage)
+  - Pincer Crush (armor-piercing)
+  rp_reward: 65
+  loot_table:
+  - Lava Shell Fragment (rare)
+  - Magma Claw (rare)
+  - Geothermal Crystal (rare)
+  danger_notes: Ranged combat only. Melee contact causes severe burns. Water-based attacks cause steam explosions (dangerous
+    to both sides).
+  weak_to:
+  - Cold (thermal shock)
+  - Sonic
+  resistant_to:
+  - Fire (immune)
+  - Physical
+- id: mon_030
+  name: Phase Wraith
+  tier: 3
+  type: Undead
+  habitat:
+  - graveyards
+  - dimensional weak points
+  - haunted ruins
+  description: Spirit that shifts between physical and incorporeal states. Drains life force and memories.
+  base_stats:
+    STR: 7
+    AGI: 9
+    END: 5
+    INT: 6
+    PER: 8
+    LCK: 5
+  abilities:
+  - Life Drain (steal HP + memories)
+  - Phase Shift (toggle between physical and incorporeal)
+  - Terror Aura (INT save or flee)
+  rp_reward: 58
+  loot_table:
+  - Ectoplasm (uncommon)
+  - Memory Crystal (rare)
+  - Phase Essence (rare)
+  danger_notes: Attack during physical phase. System-enhanced weapons damage them in both states.
+  weak_to:
+  - Holy
+  - System-enhanced weapons
+  - Sunlight
+  resistant_to:
+  - Physical (in phase)
+  - Poison
+- id: mon_031
+  name: Storm Leviathan
+  tier: 4
+  type: Beast
+  habitat:
+  - open oceans
+  - storm systems
+  - atmospheric layers
+  description: 50-meter eel-like creature that generates its own weather system. Lightning arcs between its fins constantly.
+  base_stats:
+    STR: 16
+    AGI: 8
+    END: 14
+    INT: 5
+    PER: 10
+    LCK: 3
+  abilities:
+  - Storm Generation (creates localized tempest)
+  - Lightning Barrage (multiple bolt strikes)
+  - Tidal Slam (massive water displacement)
+  rp_reward: 180
+  loot_table:
+  - Storm Fin (rare)
+  - Leviathan Scale (epic)
+  - Lightning Core (epic)
+  - Weather Gland (epic)
+  danger_notes: Do NOT engage on water. Lure to land if possible. Ground all electronics before engagement.
+  weak_to:
+  - Grounding
+  - Freezing
+  - Earth-based
+  resistant_to:
+  - Electricity (immune)
+  - Water
+- id: mon_032
+  name: Quantum Predator
+  tier: 4
+  type: Aberration
+  habitat:
+  - quantum anomaly zones
+  - probability storms
+  - System glitch areas
+  description: Exists in superposition — attacks from multiple timelines simultaneously. Only collapses into one state when
+    observed.
+  base_stats:
+    STR: 10
+    AGI: 14
+    END: 7
+    INT: 9
+    PER: 11
+    LCK: 8
+  abilities:
+  - Superposition Attack (strike from 3 positions simultaneously)
+  - Probability Dodge (50% chance any attack misses)
+  - Timeline Collapse (massive single-point damage)
+  rp_reward: 200
+  loot_table:
+  - Quantum Shard (epic)
+  - Probability Crystal (epic)
+  - Timeline Fragment (legendary)
+  danger_notes: Multiple observers force it into a single state. Group tactics essential. Solo engagement is suicide.
+  weak_to:
+  - Observation (multiple watchers)
+  - Dimensional anchors
+  resistant_to:
+  - Single-target attacks
+  - Predictive abilities
+- id: mon_033
+  name: Titan Golem
+  tier: 5
+  type: Construct
+  habitat:
+  - ancient ruins
+  - System temples
+  - forgotten factories
+  description: 30-meter humanoid construct of ancient design. Pre-dates the current System. Core is a Vehicle Core fragment.
+  base_stats:
+    STR: 22
+    AGI: 2
+    END: 25
+    INT: 6
+    PER: 5
+    LCK: 1
+  abilities:
+  - Titan Slam (earthquake AoE)
+  - Core Beam (chest-mounted energy blast)
+  - Ancient Protocol (activate pre-System defenses)
+  rp_reward: 500
+  loot_table:
+  - Ancient Alloy (epic)
+  - Core Fragment (epic)
+  - Protocol Data (legendary)
+  - Titan Heart (legendary)
+  danger_notes: Target the Core exposed on the chest. Ancient Protocol activates at 25% HP — retreat and re-engage. Bring
+    siege equipment.
+  weak_to:
+  - Targeted core attacks
+  - EMP
+  - Acid (dissolves ancient alloy slowly)
+  resistant_to:
+  - Physical
+  - Energy
+  - Elemental
+- id: mon_034
+  name: Abyssal Angler
+  tier: 5
+  type: Beast
+  habitat:
+  - deep space
+  - void zones
+  - abyssal rifts
+  description: Space-dwelling predator with bioluminescent lure that mimics distress signals. Swallows small vehicles whole.
+  base_stats:
+    STR: 20
+    AGI: 6
+    END: 18
+    INT: 7
+    PER: 12
+    LCK: 2
+  abilities:
+  - False Signal (mimic any communication)
+  - Void Swallow (consume targets up to 10m)
+  - Pressure Crush (internal digestion deals massive damage)
+  rp_reward: 450
+  loot_table:
+  - Angler Lure (epic)
+  - Void Stomach Lining (epic)
+  - Abyssal Tooth (rare)
+  - Signal Gland (legendary)
+  danger_notes: Never respond to distress signals in void zones without verification. If swallowed, attack from inside — the
+    stomach lining is weak.
+  weak_to:
+  - Internal attacks
+  - Light (disrupts camouflage)
+  resistant_to:
+  - Void
+  - Cold
+  - Pressure
+- id: mon_035
+  name: Ash Walker
+  tier: 2
+  type: Undead
+  description: Animated corpse of a dead Traveller. Retains fragments of combat ability. Often found near destroyed vehicles.
+  stats:
+    STR: 8
+    AGI: 3
+    END: 15
+    INT: 1
+  rp_reward: 200
+  habitat: Battlefields, ruins
+  drops:
+  - Ash Core
+  - Broken Vehicle Part
+  - RP Fragment
+  behavior: Wanders aimlessly, attacks anything that moves. May attempt to use remembered combat abilities.
+- id: mon_036
+  name: Plasma Jellyfish
+  tier: 3
+  type: Energy
+  description: Floating energy entity that drifts through space. Tentacles discharge 10,000 volts on contact.
+  stats:
+    STR: 1
+    AGI: 4
+    END: 6
+    INT: 2
+  rp_reward: 500
+  habitat: Space, upper atmosphere
+  drops:
+  - Plasma Core
+  - Energy Tendril
+  - Shock Crystal
+  behavior: Passive unless approached within 10m. Then aggressively wraps and electrocutes.
+- id: mon_037
+  name: Iron Burrower
+  tier: 2
+  type: Beast
+  description: Armored worm-like creature that tunnels through metal and stone. Can breach vehicle hulls.
+  stats:
+    STR: 12
+    AGI: 2
+    END: 20
+    INT: 1
+  rp_reward: 250
+  habitat: Underground, vehicle graveyards
+  drops:
+  - Iron Segment
+  - Bore Tooth
+  - Metal Ore
+  behavior: Attracted to vibrations. Will tunnel toward active vehicles and attempt to breach hull.
+- id: mon_038
+  name: Mist Phantom
+  tier: 3
+  type: Spectral
+  description: Semi-corporeal entity that exists in fog and mist. Can phase through solid matter.
+  stats:
+    STR: 5
+    AGI: 8
+    END: 3
+    INT: 6
+  rp_reward: 450
+  habitat: Foggy areas, swamps, coastlines
+  drops:
+  - Phantom Essence
+  - Mist Crystal
+  - Spectral Fragment
+  behavior: Lures prey with illusions of lost companions. Drains life force on contact.
+- id: mon_039
+  name: Razorwing
+  tier: 1
+  type: Beast
+  description: Bat-like creature with blade-sharp wings. Hunts in flocks of 20-100. Individual is weak, flock is lethal.
+  stats:
+    STR: 2
+    AGI: 9
+    END: 1
+    INT: 2
+  rp_reward: 30
+  habitat: Caves, ruins, dense forests
+  drops:
+  - Wing Blade
+  - Razorwing Fang
+  - Leather Scrap
+  behavior: Swarm tactics. Attack from all directions simultaneously. Retreat if flock drops below 50%.
+- id: mon_040
+  name: Corrosion Slime
+  tier: 1
+  type: Elemental
+  description: Acidic blob that dissolves organic and metallic matter. Splits into two when cut.
+  stats:
+    STR: 3
+    AGI: 1
+    END: 10
+    INT: 0
+  rp_reward: 40
+  habitat: Sewers, waste areas, chemical zones
+  drops:
+  - Acid Sac
+  - Slime Core
+  - Corrosive Agent
+  behavior: Mindless. Moves toward nearest organic matter and attempts to engulf it.
+- id: mon_041
+  name: Sand Stalker
+  tier: 3
+  type: Beast
+  description: Desert predator that swims through sand like water. Erupts beneath prey with crushing jaws.
+  stats:
+    STR: 14
+    AGI: 6
+    END: 12
+    INT: 3
+  rp_reward: 550
+  habitat: Deserts, beaches, sandy terrain
+  drops:
+  - Sand Stalker Fang
+  - Desert Hide
+  - Sand Crystal
+  behavior: Ambush predator. Creates vibrations to panic prey, then attacks from below.
+- id: mon_042
+  name: Lightning Elk
+  tier: 2
+  type: Beast
+  description: Massive elk with antlers that channel atmospheric electricity. Charges build up to devastating releases.
+  stats:
+    STR: 10
+    AGI: 7
+    END: 8
+    INT: 3
+  rp_reward: 300
+  habitat: Plains, highlands, storm zones
+  drops:
+  - Lightning Antler
+  - Charged Hide
+  - Storm Crystal
+  behavior: Territorial herd animal. Bulls challenge anything entering territory with lightning charges.
+- id: mon_043
+  name: Void Tick
+  tier: 4
+  type: Parasite
+  description: Interdimensional parasite that attaches to Vehicle Cores. Drains RP and weakens soul-vehicle bond.
+  stats:
+    STR: 1
+    AGI: 10
+    END: 5
+    INT: 7
+  rp_reward: 1500
+  habitat: Dimensional corridors, void zones
+  drops:
+  - Void Tick Shell
+  - Dimensional Parasite Gland
+  - Void Crystal
+  behavior: Attaches to Vehicle Core through dimensional breach. Nearly invisible. Must be detected before it drains Core.
+- id: mon_044
+  name: Fungal Colossus
+  tier: 4
+  type: Plant
+  description: Building-sized mushroom creature. Releases spores that convert organic matter into more of itself.
+  stats:
+    STR: 20
+    AGI: 1
+    END: 30
+    INT: 4
+  rp_reward: 2000
+  habitat: Forests, caves, anywhere with moisture
+  drops:
+  - Colossus Cap
+  - Spore Sac
+  - Mycelium Core
+  - Regeneration Mycelium
+  behavior: Slow but relentless. Spore clouds convert surrounding area into its territory over days.
+- id: mon_045
+  name: Mirror Beast
+  tier: 3
+  type: Shapeshifter
+  description: Creature that copies the appearance and abilities of its target. Each copy is 80% strength of original.
+  stats:
+    STR: varies
+    AGI: varies
+    END: varies
+    INT: 5
+  rp_reward: 600
+  habitat: Anywhere with reflective surfaces
+  drops:
+  - Mirror Shard
+  - Shapeshifter Core
+  - Mimicry Crystal
+  behavior: Observes target, transforms, then attacks using the target's own fighting style.
+- id: mon_046
+  name: Gravity Tortoise
+  tier: 5
+  type: Beast
+  description: Ancient creature that manipulates local gravity. Size of a house. Its shell is a miniature gravity well.
+  stats:
+    STR: 25
+    AGI: 1
+    END: 40
+    INT: 6
+  rp_reward: 5000
+  habitat: Mountains, ancient ruins
+  drops:
+  - Gravity Shell Fragment
+  - Graviton Core
+  - Ancient Beast Heart
+  behavior: Passive unless threatened. When attacked, increases gravity 100x in 30m radius.
+- id: mon_047
+  name: Scream Bat
+  tier: 1
+  type: Beast
+  description: Blind bat with sonic attacks. Screech can rupture eardrums and crack glass.
+  stats:
+    STR: 2
+    AGI: 8
+    END: 2
+    INT: 1
+  rp_reward: 25
+  habitat: Caves, underground, ruined buildings
+  drops:
+  - Sonic Membrane
+  - Bat Wing
+  - Echo Pearl
+  behavior: Uses echolocation. Attacks with focused sonic blasts. Flees from bright light.
+- id: mon_048
+  name: Lava Drake
+  tier: 4
+  type: Elemental
+  description: Small dragon-like creature made of living magma. Breathes fire, leaves molten footprints.
+  stats:
+    STR: 15
+    AGI: 6
+    END: 18
+    INT: 5
+  rp_reward: 1800
+  habitat: Volcanoes, geothermal zones, Ashara
+  drops:
+  - Magma Core
+  - Drake Scale
+  - Lava Crystal
+  - Fire Essence
+  behavior: Territorial. Nests in lava pools. Attacks by breathing concentrated fire and body-slamming.
+- id: mon_049
+  name: Psychic Leech
+  tier: 2
+  type: Parasite
+  description: Brain-shaped creature that attaches to nervous system. Feeds on thoughts and memories.
+  stats:
+    STR: 1
+    AGI: 3
+    END: 2
+    INT: 10
+  rp_reward: 200
+  habitat: Dark areas, near sleeping creatures
+  drops:
+  - Neural Tissue
+  - Memory Fragment
+  - Psychic Gland
+  behavior: Attaches while target sleeps. Gradually drains INT and memories. Victim doesn't notice until severe.
+- id: mon_050
+  name: Tunnel Spider
+  tier: 1
+  type: Beast
+  description: Dog-sized spider that builds web networks in tunnels. Webs are sticky, strong, and flammable.
+  stats:
+    STR: 3
+    AGI: 7
+    END: 2
+    INT: 2
+  rp_reward: 25
+  habitat: Tunnels, caves, underground
+  drops:
+  - Spider Silk
+  - Venom Sac
+  - Chitin Plate
+  behavior: Ambush predator. Builds elaborate web traps. Attacks wrapped victims with venomous bite.
+- id: mon_051
+  name: Crystal Crawler
+  tier: 2
+  type: Mineral
+  description: Crab-like creature with a body of living crystal. Feeds on minerals. Extremely hard shell.
+  stats:
+    STR: 6
+    AGI: 3
+    END: 15
+    INT: 1
+  rp_reward: 180
+  habitat: Crystal caves, mineral deposits
+  drops:
+  - Crystal Shell Fragment
+  - Living Crystal Sample
+  - Mineral Core
+  behavior: Territorial around mineral deposits. Charges and body-slams intruders.
+- id: mon_052
+  name: Swamp Lurker
+  tier: 2
+  type: Amphibian
+  description: Frog-like creature the size of a horse. Camouflaged in murky water. Tongue strike grabs prey from 15m.
+  stats:
+    STR: 10
+    AGI: 4
+    END: 8
+    INT: 2
+  rp_reward: 200
+  habitat: Swamps, marshes, shallow water
+  drops:
+  - Lurker Hide
+  - Toxic Mucus
+  - Webbed Claw
+  behavior: Waits submerged. Tongue-grabs prey into water. Drowning attack.
+- id: mon_053
+  name: Spark Beetle
+  tier: 1
+  type: Insect
+  description: Large beetle that generates and stores electrical charge. Discharges on contact or when threatened.
+  stats:
+    STR: 4
+    AGI: 3
+    END: 5
+    INT: 1
+  rp_reward: 35
+  habitat: Forests, grasslands, near power sources
+  drops:
+  - Spark Core
+  - Beetle Shell
+  - Charged Antenna
+  behavior: Passive unless disturbed. When threatened, releases all stored charge in a 3m radius.
+- id: mon_054
+  name: Blood Vine
+  tier: 3
+  type: Plant
+  description: Carnivorous plant with vines that seek warm-blooded prey. Drains blood through thorns.
+  stats:
+    STR: 8
+    AGI: 5
+    END: 12
+    INT: 1
+  rp_reward: 400
+  habitat: Jungles, dense forests, ruins
+  drops:
+  - Blood Vine Thorn
+  - Sap Extract
+  - Living Vine Sample
+  behavior: Extends vines toward warm bodies. Wraps and drains. Central root must be destroyed to kill.
+- id: mon_055
+  name: Stone Golem (Wild)
+  tier: 3
+  type: Construct
+  description: Naturally formed golem animated by ambient System energy. Not sentient, purely instinctual.
+  stats:
+    STR: 18
+    AGI: 2
+    END: 25
+    INT: 0
+  rp_reward: 500
+  habitat: Mountains, ancient ruins, System-dense areas
+  drops:
+  - Golem Core
+  - Animated Stone
+  - System Crystal
+  behavior: Guards territory. Attacks anything that enters its patrol area. Cannot be reasoned with.
+- id: mon_056
+  name: Wind Hawk
+  tier: 2
+  type: Beast
+  description: Hawk with 5m wingspan that rides air currents at extreme speed. Diving attacks shatter bone.
+  stats:
+    STR: 8
+    AGI: 12
+    END: 4
+    INT: 3
+  rp_reward: 250
+  habitat: Mountains, cliffs, open sky
+  drops:
+  - Wind Feather
+  - Hawk Talon
+  - Air Crystal
+  behavior: Circles at extreme altitude. Diving attacks at near-sonic speed. Retreats after striking.
+- id: mon_057
+  name: Bone Collector
+  tier: 3
+  type: Undead
+  description: Skeletal construct that absorbs bones from victims to grow larger and stronger.
+  stats:
+    STR: scales with absorbed bones
+    AGI: 4
+    END: 10
+    INT: 4
+  rp_reward: 450
+  habitat: Battlefields, graveyards, dungeons
+  drops:
+  - Bone Fragment Collection
+  - Collector Core
+  - Death Crystal
+  behavior: Hunts to collect bones. Grows larger with each victim. Must be destroyed before reaching critical mass.
+- id: mon_058
+  name: Acid Salamander
+  tier: 2
+  type: Elemental
+  description: Salamander that sweats concentrated acid. Leaves dissolving trails. Extremely corrosive.
+  stats:
+    STR: 5
+    AGI: 5
+    END: 7
+    INT: 2
+  rp_reward: 200
+  habitat: Chemical zones, volcanic areas
+  drops:
+  - Acid Gland
+  - Resistant Hide
+  - Corrosive Essence
+  behavior: Territorial. Marks territory with acid trails. Charges and body-slams, covering target in acid.
+- id: mon_059
+  name: Phase Cat
+  tier: 4
+  type: Dimensional
+  description: Feline predator that phases between dimensions. Appears and disappears unpredictably.
+  stats:
+    STR: 12
+    AGI: 15
+    END: 6
+    INT: 8
+  rp_reward: 1500
+  habitat: Dimensional anomalies, cities, anywhere
+  drops:
+  - Phase Crystal
+  - Dimensional Fur
+  - Cat's Eye Gem
+  behavior: Stalks prey across dimensions. Attacks from blind spots by phasing in behind target.
+- id: mon_060
+  name: Siege Turtle
+  tier: 5
+  type: Beast
+  description: House-sized turtle with a shell that functions as a mobile fortress. Herds use coordinated defense.
+  stats:
+    STR: 20
+    AGI: 1
+    END: 50
+    INT: 4
+  rp_reward: 3000
+  habitat: Plains, coasts, slow rivers
+  drops:
+  - Fortress Shell Fragment
+  - Siege Turtle Heart
+  - Impenetrable Hide
+  behavior: Passive herbivore unless provoked. When threatened, retreats into shell (near-indestructible) or stampedes.
+- id: mon_061
+  name: Nightmare
+  tier: 4
+  type: Psychic
+  description: Psychic predator that manifests as the target's worst fear. Different for every victim.
+  stats:
+    STR: fear-dependent
+    AGI: 8
+    END: 8
+    INT: 12
+  rp_reward: 1800
+  habitat: Dark places, near sleeping creatures, psychic zones
+  drops:
+  - Fear Essence
+  - Nightmare Crystal
+  - Dream Catcher Gem
+  behavior: Feeds on fear. Manifests as whatever the target fears most. Fear makes it stronger.
+- id: mon_062
+  name: Rust Beetle Swarm
+  tier: 3
+  type: Insect Swarm
+  description: Swarm of tiny beetles that eat metal. Can strip a vehicle to its frame in hours.
+  stats:
+    STR: 1
+    AGI: 6
+    END: 2
+    INT: 1
+  rp_reward: 400
+  habitat: Vehicle graveyards, metal structures, junk piles
+  drops:
+  - Rust Beetle Sample
+  - Metal-Eating Enzyme
+  - Corroded Fragments
+  behavior: Swarms toward nearest metal source. Unstoppable by normal means. Fire, acid, or EMP effective.
+- id: mon_063
+  name: Gravity Frog
+  tier: 2
+  type: Anomaly
+  description: Small frog that creates localized gravity inversions when it croaks. Victims float helplessly.
+  stats:
+    STR: 1
+    AGI: 5
+    END: 3
+    INT: 3
+  rp_reward: 150
+  habitat: Wetlands, caves, gravity anomaly zones
+  drops:
+  - Gravity Gland
+  - Anomaly Essence
+  - Float Crystal
+  behavior: Croaks to invert gravity in 5m radius. While targets float, it leaps up and attacks with venomous tongue.
+- id: mon_064
+  name: Shadow Wolf Pack
+  tier: 3
+  type: Beast
+  description: Wolves that merge with shadows. Pack of 5-10 that can become a single massive shadow entity.
+  stats:
+    STR: 7
+    AGI: 10
+    END: 5
+    INT: 5
+  rp_reward: 500
+  habitat: Forests, ruins, anywhere with shadows
+  drops:
+  - Shadow Pelt
+  - Wolf Fang
+  - Shadow Essence
+  behavior: Hunt in packs. Can merge into a Tier 5 shadow entity if pack has 8+ members. Merge lasts 2 minutes.

@@ -24,7 +24,11 @@ from agents.scene_beat_generator import SceneBeatGenerator
 from agents.style_editor import StyleEditor
 from agents.style_extractor import StyleExtractor
 from agents.summarizer import Summarizer
+from agents.slice_of_life_scenes import SliceOfLifeSceneGenerator
 from agents.stat_currency_tracker import StatCurrencyTracker
+from agents.technology_infrastructure import TechnologyInfrastructureManager
+from agents.time_dilation import TimeDilationSystem
+from agents.vehicle_core_feeding import VehicleCoreFeeding
 from agents.word_count_enforcer import WordCountEnforcer
 from config import CHAPTER_GUIDE, MIN_WORD_COUNT
 from conflict_tracker import ConflictTracker
@@ -88,6 +92,8 @@ class Orchestrator:
             "parameter_enforcer": ParameterEnforcer(),
             "stat_currency_tracker": StatCurrencyTracker(),
             "database_manager": DatabaseManager(),
+            "slice_of_life": SliceOfLifeSceneGenerator(),
+            "tech_infrastructure": TechnologyInfrastructureManager(),
         }
 
         # Pipeline engine
@@ -96,6 +102,10 @@ class Orchestrator:
         # Relationship & Conflict trackers
         self.relationships = RelationshipTracker()
         self.conflicts = ConflictTracker()
+
+        # Specialized subsystems
+        self.vehicle_core_feeding = VehicleCoreFeeding()
+        self.time_dilation = TimeDilationSystem()
 
         # Load databases
         db_agent = self.agents["database_manager"]
@@ -1132,6 +1142,250 @@ class Orchestrator:
             result["objectives"] = content[:2000]
 
         return result
+
+    # ── Vehicle Core Feeding Commands ─────────────────────────
+
+    def feed_vehicle_core(
+        self,
+        resource_name: str,
+        resource_tier: int = 0,
+        quantity: int = 1,
+        chapter_num: int = 0,
+    ) -> dict:
+        """
+        Feed a resource to the Vehicle Core.
+
+        Args:
+            resource_name: Name of the resource to feed.
+            resource_tier: Tier of the resource.
+            quantity: Number of resources to feed.
+            chapter_num: Chapter number for logging.
+
+        Returns:
+            Dict with feeding results.
+        """
+        state = self.memory.get_state()
+        rp_balance = state.get("rp_balance", 0)
+
+        result = self.vehicle_core_feeding.feed_core(
+            resource_name=resource_name,
+            resource_tier=resource_tier,
+            quantity=quantity,
+            rp_available=rp_balance,
+            chapter_num=chapter_num,
+        )
+
+        if result.get("success"):
+            self.memory.update_state({
+                "vehicle_core_feeding_tier": self.vehicle_core_feeding.current_feeding_tier,
+                "total_core_feedings": self.vehicle_core_feeding.total_feedings,
+            })
+
+        return {
+            "command": "feed_vehicle_core",
+            **result,
+            "status": "complete" if result.get("success") else "failed",
+        }
+
+    def get_feeding_status(self) -> dict:
+        """Get current Vehicle Core feeding status."""
+        return {
+            "command": "get_feeding_status",
+            "current_tier": self.vehicle_core_feeding.get_feeding_tier_info(),
+            "next_tier": self.vehicle_core_feeding.get_next_tier_requirements(),
+            "summary": self.vehicle_core_feeding.get_feeding_summary(),
+            "status": "complete",
+        }
+
+    def get_feeding_context(self) -> str:
+        """Get feeding context for chapter writing."""
+        return self.vehicle_core_feeding.build_feeding_context()
+
+    # ── Time Dilation Commands ───────────────────────────────
+
+    def activate_time_dilation(
+        self,
+        tier: int,
+        duration_hours: int = 1,
+        activity: str = "training",
+        chapter_num: int = 0,
+    ) -> dict:
+        """
+        Activate time dilation in the pocket dimension.
+
+        Args:
+            tier: Dilation tier to activate.
+            duration_hours: Real-world hours to run dilation.
+            activity: What to do during dilated time.
+            chapter_num: Chapter number for logging.
+
+        Returns:
+            Dict with activation results.
+        """
+        state = self.memory.get_state()
+        vehicle_tier = state.get("vehicle_tier", 0)
+        rp_balance = state.get("rp_balance", 0)
+
+        result = self.time_dilation.activate_dilation(
+            tier=tier,
+            vehicle_tier=vehicle_tier,
+            rp_available=rp_balance,
+            duration_hours=duration_hours,
+            activity=activity,
+            chapter_num=chapter_num,
+        )
+
+        return {
+            "command": "activate_time_dilation",
+            **result,
+        }
+
+    def get_dilation_status(self) -> dict:
+        """Get current time dilation status."""
+        state = self.memory.get_state()
+        vehicle_tier = state.get("vehicle_tier", 0)
+        return {
+            "command": "get_dilation_status",
+            "current_tier": self.time_dilation.get_tier_info(),
+            "max_available": self.time_dilation.get_max_available_tier(vehicle_tier),
+            "summary": self.time_dilation.get_dilation_summary(),
+            "is_active": self.time_dilation.is_active,
+            "status": "complete",
+        }
+
+    def get_dilation_context(self) -> str:
+        """Get time dilation context for chapter writing."""
+        state = self.memory.get_state()
+        vehicle_tier = state.get("vehicle_tier", 0)
+        return self.time_dilation.build_dilation_context(vehicle_tier)
+
+    # ── Slice-of-Life Commands ───────────────────────────────
+
+    def generate_slice_of_life(
+        self,
+        scene_type: str = "",
+        chapter_num: int = 0,
+        recent_events: str = "",
+        mood: str = "",
+        pacing_need: str = "",
+    ) -> dict:
+        """
+        Generate a slice-of-life scene plan.
+
+        Args:
+            scene_type: Template ID or name (optional).
+            chapter_num: Chapter number.
+            recent_events: Recent story events for context.
+            mood: Desired mood.
+            pacing_need: Pacing category (after_action, between_arcs, etc.).
+
+        Returns:
+            Dict with scene generation plan.
+        """
+        context = self.memory.build_writing_context(chapter_num)
+        agent = self.agents["slice_of_life"]
+
+        prompt = agent.build_prompt(
+            context,
+            scene_type=scene_type,
+            chapter_num=chapter_num,
+            recent_events=recent_events,
+            mood=mood,
+            pacing_need=pacing_need,
+        )
+
+        return {
+            "command": "generate_slice_of_life",
+            "scene_type": scene_type or "auto",
+            "chapter_num": chapter_num,
+            "agent_name": agent.name,
+            "system_prompt": agent.system_prompt,
+            "user_prompt": prompt,
+            "temperature": agent.temperature,
+            "max_tokens": agent.max_tokens,
+            "status": "ready",
+        }
+
+    def list_scene_templates(self) -> dict:
+        """List available slice-of-life scene templates."""
+        agent = self.agents["slice_of_life"]
+        if not isinstance(agent, SliceOfLifeSceneGenerator):
+            return {"error": "SliceOfLifeSceneGenerator not available"}
+        templates = agent.get_all_templates()
+        return {
+            "command": "list_scene_templates",
+            "templates": [
+                {"id": t["id"], "name": t["name"], "tone": t["tone"]}
+                for t in templates
+            ],
+            "pacing_categories": agent.get_pacing_categories(),
+            "status": "complete",
+        }
+
+    def suggest_scene(self, pacing_need: str = "filler_breather") -> dict:
+        """Suggest a scene template based on pacing needs."""
+        agent = self.agents["slice_of_life"]
+        if not isinstance(agent, SliceOfLifeSceneGenerator):
+            return {"error": "SliceOfLifeSceneGenerator not available"}
+        suggestions = agent.suggest_scene(pacing_need)
+        return {
+            "command": "suggest_scene",
+            "pacing_need": pacing_need,
+            "suggestions": suggestions,
+            "status": "complete",
+        }
+
+    # ── Technology & Infrastructure Commands ─────────────────
+
+    def get_tech_context(
+        self,
+        tech_category: str = "",
+        chapter_num: int = 0,
+    ) -> dict:
+        """
+        Get technology/infrastructure context for writing.
+
+        Args:
+            tech_category: Specific category (vr, networking, energy, etc.).
+            chapter_num: Chapter for context.
+
+        Returns:
+            Dict with technology context.
+        """
+        agent = self.agents["tech_infrastructure"]
+        if not isinstance(agent, TechnologyInfrastructureManager):
+            return {"error": "TechnologyInfrastructureManager not available"}
+
+        state = self.memory.get_state()
+        vehicle_tier = state.get("vehicle_tier", 0)
+
+        context = agent.build_tech_context(vehicle_tier)
+
+        if tech_category:
+            category_map = {
+                "vr": agent.get_vr_info,
+                "networking": agent.get_networking_info,
+                "energy": agent.get_energy_info,
+                "battery": agent.get_battery_info,
+                "production": agent.get_production_info,
+                "marketing": agent.get_marketing_info,
+                "software": agent.get_software_info,
+            }
+            getter = category_map.get(tech_category)
+            if getter:
+                return {
+                    "command": "get_tech_context",
+                    "category": tech_category,
+                    "data": getter(),
+                    "status": "complete",
+                }
+
+        return {
+            "command": "get_tech_context",
+            "context": context,
+            "vehicle_tier": vehicle_tier,
+            "status": "complete",
+        }
 
     def __repr__(self) -> str:
         state = self.memory.get_state()
