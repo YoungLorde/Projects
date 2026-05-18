@@ -1171,7 +1171,7 @@ class Orchestrator:
             resource_name=resource_name,
             resource_tier=resource_tier,
             quantity=quantity,
-            rp_available=rp_balance,
+            rp_spent=rp_balance,
             chapter_num=chapter_num,
         )
 
