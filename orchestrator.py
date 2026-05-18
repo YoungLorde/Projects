@@ -18,6 +18,7 @@ from agents.lore_judge import LoreJudge
 from agents.outline_generator import OutlineGenerator
 from agents.parameter_enforcer import ParameterEnforcer
 from agents.plot_checker import PlotChecker
+from agents.prose_depth_checker import ProseDepthChecker
 from agents.prose_writer import ProseWriter
 from agents.refusal_checker import RefusalChecker
 from agents.scene_beat_generator import SceneBeatGenerator
@@ -29,8 +30,8 @@ from agents.stat_currency_tracker import StatCurrencyTracker
 from agents.technology_infrastructure import TechnologyInfrastructureManager
 from agents.time_dilation import TimeDilationSystem
 from agents.vehicle_core_feeding import VehicleCoreFeeding
-from agents.word_count_enforcer import WordCountEnforcer
-from config import CHAPTER_GUIDE, MIN_WORD_COUNT
+from agents.word_count_enforcer import WordCountEnforcer, count_prose_words
+from config import CHAPTER_GUIDE, MIN_WORD_COUNT, TARGET_WORD_COUNT
 from conflict_tracker import ConflictTracker
 from memory_manager import MemoryManager
 from pipelines.pipeline_definitions import PIPELINES, get_pipeline, list_pipelines
@@ -94,6 +95,7 @@ class Orchestrator:
             "database_manager": DatabaseManager(),
             "slice_of_life": SliceOfLifeSceneGenerator(),
             "tech_infrastructure": TechnologyInfrastructureManager(),
+            "prose_depth_checker": ProseDepthChecker(),
         }
 
         # Pipeline engine
@@ -255,8 +257,12 @@ class Orchestrator:
         result["instructions"] = (
             f"Execute each step in order. Step 1 uses the context directly. "
             f"Each subsequent step receives the output of the previous step. "
-            f"After the final step, run word count and parameter enforcement. "
-            f"Minimum word count: {MIN_WORD_COUNT} words."
+            f"After the final step, run word count enforcement, prose depth "
+            f"analysis, and parameter enforcement via finalize_chapter(). "
+            f"Minimum word count: {MIN_WORD_COUNT} prose words "
+            f"(target: {TARGET_WORD_COUNT}). "
+            f"Paragraphs must average 80+ words. "
+            f"Reading time target: 15+ minutes."
         )
 
         return result
@@ -270,8 +276,9 @@ class Orchestrator:
         """
         Finalize a chapter after pipeline execution.
 
-        Runs word count enforcement, parameter enforcement, saves the
-        chapter, generates a summary, and updates story state.
+        Runs accurate prose word counting (excludes blanks/headers/markdown),
+        prose depth analysis, parameter enforcement, saves the chapter,
+        generates a summary, and updates story state.
 
         Args:
             chapter_num: Chapter number being finalized.
@@ -288,12 +295,22 @@ class Orchestrator:
             "status": "validating",
         }
 
-        # Word count check
+        # Accurate prose word count (excludes blanks, headers, formatting)
+        prose_stats = count_prose_words(prose)
+
+        # Word count check (uses accurate counting internally)
         wc_agent = self.agents["word_count_enforcer"]
         if not isinstance(wc_agent, WordCountEnforcer):
             raise TypeError("word_count_enforcer agent has wrong type")
         wc_result = wc_agent.check(prose)
         result["validations"]["word_count"] = wc_result
+
+        # Prose depth check
+        depth_agent = self.agents["prose_depth_checker"]
+        if not isinstance(depth_agent, ProseDepthChecker):
+            raise TypeError("prose_depth_checker agent has wrong type")
+        depth_result = depth_agent.local_check(prose)
+        result["validations"]["prose_depth"] = depth_result
 
         # Parameter enforcement
         pe_agent = self.agents["parameter_enforcer"]
@@ -358,7 +375,7 @@ class Orchestrator:
             result["issues"] = []
             if not wc_result["meets_minimum"]:
                 result["issues"].append(
-                    f"Word count: {wc_result['word_count']} / "
+                    f"Prose word count: {wc_result['word_count']} / "
                     f"{wc_result['minimum']} minimum "
                     f"({wc_result['deficit']} words short)"
                 )
@@ -367,7 +384,17 @@ class Orchestrator:
             if refusal_detected:
                 result["issues"].append("AI refusal patterns detected")
 
-        result["word_count"] = len(prose.split())
+        # Depth warnings (advisory, don't block saving)
+        if depth_result.get("suggestions"):
+            result["depth_warnings"] = depth_result["suggestions"]
+        result["depth_score"] = depth_result.get("depth_score", 0)
+
+        # Use accurate prose word count, not naive split()
+        result["word_count"] = prose_stats["word_count"]
+        result["reading_time_minutes"] = prose_stats["reading_time_minutes"]
+        result["avg_words_per_paragraph"] = prose_stats[
+            "avg_words_per_paragraph"
+        ]
         return result
 
     def save_chapter_summary(

@@ -36,7 +36,10 @@ CHAPTER_GUIDE = GUIDES_DIR / "chapter_guide.md"
 
 # ── Novel Defaults ────────────────────────────────────────────
 NOVEL_TITLE = "RP Conversion"
-MIN_WORD_COUNT = 2500
+MIN_WORD_COUNT = 3500
+TARGET_WORD_COUNT = 10000
+MIN_READING_TIME_MINUTES = 15
+WORDS_PER_MINUTE = 250
 DEFAULT_BOOK = "rp_conversion"
 
 # ── State Tracking File ──────────────────────────────────────

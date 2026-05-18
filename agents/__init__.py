@@ -14,6 +14,7 @@ from agents.lore_judge import LoreJudge
 from agents.outline_generator import OutlineGenerator
 from agents.parameter_enforcer import ParameterEnforcer
 from agents.plot_checker import PlotChecker
+from agents.prose_depth_checker import ProseDepthChecker
 from agents.prose_writer import ProseWriter
 from agents.refusal_checker import RefusalChecker
 from agents.scene_beat_generator import SceneBeatGenerator
@@ -48,4 +49,5 @@ __all__ = [
     "TimeDilationSystem",
     "SliceOfLifeSceneGenerator",
     "TechnologyInfrastructureManager",
+    "ProseDepthChecker",
 ]
