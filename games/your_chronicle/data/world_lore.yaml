@@ -1,0 +1,85 @@
+game: Your Chronicle
+genre: Click-based Idle / Incremental RPG
+tagline: "Every click writes a line. Every line writes a legend. This is YOUR chronicle."
+
+premise: >
+  In Your Chronicle, the player is an unnamed nobody who discovers a living book
+  called The Chronicle — a tome that records the deeds of whoever holds it and
+  turns those deeds into power. The more the player acts (clicks), the more the
+  Chronicle writes, and the written word reshapes reality around them. The game
+  is an idle/incremental: clicking generates Ink (the soft, active currency),
+  Ink accrues passively into Lore (the idle/offline currency), and milestones
+  unlock new "Chapters" of progression. Quest-giver NPCs hand out the Main Quests
+  that move the story between Chapters; vendor NPCs let players spend currency on
+  gear, consumables, and crafting materials; dungeon NPCs gate and guide combat
+  content.
+
+setting:
+  world_name: Aethryl
+  capital: Lumengarde
+  academy: The Vellum Academy of Inscribed Arts
+  description: >
+    Aethryl is a world powered by the written word. Mages here do not cast from
+    raw mana — they "inscribe" reality using Ink drawn from their own deeds. The
+    Vellum Academy in the capital city of Lumengarde trains young Inscribers, and
+    it is here that most players begin their chronicle as a first-year student.
+    Beyond the academy lie the Margins — wild, half-written lands dotted with
+    dungeons called "Errata" where the world's story has gone corrupt and must be
+    rewritten by adventurers.
+
+currencies:
+  - id: ink
+    name: Ink
+    role: active / click currency
+    description: Generated per click. The primary early-game resource.
+  - id: lore
+    name: Lore
+    role: idle / offline currency
+    description: Accrues passively over time, even while the player is away.
+  - id: gilt
+    name: Gilt
+    role: hard / premium currency
+    description: Rare gold-leaf coinage used for high-tier purchases and prestige.
+
+progression_model:
+  loop: "Click to earn Ink -> auto-convert idle Ink to Lore -> spend on upgrades, gear, and consumables -> clear dungeons -> complete Main Quests -> unlock next Chapter."
+  chapters:
+    - chapter: 1
+      name: The Blank Page
+      theme: Academy enrollment and first inscriptions.
+    - chapter: 2
+      name: The First Margin
+      theme: Leaving the academy walls; first dungeons (Errata).
+    - chapter: 3
+      name: Ink and Iron
+      theme: Guild work, vendors, and gear progression.
+    - chapter: 4
+      name: The Royal Footnote
+      theme: Court intrigue; the crown takes notice of the player.
+    - chapter: 5
+      name: The Corrupted Index
+      theme: A great Erratum threatens to unwrite the world.
+    - chapter: 6
+      name: The Author's Seat
+      theme: Endgame; the player's chronicle rivals the world's own.
+
+categorization_legend:
+  persistence:
+    description: How long an NPC stays relevant as the player progresses.
+    values:
+      - id: anchor
+        meaning: Present for essentially the entire game (framing/hub NPCs).
+      - id: recurring
+        meaning: Appears repeatedly across multiple chapters.
+      - id: milestone
+        meaning: Appears only at specific major progression gates.
+      - id: transient
+        meaning: Appears once or twice, then disappears as players progress.
+      - id: seasonal
+        meaning: Appears during limited-time / event windows only.
+  role_category:
+    description: Functional role of the NPC in the game systems.
+    values: [quest_giver, trainer, vendor, dungeon, service, faction, lore]
+  importance:
+    description: Narrative weight.
+    values: [key, major, minor]

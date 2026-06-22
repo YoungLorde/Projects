@@ -1,0 +1,306 @@
+collection: support_npcs
+description: >
+  15 additional NPCs for Your Chronicle: shop vendors (weapons, potions, materials,
+  and more), dungeon NPCs, and service NPCs. Each carries the same categorization
+  fields as the key characters. Vendors are linked to a shop via shop_id so the
+  database can join them to their inventory.
+characters:
+  # ----------------------------- WEAPON VENDORS -----------------------------
+  - id: CHR-NPC-001
+    name: Bram Hollowforge
+    title: Master Weaponsmith
+    role: Weapon Vendor
+    role_category: vendor
+    importance: major
+    persistence: anchor
+    faction: Margin Adventurers' Guild
+    home_location: The Hollowforge Smithy, Guild Quarter
+    shop_id: SHOP-WPN-01
+    shop_type: weapons
+    gives_main_quest: false
+    appears_in_chapters: [2, 3, 4, 5, 6]
+    personality: Loud, proud, treats every blade he sells like a child going off to war.
+    voice_sample: "Swing it once before you buy it. A weapon that doesn't feel right in the hand is just expensive regret."
+    backstory: >
+      Bram Hollowforge forges Ink-tempered steel — weapons that grow sharper the more
+      deeds their wielder records. His smithy is the player's primary early and mid-game
+      weapon shop, an ANCHOR vendor available for most of the game.
+    lore_notes: Sells the standard weapon catalog (Tiers 0-4). Higher tiers require Vaelora.
+
+  - id: CHR-NPC-002
+    name: Vaelora Sunderglass
+    title: Exotic Arms Dealer
+    role: Weapon Vendor (High-Tier)
+    role_category: vendor
+    importance: minor
+    persistence: recurring
+    faction: Independent Traders' Cartel
+    home_location: A black-market stall that relocates each chapter
+    shop_id: SHOP-WPN-02
+    shop_type: weapons
+    gives_main_quest: false
+    appears_in_chapters: [4, 5, 6]
+    personality: Silky, secretive, sells things she probably shouldn't.
+    voice_sample: "Legal? Darling, legality is just a story the Crown hasn't finished writing. Now — do you want the blade or not?"
+    backstory: >
+      Vaelora deals in rare, legendary, and faintly illegal armaments smuggled out of
+      deep Errata. She stocks the high-tier weapon catalog and only appears once the
+      player can afford her tastes.
+    lore_notes: Sells legendary/mythic weapons (Tiers 5-9). Prices in Gilt.
+
+  # ----------------------------- POTION VENDORS -----------------------------
+  - id: CHR-NPC-003
+    name: Goodwife Tamsin Bramble
+    title: Apothecary
+    role: Potion Vendor
+    role_category: vendor
+    importance: major
+    persistence: anchor
+    faction: Independent
+    home_location: The Bramble Apothecary, Market Row
+    shop_id: SHOP-POT-01
+    shop_type: potions
+    gives_main_quest: false
+    appears_in_chapters: [1, 2, 3, 4, 5, 6]
+    personality: Motherly, no-nonsense, will scold you for adventuring on an empty stomach.
+    voice_sample: "Health potion, stamina draught, and a tonic for that cough. No, you're not leaving without the tonic."
+    backstory: >
+      Tamsin Bramble runs the oldest apothecary in Lumengarde, supplying healing and
+      utility potions to generations of adventurers. She is the player's main potion
+      shop and an ANCHOR vendor from Chapter 1 onward.
+    lore_notes: Sells the standard potion catalog (restoratives, buffs, utility).
+
+  - id: CHR-NPC-004
+    name: Old Fen the Herbalist
+    title: Wild Herbalist & Tincture-Maker
+    role: Potion Vendor (Reagents/Tinctures)
+    role_category: vendor
+    importance: minor
+    persistence: recurring
+    faction: Independent
+    home_location: A moss-covered cart at the edge of the Margins
+    shop_id: SHOP-POT-02
+    shop_type: potions
+    gives_main_quest: false
+    appears_in_chapters: [2, 3, 4, 5]
+    personality: Quiet, earthy, speaks more to his plants than to people.
+    voice_sample: "...This one's for nightmares. This one's for courage. This one... best you don't ask what this one's for."
+    backstory: >
+      Old Fen forages rare reagents from the deepest Margins and brews potent, strange
+      tinctures the Academy refuses to certify. He sells the advanced and forbidden
+      potion catalog.
+    lore_notes: Sells elixirs, exotic tinctures, and rare reagent-based potions.
+
+  # ----------------------------- MATERIAL VENDORS -----------------------------
+  - id: CHR-NPC-005
+    name: Garrick Stonecount
+    title: Material Broker
+    role: Material Vendor
+    role_category: vendor
+    importance: major
+    persistence: anchor
+    faction: Independent Traders' Cartel
+    home_location: The Stonecount Exchange, Guild Quarter
+    shop_id: SHOP-MAT-01
+    shop_type: materials
+    gives_main_quest: false
+    appears_in_chapters: [2, 3, 4, 5, 6]
+    personality: Shrewd, numbers-obsessed, never met a quantity he couldn't haggle.
+    voice_sample: "Ore's up three points, hide's down two, and that crystal you're eyeing? Buy now or cry later."
+    backstory: >
+      Garrick Stonecount runs the central material exchange where crafters buy the raw
+      goods that feed every upgrade and recipe. He is the player's main material shop.
+    lore_notes: Sells the standard crafting-material catalog (ores, hides, cloth, wood, etc.).
+
+  - id: CHR-NPC-006
+    name: Pell the Pickaxe
+    title: Miner's Exchange Foreman
+    role: Material Vendor (Ores/Gems)
+    role_category: vendor
+    importance: minor
+    persistence: recurring
+    faction: Margin Adventurers' Guild
+    home_location: The Mineshaft Depot below the Guild Hall
+    shop_id: SHOP-MAT-02
+    shop_type: materials
+    gives_main_quest: false
+    appears_in_chapters: [3, 4, 5, 6]
+    personality: Booming, dust-covered, laughs at his own jokes.
+    voice_sample: "Down here we say: rock today, riches tomorrow! ...Mostly rock, if I'm honest."
+    backstory: >
+      Pell runs the mining operation that supplies rare ores, gems, and refined metals.
+      He stocks the high-tier material catalog and trades in dungeon-sourced minerals.
+    lore_notes: Sells rare ores, gemstones, and refined/exotic materials.
+
+  # ----------------------------- SPECIALTY VENDORS -----------------------------
+  - id: CHR-NPC-007
+    name: Lyric Quillborne
+    title: Court Enchanter
+    role: Enchantment Vendor
+    role_category: vendor
+    importance: minor
+    persistence: recurring
+    faction: The Vellum Academy
+    home_location: The Glyphwright's Loft, Academy Spire
+    shop_id: SHOP-ENC-01
+    shop_type: enchantments
+    gives_main_quest: false
+    appears_in_chapters: [3, 4, 5, 6]
+    personality: Precise, vain about their craftsmanship, mildly snobbish.
+    voice_sample: "Anyone can swing a sword. It takes an artist to make the sword want to swing itself."
+    backstory: >
+      Lyric Quillborne inscribes enchantments, runes, and glyph-scrolls onto gear. They
+      sell the enchantment/scroll catalog that upgrades the player's equipment.
+    lore_notes: Sells runes, glyph scrolls, and enchantment stones (a 4th shop type).
+
+  - id: CHR-NPC-008
+    name: Madame Coquette Rill
+    title: Relic Collector
+    role: Artifact Vendor
+    role_category: vendor
+    importance: minor
+    persistence: seasonal
+    faction: Independent Traders' Cartel
+    home_location: A traveling curiosity wagon (event windows only)
+    shop_id: SHOP-REL-01
+    shop_type: relics
+    gives_main_quest: false
+    appears_in_chapters: [4, 5]
+    personality: Theatrical, dramatic, every item has an absurd backstory she swears is true.
+    voice_sample: "This ring? Worn by a queen who could stop time! ...Or a cobbler with delusions. Either way — priceless."
+    backstory: >
+      Madame Rill trades in rare relics and prestige cosmetics during limited-time
+      events. A SEASONAL vendor — she appears only during special windows, then vanishes.
+    lore_notes: SEASONAL/event vendor. Sells relics, charms, and cosmetic Chronicle covers.
+
+  # ----------------------------- DUNGEON NPCs -----------------------------
+  - id: CHR-NPC-009
+    name: Warden Thane Greymoor
+    title: Gatekeeper of the Errata
+    role: Dungeon Gatekeeper
+    role_category: dungeon
+    importance: major
+    persistence: anchor
+    faction: Margin Adventurers' Guild
+    home_location: The Erratum Gate, beyond the city wall
+    gives_main_quest: false
+    appears_in_chapters: [2, 3, 4, 5, 6]
+    personality: Stern, watchful, treats dungeon safety like sacred law.
+    voice_sample: "You go in at your own risk and you come out at my discretion. Sign here. Try not to die — paperwork's a nightmare."
+    backstory: >
+      Thane Greymoor controls access to every dungeon (Erratum) in the Margins, gating
+      content by player power and chapter. He is the hub for dungeon entry, difficulty
+      selection, and idle dungeon runs.
+    lore_notes: Dungeon-access hub. Sets dungeon tiers and unlocks new Errata per chapter.
+
+  - id: CHR-NPC-010
+    name: Scout Nessa Faraday
+    title: Margin Pathfinder
+    role: Dungeon Guide / Scout
+    role_category: dungeon
+    importance: minor
+    persistence: recurring
+    faction: Margin Adventurers' Guild
+    home_location: Forward camps inside active dungeons
+    gives_main_quest: false
+    appears_in_chapters: [2, 3, 4, 5]
+    personality: Quick, sharp, talks fast and moves faster.
+    voice_sample: "Left's a trap, right's a worse trap, straight ahead's a boss. So — straight ahead, obviously."
+    backstory: >
+      Nessa Faraday guides adventurers through dungeon interiors, marking traps, loot,
+      and shortcuts. She powers the idle dungeon-expedition system and offers run buffs.
+    lore_notes: Provides dungeon shortcuts, trap warnings, and idle-expedition speed bonuses.
+
+  - id: CHR-NPC-011
+    name: Cleric Ambrose Mourning
+    title: Field Cleric of the Blank Page
+    role: Dungeon Healer / Revival
+    role_category: dungeon
+    importance: minor
+    persistence: recurring
+    faction: Temple of the Blank Page
+    home_location: Sanctuary shrines within dungeons
+    gives_main_quest: false
+    appears_in_chapters: [3, 4, 5, 6]
+    personality: Gentle, weary, has seen too many adventurers not come back.
+    voice_sample: "Rest at the shrine, child. The page can wait. The dead, unfortunately, cannot."
+    backstory: >
+      Ambrose Mourning tends sanctuary shrines deep in the Errata, offering healing,
+      revival, and checkpoint services. He keeps idle dungeon runs from total loss.
+    lore_notes: Dungeon revival/checkpoint service. Reduces idle-run death penalties.
+
+  # ----------------------------- SERVICE NPCs -----------------------------
+  - id: CHR-NPC-012
+    name: Bartholomew "Barty" Tabard
+    title: Bounty Clerk
+    role: Bounty Board Service
+    role_category: service
+    importance: minor
+    persistence: recurring
+    faction: Margin Adventurers' Guild
+    home_location: The Bounty Desk, Guild Hall
+    gives_main_quest: false
+    appears_in_chapters: [3, 4, 5, 6]
+    personality: Officious, paperwork-loving, secretly thrilled by every bounty he posts.
+    voice_sample: "Bounty number four-seven-two: one corrupted bookwyrm, alive or as-pages. Reward's generous. Form's in triplicate."
+    backstory: >
+      Barty Tabard manages the bounty board — the repeatable/idle quest system that
+      converts the player's time into reputation and currency.
+    lore_notes: Repeatable bounty/idle-quest hub. Drives the side-quest reward loop.
+
+  - id: CHR-NPC-013
+    name: Mabel Hearthwell
+    title: Tavern Keeper of the Inkpot Inn
+    role: Tavern Keeper / Rumors
+    role_category: service
+    importance: minor
+    persistence: anchor
+    faction: Independent
+    home_location: The Inkpot Inn, Market Row
+    gives_main_quest: false
+    appears_in_chapters: [1, 2, 3, 4, 5, 6]
+    personality: Warm, gossipy, knows everyone's business and most of their secrets.
+    voice_sample: "Sit, eat, drink. And while you're at it — let me tell you what the whole city's whispering about you."
+    backstory: >
+      Mabel Hearthwell runs the inn where adventurers rest between runs. She provides
+      idle-buff "rested" bonuses and surfaces rumors that hint at hidden content.
+    lore_notes: Provides rested/idle buffs and rumor-based hints toward secrets.
+
+  - id: CHR-NPC-014
+    name: Master Coffer Aurelian Vane
+    title: Treasurer of the Lumengarde Ledger Bank
+    role: Banker / Treasury Service
+    role_category: service
+    importance: minor
+    persistence: recurring
+    faction: The Crown of Lumengarde
+    home_location: The Ledger Bank, Gilded Court
+    gives_main_quest: false
+    appears_in_chapters: [3, 4, 5, 6]
+    personality: Impeccable, precise, treats currency with religious reverence.
+    voice_sample: "Idle wealth is wasted wealth. Deposit with the Ledger and let your Lore compound while you sleep."
+    backstory: >
+      Aurelian Vane manages the bank where players store currency to earn idle interest,
+      central to the incremental/idle economy.
+    lore_notes: Idle-interest/investment hub. Core to the offline-currency loop.
+
+  - id: CHR-NPC-015
+    name: Pip Wanderfoot
+    title: The Wandering Merchant
+    role: Random Traveling Vendor
+    role_category: vendor
+    importance: minor
+    persistence: transient
+    faction: Independent
+    home_location: Appears randomly at any hub for a limited time
+    shop_id: SHOP-WND-01
+    shop_type: wandering
+    gives_main_quest: false
+    appears_in_chapters: [2, 3, 4, 5, 6]
+    personality: Cheery, unpredictable, never sells the same thing twice.
+    voice_sample: "Catch me while you can! Here today, gone in an hour, and the deal of a lifetime in between!"
+    backstory: >
+      Pip Wanderfoot appears at random with a rotating stock of rare items pulled from
+      every shop type. A TRANSIENT vendor — each visit is brief and never repeats its
+      stock, rewarding players who check in often during idle play.
+    lore_notes: TRANSIENT random vendor. Stocks a rotating curated mix from all catalogs.

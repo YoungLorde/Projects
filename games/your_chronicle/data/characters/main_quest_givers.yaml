@@ -1,0 +1,319 @@
+collection: main_quest_givers
+description: >
+  The 10 key NPCs who give Main Quests in Your Chronicle. Each advances the core
+  story between Chapters. Every character carries a persistence category (how long
+  they remain relevant), a role_category, an importance, and the chapters they
+  appear in. Transient characters appear once or twice and then leave the stage.
+characters:
+  - id: CHR-MQ-001
+    name: Master Selwyn Quill
+    title: Professor of Inscribed Arts
+    role: Magic Teacher
+    role_category: quest_giver
+    importance: key
+    persistence: recurring
+    faction: The Vellum Academy
+    home_location: Vellum Academy — Hall of First Strokes
+    gives_main_quest: true
+    appears_in_chapters: [1, 2, 3, 5]
+    first_appearance_chapter: 1
+    last_appearance_chapter: 5
+    unlock_condition: Start a new chronicle (default available)
+    quests_given:
+      - "The First Stroke — learn to convert clicks into Ink."
+      - "Ink Discipline — reach your first idle Lore milestone."
+      - "Marginalia — inscribe your first dungeon ward."
+    personality: Patient, dry-witted, exacting about penmanship as a metaphor for discipline.
+    voice_sample: "A sloppy line makes a sloppy spell. Write your life the way you'd write a masterwork — slowly, then all at once."
+    appearance: Slight, silver-haired man in ink-stained robes, a quill perpetually tucked behind one ear.
+    backstory: >
+      Selwyn Quill was the most promising Inscriber of his generation until a failed
+      experiment with living text cost him the use of his right hand. Rather than
+      retire, he learned to inscribe with his left and devoted himself to teaching.
+      He is the first person to recognise that the player's Chronicle is no ordinary
+      tome — it writes back. He becomes the player's earliest mentor, teaching the
+      fundamentals of turning deeds into Ink.
+    lore_notes: >
+      Selwyn secretly fears the player's Chronicle because the last living book he
+      studied unwrote its owner. His guidance is genuine but cautious; later chapters
+      reveal he has been quietly reporting the player's progress to the Dean.
+    rewards_theme: Ink-generation upgrades and early click multipliers.
+
+  - id: CHR-MQ-002
+    name: Dean Marigold Vesper
+    title: Dean of the Vellum Academy
+    role: School Dean
+    role_category: quest_giver
+    importance: key
+    persistence: recurring
+    faction: The Vellum Academy
+    home_location: Vellum Academy — The Deanery
+    gives_main_quest: true
+    appears_in_chapters: [1, 3, 4, 5, 6]
+    first_appearance_chapter: 1
+    last_appearance_chapter: 6
+    unlock_condition: Complete "The First Stroke"
+    quests_given:
+      - "Enrollment — formally join the Academy and unlock the upgrade ledger."
+      - "The Dean's Wager — prove your worth by clearing the practice Erratum."
+      - "Accreditation — graduate from the Academy to enter the wider world."
+    personality: Politically shrewd, warm in public, calculating in private.
+    voice_sample: "The Academy does not gamble, child. It invests. And today, against every committee's advice, it is investing in you."
+    appearance: Tall, regal woman in gold-trimmed academic robes, carrying a ledger that audits everything she sees.
+    backstory: >
+      Marigold Vesper rose from a charity scholarship to the highest office in the
+      Academy through sheer institutional cunning. She recognises the player's
+      Chronicle as the most valuable artifact to enter her halls in a century and
+      manoeuvres to keep it — and the player — within her sphere of influence.
+    lore_notes: >
+      The Dean's true loyalty is to the Academy's survival, not the crown nor the
+      player. Her quests reward generously but always tie the player closer to the
+      institution. In Chapter 6 she must choose between the Academy and the world.
+    rewards_theme: Unlocks the upgrade ledger, building purchases, and prestige systems.
+
+  - id: CHR-MQ-003
+    name: Drillmaster Korrin Vael
+    title: Master-at-Arms of the Practice Yards
+    role: Combat Trainer
+    role_category: quest_giver
+    importance: major
+    persistence: recurring
+    faction: The Vellum Academy
+    home_location: Vellum Academy — The Practice Yards
+    gives_main_quest: true
+    appears_in_chapters: [2, 3, 4]
+    first_appearance_chapter: 2
+    last_appearance_chapter: 4
+    unlock_condition: Reach Chapter 2 (The First Margin)
+    quests_given:
+      - "Blunt Truths — survive your first ten dungeon rooms."
+      - "Iron Cadence — defeat a mini-boss without auto-battle."
+      - "The Vael Standard — reach a combat power threshold."
+    personality: Gruff, blunt, secretly sentimental about students he trains.
+    voice_sample: "Clicking faster won't save you when the page bites back. Stance. Timing. THEN speed."
+    appearance: Scarred, broad-shouldered veteran with a wooden training arm strapped to his back.
+    backstory: >
+      Korrin Vael was a frontline soldier who lost his squad to a corrupt Erratum in
+      the Margins. He blames himself for relying on raw power over technique and now
+      drills students mercilessly so they never make the same mistake. He teaches the
+      player that idle gains mean nothing without the skill to survive what they unlock.
+    lore_notes: >
+      Korrin distrusts the Academy's politics and is the first NPC to warn the player
+      that the Dean's generosity has strings attached.
+    rewards_theme: Combat power upgrades, auto-battle unlocks, and dungeon-clear bonuses.
+
+  - id: CHR-MQ-004
+    name: The Stranger in the Margins
+    title: Unknown
+    role: Mysterious Wanderer
+    role_category: quest_giver
+    importance: key
+    persistence: transient
+    faction: Unaffiliated (Unknown)
+    home_location: Roadside shrine at the edge of the First Margin (vanishes after)
+    gives_main_quest: true
+    appears_in_chapters: [2, 4]
+    first_appearance_chapter: 2
+    last_appearance_chapter: 4
+    unlock_condition: First time the player leaves Lumengarde
+    quests_given:
+      - "A Word of Warning — a single, ominous fetch quest with an outsized reward."
+      - "The Second Meeting — appears once more, much later, then is gone for good."
+    personality: Cryptic, melancholic, speaks in half-finished sentences as if reading from a damaged page.
+    voice_sample: "I held a book like yours once. It finished my story before I did. Walk faster than the ink, child."
+    appearance: A hooded figure whose face is always smudged, as if partially erased.
+    backstory: >
+      The Stranger is the former owner of a living book like the player's Chronicle —
+      a previous "Author" whose tome eventually unwrote them, leaving only a fading
+      remnant. They appear exactly twice to deliver crucial warnings, then never
+      again, embodying the game's "appear once or twice and disappear" category.
+    lore_notes: >
+      DESIGN NOTE: The Stranger is the canonical example of a TRANSIENT key NPC. Their
+      two appearances foreshadow the endgame (The Corrupted Index). They must never
+      reappear after Chapter 4 — their absence is itself a plot point.
+    rewards_theme: One-time large currency injections and a unique foreshadowing relic.
+
+  - id: CHR-MQ-005
+    name: Herald Aldous Penmark
+    title: Royal Herald of the Crown of Lumengarde
+    role: Royal Envoy
+    role_category: quest_giver
+    importance: major
+    persistence: milestone
+    faction: The Crown of Lumengarde
+    home_location: The Gilded Court (appears only at chapter gates)
+    gives_main_quest: true
+    appears_in_chapters: [4, 6]
+    first_appearance_chapter: 4
+    last_appearance_chapter: 6
+    unlock_condition: Begin Chapter 4 (The Royal Footnote)
+    quests_given:
+      - "The Crown Takes Notice — a royal summons that gates Chapter 4."
+      - "The Final Decree — a climactic royal quest that gates the endgame."
+    personality: Pompous, ceremonial, but hides genuine fear for the kingdom.
+    voice_sample: "By order of the Crown, your name has been entered into the Royal Footnote. Do try to be worthy of the margin we've allotted you."
+    appearance: Immaculate herald in royal blue and gold, carrying a scroll that unrolls forever.
+    backstory: >
+      Aldous Penmark is the crown's mouthpiece, dispatched only when matters of state
+      demand it. His appearances mark major progression gates — the moments the wider
+      world acknowledges the player. He is a MILESTONE NPC: rarely seen, but each
+      appearance is a turning point.
+    lore_notes: >
+      The Herald privately believes the player's Chronicle could either save or doom
+      the kingdom and is gathering evidence for the crown's eventual decision.
+    rewards_theme: Prestige unlocks, Gilt (premium currency), and chapter-gate keys.
+
+  - id: CHR-MQ-006
+    name: Guildmistress Brenna Cole
+    title: Head of the Margin Adventurers' Guild
+    role: Guild Master
+    role_category: quest_giver
+    importance: major
+    persistence: recurring
+    faction: Margin Adventurers' Guild
+    home_location: The Guild Hall, Lumengarde Outer Ring
+    gives_main_quest: true
+    appears_in_chapters: [3, 4, 5, 6]
+    first_appearance_chapter: 3
+    last_appearance_chapter: 6
+    unlock_condition: Reach Chapter 3 (Ink and Iron)
+    quests_given:
+      - "Registration — join the Guild and unlock the bounty board."
+      - "Rank and File — climb the guild ranks via dungeon contracts."
+      - "The Guild's Gambit — lead a guild expedition into a major Erratum."
+    personality: Pragmatic, fair, allergic to the Academy's and Crown's politics.
+    voice_sample: "Academy gives you theory. Crown gives you orders. The Guild gives you work — and work is the only thing that ever made anyone strong."
+    appearance: Weathered, muscular woman in practical leathers, a ledger of bounties chained to her belt.
+    backstory: >
+      Brenna Cole built the Margin Adventurers' Guild from a single bounty board into
+      the most powerful independent faction in the region. She offers the player an
+      alternative path to power outside the Academy and Crown, and her recurring
+      quests form the backbone of the mid-game gear and currency loop.
+    lore_notes: >
+      Brenna is the hub for nearly all vendor and dungeon NPCs — most of them either
+      work for or trade through the Guild. Befriending her unlocks vendor discounts.
+    rewards_theme: Bounty board, vendor access, dungeon contracts, and faction reputation.
+
+  - id: CHR-MQ-007
+    name: Oracle Saphienne of the Unwritten
+    title: High Oracle of the Temple of the Blank Page
+    role: Oracle / Prophet
+    role_category: quest_giver
+    importance: key
+    persistence: recurring
+    faction: Temple of the Blank Page
+    home_location: Temple of the Blank Page, Lumengarde Spire District
+    gives_main_quest: true
+    appears_in_chapters: [3, 5, 6]
+    first_appearance_chapter: 3
+    last_appearance_chapter: 6
+    unlock_condition: Complete the Oracle's introduction event in Chapter 3
+    quests_given:
+      - "The Prophecy of Ink — receive the central prophecy of the game."
+      - "Reading the Corruption — investigate the spreading Corrupted Index."
+      - "The Author's Choice — the final prophecy that frames the endgame."
+    personality: Serene, unnerving, speaks of the player in past tense as if they've already won or lost.
+    voice_sample: "I have read your ending in every blank page I've ever touched. You have not written it yet. That is the only mercy left to you."
+    appearance: Blindfolded priestess in white, her skin covered in shifting prophetic text.
+    backstory: >
+      Saphienne was born able to read the "Unwritten" — the futures not yet inscribed.
+      She has foreseen the Corrupted Index that threatens to unwrite Aethryl and
+      believes the player's Chronicle is the only tome capable of rewriting the ending.
+      Her prophecies drive the main story toward its climax.
+    lore_notes: >
+      The Oracle's prophecies are deliberately ambiguous and double as hint systems for
+      late-game mechanics. She never lies, but she never tells the whole truth.
+    rewards_theme: Prophecy-gated lore unlocks, late-game multipliers, and endgame keys.
+
+  - id: CHR-MQ-008
+    name: Cartographer Doran Inkfoot
+    title: Master Cartographer of the Margins
+    role: Dungeon Cartographer / Explorer
+    role_category: quest_giver
+    importance: major
+    persistence: recurring
+    faction: Margin Adventurers' Guild
+    home_location: The Mapping Room, Guild Hall
+    gives_main_quest: true
+    appears_in_chapters: [2, 3, 4, 5]
+    first_appearance_chapter: 2
+    last_appearance_chapter: 5
+    unlock_condition: Clear your first dungeon (Erratum)
+    quests_given:
+      - "Charting the Margins — unlock the dungeon map and idle expeditions."
+      - "Deep Errata — discover deeper, higher-reward dungeons."
+      - "The Blank Region — map the uncharted zone hiding the Corrupted Index."
+    personality: Excitable, restless, addicted to discovering new places.
+    voice_sample: "Every blank spot on this map is a story nobody's written yet. Come on — let's go ruin some emptiness."
+    appearance: Wiry, sunburnt explorer draped in rolled maps, boots permanently caked in dungeon dust.
+    backstory: >
+      Doran Inkfoot has mapped more of the Margins than anyone alive, losing two
+      fingers and three companions in the process. He unlocks the game's dungeon and
+      idle-expedition systems, turning the player's idle time into exploration progress.
+    lore_notes: >
+      Doran is the one who first finds the edge of the Corrupted Index, setting the
+      late-game plot in motion. His maps are required to access endgame zones.
+    rewards_theme: Dungeon unlocks, idle expedition slots, and map-based offline gains.
+
+  - id: CHR-MQ-009
+    name: Master Alchemist Yvain Thistlebrew
+    title: Professor of Alchemy and Potion-Craft
+    role: Alchemy Master / Potions Professor
+    role_category: quest_giver
+    importance: major
+    persistence: recurring
+    faction: The Vellum Academy
+    home_location: Vellum Academy — The Bubbling Annex
+    gives_main_quest: true
+    appears_in_chapters: [2, 3, 5]
+    first_appearance_chapter: 2
+    last_appearance_chapter: 5
+    unlock_condition: Reach Chapter 2 and visit the Annex
+    quests_given:
+      - "First Brew — craft your first potion and unlock consumables."
+      - "Volatile Knowledge — gather rare reagents from dungeons."
+      - "The Antidote to Corruption — brew the potion needed for the endgame."
+    personality: Eccentric, generous, slightly singed, speaks at a hundred words a minute.
+    voice_sample: "Drink first, ask questions later! No — wait — read the label. ALWAYS read the label. I learned that one the loud way."
+    appearance: Frazzled alchemist with mismatched goggles and eyebrows that never fully grow back.
+    backstory: >
+      Yvain Thistlebrew is the Academy's resident genius and hazard. His potions can
+      turn the tide of any fight, and his quests bootstrap the consumables economy that
+      links the player to the Apothecary and Herbalist vendors.
+    lore_notes: >
+      Yvain is the bridge NPC to the potion-shop vendors and crafts the only known
+      cure for Index corruption, making him essential to the endgame.
+    rewards_theme: Consumable crafting, potion vendor unlocks, and buff systems.
+
+  - id: CHR-MQ-010
+    name: The Chronicler
+    title: Keeper of All Chronicles
+    role: Loremaster / Narrator
+    role_category: quest_giver
+    importance: key
+    persistence: anchor
+    faction: The Order of Living Books
+    home_location: The Reading Room (a pocket of space inside the player's own Chronicle)
+    gives_main_quest: true
+    appears_in_chapters: [1, 2, 3, 4, 5, 6]
+    first_appearance_chapter: 1
+    last_appearance_chapter: 6
+    unlock_condition: Always present — frames the entire game
+    quests_given:
+      - "Open the Book — the tutorial quest that begins everything."
+      - "Each Chapter's Threshold — the Chronicler narrates and gates every Chapter."
+      - "Write the Ending — the final quest of the game."
+    personality: Timeless, kind, faintly amused by mortals, the literal narrator of the player's story.
+    voice_sample: "And so it begins — as every chronicle does — with a single, trembling stroke of ink. Go on. Write your first line."
+    appearance: A figure made of turning pages and soft candlelight, never quite holding a fixed form.
+    backstory: >
+      The Chronicler is the spirit of the player's living book — the voice that narrates
+      the game, frames each Chapter, and ultimately reveals that the player has been
+      writing their own legend all along. As an ANCHOR NPC, the Chronicler is present
+      from the first click to the last, the constant thread tying every other NPC
+      together. The title of the game — "Your Chronicle" — is the Chronicler's gift.
+    lore_notes: >
+      DESIGN NOTE: The Chronicler is the canonical ANCHOR NPC — always available, never
+      removed, the framing device for the whole game. Every other character's quests are
+      contextualised by the Chronicler's narration.
+    rewards_theme: Chapter gates, prestige/ascension framing, and the endgame finale.
