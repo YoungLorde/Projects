@@ -1,85 +1,77 @@
 game: Your Chronicle
-genre: Click-based Idle / Incremental RPG
-tagline: "Every click writes a line. Every line writes a legend. This is YOUR chronicle."
+genre: Click-based Idle / Incremental RPG (survival + empire builder + cultivation-style ascension)
+tagline: "From a single shack to the throne of the universe — one click at a time."
 
 premise: >
-  In Your Chronicle, the player is an unnamed nobody who discovers a living book
-  called The Chronicle — a tome that records the deeds of whoever holds it and
-  turns those deeds into power. The more the player acts (clicks), the more the
-  Chronicle writes, and the written word reshapes reality around them. The game
-  is an idle/incremental: clicking generates Ink (the soft, active currency),
-  Ink accrues passively into Lore (the idle/offline currency), and milestones
-  unlock new "Chapters" of progression. Quest-giver NPCs hand out the Main Quests
-  that move the story between Chapters; vendor NPCs let players spend currency on
-  gear, consumables, and crafting materials; dungeon NPCs gate and guide combat
-  content.
+  In Your Chronicle, the player begins as a lone survivor with nothing but a
+  derelict Wooden Shack and two hands. By gathering resources, surviving, and
+  acting (clicking), the player repairs the shack, takes in villagers, and grows
+  a settlement into a village, town, city, kingdom, empire, planetary civilization,
+  and ultimately a cosmic dominion — culminating in the title of UNIVERSE OVERLORD.
+  It is a deeply grindy but rewarding idle/incremental: the more villagers/citizens
+  you gather, the faster you grow; the stronger your people, the stronger you are.
+  Currency auto-converts up a tiered chain (Bronze -> Silver -> Gold -> Zenu ->
+  Mythril). NPCs can be recruited, level up, and permanently die. A rebirth system
+  resets progress for permanent compounding multipliers.
 
 setting:
-  world_name: Aethryl
-  capital: Lumengarde
-  academy: The Vellum Academy of Inscribed Arts
+  world_name: Orden
+  starting_region: The Ashen Frontier
   description: >
-    Aethryl is a world powered by the written word. Mages here do not cast from
-    raw mana — they "inscribe" reality using Ink drawn from their own deeds. The
-    Vellum Academy in the capital city of Lumengarde trains young Inscribers, and
-    it is here that most players begin their chronicle as a first-year student.
-    Beyond the academy lie the Margins — wild, half-written lands dotted with
-    dungeons called "Errata" where the world's story has gone corrupt and must be
-    rewritten by adventurers.
+    Orden is a vast world recovering from a long-ago cataclysm — the Unwriting —
+    in which a creeping Void erased entire civilizations. The Ashen Frontier, where
+    the player begins, is dotted with the ruins of fallen settlements like Ashfall.
+    Survivors scratch out lives among monster-haunted wilds and dungeons called
+    Delves, ranked from F to the god-tier. Far above, the Hollow Star marks where
+    the Void still feeds. The player's rise from shack to Universe Overlord is the
+    world's last, best hope against the returning dark.
+  see_also: data/lore/world_history.md   # the full world story & history
 
-currencies:
-  - id: ink
-    name: Ink
-    role: active / click currency
-    description: Generated per click. The primary early-game resource.
-  - id: lore
-    name: Lore
-    role: idle / offline currency
-    description: Accrues passively over time, even while the player is away.
-  - id: gilt
-    name: Gilt
-    role: hard / premium currency
-    description: Rare gold-leaf coinage used for high-tier purchases and prestige.
+core_systems:   # each detailed in its own file under data/systems/
+  - {id: currency,     file: data/systems/currency.yaml,     summary: "Tiered, auto-converting coinage Bronze->Mythril."}
+  - {id: rarity,       file: data/systems/rarity.yaml,       summary: "Common -> Primordial rarity scale."}
+  - {id: stats,        file: data/systems/stats.yaml,        summary: "Uncapped leveling; population-driven power; additive-from-inventory gear; permanent stat-boost mats."}
+  - {id: phases,       file: data/systems/phases.yaml,       summary: "45 progression phases, shack -> Universe Overlord."}
+  - {id: buildings,    file: data/systems/buildings.yaml,    summary: "Dwelling upgrade tree, settlements, jobs/delegation, villager stats, NPC lifecycle."}
+  - {id: rebirth,      file: data/systems/rebirth.yaml,      summary: "Prestige reset for compounding multipliers; currency auto-convert; fade-out NPCs gone."}
+  - {id: survival,     file: data/systems/survival.yaml,     summary: "Food/water/warmth/health/morale needs as a global multiplier."}
+  - {id: crafting,     file: data/systems/crafting.yaml,     summary: "Gather -> refine -> craft; every material has a reason."}
+  - {id: dungeons,     file: data/systems/dungeons.yaml,     summary: "Rank ladder F -> Heavenly God with scaling enemies/XP/drops."}
+  - {id: ui_framework, file: data/systems/ui_framework.yaml, summary: "Data-driven, condition-gated, collapsible-panel UI."}
+
+currencies_quickref:   # full definition in data/systems/currency.yaml
+  chain: "1000 Bronze = 1 Silver | 1000 Silver = 1 Gold | 10000 Gold = 1g Zenu Stone | 100g Zenu Stone -> 1 Zenu Coin | 10000 Zenu Coin = 1g Mythril Ore | 10g Mythril Ore -> 1 Mythril Coin"
+  rebirth_currency: Ascension Essence
 
 progression_model:
-  loop: "Click to earn Ink -> auto-convert idle Ink to Lore -> spend on upgrades, gear, and consumables -> clear dungeons -> complete Main Quests -> unlock next Chapter."
-  chapters:
-    - chapter: 1
-      name: The Blank Page
-      theme: Academy enrollment and first inscriptions.
-    - chapter: 2
-      name: The First Margin
-      theme: Leaving the academy walls; first dungeons (Errata).
-    - chapter: 3
-      name: Ink and Iron
-      theme: Guild work, vendors, and gear progression.
-    - chapter: 4
-      name: The Royal Footnote
-      theme: Court intrigue; the crown takes notice of the player.
-    - chapter: 5
-      name: The Corrupted Index
-      theme: A great Erratum threatens to unwrite the world.
-    - chapter: 6
-      name: The Author's Seat
-      theme: Endgame; the player's chronicle rivals the world's own.
+  loop: >
+    Click to gather/act -> meet survival needs -> repair & upgrade buildings ->
+    recruit & delegate villagers -> craft gear & consumables -> clear dungeons for
+    XP/loot/permanent boosts -> complete quests to advance phases -> rebirth for
+    permanent multipliers -> climb toward Universe Overlord.
+  chapters:   # narrative acts that span the 45 phases
+    - {chapter: 1, name: Ashes and Splinters,     theme: "Survival; repair the Wooden Shack (phases 1-2)."}
+    - {chapter: 2, name: The First Hearth,         theme: "Take in villagers; found the village (phases 3-7)."}
+    - {chapter: 3, name: Walls and Banners,        theme: "Towns, guilds, dungeons, the bank (phases 8-12)."}
+    - {chapter: 4, name: Crowns and Cities,        theme: "Cities to kingdoms; the empire takes notice (phases 13-23)."}
+    - {chapter: 5, name: A World Unified,          theme: "Empire to planetary rule; the Void stirs (phases 24-29)."}
+    - {chapter: 6, name: Beyond the Hollow Star,   theme: "Space and cosmic ascension; become Universe Overlord (phases 30-45)."}
 
 categorization_legend:
   persistence:
     description: How long an NPC stays relevant as the player progresses.
     values:
-      - id: anchor
-        meaning: Present for essentially the entire game (framing/hub NPCs).
-      - id: recurring
-        meaning: Appears repeatedly across multiple chapters.
-      - id: milestone
-        meaning: Appears only at specific major progression gates.
-      - id: transient
-        meaning: Appears once or twice, then disappears as players progress.
-      - id: seasonal
-        meaning: Appears during limited-time / event windows only.
+      - {id: anchor,    meaning: "Present for essentially the entire game (framing/hub NPCs)."}
+      - {id: recurring, meaning: "Appears repeatedly across multiple chapters/phases."}
+      - {id: milestone, meaning: "Appears only at specific major progression gates."}
+      - {id: transient, meaning: "Appears once or twice, then is gone (and gone after rebirth)."}
+      - {id: seasonal,  meaning: "Appears during limited-time / event windows only."}
   role_category:
     description: Functional role of the NPC in the game systems.
     values: [quest_giver, trainer, vendor, dungeon, service, faction, lore]
   importance:
     description: Narrative weight.
     values: [key, major, minor]
+  rarity:
+    description: Power/quality band (shared with items); see data/systems/rarity.yaml.
+    values: [common, uncommon, rare, epic, legendary, mythic, ascendant, transcendent, divine, primordial]

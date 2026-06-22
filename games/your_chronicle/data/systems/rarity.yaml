@@ -1,0 +1,86 @@
+system: rarity
+description: >
+  Global rarity scale used by items, materials, equipment, villagers/NPCs, and
+  enemies. Rarity drives drop rate, stat rolls, value multiplier, and visual color
+  in the UI. Higher rarities are gated behind later phases and dungeon ranks.
+tiers:
+  - id: common
+    name: Common
+    rank: 1
+    color: "#9d9d9d"
+    drop_weight: 1000
+    value_mult: 1.0
+    stat_roll_mult: 1.0
+    description: Everyday materials and gear. The bulk of early loot.
+  - id: uncommon
+    name: Uncommon
+    rank: 2
+    color: "#1eff00"
+    drop_weight: 450
+    value_mult: 2.5
+    stat_roll_mult: 1.4
+    description: Noticeably better; first meaningful upgrades.
+  - id: rare
+    name: Rare
+    rank: 3
+    color: "#0070dd"
+    drop_weight: 160
+    value_mult: 7.0
+    stat_roll_mult: 2.0
+    description: Sought-after gear and reagents.
+  - id: epic
+    name: Epic
+    rank: 4
+    color: "#a335ee"
+    drop_weight: 55
+    value_mult: 20.0
+    stat_roll_mult: 3.0
+    description: Build-defining items.
+  - id: legendary
+    name: Legendary
+    rank: 5
+    color: "#ff8000"
+    drop_weight: 16
+    value_mult: 60.0
+    stat_roll_mult: 4.5
+    description: Named, unique, history-making gear.
+  - id: mythic
+    name: Mythic
+    rank: 6
+    color: "#e6cc80"
+    drop_weight: 4
+    value_mult: 200.0
+    stat_roll_mult: 7.0
+    description: Relics of fallen empires and dead stars.
+  - id: ascendant
+    name: Ascendant
+    rank: 7
+    color: "#ff3860"
+    drop_weight: 1
+    value_mult: 750.0
+    stat_roll_mult: 11.0
+    description: Forged beyond mortal limits; drops only past SS-rank dungeons.
+  - id: transcendent
+    name: Transcendent
+    rank: 8
+    color: "#00ffd5"
+    drop_weight: 0.2
+    value_mult: 3000.0
+    stat_roll_mult: 18.0
+    description: Defies the rules of the world. Immortal-rank content only.
+  - id: divine
+    name: Divine
+    rank: 9
+    color: "#fff4b8"
+    drop_weight: 0.03
+    value_mult: 15000.0
+    stat_roll_mult: 30.0
+    description: Touched by godhood. God-rank dungeons and world bosses only.
+  - id: primordial
+    name: Primordial
+    rank: 10
+    color: "#ffffff"
+    drop_weight: 0.002
+    value_mult: 100000.0
+    stat_roll_mult: 60.0
+    description: From before the universe was written. The Universe Overlord endgame.

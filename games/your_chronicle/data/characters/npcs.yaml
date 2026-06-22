@@ -1,306 +1,692 @@
 collection: support_npcs
 description: >
-  15 additional NPCs for Your Chronicle: shop vendors (weapons, potions, materials,
-  and more), dungeon NPCs, and service NPCs. Each carries the same categorization
-  fields as the key characters. Vendors are linked to a shop via shop_id so the
-  database can join them to their inventory.
+  Support NPCs for Your Chronicle (names revamped; roster expanded to 30). Includes
+  shop vendors, dungeon NPCs, service NPCs, and recruitable companions. Vendor
+  shop_id values match data/shops/shops.yaml. New fields: rarity, recruitable,
+  can_level, can_die, archetype, base_stats — so NPCs plug into recruitment,
+  leveling, and permadeath. Recruited companions can be delegated to jobs.
 characters:
   # ----------------------------- WEAPON VENDORS -----------------------------
   - id: CHR-NPC-001
-    name: Bram Hollowforge
+    name: Thane Ironwood
     title: Master Weaponsmith
     role: Weapon Vendor
     role_category: vendor
     importance: major
     persistence: anchor
-    faction: Margin Adventurers' Guild
-    home_location: The Hollowforge Smithy, Guild Quarter
+    rarity: epic
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: artisan
+    base_stats: {hp: 300, atk: 90, def: 80, spd: 35, vit: 75, int: 110, lck: 40, cha: 60, ldr: 55}
+    faction: Frontier Adventurers' Guild
     shop_id: SHOP-WPN-01
     shop_type: weapons
+    home_location: The Ironwood Smithy
     gives_main_quest: false
     appears_in_chapters: [2, 3, 4, 5, 6]
-    personality: Loud, proud, treats every blade he sells like a child going off to war.
-    voice_sample: "Swing it once before you buy it. A weapon that doesn't feel right in the hand is just expensive regret."
-    backstory: >
-      Bram Hollowforge forges Ink-tempered steel — weapons that grow sharper the more
-      deeds their wielder records. His smithy is the player's primary early and mid-game
-      weapon shop, an ANCHOR vendor available for most of the game.
-    lore_notes: Sells the standard weapon catalog (Tiers 0-4). Higher tiers require Vaelora.
+    personality: Loud, proud, treats every blade like a child going off to war.
+    voice_sample: "Swing it once before you buy it. A weapon that doesn't feel right is just expensive regret."
+    backstory: Thane Ironwood forges weapons that grow sharper with every deed of their wielder. Your main early/mid weapon shop and a recruitable master smith.
+    lore_notes: Sells the standard weapon catalog (Tiers 0-4). Higher tiers via Vyssa.
 
   - id: CHR-NPC-002
-    name: Vaelora Sunderglass
+    name: Vyssa Duskmarket
     title: Exotic Arms Dealer
     role: Weapon Vendor (High-Tier)
     role_category: vendor
     importance: minor
     persistence: recurring
-    faction: Independent Traders' Cartel
-    home_location: A black-market stall that relocates each chapter
+    rarity: legendary
+    recruitable: false
+    can_level: false
+    can_die: true
+    archetype: rogue
+    base_stats: {hp: 200, atk: 70, def: 50, spd: 110, vit: 55, int: 120, lck: 160, cha: 130, ldr: 60}
+    faction: The Duskmarket Cartel
     shop_id: SHOP-WPN-02
     shop_type: weapons
+    home_location: A black-market stall that relocates each phase
     gives_main_quest: false
     appears_in_chapters: [4, 5, 6]
     personality: Silky, secretive, sells things she probably shouldn't.
-    voice_sample: "Legal? Darling, legality is just a story the Crown hasn't finished writing. Now — do you want the blade or not?"
-    backstory: >
-      Vaelora deals in rare, legendary, and faintly illegal armaments smuggled out of
-      deep Errata. She stocks the high-tier weapon catalog and only appears once the
-      player can afford her tastes.
-    lore_notes: Sells legendary/mythic weapons (Tiers 5-9). Prices in Gilt.
+    voice_sample: "Legal? Darling, legality is just a law the empire hasn't gotten around to writing. The blade, or not?"
+    backstory: Vyssa deals in rare, legendary, and faintly illegal armaments smuggled from deep dungeons. Stocks the high-tier weapon catalog.
+    lore_notes: Sells legendary/mythic weapons (Tiers 5-9). Prices in Gold/Zenu.
 
   # ----------------------------- POTION VENDORS -----------------------------
   - id: CHR-NPC-003
-    name: Goodwife Tamsin Bramble
+    name: Goodwife Petra Bramble
     title: Apothecary
     role: Potion Vendor
     role_category: vendor
     importance: major
     persistence: anchor
+    rarity: rare
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: artisan
+    base_stats: {hp: 180, atk: 25, def: 40, spd: 45, vit: 80, int: 130, lck: 60, cha: 90, ldr: 50}
     faction: Independent
-    home_location: The Bramble Apothecary, Market Row
     shop_id: SHOP-POT-01
     shop_type: potions
+    home_location: The Bramble Apothecary, Market Row
     gives_main_quest: false
     appears_in_chapters: [1, 2, 3, 4, 5, 6]
-    personality: Motherly, no-nonsense, will scold you for adventuring on an empty stomach.
+    personality: Motherly, no-nonsense; will scold you for adventuring on an empty stomach.
     voice_sample: "Health potion, stamina draught, and a tonic for that cough. No, you're not leaving without the tonic."
-    backstory: >
-      Tamsin Bramble runs the oldest apothecary in Lumengarde, supplying healing and
-      utility potions to generations of adventurers. She is the player's main potion
-      shop and an ANCHOR vendor from Chapter 1 onward.
-    lore_notes: Sells the standard potion catalog (restoratives, buffs, utility).
+    backstory: Petra Bramble runs the oldest apothecary on the frontier. Your main potion shop and a recruitable medic.
+    lore_notes: Sells the standard potion catalog (restoratives, buffs, utility, survival meds).
 
   - id: CHR-NPC-004
-    name: Old Fen the Herbalist
+    name: Old Mossfen
     title: Wild Herbalist & Tincture-Maker
-    role: Potion Vendor (Reagents/Tinctures)
+    role: Potion Vendor (Tinctures)
     role_category: vendor
     importance: minor
     persistence: recurring
+    rarity: rare
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: scholar
+    base_stats: {hp: 160, atk: 30, def: 35, spd: 40, vit: 65, int: 150, lck: 110, cha: 40, ldr: 40}
     faction: Independent
-    home_location: A moss-covered cart at the edge of the Margins
     shop_id: SHOP-POT-02
     shop_type: potions
+    home_location: A moss-covered cart at the wilds' edge
     gives_main_quest: false
     appears_in_chapters: [2, 3, 4, 5]
-    personality: Quiet, earthy, speaks more to his plants than to people.
-    voice_sample: "...This one's for nightmares. This one's for courage. This one... best you don't ask what this one's for."
-    backstory: >
-      Old Fen forages rare reagents from the deepest Margins and brews potent, strange
-      tinctures the Academy refuses to certify. He sells the advanced and forbidden
-      potion catalog.
-    lore_notes: Sells elixirs, exotic tinctures, and rare reagent-based potions.
+    personality: Quiet, earthy; speaks more to his plants than to people.
+    voice_sample: "...This one's for nightmares. This one's for courage. This one... best you don't ask."
+    backstory: Old Mossfen forages rare reagents and brews potent tinctures the guild refuses to certify. Sells the advanced/forbidden potion catalog.
+    lore_notes: Sells elixirs, exotic tinctures, forbidden brews.
 
   # ----------------------------- MATERIAL VENDORS -----------------------------
   - id: CHR-NPC-005
-    name: Garrick Stonecount
+    name: Gareth Stonecount
     title: Material Broker
     role: Material Vendor
     role_category: vendor
     importance: major
     persistence: anchor
-    faction: Independent Traders' Cartel
-    home_location: The Stonecount Exchange, Guild Quarter
+    rarity: rare
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: leader
+    base_stats: {hp: 200, atk: 35, def: 55, spd: 40, vit: 70, int: 120, lck: 70, cha: 120, ldr: 90}
+    faction: The Duskmarket Cartel
     shop_id: SHOP-MAT-01
     shop_type: materials
+    home_location: The Stonecount Exchange
     gives_main_quest: false
     appears_in_chapters: [2, 3, 4, 5, 6]
-    personality: Shrewd, numbers-obsessed, never met a quantity he couldn't haggle.
+    personality: Shrewd, numbers-obsessed; never met a quantity he couldn't haggle.
     voice_sample: "Ore's up three points, hide's down two, and that crystal you're eyeing? Buy now or cry later."
-    backstory: >
-      Garrick Stonecount runs the central material exchange where crafters buy the raw
-      goods that feed every upgrade and recipe. He is the player's main material shop.
-    lore_notes: Sells the standard crafting-material catalog (ores, hides, cloth, wood, etc.).
+    backstory: Gareth Stonecount runs the central material exchange that feeds every upgrade and recipe. Your main material shop.
+    lore_notes: Sells the standard crafting-material catalog.
 
   - id: CHR-NPC-006
-    name: Pell the Pickaxe
+    name: Pell Deepvein
     title: Miner's Exchange Foreman
     role: Material Vendor (Ores/Gems)
     role_category: vendor
     importance: minor
     persistence: recurring
-    faction: Margin Adventurers' Guild
-    home_location: The Mineshaft Depot below the Guild Hall
+    rarity: uncommon
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: laborer
+    base_stats: {hp: 280, atk: 60, def: 70, spd: 35, vit: 95, int: 60, lck: 80, cha: 50, ldr: 45}
+    faction: Frontier Adventurers' Guild
     shop_id: SHOP-MAT-02
     shop_type: materials
+    home_location: The Mineshaft Depot
     gives_main_quest: false
     appears_in_chapters: [3, 4, 5, 6]
-    personality: Booming, dust-covered, laughs at his own jokes.
+    personality: Booming, dust-covered; laughs at his own jokes.
     voice_sample: "Down here we say: rock today, riches tomorrow! ...Mostly rock, if I'm honest."
-    backstory: >
-      Pell runs the mining operation that supplies rare ores, gems, and refined metals.
-      He stocks the high-tier material catalog and trades in dungeon-sourced minerals.
-    lore_notes: Sells rare ores, gemstones, and refined/exotic materials.
+    backstory: Pell Deepvein runs the mining operation supplying rare ores, gems, and refined metals. Stocks the high-tier material catalog.
+    lore_notes: Sells rare ores, gemstones, refined/exotic materials.
 
   # ----------------------------- SPECIALTY VENDORS -----------------------------
   - id: CHR-NPC-007
-    name: Lyric Quillborne
+    name: Lior Glyphborne
     title: Court Enchanter
     role: Enchantment Vendor
     role_category: vendor
     importance: minor
     persistence: recurring
-    faction: The Vellum Academy
-    home_location: The Glyphwright's Loft, Academy Spire
+    rarity: epic
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: scholar
+    base_stats: {hp: 170, atk: 40, def: 45, spd: 50, vit: 60, int: 170, lck: 90, cha: 70, ldr: 60}
+    faction: The Hollow Star Order
     shop_id: SHOP-ENC-01
     shop_type: enchantments
+    home_location: The Glyphwright's Loft
     gives_main_quest: false
     appears_in_chapters: [3, 4, 5, 6]
-    personality: Precise, vain about their craftsmanship, mildly snobbish.
+    personality: Precise, vain about their craft, mildly snobbish.
     voice_sample: "Anyone can swing a sword. It takes an artist to make the sword want to swing itself."
-    backstory: >
-      Lyric Quillborne inscribes enchantments, runes, and glyph-scrolls onto gear. They
-      sell the enchantment/scroll catalog that upgrades the player's equipment.
-    lore_notes: Sells runes, glyph scrolls, and enchantment stones (a 4th shop type).
+    backstory: Lior Glyphborne inscribes runes and enchantments onto gear. Sells the enchantment/scroll catalog.
+    lore_notes: Sells runes, glyph scrolls, enchantment stones.
 
   - id: CHR-NPC-008
-    name: Madame Coquette Rill
+    name: Madame Coralind Vex
     title: Relic Collector
     role: Artifact Vendor
     role_category: vendor
     importance: minor
     persistence: seasonal
-    faction: Independent Traders' Cartel
-    home_location: A traveling curiosity wagon (event windows only)
+    rarity: legendary
+    recruitable: false
+    can_level: false
+    can_die: false
+    archetype: rogue
+    base_stats: {hp: 150, atk: 30, def: 40, spd: 80, vit: 50, int: 140, lck: 200, cha: 170, ldr: 60}
+    faction: The Duskmarket Cartel
     shop_id: SHOP-REL-01
     shop_type: relics
+    home_location: A traveling curiosity wagon (event windows only)
     gives_main_quest: false
     appears_in_chapters: [4, 5]
-    personality: Theatrical, dramatic, every item has an absurd backstory she swears is true.
+    personality: Theatrical; every item has an absurd backstory she swears is true.
     voice_sample: "This ring? Worn by a queen who could stop time! ...Or a cobbler with delusions. Either way — priceless."
-    backstory: >
-      Madame Rill trades in rare relics and prestige cosmetics during limited-time
-      events. A SEASONAL vendor — she appears only during special windows, then vanishes.
-    lore_notes: SEASONAL/event vendor. Sells relics, charms, and cosmetic Chronicle covers.
+    backstory: Madame Vex trades rare relics and prestige cosmetics during limited-time events. A SEASONAL vendor who vanishes between windows.
+    lore_notes: SEASONAL/event vendor. Sells relics, charms, cosmetic Chronicle covers.
 
   # ----------------------------- DUNGEON NPCs -----------------------------
   - id: CHR-NPC-009
-    name: Warden Thane Greymoor
-    title: Gatekeeper of the Errata
+    name: Warden Korin Greymoor
+    title: Gatekeeper of the Delves
     role: Dungeon Gatekeeper
     role_category: dungeon
     importance: major
     persistence: anchor
-    faction: Margin Adventurers' Guild
-    home_location: The Erratum Gate, beyond the city wall
+    rarity: epic
+    recruitable: false
+    can_level: false
+    can_die: false
+    archetype: warrior
+    base_stats: {hp: 350, atk: 100, def: 110, spd: 45, vit: 90, int: 70, lck: 50, cha: 60, ldr: 80}
+    faction: Frontier Adventurers' Guild
+    home_location: The Delve Gate, beyond the wall
     gives_main_quest: false
     appears_in_chapters: [2, 3, 4, 5, 6]
-    personality: Stern, watchful, treats dungeon safety like sacred law.
-    voice_sample: "You go in at your own risk and you come out at my discretion. Sign here. Try not to die — paperwork's a nightmare."
-    backstory: >
-      Thane Greymoor controls access to every dungeon (Erratum) in the Margins, gating
-      content by player power and chapter. He is the hub for dungeon entry, difficulty
-      selection, and idle dungeon runs.
-    lore_notes: Dungeon-access hub. Sets dungeon tiers and unlocks new Errata per chapter.
+    personality: Stern, watchful; treats dungeon safety like sacred law.
+    voice_sample: "You go in at your own risk and come out at my discretion. Sign here. Try not to die — paperwork's a nightmare."
+    backstory: Korin Greymoor controls access to every dungeon, gating content by power and phase. Hub for dungeon entry and rank selection.
+    lore_notes: Dungeon-access hub. Sets dungeon ranks; unlocks new delves per phase.
 
   - id: CHR-NPC-010
-    name: Scout Nessa Faraday
-    title: Margin Pathfinder
+    name: Scout Nyra Fairwind
+    title: Wilds Pathfinder
     role: Dungeon Guide / Scout
     role_category: dungeon
     importance: minor
     persistence: recurring
-    faction: Margin Adventurers' Guild
-    home_location: Forward camps inside active dungeons
+    rarity: rare
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: rogue
+    base_stats: {hp: 190, atk: 70, def: 50, spd: 150, vit: 60, int: 80, lck: 130, cha: 70, ldr: 50}
+    faction: Frontier Adventurers' Guild
+    home_location: Forward camps inside dungeons
     gives_main_quest: false
     appears_in_chapters: [2, 3, 4, 5]
-    personality: Quick, sharp, talks fast and moves faster.
+    personality: Quick, sharp; talks fast and moves faster.
     voice_sample: "Left's a trap, right's a worse trap, straight ahead's a boss. So — straight ahead, obviously."
-    backstory: >
-      Nessa Faraday guides adventurers through dungeon interiors, marking traps, loot,
-      and shortcuts. She powers the idle dungeon-expedition system and offers run buffs.
-    lore_notes: Provides dungeon shortcuts, trap warnings, and idle-expedition speed bonuses.
+    backstory: Nyra Fairwind guides adventurers through dungeon interiors, powering idle expeditions and run buffs. Recruitable scout.
+    lore_notes: Dungeon shortcuts, trap warnings, idle-expedition speed bonuses.
 
   - id: CHR-NPC-011
-    name: Cleric Ambrose Mourning
-    title: Field Cleric of the Blank Page
+    name: Cleric Edryn Vale
+    title: Field Cleric of the Hollow Star
     role: Dungeon Healer / Revival
     role_category: dungeon
     importance: minor
     persistence: recurring
-    faction: Temple of the Blank Page
+    rarity: rare
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: scholar
+    base_stats: {hp: 240, atk: 40, def: 70, spd: 45, vit: 110, int: 140, lck: 70, cha: 90, ldr: 60}
+    faction: The Hollow Star Order
     home_location: Sanctuary shrines within dungeons
     gives_main_quest: false
     appears_in_chapters: [3, 4, 5, 6]
-    personality: Gentle, weary, has seen too many adventurers not come back.
-    voice_sample: "Rest at the shrine, child. The page can wait. The dead, unfortunately, cannot."
-    backstory: >
-      Ambrose Mourning tends sanctuary shrines deep in the Errata, offering healing,
-      revival, and checkpoint services. He keeps idle dungeon runs from total loss.
-    lore_notes: Dungeon revival/checkpoint service. Reduces idle-run death penalties.
+    personality: Gentle, weary; has seen too many adventurers not come back.
+    voice_sample: "Rest at the shrine, friend. The dungeon can wait. The dead, unfortunately, cannot."
+    backstory: Edryn Vale tends sanctuary shrines deep in the delves, offering healing, revival, and checkpoints. Recruitable healer.
+    lore_notes: Dungeon revival/checkpoint service; reduces idle-run death penalties.
 
   # ----------------------------- SERVICE NPCs -----------------------------
   - id: CHR-NPC-012
-    name: Bartholomew "Barty" Tabard
+    name: Barty Tallrow
     title: Bounty Clerk
     role: Bounty Board Service
     role_category: service
     importance: minor
     persistence: recurring
-    faction: Margin Adventurers' Guild
+    rarity: uncommon
+    recruitable: false
+    can_level: false
+    can_die: true
+    archetype: scholar
+    base_stats: {hp: 140, atk: 20, def: 30, spd: 45, vit: 50, int: 120, lck: 60, cha: 80, ldr: 50}
+    faction: Frontier Adventurers' Guild
     home_location: The Bounty Desk, Guild Hall
     gives_main_quest: false
     appears_in_chapters: [3, 4, 5, 6]
-    personality: Officious, paperwork-loving, secretly thrilled by every bounty he posts.
-    voice_sample: "Bounty number four-seven-two: one corrupted bookwyrm, alive or as-pages. Reward's generous. Form's in triplicate."
-    backstory: >
-      Barty Tabard manages the bounty board — the repeatable/idle quest system that
-      converts the player's time into reputation and currency.
-    lore_notes: Repeatable bounty/idle-quest hub. Drives the side-quest reward loop.
+    personality: Officious, paperwork-loving; secretly thrilled by every bounty he posts.
+    voice_sample: "Bounty four-seven-two: one rampaging troll, alive or in pieces. Reward's generous. Form's in triplicate."
+    backstory: Barty Tallow manages the bounty board — the repeatable/idle quest system converting time into reputation and currency.
+    lore_notes: Repeatable bounty/idle-quest hub; drives the side-quest reward loop.
 
   - id: CHR-NPC-013
     name: Mabel Hearthwell
-    title: Tavern Keeper of the Inkpot Inn
+    title: Keeper of the Roadside Inn
     role: Tavern Keeper / Rumors
     role_category: service
     importance: minor
     persistence: anchor
+    rarity: uncommon
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: leader
+    base_stats: {hp: 200, atk: 30, def: 45, spd: 40, vit: 80, int: 90, lck: 80, cha: 150, ldr: 80}
     faction: Independent
-    home_location: The Inkpot Inn, Market Row
+    home_location: The Roadside Inn, Market Row
     gives_main_quest: false
     appears_in_chapters: [1, 2, 3, 4, 5, 6]
-    personality: Warm, gossipy, knows everyone's business and most of their secrets.
-    voice_sample: "Sit, eat, drink. And while you're at it — let me tell you what the whole city's whispering about you."
-    backstory: >
-      Mabel Hearthwell runs the inn where adventurers rest between runs. She provides
-      idle-buff "rested" bonuses and surfaces rumors that hint at hidden content.
-    lore_notes: Provides rested/idle buffs and rumor-based hints toward secrets.
+    personality: Warm, gossipy; knows everyone's business and most of their secrets.
+    voice_sample: "Sit, eat, drink. And while you're at it — let me tell you what the whole frontier's whispering about you."
+    backstory: Mabel Hearthwell runs the inn where adventurers rest. Provides rested/idle buffs and rumors hinting at hidden content. Recruitable.
+    lore_notes: Rested/idle buffs; rumor-based hints toward secrets.
 
   - id: CHR-NPC-014
-    name: Master Coffer Aurelian Vane
-    title: Treasurer of the Lumengarde Ledger Bank
-    role: Banker / Treasury Service
+    name: Master Coffer Aldric Vane
+    title: Treasurer of the Frontier Ledger Bank
+    role: Banker / Treasury & Refining
     role_category: service
     importance: minor
     persistence: recurring
-    faction: The Crown of Lumengarde
-    home_location: The Ledger Bank, Gilded Court
+    rarity: rare
+    recruitable: false
+    can_level: false
+    can_die: false
+    archetype: scholar
+    base_stats: {hp: 160, atk: 20, def: 40, spd: 35, vit: 55, int: 160, lck: 90, cha: 110, ldr: 70}
+    faction: The Iron Crown
+    home_location: The Ledger Bank
     gives_main_quest: false
     appears_in_chapters: [3, 4, 5, 6]
-    personality: Impeccable, precise, treats currency with religious reverence.
-    voice_sample: "Idle wealth is wasted wealth. Deposit with the Ledger and let your Lore compound while you sleep."
-    backstory: >
-      Aurelian Vane manages the bank where players store currency to earn idle interest,
-      central to the incremental/idle economy.
-    lore_notes: Idle-interest/investment hub. Core to the offline-currency loop.
+    personality: Impeccable, precise; treats currency with religious reverence.
+    voice_sample: "Idle wealth is wasted wealth. Deposit, refine, and let it compound while you sleep."
+    backstory: Aldric Vane runs the bank where players store currency for idle interest and refine coins up the tier chain (Zenu/Mythril).
+    lore_notes: Idle-interest hub AND currency-refining station. Core to the auto-conversion economy.
 
   - id: CHR-NPC-015
-    name: Pip Wanderfoot
+    name: Pip Roamfoot
     title: The Wandering Merchant
     role: Random Traveling Vendor
     role_category: vendor
     importance: minor
     persistence: transient
+    rarity: rare
+    recruitable: false
+    can_level: false
+    can_die: false
+    archetype: rogue
+    base_stats: {hp: 150, atk: 40, def: 35, spd: 120, vit: 50, int: 100, lck: 180, cha: 140, ldr: 50}
     faction: Independent
-    home_location: Appears randomly at any hub for a limited time
     shop_id: SHOP-WND-01
     shop_type: wandering
+    home_location: Appears randomly at any hub for a limited time
     gives_main_quest: false
     appears_in_chapters: [2, 3, 4, 5, 6]
-    personality: Cheery, unpredictable, never sells the same thing twice.
-    voice_sample: "Catch me while you can! Here today, gone in an hour, and the deal of a lifetime in between!"
-    backstory: >
-      Pip Wanderfoot appears at random with a rotating stock of rare items pulled from
-      every shop type. A TRANSIENT vendor — each visit is brief and never repeats its
-      stock, rewarding players who check in often during idle play.
-    lore_notes: TRANSIENT random vendor. Stocks a rotating curated mix from all catalogs.
+    personality: Cheery, unpredictable; never sells the same thing twice.
+    voice_sample: "Catch me while you can! Here today, gone in an hour, deal of a lifetime in between!"
+    backstory: Pip Roamfoot appears at random with a rotating stock pulled from every shop type. A TRANSIENT vendor rewarding frequent idle check-ins.
+    lore_notes: TRANSIENT random vendor; rotating curated mix from all catalogs.
+
+  # ----------------------------- RECRUITABLE COMPANIONS / NEW NPCs -----------------------------
+  - id: CHR-NPC-016
+    name: Kael Stormborn
+    title: Frontier Swordsman
+    role: Recruitable Warrior
+    role_category: faction
+    importance: major
+    persistence: recurring
+    rarity: epic
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: warrior
+    base_stats: {hp: 320, atk: 130, def: 85, spd: 70, vit: 80, int: 60, lck: 50, cha: 70, ldr: 70}
+    faction: Independent
+    home_location: Roams the wilds; recruited via quest
+    gives_main_quest: false
+    appears_in_chapters: [3, 4, 5, 6]
+    personality: Bold, loyal, reckless in a fight.
+    voice_sample: "Point me at the biggest thing in the room. I'll handle the rest."
+    backstory: A masterless swordsman seeking a banner worth following. Recruit him as a frontline soldier who can be delegated and grows powerful with you.
+    lore_notes: Premier recruitable combat companion; soldier/guard delegation; can die in battle.
+
+  - id: CHR-NPC-017
+    name: Lyanna Brightloom
+    title: Master Weaver
+    role: Recruitable Crafter
+    role_category: faction
+    importance: minor
+    persistence: recurring
+    rarity: rare
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: artisan
+    base_stats: {hp: 170, atk: 30, def: 45, spd: 55, vit: 65, int: 150, lck: 90, cha: 80, ldr: 55}
+    faction: Your Settlement
+    home_location: Recruited at the township
+    gives_main_quest: false
+    appears_in_chapters: [4, 5, 6]
+    personality: Meticulous, kind, quietly competitive.
+    voice_sample: "Give me thread and time and I'll clothe an empire."
+    backstory: A master weaver who turns raw fiber and exotic cloth into high-tier gear. Boosts crafting output when delegated to the workshop.
+    lore_notes: Crafter companion; raises crafting quality/speed; can die.
+
+  - id: CHR-NPC-018
+    name: Doc Ferris Quill
+    title: Settlement Physician
+    role: Recruitable Medic
+    role_category: faction
+    importance: minor
+    persistence: recurring
+    rarity: rare
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: scholar
+    base_stats: {hp: 200, atk: 25, def: 50, spd: 45, vit: 120, int: 160, lck: 70, cha: 90, ldr: 60}
+    faction: Your Settlement
+    home_location: Recruited at the town clinic
+    gives_main_quest: false
+    appears_in_chapters: [4, 5, 6]
+    personality: Calm under pressure, dry humor.
+    voice_sample: "Disease spreads faster than rumor. Let me do my job and your people will outlive your enemies."
+    backstory: A physician who keeps your population healthy, slashing survival/disease losses when delegated as a medic.
+    lore_notes: Medic companion; reduces survival-need failures and villager death.
+
+  - id: CHR-NPC-019
+    name: Rurik Goldhand
+    title: Caravan Magnate
+    role: Recruitable Merchant
+    role_category: faction
+    importance: minor
+    persistence: recurring
+    rarity: epic
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: leader
+    base_stats: {hp: 180, atk: 35, def: 50, spd: 50, vit: 65, int: 130, lck: 140, cha: 180, ldr: 110}
+    faction: The Duskmarket Cartel
+    home_location: Recruited at the city marketplace
+    gives_main_quest: false
+    appears_in_chapters: [5, 6]
+    personality: Charismatic, opportunistic, generous to friends.
+    voice_sample: "Every coin you don't invest is a soldier you didn't hire. Let me triple it for you."
+    backstory: A caravan magnate who massively boosts trade income when delegated as a merchant and improves vendor prices.
+    lore_notes: Merchant companion; raises currency income and vendor discounts.
+
+  - id: CHR-NPC-020
+    name: Sister Aveline Dawn
+    title: Battle Priestess
+    role: Recruitable Support
+    role_category: faction
+    importance: major
+    persistence: recurring
+    rarity: legendary
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: scholar
+    base_stats: {hp: 280, atk: 60, def: 80, spd: 55, vit: 130, int: 170, lck: 90, cha: 130, ldr: 80}
+    faction: The Hollow Star Order
+    home_location: Recruited via a hidden A-rank dungeon quest
+    gives_main_quest: false
+    appears_in_chapters: [5, 6]
+    personality: Devout, fierce, compassionate.
+    voice_sample: "The Hollow Star takes. I give back. Stand behind me and you will not fall today."
+    backstory: A battle priestess whose blessings buff the whole party in dungeons. A premier support companion gated behind a hidden quest.
+    lore_notes: Support companion; party-wide dungeon buffs and revival.
+
+  - id: CHR-NPC-021
+    name: Gil the Gravekeeper
+    title: Cemetery Caretaker
+    role: Death/Memorial Service
+    role_category: service
+    importance: minor
+    persistence: recurring
+    rarity: uncommon
+    recruitable: false
+    can_level: false
+    can_die: true
+    archetype: laborer
+    base_stats: {hp: 200, atk: 40, def: 60, spd: 35, vit: 90, int: 70, lck: 60, cha: 50, ldr: 40}
+    faction: Your Settlement
+    home_location: The Cemetery
+    gives_main_quest: false
+    appears_in_chapters: [4, 5, 6]
+    personality: Somber, oddly comforting, fond of dark jokes.
+    voice_sample: "Everyone ends up here eventually. Best make their stay short and their legend long."
+    backstory: Gil tends the graves of fallen villagers and recruited NPCs, offering memorial buffs and a small chance to recover a fallen companion's gear.
+    lore_notes: NPC-death service; memorial bonuses; salvages gear from the dead.
+
+  - id: CHR-NPC-022
+    name: Tamsin Greenfurrow
+    title: Master Farmer
+    role: Recruitable Producer
+    role_category: faction
+    importance: minor
+    persistence: recurring
+    rarity: uncommon
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: laborer
+    base_stats: {hp: 220, atk: 35, def: 55, spd: 40, vit: 130, int: 80, lck: 70, cha: 70, ldr: 50}
+    faction: Your Settlement
+    home_location: Recruited at the homestead
+    gives_main_quest: false
+    appears_in_chapters: [3, 4, 5, 6]
+    personality: Earthy, patient, endlessly cheerful.
+    voice_sample: "Feed the people and the people will build you the stars. Now pass me that hoe."
+    backstory: A master farmer who multiplies food output (survival) when delegated, keeping a huge population fed.
+    lore_notes: Producer companion; key to sustaining large populations.
+
+  - id: CHR-NPC-023
+    name: Joran Beasttamer
+    title: Wildkeeper
+    role: Recruitable Animal Handler
+    role_category: faction
+    importance: minor
+    persistence: recurring
+    rarity: rare
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: rogue
+    base_stats: {hp: 240, atk: 80, def: 60, spd: 90, vit: 90, int: 90, lck: 110, cha: 100, ldr: 60}
+    faction: Independent
+    home_location: Recruited in the wilds
+    gives_main_quest: false
+    appears_in_chapters: [3, 4, 5, 6]
+    personality: Gruff with people, gentle with animals.
+    voice_sample: "Folk are complicated. Beasts are honest. Bring me a wild one and I'll make it ours."
+    backstory: A beast tamer who unlocks taming/ranching of animal NPCs and provides mounts and companion creatures.
+    lore_notes: Unlocks animal taming/ranching and mounts; can die.
+
+  - id: CHR-NPC-024
+    name: Magister Orin Vexley
+    title: Head of the University
+    role: Research Service
+    role_category: service
+    importance: major
+    persistence: recurring
+    rarity: epic
+    recruitable: false
+    can_level: false
+    can_die: false
+    archetype: scholar
+    base_stats: {hp: 190, atk: 30, def: 50, spd: 40, vit: 60, int: 220, lck: 90, cha: 100, ldr: 90}
+    faction: Your Settlement
+    home_location: The University
+    gives_main_quest: false
+    appears_in_chapters: [5, 6]
+    personality: Brilliant, distractible, faintly arrogant.
+    voice_sample: "Swords win battles. Research wins eras. Fund me and I'll win you the future."
+    backstory: Magister Vexley runs the University, unlocking the research/tech tree that gates the space and cosmic phases.
+    lore_notes: Research hub; gates space-age and tech progression.
+
+  - id: CHR-NPC-025
+    name: Commander Vale Ardent
+    title: Marshal of the Legions
+    role: Military Service
+    role_category: service
+    importance: major
+    persistence: recurring
+    rarity: legendary
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: leader
+    base_stats: {hp: 400, atk: 140, def: 130, spd: 60, vit: 100, int: 110, lck: 60, cha: 120, ldr: 180}
+    faction: The Iron Crown
+    home_location: The War Hall (Kingdom phase+)
+    gives_main_quest: false
+    appears_in_chapters: [5, 6]
+    personality: Disciplined, commanding, secretly tired of war.
+    voice_sample: "An army is a city that decided to move. Give me your soldiers and I'll give you a continent."
+    backstory: A marshal who organizes your soldier-NPCs into legions for war and large-scale dungeon raids. Recruitable supreme commander.
+    lore_notes: Military hub; turns population into armies; raid leadership; can die.
+
+  - id: CHR-NPC-026
+    name: Zix-9
+    title: Salvaged Automaton
+    role: Recruitable Construct
+    role_category: faction
+    importance: minor
+    persistence: recurring
+    rarity: epic
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: warrior
+    base_stats: {hp: 500, atk: 110, def: 160, spd: 30, vit: 200, int: 100, lck: 20, cha: 20, ldr: 40}
+    faction: Ancient Ruins
+    home_location: Recovered from a space-age ruin
+    gives_main_quest: false
+    appears_in_chapters: [6]
+    personality: Literal, loyal, slowly developing a personality.
+    voice_sample: "DIRECTIVE UPDATED: protect the builder. ...I find I do not mind this directive."
+    backstory: An ancient automaton reactivated by your engineers. A durable tank companion that hints at the world's lost high-tech past.
+    lore_notes: Construct companion; very high DEF/HP; ties into space-age lore; can be destroyed.
+
+  - id: CHR-NPC-027
+    name: Nova Starwright
+    title: First Astronaut
+    role: Space Program Service
+    role_category: service
+    importance: major
+    persistence: recurring
+    rarity: legendary
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: leader
+    base_stats: {hp: 260, atk: 70, def: 80, spd: 100, vit: 90, int: 200, lck: 110, cha: 120, ldr: 130}
+    faction: Your Settlement
+    home_location: The Spaceport (Planetary phase+)
+    gives_main_quest: false
+    appears_in_chapters: [6]
+    personality: Visionary, fearless, a little reckless.
+    voice_sample: "We were never meant to stay on one rock. Strap in — I'll take you to the stars."
+    backstory: Nova Starwright pioneers your space program, unlocking off-world colonies and the cosmic phases. Recruitable expedition leader.
+    lore_notes: Space-program hub; gates planetary->cosmic progression; can die on missions.
+
+  - id: CHR-NPC-028
+    name: The Hermit of the Peak
+    title: Reclusive Sage
+    role: Hidden Trainer
+    role_category: trainer
+    importance: minor
+    persistence: seasonal
+    rarity: mythic
+    recruitable: false
+    can_level: false
+    can_die: false
+    archetype: scholar
+    base_stats: {hp: 300, atk: 90, def: 90, spd: 80, vit: 120, int: 300, lck: 200, cha: 60, ldr: 70}
+    faction: Unaffiliated
+    home_location: A hidden mountain shrine (appears under secret conditions)
+    gives_main_quest: false
+    appears_in_chapters: [5, 6]
+    personality: Enigmatic, terse, tests before teaching.
+    voice_sample: "You climbed all this way for power. Prove you can carry it before I give you more."
+    backstory: A reclusive sage who teaches secret techniques and permanent stat boosts to those who find him. A hidden, condition-gated NPC.
+    lore_notes: HIDDEN trainer; grants permanent stat-boost rewards; appears only on secret conditions.
+
+  - id: CHR-NPC-029
+    name: Echo of Ashfall
+    title: Spirit of the Fallen Village
+    role: Lore / Memory NPC
+    role_category: lore
+    importance: minor
+    persistence: transient
+    rarity: legendary
+    recruitable: false
+    can_level: false
+    can_die: false
+    archetype: scholar
+    base_stats: {hp: 100, atk: 20, def: 20, spd: 60, vit: 40, int: 180, lck: 90, cha: 80, ldr: 40}
+    faction: The Ashen Frontier
+    home_location: The ruins of Ashfall (one-time event)
+    gives_main_quest: false
+    appears_in_chapters: [2]
+    personality: Sorrowful, fading, grateful to be remembered.
+    voice_sample: "You will build what we could not. Carry our name to the stars... and we will rest."
+    backstory: The lingering spirit of Garrok's lost village, encountered once. Reveals key backstory, then fades forever (and is gone after rebirth).
+    lore_notes: TRANSIENT lore NPC; single appearance; unlocks Ashfall codex entries.
+
+  - id: CHR-NPC-030
+    name: The Voidless One
+    title: Herald of the End
+    role: Endgame Antagonist-NPC
+    role_category: lore
+    importance: key
+    persistence: milestone
+    rarity: primordial
+    recruitable: false
+    can_level: false
+    can_die: false
+    archetype: warrior
+    base_stats: {hp: 9999999, atk: 99999, def: 99999, spd: 9999, vit: 99999, int: 99999, lck: 9999, cha: 9999, ldr: 99999}
+    faction: The Void
+    home_location: Beyond the edge of creation
+    gives_main_quest: false
+    appears_in_chapters: [6]
+    personality: Vast, patient, utterly certain of your failure.
+    voice_sample: "Every overlord before you fed me. Climb, little author. I am hungrier at the summit."
+    backstory: The cosmic antagonist behind the void corruption and the final world boss (The Unwritten). Appears only at the ultimate phase gate to challenge the would-be Universe Overlord.
+    lore_notes: MILESTONE endgame antagonist NPC; tied to The Unwritten world boss and the final quest.

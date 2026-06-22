@@ -1,0 +1,30 @@
+collection: animals
+description: >
+  Normal (non-hostile or semi-hostile) animal NPCs for Your Chronicle. Animals can
+  be hunted for materials, tamed as companions/mounts, farmed/ranched by villagers,
+  or simply populate the world. Each notes what it yields and whether it is tameable.
+animals:
+  - {id: ANM-001, name: Rabbit,        type: critter,   habitat: forest,   tameable: false, yields: "meat, pelt", role: "early food/leather"}
+  - {id: ANM-002, name: Deer,          type: game,      habitat: forest,   tameable: false, yields: "meat, hide, antler", role: "food/leather"}
+  - {id: ANM-003, name: Boar,          type: game,      habitat: forest,   tameable: false, yields: "meat, tusk, hide", role: "food; can gore hunters"}
+  - {id: ANM-004, name: Chicken,       type: livestock, habitat: farm,     tameable: true,  yields: "eggs, feathers, meat", role: "ranchable food"}
+  - {id: ANM-005, name: Cow,           type: livestock, habitat: farm,     tameable: true,  yields: "milk, beef, leather", role: "ranchable food/leather"}
+  - {id: ANM-006, name: Sheep,         type: livestock, habitat: farm,     tameable: true,  yields: "wool, mutton", role: "ranchable cloth"}
+  - {id: ANM-007, name: Pig,           type: livestock, habitat: farm,     tameable: true,  yields: "pork, lard", role: "ranchable food"}
+  - {id: ANM-008, name: Horse,         type: mount,     habitat: plains,   tameable: true,  yields: "mount speed", role: "early mount; settlement logistics"}
+  - {id: ANM-009, name: Trout,         type: fish,      habitat: river,    tameable: false, yields: "fish meat", role: "fishing food"}
+  - {id: ANM-010, name: Salmon,        type: fish,      habitat: river,    tameable: false, yields: "fish meat, roe", role: "fishing food/morale"}
+  - {id: ANM-011, name: Bee,           type: insect,    habitat: meadow,   tameable: true,  yields: "honey, wax", role: "apiary; morale/cooking"}
+  - {id: ANM-012, name: Goat,          type: livestock, habitat: hills,    tameable: true,  yields: "milk, hide, horn", role: "ranchable; rough terrain"}
+  - {id: ANM-013, name: Falcon,        type: companion, habitat: mountains,tameable: true,  yields: "scouting bonus", role: "scout companion (drop rate)"}
+  - {id: ANM-014, name: Wolfhound,     type: companion, habitat: settlement,tameable: true, yields: "guard bonus", role: "guard/hunt companion"}
+  - {id: ANM-015, name: Ox,            type: beast_of_burden, habitat: farm, tameable: true, yields: "hauling, beef", role: "construction/logistics speed"}
+  - {id: ANM-016, name: Camel,         type: mount,     habitat: desert,   tameable: true,  yields: "desert travel", role: "biome mount"}
+  - {id: ANM-017, name: Bear,          type: wild,      habitat: forest,   tameable: true,  yields: "meat, thick hide, claw", role: "dangerous game; rare tame"}
+  - {id: ANM-018, name: Eagle,         type: companion, habitat: peaks,    tameable: true,  yields: "long-range scouting", role: "high-tier scout"}
+  - {id: ANM-019, name: Whale,         type: fish,      habitat: ocean,    tameable: false, yields: "oil, blubber, ambergris", role: "late ocean resource"}
+  - {id: ANM-020, name: Griffon,       type: mount,     habitat: high_peaks,tameable: true,  yields: "flying mount", role: "mid-game flying mount (semi-magical)"}
+  - {id: ANM-021, name: Direhorn,      type: mount,     habitat: wilds,    tameable: true,  yields: "war mount", role: "heavy cavalry mount"}
+  - {id: ANM-022, name: Star Whale,    type: cosmic_fauna, habitat: space, tameable: true,  yields: "void plankton, star oil", role: "space-age resource/mount"}
+  - {id: ANM-023, name: Glow Moth,     type: insect,    habitat: caverns,  tameable: true,  yields: "luminescent dust", role: "lighting/crafting reagent"}
+  - {id: ANM-024, name: Frost Fox,     type: critter,   habitat: tundra,   tameable: true,  yields: "frost pelt", role: "cold-resist crafting"}

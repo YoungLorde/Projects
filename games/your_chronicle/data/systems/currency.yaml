@@ -1,0 +1,84 @@
+system: currency
+description: >
+  Hierarchical, auto-converting currency for Your Chronicle. Each tier rolls up
+  into the next once it reaches its cap (auto-conversion). 'value_in_bronze' is
+  the absolute worth of one unit in the base currency (Bronze), used by the engine
+  to convert any amount up or down the chain automatically.
+base_unit: bronze
+auto_conversion:
+  enabled: true
+  rule: >
+    Whenever a currency stack reaches the 'per_next' amount, that many units are
+    automatically consumed and converted into 1 unit of the next tier. Conversion
+    cascades upward (e.g. earning Bronze can ripple all the way to Mythril Coin).
+  reversible: true   # players may break a higher coin back down into lower units at a vendor
+tiers:
+  - id: bronze
+    name: Bronze Coin
+    symbol: Br
+    tier: 1
+    per_next: 1000            # 1000 Bronze -> 1 Silver
+    next: silver
+    value_in_bronze: 1
+    description: The starting coin. Earned from chores, foraging, and weak enemies.
+  - id: silver
+    name: Silver Coin
+    symbol: Si
+    tier: 2
+    per_next: 1000            # 1000 Silver -> 1 Gold
+    next: gold
+    value_in_bronze: 1000
+    description: Common town currency.
+  - id: gold
+    name: Gold Coin
+    symbol: Au
+    tier: 3
+    per_next: 10000           # 10000 Gold -> 1 gram Zenu Stone
+    next: zenu_stone_gram
+    value_in_bronze: 1000000
+    description: City-tier wealth.
+  - id: zenu_stone_gram
+    name: Zenu Stone (gram)
+    symbol: Zg
+    tier: 4
+    is_refinable: true
+    refine_into: zenu_coin
+    refine_amount: 100        # 100 grams Zenu Stone refine -> 1 Zenu Coin
+    per_next: 100
+    next: zenu_coin
+    value_in_bronze: 10000000000          # 10000 Gold
+    description: A raw stellar mineral measured by weight; refined into Zenu Coin.
+  - id: zenu_coin
+    name: Zenu Coin
+    symbol: Zc
+    tier: 5
+    per_next: 10000          # 10000 Zenu Coin -> 1 gram Mythril Ore
+    next: mythril_ore_gram
+    value_in_bronze: 1000000000000        # 100 * value(zenu_stone_gram)
+    description: Refined Zenu currency; the coin of empires and small star-nations.
+  - id: mythril_ore_gram
+    name: Mythril Ore (gram)
+    symbol: Mg
+    tier: 6
+    is_refinable: true
+    refine_into: mythril_coin
+    refine_amount: 10         # 10 grams Mythril Ore refine -> 1 Mythril Coin
+    per_next: 10
+    next: mythril_coin
+    value_in_bronze: 10000000000000000    # 10000 Zenu Coin
+    description: The rarest convertible mineral; weighed, then refined.
+  - id: mythril_coin
+    name: Mythril Coin
+    symbol: My
+    tier: 7
+    per_next: null            # top of the chain
+    next: null
+    value_in_bronze: 100000000000000000   # 10 * value(mythril_ore_gram)
+    description: The apex currency. A single Mythril Coin is a galaxy's fortune.
+conversion_examples:
+  - "1 Silver        = 1000 Bronze"
+  - "1 Gold          = 1000 Silver = 1,000,000 Bronze"
+  - "1g Zenu Stone   = 10000 Gold"
+  - "1 Zenu Coin     = 100g Zenu Stone"
+  - "1g Mythril Ore  = 10000 Zenu Coin"
+  - "1 Mythril Coin  = 10g Mythril Ore"
