@@ -1,0 +1,5753 @@
+{
+ "meta": {
+  "game": "Your Chronicle",
+  "generated_from": "your_chronicle.db"
+ },
+ "currency": [
+  {
+   "id": "bronze",
+   "name": "Bronze Coin",
+   "tier": 1,
+   "per_next": 1000,
+   "next_id": "silver",
+   "value_in_bronze": 1.0,
+   "description": "The starting coin. Earned from chores, foraging, and weak enemies."
+  },
+  {
+   "id": "silver",
+   "name": "Silver Coin",
+   "tier": 2,
+   "per_next": 1000,
+   "next_id": "gold",
+   "value_in_bronze": 1000.0,
+   "description": "Common town currency."
+  },
+  {
+   "id": "gold",
+   "name": "Gold Coin",
+   "tier": 3,
+   "per_next": 10000,
+   "next_id": "zenu_stone_gram",
+   "value_in_bronze": 1000000.0,
+   "description": "City-tier wealth."
+  },
+  {
+   "id": "zenu_stone_gram",
+   "name": "Zenu Stone (gram)",
+   "tier": 4,
+   "per_next": 100,
+   "next_id": "zenu_coin",
+   "value_in_bronze": 10000000000.0,
+   "description": "A raw stellar mineral measured by weight; refined into Zenu Coin."
+  },
+  {
+   "id": "zenu_coin",
+   "name": "Zenu Coin",
+   "tier": 5,
+   "per_next": 10000,
+   "next_id": "mythril_ore_gram",
+   "value_in_bronze": 1000000000000.0,
+   "description": "Refined Zenu currency; the coin of empires and small star-nations."
+  },
+  {
+   "id": "mythril_ore_gram",
+   "name": "Mythril Ore (gram)",
+   "tier": 6,
+   "per_next": 10,
+   "next_id": "mythril_coin",
+   "value_in_bronze": 1e+16,
+   "description": "The rarest convertible mineral; weighed, then refined."
+  },
+  {
+   "id": "mythril_coin",
+   "name": "Mythril Coin",
+   "tier": 7,
+   "per_next": null,
+   "next_id": null,
+   "value_in_bronze": 1e+17,
+   "description": "The apex currency. A single Mythril Coin is a galaxy's fortune."
+  }
+ ],
+ "rarity": [
+  {
+   "id": "common",
+   "name": "Common",
+   "rank": 1,
+   "color": "#9d9d9d",
+   "drop_weight": 1000.0,
+   "value_mult": 1.0,
+   "stat_roll_mult": 1.0,
+   "description": "Everyday materials and gear. The bulk of early loot."
+  },
+  {
+   "id": "uncommon",
+   "name": "Uncommon",
+   "rank": 2,
+   "color": "#1eff00",
+   "drop_weight": 450.0,
+   "value_mult": 2.5,
+   "stat_roll_mult": 1.4,
+   "description": "Noticeably better; first meaningful upgrades."
+  },
+  {
+   "id": "rare",
+   "name": "Rare",
+   "rank": 3,
+   "color": "#0070dd",
+   "drop_weight": 160.0,
+   "value_mult": 7.0,
+   "stat_roll_mult": 2.0,
+   "description": "Sought-after gear and reagents."
+  },
+  {
+   "id": "epic",
+   "name": "Epic",
+   "rank": 4,
+   "color": "#a335ee",
+   "drop_weight": 55.0,
+   "value_mult": 20.0,
+   "stat_roll_mult": 3.0,
+   "description": "Build-defining items."
+  },
+  {
+   "id": "legendary",
+   "name": "Legendary",
+   "rank": 5,
+   "color": "#ff8000",
+   "drop_weight": 16.0,
+   "value_mult": 60.0,
+   "stat_roll_mult": 4.5,
+   "description": "Named, unique, history-making gear."
+  },
+  {
+   "id": "mythic",
+   "name": "Mythic",
+   "rank": 6,
+   "color": "#e6cc80",
+   "drop_weight": 4.0,
+   "value_mult": 200.0,
+   "stat_roll_mult": 7.0,
+   "description": "Relics of fallen empires and dead stars."
+  },
+  {
+   "id": "ascendant",
+   "name": "Ascendant",
+   "rank": 7,
+   "color": "#ff3860",
+   "drop_weight": 1.0,
+   "value_mult": 750.0,
+   "stat_roll_mult": 11.0,
+   "description": "Forged beyond mortal limits; drops only past SS-rank dungeons."
+  },
+  {
+   "id": "transcendent",
+   "name": "Transcendent",
+   "rank": 8,
+   "color": "#00ffd5",
+   "drop_weight": 0.2,
+   "value_mult": 3000.0,
+   "stat_roll_mult": 18.0,
+   "description": "Defies the rules of the world. Immortal-rank content only."
+  },
+  {
+   "id": "divine",
+   "name": "Divine",
+   "rank": 9,
+   "color": "#fff4b8",
+   "drop_weight": 0.03,
+   "value_mult": 15000.0,
+   "stat_roll_mult": 30.0,
+   "description": "Touched by godhood. God-rank dungeons and world bosses only."
+  },
+  {
+   "id": "primordial",
+   "name": "Primordial",
+   "rank": 10,
+   "color": "#ffffff",
+   "drop_weight": 0.002,
+   "value_mult": 100000.0,
+   "stat_roll_mult": 60.0,
+   "description": "From before the universe was written. The Universe Overlord endgame."
+  }
+ ],
+ "phases": [
+  {
+   "idx": 1,
+   "id": "lone_wanderer",
+   "name": "Lone Wanderer",
+   "band": "settlement",
+   "req": "Start a new chronicle",
+   "unlocks": "Manual gathering, the Wooden Shack repair quest"
+  },
+  {
+   "idx": 2,
+   "id": "wooden_shack",
+   "name": "Wooden Shack",
+   "band": "settlement",
+   "req": "Repair the Wooden Shack",
+   "unlocks": "Storage, basic crafting, first recruit slot"
+  },
+  {
+   "idx": 3,
+   "id": "homestead",
+   "name": "Homestead",
+   "band": "settlement",
+   "req": "Upgrade Shack -> House; 2 villagers",
+   "unlocks": "Farming, cooking, job delegation"
+  },
+  {
+   "idx": 4,
+   "id": "hamlet",
+   "name": "Hamlet",
+   "band": "settlement",
+   "req": "5 villagers; House -> Two-Story House",
+   "unlocks": "Apartment Complex blueprint, F-rank dungeons"
+  },
+  {
+   "idx": 5,
+   "id": "thorpe",
+   "name": "Thorpe",
+   "band": "settlement",
+   "req": "10 villagers; 50,000 Bronze",
+   "unlocks": "Second building plot, marketplace"
+  },
+  {
+   "idx": 6,
+   "id": "small_village",
+   "name": "Small Village",
+   "band": "village",
+   "req": "Apartment Complex; 20 villagers",
+   "unlocks": "Found a second settlement, E-rank dungeons"
+  },
+  {
+   "idx": 7,
+   "id": "village",
+   "name": "Village",
+   "band": "village",
+   "req": "35 villagers; 5 Gold",
+   "unlocks": "Village Hall, militia, beast taming"
+  },
+  {
+   "idx": 8,
+   "id": "large_village",
+   "name": "Large Village",
+   "band": "village",
+   "req": "60 villagers; D-rank cleared",
+   "unlocks": "Trade routes, third settlement"
+  },
+  {
+   "idx": 9,
+   "id": "township",
+   "name": "Township",
+   "band": "village",
+   "req": "100 villagers; 50 Gold",
+   "unlocks": "Town charter quest, guild hall"
+  },
+  {
+   "idx": 10,
+   "id": "small_town",
+   "name": "Small Town",
+   "band": "village",
+   "req": "Town charter; 150 citizens",
+   "unlocks": "Specialized districts, C-rank dungeons"
+  },
+  {
+   "idx": 11,
+   "id": "town",
+   "name": "Town",
+   "band": "village",
+   "req": "250 citizens; 500 Gold",
+   "unlocks": "Bank (currency refining), taxation income"
+  },
+  {
+   "idx": 12,
+   "id": "large_town",
+   "name": "Large Town",
+   "band": "village",
+   "req": "400 citizens; B-rank cleared",
+   "unlocks": "City charter quest"
+  },
+  {
+   "idx": 13,
+   "id": "small_city",
+   "name": "Small City",
+   "band": "city",
+   "req": "City charter; 700 citizens",
+   "unlocks": "Walls, multiple districts, A-rank dungeons"
+  },
+  {
+   "idx": 14,
+   "id": "city",
+   "name": "City",
+   "band": "city",
+   "req": "1,200 citizens; 5,000 Gold",
+   "unlocks": "University (research), advanced crafting"
+  },
+  {
+   "idx": 15,
+   "id": "large_city",
+   "name": "Large City",
+   "band": "city",
+   "req": "2,500 citizens; S-rank cleared",
+   "unlocks": "Industry, mass production"
+  },
+  {
+   "idx": 16,
+   "id": "metropolis",
+   "name": "Metropolis",
+   "band": "city",
+   "req": "5,000 citizens; 1g Zenu Stone",
+   "unlocks": "Skyscrapers, SS-rank dungeons, world bosses"
+  },
+  {
+   "idx": 17,
+   "id": "megalopolis",
+   "name": "Megalopolis",
+   "band": "city",
+   "req": "10,000 citizens",
+   "unlocks": "Mega-projects, satellite settlements"
+  },
+  {
+   "idx": 18,
+   "id": "city_state",
+   "name": "City-State",
+   "band": "city",
+   "req": "20,000 citizens; standing army",
+   "unlocks": "Diplomacy, vassal settlements"
+  },
+  {
+   "idx": 19,
+   "id": "province",
+   "name": "Province",
+   "band": "city",
+   "req": "50,000 citizens; Ascendant-rank cleared",
+   "unlocks": "Provincial governance, regional resources"
+  },
+  {
+   "idx": 20,
+   "id": "duchy",
+   "name": "Duchy",
+   "band": "city",
+   "req": "100,000 citizens; 10 Zenu Coin",
+   "unlocks": "Nobility, knight orders, Kingdom quest"
+  },
+  {
+   "idx": 21,
+   "id": "kingdom",
+   "name": "Kingdom",
+   "band": "empire",
+   "req": "Found a Kingdom; 250,000 citizens",
+   "unlocks": "Royal decrees, kingdom-wide buffs"
+  },
+  {
+   "idx": 22,
+   "id": "greater_kingdom",
+   "name": "Greater Kingdom",
+   "band": "empire",
+   "req": "500,000 citizens; Transcendent-rank cleared",
+   "unlocks": "Conquest, multi-kingdom rule"
+  },
+  {
+   "idx": 23,
+   "id": "empire",
+   "name": "Empire",
+   "band": "empire",
+   "req": "1,000,000 citizens",
+   "unlocks": "Imperial bureaucracy, legions"
+  },
+  {
+   "idx": 24,
+   "id": "grand_empire",
+   "name": "Grand Empire",
+   "band": "empire",
+   "req": "5,000,000 citizens; 100 Zenu Coin",
+   "unlocks": "Continental projects, Immortal-rank dungeons"
+  },
+  {
+   "idx": 25,
+   "id": "continental_dominion",
+   "name": "Continental Dominion",
+   "band": "empire",
+   "req": "25,000,000 citizens",
+   "unlocks": "Continent control, super-weapons"
+  },
+  {
+   "idx": 26,
+   "id": "world_power",
+   "name": "World Power",
+   "band": "empire",
+   "req": "100,000,000 citizens; 1g Mythril Ore",
+   "unlocks": "Global influence, Golden Immortal dungeons"
+  },
+  {
+   "idx": 27,
+   "id": "planetary_hegemony",
+   "name": "Planetary Hegemony",
+   "band": "empire",
+   "req": "500,000,000 citizens",
+   "unlocks": "Hegemonic control of the planet"
+  },
+  {
+   "idx": 28,
+   "id": "world_government",
+   "name": "World Government",
+   "band": "empire",
+   "req": "1,000,000,000 citizens; unify the planet",
+   "unlocks": "Planetary policy, Planetary phase quest"
+  },
+  {
+   "idx": 29,
+   "id": "planetary_sovereign",
+   "name": "Planetary Sovereign",
+   "band": "planetary",
+   "req": "Unify the planet; 1 Mythril Coin",
+   "unlocks": "Orbital construction, Overreaching Immortal dungeons"
+  },
+  {
+   "idx": 30,
+   "id": "orbital_civilization",
+   "name": "Orbital Civilization",
+   "band": "planetary",
+   "req": "Build the first space elevator",
+   "unlocks": "Orbital habitats, zero-g industry"
+  },
+  {
+   "idx": 31,
+   "id": "lunar_colony",
+   "name": "Lunar Colony",
+   "band": "planetary",
+   "req": "Colonize the moon",
+   "unlocks": "Off-world mining, Heavenly Immortal dungeons"
+  },
+  {
+   "idx": 32,
+   "id": "interplanetary",
+   "name": "Interplanetary Federation",
+   "band": "planetary",
+   "req": "Colonize 2 planets",
+   "unlocks": "Interplanetary trade, terraforming"
+  },
+  {
+   "idx": 33,
+   "id": "solar_dominion",
+   "name": "Solar Dominion",
+   "band": "planetary",
+   "req": "Control the home solar system",
+   "unlocks": "Dyson swarm, stellar engineering"
+  },
+  {
+   "idx": 34,
+   "id": "star_empire",
+   "name": "Star Empire",
+   "band": "planetary",
+   "req": "Control 5 star systems",
+   "unlocks": "FTL travel, God-rank dungeons"
+  },
+  {
+   "idx": 35,
+   "id": "stellar_hegemony",
+   "name": "Stellar Hegemony",
+   "band": "planetary",
+   "req": "Control 25 star systems",
+   "unlocks": "Stellar-scale population, megastructures"
+  },
+  {
+   "idx": 36,
+   "id": "cluster_sovereign",
+   "name": "Cluster Sovereign",
+   "band": "planetary",
+   "req": "Control a star cluster",
+   "unlocks": "Cluster governance, Galactic phase quest"
+  },
+  {
+   "idx": 37,
+   "id": "galactic_frontier",
+   "name": "Galactic Frontier",
+   "band": "cosmic",
+   "req": "Expand into the galaxy",
+   "unlocks": "Galaxy map, Heavenly God dungeons"
+  },
+  {
+   "idx": 38,
+   "id": "galactic_empire",
+   "name": "Galactic Empire",
+   "band": "cosmic",
+   "req": "Control 10% of the galaxy",
+   "unlocks": "Galactic bureaucracy, star-forges"
+  },
+  {
+   "idx": 39,
+   "id": "galactic_overlord",
+   "name": "Galactic Overlord",
+   "band": "cosmic",
+   "req": "Control the galaxy",
+   "unlocks": "Galactic absolute rule"
+  },
+  {
+   "idx": 40,
+   "id": "intergalactic",
+   "name": "Intergalactic Dominion",
+   "band": "cosmic",
+   "req": "Control 2 galaxies",
+   "unlocks": "Intergalactic travel, void megaprojects"
+  },
+  {
+   "idx": 41,
+   "id": "cosmic_sovereign",
+   "name": "Cosmic Sovereign",
+   "band": "cosmic",
+   "req": "Control a galactic supercluster",
+   "unlocks": "Cosmic-scale engineering"
+  },
+  {
+   "idx": 42,
+   "id": "universal_pillar",
+   "name": "Universal Pillar",
+   "band": "cosmic",
+   "req": "Become a pillar of the universe",
+   "unlocks": "Reality anchoring, law-editing"
+  },
+  {
+   "idx": 43,
+   "id": "dimensional_overlord",
+   "name": "Dimensional Overlord",
+   "band": "cosmic",
+   "req": "Conquer adjacent dimensions",
+   "unlocks": "Dimensional travel, cross-reality armies"
+  },
+  {
+   "idx": 44,
+   "id": "multiversal",
+   "name": "Multiversal Sovereign",
+   "band": "cosmic",
+   "req": "Rule multiple universes",
+   "unlocks": "Multiverse control, the final quest"
+  },
+  {
+   "idx": 45,
+   "id": "universe_overlord",
+   "name": "Universe Overlord",
+   "band": "overlord",
+   "req": "Complete the final quest; rule all that is",
+   "unlocks": "Endgame: rewrite the laws of existence (NG+ / deep rebirth)"
+  }
+ ],
+ "buildings": [
+  {
+   "id": "BLD-000",
+   "name": "Derelict Wooden Shack",
+   "tier": 0,
+   "pop_capacity": 1,
+   "upgrade_to": "BLD-001",
+   "unlocks": "[]"
+  },
+  {
+   "id": "BLD-001",
+   "name": "Wooden Shack (Repaired)",
+   "tier": 1,
+   "pop_capacity": 2,
+   "upgrade_to": "BLD-002",
+   "unlocks": "[\"storage_chest\", \"basic_crafting_bench\"]"
+  },
+  {
+   "id": "BLD-002",
+   "name": "House",
+   "tier": 2,
+   "pop_capacity": 5,
+   "upgrade_to": "BLD-003",
+   "unlocks": "[\"kitchen\", \"farm_plot\", \"job_board\"]"
+  },
+  {
+   "id": "BLD-003",
+   "name": "Two-Story House",
+   "tier": 3,
+   "pop_capacity": 12,
+   "upgrade_to": "BLD-004",
+   "unlocks": "[\"workshop\", \"extra_recruit_slots\"]"
+  },
+  {
+   "id": "BLD-004",
+   "name": "Apartment Complex",
+   "tier": 4,
+   "pop_capacity": 40,
+   "upgrade_to": "BLD-005",
+   "unlocks": "[\"district_planning\", \"mass_housing\"]"
+  },
+  {
+   "id": "BLD-005",
+   "name": "Village Housing Block",
+   "tier": 5,
+   "pop_capacity": 150,
+   "upgrade_to": "BLD-006",
+   "unlocks": "[\"village_hall\", \"found_new_settlement\"]"
+  },
+  {
+   "id": "BLD-006",
+   "name": "Town Housing Quarter",
+   "tier": 6,
+   "pop_capacity": 500,
+   "upgrade_to": "BLD-007",
+   "unlocks": "[\"town_districts\", \"bank\"]"
+  },
+  {
+   "id": "BLD-007",
+   "name": "City Residential District",
+   "tier": 7,
+   "pop_capacity": 2500,
+   "upgrade_to": "BLD-008",
+   "unlocks": "[\"university\", \"industry\"]"
+  },
+  {
+   "id": "BLD-008",
+   "name": "Metropolitan Towers",
+   "tier": 8,
+   "pop_capacity": 20000,
+   "upgrade_to": "BLD-009",
+   "unlocks": "[\"skyscrapers\", \"mega_projects\"]"
+  },
+  {
+   "id": "BLD-009",
+   "name": "Arcology",
+   "tier": 9,
+   "pop_capacity": 250000,
+   "upgrade_to": "BLD-010",
+   "unlocks": "[\"self_contained_city\", \"planetary_grid\"]"
+  },
+  {
+   "id": "BLD-010",
+   "name": "Orbital Habitat Ring",
+   "tier": 10,
+   "pop_capacity": 10000000,
+   "upgrade_to": "BLD-011",
+   "unlocks": "[\"space_age\", \"off_world_colonies\"]"
+  },
+  {
+   "id": "BLD-011",
+   "name": "Stellar Megastructure",
+   "tier": 11,
+   "pop_capacity": 1000000000000,
+   "upgrade_to": null,
+   "unlocks": "[\"dyson_swarm\", \"cosmic_population\"]"
+  }
+ ],
+ "dungeons": [
+  {
+   "idx": 0,
+   "id": "F",
+   "name": "F-Rank",
+   "level_band": "1-25",
+   "unlock_phase": 4,
+   "max_rarity": "uncommon",
+   "boss": "Goblin Chief",
+   "world_boss": "Forest Troll"
+  },
+  {
+   "idx": 1,
+   "id": "E",
+   "name": "E-Rank",
+   "level_band": "25-50",
+   "unlock_phase": 6,
+   "max_rarity": "uncommon",
+   "boss": "Dire Wolf Alpha",
+   "world_boss": "Mire Hydra (lesser)"
+  },
+  {
+   "idx": 2,
+   "id": "D",
+   "name": "D-Rank",
+   "level_band": "50-100",
+   "unlock_phase": 8,
+   "max_rarity": "rare",
+   "boss": "Skeleton Warlord",
+   "world_boss": "Stone Colossus"
+  },
+  {
+   "idx": 3,
+   "id": "C",
+   "name": "C-Rank",
+   "level_band": "100-200",
+   "unlock_phase": 10,
+   "max_rarity": "rare",
+   "boss": "Orc Warchief",
+   "world_boss": "Plains Behemoth"
+  },
+  {
+   "idx": 4,
+   "id": "B",
+   "name": "B-Rank",
+   "level_band": "200-400",
+   "unlock_phase": 12,
+   "max_rarity": "epic",
+   "boss": "Vampire Lord",
+   "world_boss": "Sky Wyvern"
+  },
+  {
+   "idx": 5,
+   "id": "A",
+   "name": "A-Rank",
+   "level_band": "400-800",
+   "unlock_phase": 13,
+   "max_rarity": "epic",
+   "boss": "Lich",
+   "world_boss": "Ancient Treant"
+  },
+  {
+   "idx": 6,
+   "id": "S",
+   "name": "S-Rank",
+   "level_band": "800-1600",
+   "unlock_phase": 15,
+   "max_rarity": "legendary",
+   "boss": "Demon General",
+   "world_boss": "Abyssal Kraken"
+  },
+  {
+   "idx": 7,
+   "id": "SS",
+   "name": "SS-Rank",
+   "level_band": "1600-3200",
+   "unlock_phase": 16,
+   "max_rarity": "legendary",
+   "boss": "Dragon Elder",
+   "world_boss": "Volcano Drake King"
+  },
+  {
+   "idx": 8,
+   "id": "SSS",
+   "name": "SSS-Rank",
+   "level_band": "3200-6400",
+   "unlock_phase": 18,
+   "max_rarity": "mythic",
+   "boss": "Demon King",
+   "world_boss": "World Serpent"
+  },
+  {
+   "idx": 9,
+   "id": "ASC",
+   "name": "Ascendant Rank",
+   "level_band": "6400-15k",
+   "unlock_phase": 19,
+   "max_rarity": "ascendant",
+   "boss": "Ascendant Warlord",
+   "world_boss": "Sky-Splitting Roc"
+  },
+  {
+   "idx": 10,
+   "id": "TRA",
+   "name": "Transcendent Rank",
+   "level_band": "15k-40k",
+   "unlock_phase": 22,
+   "max_rarity": "transcendent",
+   "boss": "Transcendent Tyrant",
+   "world_boss": "Continent Turtle"
+  },
+  {
+   "idx": 11,
+   "id": "IMM",
+   "name": "Immortal Rank",
+   "level_band": "40k-100k",
+   "unlock_phase": 24,
+   "max_rarity": "transcendent",
+   "boss": "Immortal Sovereign",
+   "world_boss": "Eternal Phoenix"
+  },
+  {
+   "idx": 12,
+   "id": "GIM",
+   "name": "Golden Immortal Rank",
+   "level_band": "100k-300k",
+   "unlock_phase": 26,
+   "max_rarity": "divine",
+   "boss": "Golden Immortal Emperor",
+   "world_boss": "Sun-Devouring Beast"
+  },
+  {
+   "idx": 13,
+   "id": "OIM",
+   "name": "Overreaching Immortal Rank",
+   "level_band": "300k-1M",
+   "unlock_phase": 29,
+   "max_rarity": "divine",
+   "boss": "Overreaching Immortal Monarch",
+   "world_boss": "Void Leviathan"
+  },
+  {
+   "idx": 14,
+   "id": "TIM",
+   "name": "True Immortal Rank",
+   "level_band": "1M-5M",
+   "unlock_phase": 31,
+   "max_rarity": "divine",
+   "boss": "True Immortal Ancestor",
+   "world_boss": "Galaxy Devourer"
+  },
+  {
+   "idx": 15,
+   "id": "HIM",
+   "name": "Heavenly Immortal Rank",
+   "level_band": "5M-25M",
+   "unlock_phase": 31,
+   "max_rarity": "divine",
+   "boss": "Heavenly Immortal Lord",
+   "world_boss": "Star-Eater Titan"
+  },
+  {
+   "idx": 16,
+   "id": "GOD",
+   "name": "God Rank",
+   "level_band": "25M-200M",
+   "unlock_phase": 34,
+   "max_rarity": "primordial",
+   "boss": "Lesser Deity",
+   "world_boss": "Cosmic Horror"
+  },
+  {
+   "idx": 17,
+   "id": "HGOD",
+   "name": "Heavenly God Rank",
+   "level_band": "200M+",
+   "unlock_phase": 37,
+   "max_rarity": "primordial",
+   "boss": "Heavenly God Sovereign",
+   "world_boss": "The Unwritten (final world boss)"
+  }
+ ],
+ "enemies": [
+  {
+   "id": "ENM-001",
+   "name": "Goblin",
+   "family": "humanoid",
+   "base_hp": 30,
+   "base_atk": 6,
+   "base_xp": 10,
+   "rank_band": "F-C",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-002",
+   "name": "Kobold",
+   "family": "humanoid",
+   "base_hp": 25,
+   "base_atk": 7,
+   "base_xp": 11,
+   "rank_band": "F-C",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-003",
+   "name": "Dire Wolf",
+   "family": "beast",
+   "base_hp": 45,
+   "base_atk": 10,
+   "base_xp": 14,
+   "rank_band": "F-D",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-004",
+   "name": "Giant Spider",
+   "family": "beast",
+   "base_hp": 40,
+   "base_atk": 9,
+   "base_xp": 13,
+   "rank_band": "F-D",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-005",
+   "name": "Skeleton",
+   "family": "undead",
+   "base_hp": 35,
+   "base_atk": 8,
+   "base_xp": 12,
+   "rank_band": "E-B",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-006",
+   "name": "Zombie",
+   "family": "undead",
+   "base_hp": 60,
+   "base_atk": 7,
+   "base_xp": 13,
+   "rank_band": "E-B",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-007",
+   "name": "Slime",
+   "family": "aberration",
+   "base_hp": 50,
+   "base_atk": 5,
+   "base_xp": 9,
+   "rank_band": "F-C",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-008",
+   "name": "Orc",
+   "family": "humanoid",
+   "base_hp": 80,
+   "base_atk": 14,
+   "base_xp": 18,
+   "rank_band": "D-A",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-009",
+   "name": "Bandit",
+   "family": "humanoid",
+   "base_hp": 55,
+   "base_atk": 12,
+   "base_xp": 16,
+   "rank_band": "E-B",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-010",
+   "name": "Harpy",
+   "family": "beast",
+   "base_hp": 48,
+   "base_atk": 13,
+   "base_xp": 17,
+   "rank_band": "D-A",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-011",
+   "name": "Golem",
+   "family": "construct",
+   "base_hp": 200,
+   "base_atk": 16,
+   "base_xp": 24,
+   "rank_band": "C-S",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-012",
+   "name": "Ghost",
+   "family": "undead",
+   "base_hp": 70,
+   "base_atk": 15,
+   "base_xp": 20,
+   "rank_band": "C-S",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-013",
+   "name": "Troll",
+   "family": "giant",
+   "base_hp": 260,
+   "base_atk": 22,
+   "base_xp": 28,
+   "rank_band": "C-S",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-014",
+   "name": "Ogre",
+   "family": "giant",
+   "base_hp": 240,
+   "base_atk": 26,
+   "base_xp": 30,
+   "rank_band": "C-S",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-015",
+   "name": "Minotaur",
+   "family": "beast",
+   "base_hp": 180,
+   "base_atk": 24,
+   "base_xp": 29,
+   "rank_band": "B-SS",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-016",
+   "name": "Wyvern",
+   "family": "dragonkin",
+   "base_hp": 300,
+   "base_atk": 30,
+   "base_xp": 36,
+   "rank_band": "B-SS",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-017",
+   "name": "Vampire",
+   "family": "undead",
+   "base_hp": 220,
+   "base_atk": 28,
+   "base_xp": 34,
+   "rank_band": "B-SS",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-018",
+   "name": "Demon",
+   "family": "demon",
+   "base_hp": 350,
+   "base_atk": 34,
+   "base_xp": 42,
+   "rank_band": "A-SSS",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-019",
+   "name": "Elemental",
+   "family": "elemental",
+   "base_hp": 280,
+   "base_atk": 27,
+   "base_xp": 38,
+   "rank_band": "A-SSS",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-020",
+   "name": "Dragon",
+   "family": "dragonkin",
+   "base_hp": 800,
+   "base_atk": 50,
+   "base_xp": 70,
+   "rank_band": "S-ASC",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-021",
+   "name": "Cultist",
+   "family": "humanoid",
+   "base_hp": 160,
+   "base_atk": 26,
+   "base_xp": 33,
+   "rank_band": "A-SSS",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-022",
+   "name": "Void Spawn",
+   "family": "void",
+   "base_hp": 600,
+   "base_atk": 55,
+   "base_xp": 80,
+   "rank_band": "ASC-IMM",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-023",
+   "name": "Star Beast",
+   "family": "cosmic",
+   "base_hp": 5000,
+   "base_atk": 120,
+   "base_xp": 200,
+   "rank_band": "IMM-GOD",
+   "kind": "enemy"
+  },
+  {
+   "id": "ENM-024",
+   "name": "Reality Wraith",
+   "family": "cosmic",
+   "base_hp": 20000,
+   "base_atk": 300,
+   "base_xp": 500,
+   "rank_band": "GOD-HGOD",
+   "kind": "enemy"
+  },
+  {
+   "id": "BOSS-001",
+   "name": "Goblin Chief",
+   "family": "humanoid",
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "F",
+   "kind": "boss"
+  },
+  {
+   "id": "BOSS-002",
+   "name": "Dire Wolf Alpha",
+   "family": "beast",
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "E",
+   "kind": "boss"
+  },
+  {
+   "id": "BOSS-003",
+   "name": "Skeleton Warlord",
+   "family": "undead",
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "D",
+   "kind": "boss"
+  },
+  {
+   "id": "BOSS-004",
+   "name": "Orc Warchief",
+   "family": "humanoid",
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "C",
+   "kind": "boss"
+  },
+  {
+   "id": "BOSS-005",
+   "name": "Vampire Lord",
+   "family": "undead",
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "B",
+   "kind": "boss"
+  },
+  {
+   "id": "BOSS-006",
+   "name": "Lich",
+   "family": "undead",
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "A",
+   "kind": "boss"
+  },
+  {
+   "id": "BOSS-007",
+   "name": "Demon General",
+   "family": "demon",
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "S",
+   "kind": "boss"
+  },
+  {
+   "id": "BOSS-008",
+   "name": "Dragon Elder",
+   "family": "dragonkin",
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "SS",
+   "kind": "boss"
+  },
+  {
+   "id": "BOSS-009",
+   "name": "Demon King",
+   "family": "demon",
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "SSS",
+   "kind": "boss"
+  },
+  {
+   "id": "BOSS-010",
+   "name": "Ascendant Warlord",
+   "family": "void",
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "ASC",
+   "kind": "boss"
+  },
+  {
+   "id": "BOSS-011",
+   "name": "Transcendent Tyrant",
+   "family": "void",
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "TRA",
+   "kind": "boss"
+  },
+  {
+   "id": "BOSS-012",
+   "name": "Immortal Sovereign",
+   "family": "cosmic",
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "IMM",
+   "kind": "boss"
+  },
+  {
+   "id": "BOSS-013",
+   "name": "Golden Immortal Emperor",
+   "family": "cosmic",
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "GIM",
+   "kind": "boss"
+  },
+  {
+   "id": "BOSS-014",
+   "name": "Overreaching Immortal Monarch",
+   "family": "cosmic",
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "OIM",
+   "kind": "boss"
+  },
+  {
+   "id": "BOSS-015",
+   "name": "True Immortal Ancestor",
+   "family": "cosmic",
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "TIM",
+   "kind": "boss"
+  },
+  {
+   "id": "BOSS-016",
+   "name": "Heavenly Immortal Lord",
+   "family": "cosmic",
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "HIM",
+   "kind": "boss"
+  },
+  {
+   "id": "BOSS-017",
+   "name": "Lesser Deity",
+   "family": "cosmic",
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "GOD",
+   "kind": "boss"
+  },
+  {
+   "id": "BOSS-018",
+   "name": "Heavenly God Sovereign",
+   "family": "cosmic",
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "HGOD",
+   "kind": "boss"
+  },
+  {
+   "id": "WB-001",
+   "name": "Forest Troll",
+   "family": null,
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "F",
+   "kind": "world_boss"
+  },
+  {
+   "id": "WB-002",
+   "name": "Stone Colossus",
+   "family": null,
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "D",
+   "kind": "world_boss"
+  },
+  {
+   "id": "WB-003",
+   "name": "Sky Wyvern",
+   "family": null,
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "B",
+   "kind": "world_boss"
+  },
+  {
+   "id": "WB-004",
+   "name": "Abyssal Kraken",
+   "family": null,
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "S",
+   "kind": "world_boss"
+  },
+  {
+   "id": "WB-005",
+   "name": "World Serpent",
+   "family": null,
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "SSS",
+   "kind": "world_boss"
+  },
+  {
+   "id": "WB-006",
+   "name": "Continent Turtle",
+   "family": null,
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "TRA",
+   "kind": "world_boss"
+  },
+  {
+   "id": "WB-007",
+   "name": "Eternal Phoenix",
+   "family": null,
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "IMM",
+   "kind": "world_boss"
+  },
+  {
+   "id": "WB-008",
+   "name": "Sun-Devouring Beast",
+   "family": null,
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "GIM",
+   "kind": "world_boss"
+  },
+  {
+   "id": "WB-009",
+   "name": "Void Leviathan",
+   "family": null,
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "OIM",
+   "kind": "world_boss"
+  },
+  {
+   "id": "WB-010",
+   "name": "Galaxy Devourer",
+   "family": null,
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "TIM",
+   "kind": "world_boss"
+  },
+  {
+   "id": "WB-011",
+   "name": "Star-Eater Titan",
+   "family": null,
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "HIM",
+   "kind": "world_boss"
+  },
+  {
+   "id": "WB-012",
+   "name": "Cosmic Horror",
+   "family": null,
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "GOD",
+   "kind": "world_boss"
+  },
+  {
+   "id": "WB-013",
+   "name": "The Unwritten",
+   "family": null,
+   "base_hp": null,
+   "base_atk": null,
+   "base_xp": null,
+   "rank_band": "HGOD",
+   "kind": "world_boss"
+  }
+ ],
+ "animals": [
+  {
+   "id": "ANM-001",
+   "name": "Rabbit",
+   "type": "critter",
+   "habitat": "forest",
+   "tameable": 0,
+   "yields": "meat, pelt",
+   "role": "early food/leather"
+  },
+  {
+   "id": "ANM-002",
+   "name": "Deer",
+   "type": "game",
+   "habitat": "forest",
+   "tameable": 0,
+   "yields": "meat, hide, antler",
+   "role": "food/leather"
+  },
+  {
+   "id": "ANM-003",
+   "name": "Boar",
+   "type": "game",
+   "habitat": "forest",
+   "tameable": 0,
+   "yields": "meat, tusk, hide",
+   "role": "food; can gore hunters"
+  },
+  {
+   "id": "ANM-004",
+   "name": "Chicken",
+   "type": "livestock",
+   "habitat": "farm",
+   "tameable": 1,
+   "yields": "eggs, feathers, meat",
+   "role": "ranchable food"
+  },
+  {
+   "id": "ANM-005",
+   "name": "Cow",
+   "type": "livestock",
+   "habitat": "farm",
+   "tameable": 1,
+   "yields": "milk, beef, leather",
+   "role": "ranchable food/leather"
+  },
+  {
+   "id": "ANM-006",
+   "name": "Sheep",
+   "type": "livestock",
+   "habitat": "farm",
+   "tameable": 1,
+   "yields": "wool, mutton",
+   "role": "ranchable cloth"
+  },
+  {
+   "id": "ANM-007",
+   "name": "Pig",
+   "type": "livestock",
+   "habitat": "farm",
+   "tameable": 1,
+   "yields": "pork, lard",
+   "role": "ranchable food"
+  },
+  {
+   "id": "ANM-008",
+   "name": "Horse",
+   "type": "mount",
+   "habitat": "plains",
+   "tameable": 1,
+   "yields": "mount speed",
+   "role": "early mount; settlement logistics"
+  },
+  {
+   "id": "ANM-009",
+   "name": "Trout",
+   "type": "fish",
+   "habitat": "river",
+   "tameable": 0,
+   "yields": "fish meat",
+   "role": "fishing food"
+  },
+  {
+   "id": "ANM-010",
+   "name": "Salmon",
+   "type": "fish",
+   "habitat": "river",
+   "tameable": 0,
+   "yields": "fish meat, roe",
+   "role": "fishing food/morale"
+  },
+  {
+   "id": "ANM-011",
+   "name": "Bee",
+   "type": "insect",
+   "habitat": "meadow",
+   "tameable": 1,
+   "yields": "honey, wax",
+   "role": "apiary; morale/cooking"
+  },
+  {
+   "id": "ANM-012",
+   "name": "Goat",
+   "type": "livestock",
+   "habitat": "hills",
+   "tameable": 1,
+   "yields": "milk, hide, horn",
+   "role": "ranchable; rough terrain"
+  },
+  {
+   "id": "ANM-013",
+   "name": "Falcon",
+   "type": "companion",
+   "habitat": "mountains",
+   "tameable": 1,
+   "yields": "scouting bonus",
+   "role": "scout companion (drop rate)"
+  },
+  {
+   "id": "ANM-014",
+   "name": "Wolfhound",
+   "type": "companion",
+   "habitat": "settlement",
+   "tameable": 1,
+   "yields": "guard bonus",
+   "role": "guard/hunt companion"
+  },
+  {
+   "id": "ANM-015",
+   "name": "Ox",
+   "type": "beast_of_burden",
+   "habitat": "farm",
+   "tameable": 1,
+   "yields": "hauling, beef",
+   "role": "construction/logistics speed"
+  },
+  {
+   "id": "ANM-016",
+   "name": "Camel",
+   "type": "mount",
+   "habitat": "desert",
+   "tameable": 1,
+   "yields": "desert travel",
+   "role": "biome mount"
+  },
+  {
+   "id": "ANM-017",
+   "name": "Bear",
+   "type": "wild",
+   "habitat": "forest",
+   "tameable": 1,
+   "yields": "meat, thick hide, claw",
+   "role": "dangerous game; rare tame"
+  },
+  {
+   "id": "ANM-018",
+   "name": "Eagle",
+   "type": "companion",
+   "habitat": "peaks",
+   "tameable": 1,
+   "yields": "long-range scouting",
+   "role": "high-tier scout"
+  },
+  {
+   "id": "ANM-019",
+   "name": "Whale",
+   "type": "fish",
+   "habitat": "ocean",
+   "tameable": 0,
+   "yields": "oil, blubber, ambergris",
+   "role": "late ocean resource"
+  },
+  {
+   "id": "ANM-020",
+   "name": "Griffon",
+   "type": "mount",
+   "habitat": "high_peaks",
+   "tameable": 1,
+   "yields": "flying mount",
+   "role": "mid-game flying mount (semi-magical)"
+  },
+  {
+   "id": "ANM-021",
+   "name": "Direhorn",
+   "type": "mount",
+   "habitat": "wilds",
+   "tameable": 1,
+   "yields": "war mount",
+   "role": "heavy cavalry mount"
+  },
+  {
+   "id": "ANM-022",
+   "name": "Star Whale",
+   "type": "cosmic_fauna",
+   "habitat": "space",
+   "tameable": 1,
+   "yields": "void plankton, star oil",
+   "role": "space-age resource/mount"
+  },
+  {
+   "id": "ANM-023",
+   "name": "Glow Moth",
+   "type": "insect",
+   "habitat": "caverns",
+   "tameable": 1,
+   "yields": "luminescent dust",
+   "role": "lighting/crafting reagent"
+  },
+  {
+   "id": "ANM-024",
+   "name": "Frost Fox",
+   "type": "critter",
+   "habitat": "tundra",
+   "tameable": 1,
+   "yields": "frost pelt",
+   "role": "cold-resist crafting"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "CHR-MQ-001",
+   "name": "Garrok Emberhand",
+   "role": "Survival Mentor",
+   "role_category": "quest_giver",
+   "persistence": "anchor",
+   "rarity": "legendary",
+   "recruitable": 0,
+   "can_die": 0,
+   "archetype": "laborer",
+   "base_stats": "{\"hp\": 400, \"atk\": 60, \"def\": 70, \"spd\": 30, \"vit\": 90, \"int\": 40, \"lck\": 20, \"cha\": 50, \"ldr\": 30}"
+  },
+  {
+   "id": "CHR-MQ-002",
+   "name": "Elder Mira Thornwood",
+   "role": "Village Elder",
+   "role_category": "quest_giver",
+   "persistence": "recurring",
+   "rarity": "epic",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "leader",
+   "base_stats": "{\"hp\": 220, \"atk\": 25, \"def\": 40, \"spd\": 35, \"vit\": 60, \"int\": 90, \"lck\": 40, \"cha\": 110, \"ldr\": 130}"
+  },
+  {
+   "id": "CHR-MQ-003",
+   "name": "Bryn Coalfist",
+   "role": "Combat & Crafting Trainer",
+   "role_category": "quest_giver",
+   "persistence": "recurring",
+   "rarity": "epic",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "warrior",
+   "base_stats": "{\"hp\": 320, \"atk\": 110, \"def\": 90, \"spd\": 40, \"vit\": 80, \"int\": 70, \"lck\": 30, \"cha\": 45, \"ldr\": 50}"
+  },
+  {
+   "id": "CHR-MQ-004",
+   "name": "The Ashen Pilgrim",
+   "role": "Mysterious Wanderer",
+   "role_category": "quest_giver",
+   "persistence": "transient",
+   "rarity": "mythic",
+   "recruitable": 0,
+   "can_die": 0,
+   "archetype": "rogue",
+   "base_stats": "{\"hp\": 150, \"atk\": 80, \"def\": 40, \"spd\": 120, \"vit\": 50, \"int\": 130, \"lck\": 200, \"cha\": 60, \"ldr\": 40}"
+  },
+  {
+   "id": "CHR-MQ-005",
+   "name": "Envoy Castellan Reyes",
+   "role": "Imperial Envoy",
+   "role_category": "quest_giver",
+   "persistence": "milestone",
+   "rarity": "legendary",
+   "recruitable": 0,
+   "can_die": 0,
+   "archetype": "leader",
+   "base_stats": "{\"hp\": 260, \"atk\": 50, \"def\": 80, \"spd\": 40, \"vit\": 70, \"int\": 100, \"lck\": 50, \"cha\": 140, \"ldr\": 160}"
+  },
+  {
+   "id": "CHR-MQ-006",
+   "name": "Guildmaster Dax Holloway",
+   "role": "Guild Master",
+   "role_category": "quest_giver",
+   "persistence": "recurring",
+   "rarity": "epic",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "warrior",
+   "base_stats": "{\"hp\": 300, \"atk\": 95, \"def\": 75, \"spd\": 60, \"vit\": 75, \"int\": 70, \"lck\": 60, \"cha\": 90, \"ldr\": 100}"
+  },
+  {
+   "id": "CHR-MQ-007",
+   "name": "Seeress Vauna of the Hollow Star",
+   "role": "Oracle / Prophet",
+   "role_category": "quest_giver",
+   "persistence": "recurring",
+   "rarity": "legendary",
+   "recruitable": 1,
+   "can_die": 0,
+   "archetype": "scholar",
+   "base_stats": "{\"hp\": 180, \"atk\": 30, \"def\": 35, \"spd\": 45, \"vit\": 55, \"int\": 200, \"lck\": 150, \"cha\": 80, \"ldr\": 60}"
+  },
+  {
+   "id": "CHR-MQ-008",
+   "name": "Cartographer Toll Inkfoot",
+   "role": "Explorer / Cartographer",
+   "role_category": "quest_giver",
+   "persistence": "recurring",
+   "rarity": "rare",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "rogue",
+   "base_stats": "{\"hp\": 200, \"atk\": 60, \"def\": 50, \"spd\": 130, \"vit\": 60, \"int\": 90, \"lck\": 120, \"cha\": 70, \"ldr\": 50}"
+  },
+  {
+   "id": "CHR-MQ-009",
+   "name": "Apothecary Sable Nightroot",
+   "role": "Alchemy Master",
+   "role_category": "quest_giver",
+   "persistence": "recurring",
+   "rarity": "epic",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "artisan",
+   "base_stats": "{\"hp\": 190, \"atk\": 35, \"def\": 40, \"spd\": 50, \"vit\": 70, \"int\": 180, \"lck\": 80, \"cha\": 60, \"ldr\": 50}"
+  },
+  {
+   "id": "CHR-MQ-010",
+   "name": "Aeon, the World-Scribe",
+   "role": "Narrator / Loremaster",
+   "role_category": "quest_giver",
+   "persistence": "anchor",
+   "rarity": "primordial",
+   "recruitable": 0,
+   "can_die": 0,
+   "archetype": "scholar",
+   "base_stats": "{\"hp\": 999999, \"atk\": 9999, \"def\": 9999, \"spd\": 9999, \"vit\": 9999, \"int\": 99999, \"lck\": 9999, \"cha\": 9999, \"ldr\": 99999}"
+  },
+  {
+   "id": "CHR-NPC-001",
+   "name": "Thane Ironwood",
+   "role": "Weapon Vendor",
+   "role_category": "vendor",
+   "persistence": "anchor",
+   "rarity": "epic",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "artisan",
+   "base_stats": "{\"hp\": 300, \"atk\": 90, \"def\": 80, \"spd\": 35, \"vit\": 75, \"int\": 110, \"lck\": 40, \"cha\": 60, \"ldr\": 55}"
+  },
+  {
+   "id": "CHR-NPC-002",
+   "name": "Vyssa Duskmarket",
+   "role": "Weapon Vendor (High-Tier)",
+   "role_category": "vendor",
+   "persistence": "recurring",
+   "rarity": "legendary",
+   "recruitable": 0,
+   "can_die": 1,
+   "archetype": "rogue",
+   "base_stats": "{\"hp\": 200, \"atk\": 70, \"def\": 50, \"spd\": 110, \"vit\": 55, \"int\": 120, \"lck\": 160, \"cha\": 130, \"ldr\": 60}"
+  },
+  {
+   "id": "CHR-NPC-003",
+   "name": "Goodwife Petra Bramble",
+   "role": "Potion Vendor",
+   "role_category": "vendor",
+   "persistence": "anchor",
+   "rarity": "rare",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "artisan",
+   "base_stats": "{\"hp\": 180, \"atk\": 25, \"def\": 40, \"spd\": 45, \"vit\": 80, \"int\": 130, \"lck\": 60, \"cha\": 90, \"ldr\": 50}"
+  },
+  {
+   "id": "CHR-NPC-004",
+   "name": "Old Mossfen",
+   "role": "Potion Vendor (Tinctures)",
+   "role_category": "vendor",
+   "persistence": "recurring",
+   "rarity": "rare",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "scholar",
+   "base_stats": "{\"hp\": 160, \"atk\": 30, \"def\": 35, \"spd\": 40, \"vit\": 65, \"int\": 150, \"lck\": 110, \"cha\": 40, \"ldr\": 40}"
+  },
+  {
+   "id": "CHR-NPC-005",
+   "name": "Gareth Stonecount",
+   "role": "Material Vendor",
+   "role_category": "vendor",
+   "persistence": "anchor",
+   "rarity": "rare",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "leader",
+   "base_stats": "{\"hp\": 200, \"atk\": 35, \"def\": 55, \"spd\": 40, \"vit\": 70, \"int\": 120, \"lck\": 70, \"cha\": 120, \"ldr\": 90}"
+  },
+  {
+   "id": "CHR-NPC-006",
+   "name": "Pell Deepvein",
+   "role": "Material Vendor (Ores/Gems)",
+   "role_category": "vendor",
+   "persistence": "recurring",
+   "rarity": "uncommon",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "laborer",
+   "base_stats": "{\"hp\": 280, \"atk\": 60, \"def\": 70, \"spd\": 35, \"vit\": 95, \"int\": 60, \"lck\": 80, \"cha\": 50, \"ldr\": 45}"
+  },
+  {
+   "id": "CHR-NPC-007",
+   "name": "Lior Glyphborne",
+   "role": "Enchantment Vendor",
+   "role_category": "vendor",
+   "persistence": "recurring",
+   "rarity": "epic",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "scholar",
+   "base_stats": "{\"hp\": 170, \"atk\": 40, \"def\": 45, \"spd\": 50, \"vit\": 60, \"int\": 170, \"lck\": 90, \"cha\": 70, \"ldr\": 60}"
+  },
+  {
+   "id": "CHR-NPC-008",
+   "name": "Madame Coralind Vex",
+   "role": "Artifact Vendor",
+   "role_category": "vendor",
+   "persistence": "seasonal",
+   "rarity": "legendary",
+   "recruitable": 0,
+   "can_die": 0,
+   "archetype": "rogue",
+   "base_stats": "{\"hp\": 150, \"atk\": 30, \"def\": 40, \"spd\": 80, \"vit\": 50, \"int\": 140, \"lck\": 200, \"cha\": 170, \"ldr\": 60}"
+  },
+  {
+   "id": "CHR-NPC-009",
+   "name": "Warden Korin Greymoor",
+   "role": "Dungeon Gatekeeper",
+   "role_category": "dungeon",
+   "persistence": "anchor",
+   "rarity": "epic",
+   "recruitable": 0,
+   "can_die": 0,
+   "archetype": "warrior",
+   "base_stats": "{\"hp\": 350, \"atk\": 100, \"def\": 110, \"spd\": 45, \"vit\": 90, \"int\": 70, \"lck\": 50, \"cha\": 60, \"ldr\": 80}"
+  },
+  {
+   "id": "CHR-NPC-010",
+   "name": "Scout Nyra Fairwind",
+   "role": "Dungeon Guide / Scout",
+   "role_category": "dungeon",
+   "persistence": "recurring",
+   "rarity": "rare",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "rogue",
+   "base_stats": "{\"hp\": 190, \"atk\": 70, \"def\": 50, \"spd\": 150, \"vit\": 60, \"int\": 80, \"lck\": 130, \"cha\": 70, \"ldr\": 50}"
+  },
+  {
+   "id": "CHR-NPC-011",
+   "name": "Cleric Edryn Vale",
+   "role": "Dungeon Healer / Revival",
+   "role_category": "dungeon",
+   "persistence": "recurring",
+   "rarity": "rare",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "scholar",
+   "base_stats": "{\"hp\": 240, \"atk\": 40, \"def\": 70, \"spd\": 45, \"vit\": 110, \"int\": 140, \"lck\": 70, \"cha\": 90, \"ldr\": 60}"
+  },
+  {
+   "id": "CHR-NPC-012",
+   "name": "Barty Tallrow",
+   "role": "Bounty Board Service",
+   "role_category": "service",
+   "persistence": "recurring",
+   "rarity": "uncommon",
+   "recruitable": 0,
+   "can_die": 1,
+   "archetype": "scholar",
+   "base_stats": "{\"hp\": 140, \"atk\": 20, \"def\": 30, \"spd\": 45, \"vit\": 50, \"int\": 120, \"lck\": 60, \"cha\": 80, \"ldr\": 50}"
+  },
+  {
+   "id": "CHR-NPC-013",
+   "name": "Mabel Hearthwell",
+   "role": "Tavern Keeper / Rumors",
+   "role_category": "service",
+   "persistence": "anchor",
+   "rarity": "uncommon",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "leader",
+   "base_stats": "{\"hp\": 200, \"atk\": 30, \"def\": 45, \"spd\": 40, \"vit\": 80, \"int\": 90, \"lck\": 80, \"cha\": 150, \"ldr\": 80}"
+  },
+  {
+   "id": "CHR-NPC-014",
+   "name": "Master Coffer Aldric Vane",
+   "role": "Banker / Treasury & Refining",
+   "role_category": "service",
+   "persistence": "recurring",
+   "rarity": "rare",
+   "recruitable": 0,
+   "can_die": 0,
+   "archetype": "scholar",
+   "base_stats": "{\"hp\": 160, \"atk\": 20, \"def\": 40, \"spd\": 35, \"vit\": 55, \"int\": 160, \"lck\": 90, \"cha\": 110, \"ldr\": 70}"
+  },
+  {
+   "id": "CHR-NPC-015",
+   "name": "Pip Roamfoot",
+   "role": "Random Traveling Vendor",
+   "role_category": "vendor",
+   "persistence": "transient",
+   "rarity": "rare",
+   "recruitable": 0,
+   "can_die": 0,
+   "archetype": "rogue",
+   "base_stats": "{\"hp\": 150, \"atk\": 40, \"def\": 35, \"spd\": 120, \"vit\": 50, \"int\": 100, \"lck\": 180, \"cha\": 140, \"ldr\": 50}"
+  },
+  {
+   "id": "CHR-NPC-016",
+   "name": "Kael Stormborn",
+   "role": "Recruitable Warrior",
+   "role_category": "faction",
+   "persistence": "recurring",
+   "rarity": "epic",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "warrior",
+   "base_stats": "{\"hp\": 320, \"atk\": 130, \"def\": 85, \"spd\": 70, \"vit\": 80, \"int\": 60, \"lck\": 50, \"cha\": 70, \"ldr\": 70}"
+  },
+  {
+   "id": "CHR-NPC-017",
+   "name": "Lyanna Brightloom",
+   "role": "Recruitable Crafter",
+   "role_category": "faction",
+   "persistence": "recurring",
+   "rarity": "rare",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "artisan",
+   "base_stats": "{\"hp\": 170, \"atk\": 30, \"def\": 45, \"spd\": 55, \"vit\": 65, \"int\": 150, \"lck\": 90, \"cha\": 80, \"ldr\": 55}"
+  },
+  {
+   "id": "CHR-NPC-018",
+   "name": "Doc Ferris Quill",
+   "role": "Recruitable Medic",
+   "role_category": "faction",
+   "persistence": "recurring",
+   "rarity": "rare",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "scholar",
+   "base_stats": "{\"hp\": 200, \"atk\": 25, \"def\": 50, \"spd\": 45, \"vit\": 120, \"int\": 160, \"lck\": 70, \"cha\": 90, \"ldr\": 60}"
+  },
+  {
+   "id": "CHR-NPC-019",
+   "name": "Rurik Goldhand",
+   "role": "Recruitable Merchant",
+   "role_category": "faction",
+   "persistence": "recurring",
+   "rarity": "epic",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "leader",
+   "base_stats": "{\"hp\": 180, \"atk\": 35, \"def\": 50, \"spd\": 50, \"vit\": 65, \"int\": 130, \"lck\": 140, \"cha\": 180, \"ldr\": 110}"
+  },
+  {
+   "id": "CHR-NPC-020",
+   "name": "Sister Aveline Dawn",
+   "role": "Recruitable Support",
+   "role_category": "faction",
+   "persistence": "recurring",
+   "rarity": "legendary",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "scholar",
+   "base_stats": "{\"hp\": 280, \"atk\": 60, \"def\": 80, \"spd\": 55, \"vit\": 130, \"int\": 170, \"lck\": 90, \"cha\": 130, \"ldr\": 80}"
+  },
+  {
+   "id": "CHR-NPC-021",
+   "name": "Gil the Gravekeeper",
+   "role": "Death/Memorial Service",
+   "role_category": "service",
+   "persistence": "recurring",
+   "rarity": "uncommon",
+   "recruitable": 0,
+   "can_die": 1,
+   "archetype": "laborer",
+   "base_stats": "{\"hp\": 200, \"atk\": 40, \"def\": 60, \"spd\": 35, \"vit\": 90, \"int\": 70, \"lck\": 60, \"cha\": 50, \"ldr\": 40}"
+  },
+  {
+   "id": "CHR-NPC-022",
+   "name": "Tamsin Greenfurrow",
+   "role": "Recruitable Producer",
+   "role_category": "faction",
+   "persistence": "recurring",
+   "rarity": "uncommon",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "laborer",
+   "base_stats": "{\"hp\": 220, \"atk\": 35, \"def\": 55, \"spd\": 40, \"vit\": 130, \"int\": 80, \"lck\": 70, \"cha\": 70, \"ldr\": 50}"
+  },
+  {
+   "id": "CHR-NPC-023",
+   "name": "Joran Beasttamer",
+   "role": "Recruitable Animal Handler",
+   "role_category": "faction",
+   "persistence": "recurring",
+   "rarity": "rare",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "rogue",
+   "base_stats": "{\"hp\": 240, \"atk\": 80, \"def\": 60, \"spd\": 90, \"vit\": 90, \"int\": 90, \"lck\": 110, \"cha\": 100, \"ldr\": 60}"
+  },
+  {
+   "id": "CHR-NPC-024",
+   "name": "Magister Orin Vexley",
+   "role": "Research Service",
+   "role_category": "service",
+   "persistence": "recurring",
+   "rarity": "epic",
+   "recruitable": 0,
+   "can_die": 0,
+   "archetype": "scholar",
+   "base_stats": "{\"hp\": 190, \"atk\": 30, \"def\": 50, \"spd\": 40, \"vit\": 60, \"int\": 220, \"lck\": 90, \"cha\": 100, \"ldr\": 90}"
+  },
+  {
+   "id": "CHR-NPC-025",
+   "name": "Commander Vale Ardent",
+   "role": "Military Service",
+   "role_category": "service",
+   "persistence": "recurring",
+   "rarity": "legendary",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "leader",
+   "base_stats": "{\"hp\": 400, \"atk\": 140, \"def\": 130, \"spd\": 60, \"vit\": 100, \"int\": 110, \"lck\": 60, \"cha\": 120, \"ldr\": 180}"
+  },
+  {
+   "id": "CHR-NPC-026",
+   "name": "Zix-9",
+   "role": "Recruitable Construct",
+   "role_category": "faction",
+   "persistence": "recurring",
+   "rarity": "epic",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "warrior",
+   "base_stats": "{\"hp\": 500, \"atk\": 110, \"def\": 160, \"spd\": 30, \"vit\": 200, \"int\": 100, \"lck\": 20, \"cha\": 20, \"ldr\": 40}"
+  },
+  {
+   "id": "CHR-NPC-027",
+   "name": "Nova Starwright",
+   "role": "Space Program Service",
+   "role_category": "service",
+   "persistence": "recurring",
+   "rarity": "legendary",
+   "recruitable": 1,
+   "can_die": 1,
+   "archetype": "leader",
+   "base_stats": "{\"hp\": 260, \"atk\": 70, \"def\": 80, \"spd\": 100, \"vit\": 90, \"int\": 200, \"lck\": 110, \"cha\": 120, \"ldr\": 130}"
+  },
+  {
+   "id": "CHR-NPC-028",
+   "name": "The Hermit of the Peak",
+   "role": "Hidden Trainer",
+   "role_category": "trainer",
+   "persistence": "seasonal",
+   "rarity": "mythic",
+   "recruitable": 0,
+   "can_die": 0,
+   "archetype": "scholar",
+   "base_stats": "{\"hp\": 300, \"atk\": 90, \"def\": 90, \"spd\": 80, \"vit\": 120, \"int\": 300, \"lck\": 200, \"cha\": 60, \"ldr\": 70}"
+  },
+  {
+   "id": "CHR-NPC-029",
+   "name": "Echo of Ashfall",
+   "role": "Lore / Memory NPC",
+   "role_category": "lore",
+   "persistence": "transient",
+   "rarity": "legendary",
+   "recruitable": 0,
+   "can_die": 0,
+   "archetype": "scholar",
+   "base_stats": "{\"hp\": 100, \"atk\": 20, \"def\": 20, \"spd\": 60, \"vit\": 40, \"int\": 180, \"lck\": 90, \"cha\": 80, \"ldr\": 40}"
+  },
+  {
+   "id": "CHR-NPC-030",
+   "name": "The Voidless One",
+   "role": "Endgame Antagonist-NPC",
+   "role_category": "lore",
+   "persistence": "milestone",
+   "rarity": "primordial",
+   "recruitable": 0,
+   "can_die": 0,
+   "archetype": "warrior",
+   "base_stats": "{\"hp\": 9999999, \"atk\": 99999, \"def\": 99999, \"spd\": 9999, \"vit\": 99999, \"int\": 99999, \"lck\": 9999, \"cha\": 9999, \"ldr\": 99999}"
+  }
+ ],
+ "materials_sample": [
+  {
+   "id": "MAT-0063",
+   "name": "Crude Granite Stone",
+   "category": "base",
+   "subtype": "stone",
+   "tier": 0,
+   "rarity": "common",
+   "reasons": "[\"building_component\", \"crafting_recipe\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-EX-0098",
+   "name": "Soul Fang",
+   "category": "exotic",
+   "subtype": "soul",
+   "tier": 8,
+   "rarity": "divine",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +41 SPD when consumed"
+  },
+  {
+   "id": "MAT-0428",
+   "name": "Common Catalyst Component",
+   "category": "base",
+   "subtype": "component",
+   "tier": 2,
+   "rarity": "rare",
+   "reasons": "[\"crafting_recipe\", \"building_component\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0291",
+   "name": "Radiant Voidgem Gem",
+   "category": "base",
+   "subtype": "gem",
+   "tier": 6,
+   "rarity": "ascendant",
+   "reasons": "[\"weapon_unlock\", \"crafting_recipe\"]",
+   "use_note": "socket/empower weapons and gear"
+  },
+  {
+   "id": "MAT-EX-0016",
+   "name": "Phoenix Flame",
+   "category": "exotic",
+   "subtype": "phoenix",
+   "tier": 6,
+   "rarity": "transcendent",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "powerful single-use exotic consumable"
+  },
+  {
+   "id": "MAT-0456",
+   "name": "Rough Roast Ration",
+   "category": "base",
+   "subtype": "food",
+   "tier": 1,
+   "rarity": "uncommon",
+   "reasons": "[\"consumable_boost\"]",
+   "use_note": "consumed for a temporary boost"
+  },
+  {
+   "id": "MAT-EX-0093",
+   "name": "Soul Mote",
+   "category": "exotic",
+   "subtype": "soul",
+   "tier": 3,
+   "rarity": "mythic",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +15 HP when consumed"
+  },
+  {
+   "id": "MAT-EX-0372",
+   "name": "Nightmare Catalyst",
+   "category": "exotic",
+   "subtype": "nightmare",
+   "tier": 2,
+   "rarity": "mythic",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "powerful single-use exotic consumable"
+  },
+  {
+   "id": "MAT-0429",
+   "name": "Common Gear Component",
+   "category": "base",
+   "subtype": "component",
+   "tier": 2,
+   "rarity": "rare",
+   "reasons": "[\"crafting_recipe\", \"building_component\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0388",
+   "name": "Primordial Worldbloom Reagent",
+   "category": "base",
+   "subtype": "reagent",
+   "tier": 9,
+   "rarity": "primordial",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "consumed for a temporary boost"
+  },
+  {
+   "id": "MAT-0470",
+   "name": "Radiant Void Ration Ration",
+   "category": "base",
+   "subtype": "food",
+   "tier": 6,
+   "rarity": "ascendant",
+   "reasons": "[\"consumable_boost\"]",
+   "use_note": "consumed for a temporary boost"
+  },
+  {
+   "id": "MAT-0124",
+   "name": "Rough Oak Plank",
+   "category": "base",
+   "subtype": "plank",
+   "tier": 1,
+   "rarity": "uncommon",
+   "reasons": "[\"building_component\", \"crafting_recipe\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-EX-0433",
+   "name": "Cosmic Mote",
+   "category": "exotic",
+   "subtype": "cosmic",
+   "tier": 3,
+   "rarity": "mythic",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +14 SPD when consumed"
+  },
+  {
+   "id": "MAT-0330",
+   "name": "Primordial Clear Crystal",
+   "category": "base",
+   "subtype": "crystal",
+   "tier": 9,
+   "rarity": "primordial",
+   "reasons": "[\"weapon_unlock\", \"crafting_recipe\"]",
+   "use_note": "socket/empower weapons and gear"
+  },
+  {
+   "id": "MAT-0462",
+   "name": "Fine Elixir Meal Ration",
+   "category": "base",
+   "subtype": "food",
+   "tier": 3,
+   "rarity": "epic",
+   "reasons": "[\"consumable_boost\"]",
+   "use_note": "consumed for a temporary boost"
+  },
+  {
+   "id": "MAT-0378",
+   "name": "Pristine Voidcap Reagent",
+   "category": "base",
+   "subtype": "reagent",
+   "tier": 5,
+   "rarity": "mythic",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "consumed for a temporary boost"
+  },
+  {
+   "id": "MAT-EX-0209",
+   "name": "Titan Ember",
+   "category": "exotic",
+   "subtype": "titan",
+   "tier": 9,
+   "rarity": "divine",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +44 INT when consumed"
+  },
+  {
+   "id": "MAT-0094",
+   "name": "Rough Oak Wood",
+   "category": "base",
+   "subtype": "wood",
+   "tier": 1,
+   "rarity": "uncommon",
+   "reasons": "[\"building_component\", \"crafting_recipe\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-0432",
+   "name": "Fine Circuit Component",
+   "category": "base",
+   "subtype": "component",
+   "tier": 3,
+   "rarity": "epic",
+   "reasons": "[\"crafting_recipe\", \"building_component\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0284",
+   "name": "Refined Ruby Gem",
+   "category": "base",
+   "subtype": "gem",
+   "tier": 4,
+   "rarity": "legendary",
+   "reasons": "[\"weapon_unlock\", \"crafting_recipe\"]",
+   "use_note": "socket/empower weapons and gear"
+  },
+  {
+   "id": "MAT-EX-0427",
+   "name": "Cosmic Bloom",
+   "category": "exotic",
+   "subtype": "cosmic",
+   "tier": 7,
+   "rarity": "transcendent",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +33 ATK when consumed"
+  },
+  {
+   "id": "MAT-0029",
+   "name": "Primordial Iron Ore",
+   "category": "base",
+   "subtype": "ore",
+   "tier": 9,
+   "rarity": "primordial",
+   "reasons": "[\"building_component\", \"crafting_recipe\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-0148",
+   "name": "Primordial Worldtree Plank",
+   "category": "base",
+   "subtype": "plank",
+   "tier": 9,
+   "rarity": "primordial",
+   "reasons": "[\"building_component\", \"crafting_recipe\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-0072",
+   "name": "Fine Obsidian Stone",
+   "category": "base",
+   "subtype": "stone",
+   "tier": 3,
+   "rarity": "epic",
+   "reasons": "[\"building_component\", \"crafting_recipe\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-0078",
+   "name": "Pristine Star Stone",
+   "category": "base",
+   "subtype": "stone",
+   "tier": 5,
+   "rarity": "mythic",
+   "reasons": "[\"building_component\", \"crafting_recipe\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-0141",
+   "name": "Radiant Voidwood Plank",
+   "category": "base",
+   "subtype": "plank",
+   "tier": 6,
+   "rarity": "ascendant",
+   "reasons": "[\"building_component\", \"crafting_recipe\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-0138",
+   "name": "Pristine Sunwood Plank",
+   "category": "base",
+   "subtype": "plank",
+   "tier": 5,
+   "rarity": "mythic",
+   "reasons": "[\"building_component\", \"crafting_recipe\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-EX-0119",
+   "name": "Time Eye",
+   "category": "exotic",
+   "subtype": "time",
+   "tier": 9,
+   "rarity": "divine",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "powerful single-use exotic consumable"
+  },
+  {
+   "id": "MAT-EX-0213",
+   "name": "Titan Mote",
+   "category": "exotic",
+   "subtype": "titan",
+   "tier": 3,
+   "rarity": "mythic",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +17 DEF when consumed"
+  },
+  {
+   "id": "MAT-0324",
+   "name": "Ascendant Primal Crystal",
+   "category": "base",
+   "subtype": "crystal",
+   "tier": 7,
+   "rarity": "transcendent",
+   "reasons": "[\"weapon_unlock\", \"crafting_recipe\"]",
+   "use_note": "socket/empower weapons and gear"
+  },
+  {
+   "id": "MAT-0247",
+   "name": "Common Wool Thread",
+   "category": "base",
+   "subtype": "thread",
+   "tier": 2,
+   "rarity": "rare",
+   "reasons": "[\"crafting_recipe\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0390",
+   "name": "Primordial Mossleaf Reagent",
+   "category": "base",
+   "subtype": "reagent",
+   "tier": 9,
+   "rarity": "primordial",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "consumed for a temporary boost"
+  },
+  {
+   "id": "MAT-0067",
+   "name": "Common Granite Stone",
+   "category": "base",
+   "subtype": "stone",
+   "tier": 2,
+   "rarity": "rare",
+   "reasons": "[\"building_component\", \"crafting_recipe\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-0238",
+   "name": "Primordial Worldsilk Cloth",
+   "category": "base",
+   "subtype": "cloth",
+   "tier": 9,
+   "rarity": "primordial",
+   "reasons": "[\"crafting_recipe\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0092",
+   "name": "Crude Oak Wood",
+   "category": "base",
+   "subtype": "wood",
+   "tier": 0,
+   "rarity": "common",
+   "reasons": "[\"building_component\", \"crafting_recipe\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-0216",
+   "name": "Rough Cotton Cloth",
+   "category": "base",
+   "subtype": "cloth",
+   "tier": 1,
+   "rarity": "uncommon",
+   "reasons": "[\"crafting_recipe\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0147",
+   "name": "Transcendent Pine Plank",
+   "category": "base",
+   "subtype": "plank",
+   "tier": 8,
+   "rarity": "divine",
+   "reasons": "[\"building_component\", \"crafting_recipe\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-0246",
+   "name": "Rough Silk Thread",
+   "category": "base",
+   "subtype": "thread",
+   "tier": 1,
+   "rarity": "uncommon",
+   "reasons": "[\"crafting_recipe\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0245",
+   "name": "Rough Wool Thread",
+   "category": "base",
+   "subtype": "thread",
+   "tier": 1,
+   "rarity": "uncommon",
+   "reasons": "[\"crafting_recipe\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0085",
+   "name": "Transcendent Void Stone",
+   "category": "base",
+   "subtype": "stone",
+   "tier": 8,
+   "rarity": "divine",
+   "reasons": "[\"building_component\", \"crafting_recipe\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-EX-0025",
+   "name": "Dragon Essence",
+   "category": "exotic",
+   "subtype": "dragon",
+   "tier": 5,
+   "rarity": "ascendant",
+   "reasons": "[\"weapon_unlock\", \"crafting_recipe\"]",
+   "use_note": "unlocks/awakens a weapon's hidden power tier"
+  },
+  {
+   "id": "MAT-EX-0472",
+   "name": "Oblivion Catalyst",
+   "category": "exotic",
+   "subtype": "oblivion",
+   "tier": 2,
+   "rarity": "mythic",
+   "reasons": "[\"quest_item\", \"crafting_recipe\"]",
+   "use_note": "required by a late-game exotic quest line"
+  },
+  {
+   "id": "MAT-0019",
+   "name": "Radiant Adamant Ore",
+   "category": "base",
+   "subtype": "ore",
+   "tier": 6,
+   "rarity": "ascendant",
+   "reasons": "[\"building_component\", \"crafting_recipe\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-EX-0291",
+   "name": "Spirit Relic",
+   "category": "exotic",
+   "subtype": "spirit",
+   "tier": 1,
+   "rarity": "legendary",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +7 DEF when consumed"
+  },
+  {
+   "id": "MAT-EX-0290",
+   "name": "Spirit Sigil",
+   "category": "exotic",
+   "subtype": "spirit",
+   "tier": 0,
+   "rarity": "legendary",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +7 SPD when consumed"
+  },
+  {
+   "id": "MAT-0308",
+   "name": "Common Charged Crystal",
+   "category": "base",
+   "subtype": "crystal",
+   "tier": 2,
+   "rarity": "rare",
+   "reasons": "[\"weapon_unlock\", \"crafting_recipe\"]",
+   "use_note": "socket/empower weapons and gear"
+  },
+  {
+   "id": "MAT-EX-0403",
+   "name": "Primal Shard",
+   "category": "exotic",
+   "subtype": "primal",
+   "tier": 3,
+   "rarity": "mythic",
+   "reasons": "[\"weapon_unlock\", \"crafting_recipe\"]",
+   "use_note": "unlocks/awakens a weapon's hidden power tier"
+  },
+  {
+   "id": "MAT-0485",
+   "name": "Rough Coal Fuel",
+   "category": "base",
+   "subtype": "fuel",
+   "tier": 1,
+   "rarity": "uncommon",
+   "reasons": "[\"building_component\", \"consumable_boost\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-0397",
+   "name": "Common Scale Part",
+   "category": "base",
+   "subtype": "monster_part",
+   "tier": 2,
+   "rarity": "rare",
+   "reasons": "[\"crafting_recipe\", \"quest_item\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-EX-0215",
+   "name": "Titan Dust",
+   "category": "exotic",
+   "subtype": "titan",
+   "tier": 5,
+   "rarity": "ascendant",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +35 CHA when consumed"
+  },
+  {
+   "id": "MAT-0350",
+   "name": "Radiant Astral Essence",
+   "category": "base",
+   "subtype": "essence",
+   "tier": 6,
+   "rarity": "ascendant",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "consumed for a temporary boost"
+  },
+  {
+   "id": "MAT-EX-0244",
+   "name": "Storm Fragment",
+   "category": "exotic",
+   "subtype": "storm",
+   "tier": 4,
+   "rarity": "ascendant",
+   "reasons": "[\"weapon_unlock\", \"crafting_recipe\"]",
+   "use_note": "unlocks/awakens a weapon's hidden power tier"
+  },
+  {
+   "id": "MAT-EX-0001",
+   "name": "Phoenix Heart",
+   "category": "exotic",
+   "subtype": "phoenix",
+   "tier": 1,
+   "rarity": "legendary",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "powerful single-use exotic consumable"
+  },
+  {
+   "id": "MAT-EX-0435",
+   "name": "Cosmic Dust",
+   "category": "exotic",
+   "subtype": "cosmic",
+   "tier": 5,
+   "rarity": "ascendant",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +28 HP when consumed"
+  },
+  {
+   "id": "MAT-0197",
+   "name": "Pristine Wyrmskin Leather",
+   "category": "base",
+   "subtype": "leather",
+   "tier": 5,
+   "rarity": "mythic",
+   "reasons": "[\"crafting_recipe\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0440",
+   "name": "Radiant Power Cell Component",
+   "category": "base",
+   "subtype": "component",
+   "tier": 6,
+   "rarity": "ascendant",
+   "reasons": "[\"crafting_recipe\", \"building_component\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0075",
+   "name": "Refined Moon Stone",
+   "category": "base",
+   "subtype": "stone",
+   "tier": 4,
+   "rarity": "legendary",
+   "reasons": "[\"building_component\", \"crafting_recipe\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-EX-0343",
+   "name": "Dream Shard",
+   "category": "exotic",
+   "subtype": "dream",
+   "tier": 3,
+   "rarity": "mythic",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "powerful single-use exotic consumable"
+  },
+  {
+   "id": "MAT-EX-0317",
+   "name": "Chaos Feather",
+   "category": "exotic",
+   "subtype": "chaos",
+   "tier": 7,
+   "rarity": "transcendent",
+   "reasons": "[\"weapon_unlock\", \"crafting_recipe\"]",
+   "use_note": "unlocks/awakens a weapon's hidden power tier"
+  },
+  {
+   "id": "MAT-0205",
+   "name": "Transcendent Titanhide Leather",
+   "category": "base",
+   "subtype": "leather",
+   "tier": 8,
+   "rarity": "divine",
+   "reasons": "[\"crafting_recipe\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0009",
+   "name": "Common Cobalt Ore",
+   "category": "base",
+   "subtype": "ore",
+   "tier": 2,
+   "rarity": "rare",
+   "reasons": "[\"building_component\", \"crafting_recipe\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-0385",
+   "name": "Transcendent Soulroot Reagent",
+   "category": "base",
+   "subtype": "reagent",
+   "tier": 8,
+   "rarity": "divine",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "consumed for a temporary boost"
+  },
+  {
+   "id": "MAT-0384",
+   "name": "Ascendant Worldbloom Reagent",
+   "category": "base",
+   "subtype": "reagent",
+   "tier": 7,
+   "rarity": "transcendent",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "consumed for a temporary boost"
+  },
+  {
+   "id": "MAT-EX-0238",
+   "name": "Frost Fang",
+   "category": "exotic",
+   "subtype": "frost",
+   "tier": 8,
+   "rarity": "divine",
+   "reasons": "[\"weapon_unlock\", \"crafting_recipe\"]",
+   "use_note": "unlocks/awakens a weapon's hidden power tier"
+  },
+  {
+   "id": "MAT-EX-0095",
+   "name": "Soul Dust",
+   "category": "exotic",
+   "subtype": "soul",
+   "tier": 5,
+   "rarity": "ascendant",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +34 VIT when consumed"
+  },
+  {
+   "id": "MAT-0297",
+   "name": "Transcendent Quartz Gem",
+   "category": "base",
+   "subtype": "gem",
+   "tier": 8,
+   "rarity": "divine",
+   "reasons": "[\"weapon_unlock\", \"crafting_recipe\"]",
+   "use_note": "socket/empower weapons and gear"
+  },
+  {
+   "id": "MAT-0186",
+   "name": "Rough Studded Leather",
+   "category": "base",
+   "subtype": "leather",
+   "tier": 1,
+   "rarity": "uncommon",
+   "reasons": "[\"crafting_recipe\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-EX-0455",
+   "name": "Genesis Dust",
+   "category": "exotic",
+   "subtype": "genesis",
+   "tier": 5,
+   "rarity": "ascendant",
+   "reasons": "[\"quest_item\", \"crafting_recipe\"]",
+   "use_note": "required by a late-game exotic quest line"
+  },
+  {
+   "id": "MAT-EX-0241",
+   "name": "Storm Heart",
+   "category": "exotic",
+   "subtype": "storm",
+   "tier": 1,
+   "rarity": "legendary",
+   "reasons": "[\"weapon_unlock\", \"crafting_recipe\"]",
+   "use_note": "unlocks/awakens a weapon's hidden power tier"
+  },
+  {
+   "id": "MAT-EX-0268",
+   "name": "Blood Tear",
+   "category": "exotic",
+   "subtype": "blood",
+   "tier": 8,
+   "rarity": "divine",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "powerful single-use exotic consumable"
+  },
+  {
+   "id": "MAT-EX-0423",
+   "name": "Cosmic Shard",
+   "category": "exotic",
+   "subtype": "cosmic",
+   "tier": 3,
+   "rarity": "mythic",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +18 VIT when consumed"
+  },
+  {
+   "id": "MAT-0208",
+   "name": "Primordial Voidhide Leather",
+   "category": "base",
+   "subtype": "leather",
+   "tier": 9,
+   "rarity": "primordial",
+   "reasons": "[\"crafting_recipe\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0480",
+   "name": "Primordial Bread Ration",
+   "category": "base",
+   "subtype": "food",
+   "tier": 9,
+   "rarity": "primordial",
+   "reasons": "[\"consumable_boost\"]",
+   "use_note": "consumed for a temporary boost"
+  },
+  {
+   "id": "MAT-EX-0461",
+   "name": "Oblivion Heart",
+   "category": "exotic",
+   "subtype": "oblivion",
+   "tier": 1,
+   "rarity": "legendary",
+   "reasons": "[\"quest_item\", \"crafting_recipe\"]",
+   "use_note": "required by a late-game exotic quest line"
+  },
+  {
+   "id": "MAT-EX-0201",
+   "name": "Titan Heart",
+   "category": "exotic",
+   "subtype": "titan",
+   "tier": 1,
+   "rarity": "legendary",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +7 SPD when consumed"
+  },
+  {
+   "id": "MAT-0270",
+   "name": "Primordial Linen Thread",
+   "category": "base",
+   "subtype": "thread",
+   "tier": 9,
+   "rarity": "primordial",
+   "reasons": "[\"crafting_recipe\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0258",
+   "name": "Pristine Starthread Thread",
+   "category": "base",
+   "subtype": "thread",
+   "tier": 5,
+   "rarity": "mythic",
+   "reasons": "[\"crafting_recipe\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0528",
+   "name": "Pristine Zenu Bar Bar",
+   "category": "base",
+   "subtype": "currency_mat",
+   "tier": 5,
+   "rarity": "mythic",
+   "reasons": "[\"currency_refine\"]",
+   "use_note": "refines into higher-tier currency"
+  },
+  {
+   "id": "MAT-EX-0449",
+   "name": "Genesis Ember",
+   "category": "exotic",
+   "subtype": "genesis",
+   "tier": 9,
+   "rarity": "divine",
+   "reasons": "[\"quest_item\", \"crafting_recipe\"]",
+   "use_note": "required by a late-game exotic quest line"
+  },
+  {
+   "id": "MAT-0232",
+   "name": "Ascendant Starcloth Cloth",
+   "category": "base",
+   "subtype": "cloth",
+   "tier": 7,
+   "rarity": "transcendent",
+   "reasons": "[\"crafting_recipe\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0241",
+   "name": "Crude Plant Thread",
+   "category": "base",
+   "subtype": "thread",
+   "tier": 0,
+   "rarity": "common",
+   "reasons": "[\"crafting_recipe\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0180",
+   "name": "Primordial Deer Hide",
+   "category": "base",
+   "subtype": "hide",
+   "tier": 9,
+   "rarity": "primordial",
+   "reasons": "[\"crafting_recipe\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-EX-0254",
+   "name": "Storm Seed",
+   "category": "exotic",
+   "subtype": "storm",
+   "tier": 4,
+   "rarity": "ascendant",
+   "reasons": "[\"weapon_unlock\", \"crafting_recipe\"]",
+   "use_note": "unlocks/awakens a weapon's hidden power tier"
+  },
+  {
+   "id": "MAT-0333",
+   "name": "Crude Vital Essence",
+   "category": "base",
+   "subtype": "essence",
+   "tier": 0,
+   "rarity": "common",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "consumed for a temporary boost"
+  },
+  {
+   "id": "MAT-EX-0086",
+   "name": "Soul Crystal",
+   "category": "exotic",
+   "subtype": "soul",
+   "tier": 6,
+   "rarity": "transcendent",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +35 DEF when consumed"
+  },
+  {
+   "id": "MAT-EX-0270",
+   "name": "Blood Sigil",
+   "category": "exotic",
+   "subtype": "blood",
+   "tier": 0,
+   "rarity": "legendary",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "powerful single-use exotic consumable"
+  },
+  {
+   "id": "MAT-EX-0361",
+   "name": "Nightmare Heart",
+   "category": "exotic",
+   "subtype": "nightmare",
+   "tier": 1,
+   "rarity": "legendary",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "powerful single-use exotic consumable"
+  },
+  {
+   "id": "MAT-EX-0278",
+   "name": "Blood Fang",
+   "category": "exotic",
+   "subtype": "blood",
+   "tier": 8,
+   "rarity": "divine",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "powerful single-use exotic consumable"
+  },
+  {
+   "id": "MAT-0018",
+   "name": "Pristine Voidsteel Ore",
+   "category": "base",
+   "subtype": "ore",
+   "tier": 5,
+   "rarity": "mythic",
+   "reasons": "[\"building_component\", \"crafting_recipe\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-EX-0190",
+   "name": "Angel Sigil",
+   "category": "exotic",
+   "subtype": "angel",
+   "tier": 0,
+   "rarity": "legendary",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "powerful single-use exotic consumable"
+  },
+  {
+   "id": "MAT-EX-0422",
+   "name": "Cosmic Core",
+   "category": "exotic",
+   "subtype": "cosmic",
+   "tier": 2,
+   "rarity": "mythic",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +11 ALL when consumed"
+  },
+  {
+   "id": "MAT-EX-0473",
+   "name": "Oblivion Mote",
+   "category": "exotic",
+   "subtype": "oblivion",
+   "tier": 3,
+   "rarity": "mythic",
+   "reasons": "[\"quest_item\", \"crafting_recipe\"]",
+   "use_note": "required by a late-game exotic quest line"
+  },
+  {
+   "id": "MAT-0353",
+   "name": "Ascendant Void Essence",
+   "category": "base",
+   "subtype": "essence",
+   "tier": 7,
+   "rarity": "transcendent",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "consumed for a temporary boost"
+  },
+  {
+   "id": "MAT-EX-0496",
+   "name": "Astral Flame",
+   "category": "exotic",
+   "subtype": "astral",
+   "tier": 6,
+   "rarity": "transcendent",
+   "reasons": "[\"weapon_unlock\", \"crafting_recipe\"]",
+   "use_note": "unlocks/awakens a weapon's hidden power tier"
+  },
+  {
+   "id": "MAT-EX-0047",
+   "name": "Void Bloom",
+   "category": "exotic",
+   "subtype": "void",
+   "tier": 7,
+   "rarity": "transcendent",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +28 LCK when consumed"
+  },
+  {
+   "id": "MAT-0049",
+   "name": "Radiant Adamant Ingot",
+   "category": "base",
+   "subtype": "ingot",
+   "tier": 6,
+   "rarity": "ascendant",
+   "reasons": "[\"crafting_recipe\", \"building_component\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0363",
+   "name": "Crude Nightcap Reagent",
+   "category": "base",
+   "subtype": "reagent",
+   "tier": 0,
+   "rarity": "common",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "consumed for a temporary boost"
+  },
+  {
+   "id": "MAT-EX-0382",
+   "name": "Eternal Core",
+   "category": "exotic",
+   "subtype": "eternal",
+   "tier": 2,
+   "rarity": "mythic",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +17 HP when consumed"
+  },
+  {
+   "id": "MAT-EX-0252",
+   "name": "Storm Catalyst",
+   "category": "exotic",
+   "subtype": "storm",
+   "tier": 2,
+   "rarity": "mythic",
+   "reasons": "[\"weapon_unlock\", \"crafting_recipe\"]",
+   "use_note": "unlocks/awakens a weapon's hidden power tier"
+  },
+  {
+   "id": "MAT-0336",
+   "name": "Rough Greater Essence",
+   "category": "base",
+   "subtype": "essence",
+   "tier": 1,
+   "rarity": "uncommon",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "consumed for a temporary boost"
+  },
+  {
+   "id": "MAT-EX-0332",
+   "name": "Order Catalyst",
+   "category": "exotic",
+   "subtype": "order",
+   "tier": 2,
+   "rarity": "mythic",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +16 LCK when consumed"
+  },
+  {
+   "id": "MAT-0534",
+   "name": "Ascendant Mythril Bar",
+   "category": "base",
+   "subtype": "currency_mat",
+   "tier": 7,
+   "rarity": "transcendent",
+   "reasons": "[\"currency_refine\"]",
+   "use_note": "refines into higher-tier currency"
+  },
+  {
+   "id": "MAT-EX-0325",
+   "name": "Order Essence",
+   "category": "exotic",
+   "subtype": "order",
+   "tier": 5,
+   "rarity": "ascendant",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +29 LDR when consumed"
+  },
+  {
+   "id": "MAT-0230",
+   "name": "Radiant Starcloth Cloth",
+   "category": "base",
+   "subtype": "cloth",
+   "tier": 6,
+   "rarity": "ascendant",
+   "reasons": "[\"crafting_recipe\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0287",
+   "name": "Pristine Diamond Gem",
+   "category": "base",
+   "subtype": "gem",
+   "tier": 5,
+   "rarity": "mythic",
+   "reasons": "[\"weapon_unlock\", \"crafting_recipe\"]",
+   "use_note": "socket/empower weapons and gear"
+  },
+  {
+   "id": "MAT-0505",
+   "name": "Transcendent Void Fuel Fuel",
+   "category": "base",
+   "subtype": "fuel",
+   "tier": 8,
+   "rarity": "divine",
+   "reasons": "[\"building_component\", \"consumable_boost\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-0032",
+   "name": "Crude Bronze Ingot",
+   "category": "base",
+   "subtype": "ingot",
+   "tier": 0,
+   "rarity": "common",
+   "reasons": "[\"crafting_recipe\", \"building_component\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0369",
+   "name": "Common Frostbloom Reagent",
+   "category": "base",
+   "subtype": "reagent",
+   "tier": 2,
+   "rarity": "rare",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "consumed for a temporary boost"
+  },
+  {
+   "id": "MAT-0087",
+   "name": "Transcendent Field Stone",
+   "category": "base",
+   "subtype": "stone",
+   "tier": 8,
+   "rarity": "divine",
+   "reasons": "[\"building_component\", \"crafting_recipe\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-EX-0043",
+   "name": "Void Shard",
+   "category": "exotic",
+   "subtype": "void",
+   "tier": 3,
+   "rarity": "mythic",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +21 ALL when consumed"
+  },
+  {
+   "id": "MAT-0200",
+   "name": "Radiant Dragonhide Leather",
+   "category": "base",
+   "subtype": "leather",
+   "tier": 6,
+   "rarity": "ascendant",
+   "reasons": "[\"crafting_recipe\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-0227",
+   "name": "Pristine Moonweave Cloth",
+   "category": "base",
+   "subtype": "cloth",
+   "tier": 5,
+   "rarity": "mythic",
+   "reasons": "[\"crafting_recipe\"]",
+   "use_note": "ingredient in crafting recipes"
+  },
+  {
+   "id": "MAT-EX-0363",
+   "name": "Nightmare Shard",
+   "category": "exotic",
+   "subtype": "nightmare",
+   "tier": 3,
+   "rarity": "mythic",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "powerful single-use exotic consumable"
+  },
+  {
+   "id": "MAT-EX-0281",
+   "name": "Spirit Heart",
+   "category": "exotic",
+   "subtype": "spirit",
+   "tier": 1,
+   "rarity": "legendary",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +12 SPD when consumed"
+  },
+  {
+   "id": "MAT-EX-0348",
+   "name": "Dream Tear",
+   "category": "exotic",
+   "subtype": "dream",
+   "tier": 8,
+   "rarity": "divine",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "powerful single-use exotic consumable"
+  },
+  {
+   "id": "MAT-EX-0046",
+   "name": "Void Crystal",
+   "category": "exotic",
+   "subtype": "void",
+   "tier": 6,
+   "rarity": "transcendent",
+   "reasons": "[\"permanent_stat_boost\", \"crafting_recipe\"]",
+   "use_note": "permanently +24 HP when consumed"
+  },
+  {
+   "id": "MAT-EX-0061",
+   "name": "Star Heart",
+   "category": "exotic",
+   "subtype": "star",
+   "tier": 1,
+   "rarity": "legendary",
+   "reasons": "[\"weapon_unlock\", \"crafting_recipe\"]",
+   "use_note": "unlocks/awakens a weapon's hidden power tier"
+  },
+  {
+   "id": "MAT-EX-0177",
+   "name": "Demon Feather",
+   "category": "exotic",
+   "subtype": "demon",
+   "tier": 7,
+   "rarity": "transcendent",
+   "reasons": "[\"weapon_unlock\", \"crafting_recipe\"]",
+   "use_note": "unlocks/awakens a weapon's hidden power tier"
+  },
+  {
+   "id": "MAT-0484",
+   "name": "Rough Charcoal Fuel",
+   "category": "base",
+   "subtype": "fuel",
+   "tier": 1,
+   "rarity": "uncommon",
+   "reasons": "[\"building_component\", \"consumable_boost\"]",
+   "use_note": "used to construct/upgrade buildings"
+  },
+  {
+   "id": "MAT-0340",
+   "name": "Fine Greater Essence",
+   "category": "base",
+   "subtype": "essence",
+   "tier": 3,
+   "rarity": "epic",
+   "reasons": "[\"consumable_boost\", \"crafting_recipe\"]",
+   "use_note": "consumed for a temporary boost"
+  }
+ ],
+ "quests_sample": [
+  {
+   "id": "Q-0001",
+   "name": "Repair the Shack",
+   "type": "main",
+   "giver": "CHR-MQ-001",
+   "phase": null,
+   "objective": "Repair the Shack \u2014 gather wood, stone, and fiber to make the shack livable.",
+   "unlock_condition": "phase_index >= 2",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0002",
+   "name": "First Harvest",
+   "type": "main",
+   "giver": "CHR-MQ-001",
+   "phase": null,
+   "objective": "First Harvest \u2014 learn to gather and survive your first nights.",
+   "unlock_condition": "phase_index >= 2",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0003",
+   "name": "Take in a Stray",
+   "type": "main",
+   "giver": "CHR-MQ-001",
+   "phase": null,
+   "objective": "Take in a Stray \u2014 recruit your very first villager.",
+   "unlock_condition": "phase_index >= 2",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0004",
+   "name": "Found the Village",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": null,
+   "objective": "Found the Village \u2014 grow your population and build the Village Hall.",
+   "unlock_condition": "phase_index >= 6",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0005",
+   "name": "Assign the Work",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": null,
+   "objective": "Assign the Work \u2014 delegate villagers to their first jobs.",
+   "unlock_condition": "phase_index >= 6",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0006",
+   "name": "Charter the Town",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": null,
+   "objective": "Charter the Town \u2014 petition for a town charter.",
+   "unlock_condition": "phase_index >= 6",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0007",
+   "name": "Forge Your First Blade",
+   "type": "main",
+   "giver": "CHR-MQ-003",
+   "phase": null,
+   "objective": "Forge Your First Blade \u2014 craft a weapon at the workshop.",
+   "unlock_condition": "phase_index >= 6",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0008",
+   "name": "Temper Yourself",
+   "type": "main",
+   "giver": "CHR-MQ-003",
+   "phase": null,
+   "objective": "Temper Yourself \u2014 clear an F-rank dungeon.",
+   "unlock_condition": "phase_index >= 6",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0009",
+   "name": "The Coalfist Standard",
+   "type": "main",
+   "giver": "CHR-MQ-003",
+   "phase": null,
+   "objective": "The Coalfist Standard \u2014 reach a combat-power threshold.",
+   "unlock_condition": "phase_index >= 6",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0010",
+   "name": "A Word of Warning",
+   "type": "main",
+   "giver": "CHR-MQ-004",
+   "phase": null,
+   "objective": "A Word of Warning \u2014 one ominous errand with an outsized reward.",
+   "unlock_condition": "phase_index >= 4",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0011",
+   "name": "The Second Meeting",
+   "type": "main",
+   "giver": "CHR-MQ-004",
+   "phase": null,
+   "objective": "The Second Meeting \u2014 appears once more, far later, then never again.",
+   "unlock_condition": "phase_index >= 4",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0012",
+   "name": "The Crown Takes Notice",
+   "type": "main",
+   "giver": "CHR-MQ-005",
+   "phase": null,
+   "objective": "The Crown Takes Notice \u2014 a summons that gates the Empire era.",
+   "unlock_condition": "phase_index >= 8",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0013",
+   "name": "The Final Decree",
+   "type": "main",
+   "giver": "CHR-MQ-005",
+   "phase": null,
+   "objective": "The Final Decree \u2014 a climactic imperial quest that gates the cosmic era.",
+   "unlock_condition": "phase_index >= 8",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0014",
+   "name": "Register",
+   "type": "main",
+   "giver": "CHR-MQ-006",
+   "phase": null,
+   "objective": "Register \u2014 join the Guild and unlock the bounty board.",
+   "unlock_condition": "phase_index >= 6",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0015",
+   "name": "Climb the Ranks",
+   "type": "main",
+   "giver": "CHR-MQ-006",
+   "phase": null,
+   "objective": "Climb the Ranks \u2014 clear higher-rank dungeons on contract.",
+   "unlock_condition": "phase_index >= 6",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0016",
+   "name": "The Guild's Gambit",
+   "type": "main",
+   "giver": "CHR-MQ-006",
+   "phase": null,
+   "objective": "The Guild's Gambit \u2014 lead an expedition into an S-rank dungeon.",
+   "unlock_condition": "phase_index >= 6",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0017",
+   "name": "The Prophecy of Ash",
+   "type": "main",
+   "giver": "CHR-MQ-007",
+   "phase": null,
+   "objective": "The Prophecy of Ash \u2014 receive the central prophecy of the game.",
+   "unlock_condition": "phase_index >= 6",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0018",
+   "name": "Reading the Void",
+   "type": "main",
+   "giver": "CHR-MQ-007",
+   "phase": null,
+   "objective": "Reading the Void \u2014 investigate the spreading cosmic corruption.",
+   "unlock_condition": "phase_index >= 6",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0019",
+   "name": "The Overlord's Choice",
+   "type": "main",
+   "giver": "CHR-MQ-007",
+   "phase": null,
+   "objective": "The Overlord's Choice \u2014 the final prophecy that frames the endgame.",
+   "unlock_condition": "phase_index >= 6",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0020",
+   "name": "Chart the Wilds",
+   "type": "main",
+   "giver": "CHR-MQ-008",
+   "phase": null,
+   "objective": "Chart the Wilds \u2014 unlock the map and idle expeditions.",
+   "unlock_condition": "phase_index >= 4",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0021",
+   "name": "Deep Delves",
+   "type": "main",
+   "giver": "CHR-MQ-008",
+   "phase": null,
+   "objective": "Deep Delves \u2014 discover higher-rank dungeons.",
+   "unlock_condition": "phase_index >= 4",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0022",
+   "name": "The Edge of the World",
+   "type": "main",
+   "giver": "CHR-MQ-008",
+   "phase": null,
+   "objective": "The Edge of the World \u2014 map the regions hiding the void.",
+   "unlock_condition": "phase_index >= 4",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0023",
+   "name": "First Brew",
+   "type": "main",
+   "giver": "CHR-MQ-009",
+   "phase": null,
+   "objective": "First Brew \u2014 craft your first potion and unlock consumables.",
+   "unlock_condition": "phase_index >= 4",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0024",
+   "name": "Volatile Knowledge",
+   "type": "main",
+   "giver": "CHR-MQ-009",
+   "phase": null,
+   "objective": "Volatile Knowledge \u2014 gather rare reagents from dungeons.",
+   "unlock_condition": "phase_index >= 4",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0025",
+   "name": "The Antidote to the Void",
+   "type": "main",
+   "giver": "CHR-MQ-009",
+   "phase": null,
+   "objective": "The Antidote to the Void \u2014 brew the cure needed for the endgame.",
+   "unlock_condition": "phase_index >= 4",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0026",
+   "name": "Open the Chronicle",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": null,
+   "objective": "Open the Chronicle \u2014 the tutorial quest that begins everything.",
+   "unlock_condition": "phase_index >= 2",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0027",
+   "name": "Each Phase's Threshold",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": null,
+   "objective": "Each Phase's Threshold \u2014 Aeon narrates and gates every era.",
+   "unlock_condition": "phase_index >= 2",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0028",
+   "name": "Write the Ending",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": null,
+   "objective": "Write the Ending \u2014 the final quest: become the Universe Overlord.",
+   "unlock_condition": "phase_index >= 2",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0029",
+   "name": "Reach Lone Wanderer",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 1,
+   "objective": "Advance to the Lone Wanderer phase: Start a new chronicle",
+   "unlock_condition": "phase_index >= 0",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0030",
+   "name": "Consolidate Lone Wanderer",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 1,
+   "objective": "Stabilize your Lone Wanderer (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 1",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0031",
+   "name": "Reach Wooden Shack",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 2,
+   "objective": "Advance to the Wooden Shack phase: Repair the Wooden Shack",
+   "unlock_condition": "phase_index >= 1",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0032",
+   "name": "Consolidate Wooden Shack",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 2,
+   "objective": "Stabilize your Wooden Shack (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 2",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0033",
+   "name": "Reach Homestead",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 3,
+   "objective": "Advance to the Homestead phase: Upgrade Shack -> House; 2 villagers",
+   "unlock_condition": "phase_index >= 2",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0034",
+   "name": "Consolidate Homestead",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 3,
+   "objective": "Stabilize your Homestead (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 3",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0035",
+   "name": "Reach Hamlet",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 4,
+   "objective": "Advance to the Hamlet phase: 5 villagers; House -> Two-Story House",
+   "unlock_condition": "phase_index >= 3",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0036",
+   "name": "Consolidate Hamlet",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 4,
+   "objective": "Stabilize your Hamlet (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 4",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0037",
+   "name": "Reach Thorpe",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 5,
+   "objective": "Advance to the Thorpe phase: 10 villagers; 50,000 Bronze",
+   "unlock_condition": "phase_index >= 4",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0038",
+   "name": "Consolidate Thorpe",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 5,
+   "objective": "Stabilize your Thorpe (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 5",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0039",
+   "name": "Reach Small Village",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 6,
+   "objective": "Advance to the Small Village phase: Apartment Complex; 20 villagers",
+   "unlock_condition": "phase_index >= 5",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0040",
+   "name": "Consolidate Small Village",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 6,
+   "objective": "Stabilize your Small Village (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 6",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0041",
+   "name": "Reach Village",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 7,
+   "objective": "Advance to the Village phase: 35 villagers; 5 Gold",
+   "unlock_condition": "phase_index >= 6",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0042",
+   "name": "Consolidate Village",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 7,
+   "objective": "Stabilize your Village (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 7",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0043",
+   "name": "Reach Large Village",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 8,
+   "objective": "Advance to the Large Village phase: 60 villagers; D-rank cleared",
+   "unlock_condition": "phase_index >= 7",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0044",
+   "name": "Consolidate Large Village",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 8,
+   "objective": "Stabilize your Large Village (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 8",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0045",
+   "name": "Reach Township",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 9,
+   "objective": "Advance to the Township phase: 100 villagers; 50 Gold",
+   "unlock_condition": "phase_index >= 8",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0046",
+   "name": "Consolidate Township",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 9,
+   "objective": "Stabilize your Township (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 9",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0047",
+   "name": "Reach Small Town",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 10,
+   "objective": "Advance to the Small Town phase: Town charter; 150 citizens",
+   "unlock_condition": "phase_index >= 9",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0048",
+   "name": "Consolidate Small Town",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 10,
+   "objective": "Stabilize your Small Town (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 10",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0049",
+   "name": "Reach Town",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 11,
+   "objective": "Advance to the Town phase: 250 citizens; 500 Gold",
+   "unlock_condition": "phase_index >= 10",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0050",
+   "name": "Consolidate Town",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 11,
+   "objective": "Stabilize your Town (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 11",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0051",
+   "name": "Reach Large Town",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 12,
+   "objective": "Advance to the Large Town phase: 400 citizens; B-rank cleared",
+   "unlock_condition": "phase_index >= 11",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0052",
+   "name": "Consolidate Large Town",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 12,
+   "objective": "Stabilize your Large Town (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 12",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0053",
+   "name": "Reach Small City",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 13,
+   "objective": "Advance to the Small City phase: City charter; 700 citizens",
+   "unlock_condition": "phase_index >= 12",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0054",
+   "name": "Consolidate Small City",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 13,
+   "objective": "Stabilize your Small City (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 13",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0055",
+   "name": "Reach City",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 14,
+   "objective": "Advance to the City phase: 1,200 citizens; 5,000 Gold",
+   "unlock_condition": "phase_index >= 13",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0056",
+   "name": "Consolidate City",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 14,
+   "objective": "Stabilize your City (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 14",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0057",
+   "name": "Reach Large City",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 15,
+   "objective": "Advance to the Large City phase: 2,500 citizens; S-rank cleared",
+   "unlock_condition": "phase_index >= 14",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0058",
+   "name": "Consolidate Large City",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 15,
+   "objective": "Stabilize your Large City (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 15",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0059",
+   "name": "Reach Metropolis",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 16,
+   "objective": "Advance to the Metropolis phase: 5,000 citizens; 1g Zenu Stone",
+   "unlock_condition": "phase_index >= 15",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0060",
+   "name": "Consolidate Metropolis",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 16,
+   "objective": "Stabilize your Metropolis (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 16",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0061",
+   "name": "Reach Megalopolis",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 17,
+   "objective": "Advance to the Megalopolis phase: 10,000 citizens",
+   "unlock_condition": "phase_index >= 16",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0062",
+   "name": "Consolidate Megalopolis",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 17,
+   "objective": "Stabilize your Megalopolis (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 17",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0063",
+   "name": "Reach City-State",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 18,
+   "objective": "Advance to the City-State phase: 20,000 citizens; standing army",
+   "unlock_condition": "phase_index >= 17",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0064",
+   "name": "Consolidate City-State",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 18,
+   "objective": "Stabilize your City-State (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 18",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0065",
+   "name": "Reach Province",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 19,
+   "objective": "Advance to the Province phase: 50,000 citizens; Ascendant-rank cleared",
+   "unlock_condition": "phase_index >= 18",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0066",
+   "name": "Consolidate Province",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 19,
+   "objective": "Stabilize your Province (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 19",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0067",
+   "name": "Reach Duchy",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 20,
+   "objective": "Advance to the Duchy phase: 100,000 citizens; 10 Zenu Coin",
+   "unlock_condition": "phase_index >= 19",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0068",
+   "name": "Consolidate Duchy",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 20,
+   "objective": "Stabilize your Duchy (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 20",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0069",
+   "name": "Reach Kingdom",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 21,
+   "objective": "Advance to the Kingdom phase: Found a Kingdom; 250,000 citizens",
+   "unlock_condition": "phase_index >= 20",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0070",
+   "name": "Consolidate Kingdom",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 21,
+   "objective": "Stabilize your Kingdom (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 21",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0071",
+   "name": "Reach Greater Kingdom",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 22,
+   "objective": "Advance to the Greater Kingdom phase: 500,000 citizens; Transcendent-rank cleared",
+   "unlock_condition": "phase_index >= 21",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0072",
+   "name": "Consolidate Greater Kingdom",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 22,
+   "objective": "Stabilize your Greater Kingdom (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 22",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0073",
+   "name": "Reach Empire",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 23,
+   "objective": "Advance to the Empire phase: 1,000,000 citizens",
+   "unlock_condition": "phase_index >= 22",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0074",
+   "name": "Consolidate Empire",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 23,
+   "objective": "Stabilize your Empire (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 23",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0075",
+   "name": "Reach Grand Empire",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 24,
+   "objective": "Advance to the Grand Empire phase: 5,000,000 citizens; 100 Zenu Coin",
+   "unlock_condition": "phase_index >= 23",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0076",
+   "name": "Consolidate Grand Empire",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 24,
+   "objective": "Stabilize your Grand Empire (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 24",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0077",
+   "name": "Reach Continental Dominion",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 25,
+   "objective": "Advance to the Continental Dominion phase: 25,000,000 citizens",
+   "unlock_condition": "phase_index >= 24",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0078",
+   "name": "Consolidate Continental Dominion",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 25,
+   "objective": "Stabilize your Continental Dominion (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 25",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0079",
+   "name": "Reach World Power",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 26,
+   "objective": "Advance to the World Power phase: 100,000,000 citizens; 1g Mythril Ore",
+   "unlock_condition": "phase_index >= 25",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0080",
+   "name": "Consolidate World Power",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 26,
+   "objective": "Stabilize your World Power (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 26",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0081",
+   "name": "Reach Planetary Hegemony",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 27,
+   "objective": "Advance to the Planetary Hegemony phase: 500,000,000 citizens",
+   "unlock_condition": "phase_index >= 26",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0082",
+   "name": "Consolidate Planetary Hegemony",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 27,
+   "objective": "Stabilize your Planetary Hegemony (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 27",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0083",
+   "name": "Reach World Government",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 28,
+   "objective": "Advance to the World Government phase: 1,000,000,000 citizens; unify the planet",
+   "unlock_condition": "phase_index >= 27",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0084",
+   "name": "Consolidate World Government",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 28,
+   "objective": "Stabilize your World Government (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 28",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0085",
+   "name": "Reach Planetary Sovereign",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 29,
+   "objective": "Advance to the Planetary Sovereign phase: Unify the planet; 1 Mythril Coin",
+   "unlock_condition": "phase_index >= 28",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0086",
+   "name": "Consolidate Planetary Sovereign",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 29,
+   "objective": "Stabilize your Planetary Sovereign (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 29",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0087",
+   "name": "Reach Orbital Civilization",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 30,
+   "objective": "Advance to the Orbital Civilization phase: Build the first space elevator",
+   "unlock_condition": "phase_index >= 29",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0088",
+   "name": "Consolidate Orbital Civilization",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 30,
+   "objective": "Stabilize your Orbital Civilization (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 30",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0089",
+   "name": "Reach Lunar Colony",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 31,
+   "objective": "Advance to the Lunar Colony phase: Colonize the moon",
+   "unlock_condition": "phase_index >= 30",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0090",
+   "name": "Consolidate Lunar Colony",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 31,
+   "objective": "Stabilize your Lunar Colony (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 31",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0091",
+   "name": "Reach Interplanetary Federation",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 32,
+   "objective": "Advance to the Interplanetary Federation phase: Colonize 2 planets",
+   "unlock_condition": "phase_index >= 31",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0092",
+   "name": "Consolidate Interplanetary Federation",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 32,
+   "objective": "Stabilize your Interplanetary Federation (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 32",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0093",
+   "name": "Reach Solar Dominion",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 33,
+   "objective": "Advance to the Solar Dominion phase: Control the home solar system",
+   "unlock_condition": "phase_index >= 32",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0094",
+   "name": "Consolidate Solar Dominion",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 33,
+   "objective": "Stabilize your Solar Dominion (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 33",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0095",
+   "name": "Reach Star Empire",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 34,
+   "objective": "Advance to the Star Empire phase: Control 5 star systems",
+   "unlock_condition": "phase_index >= 33",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0096",
+   "name": "Consolidate Star Empire",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 34,
+   "objective": "Stabilize your Star Empire (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 34",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0097",
+   "name": "Reach Stellar Hegemony",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 35,
+   "objective": "Advance to the Stellar Hegemony phase: Control 25 star systems",
+   "unlock_condition": "phase_index >= 34",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0098",
+   "name": "Consolidate Stellar Hegemony",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 35,
+   "objective": "Stabilize your Stellar Hegemony (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 35",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0099",
+   "name": "Reach Cluster Sovereign",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 36,
+   "objective": "Advance to the Cluster Sovereign phase: Control a star cluster",
+   "unlock_condition": "phase_index >= 35",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0100",
+   "name": "Consolidate Cluster Sovereign",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 36,
+   "objective": "Stabilize your Cluster Sovereign (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 36",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0101",
+   "name": "Reach Galactic Frontier",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 37,
+   "objective": "Advance to the Galactic Frontier phase: Expand into the galaxy",
+   "unlock_condition": "phase_index >= 36",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0102",
+   "name": "Consolidate Galactic Frontier",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 37,
+   "objective": "Stabilize your Galactic Frontier (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 37",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0103",
+   "name": "Reach Galactic Empire",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 38,
+   "objective": "Advance to the Galactic Empire phase: Control 10% of the galaxy",
+   "unlock_condition": "phase_index >= 37",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0104",
+   "name": "Consolidate Galactic Empire",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 38,
+   "objective": "Stabilize your Galactic Empire (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 38",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0105",
+   "name": "Reach Galactic Overlord",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 39,
+   "objective": "Advance to the Galactic Overlord phase: Control the galaxy",
+   "unlock_condition": "phase_index >= 38",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0106",
+   "name": "Consolidate Galactic Overlord",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 39,
+   "objective": "Stabilize your Galactic Overlord (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 39",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0107",
+   "name": "Reach Intergalactic Dominion",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 40,
+   "objective": "Advance to the Intergalactic Dominion phase: Control 2 galaxies",
+   "unlock_condition": "phase_index >= 39",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0108",
+   "name": "Consolidate Intergalactic Dominion",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 40,
+   "objective": "Stabilize your Intergalactic Dominion (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 40",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0109",
+   "name": "Reach Cosmic Sovereign",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 41,
+   "objective": "Advance to the Cosmic Sovereign phase: Control a galactic supercluster",
+   "unlock_condition": "phase_index >= 40",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0110",
+   "name": "Consolidate Cosmic Sovereign",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 41,
+   "objective": "Stabilize your Cosmic Sovereign (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 41",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0111",
+   "name": "Reach Universal Pillar",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 42,
+   "objective": "Advance to the Universal Pillar phase: Become a pillar of the universe",
+   "unlock_condition": "phase_index >= 41",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0112",
+   "name": "Consolidate Universal Pillar",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 42,
+   "objective": "Stabilize your Universal Pillar (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 42",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0113",
+   "name": "Reach Dimensional Overlord",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 43,
+   "objective": "Advance to the Dimensional Overlord phase: Conquer adjacent dimensions",
+   "unlock_condition": "phase_index >= 42",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0114",
+   "name": "Consolidate Dimensional Overlord",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 43,
+   "objective": "Stabilize your Dimensional Overlord (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 43",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0115",
+   "name": "Reach Multiversal Sovereign",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 44,
+   "objective": "Advance to the Multiversal Sovereign phase: Rule multiple universes",
+   "unlock_condition": "phase_index >= 43",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0116",
+   "name": "Consolidate Multiversal Sovereign",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 44,
+   "objective": "Stabilize your Multiversal Sovereign (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 44",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0117",
+   "name": "Reach Universe Overlord",
+   "type": "main",
+   "giver": "CHR-MQ-010",
+   "phase": 45,
+   "objective": "Advance to the Universe Overlord phase: Complete the final quest; rule all that is",
+   "unlock_condition": "phase_index >= 44",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0118",
+   "name": "Consolidate Universe Overlord",
+   "type": "main",
+   "giver": "CHR-MQ-002",
+   "phase": 45,
+   "objective": "Stabilize your Universe Overlord (meet survival needs and fill housing).",
+   "unlock_condition": "phase_index >= 45",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0119",
+   "name": "Build: Derelict Wooden Shack -> next tier",
+   "type": "building",
+   "giver": "CHR-MQ-002",
+   "phase": null,
+   "objective": "Gather materials and upgrade Derelict Wooden Shack (capacity 1).",
+   "unlock_condition": "building.BLD-000.tier >= 1",
+   "hidden": 0
+  },
+  {
+   "id": "Q-0120",
+   "name": "Build: Wooden Shack (Repaired) -> next tier",
+   "type": "building",
+   "giver": "CHR-MQ-002",
+   "phase": null,
+   "objective": "Gather materials and upgrade Wooden Shack (Repaired) (capacity 2).",
+   "unlock_condition": "building.BLD-001.tier >= 1",
+   "hidden": 0
+  }
+ ],
+ "achievements_sample": [
+  {
+   "id": "ACH-0001",
+   "name": "Lone Wanderer Achieved",
+   "description": "Reach the Lone Wanderer phase.",
+   "category": "progression",
+   "condition": "phase_index >= 1",
+   "points": 11,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0002",
+   "name": "Wooden Shack Achieved",
+   "description": "Reach the Wooden Shack phase.",
+   "category": "progression",
+   "condition": "phase_index >= 2",
+   "points": 12,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0003",
+   "name": "Homestead Achieved",
+   "description": "Reach the Homestead phase.",
+   "category": "progression",
+   "condition": "phase_index >= 3",
+   "points": 13,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0004",
+   "name": "Hamlet Achieved",
+   "description": "Reach the Hamlet phase.",
+   "category": "progression",
+   "condition": "phase_index >= 4",
+   "points": 14,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0005",
+   "name": "Thorpe Achieved",
+   "description": "Reach the Thorpe phase.",
+   "category": "progression",
+   "condition": "phase_index >= 5",
+   "points": 15,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0006",
+   "name": "Small Village Achieved",
+   "description": "Reach the Small Village phase.",
+   "category": "progression",
+   "condition": "phase_index >= 6",
+   "points": 16,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0007",
+   "name": "Village Achieved",
+   "description": "Reach the Village phase.",
+   "category": "progression",
+   "condition": "phase_index >= 7",
+   "points": 17,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0008",
+   "name": "Large Village Achieved",
+   "description": "Reach the Large Village phase.",
+   "category": "progression",
+   "condition": "phase_index >= 8",
+   "points": 18,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0009",
+   "name": "Township Achieved",
+   "description": "Reach the Township phase.",
+   "category": "progression",
+   "condition": "phase_index >= 9",
+   "points": 19,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0010",
+   "name": "Small Town Achieved",
+   "description": "Reach the Small Town phase.",
+   "category": "progression",
+   "condition": "phase_index >= 10",
+   "points": 20,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0011",
+   "name": "Town Achieved",
+   "description": "Reach the Town phase.",
+   "category": "progression",
+   "condition": "phase_index >= 11",
+   "points": 21,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0012",
+   "name": "Large Town Achieved",
+   "description": "Reach the Large Town phase.",
+   "category": "progression",
+   "condition": "phase_index >= 12",
+   "points": 22,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0013",
+   "name": "Small City Achieved",
+   "description": "Reach the Small City phase.",
+   "category": "progression",
+   "condition": "phase_index >= 13",
+   "points": 23,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0014",
+   "name": "City Achieved",
+   "description": "Reach the City phase.",
+   "category": "progression",
+   "condition": "phase_index >= 14",
+   "points": 24,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0015",
+   "name": "Large City Achieved",
+   "description": "Reach the Large City phase.",
+   "category": "progression",
+   "condition": "phase_index >= 15",
+   "points": 25,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0016",
+   "name": "Metropolis Achieved",
+   "description": "Reach the Metropolis phase.",
+   "category": "progression",
+   "condition": "phase_index >= 16",
+   "points": 26,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0017",
+   "name": "Megalopolis Achieved",
+   "description": "Reach the Megalopolis phase.",
+   "category": "progression",
+   "condition": "phase_index >= 17",
+   "points": 27,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0018",
+   "name": "City-State Achieved",
+   "description": "Reach the City-State phase.",
+   "category": "progression",
+   "condition": "phase_index >= 18",
+   "points": 28,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0019",
+   "name": "Province Achieved",
+   "description": "Reach the Province phase.",
+   "category": "progression",
+   "condition": "phase_index >= 19",
+   "points": 29,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0020",
+   "name": "Duchy Achieved",
+   "description": "Reach the Duchy phase.",
+   "category": "progression",
+   "condition": "phase_index >= 20",
+   "points": 30,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0021",
+   "name": "Kingdom Achieved",
+   "description": "Reach the Kingdom phase.",
+   "category": "progression",
+   "condition": "phase_index >= 21",
+   "points": 31,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0022",
+   "name": "Greater Kingdom Achieved",
+   "description": "Reach the Greater Kingdom phase.",
+   "category": "progression",
+   "condition": "phase_index >= 22",
+   "points": 32,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0023",
+   "name": "Empire Achieved",
+   "description": "Reach the Empire phase.",
+   "category": "progression",
+   "condition": "phase_index >= 23",
+   "points": 33,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0024",
+   "name": "Grand Empire Achieved",
+   "description": "Reach the Grand Empire phase.",
+   "category": "progression",
+   "condition": "phase_index >= 24",
+   "points": 34,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0025",
+   "name": "Continental Dominion Achieved",
+   "description": "Reach the Continental Dominion phase.",
+   "category": "progression",
+   "condition": "phase_index >= 25",
+   "points": 35,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0026",
+   "name": "World Power Achieved",
+   "description": "Reach the World Power phase.",
+   "category": "progression",
+   "condition": "phase_index >= 26",
+   "points": 36,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0027",
+   "name": "Planetary Hegemony Achieved",
+   "description": "Reach the Planetary Hegemony phase.",
+   "category": "progression",
+   "condition": "phase_index >= 27",
+   "points": 37,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0028",
+   "name": "World Government Achieved",
+   "description": "Reach the World Government phase.",
+   "category": "progression",
+   "condition": "phase_index >= 28",
+   "points": 38,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0029",
+   "name": "Planetary Sovereign Achieved",
+   "description": "Reach the Planetary Sovereign phase.",
+   "category": "progression",
+   "condition": "phase_index >= 29",
+   "points": 39,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0030",
+   "name": "Orbital Civilization Achieved",
+   "description": "Reach the Orbital Civilization phase.",
+   "category": "progression",
+   "condition": "phase_index >= 30",
+   "points": 40,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0031",
+   "name": "Lunar Colony Achieved",
+   "description": "Reach the Lunar Colony phase.",
+   "category": "progression",
+   "condition": "phase_index >= 31",
+   "points": 41,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0032",
+   "name": "Interplanetary Federation Achieved",
+   "description": "Reach the Interplanetary Federation phase.",
+   "category": "progression",
+   "condition": "phase_index >= 32",
+   "points": 42,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0033",
+   "name": "Solar Dominion Achieved",
+   "description": "Reach the Solar Dominion phase.",
+   "category": "progression",
+   "condition": "phase_index >= 33",
+   "points": 43,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0034",
+   "name": "Star Empire Achieved",
+   "description": "Reach the Star Empire phase.",
+   "category": "progression",
+   "condition": "phase_index >= 34",
+   "points": 44,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0035",
+   "name": "Stellar Hegemony Achieved",
+   "description": "Reach the Stellar Hegemony phase.",
+   "category": "progression",
+   "condition": "phase_index >= 35",
+   "points": 45,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0036",
+   "name": "Cluster Sovereign Achieved",
+   "description": "Reach the Cluster Sovereign phase.",
+   "category": "progression",
+   "condition": "phase_index >= 36",
+   "points": 46,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0037",
+   "name": "Galactic Frontier Achieved",
+   "description": "Reach the Galactic Frontier phase.",
+   "category": "progression",
+   "condition": "phase_index >= 37",
+   "points": 47,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0038",
+   "name": "Galactic Empire Achieved",
+   "description": "Reach the Galactic Empire phase.",
+   "category": "progression",
+   "condition": "phase_index >= 38",
+   "points": 48,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0039",
+   "name": "Galactic Overlord Achieved",
+   "description": "Reach the Galactic Overlord phase.",
+   "category": "progression",
+   "condition": "phase_index >= 39",
+   "points": 49,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0040",
+   "name": "Intergalactic Dominion Achieved",
+   "description": "Reach the Intergalactic Dominion phase.",
+   "category": "progression",
+   "condition": "phase_index >= 40",
+   "points": 50,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0041",
+   "name": "Cosmic Sovereign Achieved",
+   "description": "Reach the Cosmic Sovereign phase.",
+   "category": "progression",
+   "condition": "phase_index >= 41",
+   "points": 51,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0042",
+   "name": "Universal Pillar Achieved",
+   "description": "Reach the Universal Pillar phase.",
+   "category": "progression",
+   "condition": "phase_index >= 42",
+   "points": 52,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0043",
+   "name": "Dimensional Overlord Achieved",
+   "description": "Reach the Dimensional Overlord phase.",
+   "category": "progression",
+   "condition": "phase_index >= 43",
+   "points": 53,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0044",
+   "name": "Multiversal Sovereign Achieved",
+   "description": "Reach the Multiversal Sovereign phase.",
+   "category": "progression",
+   "condition": "phase_index >= 44",
+   "points": 54,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0045",
+   "name": "Universe Overlord Achieved",
+   "description": "Reach the Universe Overlord phase.",
+   "category": "progression",
+   "condition": "phase_index >= 45",
+   "points": 55,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0046",
+   "name": "Population 2",
+   "description": "Reach a total population of 2.",
+   "category": "population",
+   "condition": "population >= 2",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0047",
+   "name": "Population 5",
+   "description": "Reach a total population of 5.",
+   "category": "population",
+   "condition": "population >= 5",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0048",
+   "name": "Population 10",
+   "description": "Reach a total population of 10.",
+   "category": "population",
+   "condition": "population >= 10",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0049",
+   "name": "Population 25",
+   "description": "Reach a total population of 25.",
+   "category": "population",
+   "condition": "population >= 25",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0050",
+   "name": "Population 50",
+   "description": "Reach a total population of 50.",
+   "category": "population",
+   "condition": "population >= 50",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0051",
+   "name": "Population 100",
+   "description": "Reach a total population of 100.",
+   "category": "population",
+   "condition": "population >= 100",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0052",
+   "name": "Population 250",
+   "description": "Reach a total population of 250.",
+   "category": "population",
+   "condition": "population >= 250",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0053",
+   "name": "Population 500",
+   "description": "Reach a total population of 500.",
+   "category": "population",
+   "condition": "population >= 500",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0054",
+   "name": "Population 1K",
+   "description": "Reach a total population of 1K.",
+   "category": "population",
+   "condition": "population >= 1000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0055",
+   "name": "Population 5K",
+   "description": "Reach a total population of 5K.",
+   "category": "population",
+   "condition": "population >= 5000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0056",
+   "name": "Population 10K",
+   "description": "Reach a total population of 10K.",
+   "category": "population",
+   "condition": "population >= 10000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0057",
+   "name": "Population 100K",
+   "description": "Reach a total population of 100K.",
+   "category": "population",
+   "condition": "population >= 100000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0058",
+   "name": "Population 1M",
+   "description": "Reach a total population of 1M.",
+   "category": "population",
+   "condition": "population >= 1000000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0059",
+   "name": "Population 100M",
+   "description": "Reach a total population of 100M.",
+   "category": "population",
+   "condition": "population >= 100000000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0060",
+   "name": "Population 1B",
+   "description": "Reach a total population of 1B.",
+   "category": "population",
+   "condition": "population >= 1000000000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0061",
+   "name": "Population 1T",
+   "description": "Reach a total population of 1T.",
+   "category": "population",
+   "condition": "population >= 1000000000000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0062",
+   "name": "Hoard 100 Bronze",
+   "description": "Accumulate 100 bronze.",
+   "category": "currency",
+   "condition": "currency.bronze >= 100",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0063",
+   "name": "Hoard 10K Bronze",
+   "description": "Accumulate 10K bronze.",
+   "category": "currency",
+   "condition": "currency.bronze >= 10000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0064",
+   "name": "Hoard 1M Bronze",
+   "description": "Accumulate 1M bronze.",
+   "category": "currency",
+   "condition": "currency.bronze >= 1000000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0065",
+   "name": "Hoard 100M Bronze",
+   "description": "Accumulate 100M bronze.",
+   "category": "currency",
+   "condition": "currency.bronze >= 100000000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0066",
+   "name": "Hoard 100 Silver",
+   "description": "Accumulate 100 silver.",
+   "category": "currency",
+   "condition": "currency.silver >= 100",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0067",
+   "name": "Hoard 10K Silver",
+   "description": "Accumulate 10K silver.",
+   "category": "currency",
+   "condition": "currency.silver >= 10000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0068",
+   "name": "Hoard 1M Silver",
+   "description": "Accumulate 1M silver.",
+   "category": "currency",
+   "condition": "currency.silver >= 1000000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0069",
+   "name": "Hoard 100M Silver",
+   "description": "Accumulate 100M silver.",
+   "category": "currency",
+   "condition": "currency.silver >= 100000000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0070",
+   "name": "Hoard 100 Gold",
+   "description": "Accumulate 100 gold.",
+   "category": "currency",
+   "condition": "currency.gold >= 100",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0071",
+   "name": "Hoard 10K Gold",
+   "description": "Accumulate 10K gold.",
+   "category": "currency",
+   "condition": "currency.gold >= 10000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0072",
+   "name": "Hoard 1M Gold",
+   "description": "Accumulate 1M gold.",
+   "category": "currency",
+   "condition": "currency.gold >= 1000000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0073",
+   "name": "Hoard 100M Gold",
+   "description": "Accumulate 100M gold.",
+   "category": "currency",
+   "condition": "currency.gold >= 100000000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0074",
+   "name": "Hoard 100 Zenu Coin",
+   "description": "Accumulate 100 zenu_coin.",
+   "category": "currency",
+   "condition": "currency.zenu_coin >= 100",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0075",
+   "name": "Hoard 10K Zenu Coin",
+   "description": "Accumulate 10K zenu_coin.",
+   "category": "currency",
+   "condition": "currency.zenu_coin >= 10000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0076",
+   "name": "Hoard 1M Zenu Coin",
+   "description": "Accumulate 1M zenu_coin.",
+   "category": "currency",
+   "condition": "currency.zenu_coin >= 1000000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0077",
+   "name": "Hoard 100M Zenu Coin",
+   "description": "Accumulate 100M zenu_coin.",
+   "category": "currency",
+   "condition": "currency.zenu_coin >= 100000000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0078",
+   "name": "Hoard 100 Mythril Coin",
+   "description": "Accumulate 100 mythril_coin.",
+   "category": "currency",
+   "condition": "currency.mythril_coin >= 100",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0079",
+   "name": "Hoard 10K Mythril Coin",
+   "description": "Accumulate 10K mythril_coin.",
+   "category": "currency",
+   "condition": "currency.mythril_coin >= 10000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0080",
+   "name": "Hoard 1M Mythril Coin",
+   "description": "Accumulate 1M mythril_coin.",
+   "category": "currency",
+   "condition": "currency.mythril_coin >= 1000000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0081",
+   "name": "Hoard 100M Mythril Coin",
+   "description": "Accumulate 100M mythril_coin.",
+   "category": "currency",
+   "condition": "currency.mythril_coin >= 100000000",
+   "points": 10,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0082",
+   "name": "Built: Derelict Wooden Shack",
+   "description": "Construct the Derelict Wooden Shack.",
+   "category": "building",
+   "condition": "building.BLD-000.tier >= 1",
+   "points": 15,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0083",
+   "name": "Built: Wooden Shack (Repaired)",
+   "description": "Construct the Wooden Shack (Repaired).",
+   "category": "building",
+   "condition": "building.BLD-001.tier >= 1",
+   "points": 15,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0084",
+   "name": "Built: House",
+   "description": "Construct the House.",
+   "category": "building",
+   "condition": "building.BLD-002.tier >= 1",
+   "points": 15,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0085",
+   "name": "Built: Two-Story House",
+   "description": "Construct the Two-Story House.",
+   "category": "building",
+   "condition": "building.BLD-003.tier >= 1",
+   "points": 15,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0086",
+   "name": "Built: Apartment Complex",
+   "description": "Construct the Apartment Complex.",
+   "category": "building",
+   "condition": "building.BLD-004.tier >= 1",
+   "points": 15,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0087",
+   "name": "Built: Village Housing Block",
+   "description": "Construct the Village Housing Block.",
+   "category": "building",
+   "condition": "building.BLD-005.tier >= 1",
+   "points": 15,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0088",
+   "name": "Built: Town Housing Quarter",
+   "description": "Construct the Town Housing Quarter.",
+   "category": "building",
+   "condition": "building.BLD-006.tier >= 1",
+   "points": 15,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0089",
+   "name": "Built: City Residential District",
+   "description": "Construct the City Residential District.",
+   "category": "building",
+   "condition": "building.BLD-007.tier >= 1",
+   "points": 15,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0090",
+   "name": "Built: Metropolitan Towers",
+   "description": "Construct the Metropolitan Towers.",
+   "category": "building",
+   "condition": "building.BLD-008.tier >= 1",
+   "points": 15,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0091",
+   "name": "Built: Arcology",
+   "description": "Construct the Arcology.",
+   "category": "building",
+   "condition": "building.BLD-009.tier >= 1",
+   "points": 15,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0092",
+   "name": "Built: Orbital Habitat Ring",
+   "description": "Construct the Orbital Habitat Ring.",
+   "category": "building",
+   "condition": "building.BLD-010.tier >= 1",
+   "points": 15,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0093",
+   "name": "Built: Stellar Megastructure",
+   "description": "Construct the Stellar Megastructure.",
+   "category": "building",
+   "condition": "building.BLD-011.tier >= 1",
+   "points": 15,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0094",
+   "name": "F-Rank Conqueror",
+   "description": "Clear an F-Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 0",
+   "points": 20,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0095",
+   "name": "Slayer of Goblin Chief",
+   "description": "Defeat the Goblin Chief.",
+   "category": "boss",
+   "condition": "killed_boss.F",
+   "points": 25,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0096",
+   "name": "World Bane: Forest Troll",
+   "description": "Defeat the world boss Forest Troll.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.F",
+   "points": 30,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0097",
+   "name": "Flawless: F-Rank",
+   "description": "Clear an F-Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.F",
+   "points": 30,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0098",
+   "name": "Speedrun: F-Rank",
+   "description": "Clear an F-Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.F",
+   "points": 30,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0099",
+   "name": "E-Rank Conqueror",
+   "description": "Clear an E-Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 1",
+   "points": 20,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0100",
+   "name": "Slayer of Dire Wolf Alpha",
+   "description": "Defeat the Dire Wolf Alpha.",
+   "category": "boss",
+   "condition": "killed_boss.E",
+   "points": 25,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0101",
+   "name": "World Bane: Mire Hydra (lesser)",
+   "description": "Defeat the world boss Mire Hydra (lesser).",
+   "category": "world_boss",
+   "condition": "killed_world_boss.E",
+   "points": 30,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0102",
+   "name": "Flawless: E-Rank",
+   "description": "Clear an E-Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.E",
+   "points": 30,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0103",
+   "name": "Speedrun: E-Rank",
+   "description": "Clear an E-Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.E",
+   "points": 30,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0104",
+   "name": "D-Rank Conqueror",
+   "description": "Clear an D-Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 2",
+   "points": 20,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0105",
+   "name": "Slayer of Skeleton Warlord",
+   "description": "Defeat the Skeleton Warlord.",
+   "category": "boss",
+   "condition": "killed_boss.D",
+   "points": 25,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0106",
+   "name": "World Bane: Stone Colossus",
+   "description": "Defeat the world boss Stone Colossus.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.D",
+   "points": 30,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0107",
+   "name": "Flawless: D-Rank",
+   "description": "Clear an D-Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.D",
+   "points": 30,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0108",
+   "name": "Speedrun: D-Rank",
+   "description": "Clear an D-Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.D",
+   "points": 30,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0109",
+   "name": "C-Rank Conqueror",
+   "description": "Clear an C-Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 3",
+   "points": 20,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0110",
+   "name": "Slayer of Orc Warchief",
+   "description": "Defeat the Orc Warchief.",
+   "category": "boss",
+   "condition": "killed_boss.C",
+   "points": 25,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0111",
+   "name": "World Bane: Plains Behemoth",
+   "description": "Defeat the world boss Plains Behemoth.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.C",
+   "points": 30,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0112",
+   "name": "Flawless: C-Rank",
+   "description": "Clear an C-Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.C",
+   "points": 30,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0113",
+   "name": "Speedrun: C-Rank",
+   "description": "Clear an C-Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.C",
+   "points": 30,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0114",
+   "name": "B-Rank Conqueror",
+   "description": "Clear an B-Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 4",
+   "points": 20,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0115",
+   "name": "Slayer of Vampire Lord",
+   "description": "Defeat the Vampire Lord.",
+   "category": "boss",
+   "condition": "killed_boss.B",
+   "points": 25,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0116",
+   "name": "World Bane: Sky Wyvern",
+   "description": "Defeat the world boss Sky Wyvern.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.B",
+   "points": 30,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0117",
+   "name": "Flawless: B-Rank",
+   "description": "Clear an B-Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.B",
+   "points": 30,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0118",
+   "name": "Speedrun: B-Rank",
+   "description": "Clear an B-Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.B",
+   "points": 30,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0119",
+   "name": "A-Rank Conqueror",
+   "description": "Clear an A-Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 5",
+   "points": 20,
+   "hidden": 0
+  },
+  {
+   "id": "ACH-0120",
+   "name": "Slayer of Lich",
+   "description": "Defeat the Lich.",
+   "category": "boss",
+   "condition": "killed_boss.A",
+   "points": 25,
+   "hidden": 0
+  }
+ ],
+ "counts": {
+  "characters": 40,
+  "materials": 1040,
+  "quests": 563,
+  "achievements": 516,
+  "phases": 45,
+  "dungeons": 18,
+  "enemies": 55,
+  "animals": 24
+ },
+ "ui_framework": {
+  "panels": [
+   {
+    "id": "header",
+    "title": "Player / Phase / Currencies",
+    "default": "open",
+    "always_visible": true
+   },
+   {
+    "id": "main_click",
+    "title": "Gather / Act (main click)",
+    "default": "open",
+    "always_visible": true
+   },
+   {
+    "id": "base",
+    "title": "Base & Buildings",
+    "default": "open",
+    "unlock": "phase_index >= 1"
+   },
+   {
+    "id": "villagers",
+    "title": "Villagers & Jobs",
+    "default": "closed",
+    "unlock": "phase_index >= 3"
+   },
+   {
+    "id": "settlements",
+    "title": "Settlements & Empire",
+    "default": "closed",
+    "unlock": "phase_index >= 6"
+   },
+   {
+    "id": "inventory",
+    "title": "Inventory",
+    "default": "closed",
+    "unlock": "phase_index >= 2"
+   },
+   {
+    "id": "equipment",
+    "title": "Equipment (additive)",
+    "default": "closed",
+    "unlock": "phase_index >= 2"
+   },
+   {
+    "id": "crafting",
+    "title": "Crafting",
+    "default": "closed",
+    "unlock": "building.BLD-001.tier >= 1"
+   },
+   {
+    "id": "shops",
+    "title": "Shops & Vendors",
+    "default": "closed",
+    "unlock": "phase_index >= 5"
+   },
+   {
+    "id": "dungeons",
+    "title": "Dungeons",
+    "default": "closed",
+    "unlock": "phase_index >= 4"
+   },
+   {
+    "id": "quests",
+    "title": "Quests",
+    "default": "open",
+    "unlock": "phase_index >= 1"
+   },
+   {
+    "id": "achievements",
+    "title": "Achievements",
+    "default": "closed",
+    "unlock": "phase_index >= 2"
+   },
+   {
+    "id": "survival",
+    "title": "Survival Needs",
+    "default": "closed",
+    "unlock": "phase_index >= 3"
+   },
+   {
+    "id": "research",
+    "title": "Research / Tech",
+    "default": "closed",
+    "unlock": "building.BLD-007.tier >= 1"
+   },
+   {
+    "id": "rebirth",
+    "title": "Rebirth / Ascension",
+    "default": "closed",
+    "unlock": "phase_index >= 7 OR rebirth_count >= 1"
+   },
+   {
+    "id": "codex",
+    "title": "Codex / Lore",
+    "default": "closed",
+    "unlock": "phase_index >= 1"
+   }
+  ],
+  "buttons": [
+   {
+    "id": "btn_repair_shack",
+    "label": "Repair Wooden Shack",
+    "unlock": "phase_index >= 1",
+    "action": "start_quest:Q-MAIN-0001"
+   },
+   {
+    "id": "btn_upgrade_house",
+    "label": "Upgrade to House",
+    "unlock": "building.BLD-001.tier >= 1 AND population >= 2",
+    "action": "upgrade_building:BLD-002"
+   },
+   {
+    "id": "btn_found_settlement",
+    "label": "Found New Settlement",
+    "unlock": "building.BLD-004.tier >= 1",
+    "action": "found_settlement"
+   },
+   {
+    "id": "btn_enter_dungeon",
+    "label": "Enter Dungeon",
+    "unlock": "phase_index >= 4",
+    "action": "open_panel:dungeons"
+   },
+   {
+    "id": "btn_rebirth",
+    "label": "Rebirth",
+    "unlock": "phase_index >= 7",
+    "action": "open_panel:rebirth",
+    "confirm": true
+   }
+  ],
+  "visibility_states": [
+   {
+    "id": "hidden",
+    "meaning": "Not rendered at all (used for secrets/hidden content)."
+   },
+   {
+    "id": "locked",
+    "meaning": "Rendered greyed-out with requirement tooltip."
+   },
+   {
+    "id": "unlocked",
+    "meaning": "Fully interactive."
+   },
+   {
+    "id": "new",
+    "meaning": "Just unlocked; shows a highlight badge until clicked."
+   }
+  ],
+  "condition_grammar": {
+   "description": "Conditions are simple boolean expressions evaluated against game state.",
+   "operators": [
+    "==",
+    "!=",
+    ">=",
+    "<=",
+    ">",
+    "<",
+    "AND",
+    "OR",
+    "NOT"
+   ],
+   "variables": [
+    "phase_index",
+    "player_level",
+    "population",
+    "currency.<id>",
+    "building.<id>.tier",
+    "dungeon_rank_cleared",
+    "has_item.<id>",
+    "quest_done.<id>",
+    "achievement.<id>",
+    "rebirth_count",
+    "stat.<id>"
+   ],
+   "examples": [
+    "phase_index >= 3",
+    "building.BLD-002.tier >= 1 AND population >= 5",
+    "dungeon_rank_cleared >= 7",
+    "quest_done.Q-0001 AND has_item.MAT-EX-0042"
+   ]
+  },
+  "inventory_ui": {
+   "layout": "Collapsible category groups (Weapons, Armor, Potions, Materials, Exotic, Quest, Currency).",
+   "per_group": "Each group is an expand/retract dropdown; collapsed by default once it has many items.",
+   "item_row": "icon-less text row: name (rarity-colored), qty, additive stat summary, actions.",
+   "additive_note": "Stat summary panel at top shows total stats granted by everything held."
+  }
+ }
+}

@@ -1,0 +1,64 @@
+collection: enemies
+description: >
+  Enemy roster for Your Chronicle: 24 regular enemy TYPES (each scales across the
+  dungeon rank ladder), plus the named dungeon bosses and open-world bosses. Stats
+  shown are TYPE base values at rank index 0; the dungeon scaling model multiplies
+  them per rank (see systems/dungeons.yaml).
+enemy_types:
+  - {id: ENM-001, name: Goblin,          family: humanoid,    base_hp: 30,   base_atk: 6,   base_xp: 10,  rank_band: "F-C",   traits: [swarm], drop_theme: "crude gear, bronze"}
+  - {id: ENM-002, name: Kobold,          family: humanoid,    base_hp: 25,   base_atk: 7,   base_xp: 11,  rank_band: "F-C",   traits: [trap-savvy], drop_theme: "tools, ore"}
+  - {id: ENM-003, name: Dire Wolf,       family: beast,       base_hp: 45,   base_atk: 10,  base_xp: 14,  rank_band: "F-D",   traits: [pack, fast], drop_theme: "hide, fang"}
+  - {id: ENM-004, name: Giant Spider,    family: beast,       base_hp: 40,   base_atk: 9,   base_xp: 13,  rank_band: "F-D",   traits: [poison, web], drop_theme: "silk, venom"}
+  - {id: ENM-005, name: Skeleton,        family: undead,      base_hp: 35,   base_atk: 8,   base_xp: 12,  rank_band: "E-B",   traits: [reassemble], drop_theme: "bone, rusted gear"}
+  - {id: ENM-006, name: Zombie,          family: undead,      base_hp: 60,   base_atk: 7,   base_xp: 13,  rank_band: "E-B",   traits: [tough, disease], drop_theme: "rot essence"}
+  - {id: ENM-007, name: Slime,           family: aberration,  base_hp: 50,   base_atk: 5,   base_xp: 9,   rank_band: "F-C",   traits: [split, acid], drop_theme: "gel, reagents"}
+  - {id: ENM-008, name: Orc,             family: humanoid,    base_hp: 80,   base_atk: 14,  base_xp: 18,  rank_band: "D-A",   traits: [berserk], drop_theme: "iron gear, hide"}
+  - {id: ENM-009, name: Bandit,          family: humanoid,    base_hp: 55,   base_atk: 12,  base_xp: 16,  rank_band: "E-B",   traits: [steal-coin], drop_theme: "silver, gear"}
+  - {id: ENM-010, name: Harpy,           family: beast,       base_hp: 48,   base_atk: 13,  base_xp: 17,  rank_band: "D-A",   traits: [flying], drop_theme: "feather, talon"}
+  - {id: ENM-011, name: Golem,           family: construct,   base_hp: 200,  base_atk: 16,  base_xp: 24,  rank_band: "C-S",   traits: [armored, slow], drop_theme: "core, stone"}
+  - {id: ENM-012, name: Ghost,           family: undead,      base_hp: 70,   base_atk: 15,  base_xp: 20,  rank_band: "C-S",   traits: [phasing, fear], drop_theme: "ectoplasm"}
+  - {id: ENM-013, name: Troll,           family: giant,       base_hp: 260,  base_atk: 22,  base_xp: 28,  rank_band: "C-S",   traits: [regenerate], drop_theme: "troll blood, hide"}
+  - {id: ENM-014, name: Ogre,            family: giant,       base_hp: 240,  base_atk: 26,  base_xp: 30,  rank_band: "C-S",   traits: [smash], drop_theme: "bone club mats"}
+  - {id: ENM-015, name: Minotaur,        family: beast,       base_hp: 180,  base_atk: 24,  base_xp: 29,  rank_band: "B-SS",  traits: [charge], drop_theme: "horn, hide"}
+  - {id: ENM-016, name: Wyvern,          family: dragonkin,   base_hp: 300,  base_atk: 30,  base_xp: 36,  rank_band: "B-SS",  traits: [flying, breath], drop_theme: "scale, wing"}
+  - {id: ENM-017, name: Vampire,         family: undead,      base_hp: 220,  base_atk: 28,  base_xp: 34,  rank_band: "B-SS",  traits: [lifesteal, charm], drop_theme: "blood gem"}
+  - {id: ENM-018, name: Demon,           family: demon,       base_hp: 350,  base_atk: 34,  base_xp: 42,  rank_band: "A-SSS", traits: [fire, summon], drop_theme: "demon core, sulfur"}
+  - {id: ENM-019, name: Elemental,       family: elemental,   base_hp: 280,  base_atk: 27,  base_xp: 38,  rank_band: "A-SSS", traits: [element-shift], drop_theme: "essence"}
+  - {id: ENM-020, name: Dragon,          family: dragonkin,   base_hp: 800,  base_atk: 50,  base_xp: 70,  rank_band: "S-ASC", traits: [breath, flight, hoard], drop_theme: "dragon scale, heart"}
+  - {id: ENM-021, name: Cultist,         family: humanoid,    base_hp: 160,  base_atk: 26,  base_xp: 33,  rank_band: "A-SSS", traits: [ritual, corrupt], drop_theme: "forbidden tome"}
+  - {id: ENM-022, name: Void Spawn,      family: void,        base_hp: 600,  base_atk: 55,  base_xp: 80,  rank_band: "ASC-IMM", traits: [unwrite, phasing], drop_theme: "void essence"}
+  - {id: ENM-023, name: Star Beast,      family: cosmic,      base_hp: 5000, base_atk: 120, base_xp: 200, rank_band: "IMM-GOD", traits: [cosmic, gravity], drop_theme: "star matter"}
+  - {id: ENM-024, name: Reality Wraith,  family: cosmic,      base_hp: 20000,base_atk: 300, base_xp: 500, rank_band: "GOD-HGOD", traits: [law-break, erase], drop_theme: "primordial dust"}
+dungeon_bosses:
+  - {id: BOSS-001, name: Goblin Chief,                  rank: F,    enemy_family: humanoid}
+  - {id: BOSS-002, name: Dire Wolf Alpha,               rank: E,    enemy_family: beast}
+  - {id: BOSS-003, name: Skeleton Warlord,              rank: D,    enemy_family: undead}
+  - {id: BOSS-004, name: Orc Warchief,                  rank: C,    enemy_family: humanoid}
+  - {id: BOSS-005, name: Vampire Lord,                  rank: B,    enemy_family: undead}
+  - {id: BOSS-006, name: Lich,                          rank: A,    enemy_family: undead}
+  - {id: BOSS-007, name: Demon General,                 rank: S,    enemy_family: demon}
+  - {id: BOSS-008, name: Dragon Elder,                  rank: SS,   enemy_family: dragonkin}
+  - {id: BOSS-009, name: Demon King,                    rank: SSS,  enemy_family: demon}
+  - {id: BOSS-010, name: Ascendant Warlord,            rank: ASC,  enemy_family: void}
+  - {id: BOSS-011, name: Transcendent Tyrant,          rank: TRA,  enemy_family: void}
+  - {id: BOSS-012, name: Immortal Sovereign,           rank: IMM,  enemy_family: cosmic}
+  - {id: BOSS-013, name: Golden Immortal Emperor,      rank: GIM,  enemy_family: cosmic}
+  - {id: BOSS-014, name: Overreaching Immortal Monarch,rank: OIM,  enemy_family: cosmic}
+  - {id: BOSS-015, name: True Immortal Ancestor,       rank: TIM,  enemy_family: cosmic}
+  - {id: BOSS-016, name: Heavenly Immortal Lord,       rank: HIM,  enemy_family: cosmic}
+  - {id: BOSS-017, name: Lesser Deity,                 rank: GOD,  enemy_family: cosmic}
+  - {id: BOSS-018, name: Heavenly God Sovereign,       rank: HGOD, enemy_family: cosmic}
+world_bosses:
+  - {id: WB-001, name: Forest Troll,            rank_band: "F",    respawn_hours: 1}
+  - {id: WB-002, name: Stone Colossus,          rank_band: "D",    respawn_hours: 2}
+  - {id: WB-003, name: Sky Wyvern,              rank_band: "B",    respawn_hours: 3}
+  - {id: WB-004, name: Abyssal Kraken,          rank_band: "S",    respawn_hours: 4}
+  - {id: WB-005, name: World Serpent,           rank_band: "SSS",  respawn_hours: 6}
+  - {id: WB-006, name: Continent Turtle,        rank_band: "TRA",  respawn_hours: 8}
+  - {id: WB-007, name: Eternal Phoenix,         rank_band: "IMM",  respawn_hours: 10}
+  - {id: WB-008, name: Sun-Devouring Beast,     rank_band: "GIM",  respawn_hours: 12}
+  - {id: WB-009, name: Void Leviathan,          rank_band: "OIM",  respawn_hours: 16}
+  - {id: WB-010, name: Galaxy Devourer,         rank_band: "TIM",  respawn_hours: 20}
+  - {id: WB-011, name: Star-Eater Titan,        rank_band: "HIM",  respawn_hours: 24}
+  - {id: WB-012, name: Cosmic Horror,           rank_band: "GOD",  respawn_hours: 36}
+  - {id: WB-013, name: The Unwritten,           rank_band: "HGOD", respawn_hours: 72, note: "Final world boss; tied to the endgame story."}

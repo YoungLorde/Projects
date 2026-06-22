@@ -1,0 +1,164 @@
+system: buildings
+description: >
+  The base/home advancement tree and the settlement/job systems. The player begins
+  with a derelict Wooden Shack, collects resources to repair it, then upgrades the
+  dwelling up the chain, eventually housing villagers, founding villages, and
+  growing into cities and beyond. Each housing tier raises population capacity.
+
+dwelling_upgrade_path:
+  - id: BLD-000
+    name: Derelict Wooden Shack
+    tier: 0
+    pop_capacity: 1
+    repair_cost: {wood: 50, stone: 20, fiber: 15, nails: 10}
+    upgrade_to: BLD-001
+    note: "Phase 1 starts here. Complete the 'Repair the Shack' quest to advance."
+  - id: BLD-001
+    name: Wooden Shack (Repaired)
+    tier: 1
+    pop_capacity: 2
+    upgrade_to: BLD-002
+    upgrade_cost: {wood: 200, stone: 120, fiber: 60, bronze: 500}
+    unlocks: [storage_chest, basic_crafting_bench]
+  - id: BLD-002
+    name: House
+    tier: 2
+    pop_capacity: 5
+    upgrade_to: BLD-003
+    upgrade_cost: {wood: 800, stone: 600, iron: 100, bronze: 5000}
+    unlocks: [kitchen, farm_plot, job_board]
+  - id: BLD-003
+    name: Two-Story House
+    tier: 3
+    pop_capacity: 12
+    upgrade_to: BLD-004
+    upgrade_cost: {wood: 2500, stone: 2000, iron: 600, silver: 5}
+    unlocks: [workshop, extra_recruit_slots]
+  - id: BLD-004
+    name: Apartment Complex
+    tier: 4
+    pop_capacity: 40
+    upgrade_to: BLD-005
+    upgrade_cost: {stone: 8000, iron: 3000, steel: 500, silver: 50}
+    unlocks: [district_planning, mass_housing]
+  - id: BLD-005
+    name: Village Housing Block
+    tier: 5
+    pop_capacity: 150
+    upgrade_to: BLD-006
+    upgrade_cost: {stone: 30000, steel: 4000, gold: 5}
+    unlocks: [village_hall, found_new_settlement]
+  - id: BLD-006
+    name: Town Housing Quarter
+    tier: 6
+    pop_capacity: 500
+    upgrade_to: BLD-007
+    upgrade_cost: {steel: 20000, glass: 5000, gold: 100}
+    unlocks: [town_districts, bank]
+  - id: BLD-007
+    name: City Residential District
+    tier: 7
+    pop_capacity: 2500
+    upgrade_to: BLD-008
+    upgrade_cost: {steel: 120000, glass: 40000, gold: 2000}
+    unlocks: [university, industry]
+  - id: BLD-008
+    name: Metropolitan Towers
+    tier: 8
+    pop_capacity: 20000
+    upgrade_to: BLD-009
+    upgrade_cost: {steel: 800000, glass: 300000, zenu_stone_gram: 1}
+    unlocks: [skyscrapers, mega_projects]
+  - id: BLD-009
+    name: Arcology
+    tier: 9
+    pop_capacity: 250000
+    upgrade_to: BLD-010
+    upgrade_cost: {advanced_alloy: 50000, zenu_coin: 5}
+    unlocks: [self_contained_city, planetary_grid]
+  - id: BLD-010
+    name: Orbital Habitat Ring
+    tier: 10
+    pop_capacity: 10000000
+    upgrade_to: BLD-011
+    upgrade_cost: {advanced_alloy: 5000000, mythril_ore_gram: 1}
+    unlocks: [space_age, off_world_colonies]
+  - id: BLD-011
+    name: Stellar Megastructure
+    tier: 11
+    pop_capacity: 1000000000000
+    upgrade_to: null
+    upgrade_cost: {exotic_matter: 1000000, mythril_coin: 10}
+    unlocks: [dyson_swarm, cosmic_population]
+
+settlements:
+  description: >
+    Once the Apartment Complex is built, the player can found additional settlements.
+    Each settlement has its own building tree, population, and jobs, and contributes
+    to the global empire totals that drive phase progression.
+  found_cost_scaling: "found_cost(n) = base * (3 ^ settlements_owned)"
+  max_settlements_by_phase_band:
+    settlement: 1
+    village: 3
+    city: 10
+    empire: 100
+    planetary: 10000
+    cosmic: "effectively unlimited"
+
+jobs:
+  description: >
+    Villagers/citizens are delegated to jobs. Output scales with the worker's
+    relevant stats and rarity. Idle villagers produce nothing — assign everyone.
+  roles:
+    - {id: gatherer,   name: Gatherer,    primary_stat: spd, produces: "wood, stone, fiber"}
+    - {id: farmer,     name: Farmer,      primary_stat: vit, produces: "food (survival)"}
+    - {id: hunter,     name: Hunter,      primary_stat: atk, produces: "meat, hides (from animal NPCs)"}
+    - {id: miner,      name: Miner,       primary_stat: atk, produces: "ore, gems, currency mats"}
+    - {id: water_carrier, name: Water Carrier, primary_stat: spd, produces: "water (survival)"}
+    - {id: cook,       name: Cook,        primary_stat: int, produces: "prepared food, morale"}
+    - {id: medic,      name: Medic,       primary_stat: int, produces: "health/sanitation (survival)"}
+    - {id: crafter,    name: Crafter,     primary_stat: int, produces: "crafted items from recipes"}
+    - {id: builder,    name: Builder,     primary_stat: vit, produces: "construction speed"}
+    - {id: merchant,   name: Merchant,    primary_stat: cha, produces: "currency (trade income)"}
+    - {id: guard,      name: Guard,       primary_stat: def, produces: "settlement defense"}
+    - {id: soldier,    name: Soldier,     primary_stat: atk, produces: "army strength, dungeon support"}
+    - {id: researcher, name: Researcher,  primary_stat: int, produces: "research points (tech/phases)"}
+    - {id: scout,      name: Scout,       primary_stat: lck, produces: "dungeon/map discovery, drop rate"}
+  delegation_rule: "job_output = base_rate * (1 + worker_primary_stat/100) * rarity.stat_roll_mult * morale_factor"
+
+villager_stat_generation:
+  description: >
+    Recruited villagers/NPCs get randomized-but-sensible stats. Stats are rolled
+    from the villager's rarity (sets the base range), then biased toward an
+    archetype so the result reads as a believable person, not noise.
+  roll_formula: "stat = randint(rarity_base_min, rarity_base_max) * archetype_weight[stat]"
+  rarity_base_ranges:
+    common:       {min: 5,   max: 15}
+    uncommon:     {min: 12,  max: 30}
+    rare:         {min: 25,  max: 60}
+    epic:         {min: 50,  max: 120}
+    legendary:    {min: 100, max: 250}
+    mythic:       {min: 220, max: 500}
+    ascendant:    {min: 450, max: 1000}
+    transcendent: {min: 900, max: 2200}
+    divine:       {min: 2000,max: 5000}
+    primordial:   {min: 4500,max: 12000}
+  archetypes:
+    - {id: laborer,  weights: {atk: 0.8, def: 1.0, vit: 1.3, int: 0.7, spd: 1.1, lck: 0.9, cha: 0.9, ldr: 0.8}}
+    - {id: warrior,  weights: {atk: 1.5, def: 1.2, vit: 1.1, int: 0.7, spd: 1.0, lck: 0.8, cha: 0.8, ldr: 1.0}}
+    - {id: scholar,  weights: {atk: 0.6, def: 0.7, vit: 0.9, int: 1.6, spd: 0.9, lck: 1.0, cha: 1.0, ldr: 1.1}}
+    - {id: artisan,  weights: {atk: 0.7, def: 0.8, vit: 1.0, int: 1.4, spd: 1.1, lck: 1.0, cha: 1.0, ldr: 0.9}}
+    - {id: leader,   weights: {atk: 1.0, def: 1.0, vit: 1.0, int: 1.1, spd: 1.0, lck: 1.0, cha: 1.4, ldr: 1.6}}
+    - {id: rogue,    weights: {atk: 1.1, def: 0.8, vit: 0.9, int: 1.0, spd: 1.4, lck: 1.4, cha: 1.0, ldr: 0.8}}
+
+npc_lifecycle:
+  recruitment:
+    rule: "Recruit chance = base + Charisma factor + rarity penalty + offering bonus."
+    sources: [taverns, rescued-in-dungeons, quest rewards, wandering travelers, gacha-style 'arrivals']
+  leveling:
+    rule: "NPCs gain XP from assigned jobs and dungeon participation; they level with no cap, raising their stats."
+  death:
+    causes: [starvation, disease, dungeon defeat, war, old age, sacrifice events]
+    permadeath: true
+    mitigation: [phoenix items, clinics, retreat orders, reviving clerics]
+    note: "Higher-rarity NPCs are harder to lose but not immortal (except via specific perks)."

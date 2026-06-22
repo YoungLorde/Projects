@@ -1,0 +1,76 @@
+collection: items
+shop_type: materials
+description: >
+  Crafting-material catalog for Your Chronicle (60 items). Raw and refined goods
+  used by upgrades, recipes, and enchantments. Standard materials (Tiers 0-5)
+  sold by The Stonecount Exchange (Bronze); rare ores, gems, and exotics (Tiers 4-9)
+  sold by The Mineshaft Depot (Silver). 'use' notes what the material feeds into.
+items:
+  # ---------------- Ores & ingots ----------------
+  - {id: MAT-001, name: Scrap Iron, subtype: ore, tier: 0, rarity: common, cost: 5, currency: bronze, use: weapon crafting (T0-1), description: Rusty offcuts swept from the smithy floor.}
+  - {id: MAT-002, name: Copper Ore, subtype: ore, tier: 0, rarity: common, cost: 8, currency: bronze, use: low-tier alloys, description: Soft reddish ore, easy to work.}
+  - {id: MAT-003, name: Iron Ore, subtype: ore, tier: 1, rarity: common, cost: 20, currency: bronze, use: weapon/armor crafting (T1-2), description: The backbone of every smithy.}
+  - {id: MAT-004, name: Iron Ingot, subtype: ingot, tier: 1, rarity: common, cost: 60, currency: bronze, use: refined weapon crafting, description: Smelted iron, ready for the forge.}
+  - {id: MAT-005, name: Steel Ingot, subtype: ingot, tier: 2, rarity: uncommon, cost: 220, currency: bronze, use: weapon/armor crafting (T2-3), description: Iron tempered with carbon and patience.}
+  - {id: MAT-006, name: Silver Ore, subtype: ore, tier: 2, rarity: uncommon, cost: 180, currency: bronze, use: anti-corruption gear, description: Gleaming ore that resists the Index's rot.}
+  - {id: MAT-007, name: Mithral Ore, subtype: ore, tier: 4, rarity: rare, cost: 2200, currency: bronze, use: lightweight high-tier gear, description: Feather-light and stronger than steel.}
+  - {id: MAT-008, name: Mithral Ingot, subtype: ingot, tier: 4, rarity: rare, cost: 5000, currency: bronze, use: refined T4-5 crafting, description: Refined mithral, prized by master smiths.}
+  - {id: MAT-009, name: Adamant Ore, subtype: ore, tier: 5, rarity: epic, cost: 40, currency: silver, use: epic weapon crafting, description: Nearly unbreakable ore from deep Errata.}
+  - {id: MAT-010, name: Adamant Ingot, subtype: ingot, tier: 5, rarity: epic, cost: 90, currency: silver, use: refined epic crafting, description: The hardest workable metal known to Aethryl.}
+  - {id: MAT-011, name: Voidsteel Ore, subtype: ore, tier: 7, rarity: legendary, cost: 180, currency: silver, use: legendary weapon crafting, description: Ore quenched in the silence of the void.}
+  - {id: MAT-012, name: Voidsteel Ingot, subtype: ingot, tier: 7, rarity: legendary, cost: 360, currency: silver, use: refined legendary crafting, description: Drinks the light from the forge as it cools.}
+  - {id: MAT-013, name: Starforged Ore, subtype: ore, tier: 9, rarity: mythic, cost: 1400, currency: silver, use: mythic weapon crafting, description: Fallen star-metal, warm to the touch forever.}
+  - {id: MAT-014, name: Starforged Ingot, subtype: ingot, tier: 9, rarity: mythic, cost: 2800, currency: silver, use: refined mythic crafting, description: Glows with a light that was old before the world.}
+  # ---------------- Hides, leather, scales ----------------
+  - {id: MAT-015, name: Rough Hide, subtype: hide, tier: 0, rarity: common, cost: 6, currency: bronze, use: low-tier armor, description: Coarse pelt from Margin vermin.}
+  - {id: MAT-016, name: Cured Leather, subtype: leather, tier: 1, rarity: common, cost: 25, currency: bronze, use: light armor crafting, description: Tanned and supple, ready to stitch.}
+  - {id: MAT-017, name: Thick Hide, subtype: hide, tier: 2, rarity: uncommon, cost: 160, currency: bronze, use: medium armor, description: Tough pelt from larger dungeon beasts.}
+  - {id: MAT-018, name: Hardened Leather, subtype: leather, tier: 3, rarity: uncommon, cost: 700, currency: bronze, use: T3 armor crafting, description: Boiled and treated to turn a blade.}
+  - {id: MAT-019, name: Drake Scale, subtype: scale, tier: 5, rarity: epic, cost: 45, currency: silver, use: fire-resistant gear, description: A single scale from a Margin drake; still warm.}
+  - {id: MAT-020, name: Wyrm Hide, subtype: hide, tier: 7, rarity: legendary, cost: 200, currency: silver, use: legendary armor, description: Peeled from a bookwyrm of the deep Errata.}
+  - {id: MAT-021, name: Corrupted Carapace, subtype: scale, tier: 8, rarity: mythic, cost: 700, currency: silver, use: anti-corruption endgame gear, description: Shell of a creature the Index tried to rewrite.}
+  # ---------------- Cloth & thread ----------------
+  - {id: MAT-022, name: Frayed Cloth, subtype: cloth, tier: 0, rarity: common, cost: 4, currency: bronze, use: low-tier robes/bandages, description: Scraps of old academy uniforms.}
+  - {id: MAT-023, name: Linen Bolt, subtype: cloth, tier: 1, rarity: common, cost: 22, currency: bronze, use: robe crafting, description: Plain, sturdy, endlessly useful.}
+  - {id: MAT-024, name: Silk Thread, subtype: thread, tier: 2, rarity: uncommon, cost: 170, currency: bronze, use: fine robe/enchant binding, description: Spun by Margin silk-spiders.}
+  - {id: MAT-025, name: Enchanter's Weave, subtype: cloth, tier: 4, rarity: rare, cost: 2100, currency: bronze, use: enchantment-friendly robes, description: Cloth woven to hold inscriptions.}
+  - {id: MAT-026, name: Spellsilk, subtype: thread, tier: 6, rarity: epic, cost: 70, currency: silver, use: epic robe crafting, description: Thread that hums when an Inscriber touches it.}
+  - {id: MAT-027, name: Chronoweave Cloth, subtype: cloth, tier: 8, rarity: mythic, cost: 650, currency: silver, use: idle-boost endgame robes, description: Fabric that seems to age more slowly than its wearer.}
+  # ---------------- Wood & planks ----------------
+  - {id: MAT-028, name: Driftwood, subtype: wood, tier: 0, rarity: common, cost: 3, currency: bronze, use: staff/handle crafting, description: Smooth wood washed up at the Margin's edge.}
+  - {id: MAT-029, name: Oak Plank, subtype: wood, tier: 1, rarity: common, cost: 18, currency: bronze, use: shields/staves, description: Honest, sturdy timber.}
+  - {id: MAT-030, name: Ironbark Plank, subtype: wood, tier: 3, rarity: uncommon, cost: 720, currency: bronze, use: T3 shields/bows, description: Wood so dense it rings like metal.}
+  - {id: MAT-031, name: Heartwood of the First Tree, subtype: wood, tier: 6, rarity: epic, cost: 75, currency: silver, use: epic staff cores, description: A sliver from the oldest tree in Aethryl.}
+  - {id: MAT-032, name: Living Quillwood, subtype: wood, tier: 8, rarity: mythic, cost: 680, currency: silver, use: mythic wand/staff crafting, description: Wood that grows new nibs if left in ink.}
+  # ---------------- Gems & crystals ----------------
+  - {id: MAT-033, name: Cracked Quartz, subtype: gem, tier: 1, rarity: common, cost: 40, currency: bronze, use: minor enchant fuel, description: A flawed crystal, still faintly useful.}
+  - {id: MAT-034, name: Clear Sapphire, subtype: gem, tier: 3, rarity: uncommon, cost: 900, currency: bronze, use: idle-boost sockets, description: A cool blue gem prized by enchanters.}
+  - {id: MAT-035, name: Burning Ruby, subtype: gem, tier: 4, rarity: rare, cost: 2400, currency: bronze, use: fire-damage sockets, description: A ruby with an ember trapped at its heart.}
+  - {id: MAT-036, name: Ink Diamond, subtype: gem, tier: 6, rarity: epic, cost: 80, currency: silver, use: high-tier currency sockets, description: A black diamond that glints with written light.}
+  - {id: MAT-037, name: Lore Crystal, subtype: crystal, tier: 5, rarity: epic, cost: 50, currency: silver, use: idle-Lore upgrades, description: Pulses gently, storing ambient Lore.}
+  - {id: MAT-038, name: Prophecy Shard, subtype: crystal, tier: 7, rarity: legendary, cost: 220, currency: silver, use: crit/foresight sockets, description: A splinter of one of the Oracle's visions.}
+  - {id: MAT-039, name: Starlight Gem, subtype: gem, tier: 9, rarity: mythic, cost: 1500, currency: silver, use: mythic sockets, description: Holds a fragment of a long-dead star.}
+  # ---------------- Essences & reagents ----------------
+  - {id: MAT-040, name: Faint Essence, subtype: essence, tier: 1, rarity: common, cost: 30, currency: bronze, use: T1 potion brewing, description: A wisp of magical residue in a jar.}
+  - {id: MAT-041, name: Vital Essence, subtype: essence, tier: 3, rarity: uncommon, cost: 850, currency: bronze, use: healing potion brewing, description: Glows a healthy red.}
+  - {id: MAT-042, name: Arcane Essence, subtype: essence, tier: 4, rarity: rare, cost: 2300, currency: bronze, use: buff potion brewing, description: Swirls with restless magic.}
+  - {id: MAT-043, name: Void Essence, subtype: essence, tier: 7, rarity: legendary, cost: 210, currency: silver, use: forbidden brewing, description: Cold, dark, and faintly hungry.}
+  - {id: MAT-044, name: Bloomroot, subtype: reagent, tier: 1, rarity: common, cost: 28, currency: bronze, use: regeneration tonics, description: A root that flowers even after picking.}
+  - {id: MAT-045, name: Nightcap Mushroom, subtype: reagent, tier: 2, rarity: uncommon, cost: 165, currency: bronze, use: sleep/fear tinctures, description: Grows only in the dark of dungeons.}
+  - {id: MAT-046, name: Emberpetal, subtype: reagent, tier: 3, rarity: uncommon, cost: 880, currency: bronze, use: fire-resist brews, description: A petal that never stops smoldering.}
+  - {id: MAT-047, name: Frostmint, subtype: reagent, tier: 3, rarity: uncommon, cost: 880, currency: bronze, use: cold-resist brews, description: Leaves cold enough to numb the tongue.}
+  - {id: MAT-048, name: Dreamspore, subtype: reagent, tier: 5, rarity: epic, cost: 48, currency: silver, use: nightmare/foresight tinctures, description: Spores that show you things half-true.}
+  - {id: MAT-049, name: Corrupted Sap, subtype: reagent, tier: 8, rarity: mythic, cost: 660, currency: silver, use: corrupted-index brews, description: Black sap that writhes against the jar.}
+  # ---------------- Monster parts ----------------
+  - {id: MAT-050, name: Vermin Fang, subtype: monster_part, tier: 0, rarity: common, cost: 7, currency: bronze, use: minor crafting, description: A small but sharp dungeon trophy.}
+  - {id: MAT-051, name: Beast Sinew, subtype: monster_part, tier: 2, rarity: uncommon, cost: 175, currency: bronze, use: bowstrings/bindings, description: Tough fiber from a dungeon predator.}
+  - {id: MAT-052, name: Golem Core Fragment, subtype: monster_part, tier: 4, rarity: rare, cost: 2500, currency: bronze, use: construct/idle gear, description: A still-humming shard of a dungeon golem.}
+  - {id: MAT-053, name: Wyrm Heartstone, subtype: monster_part, tier: 6, rarity: epic, cost: 85, currency: silver, use: epic weapon cores, description: The crystallized heart of a bookwyrm.}
+  - {id: MAT-054, name: Boss Soulmark, subtype: monster_part, tier: 7, rarity: legendary, cost: 240, currency: silver, use: legendary crafting, description: A mark left by a slain Chapter boss.}
+  - {id: MAT-055, name: Index Eye, subtype: monster_part, tier: 9, rarity: mythic, cost: 1600, currency: silver, use: endgame anti-corruption gear, description: An unblinking eye torn from the Corrupted Index.}
+  # ---------------- Rare components ----------------
+  - {id: MAT-056, name: Binding Glue, subtype: component, tier: 1, rarity: common, cost: 24, currency: bronze, use: assembling gear, description: Strong paste from boiled hide and tree sap.}
+  - {id: MAT-057, name: Whetstone, subtype: component, tier: 1, rarity: common, cost: 35, currency: bronze, use: weapon finishing, description: Puts the final edge on any blade.}
+  - {id: MAT-058, name: Refined Oil, subtype: component, tier: 2, rarity: uncommon, cost: 150, currency: bronze, use: maintenance/enchant base, description: Keeps mechanisms and runes running smooth.}
+  - {id: MAT-059, name: Catalyst Powder, subtype: component, tier: 5, rarity: epic, cost: 55, currency: silver, use: high-tier recipe accelerant, description: A pinch speeds any reaction tenfold.}
+  - {id: MAT-060, name: Quintessence, subtype: component, tier: 9, rarity: mythic, cost: 1800, currency: silver, use: mythic recipe keystone, description: The purest distillation of the world's living ink.}

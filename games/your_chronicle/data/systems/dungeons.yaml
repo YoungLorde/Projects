@@ -1,0 +1,37 @@
+system: dungeons
+description: >
+  Dungeon rank ladder for Your Chronicle, from F-rank to Heavenly God rank. Each
+  rank scales enemy level, HP/ATK, XP reward, currency reward, and drop rarity.
+  Ranks unlock with phase progress and player power. Bosses cap each dungeon;
+  world bosses are open-world encounters tied to rank bands.
+scaling_model:
+  enemy_level: "rank_index * 25 (floor of the rank's level band)"
+  enemy_hp:    "base_hp * (3.5 ^ rank_index)"
+  enemy_atk:   "base_atk * (2.8 ^ rank_index)"
+  xp_reward:   "base_xp * (3.0 ^ rank_index)"
+  coin_reward: "scales with rank; lower ranks pay Bronze/Silver, higher pay Zenu/Mythril"
+  drop_rarity_floor: "minimum rarity tier rises with rank (see per-rank max_rarity)"
+ranks:
+  - {index: 0,  id: F,    name: F-Rank,                 level_band: "1-25",        unlock_phase: 4,  max_rarity: uncommon,    boss: "Goblin Chief",                 world_boss: "Forest Troll"}
+  - {index: 1,  id: E,    name: E-Rank,                 level_band: "25-50",       unlock_phase: 6,  max_rarity: uncommon,    boss: "Dire Wolf Alpha",              world_boss: "Mire Hydra (lesser)"}
+  - {index: 2,  id: D,    name: D-Rank,                 level_band: "50-100",      unlock_phase: 8,  max_rarity: rare,        boss: "Skeleton Warlord",             world_boss: "Stone Colossus"}
+  - {index: 3,  id: C,    name: C-Rank,                 level_band: "100-200",     unlock_phase: 10, max_rarity: rare,        boss: "Orc Warchief",                 world_boss: "Plains Behemoth"}
+  - {index: 4,  id: B,    name: B-Rank,                 level_band: "200-400",     unlock_phase: 12, max_rarity: epic,        boss: "Vampire Lord",                 world_boss: "Sky Wyvern"}
+  - {index: 5,  id: A,    name: A-Rank,                 level_band: "400-800",     unlock_phase: 13, max_rarity: epic,        boss: "Lich",                         world_boss: "Ancient Treant"}
+  - {index: 6,  id: S,    name: S-Rank,                 level_band: "800-1600",    unlock_phase: 15, max_rarity: legendary,   boss: "Demon General",                world_boss: "Abyssal Kraken"}
+  - {index: 7,  id: SS,   name: SS-Rank,                level_band: "1600-3200",   unlock_phase: 16, max_rarity: legendary,   boss: "Dragon Elder",                 world_boss: "Volcano Drake King"}
+  - {index: 8,  id: SSS,  name: SSS-Rank,               level_band: "3200-6400",   unlock_phase: 18, max_rarity: mythic,      boss: "Demon King",                   world_boss: "World Serpent"}
+  - {index: 9,  id: ASC,  name: Ascendant Rank,         level_band: "6400-15k",    unlock_phase: 19, max_rarity: ascendant,   boss: "Ascendant Warlord",            world_boss: "Sky-Splitting Roc"}
+  - {index: 10, id: TRA,  name: Transcendent Rank,      level_band: "15k-40k",     unlock_phase: 22, max_rarity: transcendent,boss: "Transcendent Tyrant",          world_boss: "Continent Turtle"}
+  - {index: 11, id: IMM,  name: Immortal Rank,          level_band: "40k-100k",    unlock_phase: 24, max_rarity: transcendent,boss: "Immortal Sovereign",           world_boss: "Eternal Phoenix"}
+  - {index: 12, id: GIM,  name: Golden Immortal Rank,   level_band: "100k-300k",   unlock_phase: 26, max_rarity: divine,      boss: "Golden Immortal Emperor",      world_boss: "Sun-Devouring Beast"}
+  - {index: 13, id: OIM,  name: Overreaching Immortal Rank, level_band: "300k-1M", unlock_phase: 29, max_rarity: divine,      boss: "Overreaching Immortal Monarch",world_boss: "Void Leviathan"}
+  - {index: 14, id: TIM,  name: True Immortal Rank,     level_band: "1M-5M",       unlock_phase: 31, max_rarity: divine,      boss: "True Immortal Ancestor",       world_boss: "Galaxy Devourer"}
+  - {index: 15, id: HIM,  name: Heavenly Immortal Rank, level_band: "5M-25M",      unlock_phase: 31, max_rarity: divine,      boss: "Heavenly Immortal Lord",       world_boss: "Star-Eater Titan"}
+  - {index: 16, id: GOD,  name: God Rank,               level_band: "25M-200M",    unlock_phase: 34, max_rarity: primordial,  boss: "Lesser Deity",                 world_boss: "Cosmic Horror"}
+  - {index: 17, id: HGOD, name: Heavenly God Rank,      level_band: "200M+",       unlock_phase: 37, max_rarity: primordial,  boss: "Heavenly God Sovereign",       world_boss: "The Unwritten (final world boss)"}
+dungeon_structure:
+  rooms_per_run: "5 + rank_index"
+  modifiers: [normal, elite, nightmare, abyssal]   # modifier multiplies difficulty AND rewards
+  idle_runs: "Delegated soldier-NPCs can auto-run cleared dungeons for offline rewards."
+  keys: "Higher-rank dungeons require keys crafted/dropped from the previous rank."

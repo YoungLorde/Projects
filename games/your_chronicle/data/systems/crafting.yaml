@@ -1,0 +1,44 @@
+system: crafting
+description: >
+  The crafting and resource system. Players gather raw materials, refine them, and
+  combine them via recipes into gear, consumables, building components, currency
+  refinements, and weapon-upgrade catalysts. Every material in the game is tagged
+  with at least one 'reason' so nothing is filler (see materials catalogs).
+material_reasons:
+  - crafting_recipe        # an ingredient in a recipe
+  - building_component     # used to construct/upgrade buildings
+  - quest_item             # required by one or more quests
+  - weapon_unlock          # unlocks/empowers a weapon or piece of gear
+  - consumable_boost       # consumed for a stat/buff effect
+  - permanent_stat_boost   # permanently raises a stat pool
+  - currency_refine        # refines into a higher currency tier
+gathering:
+  nodes: [forest, quarry, mine, river, ruins, dungeon, farm, hunting_ground, space_field]
+  tools: "Better tools (crafted) raise gather yield and unlock higher-tier nodes."
+  delegation: "Gatherer/Miner/Hunter villagers automate gathering while idle."
+refining:
+  description: "Raw -> refined chains (e.g., Iron Ore -> Iron Ingot; Zenu Stone -> Zenu Coin)."
+  building: "Requires a Workshop (gear) or Bank (currency refining)."
+crafting_stations:
+  - {id: bench,    name: Crafting Bench,   unlocks_at: BLD-001, makes: [basic gear, tools, simple consumables]}
+  - {id: kitchen,  name: Kitchen,          unlocks_at: BLD-002, makes: [food, morale consumables]}
+  - {id: workshop, name: Workshop,         unlocks_at: BLD-003, makes: [refined gear, building components]}
+  - {id: forge,    name: Grand Forge,      unlocks_at: BLD-007, makes: [epic+ weapons, alloys]}
+  - {id: lab,      name: Arcane Lab,       unlocks_at: BLD-007, makes: [potions, exotic consumables]}
+  - {id: foundry,  name: Stellar Foundry,  unlocks_at: BLD-010, makes: [space-age components, exotic matter]}
+recipe_schema:
+  fields: [id, name, station, inputs, output, output_qty, craft_time_sec, req_int, unlock_condition]
+  example:
+    id: REC-EX-001
+    name: Iron Sword
+    station: workshop
+    inputs: {iron_ingot: 3, oak_plank: 1, leather_strip: 1}
+    output: WPN-iron-sword
+    output_qty: 1
+    craft_time_sec: 30
+    req_int: 10
+    unlock_condition: "phase >= 3 AND owns workshop"
+recipe_generation:
+  note: >
+    Bulk recipes are produced by the material/crafting generators so that each
+    generated material participates in at least one recipe (satisfying its reason).
