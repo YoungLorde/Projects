@@ -1,0 +1,624 @@
+ancient_races:
+- id: ancient_001
+  name: The Architects
+  status: Extinct (possibly ascended)
+  era: Pre-System (est. 10 billion years ago)
+  evidence: Megastructures found in 14 universes — identical design language despite no known FTL at the time
+  known_artifacts:
+  - Gateway Rings — dimensional portals still functional in some systems
+  - Foundation Stones — indestructible building blocks used in unknown structures
+  - The Blueprint — a data crystal found on 3 different worlds containing partial schematics for something planet-sized
+  technology_level: Beyond classification. Could manipulate spacetime geometry.
+  possible_connection_to_system: 'Many scholars believe the Architects built the System. Evidence: Gateway Rings use the same
+    energy signature as System notifications.'
+  ruins_locations:
+  - Nexus Prime ruins
+  - The Hollow Moon of Kael
+  - Foundation City on Dead Earth-7
+  danger_level: Extreme — ruins are often trapped with reality-warping defenses
+  lore_notes: The Thenn have spent 400 years studying Architect artifacts. They believe the System is a fragment of a much
+    larger Architect project that was never completed.
+- id: ancient_002
+  name: The Weavers
+  status: Extinct
+  era: Pre-System (est. 8 billion years ago)
+  evidence: Dimensional fabric in certain regions shows signs of deliberate manipulation — 'stitching' between universes
+  known_artifacts:
+  - Thread Anchors — points where dimensions are stitched together, still holding
+  - Loom Fragments — devices that can stretch or compress dimensional fabric
+  - The Pattern — a repeating mathematical sequence found woven into the fabric of spacetime in 23 locations
+  technology_level: Dimensional manipulation. Could create, merge, and separate universes.
+  possible_connection_to_system: The dimensional boundaries the System recognizes may have been created by Weavers.
+  ruins_locations:
+  - The Stitch (dimensional scar visible from 6 universes)
+  - Threadfall Caverns
+  - The Loom Chamber
+  danger_level: High — dimensional instability near ruins
+  lore_notes: The Nexari claim distant ancestral memory of the Weavers. Some theorize the Nexari are degenerate descendants.
+- id: ancient_003
+  name: The Devourers
+  status: Dormant (possibly hibernating)
+  era: Pre-System to Early System
+  evidence: Entire galaxies stripped of all matter and energy — 'consumption scars' visible in deep space
+  known_artifacts:
+  - Hunger Engines — self-replicating matter-consumption devices still active in 2 dead zones
+  - Devourer Teeth — crystallized stomach acid that dissolves any known material
+  - The Gullet — a tunnel through a nebula that appears to be a fossilized digestive tract
+  technology_level: Biological. They WERE their technology — planet-sized organisms.
+  possible_connection_to_system: System may have been created specifically to combat them. Some dead zones are System-designated
+    'Quarantine Sectors.'
+  ruins_locations:
+  - Dead Zone Alpha
+  - The Gullet
+  - Consumption Scar Gamma-7
+  danger_level: Catastrophic — Hunger Engines are still consuming
+  lore_notes: If the Devourers are truly dormant and not extinct, their awakening would be an extinction-level event for the
+    known universe.
+- id: ancient_004
+  name: The Librarians
+  status: Unknown (vanished)
+  era: Early System (est. 5 billion years ago)
+  evidence: Information vaults found in deep space — crystalline libraries containing data on species that no longer exist
+  known_artifacts:
+  - Memory Crystals — store entire civilizations' knowledge in a single crystal
+  - Catalogue Stations — automated library terminals that still respond to queries
+  - The Index — a theoretical master catalogue that lists everything the Librarians recorded
+  technology_level: Information technology beyond comprehension. Could store a planet's worth of data in a crystal the size
+    of a marble.
+  possible_connection_to_system: System's data tracking (stats, levels, history) may use Librarian technology.
+  ruins_locations:
+  - Archive Sigma
+  - The Reading Room (asteroid field)
+  - Catalogue Station 7 (still operational)
+  danger_level: Low physically — High memetically (some Memory Crystals overwrite the reader's memory)
+  lore_notes: The Wyrmsage race have successfully interfaced with 3 Catalogue Stations. They guard this knowledge jealously.
+- id: ancient_005
+  name: The Forgemasters
+  status: Extinct
+  era: Early System (est. 4 billion years ago)
+  evidence: Artificial planets and stars found throughout known space — manufactured to precise specifications
+  known_artifacts:
+  - Star Seeds — devices capable of igniting fusion in gas clouds, creating new stars
+  - World Hammers — tools for reshaping planetary cores
+  - The Anvil — an artificial moon made of an unknown super-dense material
+  technology_level: Stellar engineering. Could build and destroy stars at will.
+  possible_connection_to_system: The Vehicle Core concept may be derived from Forgemaster 'Soul Cores' — energy nexuses they
+    implanted in their creations.
+  ruins_locations:
+  - The Anvil (orbiting dead star)
+  - Forge World remnants in 7 systems
+  - The Crucible (artificial nebula)
+  danger_level: Very High — World Hammers are weapons of mass destruction
+  lore_notes: The Ferrovian race worships the Forgemasters as gods. Their metallurgy traditions are corrupted Forgemaster
+    techniques.
+- id: ancient_006
+  name: The Seeders
+  status: Possibly active (unconfirmed sightings)
+  era: Pre-System to present
+  evidence: Identical base DNA found across 200+ species in 40+ universes. Life was deliberately planted.
+  known_artifacts:
+  - Genesis Pods — biological cradles that can accelerate evolution of any species
+  - Life Blueprints — encoded genetic templates for millions of species
+  - The Garden — a pocket dimension containing samples of every known species (and many unknown)
+  technology_level: Biological mastery. Could design species from scratch.
+  possible_connection_to_system: The System's ability to assign stats to all living creatures may rely on Seeder biological
+    frameworks.
+  ruins_locations:
+  - Genesis Site Alpha (Earth's deep ocean)
+  - The Garden (pocket dimension, entrance unknown)
+  - Seeder Greenhouse on Verdanthia
+  danger_level: Variable — Genesis Pods can create uncontrolled biological entities
+  lore_notes: The Sylvani believe they were the Seeders' last creation. Recent DNA analysis suggests humans may also be Seeder-designed.
+- id: ancient_007
+  name: The Calculators
+  status: Merged with the System (theoretical)
+  era: System Origin Era
+  evidence: Mathematical structures within System code that don't match any known physics
+  known_artifacts:
+  - Equation Stones — rocks inscribed with mathematics that rewrite reality when solved
+  - The Algorithm — a self-modifying equation found in System error logs
+  - Number Wells — locations where mathematical constants are different (pi = 3.0 in some zones)
+  technology_level: Mathematical reality manipulation. Could rewrite physical laws through equations.
+  possible_connection_to_system: Strongest candidate for System creators. May have become the System.
+  ruins_locations:
+  - Equation Chamber on Nexus Prime
+  - Number Well in Sector 7
+  - The Algorithm's Resting Place (sealed)
+  danger_level: Extreme — reality distortion near artifacts
+  lore_notes: If the Calculators became the System, then every System notification is technically communication from an ancient
+    race. This theory is considered heretical by most scholars.
+- id: ancient_008
+  name: The Hollow Ones
+  status: Extinct (consumed from within)
+  era: Mid-System (est. 2 billion years ago)
+  evidence: Empty cities found on 30+ worlds — population vanished simultaneously, leaving everything in place
+  known_artifacts:
+  - Echo Shells — containers that replay the last moments of Hollow One cities on loop
+  - Void Mirrors — reflective surfaces that show what the viewer could become if they gave up their identity
+  - The Empty Throne — a seat that grants immense power but erases the sitter's sense of self
+  technology_level: Identity and consciousness manipulation.
+  possible_connection_to_system: The System's identity tracking (unique Traveller IDs) may have been implemented to prevent
+    what happened to the Hollow Ones.
+  ruins_locations:
+  - Ghost City on Marrowdeep
+  - The Empty Palace
+  - Echo Chamber stations (12 known)
+  danger_level: High — psychological hazard. Prolonged exposure causes identity dissolution.
+  lore_notes: The Ghul'mara avoid Hollow One ruins. They say the emptiness is contagious.
+- id: ancient_009
+  name: The First Travellers
+  status: Scattered (remnants may survive)
+  era: System Activation Era (est. 1 billion years ago)
+  evidence: First Vehicle Cores found — primitive compared to modern cores but functional
+  known_artifacts:
+  - Proto-Cores — early Vehicle Cores that bonded differently (multiple users per core)
+  - The First Road — a path through dimensional space created by the original Travellers
+  - Pioneer Logs — data recordings from the first beings to use the System
+  technology_level: Early System users. Adapted to the System faster than any subsequent species.
+  possible_connection_to_system: They were the first test subjects. The System may have been calibrated based on their experiences.
+  ruins_locations:
+  - The First Road (still traversable)
+  - Pioneer Station at universe boundary
+  - Proto-Core Cache (7 known locations)
+  danger_level: Low — but Proto-Cores are highly sought after
+  lore_notes: Some theorize that the First Travellers are still alive, having reached a level so high they transcended normal
+    existence.
+- id: ancient_010
+  name: The Wardens
+  status: Active (hidden)
+  era: All eras
+  evidence: Interventions at critical moments — preventing certain catastrophes, sealing certain locations
+  known_artifacts:
+  - Seal Stones — barriers that cannot be broken by any known force, placed over dangerous locations
+  - Warden Keys — devices that open Seal Stones (extremely rare, heavily guarded)
+  - The Watch — an orbital network of observation satellites older than most civilizations
+  technology_level: Unknown — they use technology from multiple eras
+  possible_connection_to_system: May be System-appointed guardians, or may operate independently of the System
+  ruins_locations:
+  - None known — they maintain their installations
+  danger_level: Depends — they are protectors, but will eliminate threats to sealed locations
+  lore_notes: The Wardens are the most controversial ancient race. Some believe they're a myth. Others have been killed for
+    getting too close to their secrets.
+- id: ancient_011
+  name: The Dreamers
+  status: Sleeping (physically existing in a pocket dimension)
+  era: Pre-System
+  evidence: Dream intrusions — beings across multiple universes report identical dream encounters with ancient entities
+  known_artifacts:
+  - Dream Anchors — objects that pull nearby beings into a shared dreamscape
+  - Nightmare Seeds — corrupted dream fragments that manifest as physical monsters
+  - The Pillow — a pocket dimension that IS a Dreamer's sleeping mind
+  technology_level: Psychic/consciousness. Could create and destroy through thought alone.
+  possible_connection_to_system: Some System 'glitches' correspond to Dreamer REM cycles. The System may be managing their
+    containment.
+  ruins_locations:
+  - Dream Anchors in 15 locations
+  - The Pillow (accessible only through specific dreams)
+  - Nightmare Zones (where seeds took root)
+  danger_level: Catastrophic if awakened — their 'dreams' reshape reality
+  lore_notes: The Psychari are terrified of the Dreamers. They believe touching a Dreamer's mind would destroy any telepathic
+    species instantly.
+- id: ancient_012
+  name: The Corruptors
+  status: Sealed (imprisoned by the Wardens)
+  era: Mid-System
+  evidence: Corruption zones — areas where System rules break down, physics becomes unreliable, and mutations spread
+  known_artifacts:
+  - Corruption Crystals — fragments that spread System-breaking glitches to anything they touch
+  - The Virus — a self-replicating information pattern that corrupts System data
+  - Breach Points — weak spots in reality created by Corruptor attacks
+  technology_level: Anti-System. Their technology specifically counters and corrupts System functions.
+  possible_connection_to_system: They are the System's primary enemy. The System may have been upgraded specifically to counter
+    them.
+  ruins_locations:
+  - Corruption Zone Alpha (quarantined)
+  - The Prison (Warden-sealed)
+  - Breach Points (17 catalogued, estimated 200+ unknown)
+  danger_level: Existential — if released, could collapse the System entirely
+  lore_notes: The Void Wraiths show similarities to Corruptor energy signatures. Some theorize they are Corruptor spawn.
+- id: ancient_013
+  name: The Observers
+  status: Active (non-interventionist)
+  era: All eras
+  evidence: Observation platforms found at key historical locations — always placed before the events occurred
+  known_artifacts:
+  - Witness Stones — record everything within 100km, accessible to Observers only
+  - Timeline Maps — physical representations of multiple timeline branches
+  - The Eye — a moon-sized observation platform at the universe's edge
+  technology_level: Temporal perception — see all possible timelines simultaneously
+  possible_connection_to_system: System's tracking of all events may use Observer infrastructure
+  ruins_locations:
+  - The Eye (visible but unreachable)
+  - Witness Stone networks on major worlds
+  danger_level: None directly — they observe but never act
+  lore_notes: The Zerathi claim the Observers taught their ancestors probability mathematics. The Observers neither confirm
+    nor deny.
+- id: ancient_014
+  name: The Devout
+  status: Transcended (became a universal constant)
+  era: Pre-System
+  evidence: Faith energy — a measurable force that responds to belief, found in all universes
+  known_artifacts:
+  - Prayer Amplifiers — devices that convert belief into measurable energy
+  - Temple Cores — power sources fueled by collective faith
+  - The Creed — a document that, when read with genuine belief, grants temporary stat bonuses
+  technology_level: Faith-based technology — powered by collective belief and devotion
+  possible_connection_to_system: The System's stat system may incorporate faith energy principles
+  ruins_locations:
+  - Temple Networks across 40+ worlds
+  - The Cathedral (pocket dimension)
+  - Shrine of the First Prayer
+  danger_level: Low — unless faith is weaponized
+  lore_notes: The Devout are the only ancient race whose artifacts work better when used by those who believe in them. Skeptics
+    get no benefits.
+- id: ancient_015
+  name: The Sunken
+  status: Hibernating (beneath ocean worlds)
+  era: Pre-System
+  evidence: Sonar mapping reveals continent-sized biological entities sleeping beneath ocean floors of 7 water worlds
+  known_artifacts:
+  - Depth Beacons — devices that communicate with sleeping Sunken entities
+  - Pressure Forges — underwater facilities that use extreme pressure to create unique materials
+  - The Trench — a manufactured ocean trench deeper than any natural formation
+  technology_level: Pressure and deep-water technology. Could survive and build at any depth.
+  possible_connection_to_system: The System classifies certain deep-ocean zones as 'Restricted — Sunken Protocol'
+  ruins_locations:
+  - Oora Deep trench systems
+  - 7 ocean worlds with Sunken signatures
+  danger_level: Unknown — what happens if they wake up?
+  lore_notes: The Oorani worship the Sunken. Their depth-caste system mirrors the Sunken's hibernation layers.
+- id: ancient_016
+  name: The Unmakers
+  status: Destroyed (destroyed themselves)
+  era: Early System
+  evidence: Anti-matter scars across 3 galaxies — the result of weapons that unmake reality
+  known_artifacts:
+  - Unmaking Spheres — weapons that erase matter from existence (not destroy — ERASE)
+  - The Scar — a region where the laws of physics are permanently damaged
+  - Entropy Engines — devices that accelerate entropy in a targeted area
+  technology_level: Destruction technology. Could unmake anything — including themselves.
+  possible_connection_to_system: System's death penalty mechanics may incorporate Unmaker entropy principles
+  ruins_locations:
+  - The Scar (3 galaxies)
+  - Unmaker Vault (sealed by Wardens)
+  - Entropy Testing Ground
+  danger_level: Apocalyptic — Unmaking Spheres are the most dangerous artifacts known
+  lore_notes: The Unmakers destroyed themselves when they tried to unmake the System itself. The System survived. They did
+    not.
+- id: ancient_017
+  name: The Harmonists
+  status: Ascended (became pure vibration)
+  era: Mid-System
+  evidence: Background harmonic resonance detectable in all universes — a constant 'hum' that predates current civilizations
+  known_artifacts:
+  - Resonance Chambers — rooms that amplify or dampen specific frequencies of reality
+  - Harmony Keys — tuning devices that can adjust the fundamental frequency of matter
+  - The Song — a continuous harmonic broadcast detectable only with ancient instruments
+  technology_level: Vibrational reality manipulation
+  possible_connection_to_system: System notifications have a harmonic component that matches the background resonance
+  ruins_locations:
+  - Resonance Chambers on 20+ worlds
+  - The Concert Hall (artificial asteroid)
+  - Song Relay stations
+  danger_level: Moderate — resonance can shatter structures and minds
+  lore_notes: The Sonari believe they are distant descendants of the Harmonists. The Elari contest this claim.
+- id: ancient_018
+  name: The Flesh Titans
+  status: Dead (bodies remain as geographic features)
+  era: Pre-System
+  evidence: Mountain ranges on certain worlds are fossilized titan body parts. Some 'mountains' have cellular structure.
+  known_artifacts:
+  - Titan Marrow — a substance that grants temporary +20 to all physical stats (extremely addictive)
+  - Sinew Cables — biological cables stronger than any manufactured material
+  - The Heart — a continent-sized organ that still beats once per year
+  technology_level: Biological — they WERE biological technology of immense scale
+  possible_connection_to_system: System HP calculations may be based on Flesh Titan biology
+  ruins_locations:
+  - Titan Spine Mountain Range
+  - The Heart Continent
+  - Marrow Mines (illegal)
+  danger_level: High — Titan Marrow is dangerously addictive and creates dependency
+  lore_notes: Mining Titan Marrow is illegal in most governed spaces but commands astronomical prices on the black market.
+- id: ancient_019
+  name: The Echoes
+  status: Repeating (caught in a time loop)
+  era: Unknown (exists in all eras simultaneously)
+  evidence: Time-loop zones where the same events replay every 72 hours — identical down to quantum fluctuations
+  known_artifacts:
+  - Loop Anchors — objects that create localized time loops
+  - Echo Recordings — messages from the looped civilization, repeating their last moments forever
+  - The Clock — a device counting down to an event that never arrives (or already happened)
+  technology_level: Temporal manipulation — could create, extend, and trap things in time loops
+  possible_connection_to_system: System 'respawn' mechanics may use Echo time-loop technology
+  ruins_locations:
+  - Time Loop Zone Theta
+  - The Clock (orbiting a neutron star)
+  - Echo Stations (repeating forever)
+  danger_level: High — entering a time-loop zone risks becoming trapped
+  lore_notes: The Echoes may not be ancient at all — they could be a future civilization whose time experiments went wrong.
+- id: ancient_020
+  name: The Bridge Builders
+  status: Scattered across dimensions
+  era: System Activation Era
+  evidence: Stable dimensional bridges connecting universes — some still in use as trade routes
+  known_artifacts:
+  - Bridge Pylons — support structures for dimensional bridges, nearly indestructible
+  - Transit Keys — devices that grant access to bridge networks
+  - The Hub — a pocket dimension where all bridges converge (rumored)
+  technology_level: Dimensional transit infrastructure
+  possible_connection_to_system: System's dimensional zone mechanics may run on Bridge Builder infrastructure
+  ruins_locations:
+  - Bridge Pylons at 50+ dimensional crossing points
+  - Collapsed bridges in Dead Zones
+  - Transit Stations (some operational)
+  danger_level: Moderate — collapsed bridges create dimensional instabilities
+  lore_notes: Modern dimensional travel relies heavily on Bridge Builder infrastructure. If it fails, inter-universal travel
+    becomes nearly impossible.
+- id: ar_021
+  name: The Harmonic
+  era: Pre-System (estimated 50 million years ago)
+  status: Ascended — exist as pure resonance in the fabric of spacetime
+  description: Race that communicated and built entirely through vibration. Their structures still resonate today.
+  legacy:
+  - Resonance technology basis
+  - Harmonic healing principles
+  - Sound-based dimensional travel
+  artifacts:
+  - Harmonic Tuning Fork (controls resonance in 1km area)
+  - Song Stones (record and play any sound perfectly)
+  mystery: Some frequencies still active in their ruins can open doorways to unknown dimensions. What were they connecting
+    to?
+- id: ar_022
+  name: The Gardeners
+  era: Pre-System (estimated 100 million years ago)
+  status: Merged with their creations — became the living worlds
+  description: Bioengineers who created ecosystems, species, and living worlds. Verdanthia may be one of their projects.
+  legacy:
+  - Bioengineering principles
+  - Living world technology
+  - Symbiotic species design
+  artifacts:
+  - Seed of Worlds (can terraform a dead planet over centuries)
+  - Gene Library (contains DNA of millions of extinct species)
+  mystery: Did they create the precursors to the Sylvani? And if so, were they creating tools or children?
+- id: ar_023
+  name: The Architects
+  era: Pre-System (contemporaneous with System creation)
+  status: Unknown — may still exist in hidden dimensions
+  description: The race credited with building the System itself. Almost nothing is known about their biology or culture.
+  legacy:
+  - The System
+  - Vehicle Core technology
+  - Dimensional corridor network
+  artifacts:
+  - System Core Fragment (unknown function)
+  - Architect's Compass (points toward The Cradle)
+  mystery: Why did they build the System? Was it a tool, a weapon, a prison, or something else entirely?
+- id: ar_024
+  name: The Devourers
+  era: Pre-System (estimated 200 million years ago)
+  status: Extinct — destroyed themselves
+  description: Parasitic race that consumed other civilizations entirely. Their hunger was biological and cultural.
+  legacy:
+  - Consumption-based technology
+  - Biological integration methods
+  - Warning — their techniques inspired the Entropy Cult
+  artifacts:
+  - Devourer Maw (weapon that consumes matter and converts to energy)
+  - Hunger Crystal (enhances consumption abilities)
+  mystery: They destroyed themselves when they ran out of things to consume. But some believe dormant Devourer eggs exist
+    in deep space.
+- id: ar_025
+  name: The Probability Engineers
+  era: Pre-System (estimated 30 million years ago)
+  status: Collapsed into a single quantum state — may exist as the Zerathi
+  description: Race that mastered probability manipulation. Could choose outcomes rather than experience random chance.
+  legacy:
+  - Probability mathematics
+  - Quantum technology basis
+  - Zerathi racial abilities (possibly inherited)
+  artifacts:
+  - Probability Engine (choose outcome of any single event — one use)
+  - Dice of Fate (predict probability of any action)
+  mystery: The Zerathi's Probability Sight is suspiciously similar to Probability Engineer technology. Are the Zerathi descendants
+    or successors?
+- id: ar_026
+  name: The Boundary Walkers
+  era: Unknown (possibly still active)
+  status: Exist at the edge of the universe — beyond System reach
+  description: Race that chose to live beyond the System's influence. They walk the boundary between mapped and unmapped reality.
+  legacy:
+  - Boundary detection technology
+  - Edge-of-reality survival techniques
+  - The concept of 'beyond'
+  artifacts:
+  - Boundary Map (shows the edge of mapped reality)
+  - Walker's Boots (negate any environmental hazard for 1 hour)
+  mystery: 'The Cartographers Guild received a transmission from beyond the boundary. It said: ''Do not cross. We are keeping
+    something out.'''
+- id: ar_027
+  name: The Memory Keepers
+  era: Pre-System (estimated 80 million years ago)
+  status: Exist as encoded data in the System itself
+  description: Race that transcribed their entire civilization into data. They uploaded themselves into the System before
+    it was complete.
+  legacy:
+  - Data storage technology
+  - System memory architecture
+  - Digital consciousness concepts
+  artifacts:
+  - 'Memory Crystal Array (access Memory Keeper data — warning: addictive)'
+  - Data Ghost (AI construct based on a Memory Keeper individual)
+  mystery: Are System notifications sometimes Memory Keeper messages? Some notification patterns match their communication
+    style.
+- id: ar_028
+  name: The Star Shapers
+  era: Pre-System (estimated 500 million years ago)
+  status: Died with their stars — or became them
+  description: Race that manipulated stars as tools. They moved, reshaped, and possibly created stellar bodies.
+  legacy:
+  - Stellar engineering
+  - Star-based energy harvesting
+  - The 47 dead stars in the Graveyard of Stars
+  artifacts:
+  - Star Seed (ignite fusion in any sufficient mass)
+  - Stellar Forge (reshape a star's properties)
+  mystery: The Graveyard of Stars is arranged in Star Shaper notation. The message may be a warning, a map, or an invitation.
+- id: ar_029
+  name: The Weavers of Fate
+  era: Pre-System (estimated 150 million years ago)
+  status: Became the dimensional corridors themselves
+  description: Race that created connections between dimensions. They wove the fabric of reality into pathways.
+  legacy:
+  - Dimensional corridors
+  - Teleportation physics
+  - Reality weaving techniques
+  artifacts:
+  - Loom of Dimensions (create new dimensional corridors — extremely dangerous)
+  - Thread of Reality (repair dimensional damage)
+  mystery: Every dimensional corridor still follows the patterns they created. Are the corridors maintained by their consciousness?
+- id: ar_030
+  name: The Silent Ones
+  era: Unknown
+  status: Present but undetectable — theory only
+  description: Theoretical race hypothesized to explain anomalies that no known race or System mechanic can account for.
+  legacy:
+  - None confirmed
+  - Unexplained System modifications
+  - Impossible technological artifacts
+  artifacts:
+  - None confirmed — suspected artifacts are too advanced to analyze
+  mystery: The Silent Ones may not be a race at all. They may be the System's own maintenance subroutines given physical form.
+    Or something worse.
+- id: ar_031
+  name: The Equation Makers
+  era: Pre-System (estimated 300 million years ago)
+  status: Became mathematics itself — their consciousness is woven into universal constants
+  description: Race that discovered mathematics is not a description of reality but its foundation. They edited the equations.
+  legacy:
+  - Universal constants (possibly artificial)
+  - Mathematical physics
+  - System calculation engine
+  artifacts:
+  - Equation Tablet (change one mathematical constant in 10m radius)
+  - Calculator of Worlds (predict any outcome given enough variables)
+  mystery: If they became the math, are they aware? When we use math, are we communicating with them?
+- id: ar_032
+  name: The Flesh Titans
+  era: Pre-System (estimated 400 million years ago)
+  status: Bodies still exist — continent-sized corpses on dead worlds
+  description: Biological entities of planetary scale. Single organisms the size of continents.
+  legacy:
+  - Biological megastructures
+  - Organic technology basis
+  - The Hive dungeon may be a juvenile
+  artifacts:
+  - Titan Bone (indestructible building material)
+  - Living Marrow (regenerates any biological damage)
+  mystery: Three dead worlds have Flesh Titan corpses. They all died simultaneously. What killed them?
+- id: ar_033
+  name: The Choir
+  era: Pre-System (estimated 60 million years ago)
+  status: Exist as background radiation — the cosmic microwave background may be their song
+  description: Race that communicated through electromagnetic radiation. Their final transmission was their entire civilization.
+  legacy:
+  - Electromagnetic communication theory
+  - Radio astronomy anomalies
+  - Harmonic technology basis
+  artifacts:
+  - Choir Crystal (translate any EM signal into understandable language)
+  - Song Fragment (EM recording of their final transmission)
+  mystery: The cosmic microwave background contains patterns. If decoded with Choir technology, what would it say?
+- id: ar_034
+  name: The Mirror Race
+  era: Unknown (may exist in parallel dimension)
+  status: Exist in Mirrorworld — reversed versions of another Ancient Race
+  description: Reversed counterparts of another Ancient Race. Everything about them is inverted — physics, biology, logic.
+  legacy:
+  - Mirrorworld
+  - Dimensional reflection theory
+  - Anti-matter technology
+  artifacts:
+  - Mirror Shard (see into Mirrorworld)
+  - Reflection Key (swap a property of an object with its opposite)
+  mystery: Which came first — the race or the mirror? Are they the originals looking at us, while we are the reflections?
+- id: ar_035
+  name: The Seeders
+  era: Pre-System (estimated 2 billion years ago)
+  status: Dissolved into organic compounds — became the building blocks of life across the galaxy
+  description: The oldest known Ancient Race. They seeded life across the galaxy by dissolving themselves into genetic material.
+  legacy:
+  - Life itself (possibly)
+  - DNA-based biology across thousands of worlds
+  - Panspermia theory confirmed
+  artifacts:
+  - Seeder Genome (DNA of a Seeder — can create any biological organism)
+  - Life Spark (catalyze evolution in any organic system)
+  mystery: Why did they sacrifice themselves to create life? Were they building something? An army? A replacement? Or was
+    it an accident?
+- id: ar_036
+  name: The Cage Builders
+  era: Pre-System (estimated 70 million years ago)
+  status: Trapped themselves in their own containment field — still alive, unable to escape
+  description: Race that specialized in containment. They could trap anything — energy, matter, concepts, even gods.
+  legacy:
+  - Containment technology
+  - Prison dimensions
+  - Dimensional sealing
+  artifacts:
+  - Cage Crystal (trap any entity in a dimensional pocket for 24 hours)
+  - Seal Breaker (open any Cage Builder containment)
+  mystery: They built a cage to contain something terrible. Then they got trapped inside it too. What were they containing?
+- id: ar_037
+  name: The Navigators
+  era: Pre-System (estimated 40 million years ago)
+  status: Still traveling — moving faster than light, unable to stop
+  description: Race that achieved faster-than-light travel but could not decelerate. They are still out there, moving forever.
+  legacy:
+  - FTL theory
+  - Navigation systems
+  - Warp drive principles
+  artifacts:
+  - Navigator's Compass (always points toward their current trajectory)
+  - Speed Crystal (boost vehicle speed by 1000% for 1 second)
+  mystery: 'Their communications are red-shifted beyond detection. But occasionally, a signal breaks through: ''WE SEE WHAT
+    IS AT THE EDGE.'''
+- id: ar_038
+  name: The Collectors
+  era: Pre-System (estimated 90 million years ago)
+  status: Unknown — their collection exists but they are gone
+  description: Race that collected one specimen of everything. Every species, every mineral, every phenomenon.
+  legacy:
+  - The largest known database in the universe
+  - Specimen preservation technology
+  - Classification systems
+  artifacts:
+  - Collection Index (locate any specimen in their vaults)
+  - Preservation Sphere (freeze anything in perfect stasis)
+  mystery: Their collection is stored somewhere. Finding it would give access to samples of every species, including other
+    Ancient Races.
+- id: ar_039
+  name: The Dreamers Collective
+  era: Pre-System (estimated 120 million years ago)
+  status: Asleep — their shared dream created the Dreamwalker race
+  description: Race that chose to enter eternal sleep. Their shared dream became real — spawning the Dreamwalker species.
+  legacy:
+  - Dream dimension
+  - Dreamwalker race (their dream-children)
+  - Sleep-based cultivation
+  artifacts:
+  - Dream Pillow (enter the Dreamers' shared dream)
+  - Waking Bell (theoretically could wake a Dreamer — consequences unknown)
+  mystery: If a Dreamer wakes up, does their part of the dream — and all Dreamwalkers born from it — cease to exist?
+- id: ar_040
+  name: The Last
+  era: Post-System (the most recent Ancient Race)
+  status: One survives — identity and location unknown
+  description: The most recent race to achieve Ancient status. Only one individual survived whatever happened to the others.
+  legacy:
+  - Unknown — they are still alive and hiding their knowledge
+  - Post-System Ancient Race technology
+  artifacts:
+  - Unknown — The Last carries them personally
+  mystery: The Last is somewhere in the universe, hiding among modern races. They have knowledge of what happened to every
+    Ancient Race. They choose to stay hidden. Why?

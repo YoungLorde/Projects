@@ -1,0 +1,451 @@
+creatures:
+- id: dun_001
+  name: Dungeon Mimic
+  tier: Matches dungeon tier
+  type: Aberration
+  habitat:
+  - all dungeon types
+  description: Shapeshifter that disguises itself as treasure chests, doors, weapons, or furniture. Attacks when interacted
+    with.
+  base_stats_scaling: Stats scale to dungeon tier × 3
+  abilities:
+  - Perfect Disguise (undetectable without INT > dungeon tier × 2)
+  - Adhesive Surface (grapple on touch)
+  - Bite (3x damage surprise attack)
+  - Loot Mimicry (appears as high-value item)
+  rp_reward_scaling: Dungeon tier × 15
+  loot_table:
+  - Mimic Tooth (scales with tier)
+  - Adhesive Gland (uncommon)
+  - True Form Crystal (rare)
+  - Mimic Core (legendary — only from Tier 7+ mimics)
+  danger_notes: Always probe chests/items before touching. High INT reveals shimmer around disguise.
+- id: dun_002
+  name: Trap Golem
+  tier: Matches dungeon tier
+  type: Construct
+  habitat:
+  - dungeon corridors
+  - trap rooms
+  description: Stone guardian that activates dungeon traps and herds intruders into them. Immune to its own dungeon's traps.
+  base_stats_scaling: Stats scale to dungeon tier × 4 (high END)
+  abilities:
+  - Trap Activation (trigger any dungeon trap remotely)
+  - Stone Skin (high physical resistance)
+  - Corridor Control (block retreat paths)
+  - Self-Repair (heal near dungeon walls)
+  rp_reward_scaling: Dungeon tier × 20
+  loot_table:
+  - Trap Mechanism (uncommon)
+  - Golem Core (rare)
+  - Dungeon Stone (uncommon)
+  - Trap Schematic (rare)
+  danger_notes: Disable traps before engaging. It cannot attack directly — it only uses traps and positioning.
+- id: dun_003
+  name: Floor Boss
+  tier: Dungeon tier + 1
+  type: Varies by dungeon theme
+  habitat:
+  - boss rooms (end of each dungeon floor)
+  description: System-designated guardian of each dungeon floor. Always one tier above the dungeon level. Drops floor-specific
+    loot.
+  base_stats_scaling: Dungeon tier × 5 across all stats, with specialization based on theme
+  abilities:
+  - Boss Aura (stat debuff to challengers in boss room)
+  - Phase 2 (transform at 50% HP with new abilities)
+  - Floor Collapse (destroy the arena to create hazards)
+  - Loot Drop (guaranteed rare+ drop)
+  rp_reward_scaling: Dungeon tier × 50
+  loot_table:
+  - Floor Key (always — opens next floor)
+  - Boss Core (rare)
+  - Floor Trophy (epic)
+  - Skill Crystal (legendary — 5% drop)
+  danger_notes: Study the boss room before engaging. Look for environmental advantages. Phase 2 always changes the fight.
+- id: dun_004
+  name: Dungeon Core Guardian
+  tier: Dungeon tier + 3
+  type: Construct/Elemental hybrid
+  habitat:
+  - dungeon core rooms (deepest level)
+  description: Final guardian protecting the dungeon's core. Defeating it allows access to the dungeon core — a massive RP
+    and upgrade source.
+  base_stats_scaling: Dungeon tier × 8 across all stats
+  abilities:
+  - Dungeon Command (control all remaining creatures and traps)
+  - Core Shield (absorb damage from dungeon walls)
+  - Element Shift (change elemental affinity mid-fight)
+  - Final Stand (become 2x stronger at 25% HP)
+  - Dungeon Collapse (if guardian is losing, begin collapsing the dungeon)
+  rp_reward_scaling: Dungeon tier × 200
+  loot_table:
+  - Dungeon Core Fragment (legendary)
+  - Guardian Heart (epic)
+  - Core Access Key (always)
+  - Vehicle Upgrade Token (legendary — 10% drop)
+  danger_notes: Bring escape route backup — Dungeon Collapse is triggered at 25% HP. Must kill fast or be buried.
+- id: dun_005
+  name: Shadow Clone
+  tier: Matches challenger's tier
+  type: Aberration
+  habitat:
+  - mirror dungeons
+  - shadow dungeons
+  description: Perfect copy of the Traveller fighting it. Has identical stats, abilities, and equipment — plus dungeon-enhanced
+    versions.
+  base_stats_scaling: Copies challenger's stats exactly, then adds +10% per dungeon tier
+  abilities:
+  - Perfect Copy (replicate all of target's abilities)
+  - Enhanced Version (copied abilities deal 10% more damage)
+  - Shadow Step (teleport through shadows in the room)
+  - Predict (anticipate attacks based on copied fighting style)
+  rp_reward_scaling: Own level × 30
+  loot_table:
+  - Shadow Crystal (rare)
+  - Mirror Fragment (uncommon)
+  - Self-Knowledge Scroll (epic — reveals hidden stat potential)
+  danger_notes: Cannot out-fight yourself with the same tactics. Must use environmental advantages or abilities you haven't
+    used before.
+- id: dun_006
+  name: Puzzle Construct
+  tier: Matches dungeon tier
+  type: Construct
+  habitat:
+  - puzzle rooms
+  - mechanical dungeons
+  description: Cannot be killed by combat. Must be defeated by solving its puzzle challenge. Attacks continuously while puzzle
+    is being solved.
+  base_stats_scaling: Dungeon tier × 3 (moderate but persistent)
+  abilities:
+  - Puzzle Lock (immune to all damage until puzzle solved)
+  - Harassment Attack (continuous low damage to solver)
+  - Timer Start (if puzzle not solved in 10 minutes, room fills with hazard)
+  - Clue Drop (occasionally drops hints at the cost of taking damage)
+  rp_reward_scaling: Dungeon tier × 25
+  loot_table:
+  - Puzzle Core (rare)
+  - Logic Crystal (uncommon)
+  - Mechanism Blueprint (rare)
+  - INT Boost Fragment (epic — 5% drop)
+  danger_notes: One person solves, others defend. The puzzle is always solvable — look for environmental clues.
+- id: dun_007
+  name: Loot Gremlin
+  tier: 1
+  type: Beast
+  habitat:
+  - all dungeons
+  description: Tiny, fast creature that steals loot and equipment. Not dangerous in combat but losing gear is devastating.
+  base_stats:
+    STR: 1
+    AGI: 15
+    END: 2
+    INT: 5
+    PER: 8
+    LCK: 12
+  abilities:
+  - Steal (take random item from inventory)
+  - Escape Artist (90% dodge rate)
+  - Hoard (take stolen items to hidden stash)
+  - Summon Friends (call 3-5 more gremlins)
+  rp_reward: 5
+  loot_table:
+  - Stolen goods (random from its stash)
+  - Gremlin Pouch (uncommon — increases LCK by 1)
+  - Treasure Map Fragment (rare)
+  danger_notes: Secure your valuables before entering dungeon. Chase immediately if robbed — stash is always nearby.
+- id: dun_008
+  name: Respawn Sentinel
+  tier: Matches dungeon tier
+  type: Construct
+  habitat:
+  - respawn rooms
+  - checkpoint areas
+  description: Guards dungeon respawn points. If not cleared, dead Travellers respawn right next to a hostile enemy.
+  base_stats_scaling: Dungeon tier × 4
+  abilities:
+  - Checkpoint Guard (camp respawn point)
+  - Anti-Heal Field (prevent recovery at respawn)
+  - Reinforcement Call (summon 2 additional sentinels after 5 minutes)
+  - Respawn Denial (if sentinel controls point, respawn moves to dungeon entrance)
+  rp_reward_scaling: Dungeon tier × 18
+  loot_table:
+  - Sentinel Core (uncommon)
+  - Checkpoint Crystal (rare)
+  - Respawn Token (epic — allow respawn at any cleared checkpoint)
+  danger_notes: Always clear respawn points first. Never push deeper without securing your respawn.
+- id: dun_009
+  name: Corridor Mimic
+  tier: Variable (matches dungeon)
+  type: Aberration
+  habitat:
+  - dungeon corridors
+  - treasure rooms
+  - safe zones
+  description: Mimics entire rooms. What appears as a safe rest area is actually a digestive chamber. Dissolves anything inside
+    over hours.
+  base_stats:
+    STR: 8
+    AGI: 1
+    END: 20
+    INT: 5
+    PER: 10
+    LCK: 3
+  abilities:
+  - Room Mimic (become a perfect copy of any room)
+  - Acid Walls (interior surfaces secrete digestive acid)
+  - Seal (close all exits once prey enters)
+  rp_reward: Variable (2x dungeon tier base)
+  loot_table:
+  - Mimic Core (rare)
+  - Shape-Memory Tissue (epic)
+  - Acid Gland (rare)
+  danger_notes: Test every room before relaxing. Throw something organic in first — acid damage is detectable. The walls flinch
+    if struck hard.
+  weak_to:
+  - Fire (causes reflexive opening)
+  - Extreme cold (cracks the form)
+  resistant_to:
+  - Physical
+  - Poison
+- id: dun_010
+  name: Loot Specter
+  tier: Variable
+  type: Undead
+  habitat:
+  - treasure rooms
+  - boss loot piles
+  - dungeon exits
+  description: Spirit bound to valuable loot. Possesses anyone who takes its treasure. Forces them to return loot and attack
+    their own party.
+  base_stats:
+    STR: 0
+    AGI: 12
+    END: 4
+    INT: 8
+    PER: 14
+    LCK: 7
+  abilities:
+  - Possession (inhabit anyone carrying its bound item)
+  - Greed Aura (compel targets to pick up cursed loot)
+  - Spectral Wail (AoE fear effect)
+  rp_reward: Variable
+  loot_table:
+  - Binding Shard (rare)
+  - Spectral Essence (epic)
+  - Cursed but valuable loot items
+  danger_notes: Identify and purify cursed items before looting. Holy or System-purification abilities break the binding.
+  weak_to:
+  - Holy
+  - Purification
+  - System cleanse
+  resistant_to:
+  - Physical (incorporeal)
+  - Elemental
+- id: dun_011
+  name: Floor Guardian
+  tier: Variable (tier of current floor)
+  type: Construct
+  habitat:
+  - dungeon floor transitions
+  - stairwells
+  - elevator rooms
+  description: Mandatory mini-boss at each dungeon floor transition. Designed to test specific skills — different Guardian
+    types test different stats.
+  base_stats:
+    STR: 15
+    AGI: 8
+    END: 18
+    INT: 8
+    PER: 10
+    LCK: 2
+  abilities:
+  - Stat Test (challenge based on random stat)
+  - Escalation (grows stronger each minute)
+  - Floor Lock (prevents retreat once engaged)
+  rp_reward: 3x floor tier base
+  loot_table:
+  - Guardian Core (epic)
+  - Floor Key (quest item)
+  - Stat Crystal (random stat boost)
+  danger_notes: Prepare for any stat test. Well-rounded parties fare better than min-maxed ones. 5-minute time limit before
+    Escalation becomes unbeatable.
+  weak_to:
+  - Matched stat attacks (exploit test type)
+  resistant_to:
+  - Off-stat attacks
+- id: dun_012
+  name: Trap Weaver
+  tier: Variable
+  type: Insectoid
+  habitat:
+  - dungeon corridors
+  - trap rooms
+  - puzzle chambers
+  description: Spider-like creature that constructs elaborate traps from System energy. Each trap is unique and tailored to
+    the party's weaknesses.
+  base_stats:
+    STR: 4
+    AGI: 11
+    END: 6
+    INT: 12
+    PER: 13
+    LCK: 5
+  abilities:
+  - Analyze (scan party for weaknesses)
+  - Custom Trap (build trap targeting specific weaknesses)
+  - Escape Artist (teleport to prepared location when cornered)
+  rp_reward: 2x dungeon tier
+  loot_table:
+  - Trap Schematic (rare)
+  - Weaver Silk (rare)
+  - Sensor Gland (epic)
+  danger_notes: Moves ahead of party to set traps. Send scouts or use detection abilities. Destroying its web network reveals
+    its location.
+  weak_to:
+  - Speed (catch before it sets traps)
+  - Fire (destroy web network)
+  resistant_to:
+  - Traps (immune to its own)
+- id: dun_013
+  name: Echo of the Fallen
+  tier: Variable (tier of original Traveller)
+  type: Undead
+  habitat:
+  - dungeon death sites
+  - boss rooms (previous failures)
+  description: Ghost of a Traveller who died in the dungeon. Fights with all the abilities and equipment they had in life.
+    Tragic but deadly.
+  base_stats:
+    STR: Variable
+    AGI: Variable
+    END: Variable
+    INT: Variable
+    PER: Variable
+    LCK: Variable
+  abilities:
+  - Mirror Fight (uses abilities of its living form)
+  - Death Memory (plays out its death, creating predictable patterns)
+  - Last Stand (at 10% HP, enters berserk state)
+  rp_reward: 2x original Traveller level
+  loot_table:
+  - Echo Crystal (rare)
+  - Memory Fragment (epic)
+  - Original equipment (damaged)
+  danger_notes: Study its death pattern — it repeats. Counter the abilities it used in life. Some can be reasoned with if
+    their name is known.
+  weak_to:
+  - Holy
+  - Calling their name
+  - System purification
+  resistant_to:
+  - Same abilities it used in life
+- id: dun_014
+  name: Puzzle Golem
+  tier: 3
+  type: Construct
+  description: Golem that can only be damaged by solving its puzzle. Physical attacks bounce off harmlessly.
+  rp_reward: 400
+  drops:
+  - Puzzle Core
+  - Logic Crystal
+  - Golem Fragment
+  behavior: Presents increasingly complex puzzles. Attacks while target thinks. Puzzle difficulty scales with dungeon floor.
+- id: dun_015
+  name: Treasure Mimic King
+  tier: 5
+  type: Shapeshifter
+  description: The evolved form of corridor mimics. Can disguise as an entire room, including floor, walls, and ceiling.
+  rp_reward: 3000
+  drops:
+  - Mimic King Core
+  - Shapeshifter Membrane
+  - Fake Treasure (actually valuable)
+  behavior: Creates elaborate treasure rooms to lure adventurers. The entire room is its mouth.
+- id: dun_016
+  name: Staircase Serpent
+  tier: 2
+  type: Beast
+  description: Serpent that wraps around dungeon staircases. Blends perfectly with stone steps.
+  rp_reward: 150
+  drops:
+  - Stone Scale
+  - Serpent Fang
+  - Staircase Fragment
+  behavior: Waits for targets to step on it, then constricts. Dungeon staircases become death traps.
+- id: dun_017
+  name: Door Guardian
+  tier: Variable (matches floor difficulty)
+  type: Construct
+  description: Guardian bound to specific doors. Must be defeated to proceed. Cannot be bypassed by any means.
+  rp_reward: Scales with floor
+  drops:
+  - Door Key
+  - Guardian Core
+  - Passage Token
+  behavior: Challenges entrants to combat, puzzles, or tests. Each door guardian is unique.
+- id: dun_018
+  name: Shadow Stalker
+  tier: 3
+  type: Spectral
+  description: Creature that inhabits shadows. Can only be seen and damaged when illuminated.
+  rp_reward: 500
+  drops:
+  - Shadow Essence
+  - Dark Crystal
+  - Stalker Fang
+  behavior: Follows party through dungeon, attacking from shadows. Retreats when light sources are aimed at it.
+- id: dun_019
+  name: Loot Goblin
+  tier: 1
+  type: Humanoid
+  description: Small creatures that hoard treasure. Extremely fast and evasive. Killing one guarantees rare loot.
+  rp_reward: 1000
+  drops:
+  - Random rare item
+  - Gold pile
+  - RP Crystal
+  behavior: Appears rarely. Runs away at incredible speed. If caught and killed, drops guaranteed rare loot.
+- id: dun_020
+  name: Gravity Room Creature
+  tier: 4
+  type: Anomaly
+  description: Entity that IS the dungeon room it occupies. Can change gravity direction every 3 seconds.
+  rp_reward: 1500
+  drops:
+  - Gravity Core
+  - Room Fragment
+  - Spatial Distortion Crystal
+  behavior: Flips gravity repeatedly to disorient targets, then attacks with walls, floor, and ceiling.
+- id: dun_021
+  name: Respawn Zombie
+  tier: 2
+  type: Undead
+  description: Dungeon zombie that respawns 60 seconds after being killed. Must destroy respawn anchor to permanently kill.
+  rp_reward: 100
+  drops:
+  - Respawn Anchor Fragment
+  - Zombie Core
+  - Undead Tissue
+  behavior: Relentless. Attacks, dies, respawns, attacks again. The anchor is hidden somewhere on the same floor.
+- id: dun_022
+  name: Poison Gas Elemental
+  tier: 3
+  type: Elemental
+  description: Cloud of toxic gas with rudimentary intelligence. Fills rooms and corridors with deadly fumes.
+  rp_reward: 350
+  drops:
+  - Toxic Core
+  - Purified Gas Sample
+  - Poison Resistance Crystal
+  behavior: Expands to fill enclosed spaces. Physical attacks pass through it. Only vulnerable to wind or vacuum.
+- id: dun_023
+  name: Dungeon Core
+  tier: 8
+  type: Boss (Rare)
+  description: The living heart of a dungeon. Destroying it collapses the entire dungeon but yields extraordinary rewards.
+  rp_reward: 100000
+  drops:
+  - Dungeon Heart Crystal
+  - Infinite Loot Token
+  - Dungeon Blueprint
+  behavior: Summons all dungeon creatures to defend it. Controls traps, gravity, doors, and environment.

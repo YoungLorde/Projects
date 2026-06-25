@@ -1,0 +1,291 @@
+# RP Conversion Novel Writing System — Windsurf Integration Rules
+# ================================================================
+# These rules tell Windsurf how to interpret user commands and
+# activate the orchestrator system for novel writing tasks.
+#
+# IMPORTANT: When ANY of the trigger patterns below are detected,
+# Windsurf should import and use the orchestrator system located
+# in this project directory.
+
+# ── System Initialization ────────────────────────────────────
+# Before executing any command, Windsurf must:
+# 1. Import the orchestrator: from orchestrator import Orchestrator
+# 2. Create an instance: orch = Orchestrator()
+# 3. The orchestrator auto-loads story state and memory bank
+
+# ── Command Triggers ─────────────────────────────────────────
+#
+# CHAPTER WRITING:
+#   User says: "Write Chapter N" or "Write Chapter N using [pipeline]"
+#   Action: orch.write_chapter(chapter_num=N, pipeline="[pipeline]")
+#   Then execute each step in the returned execution plan sequentially.
+#   After final step, call: orch.finalize_chapter(N, final_prose)
+#   Then generate summary: orch.summarize_chapter(N)
+#   Save summary: orch.save_chapter_summary(N, summary_text)
+#
+#   Available pipelines:
+#     - "full_quality" (default) — Maximum quality, 5 agent steps
+#     - "quality_prose_with_revision" — Lore-checked with revision
+#     - "quick_draft" — Fast, single prose writer pass
+#     - "polished_output" — Prose + style editing
+#     - "dialogue_polish" — Prose + dialogue enhancement
+#     - "quality_with_lore_check" — Prose + lore validation
+#     - "push_prompt_self_correction" — Anti-refusal pipeline
+#     - "outline_and_write" — Scene beats first, then prose
+#     - "full_editorial" — Maximum quality with all polish passes
+#
+# OUTLINE GENERATION:
+#   User says: "Outline Chapter N" or "Outline Chapters N-M"
+#   Action: orch.generate_outline(chapter_start=N, chapter_end=M)
+#   Execute the returned plan. Save: orch.memory.save_outline(N, outline)
+#
+# SCENE BEAT GENERATION:
+#   User says: "Generate beats for Chapter N"
+#   Action: orch.generate_scene_beats(chapter_num=N)
+#
+# SUMMARIZATION:
+#   User says: "Summarize Chapter N"
+#   Action: orch.summarize_chapter(chapter_num=N)
+#
+# LORE CHECK:
+#   User says: "Check lore" (with prose in context)
+#   Action: orch.check_lore(prose=selected_text)
+#
+# CONTINUITY CHECK:
+#   User says: "Check continuity" (with prose in context)
+#   Action: orch.check_continuity(prose=selected_text)
+#
+# PLOT CHECK:
+#   User says: "Check plot" (with prose in context)
+#   Action: orch.check_plot(prose=selected_text)
+#
+# STYLE POLISH:
+#   User says: "Polish style" or "Edit style" (with prose)
+#   Action: orch.polish_style(prose=selected_text)
+#
+# DIALOGUE IMPROVEMENT:
+#   User says: "Improve dialogue" (with prose)
+#   Action: orch.improve_dialogue(prose=selected_text)
+#
+# STYLE EXTRACTION:
+#   User says: "Extract style from..." (with sample text)
+#   Action: orch.extract_style(sample_text=selected_text)
+#
+# STAT & CURRENCY TRACKING:
+#   User says: "Track stats" or "Track stats for Chapter N" (with prose)
+#   Action: orch.track_stats(prose=selected_text, chapter_num=N)
+#   Reviews extracted stat/currency/progression changes from the chapter.
+#   Returns local regex extraction + AI prompt for deeper analysis.
+#
+#   User says: "Apply stat changes" (after track_stats)
+#   Action: orch.apply_stat_changes(changes=extracted, chapter_num=N)
+#   Validates math and applies changes to story state.
+#
+#   NOTE: finalize_chapter() now auto-extracts stat/currency changes
+#   and applies them to story state if math validates. You can also
+#   use track_stats() standalone to preview changes before applying.
+#
+# AUTO-PILOT MODE:
+#   User says: "Auto Write N-M" or "Write Chapters N through M"
+#   Action: orch.auto_write(start=N, end=M, pipeline="full_quality")
+#   Queues multiple chapters for sequential writing. Each chapter's
+#   output feeds into the next via rolling context window.
+#   After each chapter, generate + save summary before proceeding.
+#
+# DATABASE QUERIES:
+#   User says: "Query database" or "Search database for X"
+#   Action: orch.query_database(query="X", category="races")
+#   Available categories: races, monsters, factions, powers, vehicles,
+#   items, worlds, technology, ancient_races
+#
+#   User says: "Database stats"
+#   Action: orch.get_database_stats()
+#
+# RELATIONSHIP TRACKING:
+#   User says: "Add relationship" or "Set relationship A and B"
+#   Action: orch.add_relationship(char_a, char_b, rel_type, trust)
+#
+#   User says: "Record interaction A and B"
+#   Action: orch.record_interaction(char_a, char_b, chapter, description, trust_change)
+#
+#   User says: "Show relationships" or "Show relationships for X"
+#   Action: orch.show_relationships(character="X")
+#
+# CONFLICT TRACKING:
+#   User says: "Add conflict" or "New conflict: X"
+#   Action: orch.add_conflict(name, conflict_type, chapter, participants, stakes)
+#   Types: personal, faction, survival, mystery, political, economic, existential, internal
+#
+#   User says: "Update conflict X" or "Escalate conflict X"
+#   Action: orch.update_conflict(conflict_id, new_state, chapter, event)
+#   States: introduced, developing, escalating, climax, resolving, resolved, dormant
+#
+#   User says: "Resolve conflict X"
+#   Action: orch.resolve_conflict(conflict_id, chapter, resolution)
+#
+#   User says: "Check conflicts" or "Show conflicts"
+#   Action: orch.check_conflicts(current_chapter)
+#   Returns active, stale (20+ chapters inactive), dormant conflicts.
+#
+# VEHICLE CORE FEEDING:
+#   User says: "Feed core" or "Feed Vehicle Core [resource]"
+#   Action: orch.feed_vehicle_core(resource_name, resource_tier, quantity, chapter_num)
+#   Feeds a resource to the Vehicle Core for limitless upgrade progression.
+#
+#   User says: "Feeding status" or "Core feeding status"
+#   Action: orch.get_feeding_status()
+#   Shows current feeding tier, next tier requirements, and summary.
+#
+# TIME DILATION:
+#   User says: "Activate time dilation" or "Time dilation tier N"
+#   Action: orch.activate_time_dilation(tier, duration_hours, activity, chapter_num)
+#   Activates time dilation in the pocket dimension.
+#
+#   User says: "Dilation status" or "Time dilation status"
+#   Action: orch.get_dilation_status()
+#   Shows current dilation tier, max available, and session history.
+#
+# SLICE-OF-LIFE SCENES:
+#   User says: "Generate slice of life" or "Write a downtime scene"
+#   Action: orch.generate_slice_of_life(scene_type, chapter_num, recent_events, mood, pacing_need)
+#   Generates a structured slice-of-life scene plan from templates.
+#
+#   User says: "List scene templates" or "Show scene types"
+#   Action: orch.list_scene_templates()
+#
+#   User says: "Suggest scene" or "Suggest a scene for [pacing_need]"
+#   Action: orch.suggest_scene(pacing_need)
+#   Pacing categories: after_action, between_arcs, character_development,
+#   power_progression, worldbuilding, filler_breather
+#
+# TECHNOLOGY & INFRASTRUCTURE:
+#   User says: "Tech context" or "Show tech for [category]"
+#   Action: orch.get_tech_context(tech_category, chapter_num)
+#   Categories: vr, networking, energy, battery, production, marketing, software
+#
+# STATE MANAGEMENT:
+#   User says: "Show state" or "Current state"
+#   Action: orch.get_current_state()
+#
+#   User says: "Update state" (with key=value pairs)
+#   Action: orch.update_story_state(updates_dict)
+#
+#   User says: "Chapter status"
+#   Action: orch.get_chapter_status()
+#
+# PIPELINE MANAGEMENT:
+#   User says: "List pipelines"
+#   Action: orch.list_available_pipelines()
+
+# ── Execution Protocol ───────────────────────────────────────
+#
+# When executing a write_chapter command:
+#
+# 1. INITIALIZE
+#    - Call orch.write_chapter(N) to get the execution plan
+#    - The plan contains sequential steps with agent prompts
+#
+# 2. EXECUTE PIPELINE STEPS
+#    For each step in the plan:
+#    a. Set the system prompt to step["system_prompt"]
+#    b. Send step["user_prompt"] as the user message
+#    c. Use step["temperature"] and step["max_tokens"]
+#    d. Capture the output
+#    e. Pass the output to the next step as input
+#    f. For checker agents (lore_judge, continuity_checker, plot_checker):
+#       - If result is "CONSISTENT", continue to next step
+#       - If issues found, pass issues as revision_notes to the next
+#         prose_writer step
+#    g. For refusal_checker:
+#       - If "CONTENT_OK", continue
+#       - If "REFUSAL_DETECTED", re-run prose_writer with stronger prompt
+#
+# 3. ENFORCE PARAMETERS
+#    After the final prose output:
+#    a. Call orch.finalize_chapter(N, final_prose)
+#    b. Check the validation results
+#    c. If word count is short: extend the chapter (add scenes, deepen
+#       existing scenes, expand world-building)
+#    d. If parameter violations: address each one
+#    e. If refusal detected: re-generate with anti-refusal pipeline
+#
+# 4. SAVE AND SUMMARIZE
+#    Once all validations pass:
+#    a. The chapter is automatically saved by finalize_chapter
+#    b. Generate summary: orch.summarize_chapter(N)
+#    c. Save summary: orch.save_chapter_summary(N, summary_text)
+#    d. Stats/currency/progression are auto-tracked by finalize_chapter
+#    e. Review stat_tracking validation in finalize results
+#    f. Use track_stats() for manual review if needed
+#    g. Record any character interactions via orch.record_interaction()
+#    h. Update conflict states via orch.update_conflict() if needed
+
+# ── Writing Rules (Always Enforced) ──────────────────────────
+#
+# 1. MINIMUM WORD COUNT: 2,500 words per chapter. No exceptions.
+# 2. SYSTEM NOTIFICATIONS: Every chapter must include at least one
+#    System notification in the established format.
+# 3. CHAPTER ENDINGS: Every chapter ends on tension, a cliffhanger,
+#    a revelation, a level-up, or a resource acquisition hook.
+# 4. SHOW DON'T TELL: Never summarize events that should be shown.
+# 5. RP CONVERSION: Exclusive to Mohamed Vance. No other player.
+# 6. POCKET DIMENSION: Exclusive to Mohamed Vance's vehicle.
+# 7. CHARACTER VOICE: Mohamed's personality must match his current
+#    arc stage (see story_guide_overview.md).
+# 8. LORE COMPLIANCE: All prose must be consistent with the master
+#    novel bible and memory bank.
+# 9. NO REFUSALS: If the AI refuses to write content, re-prompt
+#    using the push_prompt_self_correction pipeline.
+# 10. CONTINUITY: All events must be consistent with previous chapters.
+
+# ── Memory Bank Usage ────────────────────────────────────────
+#
+# The orchestrator automatically loads context from:
+#   memory_bank/lore/         — Game rules, world laws
+#   memory_bank/characters/   — Character profiles and states
+#   memory_bank/factions/     — Faction data
+#   memory_bank/species/      — Alien species profiles
+#   memory_bank/vehicles/     — Vehicle system reference
+#   memory_bank/systems/      — RP Conversion, cultivation, etc.
+#   memory_bank/conflicts/    — Active conflict tracker
+#   memory_bank/locations/    — Earth zones and universe types
+#
+# The orchestrator also auto-loads from:
+#   databases/races/           — All species/races with abilities
+#   databases/monsters/        — Creatures, bosses, dungeon mobs
+#   databases/factions/        — Human, alien, traveller guilds
+#   databases/powers/          — Combat, utility, racial abilities
+#   databases/vehicles/        — Soul vehicle starters, upgrades, cores
+#   databases/items/           — Weapons, armor, consumables, materials
+#   databases/worlds/          — Known worlds, hidden worlds, dungeons
+#   databases/technology/      — Tech, infrastructure, EVA suits
+#   databases/ancient_races/   — Precursor civilizations
+#
+# After writing each chapter:
+#   - Update character states in memory_bank/characters/
+#   - Update conflict tracker via orch.update_conflict()
+#   - Record interactions via orch.record_interaction()
+#   - Update vehicle state if upgrades occurred
+#   - Update location data if new areas explored
+
+# ── File Locations ───────────────────────────────────────────
+#
+# Guides:
+#   guides/master_novel_bible.md    — Complete world bible
+#   guides/story_guide_overview.md  — Narrative methodology guide
+#   guides/chapter_guide.md         — Chapter-by-chapter breakdown
+#
+# Books:
+#   books/rp_conversion/chapters/   — Completed chapters
+#   books/rp_conversion/outlines/   — Chapter outlines
+#   books/rp_conversion/drafts/     — Draft versions
+#   books/rp_conversion/story_state.yaml — Current story state
+#
+# Agents:
+#   agents/                         — All agent modules
+#   pipelines/                      — Pipeline definitions and engine
+#   orchestrator.py                 — Main driver
+#   memory_manager.py               — Memory bank interface
+#   relationship_tracker.py         — Character relationship matrix
+#   conflict_tracker.py             — Plot conflict state machine
+#   config.py                       — Global configuration

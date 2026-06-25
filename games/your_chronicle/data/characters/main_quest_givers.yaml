@@ -1,0 +1,316 @@
+collection: main_quest_givers
+description: >
+  The 10 key story NPCs who give Main Quests in Your Chronicle (names revamped for
+  the survival-to-Universe-Overlord setting). Each advances the core story across
+  the phase progression. New fields: rarity, recruitable, can_level, can_die, and
+  base_stats/archetype so NPCs plug into the level-up / death / recruitment systems.
+  Transient/seasonal NPCs fade out as players progress and are gone after a rebirth.
+characters:
+  - id: CHR-MQ-001
+    name: Garrok Emberhand
+    title: The Last Survivor of Ashfall
+    role: Survival Mentor
+    role_category: quest_giver
+    importance: key
+    persistence: anchor
+    rarity: legendary
+    recruitable: false
+    can_level: false
+    can_die: false
+    archetype: laborer
+    base_stats: {hp: 400, atk: 60, def: 70, spd: 30, vit: 90, int: 40, lck: 20, cha: 50, ldr: 30}
+    faction: The Ashen Frontier
+    home_location: The ruins beside your Wooden Shack
+    gives_main_quest: true
+    appears_in_chapters: [1, 2, 3]
+    unlock_condition: Start a new chronicle (default available)
+    quests_given:
+      - "Repair the Shack — gather wood, stone, and fiber to make the shack livable."
+      - "First Harvest — learn to gather and survive your first nights."
+      - "Take in a Stray — recruit your very first villager."
+    personality: Weathered, gruff, secretly hopeful that someone will rebuild what he couldn't.
+    voice_sample: "Everything I built burned. But you? You've got a shack and two hands. That's how every kingdom starts, kid."
+    backstory: >
+      Garrok Emberhand was the headman of Ashfall, a frontier village wiped out in a
+      single night. The lone survivor, he wandered the wilds until he found you beside
+      a derelict shack. He teaches the fundamentals — gathering, survival, the first
+      repair — and plants the dream that you might raise an empire from nothing.
+    lore_notes: The first mentor. His ruined village is the tutorial zone and a recurring lore thread.
+    rewards_theme: Tutorial gathering/survival unlocks and the first recruit slot.
+
+  - id: CHR-MQ-002
+    name: Elder Mira Thornwood
+    title: Keeper of the First Hearth
+    role: Village Elder
+    role_category: quest_giver
+    importance: key
+    persistence: recurring
+    rarity: epic
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: leader
+    base_stats: {hp: 220, atk: 25, def: 40, spd: 35, vit: 60, int: 90, lck: 40, cha: 110, ldr: 130}
+    faction: Your Settlement
+    home_location: The Village Hall
+    gives_main_quest: true
+    appears_in_chapters: [3, 4, 5, 6]
+    unlock_condition: Reach the Hamlet phase
+    quests_given:
+      - "Found the Village — grow your population and build the Village Hall."
+      - "Assign the Work — delegate villagers to their first jobs."
+      - "Charter the Town — petition for a town charter."
+    personality: Wise, warm, fiercely protective of every soul under her care.
+    voice_sample: "A roof is not a home, child. People are. Bring them in, give them purpose, and watch what we become."
+    backstory: >
+      Mira Thornwood is the first true citizen to believe in your settlement, an elder
+      with decades of governance behind her. She teaches population growth, job
+      delegation, and the path from hamlet to town. She can be formally recruited as
+      your first advisor — and, being mortal, she can be lost.
+    lore_notes: Hub for the villager/jobs system. Recruitable advisor who levels and can die.
+    rewards_theme: Job delegation, population caps, and governance unlocks.
+
+  - id: CHR-MQ-003
+    name: Bryn Coalfist
+    title: Wandering Forgemaster
+    role: Combat & Crafting Trainer
+    role_category: quest_giver
+    importance: major
+    persistence: recurring
+    rarity: epic
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: warrior
+    base_stats: {hp: 320, atk: 110, def: 90, spd: 40, vit: 80, int: 70, lck: 30, cha: 45, ldr: 50}
+    faction: Independent
+    home_location: A traveling forge-wagon
+    gives_main_quest: true
+    appears_in_chapters: [3, 4, 5]
+    unlock_condition: Build your first Workshop
+    quests_given:
+      - "Forge Your First Blade — craft a weapon at the workshop."
+      - "Temper Yourself — clear an F-rank dungeon."
+      - "The Coalfist Standard — reach a combat-power threshold."
+    personality: Loud, generous with knowledge, brutal in training.
+    voice_sample: "Steel doesn't care how you feel. Hit it right or it breaks. Same goes for monsters. Again!"
+    backstory: >
+      Bryn Coalfist roams the frontier teaching survivors to forge and to fight. He
+      bridges crafting and combat, unlocking weapon-crafting and the dungeon loop.
+      Recruitable as a master crafter who keeps growing stronger at your side.
+    lore_notes: Links crafting + combat systems. Recruitable; levels; can die.
+    rewards_theme: Weapon crafting, combat unlocks, dungeon access.
+
+  - id: CHR-MQ-004
+    name: The Ashen Pilgrim
+    title: Unknown
+    role: Mysterious Wanderer
+    role_category: quest_giver
+    importance: key
+    persistence: transient
+    rarity: mythic
+    recruitable: false
+    can_level: false
+    can_die: false
+    archetype: rogue
+    base_stats: {hp: 150, atk: 80, def: 40, spd: 120, vit: 50, int: 130, lck: 200, cha: 60, ldr: 40}
+    faction: Unaffiliated (Unknown)
+    home_location: A roadside cairn that is empty when you return
+    gives_main_quest: true
+    appears_in_chapters: [2, 5]
+    unlock_condition: First time you leave your starting settlement
+    quests_given:
+      - "A Word of Warning — one ominous errand with an outsized reward."
+      - "The Second Meeting — appears once more, far later, then never again."
+    personality: Cryptic, melancholic, speaks as if they have already seen how it ends.
+    voice_sample: "I ruled a universe once. Then I blinked. Build faster than the dark, wanderer — it is always building too."
+    backstory: >
+      The Ashen Pilgrim is a former Universe Overlord whose dominion collapsed — a
+      living warning of what waits at the summit. They appear exactly twice, then are
+      gone forever (and gone entirely after a rebirth), embodying the transient NPC.
+    lore_notes: DESIGN NOTE — canonical TRANSIENT key NPC. Foreshadows the endgame; never returns after Chapter 5 or any rebirth.
+    rewards_theme: One-time large currency/material injections and an endgame foreshadowing relic.
+
+  - id: CHR-MQ-005
+    name: Envoy Castellan Reyes
+    title: Herald of the Iron Crown
+    role: Imperial Envoy
+    role_category: quest_giver
+    importance: major
+    persistence: milestone
+    rarity: legendary
+    recruitable: false
+    can_level: false
+    can_die: false
+    archetype: leader
+    base_stats: {hp: 260, atk: 50, def: 80, spd: 40, vit: 70, int: 100, lck: 50, cha: 140, ldr: 160}
+    faction: The Iron Crown
+    home_location: Appears only at kingdom/empire phase gates
+    gives_main_quest: true
+    appears_in_chapters: [4, 6]
+    unlock_condition: Reach the Kingdom phase
+    quests_given:
+      - "The Crown Takes Notice — a summons that gates the Empire era."
+      - "The Final Decree — a climactic imperial quest that gates the cosmic era."
+    personality: Ceremonial, proud, privately terrified of the rising void.
+    voice_sample: "The Iron Crown has heard your name in the mouths of the conquered. It would rather you kneel than be knelt to."
+    backstory: >
+      Castellan Reyes speaks for the old empire that once ruled the planet. He appears
+      only at major progression gates, each visit a turning point as the wider powers
+      acknowledge — and test — your ascent.
+    lore_notes: MILESTONE NPC. Rare appearances mark empire/cosmic-era gates.
+    rewards_theme: Empire-era unlocks, Gold/Zenu rewards, and phase-gate keys.
+
+  - id: CHR-MQ-006
+    name: Guildmaster Dax Holloway
+    title: Head of the Frontier Adventurers' Guild
+    role: Guild Master
+    role_category: quest_giver
+    importance: major
+    persistence: recurring
+    rarity: epic
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: warrior
+    base_stats: {hp: 300, atk: 95, def: 75, spd: 60, vit: 75, int: 70, lck: 60, cha: 90, ldr: 100}
+    faction: Frontier Adventurers' Guild
+    home_location: The Guild Hall
+    gives_main_quest: true
+    appears_in_chapters: [3, 4, 5, 6]
+    unlock_condition: Reach the Township phase
+    quests_given:
+      - "Register — join the Guild and unlock the bounty board."
+      - "Climb the Ranks — clear higher-rank dungeons on contract."
+      - "The Guild's Gambit — lead an expedition into an S-rank dungeon."
+    personality: Pragmatic, fair, allergic to imperial politics.
+    voice_sample: "Crown gives orders. Guild gives work. And work is the only thing that ever turned a nobody into a legend."
+    backstory: >
+      Dax Holloway built the Frontier Guild from a single bounty board. He offers a
+      path to power outside the empire, anchoring the dungeon and gear loops.
+    lore_notes: Hub for vendors, bounties, and dungeon contracts. Recruitable; levels; can die.
+    rewards_theme: Bounty board, vendor access, dungeon contracts, reputation.
+
+  - id: CHR-MQ-007
+    name: Seeress Vauna of the Hollow Star
+    title: Oracle of the Frontier
+    role: Oracle / Prophet
+    role_category: quest_giver
+    importance: key
+    persistence: recurring
+    rarity: legendary
+    recruitable: true
+    can_level: true
+    can_die: false
+    archetype: scholar
+    base_stats: {hp: 180, atk: 30, def: 35, spd: 45, vit: 55, int: 200, lck: 150, cha: 80, ldr: 60}
+    faction: The Hollow Star Order
+    home_location: The Star-Watch Spire
+    gives_main_quest: true
+    appears_in_chapters: [3, 5, 6]
+    unlock_condition: Complete the Oracle's introduction event
+    quests_given:
+      - "The Prophecy of Ash — receive the central prophecy of the game."
+      - "Reading the Void — investigate the spreading cosmic corruption."
+      - "The Overlord's Choice — the final prophecy that frames the endgame."
+    personality: Serene, unnerving, speaks of your future in the past tense.
+    voice_sample: "I have read your ending in the dark between stars. You have not written it yet. That is the only mercy left."
+    backstory: >
+      Vauna reads the Hollow Star — the silence where the void eats creation. She
+      foresees the cataclysm that threatens every phase beyond the planet and believes
+      only an ascending Overlord can avert it. Her prophecies drive the late story.
+    lore_notes: Prophecies double as the hint system for endgame mechanics. Recruitable seer.
+    rewards_theme: Prophecy-gated lore, late-game multipliers, endgame keys.
+
+  - id: CHR-MQ-008
+    name: Cartographer Toll Inkfoot
+    title: Master Mapper of the Wilds
+    role: Explorer / Cartographer
+    role_category: quest_giver
+    importance: major
+    persistence: recurring
+    rarity: rare
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: rogue
+    base_stats: {hp: 200, atk: 60, def: 50, spd: 130, vit: 60, int: 90, lck: 120, cha: 70, ldr: 50}
+    faction: Frontier Adventurers' Guild
+    home_location: The Mapping Room
+    gives_main_quest: true
+    appears_in_chapters: [2, 3, 4, 5]
+    unlock_condition: Clear your first dungeon
+    quests_given:
+      - "Chart the Wilds — unlock the map and idle expeditions."
+      - "Deep Delves — discover higher-rank dungeons."
+      - "The Edge of the World — map the regions hiding the void."
+    personality: Excitable, restless, addicted to blank spaces on the map.
+    voice_sample: "Every empty patch of map is a story waiting to be conquered. Let's go fill it in."
+    backstory: >
+      Toll Inkfoot has mapped more of the wilds than anyone alive, losing fingers and
+      friends along the way. He unlocks dungeons, idle expeditions, and the road to the
+      stars. Recruitable scout-leader who keeps leveling.
+    lore_notes: Dungeon/expedition unlocks; idle offline gains. Recruitable; can die.
+    rewards_theme: Dungeon unlocks, idle expedition slots, map-based offline gains.
+
+  - id: CHR-MQ-009
+    name: Apothecary Sable Nightroot
+    title: Master of Brews and Cures
+    role: Alchemy Master
+    role_category: quest_giver
+    importance: major
+    persistence: recurring
+    rarity: epic
+    recruitable: true
+    can_level: true
+    can_die: true
+    archetype: artisan
+    base_stats: {hp: 190, atk: 35, def: 40, spd: 50, vit: 70, int: 180, lck: 80, cha: 60, ldr: 50}
+    faction: Independent
+    home_location: The Nightroot Apothecary
+    gives_main_quest: true
+    appears_in_chapters: [2, 3, 5]
+    unlock_condition: Build a Kitchen or Arcane Lab
+    quests_given:
+      - "First Brew — craft your first potion and unlock consumables."
+      - "Volatile Knowledge — gather rare reagents from dungeons."
+      - "The Antidote to the Void — brew the cure needed for the endgame."
+    personality: Eccentric, generous, perpetually faintly singed.
+    voice_sample: "Drink first, ask later — no, wait, READ the label. I learned that one the loud way."
+    backstory: >
+      Sable Nightroot is the frontier's resident genius and hazard. Her potions turn
+      fights and bootstrap the consumables economy and survival medicine. Recruitable
+      master alchemist.
+    lore_notes: Bridge to potion vendors; crafts the only known void cure. Recruitable; can die.
+    rewards_theme: Consumable crafting, potion vendor unlocks, survival medicine.
+
+  - id: CHR-MQ-010
+    name: Aeon, the World-Scribe
+    title: Keeper of the Living Chronicle
+    role: Narrator / Loremaster
+    role_category: quest_giver
+    importance: key
+    persistence: anchor
+    rarity: primordial
+    recruitable: false
+    can_level: false
+    can_die: false
+    archetype: scholar
+    base_stats: {hp: 999999, atk: 9999, def: 9999, spd: 9999, vit: 9999, int: 99999, lck: 9999, cha: 9999, ldr: 99999}
+    faction: The Order of the Living Chronicle
+    home_location: The Reading Room (a pocket of space inside your Chronicle)
+    gives_main_quest: true
+    appears_in_chapters: [1, 2, 3, 4, 5, 6]
+    unlock_condition: Always present — frames the entire game
+    quests_given:
+      - "Open the Chronicle — the tutorial quest that begins everything."
+      - "Each Phase's Threshold — Aeon narrates and gates every era."
+      - "Write the Ending — the final quest: become the Universe Overlord."
+    personality: Timeless, kind, faintly amused by mortals; the literal narrator.
+    voice_sample: "And so it begins — as every great story does — with a single survivor and a single, trembling line of ink."
+    backstory: >
+      Aeon is the spirit of your living book, the voice that narrates the game, frames
+      every phase, and reveals at the summit that you have been writing your own legend
+      all along. The ANCHOR NPC present from the first click to the last.
+    lore_notes: DESIGN NOTE — canonical ANCHOR NPC and framing device. Survives rebirth (the only NPC who does).
+    rewards_theme: Phase gates, rebirth/ascension framing, the endgame finale.

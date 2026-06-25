@@ -1,0 +1,821 @@
+races:
+- id: race_h001
+  name: Kael'thari
+  classification: humanoid
+  homeworld: Kael Prime
+  universe_origin: Rift Expanse
+  avg_height_cm: 210
+  avg_lifespan_years: 400
+  skin_tones:
+  - deep violet
+  - midnight blue
+  - obsidian
+  distinguishing_features: Bioluminescent vein patterns visible under skin, triple-pupil eyes
+  base_stats:
+    STR: 6
+    AGI: 8
+    END: 5
+    INT: 9
+    PER: 7
+    LCK: 4
+    SYS: 6
+  racial_ability: Vein Pulse — short-range EMP burst from bioluminescent network
+  culture: Meritocratic technocracy. Value intellectual achievement above all. Their cities are vast crystal spires connected
+    by light-bridges.
+  language: Kaelthari (tonal, 7 pitch registers)
+  diet: Omnivore, preference for bioluminescent fungi
+  traveller_percentage: 35
+  known_for: Advanced energy manipulation, crystal engineering
+  weakness: Sensitive to ultraviolet radiation — prolonged exposure causes vein-burn
+  diplomatic_stance: Neutral-cautious. Trade freely but rarely form alliances.
+  vehicle_preference: Sleek interceptor-class vehicles with crystal-weave hulls
+  lore_notes: One of the first non-human races humanity encountered after System activation. Their bioluminescent technology
+    predates the System by millennia.
+- id: race_h002
+  name: Dravik
+  classification: humanoid
+  homeworld: Dravik Kor
+  universe_origin: Iron Veil Cluster
+  avg_height_cm: 195
+  avg_lifespan_years: 250
+  skin_tones:
+  - granite gray
+  - rust red
+  - copper brown
+  distinguishing_features: Dense bone plating on forearms and shins, metallic hair filaments
+  base_stats:
+    STR: 10
+    AGI: 4
+    END: 9
+    INT: 5
+    PER: 6
+    LCK: 3
+    SYS: 3
+  racial_ability: Iron Skin — passive 15% physical damage reduction
+  culture: Warrior clans governed by combat trials. Honor-bound society. Forge-temples serve as both worship sites and manufacturing
+    centers.
+  language: Dravikaan (guttural, heavy consonant clusters)
+  diet: Carnivore, require high iron intake
+  traveller_percentage: 60
+  known_for: Mining, weapon smithing, siege warfare
+  weakness: Slow reaction times, vulnerable to sonic attacks that resonate with bone plating
+  diplomatic_stance: Aggressive-territorial. Respect strength, despise diplomacy.
+  vehicle_preference: Heavy armored transports with ram-mounted prows
+  lore_notes: The Dravik were among the first races to weaponize Vehicle Cores. Their core-extraction techniques are feared
+    across multiple universes.
+- id: race_h003
+  name: Sylvani
+  classification: humanoid
+  homeworld: Verdanthia
+  universe_origin: Green Reach
+  avg_height_cm: 175
+  avg_lifespan_years: 800
+  skin_tones:
+  - pale green
+  - bark brown
+  - moss
+  distinguishing_features: Photosynthetic skin patches, leaf-like hair, root-like finger extensions
+  base_stats:
+    STR: 4
+    AGI: 7
+    END: 6
+    INT: 8
+    PER: 9
+    LCK: 5
+    SYS: 4
+  racial_ability: Rootsense — detect all living organisms within 50m through ground vibrations
+  culture: Symbiotic commune. No individual ownership. Decisions made by collective bioelectric consensus. Cities grown from
+    living mega-trees.
+  language: Sylvanic (partially pheromone-based, partially spoken)
+  diet: Photosynthetic primary, supplement with mineral-rich water
+  traveller_percentage: 15
+  known_for: Bioengineering, healing arts, terrain manipulation
+  weakness: Vulnerable to fire and defoliant chemicals. Winter dormancy reduces stats by 30%.
+  diplomatic_stance: Pacifist-defensive. Will fight only to protect ecosystems.
+  vehicle_preference: Living bio-vehicles grown from seed-cores
+  lore_notes: The Sylvani claim their homeworld existed before the System. Some scholars believe Verdanthia may be one of
+    the oldest worlds in known space.
+- id: race_h004
+  name: Zerathi
+  classification: humanoid
+  homeworld: The Nexus Spire
+  universe_origin: Probability Fields
+  avg_height_cm: 180
+  avg_lifespan_years: 150
+  skin_tones:
+  - shifting silver
+  - phase-white
+  - probability gray
+  distinguishing_features: Semi-transparent skin, visible nervous system, eyes that show possible futures as flickering images
+  base_stats:
+    STR: 3
+    AGI: 6
+    END: 4
+    INT: 7
+    PER: 5
+    LCK: 12
+    SYS: 8
+  racial_ability: Probability Sight — can see 2-3 seconds into probable futures (30s cooldown)
+  culture: Gambling is sacred. All major decisions made through games of chance. Their economy runs on probability futures
+    trading.
+  language: Zerathi (mathematical, based on probability notation)
+  diet: Energy absorption from quantum fluctuations
+  traveller_percentage: 45
+  known_for: Prediction markets, quantum computing, information brokering
+  weakness: Physically frail. Probability Sight causes severe migraines with overuse.
+  diplomatic_stance: Opportunistic. Ally with whoever offers the best odds.
+  vehicle_preference: Phase-shift vehicles that can briefly exist in multiple positions
+  lore_notes: The Zerathi are rumored to have cracked part of the System's probability engine. Their homeworld exists in a
+    state of quantum superposition.
+- id: race_h005
+  name: Oorani
+  classification: humanoid
+  homeworld: Oora Deep
+  universe_origin: Abyssal Rift
+  avg_height_cm: 160
+  avg_lifespan_years: 500
+  skin_tones:
+  - deep ocean blue
+  - bioluminescent teal
+  - black
+  distinguishing_features: Gill slits on neck, webbed digits, pressure-resistant skeletal structure, sonar organ in forehead
+  base_stats:
+    STR: 7
+    AGI: 8
+    END: 8
+    INT: 6
+    PER: 10
+    LCK: 3
+    SYS: 3
+  racial_ability: Depth Crush — can generate localized pressure fields (equivalent to 1000m ocean depth)
+  culture: Depth-caste society. The deeper one can dive without aid, the higher their social standing. Architecture is built
+    downward, not upward.
+  language: Ooranic (sonar-based with click consonants)
+  diet: Omnivore, prefer raw protein
+  traveller_percentage: 25
+  known_for: Deep-space exploration, pressure engineering, submarine warfare
+  weakness: Dehydration in low-humidity environments. Require immersion every 48 hours.
+  diplomatic_stance: Isolationist. Distrust surface-dwellers.
+  vehicle_preference: Submersible-class vehicles designed for extreme pressure environments
+  lore_notes: The Oorani were the first race to map the Abyssal Rift. They claim something lives at the bottom — something
+    the System refuses to classify.
+- id: race_h006
+  name: Thenn
+  classification: humanoid
+  homeworld: Thenn Collective (space station network)
+  universe_origin: Transit Lanes
+  avg_height_cm: 170
+  avg_lifespan_years: 200
+  skin_tones:
+  - chalk white
+  - platinum
+  - silver-blue
+  distinguishing_features: No body hair, perfectly symmetrical features, retractable secondary eyelids, neural jack ports
+    at temples
+  base_stats:
+    STR: 5
+    AGI: 5
+    END: 5
+    INT: 10
+    PER: 5
+    LCK: 5
+    SYS: 10
+  racial_ability: System Interface — can directly query the System for additional data (limited to public information)
+  culture: Post-individual collective. Share memories through neural networks. Individual identity is fluid and considered
+    a choice, not a birthright.
+  language: Thenn Standard (digital-analog hybrid, can be transmitted electronically)
+  diet: Nutrient paste, optimized for neural function
+  traveller_percentage: 80
+  known_for: System research, data archiving, neural technology, Vehicle Core analysis
+  weakness: Emotional processing is underdeveloped. Can be overwhelmed by strong emotions.
+  diplomatic_stance: Data-first. Will ally with anyone who shares information freely.
+  vehicle_preference: Modular vehicles that can split into independent drone units
+  lore_notes: The Thenn have the highest SYS stat of any known race. They believe the System is a remnant of something far
+    older and far larger.
+- id: race_h007
+  name: Varak'shi
+  classification: humanoid
+  homeworld: Ashara
+  universe_origin: Burning Expanse
+  avg_height_cm: 200
+  avg_lifespan_years: 300
+  skin_tones:
+  - charcoal
+  - ember orange
+  - magma red
+  distinguishing_features: Heat-resistant skin with cooling vents along spine, ember-colored eyes, smoke exhaled when exerting
+  base_stats:
+    STR: 9
+    AGI: 6
+    END: 10
+    INT: 5
+    PER: 4
+    LCK: 3
+    SYS: 3
+  racial_ability: Thermal Core — body temperature can spike to 800°C for 10 seconds (devastating melee)
+  culture: Forge-faith. Creation through fire is worship. They build by melting and reshaping, never by cutting. Their cities
+    glow at night.
+  language: Varak (heat-modulated, partially infrared)
+  diet: Thermovore — absorb heat energy directly, supplement with minerals
+  traveller_percentage: 40
+  known_for: Metallurgy, thermal engineering, volcanic terraforming
+  weakness: Cold environments drastically reduce stats. Below -20°C they enter torpor.
+  diplomatic_stance: Passionate but honorable. Once a pact is forged, they never break it.
+  vehicle_preference: Magma-core vehicles with thermal shielding, designed for volcanic environments
+  lore_notes: The Varak'shi homeworld Ashara orbits a dying star. Their entire civilization is a race against time.
+- id: race_h008
+  name: Elari
+  classification: humanoid
+  homeworld: Elaris Station (artificial world)
+  universe_origin: The Calm
+  avg_height_cm: 165
+  avg_lifespan_years: 1000
+  skin_tones:
+  - alabaster
+  - soft gold
+  - moonlight silver
+  distinguishing_features: Elongated ears, pupils that reflect starlight, extremely fine bone structure, resonance organs
+    in chest
+  base_stats:
+    STR: 3
+    AGI: 9
+    END: 4
+    INT: 10
+    PER: 8
+    LCK: 6
+    SYS: 7
+  racial_ability: Harmonic Shield — create a resonance barrier that deflects projectiles (requires 5s charge)
+  culture: Aesthetic perfectionism. Every object must be beautiful and functional. Ugliness is considered a form of violence.
+    Art and science are inseparable.
+  language: Elaric (musical, based on harmonic intervals)
+  diet: Refined energy extracts, never raw food
+  traveller_percentage: 20
+  known_for: Architecture, resonance technology, System theory, dimensional mapping
+  weakness: Physically fragile. Dissonant sounds cause pain and disorientation.
+  diplomatic_stance: Selective-elitist. Only engage with cultures they deem 'harmonious.'
+  vehicle_preference: Resonance-class vehicles — silent, fast, elegant
+  lore_notes: The Elari claim to remember a time before the System. Their oral histories describe a 'Great Silence' before
+    the System activated.
+- id: race_h009
+  name: Ghul'mara
+  classification: humanoid
+  homeworld: Marrowdeep
+  universe_origin: Bonefield Nebula
+  avg_height_cm: 190
+  avg_lifespan_years: 600
+  skin_tones:
+  - bone white
+  - cadaver gray
+  - necrotic green
+  distinguishing_features: Exposed bone protrusions on joints, can detach and regrow limbs, no pain receptors
+  base_stats:
+    STR: 8
+    AGI: 5
+    END: 12
+    INT: 4
+    PER: 6
+    LCK: 2
+    SYS: 3
+  racial_ability: Regeneration — regrow lost limbs in 24 hours, heal non-fatal wounds in minutes
+  culture: Death-neutral. View physical damage as inconvenience, not threat. Their art is created through controlled self-destruction
+    and regrowth.
+  language: Ghulmari (bone-click percussion with throat harmonics)
+  diet: Necrotic matter — consume dead organic material
+  traveller_percentage: 50
+  known_for: Regenerative medicine, biological warfare, body modification
+  weakness: Fire prevents regeneration. Cauterized wounds take 10x longer to heal.
+  diplomatic_stance: Unsettling but reasonable. Most races find them disturbing.
+  vehicle_preference: Bio-organic vehicles grown from their own regenerative tissue
+  lore_notes: The Ghul'mara were once considered an extinction-level threat. A galaxy-wide accord now limits their expansion,
+    though many operate as mercenaries.
+- id: race_h010
+  name: Nexari
+  classification: humanoid
+  homeworld: Nexaris (interdimensional)
+  universe_origin: Between-spaces
+  avg_height_cm: 175
+  avg_lifespan_years: 300
+  skin_tones:
+  - void black
+  - starfield
+  - dimensional-shift
+  distinguishing_features: Skin appears to contain miniature star fields. Can become partially two-dimensional. Shadow does
+    not match body position.
+  base_stats:
+    STR: 5
+    AGI: 10
+    END: 3
+    INT: 8
+    PER: 7
+    LCK: 7
+    SYS: 5
+  racial_ability: Phase Step — short-range teleportation through dimensional folds (15m max, 10s cooldown)
+  culture: Nomadic traders who exist between dimensions. No permanent settlements. Their 'cities' are caravan clusters moving
+    through dimensional corridors.
+  language: Nexari (spatial, uses position and gesture as much as sound)
+  diet: Dimensional energy — absorb ambient energy from dimensional boundaries
+  traveller_percentage: 70
+  known_for: Dimensional mapping, smuggling, information trading, exploration
+  weakness: Anchoring fields prevent Phase Step. Dimensional locks can trap them.
+  diplomatic_stance: Friendly merchants. Will trade with anyone, anywhere.
+  vehicle_preference: Dimensional-slip vehicles that can enter sub-dimensional corridors
+  lore_notes: No one knows where the Nexari originally came from. They claim they've always existed between spaces. Some theorize
+    they're a System byproduct.
+- id: race_h011
+  name: Korrath
+  classification: humanoid
+  homeworld: Korrath Prime
+  universe_origin: Siege Worlds
+  avg_height_cm: 230
+  avg_lifespan_years: 180
+  skin_tones:
+  - scarred tan
+  - battle-gray
+  - war-paint pigmented
+  distinguishing_features: Four arms (upper pair larger for combat, lower pair smaller for precision), thick neck ridges,
+    combat-scarred from birth rituals
+  base_stats:
+    STR: 12
+    AGI: 5
+    END: 10
+    INT: 4
+    PER: 5
+    LCK: 2
+    SYS: 2
+  racial_ability: Four-Armed Fury — dual-wield two-handed weapons simultaneously
+  culture: Permanent warfare state. Children are born into training cadres. Peace is considered a temporary anomaly.
+  weakness: Lower pair of arms is vulnerable — destroying them causes system shock
+  known_for: Mercenary work, siege engineering, arena combat
+  traveller_percentage: 75
+- id: race_h012
+  name: Prismi
+  classification: humanoid
+  homeworld: Spectrum
+  universe_origin: Chromatic Expanse
+  avg_height_cm: 155
+  avg_lifespan_years: 350
+  skin_tones:
+  - prismatic-shifting
+  - rainbow-refraction
+  distinguishing_features: Crystalline growths on shoulders and crown, skin refracts light creating rainbow auras
+  base_stats:
+    STR: 3
+    AGI: 7
+    END: 4
+    INT: 9
+    PER: 8
+    LCK: 6
+    SYS: 8
+  racial_ability: Light Weave — manipulate photons to create hard-light constructs (weapons, shields, tools)
+  culture: Chromatic hierarchy — social standing determined by the complexity of light patterns one can produce
+  weakness: Total darkness nullifies racial ability. Become disoriented without light.
+  known_for: Hard-light engineering, holographic art, communication technology
+  traveller_percentage: 30
+- id: race_h013
+  name: Terraki
+  classification: humanoid
+  homeworld: Bedrock
+  universe_origin: Lithic Expanse
+  avg_height_cm: 150
+  avg_lifespan_years: 2000
+  skin_tones:
+  - granite
+  - sandstone
+  - marble-veined
+  distinguishing_features: Partially mineralized skin, gemstone eyes, move slowly but with immense force
+  base_stats:
+    STR: 11
+    AGI: 2
+    END: 14
+    INT: 6
+    PER: 4
+    LCK: 3
+    SYS: 2
+  racial_ability: Stone Form — become fully mineralized for up to 1 hour (invulnerable but immobile)
+  culture: Patient builders. A single Terraki project may take centuries. They find other races unbearably hasty.
+  weakness: Extremely slow. Acid dissolves their mineral skin.
+  known_for: Architecture, geological engineering, mining, patience
+  traveller_percentage: 10
+- id: race_h014
+  name: Wraithen
+  classification: humanoid
+  homeworld: Umbra
+  universe_origin: Shadow Veil
+  avg_height_cm: 185
+  avg_lifespan_years: 500
+  skin_tones:
+  - shadow-dark
+  - smoke-gray
+  - absence-black
+  distinguishing_features: Can flatten into two-dimensional shadow forms, eyes glow faintly in darkness
+  base_stats:
+    STR: 4
+    AGI: 11
+    END: 5
+    INT: 7
+    PER: 9
+    LCK: 4
+    SYS: 5
+  racial_ability: Shadow Meld — become a living shadow, moving along surfaces (10 minute duration)
+  culture: Nocturnal assassin-monks. Their religion teaches that shadows are the true reality and light is the illusion.
+  weakness: Intense light causes severe burns and forces them out of shadow form
+  known_for: Assassination, espionage, shadow engineering, stealth technology
+  traveller_percentage: 40
+- id: race_h015
+  name: Gravari
+  classification: humanoid
+  homeworld: Heavy World (16x Earth gravity)
+  universe_origin: Dense Cluster
+  avg_height_cm: 130
+  avg_lifespan_years: 200
+  skin_tones:
+  - dense brown
+  - compressed gray
+  - gravity-dark
+  distinguishing_features: Extremely dense musculature and bone structure. Weigh 3x their apparent mass. Short and stocky.
+  base_stats:
+    STR: 13
+    AGI: 3
+    END: 12
+    INT: 5
+    PER: 5
+    LCK: 3
+    SYS: 2
+  racial_ability: Gravity Anchor — can increase personal gravity field, pinning nearby enemies to ground
+  culture: Efficiency-obsessed. Every movement is conserved. They find low-gravity races wasteful.
+  weakness: In low gravity, become disoriented and clumsy. Must wear gravity suits off-world.
+  known_for: Heavy industry, gravity manipulation, mining, construction
+  traveller_percentage: 30
+- id: race_h016
+  name: Aethyn
+  classification: humanoid
+  homeworld: The Drift (gas giant upper atmosphere)
+  universe_origin: Wind Corridors
+  avg_height_cm: 200
+  avg_lifespan_years: 450
+  skin_tones:
+  - cloud white
+  - sky blue
+  - storm gray
+  distinguishing_features: Hollow bones, wing-membranes between arms and torso, can inflate gas bladders for buoyancy
+  base_stats:
+    STR: 3
+    AGI: 12
+    END: 4
+    INT: 7
+    PER: 10
+    LCK: 5
+    SYS: 4
+  racial_ability: Wind Walk — true flight in atmospheric conditions (up to 200km/h)
+  culture: Sky nomads. Have never touched solid ground. Their entire civilization exists in floating cloud-cities.
+  weakness: Bones break easily on impact. Cannot function in vacuum without extensive modification.
+  known_for: Atmospheric navigation, weather control, aerial combat, gas mining
+  traveller_percentage: 25
+- id: race_h017
+  name: Morthane
+  classification: humanoid
+  homeworld: Morthanis
+  universe_origin: Decay Sector
+  avg_height_cm: 195
+  avg_lifespan_years: 100
+  skin_tones:
+  - fungal white
+  - spore green
+  - decay brown
+  distinguishing_features: Symbiotic fungal growths integrated into body, spore clouds released when stressed
+  base_stats:
+    STR: 6
+    AGI: 5
+    END: 8
+    INT: 8
+    PER: 6
+    LCK: 4
+    SYS: 5
+  racial_ability: Spore Cloud — release toxic/hallucinogenic spores in 10m radius
+  culture: Decay worshippers. Believe entropy is divine. Their art celebrates rot and transformation.
+  weakness: Fungicide is lethal. Dry environments cause rapid degradation.
+  known_for: Biological weapons, decomposition engineering, pharmaceutical development
+  traveller_percentage: 35
+- id: race_h018
+  name: Cryoni
+  classification: humanoid
+  homeworld: Glacias
+  universe_origin: Frost Ring
+  avg_height_cm: 185
+  avg_lifespan_years: 600
+  skin_tones:
+  - ice blue
+  - frost white
+  - glacier clear
+  distinguishing_features: Internal body temperature of -40°C, breath crystallizes air, ice formations grow on body during
+    combat
+  base_stats:
+    STR: 7
+    AGI: 6
+    END: 9
+    INT: 7
+    PER: 5
+    LCK: 4
+    SYS: 4
+  racial_ability: Absolute Zero Touch — freeze anything on contact for 5 seconds
+  culture: Preservation-focused. They freeze their dead rather than bury them. Their cities are carved from eternal ice.
+  weakness: Heat above 40°C causes rapid stat degradation. Fire is devastating.
+  known_for: Cryogenic technology, preservation science, cold-environment warfare
+  traveller_percentage: 30
+- id: race_h019
+  name: Skein
+  classification: humanoid
+  homeworld: Web (space station megastructure)
+  universe_origin: Lattice Network
+  avg_height_cm: 170
+  avg_lifespan_years: 250
+  skin_tones:
+  - wire silver
+  - circuit gold
+  - mesh copper
+  distinguishing_features: Subdermal metallic mesh visible through skin, fingers split into fine manipulation tendrils
+  base_stats:
+    STR: 4
+    AGI: 7
+    END: 5
+    INT: 11
+    PER: 6
+    LCK: 4
+    SYS: 9
+  racial_ability: System Tap — can interface directly with any System-connected device or terminal
+  culture: Information absolutists. Believe all data should be free. Hack as a form of political expression.
+  weakness: Electromagnetic pulses cause temporary paralysis. Anti-intrusion systems can cause feedback damage.
+  known_for: Hacking, System exploitation, vehicle modification, data theft
+  traveller_percentage: 55
+- id: race_h020
+  name: Valdros
+  classification: humanoid
+  homeworld: Valdris
+  universe_origin: Noble Expanse
+  avg_height_cm: 190
+  avg_lifespan_years: 350
+  skin_tones:
+  - royal bronze
+  - noble copper
+  - imperial gold
+  distinguishing_features: Natural metallic luster to skin, crown-like bone ridges, commanding presence
+  base_stats:
+    STR: 7
+    AGI: 6
+    END: 7
+    INT: 7
+    PER: 7
+    LCK: 5
+    SYS: 5
+  racial_ability: Command Aura — allies within 20m gain +2 to all stats for 60 seconds
+  culture: Imperial nobility. Believe in divine right to rule. Every Valdros considers themselves royalty.
+  weakness: Arrogance is systemic. Cannot accept subordinate roles without stat debuffs from psychological distress.
+  known_for: Empire building, military strategy, diplomacy, fleet command
+  traveller_percentage: 50
+- id: race_h021
+  name: Frostkin
+  category: Humanoid
+  homeworld: Glacius Prime
+  description: Blue-skinned humanoids adapted to extreme cold. Internal body temp -20C. Touch freezes moisture.
+  stats:
+    STR: 6
+    AGI: 4
+    END: 9
+    INT: 5
+    PER: 5
+    LCK: 3
+    SYS: 4
+  abilities:
+  - Cryokinesis
+  - Cold immunity
+  - Ice armor generation
+  - Freeze on contact
+  vehicle_domain: Land (cryo-tanks that freeze terrain)
+  culture: Stoic. Emotions are considered wasteful energy. Their art is sculpture carved from eternal ice.
+  weaknesses:
+  - Heat
+  - Fire attacks deal 3x damage
+  - Warm environments cause disorientation
+- id: race_h022
+  name: Verdathi
+  category: Humanoid
+  homeworld: Roothold
+  description: Plant-humanoid hybrids with photosynthetic skin. Can root themselves to heal and grow stronger.
+  stats:
+    STR: 5
+    AGI: 3
+    END: 8
+    INT: 6
+    PER: 7
+    LCK: 4
+    SYS: 5
+  abilities:
+  - Photosynthesis (heal in sunlight)
+  - Root anchoring (+200% defense)
+  - Vine manipulation
+  - Spore communication
+  vehicle_domain: Land (bio-organic vehicles grown from seeds)
+  culture: Communal. Connected through underground root networks. Decisions made by consensus of the Grove.
+  weaknesses:
+  - Fire
+  - Herbicides
+  - Darkness weakens severely
+  - Slow movement when not rooted
+- id: race_h023
+  name: Ironblood
+  category: Humanoid
+  homeworld: Foundry
+  description: Humanoids with iron-rich blood and metallic bone structure. Naturally magnetic and extremely dense.
+  stats:
+    STR: 9
+    AGI: 2
+    END: 10
+    INT: 4
+    PER: 4
+    LCK: 2
+    SYS: 3
+  abilities:
+  - Magnetic manipulation
+  - Iron skin (natural armor)
+  - Metallic bone weapons
+  - Rust immunity
+  vehicle_domain: Land (heavy metal fortresses on treads)
+  culture: Industrial. Their entire civilization is a forge. They eat metal ore and drink molten alloys.
+  weaknesses:
+  - Lightning (conducts through body)
+  - Corrosive attacks
+  - Sink in water
+  - Very heavy
+- id: race_h024
+  name: Dreamwalker
+  category: Humanoid
+  homeworld: Somnia
+  description: Humanoids who exist partially in the dream realm. Can enter others' dreams and manifest dream constructs.
+  stats:
+    STR: 2
+    AGI: 5
+    END: 3
+    INT: 10
+    PER: 8
+    LCK: 7
+    SYS: 6
+  abilities:
+  - Dream entry (access sleeping minds)
+  - Dream construct manifestation
+  - Sleep inducement
+  - Precognitive dreams
+  vehicle_domain: Air (dream-powered hovering vessels)
+  culture: Mystical. Their waking world is considered the shadow; dreams are the true reality.
+  weaknesses:
+  - Insomnia cripples them
+  - Weak physical bodies
+  - Vulnerable while dream-walking
+- id: race_h025
+  name: Stoneborn
+  category: Humanoid
+  homeworld: Monolith
+  description: Humanoids with stone-like skin that hardens further with age. Eldest are living statues.
+  stats:
+    STR: 8
+    AGI: 1
+    END: 12
+    INT: 5
+    PER: 3
+    LCK: 2
+    SYS: 4
+  abilities:
+  - Stone skin (scales with age)
+  - Earth tremor (ground slam)
+  - Mineral absorption (eat stone for nutrients)
+  - Petrification touch
+  vehicle_domain: Land (burrowing stone tanks)
+  culture: Patient. Measure time in centuries. Their conversations can last weeks.
+  weaknesses:
+  - Extremely slow
+  - Water erosion damage
+  - Sonic attacks shatter stone
+  - Cannot swim
+- id: race_h026
+  name: Windrunner
+  category: Humanoid
+  homeworld: Zephyria
+  description: Extremely lightweight humanoids with hollow bones. Can ride air currents and manipulate wind.
+  stats:
+    STR: 2
+    AGI: 10
+    END: 3
+    INT: 6
+    PER: 8
+    LCK: 5
+    SYS: 4
+  abilities:
+  - Wind riding (limited flight)
+  - Air blade attacks
+  - Oxygen manipulation
+  - Sound carrying (messages on wind)
+  vehicle_domain: Air (wind-sail gliders)
+  culture: Nomadic. Never stay in one place. Their homes are sky-cities that drift with the jet stream.
+  weaknesses:
+  - Fragile bones
+  - Heavy gravity debilitates
+  - Vacuum is instant death
+  - Cannot carry heavy loads
+- id: race_h027
+  name: Bloodforged
+  category: Humanoid
+  homeworld: Hemora
+  description: Humanoids who can manipulate their own blood as weapon and shield. Blood is System-enhanced.
+  stats:
+    STR: 6
+    AGI: 7
+    END: 5
+    INT: 5
+    PER: 5
+    LCK: 3
+    SYS: 5
+  abilities:
+  - Blood weapons (form blades/whips from blood)
+  - Blood armor
+  - Blood tracking (sense anyone whose blood you've tasted)
+  - Regeneration via blood consumption
+  vehicle_domain: Land (blood-fueled bio-mechanical vehicles)
+  culture: Warrior society. Blood oaths are literal and binding. Their treaties are signed in shared blood.
+  weaknesses:
+  - Blood loss = power loss
+  - Anti-coagulants are devastating
+  - Hemophilia is their deadliest disease
+- id: race_h028
+  name: Luminari
+  category: Humanoid
+  homeworld: Radiance
+  description: Humanoids made of semi-solid light. Glow constantly. Can become intangible but lose ability to interact.
+  stats:
+    STR: 3
+    AGI: 8
+    END: 4
+    INT: 8
+    PER: 9
+    LCK: 5
+    SYS: 6
+  abilities:
+  - Light form (become intangible)
+  - Light beams (ranged attacks)
+  - Illumination (300m radius)
+  - Light speed dash (short range teleport)
+  vehicle_domain: Air (light-construct vehicles)
+  culture: Transparent — literally and figuratively. Cannot lie (facial expressions visible through translucent skin).
+  weaknesses:
+  - Darkness weakens
+  - Shadow-type attacks deal 3x damage
+  - Cannot hide
+  - Intangible form cannot interact
+- id: race_h029
+  name: Gravborn
+  category: Humanoid
+  homeworld: Density
+  description: Humanoids from a high-gravity world (5G). Incredibly strong and dense in normal gravity.
+  stats:
+    STR: 12
+    AGI: 3
+    END: 11
+    INT: 4
+    PER: 4
+    LCK: 2
+    SYS: 3
+  abilities:
+  - Gravity adaptation (function in any G)
+  - Crushing grip
+  - Gravity stomp (AoE)
+  - Density shift (increase personal density 10x)
+  vehicle_domain: Land (ultra-heavy armored crawlers)
+  culture: Everything is heavy. Their sports involve lifting impossible weights. Weakness is the ultimate shame.
+  weaknesses:
+  - Low gravity disorientation
+  - Poor agility
+  - Cannot use delicate equipment
+  - Terrible swimmers
+- id: race_h030
+  name: Voidtouched
+  category: Humanoid
+  homeworld: Unknown (void-corrupted)
+  description: Humanoids exposed to void energy in utero. Dark markings, void sight, partially exist outside reality.
+  stats:
+    STR: 4
+    AGI: 6
+    END: 5
+    INT: 7
+    PER: 10
+    LCK: 1
+    SYS: 8
+  abilities:
+  - Void sight (see hidden dimensions)
+  - Phase shift (partial intangibility)
+  - Void touch (entropy damage)
+  - Reality anchor (stabilize void zones)
+  vehicle_domain: Special (void-touched vehicles exist partially outside reality)
+  culture: Outcasts. Feared by most species. Form tight-knit communities of shared isolation.
+  weaknesses:
+  - Reality-anchoring effects trap them
+  - Holy/creation energy burns
+  - Unstable existence (random phase shifts)
+  - Universally distrusted

@@ -1,0 +1,679 @@
+category: combat_abilities
+description: 'Combat-focused abilities available through the Game System. These abilities are granted by the System based
+  on class, level, stats, and achievement. They consume RP, stamina, or mana depending on the ability type. Organized by combat
+  type and tier requirement.
+
+  '
+tier_0_1:
+- id: CA-001
+  name: Power Strike
+  type: melee_active
+  tier_requirement: 0
+  stat_requirement: STR 2+
+  cost: 10 Stamina
+  cooldown: 5 seconds
+  description: 'Channel System energy into a single devastating melee attack. The strike lands with 200% base damage. The
+    user''s weapon or fist glows with a faint System-blue light at the moment of impact. Higher STR increases damage multiplier.
+
+    '
+  scaling: 'Damage scales with STR. At STR 5: 300%. At STR 10: 500%.'
+  lore_notes: The bread-and-butter combat ability. Every melee fighter learns this first.
+- id: CA-002
+  name: Quick Dash
+  type: movement_active
+  tier_requirement: 0
+  stat_requirement: AGI 2+
+  cost: 15 Stamina
+  cooldown: 8 seconds
+  description: 'Burst of System-enhanced speed covering 5 meters in an instant. The user appears to blur between positions.
+    Can be used to dodge attacks, close distance, or escape. Leaves a faint afterimage at the starting position.
+
+    '
+  scaling: 'Distance scales with AGI. At AGI 5: 10m. At AGI 10: 20m.'
+  lore_notes: Critical for survival — the ability to dodge what you can't tank.
+- id: CA-003
+  name: Guard Stance
+  type: defensive_active
+  tier_requirement: 0
+  stat_requirement: END 2+
+  cost: 5 Stamina/second (maintained)
+  cooldown: None (toggle)
+  description: 'Adopt a defensive posture enhanced by the System. Reduces incoming physical damage by 30% but reduces movement
+    speed by 50%. System energy visibly reinforces the user''s body as a faint shimmer around their skin.
+
+    '
+  scaling: 'Damage reduction scales with END. At END 5: 40%. At END 10: 55%.'
+  lore_notes: The difference between surviving a hit and dying to one.
+- id: CA-004
+  name: Aimed Shot
+  type: ranged_active
+  tier_requirement: 0
+  stat_requirement: PER 2+
+  cost: 10 Stamina
+  cooldown: 3 seconds
+  description: 'System-assisted aiming for ranged attacks. The user''s vision sharpens, a targeting reticle appears in their
+    perception, and the next ranged attack gains +50% accuracy and +25% damage. Works with any projectile weapon.
+
+    '
+  scaling: 'Accuracy bonus scales with PER. At PER 5: +70%. At PER 10: +90%.'
+  lore_notes: Essential for any ranged combatant. Makes mediocre marksmen lethal.
+- id: CA-005
+  name: Threat Assessment
+  type: perception_passive
+  tier_requirement: 0
+  stat_requirement: INT 2+
+  cost: None (passive)
+  cooldown: N/A
+  description: 'The System provides a danger indicator for nearby entities. A subtle color-coded aura appears around detected
+    threats: green (safe), yellow (caution), orange (dangerous), red (deadly). Does not provide specific stats, only relative
+    danger.
+
+    '
+  scaling: 'Detection range scales with INT. Base: 10m. At INT 5: 25m. At INT 10: 50m.'
+  lore_notes: Keeps you alive long enough to learn everything else.
+- id: CA-006
+  name: System Strike
+  type: melee_active
+  tier_requirement: 1
+  stat_requirement: STR 3+, SYS 2+
+  cost: 25 Stamina + 50 RP
+  cooldown: 30 seconds
+  description: 'Infuse a melee attack with raw System energy. The strike bypasses physical armor and deals direct System damage.
+    The weapon or fist crackles with blue-white energy. Targets feel their System interface flicker on impact.
+
+    '
+  scaling: 'Damage scales with SYS. At SYS 3: 400% base. At SYS 5: 600%.'
+  lore_notes: The first ability that uses RP as fuel. Teaches Travellers that RP is more than currency.
+- id: CA-007
+  name: Vital Strike
+  type: melee_active
+  tier_requirement: 1
+  stat_requirement: PER 3+, STR 2+
+  cost: 20 Stamina
+  cooldown: 15 seconds
+  description: 'The System highlights vulnerable points on the target. The next melee attack automatically targets the weakest
+    point, dealing critical damage (300% base) and applying a Bleed status effect (1% max HP/second for 10 seconds).
+
+    '
+  scaling: 'Critical multiplier scales with PER. At PER 5: 400%. At PER 10: 600%.'
+  lore_notes: The assassin's favorite. One well-placed Vital Strike ends most Tier 1 fights.
+- id: ca_008
+  name: Shrapnel Burst
+  tier: 0
+  type: AoE
+  damage_type: Physical
+  description: Launch fragments of scrap metal in a 5m cone. Low damage but hits multiple targets.
+  rp_cost: 5
+  cooldown: 8s
+  scaling: STR
+  requirements:
+    STR: 3
+  upgrade_path: Shrapnel Burst → Frag Storm → Steel Tempest
+- id: ca_009
+  name: Volt Jab
+  tier: 1
+  type: Melee
+  damage_type: Electric
+  description: Electrify fist for a shocking melee strike. Stuns for 1 second on critical hit.
+  rp_cost: 8
+  cooldown: 5s
+  scaling: AGI+INT
+  requirements:
+    AGI: 4
+    INT: 3
+  upgrade_path: Volt Jab → Thunder Fist → Lightning God Strike
+- id: ca_010
+  name: Gravity Slam
+  tier: 1
+  type: AoE
+  damage_type: Force
+  description: Increase gravity in a 3m radius by 5x for 2 seconds. Pins targets to ground.
+  rp_cost: 12
+  cooldown: 15s
+  scaling: INT
+  requirements:
+    INT: 5
+  upgrade_path: Gravity Slam → Gravity Well → Singularity Crush
+- id: ca_011
+  name: Acid Spit
+  tier: 0
+  type: Ranged
+  damage_type: Chemical
+  description: Project a glob of corrosive acid up to 10m. Dissolves armor over 5 seconds.
+  rp_cost: 6
+  cooldown: 10s
+  scaling: END
+  requirements:
+    END: 3
+  upgrade_path: Acid Spit → Corrosion Stream → Dissolution Wave
+- id: ca_012
+  name: Shadow Strike
+  tier: 1
+  type: Melee
+  damage_type: Dark
+  description: Step through shadow for an unavoidable backstab. Must be in dim light or darkness.
+  rp_cost: 15
+  cooldown: 20s
+  scaling: AGI+LCK
+  requirements:
+    AGI: 5
+    LCK: 3
+  upgrade_path: Shadow Strike → Phantom Blade → Void Assassination
+- id: ca_026
+  name: Poison Dart
+  tier: 0
+  type: Ranged
+  damage_type: Poison
+  description: Launch a System-enhanced poison dart. Causes progressive damage over 30 seconds.
+  rp_cost: 3
+  cooldown: 5s
+  scaling: PER
+  requirements:
+    PER: 3
+  upgrade_path: Poison Dart → Venom Barrage → Plague Arrow
+- id: ca_027
+  name: Iron Fist
+  tier: 1
+  type: Melee
+  damage_type: Physical
+  description: Harden fist to iron density for one devastating punch. Can crack stone.
+  rp_cost: 10
+  cooldown: 8s
+  scaling: STR+END
+  requirements:
+    STR: 4
+    END: 3
+  upgrade_path: Iron Fist → Steel Fist → Adamantine Fist
+- id: ca_028
+  name: Wind Slash
+  tier: 1
+  type: Ranged
+  damage_type: Air
+  description: Compressed air blade launched from a slashing motion. 15m range, cuts through wood and thin metal.
+  rp_cost: 8
+  cooldown: 6s
+  scaling: AGI
+  requirements:
+    AGI: 5
+  upgrade_path: Wind Slash → Gale Blade → Typhoon Cutter
+tier_2_3:
+- id: CA-008
+  name: Shockwave
+  type: area_active
+  tier_requirement: 2
+  stat_requirement: STR 5+
+  cost: 40 Stamina
+  cooldown: 20 seconds
+  description: 'Slam the ground with System-enhanced force. A shockwave radiates outward in a 10m radius, dealing moderate
+    damage and staggering all targets within range. The ground cracks in a spiderweb pattern from the impact point. Airborne
+    targets are unaffected.
+
+    '
+  scaling: 'Radius scales with STR. At STR 8: 15m. At STR 12: 25m.'
+  lore_notes: Crowd control essential. When surrounded, Shockwave buys time.
+- id: CA-009
+  name: Phase Step
+  type: movement_active
+  tier_requirement: 2
+  stat_requirement: AGI 5+, SYS 2+
+  cost: 30 Stamina + 25 RP
+  cooldown: 15 seconds
+  description: 'Momentarily phase through the System''s spatial registry, teleporting up to 15m in any direction including
+    through thin walls. The user dissolves into System particles and reassembles at the destination. Cannot phase through
+    System-reinforced barriers.
+
+    '
+  scaling: 'Distance scales with AGI. At AGI 8: 25m. At AGI 12: 40m.'
+  lore_notes: True teleportation. Limited range but invaluable for repositioning mid-combat.
+- id: CA-010
+  name: Iron Skin
+  type: defensive_active
+  tier_requirement: 2
+  stat_requirement: END 5+
+  cost: 50 RP
+  cooldown: 60 seconds
+  duration: 30 seconds
+  description: 'System energy hardens the user''s skin to metallic density. Physical damage reduced by 60%. Skin takes on
+    a metallic sheen. Movement speed reduced by 20% during activation. Does not stack with Guard Stance.
+
+    '
+  scaling: 'Damage reduction scales with END. At END 8: 70%. At END 12: 80%.'
+  lore_notes: The tank's dream. Thirty seconds of near-invulnerability to physical attacks.
+- id: CA-011
+  name: Multi-Shot
+  type: ranged_active
+  tier_requirement: 2
+  stat_requirement: PER 5+, AGI 3+
+  cost: 30 Stamina
+  cooldown: 10 seconds
+  description: 'Fire 3 System-guided projectiles simultaneously at up to 3 different targets. Each projectile deals 80% base
+    damage but benefits from System-assisted tracking. Requires a ranged weapon.
+
+    '
+  scaling: 'Projectile count scales with PER. At PER 8: 5 shots. At PER 12: 8 shots.'
+  lore_notes: Turns a single marksman into a squad. Essential for clearing groups.
+- id: CA-012
+  name: Battle Sense
+  type: perception_passive
+  tier_requirement: 3
+  stat_requirement: PER 6+, INT 4+
+  cost: None (passive)
+  cooldown: N/A
+  description: 'The System feeds combat data directly into the user''s subconscious. Grants awareness of attacks 0.5 seconds
+    before they land. The user perceives incoming threats as brief flashes of red in their peripheral vision. Does not guarantee
+    dodge — only awareness.
+
+    '
+  scaling: 'Warning time scales with PER. At PER 10: 1 second. At PER 15: 2 seconds.'
+  lore_notes: The combat sense that separates veterans from corpses.
+- id: CA-013
+  name: Berserker Rage
+  type: buff_active
+  tier_requirement: 3
+  stat_requirement: STR 6+, END 5+
+  cost: 100 RP
+  cooldown: 300 seconds (5 minutes)
+  duration: 60 seconds
+  description: 'Flood the body with System-enhanced adrenaline. STR and AGI increase by 50% for 60 seconds. Pain reception
+    reduced by 80%. After duration ends, user suffers 30-second exhaustion (all stats -25%). Eyes glow red during activation.
+    Cannot use complex abilities while active.
+
+    '
+  scaling: 'Stat boost scales with END. At END 8: 60%. At END 12: 75%.'
+  lore_notes: The last resort. Incredible power for 60 seconds, vulnerability for 30 after.
+- id: ca_013
+  name: Chain Lightning
+  tier: 2
+  type: AoE
+  damage_type: Electric
+  description: Lightning bolt that arcs between up to 5 targets within 20m. Each arc deals 80% of previous.
+  rp_cost: 30
+  cooldown: 15s
+  scaling: INT
+  requirements:
+    INT: 10
+    level: 15
+  upgrade_path: Chain Lightning → Storm Network → Divine Thunderstorm
+- id: ca_014
+  name: Bone Crusher
+  tier: 2
+  type: Melee
+  damage_type: Physical
+  description: Devastating blow that shatters bone and armor. Reduces target END by 5 for 60 seconds.
+  rp_cost: 25
+  cooldown: 12s
+  scaling: STR
+  requirements:
+    STR: 12
+    level: 12
+  upgrade_path: Bone Crusher → Skeleton Breaker → Titan Fist
+- id: ca_015
+  name: Plasma Lance
+  tier: 3
+  type: Ranged
+  damage_type: Energy
+  description: Concentrated plasma beam that pierces through multiple targets in a line. 30m range.
+  rp_cost: 50
+  cooldown: 20s
+  scaling: INT+PER
+  requirements:
+    INT: 14
+    PER: 10
+  upgrade_path: Plasma Lance → Solar Spear → Star Piercer
+- id: ca_016
+  name: Tremor Wave
+  tier: 3
+  type: AoE
+  damage_type: Earth
+  description: Slam ground to create a shockwave in a 15m radius. Knocks targets airborne. Shatters structures.
+  rp_cost: 45
+  cooldown: 25s
+  scaling: STR+END
+  requirements:
+    STR: 13
+    END: 10
+  upgrade_path: Tremor Wave → Earthquake → Continental Rift
+- id: ca_017
+  name: Mind Spike
+  tier: 2
+  type: Ranged
+  damage_type: Psychic
+  description: Psychic attack targeting INT. Causes confusion and hallucinations for 10 seconds.
+  rp_cost: 35
+  cooldown: 18s
+  scaling: INT
+  requirements:
+    INT: 11
+  upgrade_path: Mind Spike → Psychic Shatter → Mental Annihilation
+- id: ca_029
+  name: Magma Fist
+  tier: 2
+  type: Melee
+  damage_type: Fire+Physical
+  description: Encase fist in molten rock for a burning impact. Leaves magma on target.
+  rp_cost: 20
+  cooldown: 10s
+  scaling: STR+END
+  requirements:
+    STR: 8
+    END: 7
+    level: 10
+  upgrade_path: Magma Fist → Volcanic Hammer → Eruption Strike
+- id: ca_030
+  name: Ice Prison
+  tier: 3
+  type: Control
+  damage_type: Ice
+  description: Encase target in ice for 10 seconds. Target takes cold damage each second.
+  rp_cost: 40
+  cooldown: 30s
+  scaling: INT
+  requirements:
+    INT: 12
+    level: 20
+  upgrade_path: Ice Prison → Glacier Tomb → Absolute Zero Coffin
+- id: ca_031
+  name: Blood Frenzy
+  tier: 2
+  type: Self-Buff
+  damage_type: N/A
+  description: +50% attack speed and damage for 30 seconds. Cannot distinguish ally from enemy.
+  rp_cost: 35
+  cooldown: 5 minutes
+  scaling: STR+AGI
+  requirements:
+    STR: 9
+    AGI: 7
+  upgrade_path: Blood Frenzy → Berserker Rage → Unstoppable Force
+tier_4_5:
+- id: CA-014
+  name: Blade Storm
+  type: melee_area_active
+  tier_requirement: 4
+  stat_requirement: STR 10+, AGI 8+
+  cost: 80 Stamina + 100 RP
+  cooldown: 45 seconds
+  description: 'Execute a series of 12 rapid strikes in a 5m radius, each guided by the System to find the optimal target.
+    The user becomes a blur of motion, weapon leaving trails of System energy. Deals 150% base damage per strike to all targets
+    in range.
+
+    '
+  scaling: 'Strike count scales with AGI. At AGI 12: 18 strikes. At AGI 15: 24 strikes.'
+  lore_notes: The crowd-clearing ultimate. A Tier 4 fighter using Blade Storm can solo a Tier 2 dungeon room.
+- id: CA-015
+  name: Gravity Well
+  type: control_active
+  tier_requirement: 4
+  stat_requirement: INT 10+, SYS 5+
+  cost: 200 RP
+  cooldown: 120 seconds
+  duration: 10 seconds
+  description: 'Create a localized gravity anomaly at a target point within 30m. All entities within 8m of the point are pulled
+    toward its center and their movement speed reduced by 70%. Objects float or crush depending on the user''s intent. System
+    energy visibly warps space around the anomaly.
+
+    '
+  scaling: 'Radius scales with INT. At INT 15: 12m. At INT 20: 20m.'
+  lore_notes: Control the battlefield. Pin enemies in place while allies destroy them.
+- id: CA-016
+  name: System Overload
+  type: special_active
+  tier_requirement: 5
+  stat_requirement: SYS 8+, INT 8+
+  cost: 500 RP
+  cooldown: 600 seconds (10 minutes)
+  description: 'Temporarily overload the System''s energy output through the user''s body. All stats increase by 100% for
+    15 seconds. The user radiates System energy visibly — blue-white lightning arcs from their body. After duration, all stats
+    reduced to 50% for 60 seconds. Risk of System Rejection if SYS stat too low.
+
+    '
+  scaling: 'Duration scales with SYS. At SYS 12: 20s. At SYS 15: 30s.'
+  lore_notes: The nuclear option. Used only when death is the alternative.
+- id: CA-017
+  name: Phantom Clone
+  type: illusion_active
+  tier_requirement: 5
+  stat_requirement: AGI 10+, INT 8+
+  cost: 150 RP
+  cooldown: 90 seconds
+  duration: 30 seconds
+  description: 'Create 1-3 System-generated duplicates of yourself. Clones mimic your movements with slight delay, appear
+    solid to visual inspection, and can deal 10% of your damage. Clones disperse on taking any damage. Enemies must use PER
+    check to identify the real target.
+
+    '
+  scaling: 'Clone count scales with INT. At INT 12: 3 clones. At INT 15: 5 clones.'
+  lore_notes: Deception in combat. The enemy who can't find the real you can't kill you.
+- id: ca_018
+  name: Void Rift
+  tier: 4
+  type: AoE
+  damage_type: Void
+  description: Tear a rift in space 5m wide. Anything crossing takes massive void damage and is displaced randomly.
+  rp_cost: 200
+  cooldown: 60s
+  scaling: INT+SYS
+  requirements:
+    INT: 18
+    SYS: 12
+    level: 40
+  upgrade_path: Void Rift → Dimensional Tear → Reality Shatter
+- id: ca_019
+  name: Dragon Breath
+  tier: 5
+  type: Cone AoE
+  damage_type: Multi-element
+  description: Channel elemental energy into a devastating breath attack. Element based on vehicle tier.
+  rp_cost: 500
+  cooldown: 120s
+  scaling: All stats
+  requirements:
+    all_stats: 15
+    level: 60
+  upgrade_path: Dragon Breath → Primordial Roar → Creation/Destruction Breath
+- id: ca_020
+  name: Temporal Strike
+  tier: 4
+  type: Melee
+  damage_type: Time
+  description: Strike that hits the target in past, present, and future simultaneously. Unavoidable, unblockable.
+  rp_cost: 300
+  cooldown: 90s
+  scaling: AGI+INT
+  requirements:
+    AGI: 16
+    INT: 16
+    level: 45
+  upgrade_path: Temporal Strike → Timeline Erasure → Chrono Annihilation
+- id: ca_021
+  name: Gravity Crush
+  tier: 5
+  type: Single Target
+  damage_type: Force
+  description: Increase gravity on a single target by 1000x. Crushes most materials. 3 second channel.
+  rp_cost: 450
+  cooldown: 180s
+  scaling: INT+END
+  requirements:
+    INT: 20
+    END: 15
+    level: 55
+  upgrade_path: Gravity Crush → Singularity Prison → Black Hole Genesis
+- id: ca_032
+  name: Spatial Cut
+  tier: 4
+  type: Melee
+  damage_type: Space
+  description: Cut through the fabric of space itself. Attack ignores all physical defenses.
+  rp_cost: 250
+  cooldown: 60s
+  scaling: INT+AGI
+  requirements:
+    INT: 15
+    AGI: 12
+    level: 40
+  upgrade_path: Spatial Cut → Dimension Slash → Reality Severing
+- id: ca_033
+  name: Life Drain Pulse
+  tier: 5
+  type: AoE
+  damage_type: Dark
+  description: Drain life from all living things in a 20m radius. Heal for 100% of damage dealt.
+  rp_cost: 400
+  cooldown: 3 minutes
+  scaling: INT+END
+  requirements:
+    INT: 18
+    END: 14
+    level: 50
+  upgrade_path: Life Drain Pulse → Soul Harvest → Existence Consumption
+tier_6_plus:
+- id: CA-018
+  name: Reality Slash
+  type: melee_ultimate
+  tier_requirement: 6
+  stat_requirement: STR 15+, SYS 10+
+  cost: 1,000 RP
+  cooldown: 1,800 seconds (30 minutes)
+  description: 'Channel System energy into a blade of pure spatial distortion. The slash cuts through physical matter, energy
+    shields, and partially through dimensional barriers. Range: 50m line. Deals catastrophic damage to everything in its path.
+    The cut remains visible in space for several seconds as reality heals.
+
+    '
+  scaling: 'Range scales with STR. At STR 20: 100m. At STR 30: 200m.'
+  lore_notes: A Tier 6 ability that can threaten Tier 8 entities. The universe notices when this is used.
+- id: CA-019
+  name: Absolute Defense
+  type: defensive_ultimate
+  tier_requirement: 7
+  stat_requirement: END 18+, SYS 12+
+  cost: 2,000 RP
+  cooldown: 3,600 seconds (1 hour)
+  duration: 10 seconds
+  description: 'The System creates a perfect defensive sphere around the user, blocking ALL incoming damage regardless of
+    source, type, or power. Nothing enters the sphere. The user cannot attack while it''s active. The sphere appears as a
+    translucent dome of shifting System code.
+
+    '
+  scaling: 'Duration scales with END. At END 25: 15s. At END 30: 20s.'
+  lore_notes: True invulnerability. Ten seconds to breathe, heal, and plan your next move.
+- id: CA-020
+  name: Domain Projection
+  type: area_ultimate
+  tier_requirement: 8
+  stat_requirement: INT 20+, SYS 15+
+  cost: 5,000 RP
+  cooldown: 7,200 seconds (2 hours)
+  duration: 60 seconds
+  description: 'Project the user''s System authority over a 100m radius, creating a personal domain. Within the domain, the
+    user gains: +50% to all stats, awareness of all entities, control over environmental elements (gravity, temperature, light),
+    and the ability to suppress enemy abilities by 30%. The domain appears as a subtle shift in lighting and atmosphere.
+
+    '
+  scaling: 'Radius scales with INT. At INT 25: 200m. At INT 30: 500m.'
+  lore_notes: 'Domain Projection is the hallmark of a top-tier combatant. Within their domain, they are functionally a minor
+    god. Only other domain users can contest it. Mohamed''s dual system may eventually allow him to project a domain that
+    the Game System doesn''t recognize — invisible to other Travellers'' System perception.
+
+    '
+- id: CA-021
+  name: System Severance
+  type: special_ultimate
+  tier_requirement: 9
+  stat_requirement: SYS 20+, INT 15+
+  cost: 10,000 RP
+  cooldown: 86,400 seconds (24 hours)
+  description: 'Temporarily sever a target''s connection to the Game System for 30 seconds. The target loses access to all
+    System abilities, stat enhancements, and System-generated equipment bonuses. They are reduced to their base biological
+    stats. This ability is considered one of the most terrifying in existence — being cut off from the System, even briefly,
+    is described as feeling like death.
+
+    '
+  scaling: 'Duration scales with SYS. At SYS 25: 60s. At SYS 30: 120s.'
+  lore_notes: 'System Severance is feared above almost all other abilities. A Tier 15 Traveller reduced to base biological
+    stats is just a person — and in a universe of monsters, being just a person means death. The psychological trauma of Severance
+    often exceeds the physical danger. Mohamed, with his dual system, might be partially resistant — his secondary system
+    could maintain some function even if the primary is severed.
+
+    '
+- id: ca_022
+  name: Star Fall
+  tier: 7
+  type: Ultimate AoE
+  damage_type: Cosmic
+  description: Call down a miniature star strike on a 100m area. Everything within is incinerated. 10 second channel.
+  rp_cost: 50000
+  cooldown: 24 hours
+  scaling: All stats
+  requirements:
+    all_stats: 25
+    level: 100
+  upgrade_path: Star Fall → Nova Burst → Supernova Genesis
+- id: ca_023
+  name: Reality Overwrite
+  tier: 8
+  type: Special
+  damage_type: System
+  description: Temporarily rewrite the laws of physics in a 50m area. Attacker defines the rules for 10 seconds.
+  rp_cost: 200000
+  cooldown: 7 days
+  scaling: SYS+INT
+  requirements:
+    SYS: 30
+    INT: 30
+    level: 150
+  upgrade_path: Reality Overwrite → Law Rewrite → Universal Edit
+- id: ca_024
+  name: Entropy Wave
+  tier: 6
+  type: AoE
+  damage_type: Entropy
+  description: Release a wave of accelerated entropy in a 30m cone. Ages everything 100 years in 5 seconds.
+  rp_cost: 10000
+  cooldown: 1 hour
+  scaling: INT+END
+  requirements:
+    INT: 22
+    END: 18
+    level: 80
+  upgrade_path: Entropy Wave → Decay Field → Heat Death Domain
+- id: ca_025
+  name: Soul Rend
+  tier: 6
+  type: Single Target
+  damage_type: Soul
+  description: Attack the target's Vehicle Core bond directly. Can temporarily sever soul-vehicle connection.
+  rp_cost: 15000
+  cooldown: 2 hours
+  scaling: SYS
+  requirements:
+    SYS: 20
+    level: 75
+  upgrade_path: Soul Rend → Core Severance → Existence Erasure
+- id: ca_034
+  name: Dimension Lock
+  tier: 6
+  type: Control
+  damage_type: Space
+  description: Lock target in a pocket dimension for 60 seconds. Target cannot escape or be reached.
+  rp_cost: 8000
+  cooldown: 30 minutes
+  scaling: INT+SYS
+  requirements:
+    INT: 20
+    SYS: 15
+    level: 70
+  upgrade_path: Dimension Lock → Permanent Seal → Existence Lock
+- id: ca_035
+  name: Antimatter Lance
+  tier: 7
+  type: Ranged
+  damage_type: Annihilation
+  description: Fire a beam of antimatter. Annihilates all matter in its path. 50m range. 1m diameter.
+  rp_cost: 30000
+  cooldown: 6 hours
+  scaling: INT
+  requirements:
+    INT: 25
+    level: 90
+  upgrade_path: Antimatter Lance → Annihilation Beam → Big Bang Blast

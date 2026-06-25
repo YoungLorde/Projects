@@ -1,0 +1,61 @@
+system: phases
+description: >
+  The 45 progression phases of Your Chronicle, from a lone survivor with a wooden
+  shack to the Universe Overlord. Each phase gates content and is reached by meeting
+  requirements (population, building level, currency, highest dungeon rank cleared).
+  Progression is intentionally grindy but compounding. Phases are grouped into bands
+  that also drive rebirth multipliers (see rebirth.yaml).
+bands:
+  - {id: settlement, name: Settlement Era,  phases: "1-5"}
+  - {id: village,    name: Village Era,     phases: "6-12"}
+  - {id: city,       name: City Era,        phases: "13-20"}
+  - {id: empire,     name: Empire Era,      phases: "21-28"}
+  - {id: planetary,  name: Planetary Era,   phases: "29-36"}
+  - {id: cosmic,     name: Cosmic Era,      phases: "37-44"}
+  - {id: overlord,   name: Overlord Era,    phases: "45"}
+phases:
+  - {index: 1,  id: lone_wanderer,        name: Lone Wanderer,            band: settlement, req: "Start a new chronicle",                       unlocks: "Manual gathering, the Wooden Shack repair quest"}
+  - {index: 2,  id: wooden_shack,         name: Wooden Shack,             band: settlement, req: "Repair the Wooden Shack",                      unlocks: "Storage, basic crafting, first recruit slot"}
+  - {index: 3,  id: homestead,            name: Homestead,                band: settlement, req: "Upgrade Shack -> House; 2 villagers",          unlocks: "Farming, cooking, job delegation"}
+  - {index: 4,  id: hamlet,               name: Hamlet,                   band: settlement, req: "5 villagers; House -> Two-Story House",        unlocks: "Apartment Complex blueprint, F-rank dungeons"}
+  - {index: 5,  id: thorpe,               name: Thorpe,                   band: settlement, req: "10 villagers; 50,000 Bronze",                  unlocks: "Second building plot, marketplace"}
+  - {index: 6,  id: small_village,        name: Small Village,            band: village,    req: "Apartment Complex; 20 villagers",              unlocks: "Found a second settlement, E-rank dungeons"}
+  - {index: 7,  id: village,              name: Village,                  band: village,    req: "35 villagers; 5 Gold",                         unlocks: "Village Hall, militia, beast taming"}
+  - {index: 8,  id: large_village,        name: Large Village,            band: village,    req: "60 villagers; D-rank cleared",                 unlocks: "Trade routes, third settlement"}
+  - {index: 9,  id: township,             name: Township,                 band: village,    req: "100 villagers; 50 Gold",                       unlocks: "Town charter quest, guild hall"}
+  - {index: 10, id: small_town,           name: Small Town,               band: village,    req: "Town charter; 150 citizens",                   unlocks: "Specialized districts, C-rank dungeons"}
+  - {index: 11, id: town,                 name: Town,                     band: village,    req: "250 citizens; 500 Gold",                       unlocks: "Bank (currency refining), taxation income"}
+  - {index: 12, id: large_town,           name: Large Town,               band: village,    req: "400 citizens; B-rank cleared",                 unlocks: "City charter quest"}
+  - {index: 13, id: small_city,           name: Small City,               band: city,       req: "City charter; 700 citizens",                   unlocks: "Walls, multiple districts, A-rank dungeons"}
+  - {index: 14, id: city,                 name: City,                     band: city,       req: "1,200 citizens; 5,000 Gold",                   unlocks: "University (research), advanced crafting"}
+  - {index: 15, id: large_city,           name: Large City,               band: city,       req: "2,500 citizens; S-rank cleared",               unlocks: "Industry, mass production"}
+  - {index: 16, id: metropolis,           name: Metropolis,               band: city,       req: "5,000 citizens; 1g Zenu Stone",                unlocks: "Skyscrapers, SS-rank dungeons, world bosses"}
+  - {index: 17, id: megalopolis,          name: Megalopolis,              band: city,       req: "10,000 citizens",                              unlocks: "Mega-projects, satellite settlements"}
+  - {index: 18, id: city_state,           name: City-State,               band: city,       req: "20,000 citizens; standing army",               unlocks: "Diplomacy, vassal settlements"}
+  - {index: 19, id: province,             name: Province,                 band: city,       req: "50,000 citizens; Ascendant-rank cleared",      unlocks: "Provincial governance, regional resources"}
+  - {index: 20, id: duchy,                name: Duchy,                    band: city,       req: "100,000 citizens; 10 Zenu Coin",               unlocks: "Nobility, knight orders, Kingdom quest"}
+  - {index: 21, id: kingdom,              name: Kingdom,                  band: empire,     req: "Found a Kingdom; 250,000 citizens",            unlocks: "Royal decrees, kingdom-wide buffs"}
+  - {index: 22, id: greater_kingdom,      name: Greater Kingdom,          band: empire,     req: "500,000 citizens; Transcendent-rank cleared",  unlocks: "Conquest, multi-kingdom rule"}
+  - {index: 23, id: empire,               name: Empire,                   band: empire,     req: "1,000,000 citizens",                           unlocks: "Imperial bureaucracy, legions"}
+  - {index: 24, id: grand_empire,         name: Grand Empire,             band: empire,     req: "5,000,000 citizens; 100 Zenu Coin",            unlocks: "Continental projects, Immortal-rank dungeons"}
+  - {index: 25, id: continental_dominion, name: Continental Dominion,     band: empire,     req: "25,000,000 citizens",                          unlocks: "Continent control, super-weapons"}
+  - {index: 26, id: world_power,          name: World Power,              band: empire,     req: "100,000,000 citizens; 1g Mythril Ore",         unlocks: "Global influence, Golden Immortal dungeons"}
+  - {index: 27, id: planetary_hegemony,   name: Planetary Hegemony,       band: empire,     req: "500,000,000 citizens",                         unlocks: "Hegemonic control of the planet"}
+  - {index: 28, id: world_government,     name: World Government,          band: empire,     req: "1,000,000,000 citizens; unify the planet",     unlocks: "Planetary policy, Planetary phase quest"}
+  - {index: 29, id: planetary_sovereign,  name: Planetary Sovereign,      band: planetary,  req: "Unify the planet; 1 Mythril Coin",             unlocks: "Orbital construction, Overreaching Immortal dungeons"}
+  - {index: 30, id: orbital_civilization, name: Orbital Civilization,     band: planetary,  req: "Build the first space elevator",                unlocks: "Orbital habitats, zero-g industry"}
+  - {index: 31, id: lunar_colony,         name: Lunar Colony,             band: planetary,  req: "Colonize the moon",                            unlocks: "Off-world mining, Heavenly Immortal dungeons"}
+  - {index: 32, id: interplanetary,       name: Interplanetary Federation,band: planetary,  req: "Colonize 2 planets",                           unlocks: "Interplanetary trade, terraforming"}
+  - {index: 33, id: solar_dominion,       name: Solar Dominion,           band: planetary,  req: "Control the home solar system",                unlocks: "Dyson swarm, stellar engineering"}
+  - {index: 34, id: star_empire,          name: Star Empire,              band: planetary,  req: "Control 5 star systems",                       unlocks: "FTL travel, God-rank dungeons"}
+  - {index: 35, id: stellar_hegemony,     name: Stellar Hegemony,         band: planetary,  req: "Control 25 star systems",                      unlocks: "Stellar-scale population, megastructures"}
+  - {index: 36, id: cluster_sovereign,    name: Cluster Sovereign,        band: planetary,  req: "Control a star cluster",                       unlocks: "Cluster governance, Galactic phase quest"}
+  - {index: 37, id: galactic_frontier,    name: Galactic Frontier,        band: cosmic,     req: "Expand into the galaxy",                       unlocks: "Galaxy map, Heavenly God dungeons"}
+  - {index: 38, id: galactic_empire,      name: Galactic Empire,          band: cosmic,     req: "Control 10% of the galaxy",                    unlocks: "Galactic bureaucracy, star-forges"}
+  - {index: 39, id: galactic_overlord,    name: Galactic Overlord,        band: cosmic,     req: "Control the galaxy",                           unlocks: "Galactic absolute rule"}
+  - {index: 40, id: intergalactic,        name: Intergalactic Dominion,   band: cosmic,     req: "Control 2 galaxies",                           unlocks: "Intergalactic travel, void megaprojects"}
+  - {index: 41, id: cosmic_sovereign,     name: Cosmic Sovereign,         band: cosmic,     req: "Control a galactic supercluster",              unlocks: "Cosmic-scale engineering"}
+  - {index: 42, id: universal_pillar,     name: Universal Pillar,         band: cosmic,     req: "Become a pillar of the universe",              unlocks: "Reality anchoring, law-editing"}
+  - {index: 43, id: dimensional_overlord, name: Dimensional Overlord,     band: cosmic,     req: "Conquer adjacent dimensions",                  unlocks: "Dimensional travel, cross-reality armies"}
+  - {index: 44, id: multiversal,          name: Multiversal Sovereign,    band: cosmic,     req: "Rule multiple universes",                      unlocks: "Multiverse control, the final quest"}
+  - {index: 45, id: universe_overlord,    name: Universe Overlord,        band: overlord,   req: "Complete the final quest; rule all that is",   unlocks: "Endgame: rewrite the laws of existence (NG+ / deep rebirth)"}

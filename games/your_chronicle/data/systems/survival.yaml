@@ -1,0 +1,47 @@
+system: survival
+description: >
+  Survival mechanics layered onto the idle/incremental loop. The player and their
+  population must be sustained (food, water, warmth, health, morale). Neglect causes
+  debuffs, sickness, villager death, and stalled growth. Good management compounds
+  into faster progress — survival is a multiplier on the whole game.
+
+needs:
+  - id: food
+    name: Food
+    decay_per_hour: 6
+    sources: [foraging, hunting animals, farms, fishing, cooking recipes]
+    failure: "Starvation: -50% all gain, villagers begin to die after 24h at 0."
+  - id: water
+    name: Water
+    decay_per_hour: 8
+    sources: [wells, rivers, rain barrels, purified-water crafting]
+    failure: "Dehydration: -40% speed and stamina; faster villager death than hunger."
+  - id: warmth
+    name: Warmth
+    decay_per_hour: 4
+    sources: [campfire, hearth, fuel materials, insulated buildings]
+    failure: "Exposure: HP drain in cold biomes/phases; equipment durability loss."
+  - id: health
+    name: Health / Sanitation
+    decay_per_hour: 2
+    sources: [potions, clinics, clean water, rest]
+    failure: "Disease can spread through population, lowering all citizen stats."
+  - id: morale
+    name: Morale / Happiness
+    decay_per_hour: 3
+    sources: [housing quality, food variety, taverns, festivals, fair job assignment]
+    failure: "Low morale lowers work output and recruitment; villagers may leave or revolt."
+
+biomes_pressure:
+  description: Later phases/biomes increase survival pressure and reward.
+  examples:
+    - {phase_band: "1-5",   pressure: low,    note: "Temperate forest; gentle decay."}
+    - {phase_band: "13-20", pressure: medium, note: "Urban sprawl; disease/morale matter more."}
+    - {phase_band: "29-36", pressure: high,   note: "Planetary extremes; warmth/water critical."}
+    - {phase_band: "37-45", pressure: extreme,note: "Space/void; full life-support required."}
+
+interaction_with_systems:
+  - "Crafting produces food, water-purifiers, fuel, medicine, and clothing to meet needs."
+  - "Delegated villagers automate needs (farmers, water-carriers, medics, cooks)."
+  - "Survival multiplier: all_gain_mult *= product(need_satisfaction in 0..1.25)."
+  - "Buildings raise need caps and reduce decay (insulation, storage, sanitation)."

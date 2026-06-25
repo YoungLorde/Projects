@@ -1,0 +1,59 @@
+system: rebirth
+description: >
+  The rebirth (prestige) system. Players may rebirth to reset progress in exchange
+  for permanent multipliers scaled to how far they reached. On rebirth: the world
+  story resets, transient/seasonal NPCs that had faded out are gone, currency is
+  auto-converted into a single carried-over value, and the player keeps rebirth
+  multipliers + a fraction of permanent stat boosts.
+
+rebirth_currency:
+  id: ascension_essence
+  name: Ascension Essence
+  description: Earned on rebirth, spent in the Ascension tree for permanent perks.
+  formula: "essence_gained = floor( (highest_phase_index ^ 1.8) + (highest_level / 10) + (total_currency_in_bronze ^ 0.25) )"
+
+what_resets:
+  - Player level, XP, and current stats (minus permanent carry-over).
+  - All buildings (back to the Wooden Shack) and villages/cities.
+  - Population: villagers/citizens are released; recruited NPCs must be re-recruited.
+  - Story progress and active quests; transient/seasonal NPCs that had faded stay gone.
+  - Inventory items below a configurable rarity threshold (default: keep mythic+).
+
+what_carries_over:
+  - Rebirth multipliers (permanent, compounding).
+  - Ascension Essence and any purchased Ascension-tree perks.
+  - A fraction of permanent stat boosts: carry_fraction = 0.10 per rebirth, capped at 0.75.
+  - Unlocked achievements and their rewards (achievements never reset).
+  - Codex/lore entries already discovered.
+
+currency_on_rebirth:
+  auto_convert: true
+  rule: >
+    All held currency is summed in Bronze and auto-converted up the chain into the
+    single highest-tier representation possible, then a percentage is preserved as
+    starting capital for the next run.
+  preserved_percent_formula: "min(50, 5 * rebirth_count)"   # up to 50%
+
+multiplier_tiers:
+  description: >
+    Multipliers granted based on the furthest PHASE reached before rebirth. They are
+    permanent and stack multiplicatively across rebirths.
+  by_phase_band:
+    - {phases: "1-5 (Settlement)",        all_gain_mult: 1.5,  xp_mult: 1.3,  drop_mult: 1.2}
+    - {phases: "6-12 (Village/Town)",     all_gain_mult: 2.5,  xp_mult: 1.8,  drop_mult: 1.5}
+    - {phases: "13-20 (Cities)",          all_gain_mult: 5.0,  xp_mult: 3.0,  drop_mult: 2.0}
+    - {phases: "21-28 (Kingdom/Empire)",  all_gain_mult: 12.0, xp_mult: 6.0,  drop_mult: 3.0}
+    - {phases: "29-36 (World/Planetary)", all_gain_mult: 35.0, xp_mult: 12.0, drop_mult: 5.0}
+    - {phases: "37-44 (Space/Cosmic)",    all_gain_mult: 120.0,xp_mult: 30.0, drop_mult: 9.0}
+    - {phases: "45 (Universe Overlord)",  all_gain_mult: 500.0,xp_mult: 100.0,drop_mult: 20.0}
+
+ascension_tree:
+  description: Permanent perks purchased with Ascension Essence.
+  sample_nodes:
+    - {id: AT-01, name: Fertile Beginnings, cost: 5,   effect: "Start each run with a free repaired Wooden Shack."}
+    - {id: AT-02, name: Born Leader,        cost: 15,  effect: "+25% max population permanently."}
+    - {id: AT-03, name: Golden Touch,       cost: 30,  effect: "+50% all currency gain permanently."}
+    - {id: AT-04, name: Fast Learner,       cost: 50,  effect: "+100% XP gain permanently."}
+    - {id: AT-05, name: Soul Hoard,         cost: 120, effect: "Keep legendary+ items through rebirth."}
+    - {id: AT-06, name: Eternal Bonds,      cost: 250, effect: "Keep up to 3 recruited NPCs through rebirth."}
+    - {id: AT-07, name: Overlord's Memory,  cost: 1000,effect: "+1% all stats per total rebirth, no cap."}

@@ -1,0 +1,60 @@
+system: stats
+description: >
+  Core stat system for Your Chronicle. There is NO level cap. The player's power
+  scales with their own level AND with the size and strength of their population
+  (villagers/citizens). Equipment is ADDITIVE FROM INVENTORY — items contribute
+  their stats while merely held, no equip step required (equipping only adds a
+  small "attuned" bonus on top).
+
+player_stats:
+  - {id: hp, name: Health, description: Total life. Reaching 0 triggers a death/run-loss event.}
+  - {id: atk, name: Attack, description: Base outgoing damage per click and per auto-hit.}
+  - {id: def, name: Defense, description: Reduces incoming damage.}
+  - {id: spd, name: Speed, description: Click/auto-attack rate and movement in dungeons.}
+  - {id: vit, name: Vitality, description: HP regen and survival-stat resistance.}
+  - {id: int, name: Intellect, description: Crafting quality, skill power, research speed.}
+  - {id: lck, name: Luck, description: Drop rate, rarity rolls, crit chance.}
+  - {id: cha, name: Charisma, description: Recruitment success and villager happiness.}
+  - {id: ldr, name: Leadership, description: Max population and delegation efficiency.}
+
+leveling:
+  level_cap: null            # explicitly uncapped
+  base_xp_to_level: 100
+  xp_curve: "xp_to_next(level) = base_xp_to_level * (level ^ 1.5)"
+  population_speed_bonus:
+    description: >
+      The more villagers/citizens you have, the faster you level. Each member adds
+      a passive XP trickle and a global XP-gain multiplier.
+    formula: "xp_gain_mult = 1 + (0.01 * sqrt(population)) + (0.0005 * total_population_power)"
+  population_power_bonus:
+    description: >
+      The stronger your citizens are, the stronger you are. A fraction of your
+      population's combined stats is added directly to your own.
+    formula: "player_bonus_stat = base_stat + 0.05 * sum(citizen_stat) * leadership_factor"
+    leadership_factor: "1 + 0.02 * Leadership"
+
+equipment_rules:
+  additive_from_inventory: true
+  inventory_contribution: 1.0   # 100% of an item's stats apply while held in inventory
+  equipped_attunement_bonus: 0.15  # equipping a held item adds +15% of its stats on top
+  note: >
+    Holding an item in inventory grants its full additive stats. Equipping it into
+    a gear slot grants an extra 15% "attunement" bonus and enables its on-use effect.
+  stacking: additive   # all held items sum together; no diminishing returns on raw stats
+
+permanent_boost_materials:
+  description: >
+    Rare materials that PERMANENTLY raise a stat's point pool when consumed. These
+    are account/run-permanent (until rebirth, where they convert into rebirth value).
+  examples:
+    - {id: PBM-001, name: Heart of the Mountain, stat: hp,  permanent_gain: 50,   rarity: rare,        source: F-C rank dungeon bosses}
+    - {id: PBM-002, name: Tiger's Marrow,        stat: atk, permanent_gain: 15,   rarity: rare,        source: beast world bosses}
+    - {id: PBM-003, name: Turtle Shell Plate,    stat: def, permanent_gain: 15,   rarity: rare,        source: B-A rank dungeons}
+    - {id: PBM-004, name: Phoenix Down Core,     stat: vit, permanent_gain: 20,   rarity: epic,        source: A-S rank dungeons}
+    - {id: PBM-005, name: Mind Lotus,            stat: int, permanent_gain: 12,   rarity: epic,        source: hidden academy quests}
+    - {id: PBM-006, name: Fourleaf Star,         stat: lck, permanent_gain: 8,    rarity: legendary,   source: SS+ secret rooms}
+    - {id: PBM-007, name: Silver Tongue Pearl,   stat: cha, permanent_gain: 10,   rarity: epic,        source: town reputation rewards}
+    - {id: PBM-008, name: Crown Fragment,        stat: ldr, permanent_gain: 10,   rarity: legendary,   source: city/empire phase milestones}
+    - {id: PBM-009, name: Comet Sliver,          stat: spd, permanent_gain: 12,   rarity: legendary,   source: space-age dungeons}
+    - {id: PBM-010, name: Drop of First Light,   stat: all, permanent_gain: 25,   rarity: primordial,  source: Universe Overlord content}
+  note: "More permanent-boost materials are generated into the materials catalog, tagged reason='permanent_stat_boost'."
