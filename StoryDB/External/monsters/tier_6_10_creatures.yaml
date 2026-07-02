@@ -1,0 +1,1030 @@
+creatures:
+- id: mon_030
+  name: Necro Titan
+  tier: 6
+  type: Undead
+  habitat:
+  - mass graves
+  - necropolis zones
+  - cursed battlefields
+  description: 30-meter undead colossus assembled from thousands of corpses. Commands lesser undead.
+  base_stats:
+    STR: 24
+    AGI: 3
+    END: 28
+    INT: 8
+    PER: 10
+    LCK: 2
+  abilities:
+  - Raise Dead (summon 20 lesser undead per minute)
+  - Death Aura (stat drain in 50m)
+  - Soul Harvest (heal from kills)
+  - Corpse Armor (regenerating armor from nearby dead)
+  rp_reward: 1200
+  loot_table:
+  - Necro Core (legendary)
+  - Death Crystal (epic)
+  - Titan Bone (epic)
+  - Soul Fragment (legendary)
+  danger_notes: Clear ALL corpses before engaging. Fire team required. Purification abilities essential.
+  weak_to:
+  - Fire
+  - Holy/Purification
+  - Disintegration
+  resistant_to:
+  - Physical
+  - Poison
+  - Cold
+  - Psychic
+- id: mon_031
+  name: Crystal Wyrm
+  tier: 6
+  type: Dragon
+  habitat:
+  - crystal caves
+  - mineral-rich mountains
+  - gem mines
+  description: Serpentine dragon with crystalline scales that refract and amplify energy attacks. Can fire concentrated crystal
+    beams.
+  base_stats:
+    STR: 20
+    AGI: 10
+    END: 22
+    INT: 12
+    PER: 14
+    LCK: 5
+  abilities:
+  - Crystal Beam (focused energy blast)
+  - Prismatic Shield (reflect energy attacks)
+  - Crystal Growth (create crystal barriers)
+  - Resonance Shatter (sonic AoE)
+  rp_reward: 1400
+  loot_table:
+  - Wyrm Crystal Scale (legendary)
+  - Prism Core (epic)
+  - Crystal Fang (epic)
+  - Resonance Gem (legendary)
+  danger_notes: Physical attacks only — energy attacks get reflected. Sonic frequency attacks can shatter crystal armor.
+  weak_to:
+  - Physical (blunt)
+  - Sonic resonance
+  resistant_to:
+  - Energy
+  - Fire
+  - Ice
+  - Light
+- id: mon_032
+  name: Gravity Kraken
+  tier: 6
+  type: Aberration
+  habitat:
+  - deep space
+  - gravity wells
+  - black hole periphery
+  description: Space-born entity with tentacles that manipulate gravity. Can crush ships by increasing local gravity 100x.
+  base_stats:
+    STR: 22
+    AGI: 8
+    END: 20
+    INT: 10
+    PER: 12
+    LCK: 3
+  abilities:
+  - Gravity Crush (100x gravity in targeted area)
+  - Tentacle Swarm (8 independent attacks)
+  - Void Pull (drag targets toward center)
+  - Mass Shift (become lighter or heavier at will)
+  rp_reward: 1500
+  loot_table:
+  - Gravity Gland (legendary)
+  - Kraken Tentacle (epic)
+  - Void Pearl (legendary)
+  - Mass Crystal (epic)
+  danger_notes: Anti-gravity equipment essential. Attack tentacles individually — each is a weak point.
+  weak_to:
+  - Anti-gravity fields
+  - Electricity
+  - Dimensional anchors
+  resistant_to:
+  - Physical
+  - Gravity
+  - Pressure
+- id: mon_033
+  name: Plague Mother
+  tier: 7
+  type: Aberration
+  habitat:
+  - swamps
+  - plague zones
+  - biological hazard areas
+  description: Massive bio-horror that continuously births smaller plague creatures. Source of regional epidemics.
+  base_stats:
+    STR: 16
+    AGI: 4
+    END: 30
+    INT: 12
+    PER: 8
+    LCK: 2
+  abilities:
+  - Spawn Brood (birth 5 plague-lings per minute)
+  - Plague Cloud (200m radius disease)
+  - Mutation Pulse (evolve all nearby creatures)
+  - Regeneration (rapid healing from biological matter)
+  rp_reward: 2500
+  loot_table:
+  - Plague Core (legendary)
+  - Mother's Tissue (epic)
+  - Mutation Catalyst (legendary)
+  - Bio-Forge Gland (legendary)
+  danger_notes: Hazmat gear required. Kill spawns quickly before they evolve. Cauterize the wound to prevent regeneration.
+  weak_to:
+  - Fire
+  - Radiation
+  - Anti-biological agents
+  resistant_to:
+  - Poison
+  - Disease
+  - Physical
+  - Cold
+- id: mon_034
+  name: Iron Leviathan
+  tier: 7
+  type: Construct
+  habitat:
+  - oceans
+  - deep water
+  - ancient shipyards
+  description: Ancient war machine — a submarine the size of a city that achieved semi-sentience through System energy.
+  base_stats:
+    STR: 30
+    AGI: 5
+    END: 35
+    INT: 14
+    PER: 16
+    LCK: 1
+  abilities:
+  - Torpedo Salvo (multi-target explosive)
+  - Depth Charge (massive AoE)
+  - Sonar Pulse (reveal all hidden targets in 5km)
+  - Hull Regeneration (self-repair)
+  - Deploy Drones (launch 10 combat drones)
+  rp_reward: 3000
+  loot_table:
+  - Leviathan Plating (legendary)
+  - AI Core Fragment (legendary)
+  - Ancient Torpedo (epic)
+  - Navigation Crystal (legendary)
+  danger_notes: Cannot be fought without a vehicle of Tier 5+. Target the AI core in the command bridge. Drones must be dealt
+    with first.
+  weak_to:
+  - EMP
+  - Internal sabotage
+  - Hacking
+  resistant_to:
+  - Physical
+  - Pressure
+  - Torpedo
+  - Fire
+- id: mon_035
+  name: Dimensional Hydra
+  tier: 7
+  type: Dragon
+  habitat:
+  - dimensional rifts
+  - unstable zones
+  - ancient dragon nests
+  description: Multi-headed dragon where each head exists in a different dimension. Cutting a head causes it to regenerate
+    in another dimension.
+  base_stats:
+    STR: 26
+    AGI: 9
+    END: 28
+    INT: 11
+    PER: 15
+    LCK: 4
+  abilities:
+  - Multi-Dimensional Breath (each head breathes different element from different dimension)
+  - Regeneration (severed heads regrow in 60s)
+  - Dimensional Scatter (heads retreat to different dimensions when threatened)
+  - Convergence Attack (all heads attack from different dimensions simultaneously)
+  rp_reward: 3200
+  loot_table:
+  - Hydra Head Core (legendary per head)
+  - Dimensional Scale (legendary)
+  - Multi-Breath Gland (legendary)
+  - Regeneration Crystal (legendary)
+  danger_notes: Must kill all heads simultaneously or they regenerate. Requires dimensional anchoring on all heads at once.
+    Team of 5+ recommended.
+  weak_to:
+  - Simultaneous damage to all heads
+  - Dimensional anchoring
+  - Cauterization
+  resistant_to:
+  - Single-element attacks
+  - Physical
+- id: mon_036
+  name: World Serpent
+  tier: 8
+  type: Beast
+  habitat:
+  - planet-encircling orbits
+  - deep ocean trenches
+  - planetary mantles
+  description: Serpent so large it wraps around planets. Its movements cause earthquakes and tsunamis. May be as old as the
+    System itself.
+  base_stats:
+    STR: 40
+    AGI: 6
+    END: 45
+    INT: 12
+    PER: 18
+    LCK: 5
+  abilities:
+  - Tectonic Shift (cause earthquakes by moving)
+  - Tsunami Wake (100m waves)
+  - Constrict Planet (slowly crush a world)
+  - Ancient Scales (immune to Tier 5 and below weapons)
+  - Devour (consume city-sized areas)
+  rp_reward: 8000
+  loot_table:
+  - World Scale (mythic)
+  - Serpent Core (mythic)
+  - Tectonic Crystal (legendary)
+  - Ancient Blood Vial (legendary)
+  danger_notes: Cannot be killed by conventional means. Requires fleet-level vehicle engagement. Historically, they are relocated,
+    not killed.
+  weak_to:
+  - Internal damage
+  - System-level attacks
+  - Ancient weapons
+  resistant_to:
+  - Everything conventional
+- id: mon_037
+  name: Entropy Walker
+  tier: 8
+  type: Aberration
+  habitat:
+  - dying stars
+  - heat death zones
+  - end-state universes
+  description: Entity that accelerates entropy. Everything it touches ages, decays, and dies. Leaves a trail of absolute death.
+  base_stats:
+    STR: 15
+    AGI: 12
+    END: 20
+    INT: 18
+    PER: 14
+    LCK: 1
+  abilities:
+  - Entropy Field (everything within 100m ages rapidly)
+  - Time Drain (steal years of life from targets)
+  - Decay Touch (disintegrate on contact)
+  - Heat Death (lower temperature of entire zone toward absolute zero over hours)
+  rp_reward: 7500
+  loot_table:
+  - Entropy Core (mythic)
+  - Time Crystal (legendary)
+  - Decay Essence (legendary)
+  - Temporal Stabilizer Fragment (mythic)
+  danger_notes: Do not engage in melee. Temporal shielding required. Time-manipulation abilities may work against it.
+  weak_to:
+  - Time reversal
+  - Creation energy
+  - Youth/vitality-based abilities
+  resistant_to:
+  - Entropy
+  - Cold
+  - Physical
+  - Energy drain
+- id: mon_038
+  name: System Anomaly
+  tier: 9
+  type: Anomaly
+  habitat:
+  - System error zones
+  - corrupted sectors
+  - glitch fields
+  description: A glitch in the System given physical form. Defies normal physics. Stats fluctuate randomly. Can rewrite local
+    System rules.
+  base_stats:
+    STR: Variable
+    AGI: Variable
+    END: Variable
+    INT: Variable
+    PER: Variable
+    LCK: Variable
+  abilities:
+  - Rule Rewrite (change System rules in local area)
+  - Stat Scramble (randomize target's stats)
+  - Error Manifest (create hostile glitch constructs)
+  - System Crash (temporarily disable System in 1km radius)
+  - Corruption Spread (infect other creatures with glitch data)
+  rp_reward: 15000
+  loot_table:
+  - Anomaly Core (mythic)
+  - System Fragment (mythic)
+  - Glitch Crystal (legendary)
+  - Error Code (legendary)
+  danger_notes: Unpredictable. No reliable strategy. System-enhanced weapons may malfunction near it. Anti-corruption tech
+    recommended.
+  weak_to:
+  - System restoration tools
+  - Anti-corruption protocols
+  - Pure System energy
+  resistant_to:
+  - Varies — changes constantly
+- id: mon_039
+  name: Void Leviathan
+  tier: 9
+  type: Void
+  habitat:
+  - deep void between universes
+  - dimensional dead zones
+  description: Entity from the space between universes. Size of a small moon. Consumes dimensional energy.
+  base_stats:
+    STR: 35
+    AGI: 7
+    END: 50
+    INT: 15
+    PER: 20
+    LCK: 3
+  abilities:
+  - Void Consumption (eat dimensional barriers)
+  - Null Breath (erase matter from existence)
+  - Gravity Distortion (create micro black holes)
+  - Dimensional Collapse (merge two dimensions destructively)
+  - Regeneration (absorb void energy to heal)
+  rp_reward: 20000
+  loot_table:
+  - Void Core (mythic)
+  - Null Crystal (mythic)
+  - Leviathan Scale (mythic)
+  - Dimensional Anchor Fragment (mythic)
+  danger_notes: Fleet engagement required. Minimum Tier 8 vehicles. Dimensional anchoring on massive scale. Historical encounters
+    have destroyed entire star systems.
+  weak_to:
+  - Dimensional anchoring
+  - Creation energy
+  - System-level intervention
+  resistant_to:
+  - Physical
+  - Elemental
+  - Psychic
+  - Void
+- id: mon_040
+  name: The Awakened Devourer
+  tier: 10
+  type: Ancient
+  habitat:
+  - Dead Zones
+  - Consumption Scars
+  description: An awakened member of the ancient Devourer race. Planet-sized biological entity that consumes everything —
+    matter, energy, dimensional fabric, even System data.
+  base_stats:
+    STR: 60
+    AGI: 5
+    END: 80
+    INT: 20
+    PER: 25
+    LCK: 1
+  abilities:
+  - Total Consumption (eat planets)
+  - System Immunity (cannot be tracked or affected by System)
+  - Gravity Engine (generate planetary-scale gravity)
+  - Spawn Hunger Engines (create self-replicating consumption drones)
+  - Reality Digest (consume dimensional fabric)
+  rp_reward: 100000
+  loot_table:
+  - Devourer Core (mythic — theoretically)
+  - Hunger Engine Fragment (mythic)
+  - Anti-System Crystal (mythic)
+  danger_notes: Extinction-level event. No known solo or group strategy exists. Historical records suggest only the Wardens
+    have successfully re-sealed one. Evacuation is the recommended response.
+  weak_to:
+  - Unknown — possibly ancient Warden technology
+  resistant_to:
+  - Everything known
+- id: mon_t6_006
+  name: Chrono Beast
+  tier: 6
+  type: Aberration
+  habitat:
+  - temporal anomaly zones
+  - ruined timelines
+  - System time vaults
+  description: Creature unstuck from time. Phases between past and future versions of itself. Each version has different abilities.
+  base_stats:
+    STR: 18
+    AGI: 16
+    END: 15
+    INT: 12
+    PER: 14
+    LCK: 6
+  abilities:
+  - Temporal Strike (attack hits in past, present, and future simultaneously)
+  - Time Loop (revive from death once per fight)
+  - Age Touch (age target 10 years per hit)
+  rp_reward: 2000
+  loot_table:
+  - Temporal Shard (epic)
+  - Chrono Heart (legendary)
+  - Time Crystal (legendary)
+  danger_notes: Must be killed in all three time phases simultaneously. Coordinate with time-sensitive allies. Age Touch effect
+    is permanent.
+  weak_to:
+  - Temporal anchors
+  - Simultaneous multi-phase attacks
+  resistant_to:
+  - Single-timeline attacks
+  - Prediction
+- id: mon_t6_007
+  name: Void Mother
+  tier: 7
+  type: Aberration
+  habitat:
+  - deep void
+  - between dimensions
+  - null zones
+  description: Entity that spawns lesser void creatures from its body. Each spawn has a fraction of its power. Can produce
+    100+ per hour.
+  base_stats:
+    STR: 15
+    AGI: 5
+    END: 25
+    INT: 14
+    PER: 10
+    LCK: 3
+  abilities:
+  - Spawn Swarm (produce 10 Tier 1 void creatures per minute)
+  - Void Womb (absorb damage to fuel spawning)
+  - Dimensional Anchor (prevent escape teleportation)
+  rp_reward: 5000
+  loot_table:
+  - Void Womb Crystal (legendary)
+  - Spawning Core (legendary)
+  - Null Essence (legendary)
+  danger_notes: Kill FAST or be overwhelmed. Spawns get stronger the longer the fight goes. Bring AoE specialists.
+  weak_to:
+  - Creation energy
+  - Light energy
+  - Burst damage
+  resistant_to:
+  - Void
+  - Attrition strategies
+- id: mon_t6_008
+  name: Star Eater Larva
+  tier: 8
+  type: Cosmic
+  habitat:
+  - dying stars
+  - stellar nurseries
+  - cosmic void
+  description: Juvenile form of a cosmic entity that feeds on stellar energy. 'Small' at only 500 meters long. Adults consume
+    entire stars.
+  base_stats:
+    STR: 30
+    AGI: 8
+    END: 35
+    INT: 10
+    PER: 15
+    LCK: 1
+  abilities:
+  - Stellar Consumption (drain energy from any source)
+  - Cosmic Armor (immune to conventional weapons)
+  - Gravity Distortion (warp spacetime in 1km radius)
+  rp_reward: 25000
+  loot_table:
+  - Stellar Core Fragment (legendary)
+  - Cosmic Armor Plate (legendary)
+  - Star Eater Tooth (mythic)
+  danger_notes: Fleet-level engagement required. Conventional weapons are useless. Target the energy absorption nodes along
+    its spine.
+  weak_to:
+  - Anti-matter
+  - Dimensional severance
+  - Core node targeting
+  resistant_to:
+  - Everything conventional
+- id: mon_t6_009
+  name: Reality Fracture
+  tier: 9
+  type: Anomaly
+  habitat:
+  - reality breakdown zones
+  - System error regions
+  - dimensional collapse points
+  description: Not a creature but a living wound in reality. Anything that enters is rewritten — matter, energy, even System
+    data.
+  base_stats:
+    STR: 0
+    AGI: 0
+    END: 50
+    INT: 20
+    PER: 20
+    LCK: 0
+  abilities:
+  - Reality Rewrite (alter anything within 100m)
+  - Null Zone (disable all System abilities within)
+  - Fracture Expansion (grows 1m per hour unless contained)
+  rp_reward: 100000
+  loot_table:
+  - Reality Shard (mythic)
+  - Null Fragment (mythic)
+  - System Error Code (mythic)
+  danger_notes: DO NOT ENGAGE without Tier 8+ equipment and a full squad. Containment is preferred over destruction. Contact
+    System Authorities.
+  weak_to:
+  - Reality anchors
+  - System override codes
+  - Coordinated containment
+  resistant_to:
+  - Everything within its zone
+- id: mon_t6_010
+  name: Entropy Titan
+  tier: 9
+  type: Cosmic
+  habitat:
+  - heat death zones
+  - entropic wastelands
+  - universal edge
+  description: Embodiment of entropy. 200-meter humanoid that accelerates decay in everything around it. Stars dim in its
+    presence.
+  base_stats:
+    STR: 35
+    AGI: 5
+    END: 40
+    INT: 15
+    PER: 12
+    LCK: 0
+  abilities:
+  - Entropy Field (all matter decays rapidly within 500m)
+  - Heat Death Touch (instantly reduce any object to maximum entropy)
+  - Time Acceleration (age surroundings 1000 years per second in 10m radius)
+  rp_reward: 150000
+  loot_table:
+  - Entropy Core (mythic)
+  - Titan Fragment (mythic)
+  - Anti-Entropy Crystal (mythic)
+  danger_notes: Civilization-ending threat. Only approach with Tier 9 equipment and fleet support. Entropy Field means prolonged
+    engagement kills everything.
+  weak_to:
+  - Creation energy
+  - Reverse entropy fields
+  - Anti-entropy technology
+  resistant_to:
+  - Conventional everything
+  - Time-based attacks
+- id: mon_t6_011
+  name: Parasite Nexus
+  tier: 6
+  type: Aberration
+  habitat:
+  - infected zones
+  - corrupted Systems
+  - bio-hazard regions
+  description: Parasitic organism that infects and controls other creatures. Central node coordinates up to 50 puppets simultaneously.
+  base_stats:
+    STR: 5
+    AGI: 3
+    END: 20
+    INT: 15
+    PER: 12
+    LCK: 4
+  abilities:
+  - Infection (take control of creatures below Tier 4)
+  - Puppet Network (controlled creatures share senses)
+  - Hive Burst (sacrifice puppet for explosive damage)
+  rp_reward: 3000
+  loot_table:
+  - Nexus Core (epic)
+  - Control Filament (epic)
+  - Infection Sample (legendary)
+  danger_notes: Find and destroy the central node — puppets die when it does. It's always hidden behind layers of controlled
+    creatures.
+  weak_to:
+  - Anti-parasitic compounds
+  - Fire (sterilization)
+  - EMP (disrupts control signals)
+  resistant_to:
+  - Physical (regenerates)
+  - Poison
+- id: mon_t6_012
+  name: Crystal Wyrm
+  tier: 7
+  type: Beast
+  habitat:
+  - crystal caverns
+  - mineral-rich planets
+  - System vault exteriors
+  description: Dragon-like creature composed entirely of living crystal. 40 meters long. Body resonates and shatters stone.
+  base_stats:
+    STR: 22
+    AGI: 10
+    END: 20
+    INT: 8
+    PER: 11
+    LCK: 4
+  abilities:
+  - Crystal Breath (cone of razor crystal shards)
+  - Resonance Roar (shatter all crystalline objects in 200m)
+  - Crystal Regeneration (heal from any crystal source)
+  rp_reward: 8000
+  loot_table:
+  - Wyrm Crystal (legendary)
+  - Living Crystal Heart (legendary)
+  - Resonance Scale (epic)
+  danger_notes: Fight on non-crystalline terrain. Its regeneration is tied to crystal sources. Lure it to metal or organic
+    environments.
+  weak_to:
+  - Sonic (resonant frequency)
+  - Anti-crystal compounds
+  resistant_to:
+  - Physical
+  - Energy-based
+  - Cold
+- id: mon_t6_013
+  name: Dimensional Hydra
+  tier: 7
+  type: Multi-dimensional
+  description: Each head exists in a different dimension. Can only be killed by severing all heads simultaneously across dimensions.
+  stats:
+    STR: 50
+    AGI: 15
+    END: 80
+    INT: 12
+  rp_reward: 100000
+  habitat: Dimensional crossroads
+  drops:
+  - Hydra Head (per dimension)
+  - Multi-dimensional Core
+  - Reality Thread
+  behavior: Attacks from multiple dimensions at once. Regenerates any head not destroyed simultaneously with the others.
+- id: mon_t6_014
+  name: Solar Leviathan
+  tier: 8
+  type: Cosmic
+  description: Planet-sized creature that feeds on stellar energy. Wraps around stars to feed. Can extinguish suns.
+  stats:
+    STR: 200
+    AGI: 3
+    END: 500
+    INT: 20
+  rp_reward: 500000
+  habitat: Stellar orbit, deep space
+  drops:
+  - Leviathan Scale (vehicle-grade armor)
+  - Stellar Core Fragment
+  - Sun Eater Gland
+  behavior: Slow but unstoppable. Ignores anything smaller than a moon. When feeding, creates solar eclipses.
+- id: mon_t6_015
+  name: Thought Devourer
+  tier: 6
+  type: Psychic
+  description: Entity that erases concepts from reality. Its attacks make you forget how to do things.
+  stats:
+    STR: 10
+    AGI: 20
+    END: 15
+    INT: 50
+  rp_reward: 30000
+  habitat: Psychic anomaly zones, near Memory Keeper ruins
+  drops:
+  - Concept Crystal
+  - Thought Devourer Brain
+  - Amnesia Gland
+  behavior: Erases combat knowledge, then erases self-defense instinct, then erases survival instinct.
+- id: mon_t6_016
+  name: Gravity Serpent
+  tier: 7
+  type: Cosmic
+  description: Snake-like creature that swims through gravitational fields. Can create and destroy gravity wells at will.
+  stats:
+    STR: 40
+    AGI: 25
+    END: 35
+    INT: 15
+  rp_reward: 80000
+  habitat: Asteroid belts, planetary rings, gravity anomalies
+  drops:
+  - Gravity Fang
+  - Serpent Scale
+  - Graviton Pearl
+  behavior: Creates gravity wells to trap prey, then constricts. Can crush vehicle hulls with gravity manipulation.
+- id: mon_t6_017
+  name: The Hollow
+  tier: 9
+  type: Void
+  description: Absence given form. A hole in reality shaped like a creature. Everything it touches ceases to exist.
+  stats:
+    STR: N/A
+    AGI: 30
+    END: infinite (cannot be damaged normally)
+    INT: 25
+  rp_reward: 1000000
+  habitat: The Wound, void zones, reality fractures
+  drops:
+  - Void Essence (if captured)
+  - Nothing (it erases drops)
+  behavior: Moves toward concentrations of reality/energy and erases them. Only repelled by creation-type abilities.
+- id: mon_t6_018
+  name: Time Wurm
+  tier: 8
+  type: Temporal
+  description: Creature that moves through time as easily as space. Can attack from the past or future.
+  stats:
+    STR: 60
+    AGI: temporal (ignores initiative)
+    END: 100
+    INT: 30
+  rp_reward: 750000
+  habitat: Temporal anomalies, near Chronari settlements
+  drops:
+  - Temporal Scale
+  - Time Wurm Fang
+  - Chrono Crystal
+  behavior: Exists in all time periods simultaneously. Attacks may come before the battle starts. Can only be fought with
+    temporal abilities.
+- id: mon_t6_019
+  name: Plague Titan
+  tier: 7
+  type: Biological
+  description: Massive bio-horror that spreads diseases tailored to each species. A walking pandemic.
+  stats:
+    STR: 45
+    AGI: 5
+    END: 70
+    INT: 18
+  rp_reward: 90000
+  habitat: Quarantine zones, dead worlds
+  drops:
+  - Plague Core
+  - Adaptive Pathogen Sample
+  - Titan Antibody
+  behavior: Releases species-specific plagues. Must be killed quickly before pandemic spreads to settlements.
+- id: mon_t6_020
+  name: Quantum Spider
+  tier: 6
+  type: Quantum
+  description: Exists in superposition. Is in all possible locations until observed, then collapses to most advantageous position.
+  stats:
+    STR: 20
+    AGI: quantum (always in optimal position)
+    END: 25
+    INT: 30
+  rp_reward: 35000
+  habitat: Probability anomalies, Nexus Spire vicinity
+  drops:
+  - Quantum Thread
+  - Probability Web
+  - Superposition Crystal
+  behavior: Webs trap targets in probability loops. Attacks always come from blindspot. Only Zerathi can predict it.
+- id: mon_t6_021
+  name: Core Eater
+  tier: 8
+  type: System Predator
+  description: Creature that specifically hunts Vehicle Cores. Can detect Core energy from lightyears away. Travellers' nightmare.
+  stats:
+    STR: 70
+    AGI: 20
+    END: 60
+    INT: 15
+  rp_reward: 600000
+  habitat: Anywhere Travellers gather
+  drops:
+  - Core Eater Tooth
+  - Consumed Core Fragments
+  - Anti-Core Plating
+  behavior: Stalks high-tier Travellers. Rips Vehicle Core from practitioner's soul. Often fatal for victim.
+- id: mon_t6_022
+  name: Dreamer
+  tier: 10
+  type: Eldritch
+  description: Entity so powerful its dreams reshape local reality. An entire world warps around its sleeping form.
+  stats:
+    STR: reality-warping
+    AGI: 0
+    END: functionally infinite
+    INT: beyond measurement
+  rp_reward: 10000000
+  habitat: Its own dream world (planet-sized)
+  drops:
+  - Dream Fragment
+  - Reality Seed
+  - Dreamer's Tear
+  behavior: Asleep. Its dreams create and destroy. If it wakes, the consequences would be catastrophic. Some say the System
+    keeps it sleeping.
+- id: mon_t6_023
+  name: Dreadnought Tortoise
+  tier: 7
+  type: Beast
+  description: Mountain-sized tortoise with a shell that is a living ecosystem. Entire forests grow on its back.
+  stats:
+    STR: 100
+    AGI: 1
+    END: 500
+    INT: 15
+  rp_reward: 800000
+  habitat: Deep oceans, continental shelves
+  drops:
+  - Living Ecosystem Sample
+  - Dreadnought Shell Fragment
+  - Ancient Tortoise Core
+  behavior: Passive. It doesn't notice humanoid-sized creatures. Danger comes from its ecosystem — the forests on its back
+    have their own food chain.
+- id: mon_t6_024
+  name: Reality Weaver
+  tier: 8
+  type: Dimensional
+  description: Spider-like entity that weaves webs between dimensions. Its webs are made of solidified spacetime.
+  stats:
+    STR: 40
+    AGI: 30
+    END: 60
+    INT: 50
+  rp_reward: 2000000
+  habitat: Dimensional intersections
+  drops:
+  - Spacetime Silk
+  - Reality Thread
+  - Weaver's Eye
+  behavior: Territorial over dimensional crossroads. Webs trap inter-dimensional travelers. Does not pursue — waits for prey
+    to come to it.
+- id: mon_t6_025
+  name: Soul Devourer
+  tier: 8
+  type: Void
+  description: Void entity that consumes souls. Can permanently kill Travellers by eating their Core's soul-bond.
+  stats:
+    STR: 60
+    AGI: 20
+    END: 80
+    INT: 30
+  rp_reward: 3000000
+  habitat: Void zones, near dying stars
+  drops:
+  - Soul Crystal
+  - Void Essence
+  - Devourer Tooth
+  behavior: Hunts Travellers specifically. Attracted to active Vehicle Cores. One of the few creatures that can permanently
+    kill a Traveller.
+- id: mon_t6_026
+  name: Storm Colossus
+  tier: 7
+  type: Elemental
+  description: Living thunderstorm in humanoid form. 500m tall. Lightning for blood. Thunder for voice.
+  stats:
+    STR: 80
+    AGI: 15
+    END: 120
+    INT: 20
+  rp_reward: 900000
+  habitat: Open skies, storm zones, gas giants
+  drops:
+  - Storm Core
+  - Lightning Blood
+  - Thunder Crystal
+  behavior: Wanders. Creates storms wherever it goes. Not inherently hostile but collateral damage is enormous.
+- id: mon_t6_027
+  name: Time Serpent
+  tier: 9
+  type: Temporal
+  description: Serpent that exists across all points in time simultaneously. Attacking it in the present means fighting all
+    its past and future selves.
+  stats:
+    STR: 70
+    AGI: exists in all times
+    END: infinite (heals by pulling health from other timelines)
+    INT: 60
+  rp_reward: 10000000
+  habitat: Temporal anomalies, near time dilation zones
+  drops:
+  - Time Scale
+  - Temporal Core
+  - Chrono Fang
+  behavior: Guards temporal anomalies. Attacks anyone who manipulates time. Its bite ages targets by decades.
+- id: mon_t6_028
+  name: Plague Mother
+  tier: 6
+  type: Bio-Horror
+  description: Massive organism that births diseases. Each 'child' is a new pathogen. She creates epidemics.
+  stats:
+    STR: 30
+    AGI: 5
+    END: 200
+    INT: 25
+  rp_reward: 500000
+  habitat: Swamps, abandoned settlements, quarantine zones
+  drops:
+  - Plague Sample (dangerous!)
+  - Mother Tissue
+  - Immunity Crystal
+  behavior: Stationary. Creates and launches disease vectors. Must be destroyed from range — approaching is suicidal without
+    immunity.
+- id: mon_t6_029
+  name: Quantum Beast
+  tier: 7
+  type: Anomaly
+  description: Creature that exists in quantum superposition. Is simultaneously everywhere and nowhere until observed.
+  stats:
+    STR: superposition
+    AGI: superposition
+    END: superposition
+    INT: 35
+  rp_reward: 1000000
+  habitat: Quantum anomaly zones, particle accelerator ruins
+  drops:
+  - Quantum Crystal
+  - Superposition Core
+  - Probability Matrix
+  behavior: Observation changes its state. Looking at it collapses it into one form, but it immediately enters superposition
+    again. Must be trapped, not killed.
+- id: mon_t6_030
+  name: Memory Eater
+  tier: 6
+  type: Psychic
+  description: Psychic predator that consumes memories. Victims forget skills, people, even their own identity.
+  stats:
+    STR: 15
+    AGI: 12
+    END: 30
+    INT: 40
+  rp_reward: 400000
+  habitat: Libraries, knowledge centers, near Dreamwalker settlements
+  drops:
+  - Memory Crystal (contains stolen memories)
+  - Eater Brain
+  - Amnesia Dust
+  behavior: Stalks intelligent prey. Prefers to consume skill memories — combat training, crafting knowledge. Victims lose
+    abilities permanently unless memories are recovered.
+- id: mon_t6_031
+  name: Void Kraken
+  tier: 9
+  type: Void
+  description: City-sized kraken that swims through the void between dimensions. Tentacles reach into multiple realities.
+  stats:
+    STR: 200
+    AGI: 8
+    END: 300
+    INT: 40
+  rp_reward: 15000000
+  habitat: Deep void, dimensional borders
+  drops:
+  - Void Kraken Ink
+  - Dimensional Tentacle
+  - Void Pearl
+  behavior: Feeds on dimensions. Wraps tentacles around small pocket dimensions and squeezes them until they collapse. Rarely
+    encounters Travellers.
+- id: mon_t6_032
+  name: Phoenix Emperor
+  tier: 8
+  type: Elemental
+  description: Ancient phoenix that has been reborn 10,000+ times. Each rebirth made it stronger. Burns hotter than stars.
+  stats:
+    STR: 50
+    AGI: 40
+    END: infinite (resurrects)
+    INT: 45
+  rp_reward: 5000000
+  habitat: Volcanic worlds, star surfaces, The Forge of Stars
+  drops:
+  - Emperor Ash (supreme healing)
+  - Phoenix Heart
+  - Eternal Flame Crystal
+  behavior: Territorial over volcanic regions. Will fight to the death — then resurrect and fight again. Must be sealed, not
+    killed.
+- id: mon_t6_033
+  name: Gravity Leviathan
+  tier: 8
+  type: Anomaly
+  description: Space-dwelling creature that manipulates gravity. Creates accretion disks around itself. Feeds on asteroids.
+  stats:
+    STR: 150
+    AGI: 5
+    END: 200
+    INT: 20
+  rp_reward: 3000000
+  habitat: Asteroid belts, planetary rings, deep space
+  drops:
+  - Gravity Core
+  - Compressed Matter
+  - Leviathan Scale
+  behavior: Uses gravity to pull objects into orbit around itself. Not hostile but its gravity field captures and crushes
+    approaching vehicles.
+- id: mon_t6_034
+  name: The Mimic World
+  tier: 10
+  type: Unique
+  description: A creature disguised as an entire world. Travelers land on it, settle on it, and then it eats them all.
+  stats:
+    STR: planetary
+    AGI: 0
+    END: planetary
+    INT: 50
+  rp_reward: 100000000
+  habitat: Disguised as a habitable world in unexplored space
+  drops:
+  - World Core (if somehow killed)
+  - Mimic Essence
+  - Planetary Tooth
+  behavior: Patience incarnate. Attracts settlers with perfect conditions. Once population reaches threshold, it consumes
+    everything. Has eaten entire civilizations.

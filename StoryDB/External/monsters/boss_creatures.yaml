@@ -1,0 +1,540 @@
+category: boss_creatures
+description: 'Boss creatures and unique encounters found in dungeons, world events, and special locations. Bosses are significantly
+  more powerful than standard creatures of their tier and drop rare loot including Vehicle Core fragments, blueprints, and
+  unique equipment.
+
+  '
+dungeon_bosses:
+- id: BOSS-001
+  name: The Broodmother
+  tier: 2
+  type: insectoid_boss
+  location: Tier 2 insect-themed dungeons
+  hp: 25000
+  stats:
+    STR: 8
+    AGI: 4
+    END: 12
+    INT: 3
+    PER: 6
+  description: 'A massive chitinous queen the size of a school bus. Her bloated abdomen pulses with bioluminescent fluid.
+    Six armored legs end in serrated blades. She doesn''t fight alone — she spawns waves of lesser insects from egg sacs embedded
+    in the dungeon walls. Her carapace is thick enough to deflect Tier 1 weapons. The stench of pheromones fills the air,
+    making breathing difficult.
+
+    '
+  abilities:
+  - name: Swarm Spawn
+    description: Spawns 6-10 Tier 0 insect minions every 30 seconds
+  - name: Acid Spit
+    description: Ranged acid attack, 15m range, melts armor durability by 20%
+  - name: Chitin Shield
+    description: Hardens carapace for 10 seconds, reducing all damage by 80%
+  - name: Pheromone Cloud
+    description: Area debuff — -30% accuracy for all enemies within 10m
+  weaknesses: Underside is unarmored. Fire damage deals 2x. Destroying egg sacs stops spawning.
+  loot_table:
+    common: Chitin Plates (crafting material), Acid Gland (alchemy ingredient)
+    uncommon: Broodmother Mandible (Tier 2 dagger), Pheromone Sac (consumable — AoE debuff)
+    rare: Queen's Carapace (Tier 2 heavy armor piece)
+    legendary: Hive Core Fragment (Vehicle Core fragment — 0.5% drop rate)
+  tactics: 'Kill the egg sacs first to stop minion spawns. Ranged attacks target the underside when she rears up. Tank must
+    hold aggro while DPS burns her down. The acid spit can be dodged with Quick Dash. Solo clear requires Tier 3+ gear or
+    exceptional skill.
+
+    '
+- id: BOSS-002
+  name: Gorethane the Undying
+  tier: 4
+  type: undead_abomination
+  location: Tier 4 crypt/undead dungeons
+  hp: 120000
+  stats:
+    STR: 15
+    AGI: 6
+    END: 20
+    INT: 8
+    PER: 10
+  description: 'Once a Tier 6 Traveller who died in this dungeon centuries ago, Gorethane has been reanimated by residual
+    System energy into something neither alive nor dead. His flesh is grey-green, muscles exposed where skin has rotted away,
+    but his movements are fluid and powerful. He still wears his corroded armor and wields a greatsword that trails necrotic
+    energy. His eyes burn with cold blue System light. He regenerates damage continuously.
+
+    '
+  abilities:
+  - name: Necrotic Slash
+    description: Melee attack that deals physical + necrotic damage. Necrotic damage reduces max HP by 5% for 60 seconds (stacks).
+  - name: Undying Will
+    description: When reduced to 0 HP, regenerates to 30% HP after 10 seconds. Can trigger up to 3 times per fight.
+  - name: Death Aura
+    description: Passive — all enemies within 8m take 50 necrotic damage/second and healing effectiveness reduced by 50%.
+  - name: Soul Rend
+    description: Targeted attack — attempts to damage the target's Vehicle Core bond. On hit, vehicle summon is disabled for
+      5 minutes.
+  weaknesses: Fire and light damage deal 2x. Destroying the System crystal embedded in his chest prevents Undying Will.
+  loot_table:
+    common: Undead Bone (crafting material), Necrotic Essence (alchemy)
+    uncommon: Gorethane's Corroded Greatsword (Tier 4, necrotic damage, repairable to Tier 5)
+    rare: Death Knight Armor Set piece (Tier 4 heavy armor, necrotic resistance)
+    legendary: Soul Crystal (permanent +1 SYS stat crystal — 2% drop rate)
+  tactics: 'Burst damage to find and destroy the chest crystal before he revives. Light-based abilities are critical. Stay
+    outside Death Aura range when possible. The Soul Rend ability is his most dangerous — if your vehicle summon is disabled
+    in a deep dungeon, escape becomes nearly impossible.
+
+    '
+- id: BOSS-003
+  name: The Architect Fragment
+  tier: 7
+  type: ancient_construct
+  location: Architect ruins, hidden dungeon floors
+  hp: 500000
+  stats:
+    STR: 20
+    AGI: 15
+    END: 25
+    INT: 30
+    PER: 25
+  description: 'A remnant of the Architect civilization — a geometric construct of golden light and impossible angles. It
+    hovers 3 meters off the ground, its form constantly shifting between shapes that hurt to look at. It doesn''t attack with
+    physical force — it rewrites local reality. The air around it smells of ozone and mathematics. This is not a creature
+    — it''s a broken piece of something that was once much larger, still executing its original programming millions of years
+    after its creators vanished.
+
+    '
+  abilities:
+  - name: Reality Overwrite
+    description: Alters gravity, temperature, or atmospheric composition within 30m for 15 seconds. Randomized effect.
+  - name: Geometric Prison
+    description: Traps one target in a crystalline cage of light. Target must deal 50,000 damage to the cage to escape.
+  - name: System Interference
+    description: Disrupts System abilities within 20m. All ability costs doubled, cooldowns tripled for 30 seconds.
+  - name: Reconstruction
+    description: Reassembles destroyed parts. Regenerates 5% HP every 60 seconds unless the core matrix is exposed.
+  - name: Data Cascade
+    description: Floods nearby System interfaces with ancient data. Causes System UI to glitch for 10 seconds — no HUD, no
+      ability activation.
+  weaknesses: System Severance disables its abilities for 30 seconds. Physical attacks bypass its energy defenses. The core
+    matrix is exposed for 5 seconds after each Reality Overwrite.
+  loot_table:
+    common: Architect Alloy Fragment (legendary crafting material)
+    uncommon: Geometric Crystal (used in dimensional engineering research)
+    rare: 'Architect Data Core (contains fragments of ancient knowledge — research value: immeasurable)'
+    legendary: Fragment Core (Vehicle Core equivalent, Tier 5 — 1% drop rate. Unlike normal cores, it's golden and hums with
+      ancient energy.)
+  tactics: 'Requires a coordinated team of Tier 6+ Travellers. Time attacks during the 5-second vulnerability window after
+    Reality Overwrite. Bring physical weapons — energy attacks are absorbed. The Data Cascade is the most disruptive ability
+    — assign one team member to watch for the telltale golden flash and call out warnings.
+
+    '
+- id: boss_009
+  name: The Collector
+  tier: 8
+  type: World Boss
+  habitat:
+  - The Vault of Cores (unique location)
+  description: Ancient entity that has collected over 10,000 Vehicle Cores across millennia. Uses stolen cores as power source
+    and ammunition.
+  base_stats:
+    STR: 28
+    AGI: 12
+    END: 30
+    INT: 18
+    PER: 15
+    LCK: 5
+  abilities:
+  - Core Barrage (launch Vehicle Cores as explosive projectiles)
+  - Absorption (consume a Core to heal 20% HP and gain random ability)
+  - Core Army (activate 100 stolen Cores as autonomous attack drones)
+  - Vault Lock (teleport fighters into sealed vault rooms, 1v1 trials)
+  rp_reward: 50000
+  loot_table:
+  - Collector's Key (mythic)
+  - Ancient Core (x5, legendary)
+  - Vault Map Fragment (legendary)
+  - Core Resonance Crystal (mythic)
+  danger_notes: Each consumed Core gives it a new ability. Prevent absorption at all costs. Core Army activates at 50% HP.
+    Vault Lock isolates the weakest fighter.
+  weak_to:
+  - Core disruption fields
+  - Anti-core technology
+  - Overwhelming numbers
+  resistant_to:
+  - Single-target
+  - Energy-based (absorbs it)
+  special_mechanics: Has a collection phase before combat where it tries to steal the party's Vehicle Cores. Protect cores
+    at all costs.
+- id: boss_010
+  name: The Wanderer King
+  tier: 7
+  type: World Boss
+  habitat:
+  - The Endless March (mobile location — moves across wastelands)
+  description: The most powerful Wanderer in existence. Lost his Tier 9 Vehicle Core but survived through sheer will. Leads
+    an army of 10,000 Wanderers.
+  base_stats:
+    STR: 25
+    AGI: 15
+    END: 22
+    INT: 14
+    PER: 12
+    LCK: 8
+  abilities:
+  - Phantom Travelling (move at Vehicle speed without a vehicle)
+  - Core Memory (temporarily recreate his lost Vehicle's abilities for 60 seconds)
+  - Wanderer's Rally (buff all allied Wanderers within 1km +50% all stats)
+  - Desperation Strike (scales inversely with HP — stronger as he weakens)
+  rp_reward: 20000
+  loot_table:
+  - Wanderer's Crown (legendary)
+  - Phantom Core Echo (legendary)
+  - March Banner (epic)
+  - King's Memoir (legendary — contains lost techniques)
+  danger_notes: He's honorable — can be reasoned with. His army is the real threat. If convinced you're worthy, he may offer
+    a quest instead of a fight.
+  weak_to:
+  - Offering a Vehicle Core (pauses to consider)
+  - Diplomacy
+  - Isolating from army
+  resistant_to:
+  - Physical (supernatural toughness)
+  - Fear effects (has nothing left to lose)
+  special_mechanics: Wanderer King has a dialogue phase. Diplomatic players can avoid combat entirely and gain him as an ally.
+- id: boss_011
+  name: System Anomaly X-7
+  tier: 9
+  type: Raid Boss
+  habitat:
+  - System Error Zone (appears randomly, disappears after 24 hours)
+  description: A bug in the System given physical form. Reality glitches around it. Laws of physics become suggestions. It
+    doesn't attack — reality breaks.
+  base_stats:
+    STR: ???
+    AGI: ???
+    END: ???
+    INT: ???
+    PER: ???
+    LCK: ???
+  abilities:
+  - Reality Glitch (random physics changes in 1km radius — gravity reversal, time loops, stat randomization)
+  - Error Code (System notifications become weapons — text materializes as physical attacks)
+  - Blue Screen (disable all System abilities for all entities in range for 30 seconds)
+  - Patch Attempt (System tries to fix itself — massive AoE that destroys the anomaly AND everything nearby)
+  rp_reward: 500000
+  loot_table:
+  - System Code Fragment (mythic)
+  - Error Crystal (mythic)
+  - Glitch Data (mythic)
+  - Reality Patch (mythic — can fix one broken System mechanic)
+  danger_notes: No conventional strategy works. Adapt to random physics changes. Blue Screen disables YOUR abilities too.
+    Patch Attempt is a kill-or-be-killed timer.
+  weak_to:
+  - Adaptation
+  - Non-System abilities
+  - Pure physical force during Blue Screen
+  resistant_to:
+  - System-based abilities (it IS the System malfunctioning)
+  - Predictable strategies
+  special_mechanics: Reality rules change every 60 seconds. Parties must adapt instantly. The real reward is the Reality Patch
+    — it can fix corrupted Vehicle Cores.
+- id: boss_d007
+  name: The Flesh Sculptor
+  tier: 6
+  type: Dungeon Boss
+  location: The Hive, Floor 40
+  description: Bio-horror boss that reshapes its body mid-combat. Adapts to counter whatever tactics are used against it.
+  abilities:
+  - Adaptive morphology
+  - Flesh absorption (heals by absorbing corpses)
+  - Spawn minions from body mass
+  rewards:
+    rp: 50000
+    drops:
+    - Adaptive Tissue Sample
+    - Sculptor Core
+    - Living Weapon Blueprint
+  strategy: Must be overwhelmed quickly before it adapts. Changes counters every 30 seconds.
+  lore: Once a Sylvani scientist who experimented on herself. The Hive absorbed her and made her its champion.
+- id: boss_d008
+  name: The Gravity King
+  tier: 7
+  type: Dungeon Boss
+  location: The Infinite Descent, Floor 100
+  description: Ancient construct that controls gravity absolutely. Crushes, throws, and manipulates targets with gravitational
+    force.
+  abilities:
+  - Absolute gravity control (0-10000G)
+  - Gravity shield
+  - Micro black hole projectiles
+  - Flight via gravity negation
+  rewards:
+    rp: 200000
+    drops:
+    - Gravity Crown
+    - Black Hole Seed
+    - Graviton Engine Blueprint
+  strategy: Zero-G combat specialist needed. Must fight in his gravity field or be crushed. Target the crown.
+  lore: Built by the Star Shapers as a guardian. Still follows orders from masters who died 500 million years ago.
+- id: boss_d009
+  name: The Probability Dragon
+  tier: 7
+  type: Dungeon Boss
+  location: The Probability Maze, Final Room
+  description: Dragon that exists in quantum superposition. Every attack has a probability of hitting or missing regardless
+    of skill.
+  abilities:
+  - Probability breath (random damage type each use)
+  - Quantum dodge (50% chance to avoid any attack)
+  - Probability Storm
+  rewards:
+    rp: 250000
+    drops:
+    - Probability Scale
+    - Quantum Dragon Core
+    - Luck Amplifier
+  strategy: Stack luck and probability manipulation. Zerathi have significant advantage. Brute force is unreliable.
+  lore: The Zerathi claim it's their greatest creation. It claims it created the Zerathi. Both may be true.
+world_bosses:
+- id: BOSS-004
+  name: Dreadnought Leviathan
+  tier: 6
+  type: aquatic_world_boss
+  location: Deep ocean zones, appears during System Storm events
+  hp: 800000
+  stats:
+    STR: 25
+    AGI: 8
+    END: 30
+    INT: 5
+    PER: 15
+  description: 'A creature the size of an aircraft carrier that surfaces during System Storms — periodic events where System
+    energy surges and creatures grow more aggressive. The Leviathan is a living mountain of scales, teeth, and bioluminescent
+    organs. Its wake creates tsunamis. Its roar triggers seismic events. It has destroyed Tier 4 warships in single strikes.
+    Navy Travellers consider spotting one as a death omen.
+
+    '
+  abilities:
+  - name: Tidal Devastation
+    description: Creates a 50m tsunami wave in all directions. Capsizes any vehicle below Tier 5.
+  - name: Abyssal Dive
+    description: Submerges to extreme depth, becoming untargetable for 60 seconds before surfacing beneath a target.
+  - name: Bio-Electric Storm
+    description: Discharges massive electrical energy through the water. 200m radius. Disables electronics for 30 seconds.
+  - name: Consume
+    description: Opens its maw (50m wide) and inhales. Vehicles below Tier 4 are pulled in and destroyed.
+  weaknesses: Vulnerable when surfacing (5-second window). Eyes are weak points (1/10th hull HP). Interior is accessible if
+    Consumed (kill from inside).
+  loot_table:
+    rare: Leviathan Scale (Tier 6 armor material, waterproof, pressure-resistant)
+    legendary: Leviathan Heart (permanent +3 END stat boost — single use, one per kill)
+    mythic: Abyssal Core (Vehicle Core, Tier 6 — 0.1% drop rate. Navy-domain affinity.)
+  event_notes: 'The Dreadnought Leviathan appears once per System Storm cycle (approximately every 3-6 months). Entire fleets
+    mobilize to fight it. Historically, only 4 have been killed in the mapped universe. The loot from a Leviathan kill can
+    fund a faction for years.
+
+    '
+- id: BOSS-005
+  name: The Swarm King
+  tier: 5
+  type: insectoid_world_boss
+  location: Appears during Swarm Migration events on any world
+  hp: 300000
+  stats:
+    STR: 18
+    AGI: 20
+    END: 15
+    INT: 12
+    PER: 20
+  description: 'A flying insectoid the size of a fighter jet, leading a swarm of millions of lesser insects that darken the
+    sky. The Swarm King itself is beautiful in a terrifying way — iridescent wings that refract light into rainbows, mandibles
+    that can shear through vehicle armor, and compound eyes that see in every spectrum. The swarm moves at its command, forming
+    shields, weapons, and decoys from living bodies.
+
+    '
+  abilities:
+  - name: Living Shield
+    description: Commands 100,000 lesser insects to form a barrier. Absorbs 50,000 damage before dispersing.
+  - name: Swarm Javelin
+    description: Compresses 10,000 insects into a lance of living matter. Ranged attack, extreme penetration.
+  - name: Pheromone Override
+    description: Any Formicari within 1km must make a WIS check or fall under temporary Swarm King control.
+  - name: Scatter
+    description: Disperses into the swarm, becoming indistinguishable for 30 seconds. Must be found by PER check.
+  weaknesses: Area-of-effect fire attacks thin the swarm. Without the swarm, the King has 50% reduced stats. Cold temperatures
+    slow the swarm.
+  loot_table:
+    common: Royal Chitin (Tier 5 crafting material)
+    rare: Swarm King's Wing (Tier 5 aerial vehicle upgrade — +30% flight speed)
+    legendary: Hive Mind Crystal (grants Hive Link ability to non-Formicari for 24 hours — reusable)
+- id: boss_w003
+  name: The Living Storm
+  tier: 8
+  type: World Boss
+  location: Earth Upper Atmosphere
+  description: Sentient superstorm that has been circling Earth since the System activated. Tier 8 weather entity.
+  abilities:
+  - Category 6+ winds
+  - Targeted lightning strikes
+  - Tornado spawn
+  - Electromagnetic disruption
+  rewards:
+    rp: 500000
+    drops:
+    - Storm Core
+    - Lightning Essence
+    - Weather Control Module
+  strategy: Must be fought from vehicle in atmosphere. Ground approach impossible. Requires Tier 5+ air vehicle minimum.
+  lore: Some believe the Living Storm is Earth's immune response to the System. Others think it's a guardian.
+- id: boss_w004
+  name: The Deep One
+  tier: 9
+  type: World Boss
+  location: Earth Ocean Trench (deepest point)
+  description: Colossal entity sleeping in the deepest ocean trench. Predates the System. Older than humanity.
+  abilities:
+  - Psychic pressure (drives nearby creatures mad)
+  - Tentacle army
+  - Reality distortion in water
+  - Crushing depth manipulation
+  rewards:
+    rp: 2000000
+    drops:
+    - Deep One Eye
+    - Abyssal Core
+    - Depth Pressure Engine
+  strategy: Requires Tier 6+ navy vehicle. Psychic resistance mandatory. Cannot be soloed — minimum 10 Tier 5+ Travellers.
+  lore: The System classifies it as 'PRE-SYSTEM ENTITY — DO NOT ENGAGE WITHOUT AUTHORIZATION.' What authorization? From whom?
+unique_encounters:
+- id: UNQ-001
+  name: The Mirror
+  tier: Matches challenger
+  type: system_anomaly
+  location: Random — appears in cleared dungeon rooms, empty spaces, reflective surfaces
+  description: 'Not a creature but a System anomaly. The Mirror appears as a perfect reflective surface that shows the challenger''s
+    own image. When touched, it creates a perfect duplicate of the challenger — same stats, same abilities, same equipment,
+    same Soul Vehicle. The duplicate fights to kill. The only way to win is to outthink yourself. The duplicate copies everything
+    except creativity and adaptability — it fights using the challenger''s most common patterns. Travellers who rely on one
+    strategy lose. Those who adapt and innovate win.
+
+    '
+  abilities:
+  - name: Perfect Copy
+    description: Duplicates all stats, abilities, and equipment of the challenger.
+  - name: Pattern Lock
+    description: After 60 seconds, the copy's fighting style locks to the challenger's most-used pattern. It can no longer
+      adapt.
+  weaknesses: Use abilities you've never used before. The copy can't replicate what it hasn't seen. Environmental attacks
+    (collapsing pillars, flooding rooms) work because the copy doesn't think creatively.
+  loot_table:
+    guaranteed: Mirror Shard (consumable — creates a temporary clone of the user for 60 seconds, 1 use)
+    rare: Mirror Core (unique item — permanently grants +2 to the user's lowest stat)
+  lore_notes: 'The Mirror is one of the universe''s most feared random encounters. It has killed Tier 10+ Travellers who were
+    overconfident in their power. The lesson: power without adaptability is a death sentence. Mohamed''s dual system gives
+    him an edge — the copy only duplicates his primary system. His secondary system abilities are not copied.
+
+    '
+- id: UNQ-002
+  name: The Merchant
+  tier: N/A (non-combat)
+  type: system_entity
+  location: Random — appears in dungeons, usually on rest floors or hidden rooms
+  description: 'A cloaked figure sitting behind a floating display of impossible items. The Merchant is not a creature, not
+    a Traveller, and not a System notification. It simply IS. It speaks in the challenger''s native language. It offers items
+    that shouldn''t exist — future technology, extinct race artifacts, one-of-a-kind abilities. Everything has a price. The
+    Merchant accepts RP, items, memories, years of life, or abstract concepts (one Traveller reportedly traded their fear
+    of death). The Merchant cannot be attacked — hostility causes it to simply vanish.
+
+    '
+  inventory_examples:
+  - item: Map Fragment (shows one unexplored region of the universe)
+    price: 50,000 RP
+  - item: Stat Reset Potion (redistribute all stat points)
+    price: 500,000 RP
+  - item: Soul Vehicle Reforge Token (change vehicle domain — land/navy/air)
+    price: 10,000,000 RP + one memory
+  - item: Core Tier Skip (advance core one full tier, bypassing evolution)
+    price: 1 year of remaining lifespan
+  - item: Second Chance (resurrect once upon death, consuming the item)
+    price: Your happiest memory (forgotten permanently)
+  - item: The Answer (ask one question, receive a truthful answer about anything)
+    price: Your ability to lie (permanent — you can never speak untruth again)
+  lore_notes: 'Nobody knows what The Merchant is. It appears across all known universes, in all time periods. Ancient race
+    records describe encounters with it. The Kael''thari have spent centuries trying to track or study it — every attempt
+    fails. Some theorize it''s a remnant of the System''s creators. Others believe it IS the System, manifesting a personality
+    it otherwise lacks. The Soul Vehicle Reforge Token is the ONLY known way to change a vehicle''s domain — and the cost
+    (an entire memory, chosen by The Merchant) ensures almost nobody does it.
+
+    '
+- id: UNQ-003
+  name: System Glitch
+  tier: Varies (Tier 3-8)
+  type: system_error
+  location: Anywhere — more common near dungeon cores, dimensional rifts, and System Zero references
+  description: 'A creature that shouldn''t exist. System Glitches are errors in the System''s creature generation — beings
+    made of scrambled code and broken physics. They appear as shifting masses of polygons, impossible colors, and fragmented
+    creature parts. A Glitch might have the head of one creature, the body of another, and the abilities of a third — all
+    mashed together wrong. They''re unpredictable, often powerful, and always disturbing to encounter. The System itself seems
+    to try to delete them — they periodically flicker and take System damage.
+
+    '
+  abilities:
+  - name: Randomized
+    description: Each Glitch has 2-4 random abilities from any creature in the database. These abilities may not work correctly
+      — half-damage, wrong targeting, unexpected side effects.
+  - name: Error State
+    description: Periodically glitches — teleporting randomly, changing size, dealing damage to itself. Unpredictable but
+      exploitable.
+  - name: Corruption
+    description: Attacks from a Glitch have a 10% chance to temporarily corrupt the target's System interface — random ability
+      activates, stats scramble for 5 seconds.
+  weaknesses: System-type damage is 3x effective. The Glitch's own Error State damages it. Predictable attack windows during
+    glitch episodes.
+  loot_table:
+    common: Glitch Fragment (research material — valuable to System Mechanics researchers)
+    rare: Error Crystal (consumable — causes one random positive stat boost, +1 to +5, permanent but random which stat)
+    legendary: Null Shard (negates one System ability permanently when applied to a weapon — the weapon now disrupts that
+      ability on hit)
+  lore_notes: 'System Glitches are one of the strongest pieces of evidence that the System is not perfect. Something created
+    it, and that something made mistakes — or the System has degraded over time. The Scholar''s Compact pays enormous bounties
+    for intact Glitch Fragments because studying them reveals how the System''s code works at a fundamental level. Mohamed''s
+    secondary system might be the ultimate Glitch — a system-level error that gained coherence.
+
+    '
+- id: boss_u004
+  name: System Error Alpha
+  tier: 10
+  type: Unique — System Anomaly
+  location: Random spawn — appears when System error occurs
+  description: Physical manifestation of a System error. Glitches reality, corrupts data, and deletes matter.
+  abilities:
+  - Reality glitch (random physics changes)
+  - Data corruption (scrambles stats)
+  - Matter deletion (instant kill on touch)
+  - System crash zone
+  rewards:
+    rp: 5000000
+    drops:
+    - System Error Core
+    - Reality Patch
+    - Debug Crystal
+  strategy: Cannot be fought conventionally. Must be 'debugged' — find and fix the System error causing it.
+  lore: System Error Alpha has appeared 3 times in recorded history. Each time, it deleted an entire city before being resolved.
+- id: boss_u005
+  name: The First Wanderer
+  tier: 8
+  type: Unique — Legendary NPC/Boss
+  location: Wanders the dimensional corridors
+  description: The first Traveller to lose their Core. Thousands of years old. Sustained by pure rage and Phantom Travelling
+    instinct.
+  abilities:
+  - Phantom Core echo (uses ghost of former abilities)
+  - Dimensional walking without vehicle
+  - Core Hunger (drains nearby Cores)
+  - Ancient combat mastery
+  rewards:
+    rp: 1000000
+    drops:
+    - First Core Fragment
+    - Wanderer's Testament
+    - Phantom Core Seed
+  strategy: Unpredictable. May be reasoned with on rare occasions. Mostly attacks Travellers to try to steal a Core.
+  lore: Legend says the First Wanderer was an Architect who lost their Core when the System was still being built.

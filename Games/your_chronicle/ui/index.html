@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Your Chronicle — UI Framework Prototype</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header id="topbar">
+    <div class="brand">YOUR&nbsp;CHRONICLE <span class="sub">UI framework prototype</span></div>
+    <div id="phaseline"></div>
+    <div id="currencies"></div>
+  </header>
+
+  <main id="layout">
+    <!-- Left: the primary click + dev controls -->
+    <section id="left-col">
+      <div class="panel always" data-panel="main_click">
+        <div class="panel-head"><span>Gather / Act</span></div>
+        <div class="panel-body">
+          <button id="bigclick">⛏️ GATHER<br><small>+resources & XP</small></button>
+          <div id="clickstats"></div>
+        </div>
+      </div>
+
+      <div class="panel always" data-panel="dev">
+        <div class="panel-head collapsible"><span>▾ Dev / Demo Controls</span></div>
+        <div class="panel-body">
+          <p class="hint">Drag these to watch panels &amp; buttons unlock by condition.</p>
+          <label>Phase index <output id="o_phase">1</output>
+            <input type="range" id="r_phase" min="1" max="45" value="1"></label>
+          <label>Population <output id="o_pop">0</output>
+            <input type="range" id="r_pop" min="0" max="1000000" value="0"></label>
+          <label>Rebirths <output id="o_rb">0</output>
+            <input type="range" id="r_rb" min="0" max="20" value="0"></label>
+          <label>Dungeon rank cleared <output id="o_dr">-1</output>
+            <input type="range" id="r_dr" min="-1" max="17" value="-1"></label>
+          <label><input type="checkbox" id="c_shack"> Repaired Shack (BLD-001.tier≥1)</label>
+          <label><input type="checkbox" id="c_show_locked" checked> Show locked panels (greyed)</label>
+          <button id="give_gold">+1000 Gold</button>
+          <button id="give_item">Grant sample equipment</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right: the data-driven, condition-gated panels -->
+    <section id="panels"></section>
+  </main>
+
+  <footer id="foot">
+    <span id="counts"></span>
+    <span class="muted">Prototype reads <code>game_data.json</code> exported from <code>your_chronicle.db</code>.</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

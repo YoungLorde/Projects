@@ -1,0 +1,6346 @@
+{
+ "collection": "achievements",
+ "count": 516,
+ "hidden_count": 130,
+ "by_category": {
+  "progression": 45,
+  "population": 16,
+  "currency": 20,
+  "building": 12,
+  "dungeon": 54,
+  "boss": 18,
+  "world_boss": 18,
+  "slayer": 120,
+  "crafting": 11,
+  "recruitment": 31,
+  "loss": 3,
+  "rebirth": 8,
+  "collection": 20,
+  "survival": 10,
+  "secret": 130
+ },
+ "achievements": [
+  {
+   "id": "ACH-0001",
+   "name": "Lone Wanderer Achieved",
+   "description": "Reach the Lone Wanderer phase.",
+   "category": "progression",
+   "condition": "phase_index >= 1",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 11,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0002",
+   "name": "Wooden Shack Achieved",
+   "description": "Reach the Wooden Shack phase.",
+   "category": "progression",
+   "condition": "phase_index >= 2",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 12,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0003",
+   "name": "Homestead Achieved",
+   "description": "Reach the Homestead phase.",
+   "category": "progression",
+   "condition": "phase_index >= 3",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 13,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0004",
+   "name": "Hamlet Achieved",
+   "description": "Reach the Hamlet phase.",
+   "category": "progression",
+   "condition": "phase_index >= 4",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 14,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0005",
+   "name": "Thorpe Achieved",
+   "description": "Reach the Thorpe phase.",
+   "category": "progression",
+   "condition": "phase_index >= 5",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0006",
+   "name": "Small Village Achieved",
+   "description": "Reach the Small Village phase.",
+   "category": "progression",
+   "condition": "phase_index >= 6",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 16,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0007",
+   "name": "Village Achieved",
+   "description": "Reach the Village phase.",
+   "category": "progression",
+   "condition": "phase_index >= 7",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 17,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0008",
+   "name": "Large Village Achieved",
+   "description": "Reach the Large Village phase.",
+   "category": "progression",
+   "condition": "phase_index >= 8",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 18,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0009",
+   "name": "Township Achieved",
+   "description": "Reach the Township phase.",
+   "category": "progression",
+   "condition": "phase_index >= 9",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 19,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0010",
+   "name": "Small Town Achieved",
+   "description": "Reach the Small Town phase.",
+   "category": "progression",
+   "condition": "phase_index >= 10",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0011",
+   "name": "Town Achieved",
+   "description": "Reach the Town phase.",
+   "category": "progression",
+   "condition": "phase_index >= 11",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 21,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0012",
+   "name": "Large Town Achieved",
+   "description": "Reach the Large Town phase.",
+   "category": "progression",
+   "condition": "phase_index >= 12",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 22,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0013",
+   "name": "Small City Achieved",
+   "description": "Reach the Small City phase.",
+   "category": "progression",
+   "condition": "phase_index >= 13",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 23,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0014",
+   "name": "City Achieved",
+   "description": "Reach the City phase.",
+   "category": "progression",
+   "condition": "phase_index >= 14",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 24,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0015",
+   "name": "Large City Achieved",
+   "description": "Reach the Large City phase.",
+   "category": "progression",
+   "condition": "phase_index >= 15",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0016",
+   "name": "Metropolis Achieved",
+   "description": "Reach the Metropolis phase.",
+   "category": "progression",
+   "condition": "phase_index >= 16",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 26,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0017",
+   "name": "Megalopolis Achieved",
+   "description": "Reach the Megalopolis phase.",
+   "category": "progression",
+   "condition": "phase_index >= 17",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 27,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0018",
+   "name": "City-State Achieved",
+   "description": "Reach the City-State phase.",
+   "category": "progression",
+   "condition": "phase_index >= 18",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 28,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0019",
+   "name": "Province Achieved",
+   "description": "Reach the Province phase.",
+   "category": "progression",
+   "condition": "phase_index >= 19",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 29,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0020",
+   "name": "Duchy Achieved",
+   "description": "Reach the Duchy phase.",
+   "category": "progression",
+   "condition": "phase_index >= 20",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0021",
+   "name": "Kingdom Achieved",
+   "description": "Reach the Kingdom phase.",
+   "category": "progression",
+   "condition": "phase_index >= 21",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 31,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0022",
+   "name": "Greater Kingdom Achieved",
+   "description": "Reach the Greater Kingdom phase.",
+   "category": "progression",
+   "condition": "phase_index >= 22",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 32,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0023",
+   "name": "Empire Achieved",
+   "description": "Reach the Empire phase.",
+   "category": "progression",
+   "condition": "phase_index >= 23",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 33,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0024",
+   "name": "Grand Empire Achieved",
+   "description": "Reach the Grand Empire phase.",
+   "category": "progression",
+   "condition": "phase_index >= 24",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 34,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0025",
+   "name": "Continental Dominion Achieved",
+   "description": "Reach the Continental Dominion phase.",
+   "category": "progression",
+   "condition": "phase_index >= 25",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 35,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0026",
+   "name": "World Power Achieved",
+   "description": "Reach the World Power phase.",
+   "category": "progression",
+   "condition": "phase_index >= 26",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 36,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0027",
+   "name": "Planetary Hegemony Achieved",
+   "description": "Reach the Planetary Hegemony phase.",
+   "category": "progression",
+   "condition": "phase_index >= 27",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 37,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0028",
+   "name": "World Government Achieved",
+   "description": "Reach the World Government phase.",
+   "category": "progression",
+   "condition": "phase_index >= 28",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 38,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0029",
+   "name": "Planetary Sovereign Achieved",
+   "description": "Reach the Planetary Sovereign phase.",
+   "category": "progression",
+   "condition": "phase_index >= 29",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 39,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0030",
+   "name": "Orbital Civilization Achieved",
+   "description": "Reach the Orbital Civilization phase.",
+   "category": "progression",
+   "condition": "phase_index >= 30",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 40,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0031",
+   "name": "Lunar Colony Achieved",
+   "description": "Reach the Lunar Colony phase.",
+   "category": "progression",
+   "condition": "phase_index >= 31",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 41,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0032",
+   "name": "Interplanetary Federation Achieved",
+   "description": "Reach the Interplanetary Federation phase.",
+   "category": "progression",
+   "condition": "phase_index >= 32",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 42,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0033",
+   "name": "Solar Dominion Achieved",
+   "description": "Reach the Solar Dominion phase.",
+   "category": "progression",
+   "condition": "phase_index >= 33",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 43,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0034",
+   "name": "Star Empire Achieved",
+   "description": "Reach the Star Empire phase.",
+   "category": "progression",
+   "condition": "phase_index >= 34",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 44,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0035",
+   "name": "Stellar Hegemony Achieved",
+   "description": "Reach the Stellar Hegemony phase.",
+   "category": "progression",
+   "condition": "phase_index >= 35",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 45,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0036",
+   "name": "Cluster Sovereign Achieved",
+   "description": "Reach the Cluster Sovereign phase.",
+   "category": "progression",
+   "condition": "phase_index >= 36",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 46,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0037",
+   "name": "Galactic Frontier Achieved",
+   "description": "Reach the Galactic Frontier phase.",
+   "category": "progression",
+   "condition": "phase_index >= 37",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 47,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0038",
+   "name": "Galactic Empire Achieved",
+   "description": "Reach the Galactic Empire phase.",
+   "category": "progression",
+   "condition": "phase_index >= 38",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 48,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0039",
+   "name": "Galactic Overlord Achieved",
+   "description": "Reach the Galactic Overlord phase.",
+   "category": "progression",
+   "condition": "phase_index >= 39",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 49,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0040",
+   "name": "Intergalactic Dominion Achieved",
+   "description": "Reach the Intergalactic Dominion phase.",
+   "category": "progression",
+   "condition": "phase_index >= 40",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 50,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0041",
+   "name": "Cosmic Sovereign Achieved",
+   "description": "Reach the Cosmic Sovereign phase.",
+   "category": "progression",
+   "condition": "phase_index >= 41",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 51,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0042",
+   "name": "Universal Pillar Achieved",
+   "description": "Reach the Universal Pillar phase.",
+   "category": "progression",
+   "condition": "phase_index >= 42",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 52,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0043",
+   "name": "Dimensional Overlord Achieved",
+   "description": "Reach the Dimensional Overlord phase.",
+   "category": "progression",
+   "condition": "phase_index >= 43",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 53,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0044",
+   "name": "Multiversal Sovereign Achieved",
+   "description": "Reach the Multiversal Sovereign phase.",
+   "category": "progression",
+   "condition": "phase_index >= 44",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 54,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0045",
+   "name": "Universe Overlord Achieved",
+   "description": "Reach the Universe Overlord phase.",
+   "category": "progression",
+   "condition": "phase_index >= 45",
+   "reward": {
+    "all_gain_mult": 1.01
+   },
+   "points": 55,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0046",
+   "name": "Population 2",
+   "description": "Reach a total population of 2.",
+   "category": "population",
+   "condition": "population >= 2",
+   "reward": {
+    "xp_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0047",
+   "name": "Population 5",
+   "description": "Reach a total population of 5.",
+   "category": "population",
+   "condition": "population >= 5",
+   "reward": {
+    "xp_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0048",
+   "name": "Population 10",
+   "description": "Reach a total population of 10.",
+   "category": "population",
+   "condition": "population >= 10",
+   "reward": {
+    "xp_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0049",
+   "name": "Population 25",
+   "description": "Reach a total population of 25.",
+   "category": "population",
+   "condition": "population >= 25",
+   "reward": {
+    "xp_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0050",
+   "name": "Population 50",
+   "description": "Reach a total population of 50.",
+   "category": "population",
+   "condition": "population >= 50",
+   "reward": {
+    "xp_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0051",
+   "name": "Population 100",
+   "description": "Reach a total population of 100.",
+   "category": "population",
+   "condition": "population >= 100",
+   "reward": {
+    "xp_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0052",
+   "name": "Population 250",
+   "description": "Reach a total population of 250.",
+   "category": "population",
+   "condition": "population >= 250",
+   "reward": {
+    "xp_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0053",
+   "name": "Population 500",
+   "description": "Reach a total population of 500.",
+   "category": "population",
+   "condition": "population >= 500",
+   "reward": {
+    "xp_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0054",
+   "name": "Population 1K",
+   "description": "Reach a total population of 1K.",
+   "category": "population",
+   "condition": "population >= 1000",
+   "reward": {
+    "xp_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0055",
+   "name": "Population 5K",
+   "description": "Reach a total population of 5K.",
+   "category": "population",
+   "condition": "population >= 5000",
+   "reward": {
+    "xp_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0056",
+   "name": "Population 10K",
+   "description": "Reach a total population of 10K.",
+   "category": "population",
+   "condition": "population >= 10000",
+   "reward": {
+    "xp_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0057",
+   "name": "Population 100K",
+   "description": "Reach a total population of 100K.",
+   "category": "population",
+   "condition": "population >= 100000",
+   "reward": {
+    "xp_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0058",
+   "name": "Population 1M",
+   "description": "Reach a total population of 1M.",
+   "category": "population",
+   "condition": "population >= 1000000",
+   "reward": {
+    "xp_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0059",
+   "name": "Population 100M",
+   "description": "Reach a total population of 100M.",
+   "category": "population",
+   "condition": "population >= 100000000",
+   "reward": {
+    "xp_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0060",
+   "name": "Population 1B",
+   "description": "Reach a total population of 1B.",
+   "category": "population",
+   "condition": "population >= 1000000000",
+   "reward": {
+    "xp_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0061",
+   "name": "Population 1T",
+   "description": "Reach a total population of 1T.",
+   "category": "population",
+   "condition": "population >= 1000000000000",
+   "reward": {
+    "xp_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0062",
+   "name": "Hoard 100 Bronze",
+   "description": "Accumulate 100 bronze.",
+   "category": "currency",
+   "condition": "currency.bronze >= 100",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0063",
+   "name": "Hoard 10K Bronze",
+   "description": "Accumulate 10K bronze.",
+   "category": "currency",
+   "condition": "currency.bronze >= 10000",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0064",
+   "name": "Hoard 1M Bronze",
+   "description": "Accumulate 1M bronze.",
+   "category": "currency",
+   "condition": "currency.bronze >= 1000000",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0065",
+   "name": "Hoard 100M Bronze",
+   "description": "Accumulate 100M bronze.",
+   "category": "currency",
+   "condition": "currency.bronze >= 100000000",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0066",
+   "name": "Hoard 100 Silver",
+   "description": "Accumulate 100 silver.",
+   "category": "currency",
+   "condition": "currency.silver >= 100",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0067",
+   "name": "Hoard 10K Silver",
+   "description": "Accumulate 10K silver.",
+   "category": "currency",
+   "condition": "currency.silver >= 10000",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0068",
+   "name": "Hoard 1M Silver",
+   "description": "Accumulate 1M silver.",
+   "category": "currency",
+   "condition": "currency.silver >= 1000000",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0069",
+   "name": "Hoard 100M Silver",
+   "description": "Accumulate 100M silver.",
+   "category": "currency",
+   "condition": "currency.silver >= 100000000",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0070",
+   "name": "Hoard 100 Gold",
+   "description": "Accumulate 100 gold.",
+   "category": "currency",
+   "condition": "currency.gold >= 100",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0071",
+   "name": "Hoard 10K Gold",
+   "description": "Accumulate 10K gold.",
+   "category": "currency",
+   "condition": "currency.gold >= 10000",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0072",
+   "name": "Hoard 1M Gold",
+   "description": "Accumulate 1M gold.",
+   "category": "currency",
+   "condition": "currency.gold >= 1000000",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0073",
+   "name": "Hoard 100M Gold",
+   "description": "Accumulate 100M gold.",
+   "category": "currency",
+   "condition": "currency.gold >= 100000000",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0074",
+   "name": "Hoard 100 Zenu Coin",
+   "description": "Accumulate 100 zenu_coin.",
+   "category": "currency",
+   "condition": "currency.zenu_coin >= 100",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0075",
+   "name": "Hoard 10K Zenu Coin",
+   "description": "Accumulate 10K zenu_coin.",
+   "category": "currency",
+   "condition": "currency.zenu_coin >= 10000",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0076",
+   "name": "Hoard 1M Zenu Coin",
+   "description": "Accumulate 1M zenu_coin.",
+   "category": "currency",
+   "condition": "currency.zenu_coin >= 1000000",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0077",
+   "name": "Hoard 100M Zenu Coin",
+   "description": "Accumulate 100M zenu_coin.",
+   "category": "currency",
+   "condition": "currency.zenu_coin >= 100000000",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0078",
+   "name": "Hoard 100 Mythril Coin",
+   "description": "Accumulate 100 mythril_coin.",
+   "category": "currency",
+   "condition": "currency.mythril_coin >= 100",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0079",
+   "name": "Hoard 10K Mythril Coin",
+   "description": "Accumulate 10K mythril_coin.",
+   "category": "currency",
+   "condition": "currency.mythril_coin >= 10000",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0080",
+   "name": "Hoard 1M Mythril Coin",
+   "description": "Accumulate 1M mythril_coin.",
+   "category": "currency",
+   "condition": "currency.mythril_coin >= 1000000",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0081",
+   "name": "Hoard 100M Mythril Coin",
+   "description": "Accumulate 100M mythril_coin.",
+   "category": "currency",
+   "condition": "currency.mythril_coin >= 100000000",
+   "reward": {
+    "all_gain_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0082",
+   "name": "Built: Derelict Wooden Shack",
+   "description": "Construct the Derelict Wooden Shack.",
+   "category": "building",
+   "condition": "building.BLD-000.tier >= 1",
+   "reward": {
+    "pop_cap_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0083",
+   "name": "Built: Wooden Shack (Repaired)",
+   "description": "Construct the Wooden Shack (Repaired).",
+   "category": "building",
+   "condition": "building.BLD-001.tier >= 1",
+   "reward": {
+    "pop_cap_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0084",
+   "name": "Built: House",
+   "description": "Construct the House.",
+   "category": "building",
+   "condition": "building.BLD-002.tier >= 1",
+   "reward": {
+    "pop_cap_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0085",
+   "name": "Built: Two-Story House",
+   "description": "Construct the Two-Story House.",
+   "category": "building",
+   "condition": "building.BLD-003.tier >= 1",
+   "reward": {
+    "pop_cap_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0086",
+   "name": "Built: Apartment Complex",
+   "description": "Construct the Apartment Complex.",
+   "category": "building",
+   "condition": "building.BLD-004.tier >= 1",
+   "reward": {
+    "pop_cap_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0087",
+   "name": "Built: Village Housing Block",
+   "description": "Construct the Village Housing Block.",
+   "category": "building",
+   "condition": "building.BLD-005.tier >= 1",
+   "reward": {
+    "pop_cap_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0088",
+   "name": "Built: Town Housing Quarter",
+   "description": "Construct the Town Housing Quarter.",
+   "category": "building",
+   "condition": "building.BLD-006.tier >= 1",
+   "reward": {
+    "pop_cap_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0089",
+   "name": "Built: City Residential District",
+   "description": "Construct the City Residential District.",
+   "category": "building",
+   "condition": "building.BLD-007.tier >= 1",
+   "reward": {
+    "pop_cap_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0090",
+   "name": "Built: Metropolitan Towers",
+   "description": "Construct the Metropolitan Towers.",
+   "category": "building",
+   "condition": "building.BLD-008.tier >= 1",
+   "reward": {
+    "pop_cap_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0091",
+   "name": "Built: Arcology",
+   "description": "Construct the Arcology.",
+   "category": "building",
+   "condition": "building.BLD-009.tier >= 1",
+   "reward": {
+    "pop_cap_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0092",
+   "name": "Built: Orbital Habitat Ring",
+   "description": "Construct the Orbital Habitat Ring.",
+   "category": "building",
+   "condition": "building.BLD-010.tier >= 1",
+   "reward": {
+    "pop_cap_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0093",
+   "name": "Built: Stellar Megastructure",
+   "description": "Construct the Stellar Megastructure.",
+   "category": "building",
+   "condition": "building.BLD-011.tier >= 1",
+   "reward": {
+    "pop_cap_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0094",
+   "name": "F-Rank Conqueror",
+   "description": "Clear an F-Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 0",
+   "reward": {
+    "drop_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0095",
+   "name": "Slayer of Goblin Chief",
+   "description": "Defeat the Goblin Chief.",
+   "category": "boss",
+   "condition": "killed_boss.F",
+   "reward": {
+    "drop_mult": 1.02
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0096",
+   "name": "World Bane: Forest Troll",
+   "description": "Defeat the world boss Forest Troll.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.F",
+   "reward": {
+    "all_gain_mult": 1.02
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0097",
+   "name": "Flawless: F-Rank",
+   "description": "Clear an F-Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.F",
+   "reward": {
+    "def_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0098",
+   "name": "Speedrun: F-Rank",
+   "description": "Clear an F-Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.F",
+   "reward": {
+    "spd_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0099",
+   "name": "E-Rank Conqueror",
+   "description": "Clear an E-Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 1",
+   "reward": {
+    "drop_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0100",
+   "name": "Slayer of Dire Wolf Alpha",
+   "description": "Defeat the Dire Wolf Alpha.",
+   "category": "boss",
+   "condition": "killed_boss.E",
+   "reward": {
+    "drop_mult": 1.02
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0101",
+   "name": "World Bane: Mire Hydra (lesser)",
+   "description": "Defeat the world boss Mire Hydra (lesser).",
+   "category": "world_boss",
+   "condition": "killed_world_boss.E",
+   "reward": {
+    "all_gain_mult": 1.02
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0102",
+   "name": "Flawless: E-Rank",
+   "description": "Clear an E-Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.E",
+   "reward": {
+    "def_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0103",
+   "name": "Speedrun: E-Rank",
+   "description": "Clear an E-Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.E",
+   "reward": {
+    "spd_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0104",
+   "name": "D-Rank Conqueror",
+   "description": "Clear an D-Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 2",
+   "reward": {
+    "drop_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0105",
+   "name": "Slayer of Skeleton Warlord",
+   "description": "Defeat the Skeleton Warlord.",
+   "category": "boss",
+   "condition": "killed_boss.D",
+   "reward": {
+    "drop_mult": 1.02
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0106",
+   "name": "World Bane: Stone Colossus",
+   "description": "Defeat the world boss Stone Colossus.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.D",
+   "reward": {
+    "all_gain_mult": 1.02
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0107",
+   "name": "Flawless: D-Rank",
+   "description": "Clear an D-Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.D",
+   "reward": {
+    "def_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0108",
+   "name": "Speedrun: D-Rank",
+   "description": "Clear an D-Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.D",
+   "reward": {
+    "spd_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0109",
+   "name": "C-Rank Conqueror",
+   "description": "Clear an C-Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 3",
+   "reward": {
+    "drop_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0110",
+   "name": "Slayer of Orc Warchief",
+   "description": "Defeat the Orc Warchief.",
+   "category": "boss",
+   "condition": "killed_boss.C",
+   "reward": {
+    "drop_mult": 1.02
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0111",
+   "name": "World Bane: Plains Behemoth",
+   "description": "Defeat the world boss Plains Behemoth.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.C",
+   "reward": {
+    "all_gain_mult": 1.02
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0112",
+   "name": "Flawless: C-Rank",
+   "description": "Clear an C-Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.C",
+   "reward": {
+    "def_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0113",
+   "name": "Speedrun: C-Rank",
+   "description": "Clear an C-Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.C",
+   "reward": {
+    "spd_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0114",
+   "name": "B-Rank Conqueror",
+   "description": "Clear an B-Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 4",
+   "reward": {
+    "drop_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0115",
+   "name": "Slayer of Vampire Lord",
+   "description": "Defeat the Vampire Lord.",
+   "category": "boss",
+   "condition": "killed_boss.B",
+   "reward": {
+    "drop_mult": 1.02
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0116",
+   "name": "World Bane: Sky Wyvern",
+   "description": "Defeat the world boss Sky Wyvern.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.B",
+   "reward": {
+    "all_gain_mult": 1.02
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0117",
+   "name": "Flawless: B-Rank",
+   "description": "Clear an B-Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.B",
+   "reward": {
+    "def_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0118",
+   "name": "Speedrun: B-Rank",
+   "description": "Clear an B-Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.B",
+   "reward": {
+    "spd_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0119",
+   "name": "A-Rank Conqueror",
+   "description": "Clear an A-Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 5",
+   "reward": {
+    "drop_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0120",
+   "name": "Slayer of Lich",
+   "description": "Defeat the Lich.",
+   "category": "boss",
+   "condition": "killed_boss.A",
+   "reward": {
+    "drop_mult": 1.02
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0121",
+   "name": "World Bane: Ancient Treant",
+   "description": "Defeat the world boss Ancient Treant.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.A",
+   "reward": {
+    "all_gain_mult": 1.02
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0122",
+   "name": "Flawless: A-Rank",
+   "description": "Clear an A-Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.A",
+   "reward": {
+    "def_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0123",
+   "name": "Speedrun: A-Rank",
+   "description": "Clear an A-Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.A",
+   "reward": {
+    "spd_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0124",
+   "name": "S-Rank Conqueror",
+   "description": "Clear an S-Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 6",
+   "reward": {
+    "drop_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0125",
+   "name": "Slayer of Demon General",
+   "description": "Defeat the Demon General.",
+   "category": "boss",
+   "condition": "killed_boss.S",
+   "reward": {
+    "drop_mult": 1.02
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0126",
+   "name": "World Bane: Abyssal Kraken",
+   "description": "Defeat the world boss Abyssal Kraken.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.S",
+   "reward": {
+    "all_gain_mult": 1.02
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0127",
+   "name": "Flawless: S-Rank",
+   "description": "Clear an S-Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.S",
+   "reward": {
+    "def_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0128",
+   "name": "Speedrun: S-Rank",
+   "description": "Clear an S-Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.S",
+   "reward": {
+    "spd_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0129",
+   "name": "SS-Rank Conqueror",
+   "description": "Clear an SS-Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 7",
+   "reward": {
+    "drop_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0130",
+   "name": "Slayer of Dragon Elder",
+   "description": "Defeat the Dragon Elder.",
+   "category": "boss",
+   "condition": "killed_boss.SS",
+   "reward": {
+    "drop_mult": 1.02
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0131",
+   "name": "World Bane: Volcano Drake King",
+   "description": "Defeat the world boss Volcano Drake King.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.SS",
+   "reward": {
+    "all_gain_mult": 1.02
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0132",
+   "name": "Flawless: SS-Rank",
+   "description": "Clear an SS-Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.SS",
+   "reward": {
+    "def_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0133",
+   "name": "Speedrun: SS-Rank",
+   "description": "Clear an SS-Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.SS",
+   "reward": {
+    "spd_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0134",
+   "name": "SSS-Rank Conqueror",
+   "description": "Clear an SSS-Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 8",
+   "reward": {
+    "drop_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0135",
+   "name": "Slayer of Demon King",
+   "description": "Defeat the Demon King.",
+   "category": "boss",
+   "condition": "killed_boss.SSS",
+   "reward": {
+    "drop_mult": 1.02
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0136",
+   "name": "World Bane: World Serpent",
+   "description": "Defeat the world boss World Serpent.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.SSS",
+   "reward": {
+    "all_gain_mult": 1.02
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0137",
+   "name": "Flawless: SSS-Rank",
+   "description": "Clear an SSS-Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.SSS",
+   "reward": {
+    "def_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0138",
+   "name": "Speedrun: SSS-Rank",
+   "description": "Clear an SSS-Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.SSS",
+   "reward": {
+    "spd_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0139",
+   "name": "Ascendant Rank Conqueror",
+   "description": "Clear an Ascendant Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 9",
+   "reward": {
+    "drop_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0140",
+   "name": "Slayer of Ascendant Warlord",
+   "description": "Defeat the Ascendant Warlord.",
+   "category": "boss",
+   "condition": "killed_boss.ASC",
+   "reward": {
+    "drop_mult": 1.02
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0141",
+   "name": "World Bane: Sky-Splitting Roc",
+   "description": "Defeat the world boss Sky-Splitting Roc.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.ASC",
+   "reward": {
+    "all_gain_mult": 1.02
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0142",
+   "name": "Flawless: Ascendant Rank",
+   "description": "Clear an Ascendant Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.ASC",
+   "reward": {
+    "def_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0143",
+   "name": "Speedrun: Ascendant Rank",
+   "description": "Clear an Ascendant Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.ASC",
+   "reward": {
+    "spd_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0144",
+   "name": "Transcendent Rank Conqueror",
+   "description": "Clear an Transcendent Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 10",
+   "reward": {
+    "drop_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0145",
+   "name": "Slayer of Transcendent Tyrant",
+   "description": "Defeat the Transcendent Tyrant.",
+   "category": "boss",
+   "condition": "killed_boss.TRA",
+   "reward": {
+    "drop_mult": 1.02
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0146",
+   "name": "World Bane: Continent Turtle",
+   "description": "Defeat the world boss Continent Turtle.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.TRA",
+   "reward": {
+    "all_gain_mult": 1.02
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0147",
+   "name": "Flawless: Transcendent Rank",
+   "description": "Clear an Transcendent Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.TRA",
+   "reward": {
+    "def_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0148",
+   "name": "Speedrun: Transcendent Rank",
+   "description": "Clear an Transcendent Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.TRA",
+   "reward": {
+    "spd_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0149",
+   "name": "Immortal Rank Conqueror",
+   "description": "Clear an Immortal Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 11",
+   "reward": {
+    "drop_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0150",
+   "name": "Slayer of Immortal Sovereign",
+   "description": "Defeat the Immortal Sovereign.",
+   "category": "boss",
+   "condition": "killed_boss.IMM",
+   "reward": {
+    "drop_mult": 1.02
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0151",
+   "name": "World Bane: Eternal Phoenix",
+   "description": "Defeat the world boss Eternal Phoenix.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.IMM",
+   "reward": {
+    "all_gain_mult": 1.02
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0152",
+   "name": "Flawless: Immortal Rank",
+   "description": "Clear an Immortal Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.IMM",
+   "reward": {
+    "def_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0153",
+   "name": "Speedrun: Immortal Rank",
+   "description": "Clear an Immortal Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.IMM",
+   "reward": {
+    "spd_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0154",
+   "name": "Golden Immortal Rank Conqueror",
+   "description": "Clear an Golden Immortal Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 12",
+   "reward": {
+    "drop_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0155",
+   "name": "Slayer of Golden Immortal Emperor",
+   "description": "Defeat the Golden Immortal Emperor.",
+   "category": "boss",
+   "condition": "killed_boss.GIM",
+   "reward": {
+    "drop_mult": 1.02
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0156",
+   "name": "World Bane: Sun-Devouring Beast",
+   "description": "Defeat the world boss Sun-Devouring Beast.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.GIM",
+   "reward": {
+    "all_gain_mult": 1.02
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0157",
+   "name": "Flawless: Golden Immortal Rank",
+   "description": "Clear an Golden Immortal Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.GIM",
+   "reward": {
+    "def_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0158",
+   "name": "Speedrun: Golden Immortal Rank",
+   "description": "Clear an Golden Immortal Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.GIM",
+   "reward": {
+    "spd_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0159",
+   "name": "Overreaching Immortal Rank Conqueror",
+   "description": "Clear an Overreaching Immortal Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 13",
+   "reward": {
+    "drop_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0160",
+   "name": "Slayer of Overreaching Immortal Monarch",
+   "description": "Defeat the Overreaching Immortal Monarch.",
+   "category": "boss",
+   "condition": "killed_boss.OIM",
+   "reward": {
+    "drop_mult": 1.02
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0161",
+   "name": "World Bane: Void Leviathan",
+   "description": "Defeat the world boss Void Leviathan.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.OIM",
+   "reward": {
+    "all_gain_mult": 1.02
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0162",
+   "name": "Flawless: Overreaching Immortal Rank",
+   "description": "Clear an Overreaching Immortal Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.OIM",
+   "reward": {
+    "def_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0163",
+   "name": "Speedrun: Overreaching Immortal Rank",
+   "description": "Clear an Overreaching Immortal Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.OIM",
+   "reward": {
+    "spd_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0164",
+   "name": "True Immortal Rank Conqueror",
+   "description": "Clear an True Immortal Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 14",
+   "reward": {
+    "drop_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0165",
+   "name": "Slayer of True Immortal Ancestor",
+   "description": "Defeat the True Immortal Ancestor.",
+   "category": "boss",
+   "condition": "killed_boss.TIM",
+   "reward": {
+    "drop_mult": 1.02
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0166",
+   "name": "World Bane: Galaxy Devourer",
+   "description": "Defeat the world boss Galaxy Devourer.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.TIM",
+   "reward": {
+    "all_gain_mult": 1.02
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0167",
+   "name": "Flawless: True Immortal Rank",
+   "description": "Clear an True Immortal Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.TIM",
+   "reward": {
+    "def_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0168",
+   "name": "Speedrun: True Immortal Rank",
+   "description": "Clear an True Immortal Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.TIM",
+   "reward": {
+    "spd_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0169",
+   "name": "Heavenly Immortal Rank Conqueror",
+   "description": "Clear an Heavenly Immortal Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 15",
+   "reward": {
+    "drop_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0170",
+   "name": "Slayer of Heavenly Immortal Lord",
+   "description": "Defeat the Heavenly Immortal Lord.",
+   "category": "boss",
+   "condition": "killed_boss.HIM",
+   "reward": {
+    "drop_mult": 1.02
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0171",
+   "name": "World Bane: Star-Eater Titan",
+   "description": "Defeat the world boss Star-Eater Titan.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.HIM",
+   "reward": {
+    "all_gain_mult": 1.02
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0172",
+   "name": "Flawless: Heavenly Immortal Rank",
+   "description": "Clear an Heavenly Immortal Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.HIM",
+   "reward": {
+    "def_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0173",
+   "name": "Speedrun: Heavenly Immortal Rank",
+   "description": "Clear an Heavenly Immortal Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.HIM",
+   "reward": {
+    "spd_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0174",
+   "name": "God Rank Conqueror",
+   "description": "Clear an God Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 16",
+   "reward": {
+    "drop_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0175",
+   "name": "Slayer of Lesser Deity",
+   "description": "Defeat the Lesser Deity.",
+   "category": "boss",
+   "condition": "killed_boss.GOD",
+   "reward": {
+    "drop_mult": 1.02
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0176",
+   "name": "World Bane: Cosmic Horror",
+   "description": "Defeat the world boss Cosmic Horror.",
+   "category": "world_boss",
+   "condition": "killed_world_boss.GOD",
+   "reward": {
+    "all_gain_mult": 1.02
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0177",
+   "name": "Flawless: God Rank",
+   "description": "Clear an God Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.GOD",
+   "reward": {
+    "def_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0178",
+   "name": "Speedrun: God Rank",
+   "description": "Clear an God Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.GOD",
+   "reward": {
+    "spd_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0179",
+   "name": "Heavenly God Rank Conqueror",
+   "description": "Clear an Heavenly God Rank dungeon.",
+   "category": "dungeon",
+   "condition": "dungeon_rank_cleared >= 17",
+   "reward": {
+    "drop_mult": 1.01
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0180",
+   "name": "Slayer of Heavenly God Sovereign",
+   "description": "Defeat the Heavenly God Sovereign.",
+   "category": "boss",
+   "condition": "killed_boss.HGOD",
+   "reward": {
+    "drop_mult": 1.02
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0181",
+   "name": "World Bane: The Unwritten (final world boss)",
+   "description": "Defeat the world boss The Unwritten (final world boss).",
+   "category": "world_boss",
+   "condition": "killed_world_boss.HGOD",
+   "reward": {
+    "all_gain_mult": 1.02
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0182",
+   "name": "Flawless: Heavenly God Rank",
+   "description": "Clear an Heavenly God Rank dungeon without taking damage.",
+   "category": "dungeon",
+   "condition": "flawless_clear.HGOD",
+   "reward": {
+    "def_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0183",
+   "name": "Speedrun: Heavenly God Rank",
+   "description": "Clear an Heavenly God Rank dungeon in record time.",
+   "category": "dungeon",
+   "condition": "speed_clear.HGOD",
+   "reward": {
+    "spd_mult": 1.03
+   },
+   "points": 30,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0184",
+   "name": "Goblin Hunter 100",
+   "description": "Defeat 100 Goblin.",
+   "category": "slayer",
+   "condition": "kills.ENM-001 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0185",
+   "name": "Goblin Hunter 1K",
+   "description": "Defeat 1K Goblin.",
+   "category": "slayer",
+   "condition": "kills.ENM-001 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0186",
+   "name": "Goblin Hunter 10K",
+   "description": "Defeat 10K Goblin.",
+   "category": "slayer",
+   "condition": "kills.ENM-001 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0187",
+   "name": "Goblin Hunter 100K",
+   "description": "Defeat 100K Goblin.",
+   "category": "slayer",
+   "condition": "kills.ENM-001 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0188",
+   "name": "Goblin Hunter 1M",
+   "description": "Defeat 1M Goblin.",
+   "category": "slayer",
+   "condition": "kills.ENM-001 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0189",
+   "name": "Kobold Hunter 100",
+   "description": "Defeat 100 Kobold.",
+   "category": "slayer",
+   "condition": "kills.ENM-002 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0190",
+   "name": "Kobold Hunter 1K",
+   "description": "Defeat 1K Kobold.",
+   "category": "slayer",
+   "condition": "kills.ENM-002 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0191",
+   "name": "Kobold Hunter 10K",
+   "description": "Defeat 10K Kobold.",
+   "category": "slayer",
+   "condition": "kills.ENM-002 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0192",
+   "name": "Kobold Hunter 100K",
+   "description": "Defeat 100K Kobold.",
+   "category": "slayer",
+   "condition": "kills.ENM-002 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0193",
+   "name": "Kobold Hunter 1M",
+   "description": "Defeat 1M Kobold.",
+   "category": "slayer",
+   "condition": "kills.ENM-002 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0194",
+   "name": "Dire Wolf Hunter 100",
+   "description": "Defeat 100 Dire Wolf.",
+   "category": "slayer",
+   "condition": "kills.ENM-003 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0195",
+   "name": "Dire Wolf Hunter 1K",
+   "description": "Defeat 1K Dire Wolf.",
+   "category": "slayer",
+   "condition": "kills.ENM-003 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0196",
+   "name": "Dire Wolf Hunter 10K",
+   "description": "Defeat 10K Dire Wolf.",
+   "category": "slayer",
+   "condition": "kills.ENM-003 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0197",
+   "name": "Dire Wolf Hunter 100K",
+   "description": "Defeat 100K Dire Wolf.",
+   "category": "slayer",
+   "condition": "kills.ENM-003 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0198",
+   "name": "Dire Wolf Hunter 1M",
+   "description": "Defeat 1M Dire Wolf.",
+   "category": "slayer",
+   "condition": "kills.ENM-003 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0199",
+   "name": "Giant Spider Hunter 100",
+   "description": "Defeat 100 Giant Spider.",
+   "category": "slayer",
+   "condition": "kills.ENM-004 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0200",
+   "name": "Giant Spider Hunter 1K",
+   "description": "Defeat 1K Giant Spider.",
+   "category": "slayer",
+   "condition": "kills.ENM-004 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0201",
+   "name": "Giant Spider Hunter 10K",
+   "description": "Defeat 10K Giant Spider.",
+   "category": "slayer",
+   "condition": "kills.ENM-004 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0202",
+   "name": "Giant Spider Hunter 100K",
+   "description": "Defeat 100K Giant Spider.",
+   "category": "slayer",
+   "condition": "kills.ENM-004 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0203",
+   "name": "Giant Spider Hunter 1M",
+   "description": "Defeat 1M Giant Spider.",
+   "category": "slayer",
+   "condition": "kills.ENM-004 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0204",
+   "name": "Skeleton Hunter 100",
+   "description": "Defeat 100 Skeleton.",
+   "category": "slayer",
+   "condition": "kills.ENM-005 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0205",
+   "name": "Skeleton Hunter 1K",
+   "description": "Defeat 1K Skeleton.",
+   "category": "slayer",
+   "condition": "kills.ENM-005 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0206",
+   "name": "Skeleton Hunter 10K",
+   "description": "Defeat 10K Skeleton.",
+   "category": "slayer",
+   "condition": "kills.ENM-005 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0207",
+   "name": "Skeleton Hunter 100K",
+   "description": "Defeat 100K Skeleton.",
+   "category": "slayer",
+   "condition": "kills.ENM-005 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0208",
+   "name": "Skeleton Hunter 1M",
+   "description": "Defeat 1M Skeleton.",
+   "category": "slayer",
+   "condition": "kills.ENM-005 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0209",
+   "name": "Zombie Hunter 100",
+   "description": "Defeat 100 Zombie.",
+   "category": "slayer",
+   "condition": "kills.ENM-006 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0210",
+   "name": "Zombie Hunter 1K",
+   "description": "Defeat 1K Zombie.",
+   "category": "slayer",
+   "condition": "kills.ENM-006 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0211",
+   "name": "Zombie Hunter 10K",
+   "description": "Defeat 10K Zombie.",
+   "category": "slayer",
+   "condition": "kills.ENM-006 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0212",
+   "name": "Zombie Hunter 100K",
+   "description": "Defeat 100K Zombie.",
+   "category": "slayer",
+   "condition": "kills.ENM-006 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0213",
+   "name": "Zombie Hunter 1M",
+   "description": "Defeat 1M Zombie.",
+   "category": "slayer",
+   "condition": "kills.ENM-006 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0214",
+   "name": "Slime Hunter 100",
+   "description": "Defeat 100 Slime.",
+   "category": "slayer",
+   "condition": "kills.ENM-007 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0215",
+   "name": "Slime Hunter 1K",
+   "description": "Defeat 1K Slime.",
+   "category": "slayer",
+   "condition": "kills.ENM-007 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0216",
+   "name": "Slime Hunter 10K",
+   "description": "Defeat 10K Slime.",
+   "category": "slayer",
+   "condition": "kills.ENM-007 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0217",
+   "name": "Slime Hunter 100K",
+   "description": "Defeat 100K Slime.",
+   "category": "slayer",
+   "condition": "kills.ENM-007 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0218",
+   "name": "Slime Hunter 1M",
+   "description": "Defeat 1M Slime.",
+   "category": "slayer",
+   "condition": "kills.ENM-007 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0219",
+   "name": "Orc Hunter 100",
+   "description": "Defeat 100 Orc.",
+   "category": "slayer",
+   "condition": "kills.ENM-008 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0220",
+   "name": "Orc Hunter 1K",
+   "description": "Defeat 1K Orc.",
+   "category": "slayer",
+   "condition": "kills.ENM-008 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0221",
+   "name": "Orc Hunter 10K",
+   "description": "Defeat 10K Orc.",
+   "category": "slayer",
+   "condition": "kills.ENM-008 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0222",
+   "name": "Orc Hunter 100K",
+   "description": "Defeat 100K Orc.",
+   "category": "slayer",
+   "condition": "kills.ENM-008 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0223",
+   "name": "Orc Hunter 1M",
+   "description": "Defeat 1M Orc.",
+   "category": "slayer",
+   "condition": "kills.ENM-008 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0224",
+   "name": "Bandit Hunter 100",
+   "description": "Defeat 100 Bandit.",
+   "category": "slayer",
+   "condition": "kills.ENM-009 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0225",
+   "name": "Bandit Hunter 1K",
+   "description": "Defeat 1K Bandit.",
+   "category": "slayer",
+   "condition": "kills.ENM-009 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0226",
+   "name": "Bandit Hunter 10K",
+   "description": "Defeat 10K Bandit.",
+   "category": "slayer",
+   "condition": "kills.ENM-009 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0227",
+   "name": "Bandit Hunter 100K",
+   "description": "Defeat 100K Bandit.",
+   "category": "slayer",
+   "condition": "kills.ENM-009 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0228",
+   "name": "Bandit Hunter 1M",
+   "description": "Defeat 1M Bandit.",
+   "category": "slayer",
+   "condition": "kills.ENM-009 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0229",
+   "name": "Harpy Hunter 100",
+   "description": "Defeat 100 Harpy.",
+   "category": "slayer",
+   "condition": "kills.ENM-010 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0230",
+   "name": "Harpy Hunter 1K",
+   "description": "Defeat 1K Harpy.",
+   "category": "slayer",
+   "condition": "kills.ENM-010 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0231",
+   "name": "Harpy Hunter 10K",
+   "description": "Defeat 10K Harpy.",
+   "category": "slayer",
+   "condition": "kills.ENM-010 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0232",
+   "name": "Harpy Hunter 100K",
+   "description": "Defeat 100K Harpy.",
+   "category": "slayer",
+   "condition": "kills.ENM-010 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0233",
+   "name": "Harpy Hunter 1M",
+   "description": "Defeat 1M Harpy.",
+   "category": "slayer",
+   "condition": "kills.ENM-010 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0234",
+   "name": "Golem Hunter 100",
+   "description": "Defeat 100 Golem.",
+   "category": "slayer",
+   "condition": "kills.ENM-011 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0235",
+   "name": "Golem Hunter 1K",
+   "description": "Defeat 1K Golem.",
+   "category": "slayer",
+   "condition": "kills.ENM-011 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0236",
+   "name": "Golem Hunter 10K",
+   "description": "Defeat 10K Golem.",
+   "category": "slayer",
+   "condition": "kills.ENM-011 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0237",
+   "name": "Golem Hunter 100K",
+   "description": "Defeat 100K Golem.",
+   "category": "slayer",
+   "condition": "kills.ENM-011 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0238",
+   "name": "Golem Hunter 1M",
+   "description": "Defeat 1M Golem.",
+   "category": "slayer",
+   "condition": "kills.ENM-011 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0239",
+   "name": "Ghost Hunter 100",
+   "description": "Defeat 100 Ghost.",
+   "category": "slayer",
+   "condition": "kills.ENM-012 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0240",
+   "name": "Ghost Hunter 1K",
+   "description": "Defeat 1K Ghost.",
+   "category": "slayer",
+   "condition": "kills.ENM-012 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0241",
+   "name": "Ghost Hunter 10K",
+   "description": "Defeat 10K Ghost.",
+   "category": "slayer",
+   "condition": "kills.ENM-012 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0242",
+   "name": "Ghost Hunter 100K",
+   "description": "Defeat 100K Ghost.",
+   "category": "slayer",
+   "condition": "kills.ENM-012 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0243",
+   "name": "Ghost Hunter 1M",
+   "description": "Defeat 1M Ghost.",
+   "category": "slayer",
+   "condition": "kills.ENM-012 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0244",
+   "name": "Troll Hunter 100",
+   "description": "Defeat 100 Troll.",
+   "category": "slayer",
+   "condition": "kills.ENM-013 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0245",
+   "name": "Troll Hunter 1K",
+   "description": "Defeat 1K Troll.",
+   "category": "slayer",
+   "condition": "kills.ENM-013 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0246",
+   "name": "Troll Hunter 10K",
+   "description": "Defeat 10K Troll.",
+   "category": "slayer",
+   "condition": "kills.ENM-013 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0247",
+   "name": "Troll Hunter 100K",
+   "description": "Defeat 100K Troll.",
+   "category": "slayer",
+   "condition": "kills.ENM-013 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0248",
+   "name": "Troll Hunter 1M",
+   "description": "Defeat 1M Troll.",
+   "category": "slayer",
+   "condition": "kills.ENM-013 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0249",
+   "name": "Ogre Hunter 100",
+   "description": "Defeat 100 Ogre.",
+   "category": "slayer",
+   "condition": "kills.ENM-014 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0250",
+   "name": "Ogre Hunter 1K",
+   "description": "Defeat 1K Ogre.",
+   "category": "slayer",
+   "condition": "kills.ENM-014 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0251",
+   "name": "Ogre Hunter 10K",
+   "description": "Defeat 10K Ogre.",
+   "category": "slayer",
+   "condition": "kills.ENM-014 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0252",
+   "name": "Ogre Hunter 100K",
+   "description": "Defeat 100K Ogre.",
+   "category": "slayer",
+   "condition": "kills.ENM-014 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0253",
+   "name": "Ogre Hunter 1M",
+   "description": "Defeat 1M Ogre.",
+   "category": "slayer",
+   "condition": "kills.ENM-014 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0254",
+   "name": "Minotaur Hunter 100",
+   "description": "Defeat 100 Minotaur.",
+   "category": "slayer",
+   "condition": "kills.ENM-015 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0255",
+   "name": "Minotaur Hunter 1K",
+   "description": "Defeat 1K Minotaur.",
+   "category": "slayer",
+   "condition": "kills.ENM-015 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0256",
+   "name": "Minotaur Hunter 10K",
+   "description": "Defeat 10K Minotaur.",
+   "category": "slayer",
+   "condition": "kills.ENM-015 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0257",
+   "name": "Minotaur Hunter 100K",
+   "description": "Defeat 100K Minotaur.",
+   "category": "slayer",
+   "condition": "kills.ENM-015 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0258",
+   "name": "Minotaur Hunter 1M",
+   "description": "Defeat 1M Minotaur.",
+   "category": "slayer",
+   "condition": "kills.ENM-015 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0259",
+   "name": "Wyvern Hunter 100",
+   "description": "Defeat 100 Wyvern.",
+   "category": "slayer",
+   "condition": "kills.ENM-016 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0260",
+   "name": "Wyvern Hunter 1K",
+   "description": "Defeat 1K Wyvern.",
+   "category": "slayer",
+   "condition": "kills.ENM-016 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0261",
+   "name": "Wyvern Hunter 10K",
+   "description": "Defeat 10K Wyvern.",
+   "category": "slayer",
+   "condition": "kills.ENM-016 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0262",
+   "name": "Wyvern Hunter 100K",
+   "description": "Defeat 100K Wyvern.",
+   "category": "slayer",
+   "condition": "kills.ENM-016 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0263",
+   "name": "Wyvern Hunter 1M",
+   "description": "Defeat 1M Wyvern.",
+   "category": "slayer",
+   "condition": "kills.ENM-016 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0264",
+   "name": "Vampire Hunter 100",
+   "description": "Defeat 100 Vampire.",
+   "category": "slayer",
+   "condition": "kills.ENM-017 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0265",
+   "name": "Vampire Hunter 1K",
+   "description": "Defeat 1K Vampire.",
+   "category": "slayer",
+   "condition": "kills.ENM-017 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0266",
+   "name": "Vampire Hunter 10K",
+   "description": "Defeat 10K Vampire.",
+   "category": "slayer",
+   "condition": "kills.ENM-017 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0267",
+   "name": "Vampire Hunter 100K",
+   "description": "Defeat 100K Vampire.",
+   "category": "slayer",
+   "condition": "kills.ENM-017 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0268",
+   "name": "Vampire Hunter 1M",
+   "description": "Defeat 1M Vampire.",
+   "category": "slayer",
+   "condition": "kills.ENM-017 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0269",
+   "name": "Demon Hunter 100",
+   "description": "Defeat 100 Demon.",
+   "category": "slayer",
+   "condition": "kills.ENM-018 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0270",
+   "name": "Demon Hunter 1K",
+   "description": "Defeat 1K Demon.",
+   "category": "slayer",
+   "condition": "kills.ENM-018 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0271",
+   "name": "Demon Hunter 10K",
+   "description": "Defeat 10K Demon.",
+   "category": "slayer",
+   "condition": "kills.ENM-018 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0272",
+   "name": "Demon Hunter 100K",
+   "description": "Defeat 100K Demon.",
+   "category": "slayer",
+   "condition": "kills.ENM-018 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0273",
+   "name": "Demon Hunter 1M",
+   "description": "Defeat 1M Demon.",
+   "category": "slayer",
+   "condition": "kills.ENM-018 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0274",
+   "name": "Elemental Hunter 100",
+   "description": "Defeat 100 Elemental.",
+   "category": "slayer",
+   "condition": "kills.ENM-019 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0275",
+   "name": "Elemental Hunter 1K",
+   "description": "Defeat 1K Elemental.",
+   "category": "slayer",
+   "condition": "kills.ENM-019 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0276",
+   "name": "Elemental Hunter 10K",
+   "description": "Defeat 10K Elemental.",
+   "category": "slayer",
+   "condition": "kills.ENM-019 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0277",
+   "name": "Elemental Hunter 100K",
+   "description": "Defeat 100K Elemental.",
+   "category": "slayer",
+   "condition": "kills.ENM-019 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0278",
+   "name": "Elemental Hunter 1M",
+   "description": "Defeat 1M Elemental.",
+   "category": "slayer",
+   "condition": "kills.ENM-019 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0279",
+   "name": "Dragon Hunter 100",
+   "description": "Defeat 100 Dragon.",
+   "category": "slayer",
+   "condition": "kills.ENM-020 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0280",
+   "name": "Dragon Hunter 1K",
+   "description": "Defeat 1K Dragon.",
+   "category": "slayer",
+   "condition": "kills.ENM-020 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0281",
+   "name": "Dragon Hunter 10K",
+   "description": "Defeat 10K Dragon.",
+   "category": "slayer",
+   "condition": "kills.ENM-020 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0282",
+   "name": "Dragon Hunter 100K",
+   "description": "Defeat 100K Dragon.",
+   "category": "slayer",
+   "condition": "kills.ENM-020 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0283",
+   "name": "Dragon Hunter 1M",
+   "description": "Defeat 1M Dragon.",
+   "category": "slayer",
+   "condition": "kills.ENM-020 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0284",
+   "name": "Cultist Hunter 100",
+   "description": "Defeat 100 Cultist.",
+   "category": "slayer",
+   "condition": "kills.ENM-021 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0285",
+   "name": "Cultist Hunter 1K",
+   "description": "Defeat 1K Cultist.",
+   "category": "slayer",
+   "condition": "kills.ENM-021 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0286",
+   "name": "Cultist Hunter 10K",
+   "description": "Defeat 10K Cultist.",
+   "category": "slayer",
+   "condition": "kills.ENM-021 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0287",
+   "name": "Cultist Hunter 100K",
+   "description": "Defeat 100K Cultist.",
+   "category": "slayer",
+   "condition": "kills.ENM-021 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0288",
+   "name": "Cultist Hunter 1M",
+   "description": "Defeat 1M Cultist.",
+   "category": "slayer",
+   "condition": "kills.ENM-021 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0289",
+   "name": "Void Spawn Hunter 100",
+   "description": "Defeat 100 Void Spawn.",
+   "category": "slayer",
+   "condition": "kills.ENM-022 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0290",
+   "name": "Void Spawn Hunter 1K",
+   "description": "Defeat 1K Void Spawn.",
+   "category": "slayer",
+   "condition": "kills.ENM-022 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0291",
+   "name": "Void Spawn Hunter 10K",
+   "description": "Defeat 10K Void Spawn.",
+   "category": "slayer",
+   "condition": "kills.ENM-022 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0292",
+   "name": "Void Spawn Hunter 100K",
+   "description": "Defeat 100K Void Spawn.",
+   "category": "slayer",
+   "condition": "kills.ENM-022 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0293",
+   "name": "Void Spawn Hunter 1M",
+   "description": "Defeat 1M Void Spawn.",
+   "category": "slayer",
+   "condition": "kills.ENM-022 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0294",
+   "name": "Star Beast Hunter 100",
+   "description": "Defeat 100 Star Beast.",
+   "category": "slayer",
+   "condition": "kills.ENM-023 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0295",
+   "name": "Star Beast Hunter 1K",
+   "description": "Defeat 1K Star Beast.",
+   "category": "slayer",
+   "condition": "kills.ENM-023 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0296",
+   "name": "Star Beast Hunter 10K",
+   "description": "Defeat 10K Star Beast.",
+   "category": "slayer",
+   "condition": "kills.ENM-023 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0297",
+   "name": "Star Beast Hunter 100K",
+   "description": "Defeat 100K Star Beast.",
+   "category": "slayer",
+   "condition": "kills.ENM-023 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0298",
+   "name": "Star Beast Hunter 1M",
+   "description": "Defeat 1M Star Beast.",
+   "category": "slayer",
+   "condition": "kills.ENM-023 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0299",
+   "name": "Reality Wraith Hunter 100",
+   "description": "Defeat 100 Reality Wraith.",
+   "category": "slayer",
+   "condition": "kills.ENM-024 >= 100",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0300",
+   "name": "Reality Wraith Hunter 1K",
+   "description": "Defeat 1K Reality Wraith.",
+   "category": "slayer",
+   "condition": "kills.ENM-024 >= 1000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0301",
+   "name": "Reality Wraith Hunter 10K",
+   "description": "Defeat 10K Reality Wraith.",
+   "category": "slayer",
+   "condition": "kills.ENM-024 >= 10000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0302",
+   "name": "Reality Wraith Hunter 100K",
+   "description": "Defeat 100K Reality Wraith.",
+   "category": "slayer",
+   "condition": "kills.ENM-024 >= 100000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0303",
+   "name": "Reality Wraith Hunter 1M",
+   "description": "Defeat 1M Reality Wraith.",
+   "category": "slayer",
+   "condition": "kills.ENM-024 >= 1000000",
+   "reward": {
+    "atk_mult": 1.005
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0304",
+   "name": "Crafter 1",
+   "description": "Craft 1 items.",
+   "category": "crafting",
+   "condition": "items_crafted >= 1",
+   "reward": {
+    "int_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0305",
+   "name": "Crafter 10",
+   "description": "Craft 10 items.",
+   "category": "crafting",
+   "condition": "items_crafted >= 10",
+   "reward": {
+    "int_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0306",
+   "name": "Crafter 100",
+   "description": "Craft 100 items.",
+   "category": "crafting",
+   "condition": "items_crafted >= 100",
+   "reward": {
+    "int_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0307",
+   "name": "Crafter 1K",
+   "description": "Craft 1K items.",
+   "category": "crafting",
+   "condition": "items_crafted >= 1000",
+   "reward": {
+    "int_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0308",
+   "name": "Crafter 10K",
+   "description": "Craft 10K items.",
+   "category": "crafting",
+   "condition": "items_crafted >= 10000",
+   "reward": {
+    "int_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0309",
+   "name": "Master of the Bench",
+   "description": "Craft 100 items at the bench.",
+   "category": "crafting",
+   "condition": "crafted_at.bench >= 100",
+   "reward": {
+    "craft_speed_mult": 1.05
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0310",
+   "name": "Master of the Kitchen",
+   "description": "Craft 100 items at the kitchen.",
+   "category": "crafting",
+   "condition": "crafted_at.kitchen >= 100",
+   "reward": {
+    "craft_speed_mult": 1.05
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0311",
+   "name": "Master of the Workshop",
+   "description": "Craft 100 items at the workshop.",
+   "category": "crafting",
+   "condition": "crafted_at.workshop >= 100",
+   "reward": {
+    "craft_speed_mult": 1.05
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0312",
+   "name": "Master of the Forge",
+   "description": "Craft 100 items at the forge.",
+   "category": "crafting",
+   "condition": "crafted_at.forge >= 100",
+   "reward": {
+    "craft_speed_mult": 1.05
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0313",
+   "name": "Master of the Lab",
+   "description": "Craft 100 items at the lab.",
+   "category": "crafting",
+   "condition": "crafted_at.lab >= 100",
+   "reward": {
+    "craft_speed_mult": 1.05
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0314",
+   "name": "Master of the Foundry",
+   "description": "Craft 100 items at the foundry.",
+   "category": "crafting",
+   "condition": "crafted_at.foundry >= 100",
+   "reward": {
+    "craft_speed_mult": 1.05
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0315",
+   "name": "Leader of 1",
+   "description": "Have 1 recruited companions at once.",
+   "category": "recruitment",
+   "condition": "recruited_count >= 1",
+   "reward": {
+    "ldr_mult": 1.02
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0316",
+   "name": "Leader of 3",
+   "description": "Have 3 recruited companions at once.",
+   "category": "recruitment",
+   "condition": "recruited_count >= 3",
+   "reward": {
+    "ldr_mult": 1.02
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0317",
+   "name": "Leader of 5",
+   "description": "Have 5 recruited companions at once.",
+   "category": "recruitment",
+   "condition": "recruited_count >= 5",
+   "reward": {
+    "ldr_mult": 1.02
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0318",
+   "name": "Leader of 10",
+   "description": "Have 10 recruited companions at once.",
+   "category": "recruitment",
+   "condition": "recruited_count >= 10",
+   "reward": {
+    "ldr_mult": 1.02
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0319",
+   "name": "Leader of 20",
+   "description": "Have 20 recruited companions at once.",
+   "category": "recruitment",
+   "condition": "recruited_count >= 20",
+   "reward": {
+    "ldr_mult": 1.02
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0320",
+   "name": "Leader of 50",
+   "description": "Have 50 recruited companions at once.",
+   "category": "recruitment",
+   "condition": "recruited_count >= 50",
+   "reward": {
+    "ldr_mult": 1.02
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0321",
+   "name": "Bond: Thane Ironwood",
+   "description": "Recruit Thane Ironwood.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-001",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0322",
+   "name": "Bond: Goodwife Petra Bramble",
+   "description": "Recruit Goodwife Petra Bramble.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-003",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0323",
+   "name": "Bond: Old Mossfen",
+   "description": "Recruit Old Mossfen.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-004",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0324",
+   "name": "Bond: Gareth Stonecount",
+   "description": "Recruit Gareth Stonecount.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-005",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0325",
+   "name": "Bond: Pell Deepvein",
+   "description": "Recruit Pell Deepvein.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-006",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0326",
+   "name": "Bond: Lior Glyphborne",
+   "description": "Recruit Lior Glyphborne.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-007",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0327",
+   "name": "Bond: Scout Nyra Fairwind",
+   "description": "Recruit Scout Nyra Fairwind.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-010",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0328",
+   "name": "Bond: Cleric Edryn Vale",
+   "description": "Recruit Cleric Edryn Vale.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-011",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0329",
+   "name": "Bond: Mabel Hearthwell",
+   "description": "Recruit Mabel Hearthwell.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-013",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0330",
+   "name": "Bond: Kael Stormborn",
+   "description": "Recruit Kael Stormborn.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-016",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0331",
+   "name": "Bond: Lyanna Brightloom",
+   "description": "Recruit Lyanna Brightloom.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-017",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0332",
+   "name": "Bond: Doc Ferris Quill",
+   "description": "Recruit Doc Ferris Quill.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-018",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0333",
+   "name": "Bond: Rurik Goldhand",
+   "description": "Recruit Rurik Goldhand.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-019",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0334",
+   "name": "Bond: Sister Aveline Dawn",
+   "description": "Recruit Sister Aveline Dawn.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-020",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0335",
+   "name": "Bond: Tamsin Greenfurrow",
+   "description": "Recruit Tamsin Greenfurrow.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-022",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0336",
+   "name": "Bond: Joran Beasttamer",
+   "description": "Recruit Joran Beasttamer.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-023",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0337",
+   "name": "Bond: Commander Vale Ardent",
+   "description": "Recruit Commander Vale Ardent.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-025",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0338",
+   "name": "Bond: Zix-9",
+   "description": "Recruit Zix-9.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-026",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0339",
+   "name": "Bond: Nova Starwright",
+   "description": "Recruit Nova Starwright.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-NPC-027",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0340",
+   "name": "Bond: Elder Mira Thornwood",
+   "description": "Recruit Elder Mira Thornwood.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-MQ-002",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0341",
+   "name": "Bond: Bryn Coalfist",
+   "description": "Recruit Bryn Coalfist.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-MQ-003",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0342",
+   "name": "Bond: Guildmaster Dax Holloway",
+   "description": "Recruit Guildmaster Dax Holloway.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-MQ-006",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0343",
+   "name": "Bond: Seeress Vauna of the Hollow Star",
+   "description": "Recruit Seeress Vauna of the Hollow Star.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-MQ-007",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0344",
+   "name": "Bond: Cartographer Toll Inkfoot",
+   "description": "Recruit Cartographer Toll Inkfoot.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-MQ-008",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0345",
+   "name": "Bond: Apothecary Sable Nightroot",
+   "description": "Recruit Apothecary Sable Nightroot.",
+   "category": "recruitment",
+   "condition": "recruited.CHR-MQ-009",
+   "reward": {
+    "cha_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0346",
+   "name": "Mourner 1",
+   "description": "Lose 1 villagers/companions to death.",
+   "category": "loss",
+   "condition": "deaths >= 1",
+   "reward": {
+    "vit_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0347",
+   "name": "Mourner 10",
+   "description": "Lose 10 villagers/companions to death.",
+   "category": "loss",
+   "condition": "deaths >= 10",
+   "reward": {
+    "vit_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0348",
+   "name": "Mourner 100",
+   "description": "Lose 100 villagers/companions to death.",
+   "category": "loss",
+   "condition": "deaths >= 100",
+   "reward": {
+    "vit_mult": 1.01
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0349",
+   "name": "Reborn x1",
+   "description": "Rebirth 1 time(s).",
+   "category": "rebirth",
+   "condition": "rebirth_count >= 1",
+   "reward": {
+    "all_gain_mult": 1.05
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0350",
+   "name": "Reborn x2",
+   "description": "Rebirth 2 time(s).",
+   "category": "rebirth",
+   "condition": "rebirth_count >= 2",
+   "reward": {
+    "all_gain_mult": 1.05
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0351",
+   "name": "Reborn x3",
+   "description": "Rebirth 3 time(s).",
+   "category": "rebirth",
+   "condition": "rebirth_count >= 3",
+   "reward": {
+    "all_gain_mult": 1.05
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0352",
+   "name": "Reborn x5",
+   "description": "Rebirth 5 time(s).",
+   "category": "rebirth",
+   "condition": "rebirth_count >= 5",
+   "reward": {
+    "all_gain_mult": 1.05
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0353",
+   "name": "Reborn x10",
+   "description": "Rebirth 10 time(s).",
+   "category": "rebirth",
+   "condition": "rebirth_count >= 10",
+   "reward": {
+    "all_gain_mult": 1.05
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0354",
+   "name": "Reborn x25",
+   "description": "Rebirth 25 time(s).",
+   "category": "rebirth",
+   "condition": "rebirth_count >= 25",
+   "reward": {
+    "all_gain_mult": 1.05
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0355",
+   "name": "Reborn x50",
+   "description": "Rebirth 50 time(s).",
+   "category": "rebirth",
+   "condition": "rebirth_count >= 50",
+   "reward": {
+    "all_gain_mult": 1.05
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0356",
+   "name": "Reborn x100",
+   "description": "Rebirth 100 time(s).",
+   "category": "rebirth",
+   "condition": "rebirth_count >= 100",
+   "reward": {
+    "all_gain_mult": 1.05
+   },
+   "points": 25,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0357",
+   "name": "Collector: Common",
+   "description": "Own an item of common rarity.",
+   "category": "collection",
+   "condition": "owns_rarity.common",
+   "reward": {
+    "lck_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0358",
+   "name": "Hoarder: Common",
+   "description": "Own 50 items of common rarity.",
+   "category": "collection",
+   "condition": "owns_rarity_count.common >= 50",
+   "reward": {
+    "lck_mult": 1.02
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0359",
+   "name": "Collector: Uncommon",
+   "description": "Own an item of uncommon rarity.",
+   "category": "collection",
+   "condition": "owns_rarity.uncommon",
+   "reward": {
+    "lck_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0360",
+   "name": "Hoarder: Uncommon",
+   "description": "Own 50 items of uncommon rarity.",
+   "category": "collection",
+   "condition": "owns_rarity_count.uncommon >= 50",
+   "reward": {
+    "lck_mult": 1.02
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0361",
+   "name": "Collector: Rare",
+   "description": "Own an item of rare rarity.",
+   "category": "collection",
+   "condition": "owns_rarity.rare",
+   "reward": {
+    "lck_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0362",
+   "name": "Hoarder: Rare",
+   "description": "Own 50 items of rare rarity.",
+   "category": "collection",
+   "condition": "owns_rarity_count.rare >= 50",
+   "reward": {
+    "lck_mult": 1.02
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0363",
+   "name": "Collector: Epic",
+   "description": "Own an item of epic rarity.",
+   "category": "collection",
+   "condition": "owns_rarity.epic",
+   "reward": {
+    "lck_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0364",
+   "name": "Hoarder: Epic",
+   "description": "Own 50 items of epic rarity.",
+   "category": "collection",
+   "condition": "owns_rarity_count.epic >= 50",
+   "reward": {
+    "lck_mult": 1.02
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0365",
+   "name": "Collector: Legendary",
+   "description": "Own an item of legendary rarity.",
+   "category": "collection",
+   "condition": "owns_rarity.legendary",
+   "reward": {
+    "lck_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0366",
+   "name": "Hoarder: Legendary",
+   "description": "Own 50 items of legendary rarity.",
+   "category": "collection",
+   "condition": "owns_rarity_count.legendary >= 50",
+   "reward": {
+    "lck_mult": 1.02
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0367",
+   "name": "Collector: Mythic",
+   "description": "Own an item of mythic rarity.",
+   "category": "collection",
+   "condition": "owns_rarity.mythic",
+   "reward": {
+    "lck_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0368",
+   "name": "Hoarder: Mythic",
+   "description": "Own 50 items of mythic rarity.",
+   "category": "collection",
+   "condition": "owns_rarity_count.mythic >= 50",
+   "reward": {
+    "lck_mult": 1.02
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0369",
+   "name": "Collector: Ascendant",
+   "description": "Own an item of ascendant rarity.",
+   "category": "collection",
+   "condition": "owns_rarity.ascendant",
+   "reward": {
+    "lck_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0370",
+   "name": "Hoarder: Ascendant",
+   "description": "Own 50 items of ascendant rarity.",
+   "category": "collection",
+   "condition": "owns_rarity_count.ascendant >= 50",
+   "reward": {
+    "lck_mult": 1.02
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0371",
+   "name": "Collector: Transcendent",
+   "description": "Own an item of transcendent rarity.",
+   "category": "collection",
+   "condition": "owns_rarity.transcendent",
+   "reward": {
+    "lck_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0372",
+   "name": "Hoarder: Transcendent",
+   "description": "Own 50 items of transcendent rarity.",
+   "category": "collection",
+   "condition": "owns_rarity_count.transcendent >= 50",
+   "reward": {
+    "lck_mult": 1.02
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0373",
+   "name": "Collector: Divine",
+   "description": "Own an item of divine rarity.",
+   "category": "collection",
+   "condition": "owns_rarity.divine",
+   "reward": {
+    "lck_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0374",
+   "name": "Hoarder: Divine",
+   "description": "Own 50 items of divine rarity.",
+   "category": "collection",
+   "condition": "owns_rarity_count.divine >= 50",
+   "reward": {
+    "lck_mult": 1.02
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0375",
+   "name": "Collector: Primordial",
+   "description": "Own an item of primordial rarity.",
+   "category": "collection",
+   "condition": "owns_rarity.primordial",
+   "reward": {
+    "lck_mult": 1.01
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0376",
+   "name": "Hoarder: Primordial",
+   "description": "Own 50 items of primordial rarity.",
+   "category": "collection",
+   "condition": "owns_rarity_count.primordial >= 50",
+   "reward": {
+    "lck_mult": 1.02
+   },
+   "points": 20,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0377",
+   "name": "Provider: Food",
+   "description": "Keep food maxed for a full day.",
+   "category": "survival",
+   "condition": "need_maxed_days.food >= 1",
+   "reward": {
+    "survival_mult": 1.02
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0378",
+   "name": "Self-Sufficient: Food",
+   "description": "Fully automate food via delegation.",
+   "category": "survival",
+   "condition": "need_automated.food",
+   "reward": {
+    "survival_mult": 1.03
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0379",
+   "name": "Provider: Water",
+   "description": "Keep water maxed for a full day.",
+   "category": "survival",
+   "condition": "need_maxed_days.water >= 1",
+   "reward": {
+    "survival_mult": 1.02
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0380",
+   "name": "Self-Sufficient: Water",
+   "description": "Fully automate water via delegation.",
+   "category": "survival",
+   "condition": "need_automated.water",
+   "reward": {
+    "survival_mult": 1.03
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0381",
+   "name": "Provider: Warmth",
+   "description": "Keep warmth maxed for a full day.",
+   "category": "survival",
+   "condition": "need_maxed_days.warmth >= 1",
+   "reward": {
+    "survival_mult": 1.02
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0382",
+   "name": "Self-Sufficient: Warmth",
+   "description": "Fully automate warmth via delegation.",
+   "category": "survival",
+   "condition": "need_automated.warmth",
+   "reward": {
+    "survival_mult": 1.03
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0383",
+   "name": "Provider: Health",
+   "description": "Keep health maxed for a full day.",
+   "category": "survival",
+   "condition": "need_maxed_days.health >= 1",
+   "reward": {
+    "survival_mult": 1.02
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0384",
+   "name": "Self-Sufficient: Health",
+   "description": "Fully automate health via delegation.",
+   "category": "survival",
+   "condition": "need_automated.health",
+   "reward": {
+    "survival_mult": 1.03
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0385",
+   "name": "Provider: Morale",
+   "description": "Keep morale maxed for a full day.",
+   "category": "survival",
+   "condition": "need_maxed_days.morale >= 1",
+   "reward": {
+    "survival_mult": 1.02
+   },
+   "points": 10,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0386",
+   "name": "Self-Sufficient: Morale",
+   "description": "Fully automate morale via delegation.",
+   "category": "survival",
+   "condition": "need_automated.morale",
+   "reward": {
+    "survival_mult": 1.03
+   },
+   "points": 15,
+   "hidden": false
+  },
+  {
+   "id": "ACH-0387",
+   "name": "The Hermit's Student",
+   "description": "Train with the Hermit of the Peak.",
+   "category": "secret",
+   "condition": "trained_with.CHR-NPC-028",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0388",
+   "name": "Never Forgotten",
+   "description": "Witness the Echo of Ashfall.",
+   "category": "secret",
+   "condition": "met.CHR-NPC-029",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0389",
+   "name": "Two Words from a Dead King",
+   "description": "Meet the Ashen Pilgrim both times.",
+   "category": "secret",
+   "condition": "met_twice.CHR-MQ-004",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0390",
+   "name": "Stared Into the Void",
+   "description": "Survive the Voidless One's audience.",
+   "category": "secret",
+   "condition": "survived.CHR-NPC-030",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0391",
+   "name": "Unwrite the Unwritten",
+   "description": "Defeat the final world boss, The Unwritten.",
+   "category": "secret",
+   "condition": "killed_world_boss.HGOD",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0392",
+   "name": "Author of Worlds",
+   "description": "Become the Universe Overlord.",
+   "category": "secret",
+   "condition": "phase_index >= 45",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0393",
+   "name": "Idle Emperor",
+   "description": "Earn a Gold while fully idle/offline.",
+   "category": "secret",
+   "condition": "idle_currency.gold >= 1",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0394",
+   "name": "Pacifist's Paradox",
+   "description": "Reach phase 5 without losing a single villager.",
+   "category": "secret",
+   "condition": "phase_index >= 5 AND deaths == 0",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0395",
+   "name": "Glass Cannon",
+   "description": "Have ATK 100x your DEF.",
+   "category": "secret",
+   "condition": "stat.atk >= 100 * stat.def",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0396",
+   "name": "One With the Pen",
+   "description": "Rebirth after becoming Universe Overlord.",
+   "category": "secret",
+   "condition": "rebirth_count >= 1 AND max_phase >= 45",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0397",
+   "name": "Secret: Omen of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.10",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0398",
+   "name": "Secret: Glimmer of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.11",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0399",
+   "name": "Secret: Spark of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.12",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0400",
+   "name": "Secret: Glimmer of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.13",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0401",
+   "name": "Secret: Spark of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.14",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0402",
+   "name": "Secret: Whisper of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.15",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0403",
+   "name": "Secret: Omen of the Stars",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.16",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0404",
+   "name": "Secret: Glimmer of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.17",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0405",
+   "name": "Secret: Spark of the Stars",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.18",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0406",
+   "name": "Secret: Relic of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.19",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0407",
+   "name": "Secret: Omen of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.20",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0408",
+   "name": "Secret: Relic of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.21",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0409",
+   "name": "Secret: Omen of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.22",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0410",
+   "name": "Secret: Spark of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.23",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0411",
+   "name": "Secret: Whisper of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.24",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0412",
+   "name": "Secret: Relic of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.25",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0413",
+   "name": "Secret: Whisper of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.26",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0414",
+   "name": "Secret: Omen of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.27",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0415",
+   "name": "Secret: Glimmer of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.28",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0416",
+   "name": "Secret: Whisper of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.29",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0417",
+   "name": "Secret: Glimmer of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.30",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0418",
+   "name": "Secret: Relic of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.31",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0419",
+   "name": "Secret: Omen of the Stars",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.32",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0420",
+   "name": "Secret: Relic of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.33",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0421",
+   "name": "Secret: Glimmer of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.34",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0422",
+   "name": "Secret: Relic of the Stars",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.35",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0423",
+   "name": "Secret: Glimmer of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.36",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0424",
+   "name": "Secret: Shadow of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.37",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0425",
+   "name": "Secret: Whisper of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.38",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0426",
+   "name": "Secret: Shadow of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.39",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0427",
+   "name": "Secret: Shadow of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.40",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0428",
+   "name": "Secret: Glimmer of the Stars",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.41",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0429",
+   "name": "Secret: Spark of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.42",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0430",
+   "name": "Secret: Relic of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.43",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0431",
+   "name": "Secret: Spark of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.44",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0432",
+   "name": "Secret: Glimmer of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.45",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0433",
+   "name": "Secret: Omen of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.46",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0434",
+   "name": "Secret: Shadow of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.47",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0435",
+   "name": "Secret: Relic of the Stars",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.48",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0436",
+   "name": "Secret: Omen of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.49",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0437",
+   "name": "Secret: Relic of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.50",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0438",
+   "name": "Secret: Glimmer of the Stars",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.51",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0439",
+   "name": "Secret: Spark of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.52",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0440",
+   "name": "Secret: Whisper of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.53",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0441",
+   "name": "Secret: Relic of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.54",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0442",
+   "name": "Secret: Omen of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.55",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0443",
+   "name": "Secret: Shadow of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.56",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0444",
+   "name": "Secret: Omen of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.57",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0445",
+   "name": "Secret: Shadow of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.58",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0446",
+   "name": "Secret: Whisper of the Stars",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.59",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0447",
+   "name": "Secret: Spark of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.60",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0448",
+   "name": "Secret: Shadow of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.61",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0449",
+   "name": "Secret: Glimmer of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.62",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0450",
+   "name": "Secret: Shadow of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.63",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0451",
+   "name": "Secret: Glimmer of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.64",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0452",
+   "name": "Secret: Relic of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.65",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0453",
+   "name": "Secret: Spark of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.66",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0454",
+   "name": "Secret: Shadow of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.67",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0455",
+   "name": "Secret: Spark of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.68",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0456",
+   "name": "Secret: Relic of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.69",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0457",
+   "name": "Secret: Spark of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.70",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0458",
+   "name": "Secret: Omen of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.71",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0459",
+   "name": "Secret: Shadow of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.72",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0460",
+   "name": "Secret: Glimmer of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.73",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0461",
+   "name": "Secret: Omen of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.74",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0462",
+   "name": "Secret: Omen of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.75",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0463",
+   "name": "Secret: Spark of the Stars",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.76",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0464",
+   "name": "Secret: Omen of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.77",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0465",
+   "name": "Secret: Omen of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.78",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0466",
+   "name": "Secret: Omen of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.79",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0467",
+   "name": "Secret: Whisper of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.80",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0468",
+   "name": "Secret: Shadow of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.81",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0469",
+   "name": "Secret: Relic of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.82",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0470",
+   "name": "Secret: Relic of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.83",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0471",
+   "name": "Secret: Spark of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.84",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0472",
+   "name": "Secret: Shadow of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.85",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0473",
+   "name": "Secret: Omen of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.86",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0474",
+   "name": "Secret: Spark of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.87",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0475",
+   "name": "Secret: Omen of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.88",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0476",
+   "name": "Secret: Whisper of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.89",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0477",
+   "name": "Secret: Relic of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.90",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0478",
+   "name": "Secret: Spark of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.91",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0479",
+   "name": "Secret: Omen of the Stars",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.92",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0480",
+   "name": "Secret: Whisper of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.93",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0481",
+   "name": "Secret: Whisper of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.94",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0482",
+   "name": "Secret: Glimmer of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.95",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0483",
+   "name": "Secret: Shadow of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.96",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0484",
+   "name": "Secret: Whisper of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.97",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0485",
+   "name": "Secret: Omen of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.98",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0486",
+   "name": "Secret: Omen of the Stars",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.99",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0487",
+   "name": "Secret: Spark of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.100",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0488",
+   "name": "Secret: Omen of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.101",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0489",
+   "name": "Secret: Omen of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.102",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0490",
+   "name": "Secret: Shadow of the Stars",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.103",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0491",
+   "name": "Secret: Omen of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.104",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0492",
+   "name": "Secret: Relic of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.105",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0493",
+   "name": "Secret: Shadow of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.106",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0494",
+   "name": "Secret: Relic of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.107",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0495",
+   "name": "Secret: Glimmer of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.108",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0496",
+   "name": "Secret: Relic of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.109",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0497",
+   "name": "Secret: Shadow of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.110",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0498",
+   "name": "Secret: Relic of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.111",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0499",
+   "name": "Secret: Whisper of the Stars",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.112",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0500",
+   "name": "Secret: Spark of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.113",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0501",
+   "name": "Secret: Spark of the Stars",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.114",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0502",
+   "name": "Secret: Omen of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.115",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0503",
+   "name": "Secret: Shadow of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.116",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0504",
+   "name": "Secret: Relic of the Stars",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.117",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0505",
+   "name": "Secret: Omen of the Void",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.118",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0506",
+   "name": "Secret: Glimmer of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.119",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0507",
+   "name": "Secret: Shadow of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.120",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0508",
+   "name": "Secret: Omen of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.121",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0509",
+   "name": "Secret: Spark of the Deep",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.122",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0510",
+   "name": "Secret: Omen of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.123",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "ascendant"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0511",
+   "name": "Secret: Glimmer of the Stars",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.124",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0512",
+   "name": "Secret: Relic of the Stars",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.125",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "mythic"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0513",
+   "name": "Secret: Spark of the Crown",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.126",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0514",
+   "name": "Secret: Whisper of the Dawn",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.127",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0515",
+   "name": "Secret: Omen of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.128",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "divine"
+   },
+   "points": 50,
+   "hidden": true
+  },
+  {
+   "id": "ACH-0516",
+   "name": "Secret: Omen of the Hollow",
+   "description": "A hidden achievement unlocked by a secret condition.",
+   "category": "secret",
+   "condition": "secret_flag.ach.129",
+   "reward": {
+    "all_gain_mult": 1.03,
+    "loot_rarity_max": "primordial"
+   },
+   "points": 50,
+   "hidden": true
+  }
+ ]
+}

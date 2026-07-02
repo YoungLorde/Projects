@@ -1,0 +1,676 @@
+category: technology_and_infrastructure
+description: 'Reality-grounded technology, infrastructure, logistics, and research systems in the RP Conversion universe.
+  While the Game System provides supernatural abilities, the physical world still operates on real physics. Travellers must
+  deal with actual engineering, logistics, and infrastructure challenges.
+
+  '
+technology_overview:
+  principle: 'Technology in the RP Conversion universe is a blend of pre-System human technology, System-enhanced engineering,
+    and alien technological traditions. The System does NOT replace physics — it augments it. Gravity still pulls, thermodynamics
+    still applies, and you still need to eat, drink, and breathe. System enhancements make existing technology more efficient,
+    durable, and powerful, but they don''t break fundamental physical laws.
+
+    '
+  tech_levels:
+  - level: Pre-System Baseline
+    description: Earth technology as it existed before System activation. Conventional engines, electronics, materials.
+    examples: Cars, firearms, computers, radio, solar panels
+    availability: Abundant on Earth, obsolete elsewhere
+  - level: System-Enhanced Conventional
+    description: Pre-System technology upgraded with System energy. More durable, efficient, and powerful.
+    examples: System-enhanced firearms (RP ammo), reinforced vehicles, enhanced communications
+    availability: Common among Tier 0-2 Travellers
+  - level: System-Native Technology
+    description: Technology designed from the ground up using System principles. Cannot function without System energy.
+    examples: Energy shields, dimensional storage, System crafting stations, RP generators
+    availability: Common among Tier 3-5 Travellers
+  - level: Advanced System-Integration
+    description: Technology that deeply integrates with the System's dimensional and energy manipulation capabilities.
+    examples: Dimensional drives, gravity manipulation, pocket dimension expansion, quantum research
+    availability: Tier 6+ Travellers and advanced alien civilizations
+  - level: Theoretical/Ancient
+    description: Technology from ancient races or theoretical developments beyond current understanding.
+    examples: Reality manipulation, System creation/modification, dimensional construction
+    availability: Ancient race artifacts only, not reproducible
+infrastructure:
+  power_generation:
+  - id: TECH-001
+    name: RP Power Converter
+    tier_requirement: 1
+    description: 'Converts RP into electrical energy. The most common power source in the System universe. 1 RP = approximately
+      10 kWh of electricity. Simple, reliable, and available to any Traveller with RP to spend. The backbone of post-System
+      civilization''s power grid.
+
+      '
+    efficiency: 95% conversion rate
+    cost: 1 RP per 10 kWh
+    notes: Makes fossil fuels and nuclear power obsolete for small-scale operations.
+  - id: TECH-002
+    name: Solar Enhancement Array
+    tier_requirement: 2
+    description: 'System-enhanced solar panels that convert sunlight at 85% efficiency (vs. pre-System ~20%). The System energy
+      coating allows panels to absorb a broader spectrum of radiation. Produces both electricity and small amounts of RP (1
+      RP per hour per panel in direct sunlight).
+
+      '
+    efficiency: 85% solar conversion + 1 RP/hour passive
+    cost: 5,000 RP per panel
+    notes: Free energy once installed. Essential for settlement sustainability.
+  - id: TECH-003
+    name: Dungeon Core Tap
+    tier_requirement: 4
+    description: 'A device that siphons ambient System energy from a dungeon''s core without destroying it. Provides enormous
+      power output but risks destabilizing the dungeon. Illegal in most jurisdictions. Used by factions that control dungeon
+      territory.
+
+      '
+    efficiency: Massive — powers a small city
+    cost: 500,000 RP to construct
+    notes: Controversial — some argue it weakens dungeon cores and spawns unstable creatures.
+  water_systems:
+  - id: TECH-004
+    name: Atmospheric Water Generator
+    tier_requirement: 1
+    description: 'System-enhanced device that extracts water from air, even in low-humidity environments. Uses System energy
+      to accelerate condensation. Output: 50 liters/day per unit in temperate climates, 10 liters/day in arid conditions.
+
+      '
+    cost: 2,000 RP per unit
+    notes: Essential for settlements without natural water sources.
+  - id: TECH-005
+    name: System Purification Filter
+    tier_requirement: 1
+    description: 'Filters that use System energy to remove ALL contaminants from water, including System-anomaly radiation,
+      biological agents, and chemical pollutants. Converts any liquid (including toxic waste) to potable water. Filter lifespan:
+      1 year.
+
+      '
+    cost: 1,000 RP per filter
+    notes: Made pre-System water treatment obsolete. Simple, cheap, reliable.
+  food_production:
+  - id: TECH-006
+    name: System-Enhanced Agriculture
+    tier_requirement: 1
+    description: 'Farming techniques that use System energy to accelerate crop growth (5x normal speed), enhance nutritional
+      content, and protect against pests. Requires a Traveller with farming knowledge and at least INT 2. A single System-enhanced
+      farm can feed 100 people from 1 hectare.
+
+      '
+    cost: 10 RP/day per hectare maintenance
+    notes: Wanderers with farming experience are highly valued for this skill.
+  - id: TECH-007
+    name: Nutrient Synthesizer
+    tier_requirement: 3
+    description: 'Device that converts raw organic matter and RP into nutritious food paste. Not pleasant to eat but provides
+      complete nutrition. Output: enough food for 10 people per day per unit. Used in military operations and emergency situations.
+
+      '
+    cost: 50,000 RP per unit, 5 RP/day operating cost
+    notes: Functional but depressing. Nobody eats synthesized food by choice.
+  - id: TECH-008
+    name: Hunting & Monster Processing
+    tier_requirement: 0
+    description: 'Many System creatures are edible after proper processing. The Harvest ability identifies safe-to-eat parts.
+      Monster meat often provides temporary stat buffs when cooked properly. A skilled hunter-chef can feed a community and
+      provide combat advantages through food buffs.
+
+      '
+    cost: Free (requires hunting)
+    notes: Monster cuisine is an entire culinary tradition on older System worlds.
+  communication:
+  - id: TECH-009
+    name: System Relay Tower
+    tier_requirement: 2
+    description: 'Amplifies System Communication range. A network of relay towers provides continent-wide communication capability.
+      Each tower covers a 500km radius. Building a relay network is one of the first infrastructure priorities for any settlement.
+
+      '
+    cost: 25,000 RP per tower
+    notes: The backbone of post-System communication. Factions that control relay networks control information.
+  - id: TECH-010
+    name: Quantum Entanglement Communicator
+    tier_requirement: 6
+    description: 'Instantaneous communication regardless of distance using System-enhanced quantum entanglement. Each communicator
+      is paired with exactly one other communicator during manufacturing. Messages are uninterceptable. Limited to text and
+      voice.
+
+      '
+    cost: 5,000,000 RP per pair
+    notes: The gold standard for secure long-range communication. Military and diplomatic use.
+  transportation:
+  - id: TECH-011
+    name: System-Enhanced Roads
+    tier_requirement: 2
+    description: 'Roads built or upgraded with System-enhanced materials. Self- repairing surface, weather-resistant, monster-deterrent
+      (low-tier creatures avoid System-enhanced roads). Speed bonus: +20% for vehicles on System roads. Building cost is high
+      but maintenance is minimal.
+
+      '
+    cost: 100 RP per meter of road
+    notes: The Reclamation Corps has restored 50,000km of roads on Earth.
+  - id: TECH-012
+    name: Waypoint Gate
+    tier_requirement: 5
+    description: 'Permanent teleportation gate between two fixed locations. Requires massive RP investment to establish but
+      allows instant travel between connected points. Each gate pair requires 10,000,000 RP to construct and 1,000 RP/day
+      to maintain. Travel cost: 100 RP per person per use.
+
+      '
+    cost: 10,000,000 RP to construct, 1,000 RP/day maintenance
+    notes: Only wealthy factions can afford Waypoint Gates. They define trade routes.
+logistics:
+  trade_routes:
+  - id: LOG-001
+    name: Earth Continental Trade Network
+    scope: planetary
+    description: 'Network of trade routes connecting Earth''s major settlements. Protected by Reclamation Corps patrols and
+      Iron Caravan escorts. Handles food, materials, equipment, and RP transfers. Routes follow restored road networks and
+      avoid known dungeon breach zones.
+
+      '
+    major_routes:
+    - New Geneva → Port Meridian (maritime + overland)
+    - Fort Haven → The Archive (eastern seaboard)
+    - Port Meridian → The Crossroads (maritime)
+    hazards: Raiders, dungeon breaches, monster migrations, faction border disputes
+  - id: LOG-002
+    name: The Spine
+    scope: interstellar
+    description: 'Main interstellar trade route connecting 15 major worlds across 8 star systems. Maintained by the Iron Caravan
+      and protected by multiple factions under mutual treaty. The economic backbone of known civilization. Handles 60% of
+      all inter-system trade.
+
+      '
+    major_stops:
+    - Kael Prime
+    - Varak
+    - Nexar outpost
+    - The Forge
+    - Radiance
+    hazards: Pirates, void creatures, dimensional anomalies, political disputes
+  supply_chain_elements:
+    raw_materials: 'System-enhanced materials must be harvested from specific sources: monster drops, dungeon loot, mining
+      (System-enhanced deposits), or alien trade. Raw material supply is the foundation of all manufacturing. Control raw
+      material sources = control the economy.
+
+      '
+    manufacturing: 'Crafting and manufacturing require: materials + crafting skill + workspace + recipes/blueprints. The Forge
+      Masters guild sets quality standards. Mass production is possible with factory-scale System-enhanced workshops but quality
+      decreases compared to individual crafting.
+
+      '
+    distribution: 'Getting goods from production to consumer requires: transportation (vehicles, convoys), route security
+      (escorts, patrols), storage (warehouses, System inventory), and market access (trade hubs, auctions). The Iron Caravan
+      handles most inter-settlement distribution.
+
+      '
+    currency_flow: 'RP is the universal currency. It flows from: dungeon clearing (primary source), monster hunting, quest
+      completion, trade, and passive generation (RP Circulation ability, EXP farms). RP flows to: equipment purchase, vehicle
+      upgrades, crafting, consumables, services, and taxes/tithes. The economy is fundamentally based on combat and risk.
+
+      '
+research:
+  research_fields:
+  - id: RES-001
+    name: System Mechanics
+    description: 'Understanding how the Game System works at a fundamental level. What are the rules? Where are the limits?
+      Can the rules be bent? The Scholar''s Compact leads this field. Key discoveries include: System notification patterns,
+      stat cap formulas, and dungeon spawn algorithms.
+
+      '
+    current_frontier: Understanding why the System activated and who created it
+    difficulty: Extremely High — the System actively resists deep analysis
+  - id: RES-002
+    name: Vehicle Core Engineering
+    description: 'Studying how Vehicle Cores function, bond, and can be optimized. The Kael''thari lead this field with their
+      artificial core production. Current limits: artificial cores cannot exceed Tier 2. Natural core optimization can add
+      10-20% effective performance.
+
+      '
+    current_frontier: Artificial Tier 3+ core production
+    difficulty: Very High — core structure becomes exponentially complex above Tier 2
+  - id: RES-003
+    name: EVA Suit Development
+    description: 'Designing and improving suits for extra-vehicular activity in space. Key challenges: radiation shielding,
+      oxygen recycling, mobility, and System integration. The Accord has the most advanced EVA suit program on Earth. Alien
+      civilizations have EVA suits 10-50x more advanced than Earth''s best.
+
+      '
+    current_frontier: Self-sustaining EVA suits with indefinite life support
+    difficulty: High — materials and System integration require significant investment
+    earth_status: 'Earth is 800+ years behind alien EVA technology. Mohamed and other Earth Travellers must either: research
+      and produce their own (slow, expensive), purchase from alien traders (extremely expensive), or salvage from alien wrecks
+      (dangerous but possible).
+
+      '
+  - id: RES-004
+    name: Dimensional Engineering
+    description: 'Understanding and manipulating the dimensional spaces used by Vehicle pocket dimensions, dungeons, and dimensional
+      travel. Key applications: pocket dimension expansion, dimensional drives, dimensional storage, and portal creation.
+
+      '
+    current_frontier: Stable dimensional rifts for permanent inter-world travel
+    difficulty: Extremely High — dimensional physics are poorly understood
+  - id: RES-005
+    name: Biological Enhancement
+    description: 'Using System energy to enhance biological organisms beyond natural limits. Applications: healing, stat enhancement,
+      lifespan extension, species hybridization. The Grey Medics and Thornveil lead this field.
+
+      '
+    current_frontier: Permanent stat enhancement without crystals
+    difficulty: High — the System limits biological modification
+  - id: RES-006
+    name: Weapons & Armor Development
+    description: 'Creating better equipment using System-enhanced materials and techniques. The Forge Masters guild leads
+      conventional development. Military factions drive applied research.
+
+      '
+    current_frontier: System-reactive equipment that adapts to threats in real-time
+    difficulty: Moderate — well-understood field with room for innovation
+  - id: RES-007
+    name: Ancient Race Archaeology
+    description: 'Studying the ruins, artifacts, and legacy of extinct ancient civilizations. Key goal: understanding what
+      happened to them and recovering their technology. The Architects'' ruins are the most studied. The First Travellers''
+      legacy is the most coveted.
+
+      '
+    current_frontier: Decoding Architect language and purpose
+    difficulty: Very High — ancient technology often resists modern analysis
+  research_process: 'Research in the RP Conversion universe follows a modified scientific method enhanced by the System: 1.
+    OBSERVATION: Identify a phenomenon or need 2. ANALYSIS: Use System Analyze and research equipment to gather data 3. HYPOTHESIS:
+    Formulate a theory (INT-dependent success rate) 4. EXPERIMENTATION: Test the theory (requires materials, time, RP) 5.
+    SYSTEM VALIDATION: The System confirms or denies the result 6. BLUEPRINT: Successful research produces a reusable blueprint
+    7. PRODUCTION: Blueprint enables repeatable creation/application
+
+    Research speed depends on: INT stat, equipment quality, material availability, and existing knowledge base. The Scholar''s
+    Compact has published research acceleration tables.
+
+    '
+technology_entries:
+- id: tech_001
+  name: System-Enhanced Solar Panel
+  category: Energy
+  tier: 2
+  description: Solar panels upgraded with System materials. 300% efficiency of pre-System panels.
+  rp_cost: 5000
+  output: 50kW per panel
+  applications:
+  - Vehicle power
+  - Settlement power
+  - Charging stations
+- id: tech_002
+  name: RP Battery Cell
+  category: Energy Storage
+  tier: 3
+  description: Battery that stores RP energy in crystalline matrix. Powers System-enhanced equipment.
+  rp_cost: 10000
+  capacity: 10,000 RP equivalent
+  applications:
+  - Vehicle reserve power
+  - Emergency systems
+  - Portable equipment
+- id: tech_003
+  name: Quantum Communication Node
+  category: Networking
+  tier: 4
+  description: Instantaneous communication across any distance using quantum entanglement.
+  rp_cost: 100000
+  range: Unlimited (within same dimension)
+  applications:
+  - Military coordination
+  - Trade networks
+  - Emergency alerts
+- id: tech_004
+  name: System OS v1.0
+  category: Software
+  tier: 2
+  description: Operating system for System-enhanced computers. Interface between human tech and System tech.
+  rp_cost: 2000
+  applications:
+  - Vehicle computers
+  - Research terminals
+  - Crafting stations
+  - Navigation systems
+- id: tech_005
+  name: Basic VR Environment
+  category: Virtual Reality
+  tier: 2
+  description: System-powered VR space for training, education, and recreation. 90% reality fidelity.
+  rp_cost: 15000
+  fidelity: 90%
+  applications:
+  - Combat training
+  - Skill learning
+  - Entertainment
+  - Meetings
+- id: tech_006
+  name: Advanced VR Environment
+  category: Virtual Reality
+  tier: 4
+  description: Full-immersion VR indistinguishable from reality. Pain simulation, smell, taste. 99.9% fidelity.
+  rp_cost: 200000
+  fidelity: 99.9%
+  applications:
+  - Military simulation
+  - Research environments
+  - Therapy
+  - Extreme training
+- id: tech_007
+  name: Atmospheric Processor
+  category: Infrastructure
+  tier: 3
+  description: Converts any atmosphere to breathable air. Essential for colonizing alien worlds.
+  rp_cost: 50000
+  range: 1 km radius
+  applications:
+  - Colony establishment
+  - Terraforming
+  - Emergency life support
+- id: tech_008
+  name: Water Purification Plant
+  category: Infrastructure
+  tier: 2
+  description: System-enhanced water treatment facility. Can purify any liquid into clean water.
+  rp_cost: 8000
+  capacity: 10,000 liters/day
+  applications:
+  - Settlement water supply
+  - Agriculture
+  - Industrial use
+- id: tech_009
+  name: Automated Factory Module
+  category: Production
+  tier: 4
+  description: Self-operating factory that manufactures items from blueprints. Requires materials and RP.
+  rp_cost: 500000
+  output: Varies by item complexity
+  applications:
+  - Mass production
+  - Equipment manufacturing
+  - Material processing
+- id: tech_010
+  name: System-Enhanced Network Hub
+  category: Networking
+  tier: 3
+  description: Local network connecting System devices within 10km. Shares data, coordinates defense, manages resources.
+  rp_cost: 30000
+  range: 10 km
+  applications:
+  - Settlement coordination
+  - Defense network
+  - Resource management
+- id: tech_011
+  name: Anti-Gravity Generator
+  category: Infrastructure
+  tier: 5
+  description: Creates artificial gravity or negates existing gravity. Essential for space stations.
+  rp_cost: 300000
+  range: 100m radius
+  applications:
+  - Space stations
+  - Floating structures
+  - Training facilities
+- id: tech_012
+  name: Dimensional Scanner
+  category: Detection
+  tier: 5
+  description: Scans for dimensional anomalies, hidden pocket dimensions, and reality fractures.
+  rp_cost: 250000
+  range: 100 km
+  applications:
+  - Void zone detection
+  - Dimensional corridor mapping
+  - Threat assessment
+- id: tech_013
+  name: Bio-Printer
+  category: Medical
+  tier: 4
+  description: 3D printer for biological tissue. Can print organs, skin, bone. Combined with System healing.
+  rp_cost: 150000
+  applications:
+  - Organ replacement
+  - Wound repair
+  - Biological research
+  - Custom bio-materials
+- id: tech_014
+  name: RP Reactor
+  category: Energy
+  tier: 5
+  description: Generates RP from raw materials. Slow but steady passive RP income for settlements.
+  rp_cost: 1000000
+  output: 100 RP/hour
+  applications:
+  - Settlement RP income
+  - Vehicle charging
+  - Industrial power
+- id: tech_015
+  name: Marketing Broadcasting System
+  category: Trade
+  tier: 2
+  description: System-enhanced broadcasting for trade advertisements. Reach buyers across settlements.
+  rp_cost: 5000
+  range: Planetary
+  applications:
+  - Product advertising
+  - Trade postings
+  - Auction listings
+  - Recruitment
+- id: tech_016
+  name: Logistics Management AI
+  category: Trade
+  tier: 3
+  description: AI system managing supply chains, inventory, and delivery routes across settlements.
+  rp_cost: 40000
+  applications:
+  - Supply chain optimization
+  - Inventory management
+  - Delivery routing
+  - Demand forecasting
+- id: tech_017
+  name: Cold Fusion Reactor
+  category: Energy
+  tier: 6
+  description: Clean energy reactor using System-enhanced cold fusion. Powers entire settlements indefinitely.
+  rp_cost: 2000000
+  output: 1 GW
+  applications:
+  - Settlement power
+  - Industrial operations
+  - Vehicle fleet charging
+- id: tech_018
+  name: Nano-Repair Swarm
+  category: Maintenance
+  tier: 4
+  description: Cloud of nanobots that automatically repair damage to structures, vehicles, and equipment.
+  rp_cost: 100000
+  applications:
+  - Vehicle repair
+  - Structure maintenance
+  - Equipment upkeep
+  - Emergency patches
+- id: tech_019
+  name: Encrypted Data Vault
+  category: Networking
+  tier: 3
+  description: Unhackable data storage using System-level encryption. Stores blueprints, intel, and secrets.
+  rp_cost: 20000
+  capacity: Unlimited (System-compressed)
+  applications:
+  - Blueprint storage
+  - Intelligence archives
+  - Personal records
+- id: tech_020
+  name: Gravity Train Network
+  category: Infrastructure
+  tier: 5
+  description: High-speed transit system using gravity manipulation. Connects settlements at near-light speed.
+  rp_cost: 5000000
+  speed: 0.1c (10% light speed)
+  applications:
+  - Inter-settlement transit
+  - Cargo transport
+  - Emergency evacuation
+- id: tech_021
+  name: Holographic Display System
+  category: Interface
+  tier: 2
+  description: 3D holographic display for maps, schematics, and communication. Touchable holograms.
+  rp_cost: 8000
+  applications:
+  - Vehicle HUD
+  - Tactical displays
+  - Communication
+  - Entertainment
+- id: tech_022
+  name: AI Personal Assistant
+  category: Software
+  tier: 3
+  description: System-enhanced AI that manages vehicle systems, provides combat analysis, and offers tactical advice.
+  rp_cost: 50000
+  applications:
+  - Vehicle management
+  - Combat analysis
+  - Research assistance
+  - Threat assessment
+- id: tech_023
+  name: Geothermal Energy Tap
+  category: Energy
+  tier: 3
+  description: Drill into planetary mantle to harvest geothermal energy. Reliable, renewable, high-output.
+  rp_cost: 100000
+  output: 500 MW
+  applications:
+  - Settlement power
+  - Industrial operations
+  - Deep mining support
+- id: tech_024
+  name: Solar Sail Array
+  category: Propulsion
+  tier: 4
+  description: Massive solar sails for fuel-free space travel. Slow but unlimited range within a star system.
+  rp_cost: 150000
+  applications:
+  - Interplanetary travel
+  - Cargo transport
+  - Fuel-free operations
+- id: tech_025
+  name: Desalination Plant
+  category: Infrastructure
+  tier: 2
+  description: System-enhanced desalination. Converts ocean water to fresh water with 99.9% efficiency.
+  rp_cost: 12000
+  capacity: 50,000 liters/day
+  applications:
+  - Coastal settlement water supply
+  - Agriculture
+  - Emergency water
+- id: tech_026
+  name: Vertical Farm Module
+  category: Production
+  tier: 2
+  description: Multi-story indoor farming using System-enhanced growth lights. 10x yield of traditional farming.
+  rp_cost: 20000
+  output: Feeds 500 people per module
+  applications:
+  - Food production
+  - Settlement sustainability
+  - Vehicle gardens
+- id: tech_027
+  name: Waste-to-Energy Converter
+  category: Energy
+  tier: 2
+  description: Converts all waste matter into usable energy. Zero-waste settlement technology.
+  rp_cost: 15000
+  output: 10 MW per ton of waste
+  applications:
+  - Waste processing
+  - Energy generation
+  - Pollution control
+- id: tech_028
+  name: Autonomous Drone Swarm
+  category: Military
+  tier: 3
+  description: AI-controlled drone fleet for reconnaissance, combat support, and area denial.
+  rp_cost: 60000
+  applications:
+  - Reconnaissance
+  - Combat support
+  - Perimeter defense
+  - Search and rescue
+- id: tech_029
+  name: Gravity Plating
+  category: Infrastructure
+  tier: 4
+  description: Floor panels that generate 1G gravity. Essential for space stations and zero-G vehicles.
+  rp_cost: 200000
+  applications:
+  - Space station habitation
+  - Vehicle interiors
+  - Training facilities
+- id: tech_030
+  name: Atmospheric Recycler
+  category: Life Support
+  tier: 2
+  description: Recycles CO2 to O2, filters toxins, maintains humidity. Essential for sealed environments.
+  rp_cost: 10000
+  capacity: Supports 100 people
+  applications:
+  - Vehicle life support
+  - Space stations
+  - Underground bases
+- id: tech_031
+  name: RP-Powered 3D Printer
+  category: Production
+  tier: 3
+  description: 3D printer that uses RP energy to create objects from raw materials. Prints equipment, parts, tools.
+  rp_cost: 40000
+  applications:
+  - Equipment fabrication
+  - Spare parts
+  - Rapid prototyping
+  - Field repairs
+- id: tech_032
+  name: Blockchain Trade Ledger
+  category: Trade
+  tier: 2
+  description: System-backed immutable trade record. Prevents fraud, tracks ownership, verifies authenticity.
+  rp_cost: 5000
+  applications:
+  - Trade verification
+  - Ownership tracking
+  - Anti-fraud
+  - Contract enforcement
+- id: tech_033
+  name: Emergency Shelter Pod
+  category: Survival
+  tier: 1
+  description: Deployable emergency shelter with 72 hours of life support. Fits 4 people.
+  rp_cost: 2000
+  applications:
+  - Emergency shelter
+  - Disaster relief
+  - Vehicle escape pod
+  - Temporary camp
+- id: tech_034
+  name: Tractor Beam
+  category: Utility
+  tier: 4
+  description: Gravity-based beam that pulls or pushes objects at range. Essential for space salvage.
+  rp_cost: 100000
+  range: 5 km
+  applications:
+  - Space salvage
+  - Debris clearing
+  - Asteroid mining
+  - Rescue operations
+- id: tech_035
+  name: Subspace Radio
+  category: Networking
+  tier: 3
+  description: Radio that transmits through subspace. 100x faster than light-speed communication.
+  rp_cost: 35000
+  range: 100 light-years
+  applications:
+  - Interstellar communication
+  - Distress signals
+  - Trade coordination

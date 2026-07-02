@@ -1,0 +1,67 @@
+system: ui_framework
+description: >
+  UI framework spec for Your Chronicle. Recommendation: a single-page, data-driven
+  web UI (HTML/CSS/JS) built around COLLAPSIBLE PANELS and CONDITIONAL UNLOCKS.
+  Every feature/button declares an unlock condition; the engine hides or locks it
+  until the condition is met, then reveals it (with a subtle highlight). This keeps
+  an extremely deep idle game from feeling cluttered early on.
+design_principles:
+  - "Progressive disclosure: features appear only when relevant (condition-gated)."
+  - "Collapsible/retractable panels everywhere so nothing overwhelms the screen."
+  - "Big, satisfying primary click target; everything else is secondary panels."
+  - "Numbers auto-format with the currency/rarity systems; auto-conversion is shown."
+  - "Locked features render greyed-out with a tooltip of their unlock requirement;"
+  - "  truly hidden features (secrets) do not render at all until discovered."
+condition_grammar:
+  description: "Conditions are simple boolean expressions evaluated against game state."
+  operators: ["==", "!=", ">=", "<=", ">", "<", "AND", "OR", "NOT"]
+  variables:
+    - phase_index
+    - player_level
+    - population
+    - currency.<id>            # e.g. currency.gold
+    - building.<id>.tier
+    - dungeon_rank_cleared      # highest cleared rank index
+    - has_item.<id>
+    - quest_done.<id>
+    - achievement.<id>
+    - rebirth_count
+    - stat.<id>                 # e.g. stat.cha
+  examples:
+    - "phase_index >= 3"
+    - "building.BLD-002.tier >= 1 AND population >= 5"
+    - "dungeon_rank_cleared >= 7"
+    - "quest_done.Q-0001 AND has_item.MAT-EX-0042"
+visibility_states:
+  - {id: hidden,   meaning: "Not rendered at all (used for secrets/hidden content)."}
+  - {id: locked,   meaning: "Rendered greyed-out with requirement tooltip."}
+  - {id: unlocked, meaning: "Fully interactive."}
+  - {id: new,      meaning: "Just unlocked; shows a highlight badge until clicked."}
+panels:
+  - {id: header,        title: "Player / Phase / Currencies", default: open,  always_visible: true}
+  - {id: main_click,    title: "Gather / Act (main click)",   default: open,  always_visible: true}
+  - {id: base,          title: "Base & Buildings",            default: open,  unlock: "phase_index >= 1"}
+  - {id: villagers,     title: "Villagers & Jobs",            default: closed, unlock: "phase_index >= 3"}
+  - {id: settlements,   title: "Settlements & Empire",        default: closed, unlock: "phase_index >= 6"}
+  - {id: inventory,     title: "Inventory",                   default: closed, unlock: "phase_index >= 2"}
+  - {id: equipment,     title: "Equipment (additive)",        default: closed, unlock: "phase_index >= 2"}
+  - {id: crafting,      title: "Crafting",                    default: closed, unlock: "building.BLD-001.tier >= 1"}
+  - {id: shops,         title: "Shops & Vendors",             default: closed, unlock: "phase_index >= 5"}
+  - {id: dungeons,      title: "Dungeons",                    default: closed, unlock: "phase_index >= 4"}
+  - {id: quests,        title: "Quests",                      default: open,  unlock: "phase_index >= 1"}
+  - {id: achievements,  title: "Achievements",                default: closed, unlock: "phase_index >= 2"}
+  - {id: survival,      title: "Survival Needs",              default: closed, unlock: "phase_index >= 3"}
+  - {id: research,      title: "Research / Tech",             default: closed, unlock: "building.BLD-007.tier >= 1"}
+  - {id: rebirth,       title: "Rebirth / Ascension",         default: closed, unlock: "phase_index >= 7 OR rebirth_count >= 1"}
+  - {id: codex,         title: "Codex / Lore",               default: closed, unlock: "phase_index >= 1"}
+inventory_ui:
+  layout: "Collapsible category groups (Weapons, Armor, Potions, Materials, Exotic, Quest, Currency)."
+  per_group: "Each group is an expand/retract dropdown; collapsed by default once it has many items."
+  item_row: "icon-less text row: name (rarity-colored), qty, additive stat summary, actions."
+  additive_note: "Stat summary panel at top shows total stats granted by everything held."
+buttons_examples:
+  - {id: btn_repair_shack, label: "Repair Wooden Shack", unlock: "phase_index >= 1", action: "start_quest:Q-MAIN-0001"}
+  - {id: btn_upgrade_house, label: "Upgrade to House", unlock: "building.BLD-001.tier >= 1 AND population >= 2", action: "upgrade_building:BLD-002"}
+  - {id: btn_found_settlement, label: "Found New Settlement", unlock: "building.BLD-004.tier >= 1", action: "found_settlement"}
+  - {id: btn_enter_dungeon, label: "Enter Dungeon", unlock: "phase_index >= 4", action: "open_panel:dungeons"}
+  - {id: btn_rebirth, label: "Rebirth", unlock: "phase_index >= 7", action: "open_panel:rebirth", confirm: true}

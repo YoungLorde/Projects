@@ -1,0 +1,678 @@
+category: known_worlds
+description: 'Database of known worlds in the RP Conversion universe. The known universe represents approximately 40% of total
+  space — over 60% remains unexplored and unmapped. Each world has unique characteristics, dangers, and opportunities.
+
+  '
+earth_and_sol_system:
+- id: WD-001
+  name: Earth
+  system: Sol
+  type: terrestrial
+  system_age: ~2 years post-activation
+  gravity: 1.0G (standard)
+  atmosphere: Breathable (nitrogen-oxygen)
+  population: ~3 billion (down from 8 billion pre-System)
+  dominant_factions:
+  - The Accord
+  - The Iron Doctrine
+  - Reclamation Corps
+  - Meridian Free Trade
+  - The Mandate of Heaven
+  danger_level: Moderate (Tier 1-4 creatures, dungeon breaches, faction conflicts)
+  description: 'Earth — humanity''s homeworld and one of the newest System-activated worlds. The System''s arrival killed
+    approximately 5 billion people in the first year through monster spawns, dungeon breaches, infrastructure collapse, and
+    factional violence. The survivors have organized into competing factions. Earth is a backwater by galactic standards —
+    a Tier 1-4 world that alien civilizations barely notice. What makes Earth unique is Mohamed Vance and his dual system,
+    though nobody knows this yet.
+
+    '
+  points_of_interest:
+  - name: New Geneva
+    type: city
+    faction: The Accord
+    description: Rebuilt democratic capital. Largest EVA suit factory on Earth.
+  - name: Fortress Moscow
+    type: military_base
+    faction: The Iron Doctrine
+    description: Expanded Kremlin complex. Largest Vehicle Core stockpile on Earth.
+  - name: Port Meridian
+    type: trade_hub
+    faction: Meridian Free Trade
+    description: Rebuilt Singapore. Largest marketplace and Vehicle Core auction house.
+  - name: The Archive
+    type: research_facility
+    faction: The Scholar's Compact
+    description: Converted MIT campus. Most advanced System research on Earth.
+  - name: The Crossroads
+    type: wanderer_settlement
+    faction: The Wanderer's Union
+    description: Former Dubai. Largest Wanderer settlement on Earth.
+  - name: Earth Dungeons
+    type: dungeon_network
+    description: Dozens of dungeons have appeared worldwide, Tier 1-5. Major ones in former subway systems, mines, and cave
+      networks.
+  resources: Abundant water, farmland, mineral deposits. Poor in System-enhanced materials.
+  hazards: Dungeon breaches, faction wars, monster migrations, infrastructure decay
+- id: WD-002
+  name: Luna (Moon)
+  system: Sol
+  type: barren_satellite
+  gravity: 0.16G
+  atmosphere: None — EVA suit required
+  population: ~500 (research outpost)
+  dominant_factions:
+  - The Scholar's Compact (small outpost)
+  danger_level: Low (no creatures, but vacuum is lethal)
+  description: 'Earth''s moon. Pre-System infrastructure destroyed during activation. A small research outpost has been established
+    by the Scholar''s Compact to study System behavior in vacuum environments. The low gravity and lack of atmosphere make
+    it a challenging but safe location — nothing spawns on Luna. Valuable for System research because the System behaves slightly
+    differently in vacuum.
+
+    '
+  points_of_interest:
+  - name: Lunar Research Station
+    type: research_facility
+    description: Small outpost studying System vacuum behavior. 50 researchers.
+  resources: Helium-3, titanium, System-anomaly data
+  hazards: Vacuum, radiation, isolation, equipment failure
+- id: world_e003
+  name: Luna Colony Alpha
+  type: Moon Base
+  description: First off-world human settlement. Built in pre-System lunar base repurposed with System technology. Population
+    5,000.
+  gravity: 0.16G (System-enhanced to 0.8G in habitat zones)
+  atmosphere: Sealed habitats, vacuum outside
+  notable_features:
+  - Low-gravity training facility
+  - Helium-3 mining operations
+  - Orbital vehicle launch platform
+  - System research lab
+  threats:
+  - Vacuum exposure
+  - Meteor impacts
+  - Isolation madness
+  - Tier 2-3 void creatures
+  factions_present:
+  - Reclamation Corps detachment
+  - Scholars of Babel research team
+  lore_notes: The colony's System scanner detected something buried deep in the lunar regolith — something that predates the
+    moon itself.
+- id: world_e004
+  name: Mars Forward Base
+  type: Frontier Settlement
+  description: Humanity's furthest permanent settlement. 200 Travellers maintaining a research outpost. Hostile environment.
+  gravity: 0.38G
+  atmosphere: Thin CO2 atmosphere, unsurvivable without EVA or vehicle
+  notable_features:
+  - Ancient structure discovered (pre-System origin)
+  - Underground water reserves
+  - Red dust storms with System-energy signatures
+  threats:
+  - Atmospheric exposure
+  - Tier 3-5 void creatures
+  - Dust storms
+  - Extreme cold
+  factions_present:
+  - Cartographers Guild outpost
+  lore_notes: The ancient structure on Mars contains writing in no known language — not even Ancient Race scripts match.
+alien_homeworlds:
+- id: WD-003
+  name: Kael Prime
+  system: Kael System
+  type: terrestrial_temperate
+  gravity: 0.9G
+  atmosphere: Breathable (nitrogen-oxygen-neon mix)
+  population: ~8 billion
+  dominant_factions:
+  - Kael'thari Technocracy
+  danger_level: Low (highly controlled, Tier 6-8 threats contained)
+  system_age: 800+ years
+  description: 'Homeworld of the Kael''thari. A world of crystalline spires, data networks visible as light streams in the
+    sky, and cities that function as single integrated machines. The entire planet is optimized — weather is controlled, ecosystems
+    are managed, and the System is deeply integrated into every aspect of life. Visitors describe it as beautiful and deeply
+    unsettling — too perfect, too orderly.
+
+    '
+  points_of_interest:
+  - name: The Spire
+    type: government_center
+    description: Central government/research complex. 3km tall crystalline tower.
+  - name: Core Fabrication Plant
+    type: factory
+    description: Where artificial Vehicle Cores (Tier 0-2) are manufactured.
+  - name: The Data Ocean
+    type: information_network
+    description: Planet-spanning information network visible as auroral lights.
+  resources: Advanced technology, artificial cores, System research data, manufacturing capacity
+  hazards: Cultural superiority complex, surveillance state, restricted areas
+- id: WD-004
+  name: Dravik Thul
+  system: Dravik System
+  type: terrestrial_harsh
+  gravity: 1.4G
+  atmosphere: Breathable (thin, high altitude = dangerous)
+  population: ~1.5 billion
+  dominant_factions:
+  - Dravik War Clans
+  danger_level: Very High (Tier 4-8 creatures roam freely, clan warfare constant)
+  system_age: 1,200+ years
+  description: 'A harsh, mountainous world of volcanic activity, scarce resources, and constant danger. The high gravity makes
+    everything harder — lifting, running, fighting. The Dravik evolved here, which is why they''re naturally stronger than
+    most species. The landscape is scarred by centuries of clan warfare and creature incursions. Visitors are rare and not
+    always welcome.
+
+    '
+  points_of_interest:
+  - name: The Blood Pit
+    type: arena
+    description: Largest arena on Dravik Thul. Where Blood Rites determine clan leadership.
+  - name: War Forge Mountain
+    type: military_facility
+    description: Massive mobile vehicle repair station built into an active volcano.
+  - name: The Bone Fields
+    type: battlefield
+    description: Centuries of war have left fields of bones and destroyed vehicles.
+  resources: Dense metals, volcanic minerals, combat training, hardy livestock
+  hazards: High gravity, volcanic activity, aggressive fauna, clan warfare, xenophobic locals
+- id: WD-005
+  name: Nexar
+  system: Nexari Drift
+  type: probability_shifted
+  gravity: Variable (0.5-1.5G, shifts with probability)
+  atmosphere: Breathable (composition varies by probability state)
+  population: ~8 billion (approximately — counting is difficult)
+  dominant_factions:
+  - Nexari Collective
+  danger_level: Moderate (non-hostile but deeply disorienting for non-Nexari)
+  system_age: 500+ years
+  description: 'A world where probability is fluid. Buildings exist in multiple states simultaneously. Weather changes based
+    on observation. The same street might lead to different destinations depending on the observer''s expectations. Non-Nexari
+    visitors experience intense disorientation, nausea, and existential dread. The Nexari navigate intuitively using their
+    probability-sense.
+
+    '
+  points_of_interest:
+  - name: The Probability Anchor
+    type: stabilization_device
+    description: Massive construct that keeps Nexar's core reality stable. If it fails, the planet ceases to exist in any
+      fixed state.
+  - name: The Shifting Library
+    type: knowledge_repository
+    description: Library that contains books from all possible timelines. Most are gibberish. Some are prophecy.
+  - name: Visitor's Quarter
+    type: safe_zone
+    description: Probability-stabilized zone for non-Nexari. The only 'normal' area on the planet.
+  resources: Probability data, future-sight services, quantum materials, temporal knowledge
+  hazards: Probability sickness (non-Nexari), reality instability, paradox zones
+- id: WD-006
+  name: Varak
+  system: Varak System
+  type: desert_terrestrial
+  gravity: 1.2G
+  atmosphere: Breathable (dry, low humidity)
+  population: ~4 billion
+  dominant_factions:
+  - Varak'shi Dominion
+  danger_level: High (social danger from caste system, Tier 3-6 desert creatures)
+  system_age: 2,000+ years
+  description: 'An ancient desert world where the System has been active for two millennia. The Varak''shi have built a rigid
+    feudal civilization around Vehicle Core ownership. The planet is dotted with massive fortress-cities separated by deadly
+    desert wastes. Water is controlled by the nobility. The Wanderer underclass lives in tent cities outside the fortress
+    walls.
+
+    '
+  points_of_interest:
+  - name: The Eternal Throne
+    type: palace
+    description: Emperor's palace. The oldest continuously occupied structure in the known universe.
+  - name: The Shame Quarter
+    type: wanderer_ghetto
+    description: 'Massive tent city where Wanderers are confined. Population: 500,000+.'
+  - name: The Deep Dungeons
+    type: dungeon_complex
+    description: Ancient dungeon system beneath the desert. Tier 5-8. Partially unexplored after 2,000 years.
+  resources: Ancient artifacts, deep dungeon loot, rare desert materials, historical knowledge
+  hazards: Caste system enforcement, desert creatures, water scarcity, political intrigue
+- id: world_a005
+  name: The Bazaar
+  type: Trade Station
+  description: Massive space station at the crossroads of 7 dimensional corridors. The largest marketplace in known space.
+  gravity: Variable by section (0.5G to 2G)
+  atmosphere: Species-specific zones
+  notable_features:
+  - Markets for everything legal and illegal
+  - Information brokers
+  - Vehicle modification bays
+  - Neutral ground — no combat allowed
+  threats:
+  - Theft
+  - Scams
+  - Addiction (exotic substances)
+  - Core Syndicate presence
+  factions_present:
+  - All major factions have embassies
+  - Core Syndicate (covert)
+  lore_notes: The Bazaar has existed for 8,000 years. It was built by an Ancient Race as a peace project. It is one of the
+    few places all races meet peacefully.
+- id: world_a006
+  name: Ashara
+  type: Dying Star World
+  description: Homeworld of the Varak'shi. Orbits a red giant nearing supernova. Surface temperature averages 300C.
+  gravity: 1.4G
+  atmosphere: Thick sulfur/ash atmosphere, toxic to most species
+  notable_features:
+  - Forge-temples visible from orbit
+  - Rivers of molten metal
+  - Geothermal cities built into volcanoes
+  threats:
+  - Extreme heat
+  - Volcanic eruptions
+  - Toxic atmosphere
+  - Hostile wildlife (Tier 3-6)
+  factions_present:
+  - Varak'shi (exclusive — outsiders require invitation)
+  lore_notes: The Varak'shi know their star will go supernova in approximately 500 years. Their entire civilization is a race
+    to find a new home.
+- id: world_a007
+  name: Verdanthia
+  type: Living World
+  description: Homeworld of the Sylvani. Entirely covered in mega-flora. The planet itself may be alive.
+  gravity: 0.9G
+  atmosphere: Oxygen-rich (30%), thick with pollen and spores
+  notable_features:
+  - Trees 10km tall
+  - Cities grown from living wood
+  - Bioelectric communication network spanning the planet
+  threats:
+  - Carnivorous plants (Tier 2-5)
+  - Allergic reactions for non-Sylvani
+  - Getting lost in endless forests
+  factions_present:
+  - Sylvani Commune (exclusive)
+  - Limited Harvest Collective observers
+  lore_notes: Verdanthia's biosphere predates the System. Some scholars believe the planet rejected the System's initial integration
+    attempt.
+- id: world_a008
+  name: The Nexus Spire
+  type: Probability Anomaly
+  description: Homeworld of the Zerathi. Exists in quantum superposition — different for every observer.
+  gravity: Variable (probability-dependent)
+  atmosphere: Whatever the observer expects
+  notable_features:
+  - Probability casinos
+  - Quantum computing centers
+  - Future-sight observatories
+  threats:
+  - Reality instability
+  - Probability storms
+  - Gambling addiction
+  - Quantum predators
+  factions_present:
+  - Zerathi (native)
+  - Information brokers
+  - Gamblers from across the galaxy
+  lore_notes: The Nexus Spire is not one planet — it is all possible versions of a planet existing simultaneously. Each visitor
+    sees a different world.
+- id: world_a009
+  name: The Iron Wastes
+  type: Dead Industrial World
+  description: Planet-sized factory abandoned by its creators. Automated systems still run. Machines build machines.
+  gravity: 1.2G
+  atmosphere: Toxic industrial fumes, breathable with filter
+  notable_features:
+  - Automated factories still producing (what?)
+  - Robot guardians
+  - Pre-System technology
+  threats:
+  - Hostile automated defenses (Tier 3-6)
+  - Toxic atmosphere
+  - Collapsing structures
+  factions_present:
+  - Salvage Corps expedition
+  - Thenn research team
+  lore_notes: The factories are producing something. No one has identified what the finished product is. Crates are sealed
+    by unknown technology.
+- id: world_a010
+  name: Mirrorworld
+  type: Dimensional Echo
+  description: A world that reflects another — everything is reversed. Laws of physics work backwards.
+  gravity: Reversed (you fall up)
+  atmosphere: Breathable (surprisingly)
+  notable_features:
+  - Everything reversed
+  - Time flows differently
+  - Mirror versions of known locations
+  threats:
+  - Reversed physics confusion
+  - Mirror creatures
+  - Getting permanently lost
+  factions_present:
+  - Nexari researchers (they find it fascinating)
+  lore_notes: Some believe Mirrorworld is what the universe would look like if the System had never activated.
+hidden_and_mystery_worlds:
+- id: WD-007
+  name: The Hollow
+  system: Unknown
+  type: pocket_dimension
+  gravity: 0.8G
+  atmosphere: Breathable but stale
+  population: Unknown
+  danger_level: Extreme (Tier 7-10+ threats)
+  description: 'A world that exists between dimensions — accessible only through specific dimensional rifts that appear and
+    disappear unpredictably. The Hollow is believed to be an ancient construct, possibly built by the Architects. Its interior
+    is vast — larger than it should be given its dimensional footprint. Creatures here don''t follow normal System rules.
+    Navigation is impossible without specialized equipment. Few who enter return.
+
+    '
+  points_of_interest:
+  - name: The Gate Garden
+    type: dimensional_nexus
+    description: Area with dozens of dimensional rifts leading to unknown destinations.
+  - name: The Archive of Echoes
+    type: ancient_library
+    description: Repository of knowledge from extinct civilizations. Guarded by constructs.
+  - name: The Heart
+    type: unknown
+    description: The center of The Hollow. No one has reached it and returned to report.
+  resources: Ancient knowledge, dimensional materials, unique creature drops
+  hazards: Dimensional instability, Tier 7-10 creatures, navigation impossible, time distortion
+- id: WD-008
+  name: System Zero
+  system: Unknown
+  type: anomaly
+  gravity: N/A
+  atmosphere: N/A
+  population: 0 (no life detected)
+  danger_level: Unknown — possibly beyond measurement
+  description: 'A location that appears on no map but is referenced in multiple ancient race texts as "the place where the
+    System was born." Whether it''s a planet, a dimension, or something else entirely is unknown. The few explorers who claim
+    to have found references to its location describe coordinates that don''t correspond to any known spatial framework. The
+    System itself returns ERROR when queried about System Zero. This is the only topic that provokes an anomalous response
+    from the Game System.
+
+    '
+  points_of_interest:
+  - name: Unknown
+    description: No verified information exists about System Zero's interior.
+  resources: Unknown — potentially the origin of all System energy
+  hazards: Unknown — the Game System refuses to acknowledge its existence
+- id: WD-009
+  name: The Graveyard of Titans
+  system: Unmarked (deep space)
+  type: debris_field
+  gravity: Variable (debris gravitational pull)
+  atmosphere: None — EVA suit required
+  population: 0 permanent, ~200 salvagers at any time
+  danger_level: Very High (Tier 5-8 void creatures, radiation, unstable debris)
+  description: 'A massive debris field in deep space containing the remains of thousands of destroyed vehicles, some of enormous
+    size. The largest wreck is estimated to be a Tier 15+ vehicle — a continent-sized construct now shattered into millions
+    of pieces. The Bone Collectors maintain a small outpost here, salvaging materials worth billions. But the Graveyard is
+    haunted — System echoes of the dead crew still manifest as hostile apparitions.
+
+    '
+  points_of_interest:
+  - name: The Titan Wreck
+    type: ancient_vehicle_remains
+    description: Continent-sized vehicle wreck. Tier 15+. Origin species unknown.
+  - name: Salvager's Rest
+    type: outpost
+    description: Bone Collector outpost. 200 permanent staff. Trading post for salvage.
+  - name: The Echo Zone
+    type: anomaly
+    description: Area where System echoes of dead crew manifest. Extremely dangerous.
+  resources: Salvage materials, core fragments, ancient technology, rare metals
+  hazards: Void creatures, radiation, unstable debris, System echoes, EVA suit dependency
+- id: WD-010
+  name: Eden
+  system: Unknown (hidden)
+  type: paradise_world
+  gravity: 1.0G
+  atmosphere: Breathable (perfect composition)
+  population: Unknown — possibly uninhabited
+  danger_level: Unknown
+  description: 'A world mentioned in Thornveil oral tradition as "the first garden" — a planet of perfect ecological balance
+    where the System and nature exist in complete harmony. No verified sighting. Multiple expeditions have searched for Eden
+    based on fragmentary coordinates. None have found it. Some believe Eden is the Thornveil equivalent of religious myth.
+    Others believe it''s real but dimensionally hidden, accessible only to those who have achieved a specific level of System-nature
+    harmony.
+
+    '
+  points_of_interest:
+  - name: Unknown
+    description: If Eden exists, its contents are completely unknown.
+  resources: Unknown — possibly infinite biological resources, perfect ecosystem data
+  hazards: Unknown — possibly none, possibly the deadliest world in existence
+- id: world_h005
+  name: The Archive
+  type: Hidden Library World
+  description: Planet-sized library maintained by the Architects of Silence. Contains knowledge of every System iteration.
+  gravity: 1G (artificially maintained)
+  atmosphere: Controlled, optimized for preservation
+  notable_features:
+  - Every book ever written by any species
+  - System source code fragments
+  - Ancient Race historical records
+  - Forbidden knowledge vaults
+  threats:
+  - Guardian constructs (Tier 5-7)
+  - Knowledge addiction (some readers never leave)
+  - Madness from forbidden knowledge
+  access: Invitation from the Architects of Silence only
+  lore_notes: The Archive is said to contain the True History — an unedited record of everything that has happened since the
+    first System activated.
+- id: world_h006
+  name: The Graveyard of Stars
+  type: Cosmic Anomaly
+  description: Region of space where 47 dead stars are clustered impossibly close together. Should not exist by physics.
+  gravity: Extreme and chaotic
+  atmosphere: None — hard vacuum with radiation pockets
+  notable_features:
+  - Dead stars arranged in a pattern
+  - Residual energy readings that defy analysis
+  - Ghost signals from pre-System era
+  threats:
+  - Extreme radiation
+  - Gravity tides
+  - Star Eater larvae sightings
+  - Navigation impossible without Tier 5+ sensors
+  access: Coordinates are a closely guarded Cartographers Guild secret
+  lore_notes: The stars are arranged in a pattern matching Ancient Race mathematical notation. The message, if it is one,
+    has never been decoded.
+- id: world_h007
+  name: The Wound
+  type: Reality Fracture Zone
+  description: A 100-light-year region where reality is damaged. Physics works differently inside. The System is glitchy and
+    unreliable.
+  gravity: Random and shifting
+  atmosphere: Inconsistent — varies by location and time
+  notable_features:
+  - Reality fracture creatures
+  - System error zones
+  - Dimensional bleed-through
+  - Pre-System artifacts floating in space
+  threats:
+  - Reality breakdown
+  - System malfunction
+  - Dimensional creatures
+  - Loss of identity in deep zones
+  access: 'Identifiable by System warning: ''CAUTION: REALITY INTEGRITY COMPROMISED'''
+  lore_notes: The Wound was created when an Ancient Race attempted to modify the System's core code. The attempt failed catastrophically.
+- id: world_h008
+  name: The Cradle
+  type: Origin World
+  description: Rumored birthplace of the System itself. No confirmed location. Multiple races claim to know where it is.
+  gravity: Unknown
+  atmosphere: Unknown
+  notable_features:
+  - Theorized to contain the System's core processor
+  - Unlimited RP generation
+  - Direct System interface
+  threats:
+  - Everything
+  - Tier 10+ guardians (theoretical)
+  - System itself may defend against intruders
+  access: No one has confirmed reaching it. Maps are contradictory.
+  lore_notes: Finding The Cradle is the ultimate goal of multiple factions. Some believe reaching it would grant the ability
+    to rewrite the System itself.
+dungeon_worlds:
+- id: WD-011
+  name: The Labyrinth
+  system: Scattered dimensional anchors
+  type: mega_dungeon
+  gravity: Variable by floor
+  atmosphere: Variable by floor
+  population: 0 permanent (hundreds of active delvers at any time)
+  danger_level: Tier 1-15+ (scales by floor)
+  description: 'The largest known dungeon in the universe — a planet-sized dimensional construct with over 1,000 mapped floors
+    and an unknown number of unmapped ones. Entrances appear on multiple worlds. Each floor is a self-contained environment
+    (forest, desert, ocean, void, city). The Dungeon Breakers have mapped the first 200 floors. Beyond floor 500, no reliable
+    information exists. Floor bosses increase in tier roughly every 50 floors.
+
+    '
+  points_of_interest:
+  - name: 'Floor 1: The Welcome Hall'
+    type: dungeon_entrance
+    description: Massive stone hall with System-generated instructions. Safe zone.
+  - name: 'Floor 100: The Crossroads'
+    type: dungeon_hub
+    description: Major junction point. Multiple paths diverge. Dungeon Breaker rest station.
+  - name: 'Floor 500: The Wall'
+    type: barrier
+    description: Massive barrier that has stopped all exploration. No one has passed it.
+  resources: Scaling loot, rare materials, unique drops, core fragments, System knowledge
+  hazards: Scaling creature tiers, floor-specific environmental hazards, no escape from deep floors
+- id: WD-012
+  name: The Crucible
+  system: Orbits a dying star
+  type: trial_dungeon
+  gravity: 2.0G
+  atmosphere: Toxic (EVA suit or environmental resistance required)
+  population: 0 permanent
+  danger_level: Tier 8-12
+  description: 'A world-dungeon that the System designates as a "Crucible" — a trial ground for Travellers seeking to break
+    through to higher tiers. The entire planet is a series of increasingly lethal challenges. Completing the Crucible grants
+    a guaranteed tier advancement. Failure means death. No rescue possible once entered. Entry requirement: Vehicle Tier 7+.
+
+    '
+  points_of_interest:
+  - name: The Gate of Judgment
+    type: entrance
+    description: Single entry point. Once passed, cannot exit until completion or death.
+  - name: The Seven Trials
+    type: challenge_sequence
+    description: Seven escalating challenges testing combat, intelligence, endurance, perception, leadership, sacrifice, and
+      will.
+  - name: The Forge of Ascension
+    type: reward_chamber
+    description: Where successful Travellers receive their tier advancement.
+  resources: Guaranteed tier advancement (on completion), legendary equipment drops
+  hazards: Lethal trials, no escape, 2.0G, toxic atmosphere, Tier 8-12 guardians
+- id: world_d003
+  name: The Infinite Descent
+  type: Mega-Dungeon
+  description: Dungeon with no confirmed bottom. Each floor is larger than the last. Floor 100 is continent-sized. No one
+    has passed Floor 247.
+  floors_confirmed: 247
+  difficulty_range: Tier 1 (Floor 1) to Tier 9+ (Floor 200+)
+  notable_features:
+  - Difficulty scales infinitely
+  - Unique biomes every 10 floors
+  - Boss rooms every 10 floors
+  - Rest zones every 5 floors
+  rewards: Scale with depth — deeper floors contain materials not found anywhere else
+  lore_notes: The deepest explorer, a Thenn called Zero-One, reported that Floor 247 contained a functioning Ancient Race
+    city. Contact was lost after that.
+- id: world_d004
+  name: The Probability Maze
+  type: Shifting Dungeon
+  description: Dungeon that reconfigures every time someone enters. No two runs are the same. Maps are useless.
+  floors_confirmed: Unknown (changes each entry)
+  difficulty_range: Tier 2-6
+  notable_features:
+  - Random layout
+  - Random monsters
+  - Random loot
+  - Random physics in some rooms
+  - Probability-based puzzles
+  rewards: Random but potentially extraordinary — anything from trash to mythic items
+  lore_notes: The Zerathi claim this dungeon is their creation — a 'thought experiment made real.' The System neither confirms
+    nor denies this.
+- id: world_d005
+  name: The Hive
+  type: Living Dungeon
+  description: Dungeon that is actually a living organism. Walls breathe, corridors pulse, rooms contract and expand.
+  floors_confirmed: 50+ (organism grows)
+  difficulty_range: Tier 3-7
+  notable_features:
+  - Biological architecture
+  - Immune system creatures (white blood cell monsters)
+  - Digestive chambers (acid rooms)
+  - Neural center (boss)
+  rewards: Biological materials unobtainable elsewhere. Living weapons and armor.
+  lore_notes: The Hive is growing. It was 10 floors when first discovered 500 years ago. Some believe it will eventually consume
+    the planet it's on.
+- id: world_d006
+  name: The Colosseum Eternal
+  type: Combat Dungeon
+  description: Dungeon that is a never-ending arena. Waves of increasingly powerful opponents. No loot rooms — only combat.
+  floors_confirmed: Infinite (wave-based)
+  difficulty_range: Tier 1-10+
+  notable_features:
+  - Wave combat (no rest)
+  - Audience of System constructs that cheer
+  - Leaderboard visible to all Travellers
+  rewards: 'RP and fame. Top 100 are known across the galaxy. #1 gets a wish from the System (rumor).'
+  lore_notes: The Colosseum appears to be entertainment. For whom?
+- id: world_d007
+  name: The Vault
+  type: Treasure Dungeon
+  description: Dungeon filled with the greatest treasures in the universe — behind the deadliest traps ever conceived.
+  floors_confirmed: 100 (each a single room with one treasure and one trap)
+  difficulty_range: Tier 3-9
+  notable_features:
+  - No monsters — only traps
+  - Each room has one priceless treasure
+  - Traps reset after each party
+  rewards: The rarest items, blueprints, and materials in existence. Each room's treasure is unique.
+  lore_notes: Room 100 allegedly contains a map to The Cradle. No one has reached Room 100.
+- id: world_d008
+  name: The Infinite Staircase
+  type: Puzzle Dungeon
+  description: An impossible staircase that goes up and down infinitely. Each landing is a puzzle room.
+  floors_confirmed: Unknown (infinite?)
+  difficulty_range: Tier 1-7
+  notable_features:
+  - Non-Euclidean geometry
+  - Each landing is a unique puzzle
+  - No combat — pure problem solving
+  - Rewards scale with puzzle difficulty
+  rewards: INT and PER stat boosts, knowledge items, blueprint drops
+  lore_notes: Built by The Equation Makers. The puzzles are mathematical proofs. Solving them teaches you something about
+    reality.
+- id: world_d009
+  name: The Mirror Dungeon
+  type: Reflection Dungeon
+  description: Dungeon where every enemy is a mirror of the challenger — same stats, abilities, equipment.
+  floors_confirmed: 10 (each floor multiplies mirror copies)
+  difficulty_range: Tier = your tier
+  notable_features:
+  - Fight yourself
+  - 'Floor 1: 1 copy. Floor 2: 2 copies. Floor 10: 10 copies'
+  - Your weaknesses are exploited
+  - Must find creative solutions
+  rewards: Massive RP reward, Self-Insight Crystal (reveals hidden stats), Mirror Equipment (copies your best item)
+  lore_notes: Floor 10 has never been cleared. Fighting 10 perfect copies of yourself with your own abilities is considered
+    impossible.
+- id: world_d010
+  name: The Dungeon of Doors
+  type: Random Dungeon
+  description: A corridor of infinite doors. Each door leads to a random dungeon room from any dungeon in the universe.
+  floors_confirmed: Infinite (random rooms)
+  difficulty_range: Tier 0-10 (random)
+  notable_features:
+  - Completely random rooms
+  - Could be Tier 0 or Tier 10
+  - Loot from any dungeon possible
+  - Exit door always available
+  rewards: Completely random — from worthless to legendary. The ultimate gamble.
+  lore_notes: The Dungeon of Doors connects to every dungeon. Some theorize it's the System's maintenance corridor.

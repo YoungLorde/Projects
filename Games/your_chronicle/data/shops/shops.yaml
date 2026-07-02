@@ -1,0 +1,79 @@
+collection: shops
+description: >
+  Shop definitions for Your Chronicle. Each shop has a type, a vendor (linked by
+  the vendor NPC's id), and pulls its inventory from the matching item catalog
+  (item.shop_type == shop.shop_type). At least 50 items exist per core shop type
+  (weapons, potions, materials).
+shops:
+  - id: SHOP-WPN-01
+    name: The Ironwood Smithy
+    shop_type: weapons
+    vendor_id: CHR-NPC-001
+    tier_range: "0-4"
+    location: Guild Quarter, the frontier city
+    currency: bronze
+    description: The player's main weapon shop for standard, Ink-tempered arms.
+  - id: SHOP-WPN-02
+    name: Duskmarket Exotic Arms
+    shop_type: weapons
+    vendor_id: CHR-NPC-002
+    tier_range: "5-9"
+    location: Roaming black-market stall
+    currency: gold
+    description: High-tier legendary and mythic weaponry for late-game players.
+  - id: SHOP-POT-01
+    name: The Bramble Apothecary
+    shop_type: potions
+    vendor_id: CHR-NPC-003
+    tier_range: "0-4"
+    location: Market Row, the frontier town
+    currency: bronze
+    description: Standard healing, stamina, and utility potions.
+  - id: SHOP-POT-02
+    name: Old Mossfen's Tincture Cart
+    shop_type: potions
+    vendor_id: CHR-NPC-004
+    tier_range: "3-9"
+    location: Edge of the wilds
+    currency: silver
+    description: Advanced elixirs, exotic tinctures, and forbidden brews.
+  - id: SHOP-MAT-01
+    name: The Stonecount Exchange
+    shop_type: materials
+    vendor_id: CHR-NPC-005
+    tier_range: "0-5"
+    location: Guild Quarter, the frontier city
+    currency: bronze
+    description: Standard crafting materials — ores, hides, cloth, wood, and more.
+  - id: SHOP-MAT-02
+    name: The Mineshaft Depot
+    shop_type: materials
+    vendor_id: CHR-NPC-006
+    tier_range: "4-9"
+    location: Below the Guild Hall
+    currency: silver
+    description: Rare ores, gemstones, and refined/exotic minerals.
+  - id: SHOP-ENC-01
+    name: The Glyphborne Loft
+    shop_type: enchantments
+    vendor_id: CHR-NPC-007
+    tier_range: "1-9"
+    location: University Spire
+    currency: silver
+    description: Runes, glyph scrolls, and enchantment stones (bonus shop type).
+  - id: SHOP-REL-01
+    name: Madame Vex's Curiosities
+    shop_type: relics
+    vendor_id: CHR-NPC-008
+    tier_range: "5-9"
+    location: Traveling wagon (event windows)
+    currency: gold
+    description: Seasonal relics, charms, and cosmetic Chronicle covers.
+  - id: SHOP-WND-01
+    name: Pip's Wandering Stock
+    shop_type: wandering
+    vendor_id: CHR-NPC-015
+    tier_range: "0-9"
+    location: Random hubs, limited time
+    currency: mixed
+    description: A rotating curated mix pulled from every other catalog.
